@@ -1,0 +1,302 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOC Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>TOC Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Show that, For any NFA N=(Q, ∑, δ, q0, F) accepting language L=∑, There is a DFA D= (Q’, ∑’, q0′, δ’, F’) accepting the same language L.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19290" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/SmartSelect_20230613_115902_CamScanner.jpg?resize=957%2C422&#038;ssl=1" alt="" width="957" height="422"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19291" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/SmartSelect_20230613_115923_CamScanner.jpg?resize=957%2C1182&#038;ssl=1" alt="" width="957" height="1182"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19292" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/SmartSelect_20230613_115951_CamScanner.jpg?resize=960%2C892&#038;ssl=1" alt="" width="960" height="892"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>State and prove the Pumping Lemma for regular languages. How can you show with example that pumping lemma is used to prove that a given language is not a regular? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Theorem: </strong>If L is a Regular Language, then L has a pumping Length ‘n’ such that any string ‘z’ where |z| ≥ n may be divided into three parts z=uvw such that the following conditions must be true.</p>
+<p><strong>1.) |uv| ≤ n</strong></p>
+<p><strong>2.) |v| &gt; 0</strong></p>
+<p><strong>3.) uv<sup>i</sup>w ∈ L for every i ≥ 0</strong></p>
+<p>&nbsp;</p>
+<p>We use the <strong>contradiction </strong>method to prove that a language is not regular.</p>
+<p>Proof:</p>
+<p><strong>Step 1: </strong>Assume that language L is regular.</p>
+<p><strong>Step 2: </strong>It has to have a pumping length (say n).</p>
+<p><strong>Step 3: </strong>All strings longer than n can be pumped |z| ≥ n.</p>
+<p><strong>Step 4: </strong>Now, find a string ‘z’ in L such that |z| ≥ n.</p>
+<p><strong>Step 5: </strong>Divide &#8216;z&#8217; into u v w strings.</p>
+<p><strong>Step 6: </strong>Show that u v<sup>i</sup>w∉L for some i.</p>
+<p><strong>Step 7: </strong>Then consider how z can be divided into u v w.</p>
+<p><strong>Step 8: </strong>Show that none of the above strings satisfies all three pumping conditions simultaneously.</p>
+<p><strong>Step 9: </strong>z cannot be pumped == CONTRADICTION.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>To prove the language, L={ww|w∈(0,1)*} is not regular.</p>
+<p>Solution:</p>
+<p>Assuming L is regular then,</p>
+<p>L={ε,00,11,0000,1111,1010,&#8230; &#8230;. &#8230;.}</p>
+<p>Taking one string, z=1010</p>
+<p>pumping length, n=2 and |z|=4</p>
+<p>Since, |z|≥n is satisfied then, z can be divided into u v w.</p>
+<p>z=1010</p>
+<p>=uvw</p>
+<p>i.e. u=1,v=0,w=10</p>
+<p>Now, testing the conditions.</p>
+<p><strong>Condition 1: </strong>|uv|≤n</p>
+<p>(|uv|=|10|=2) &lt; (n=2)  <em><strong>satisfied</strong></em></p>
+<p><strong>Condition 2: </strong>|v|&gt;0</p>
+<p>|v|=|0|=1&gt;0  <em><strong>satisfied</strong></em></p>
+<p><strong>Condition 3:</strong> uv<sup>i</sup>w∈L for every i≥0</p>
+<p>for i=0,</p>
+<p>uv<sup>i </sup>w=1 (o)<sup>0 </sup>10=110∉L</p>
+<p>for i=1,</p>
+<p>uv<sup>i</sup> w = 1 (o)<sup>1</sup> 10=1010∈L</p>
+<p>for i=0,</p>
+<p>uv<sup>i </sup>w = 1 (o)<sup>2</sup><sup> </sup>10=10010∉L</p>
+<p><em><strong>not-satisfied.</strong></em></p>
+<p>&nbsp;</p>
+<p>Therefore, given language is not regular.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Given the following expression grammar for simple arithematic  expression with operator + and *.</p>
+<p>E→ E+T  | T</p>
+<p>T  → T+F  | F</p>
+<p>F → (E)  | a</p>
+<p>Remove the left recursion from this grammar then simplify and convert to CNF.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19638" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/SmartSelect_20230617_231159_CamScanner.jpg?resize=940%2C1434&#038;ssl=1" alt="" width="940" height="1434"></p>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Explain the ε-closure of states on an ε-NFA with suitable examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If there is a transition for the &#8216;ε&#8217; symbol in NFA then, the automata is called ε-NFA.</p>
+<p>Properties:</p>
+<p>1. Ŝ(q , ε) = ε -closure(q)<br />
+2. Ŝ(q , a) = ε -closure(δ(Ŝ(q, ∈),a))</p>
+<p>The ε -closure(q) is a set of all states which are reachable from q on ε -transition such that,<br />
+i. ε -closure(q) = {q} where q €Q<br />
+ii. If there exists ε -closure(q) = {r} and δ(r, ε ) ={s} then ε -closure(q) ={r,s}</p>
+<p>Example:</p>
+<p>Example no. 1</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17400 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/ep-1.jpg?resize=295%2C136&#038;ssl=1" alt="" width="295" height="136"></p>
+<p>ε -closure(q0) ={q0,q1}</p>
+<p>ε -closure(q1)={q1}</p>
+<p>&nbsp;</p>
+<p>Example no. 2</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17403 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/ep-4.jpg?resize=362%2C140&#038;ssl=1" alt="" width="362" height="140"></p>
+<p>ε -closure(q0) ={q0,q1}</p>
+<p>ε -closure(q1)={q1}</p>
+<p>ε -closure(q2)={q2}</p>
+<p>&nbsp;</p>
+<p>Example no. 3</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17404 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/ep-1-1.jpg?resize=385%2C133&#038;ssl=1" alt="" width="385" height="133"></p>
+<p>ε -closure(q0) ={q0,q1,q2}</p>
+<p>ε -closure(q1)={q1,q2}</p>
+<p>ε -closure(q2)={q2}</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p><span>Convert the following regular expression into equivalent Finite Automata</span></p>
+<p>a. (0+1)*10(1+0)</p>
+<p>b. 1*0(0+1)*1</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution of a:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17358 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/a-1.jpg?resize=607%2C202&#038;ssl=1" alt="" width="607" height="202"></p>
+<p>Solution of b:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-17359 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/b-1.jpg?resize=625%2C202&#038;ssl=1" alt="" width="625" height="202"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define the term: Parse Tree, left-most and right-most derivation, sentential form and ambiguity with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Parse Trees:</p>
+<p>A parse tree is a tree that shows the essentials of a derivation. Interion nodes are labeled by variables, and leaves are labeled by terminals or ε. For each internal node, there must be a production such that the head of production is the  label of the node, and the labels of its children, read from left to right, from the b0dy of that production.</p>
+<p>Example:</p>
+<p>consider the simple grammar S -&gt; aSb | ε and the input string &#8220;aab&#8221;. To construct the parse tree for this string, we start by labeling the root with the start symbol S. Then, we apply the production rule S -&gt; aSb to obtain the tree:</p>
+<p>&nbsp;</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"></div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">    <img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-15672 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/Screenshot-2023-04-24-144946.png?resize=220%2C189&#038;ssl=1" alt="" width="220" height="189"></div>
+</div>
+<div></div>
+<div></div>
+<div>Left-most and Right-most derivation:</div>
+<div>If we always replace the leftmost(resp. rightmost) variable in a string, then the resulting derivation is leftmost(resp. rightmost)derivation. Every string in the language of a CFG has at least one leftmost and at least one rightmost derivation.</div>
+<div>Example:</div>
+<div></div>
+<div>
+<p>Consider the following grammar:</p>
+<p>S → aS / ∈</p>
+<p>&nbsp;</p>
+<p>The language generated by this grammar is:</p>
+<p>L = { a<sup>n</sup> , n&gt;=0 } or a*</p>
+<p>&nbsp;</p>
+<p>All the strings generated from this grammar have their leftmost derivation and rightmost derivation exactly same.</p>
+<p>Let us consider a string w = aaa.</p>
+<p>Leftmost Derivation:</p>
+<p>S → a<strong>S</strong></p>
+<p>→ aa<strong>S</strong>       (Using S → aS)</p>
+<p>→ aaa<strong>S</strong>     (Using S → aS)</p>
+<p>→ aaa∈</p>
+<p>→ aaa</p>
+<p>Rightmost Derivation</p>
+<p>S → a<strong>S</strong></p>
+<p>→ aa<strong>S</strong>       (Using S → aS)</p>
+<p>→ aaa<strong>S</strong>     (Using S → aS)</p>
+<p>→ aaa∈</p>
+<p>→ aaa</p>
+<p>Clearly,</p>
+<p>Leftmost derivation= Rightmost derivation</p>
+<p>Similar is the case for all other strings.</p>
+<p>Sentential form:</p>
+<p>Any step in a derivation is a string of variables and/or terminals. We call such a sting a sentential form. If the derivation is a leftmost (resp. rightmost), then the string is a left- (resp. right-) sentential form.</p>
+<p>Example:</p>
+<p>The derivation of a + a* a, E + T * F and E + F *a and F + a * a are all sentential forms as are E and a + a * a themselves.</p>
+<p>Ambiguity:</p>
+<p>Ambiguity in the context of TOC refers to a situation where a single grammar or language can be parsed in more than one way. This can lead to confusion and errors in the interpretation of the language.</p>
+<p>Example:</p>
+<p>Let us consider a grammar G with the production rule</p>
+<div class="codeblock">
+<div class="dp-highlighter">
+<ol class="dp-xml" start="1">
+<li class="alt">E → I</li>
+<li class="">E → E + E</li>
+<li class="alt">E → E * E</li>
+<li class="">E → (E)</li>
+<li class="alt">I → ε | 0 | 1 | 2 | &#8230; | 9</li>
+</ol>
+<p>solution:</p>
+</div>
+</div>
+<p>For the string &#8220;3 * 2 + 5&#8221;, the above grammar can generate two parse trees by leftmost derivation:</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/tutorial/automata/images/automata-ambiguity-in-grammar-solution1.png?ssl=1" alt="Ambiguity in Grammar" /></p>
+<p>Since there are two parse trees for a single string &#8220;3 * 2 + 5&#8221;, the grammar G is ambiguous.</p>
+<p>&nbsp;</p>
+</div>
+<div></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Give the formal definiton of Push Down Automata. How CFG can be converted into equivalent PDA. Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A push-down automata (PDA) is a way to implement a context-free grammar (CFG) in a similar way to designing the deterministic finite automata (DFA) for regular grammar. A DFA can remember a finite amount of information but a PDA can remember an infinite amount of information.</p>
+<p>PDA has three components, which are as follows −</p>
+<ul class="list">
+<li>An input tape.</li>
+<li>A control unit.</li>
+<li>A stack with infinite size.</li>
+</ul>
+<p>A push down automata (PDA) consists of the following tuples:</p>
+<ul class="list">
+<li>A finite non-empty set of states denoted by Q.</li>
+<li>A finite non empty set of input symbols denoted by∑.</li>
+<li>A finite non empty set of push down symbol ┌.</li>
+<li>A special state is called the initial state denoted by q0.</li>
+<li>A special symbol called the initial symbol on the push down store denoted by Z0.</li>
+<li>The set of the final subset of Q denoted by F.</li>
+<li>The transition function ∂= QX(∑U{^})X┌ to the set of finite subsets of QX┌*</li>
+</ul>
+<p><strong>Conversion from CFG to PDA</strong></p>
+<p><strong>Step 1:</strong> Convert the given productions of CFG into GNF</p>
+<p><strong>Step 2:</strong> The PDA will only have one state {q}.</p>
+<p><strong>Step 3:</strong> The initial symbol of CFG will be the initial symbol in the PDA.</p>
+<p><strong>Step 4:</strong> For non-terminal symbol, add the following rule:</p>
+<p>δ(q, ε, A) = (q, α)</p>
+<p>Where the production rule is A → α</p>
+<p><strong>Step 5:</strong> For each terminal symbols, add the following rule:</p>
+<p>δ(q, a, a) = (q, ε) <strong>for</strong> every terminal symbol</p>
+<p>Example:</p>
+<ol style="list-style-type:decimal;">
+<li>S → 0S1 | A</li>
+<li>A → 1A0 | S | ε</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The CFG can be first simplified by eliminating unit productions:</p>
+<p>S → 0S1 | 1S0 |  ε</p>
+<p>Now we will convert this CFG to GNF:</p>
+<p>S → 0SX | 1SY |  ε</p>
+<p>X → 1</p>
+<p>Y → 0</p>
+<p>The PDA can be:</p>
+<p>δ(q, ε, S) = {(q, 0SX) | (q, 1SY) | (q, ε)}</p>
+<p>δ(q, ε, X) = {(q, 1)}</p>
+<p>δ(q, ε, Y) = {(q, 0)}</p>
+<p>δ(q, 0, 0) = {(q, ε)}</p>
+<p>δ(q, 1, 1) = {(q, ε)}</p>
+<p>Equivalent PDA:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-17416 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/cfg.jpg?resize=174%2C302&#038;ssl=1" alt="" width="174" height="302"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define regular grammar. Also explain the method of converting right linear grammar into equivalent finite automata.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If all productions of a CFG are of form A -&gt; wB or A -&gt; w, where A and B are variables and w ϵ V<sub>t</sub><sup>*</sup>, then we say that grammar is right linear.</p>
+<p>If all productions of a CFG are of form A -&gt; Bw or A -&gt; w, we call it left linear.</p>
+<p>A right or left linear grammar is called regular grammar.</p>
+<p>Every regular expression can be represented by regular grammar.</p>
+<p>As there is a finite automaton for every regular expression we can generate a finite automaton for the regular grammar.</p>
+<p><strong>Conversion of Regular Grammar into Finite Automata</strong></p>
+<p>Given a regular grammar G, finite automata accepting L(G) can be obtained as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>The number of states in the automata will be equal to the number of non-terminals plus one. Each state in automata represents each non-terminal in the regular grammar. The additional state will be the final state of the automata. The state corresponding to the start symbol of the grammar will be the initial state of automata. If L(G) contains ϵ which is the start symbol, then make the start state also as the final state.</li>
+<li>The transitions for automata are obtained as follows:
+<ol style="list-style-type:decimal;">
+<li>For every production A -&gt; aB make δ(A, a) = B</li>
+<li>For every production A -&gt; a make δ(A, a) = final state.</li>
+<li>For every production A -&gt; ϵ, make δ(A, ϵ) = A, and A will be the final state.</li>
+</ol>
+</li>
+</ol>
+<p>Example:</p>
+<p>S -&gt; 0S|1A|1<br />
+A -&gt; 0A|1A|0|1</p>
+<p>The automaton will have 3 states S, A, F<br />
+For production S -&gt; 0S, S -&gt; 1A, S -&gt; 1<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17412 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/1.jpg?resize=230%2C194&#038;ssl=1" alt="" width="230" height="194"><br />
+For production A -&gt; 0A, A -&gt; 1A, A -&gt; 0, A -&gt; 1.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-17413 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/2.jpg?resize=232%2C203&#038;ssl=1" alt="" width="232" height="203"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Construct a Turing machine that accepts the language, L = { a<sup>n </sup>b<sup>n</sup> | n≥0}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>L={ε,ab,aabb,aaabbb,&#8230;&#8230;.}</p>
+<p>Turing Machine can be constructed as:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-17364 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/tm.jpg?resize=305%2C296&#038;ssl=1" alt="" width="305" height="296"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define Turing machine and its roles.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Turing Machine (TM) is a mathematical model which consists of an infinite-length tape divided into cells on which input is given. It consists of a head that reads the input tape.</p>
+<p>A TM can be formally described as a 7-tuple (Q, X, ∑, δ, q<sub>0</sub>, B, F) where −</p>
+<ul class="list">
+<li><b>Q</b> is a finite set of states</li>
+<li><b>X</b> is the tape alphabet</li>
+<li><b>∑</b> is the input alphabet</li>
+<li><b>δ</b> is a transition function; δ : Q × X → Q × X × {Left_shift, Right_shift}.</li>
+<li><b>q<sub>0</sub></b> is the initial state</li>
+<li><b>B</b> is the blank symbol</li>
+<li><b>F</b> is the set of final states</li>
+</ul>
+<p>&nbsp;</p>
+<p>Roles of Turing Machine:</p>
+<ol style="list-style-type:decimal;">
+<li>Unlike other automata, the Turing machine can perform count operations.</li>
+<li>Turing machine has the advantage of unlimited memory.</li>
+<li>Turing machine can simulate the operations of a common computer. So, it has high computational capabilites.</li>
+<li>Turing machine can be subjected to design complex languages that other automatas can&#8217;t. For example: L={a<sup>n</sup>b<sup>n</sup>|n≥0} can&#8217;t be constructed by other automatas. However, Turing machine can.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain about the complexity classes p, NP and NP-Complete.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><u>P Class</u></strong></p>
+<p>The P in the P class stands for <strong>Polynomial Time.</strong> It is the collection of decision problems(problems with a “yes” or “no” answer) that can be solved by a deterministic machine in polynomial time.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solution to P problems is easy to find.</li>
+<li>P is often a class of computational problems that are solvable and tractable. Tractable means that the problems can be solved in theory as well as in practice. But the problems that can be solved in theory but not in practice are known as intractable.</li>
+</ol>
+<p><strong><u>NP Class</u></strong></p>
+<p>The NP in NP class stands for <strong>Non-deterministic Polynomial Time</strong>. It is the collection of decision problems that can be solved by a non-deterministic machine in polynomial time.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solutions of the NP class are hard to find since they are being solved by a non-deterministic machine but the solutions are easy to verify.</li>
+<li>Problems of NP can be verified by a Turing machine in polynomial time.</li>
+</ol>
+<p><strong><u>NP-complete class</u></strong></p>
+<p>A problem is NP-complete if it is both NP and NP-hard. NP-complete problems are the hard problems in NP.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>NP-complete problems are special as any problem in NP class can be transformed or reduced into NP-complete problems in polynomial time.</li>
+<li>If one could solve an NP-complete problem in polynomial time, then one could also solve any NP problem in polynomial time.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes ( Any two ) :</p>
+<p>a) Big Oh, Big Omega and Big Theta</p>
+<p>b) Tractable and Intractable Problems</p>
+<p>c) Chomsky Hierarchy</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+</body></html>

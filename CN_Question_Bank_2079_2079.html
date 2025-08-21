@@ -1,0 +1,649 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>CN Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempt any two questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What is protocol? Explain each layer of OSI modal in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A network protocol is an established set of rules that determine how data is transmitted between different devices in the same network. Essentially, it allows connected devices to communicate with each other, regardless of any differences in their internal processes, structure or design.</p>
+<p>There are thousands of different network protocols, but they all perform one of three primary actions:</p>
+<ul class="bulletlist">
+<li>Communication</li>
+<li>Network management</li>
+<li>Security</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>OSI Model:</strong></span></p>
+<p>OSI model is not a network architecture because it does not specify the exact services and protocols for each layer. It simply tells what each layer should do by defining its input and output data. It is up to network architects to implement the layers according to their needs and the resources available.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-7122 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/computer-network-osi-model-layers.png?resize=781%2C638&#038;ssl=1" alt="OSI Model" width="781" height="638" /></p>
+<p>These are the seven layers of the OSI model −</p>
+<ul class="list">
+<li><b>Physical layer</b> −It is the first layer that physically connects the two systems that need to communicate. It transmits data in bits and manages simplex or duplex transmission by modem. It also manages Network Interface Card’s hardware interface to the network, like cabling, cable terminators, topography, voltage levels, etc.</li>
+<li><b>Data link layer</b> − It is the firmware layer of the Network Interface Card. It assembles datagrams into frames and adds start and stop flags to each frame. It also resolves problems caused by damaged, lost or duplicate frames.</li>
+<li><b>Network layer</b> − It is concerned with routing, switching, and controlling the flow of information between the workstations. It also breaks down transport layer datagrams into smaller datagrams.</li>
+<li><b>Transport layer</b> − Till the session layer, the file is in its own form. The transport layer breaks it down into data frames, provides error checking at the network segment level, and prevents a fast host from overrunning a slower one. The transport layer isolates the upper layers from network hardware.</li>
+<li><b>Session layer</b> − This layer is responsible for establishing a session between two workstations that want to exchange data.</li>
+<li><b>Presentation layer</b> − This layer is concerned with the correct representation of data, i.e. syntax and semantics of information. It controls file-level security and is also responsible for converting data to network standards.</li>
+<li><b>Application layer</b> − It is the topmost layer of the network that is responsible for sending application requests by the user to the lower levels. Typical applications include file transfer, E-mail, remote logon, data entry, etc.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Differentiate error detection with error correction. Explain CRC (Cyclic Redundancy Check) method for error detection with a suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p id="h-error-detection"><span style="text-decoration: underline;"><strong>Error Detection:</strong></span></p>
+<p>Error detection is the method of identifying errors. To identify these errors, it uses some redundancy codes. Redundancy codes are added to actual data, and it has transmitted by the sender. These codes are known as error detection codes.</p>
+<p>Types of error detection techniques:</p>
+<ol type="1">
+<li>Parity Checking</li>
+<li>Cyclic Redundancy Check (CRC)</li>
+<li>Checksum</li>
+</ol>
+<p><strong>Error Correction</strong></p>
+<p>Error correction is more difficult than error detection. Error correction codes are used to detect and correct errors when transmitting data from the sender to the receiver. It can be done in two ways:</p>
+<ol style="list-style-type:decimal;">
+<li>Backward Error Correction</li>
+<li>Forward Error Correction</li>
+</ol>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;">Backward Error Correction: </span>If the receiver receives an error in the received data, it tells the sender to retransmit the data again.</li>
+<li><span style="text-decoration: underline;">Forward Error Correction: </span>If the receiver finds an error in the received data, the error correction codes correct these errors automatically.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Cyclic Redundancy Checks (CRC):</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Cyclic Redundancy Check (CRC) is an error detection method.</li>
+<li>It is based on binary division.</li>
+</ul>
+<p>CRC technique involves binary division of the data being sent. The divisor is generated using polynomials. The sender performs a division operation on the bits being sent and calculates the remainder. Before sending the actual bits the sender adds the remainder at the end of the actual data bits.</p>
+<p>Actual data bits plus the remainder is called a codeword.</p>
+<p>The sender transmits data bits as a codeword.</p>
+<p>At the other end, the receiver performs division operations on the codewords using the same CRC divisor. If the remainder contains all zeros, the data bits are accepted, otherwise, it is considered as some data corruption that occurred in transit.</p>
+<p><strong><span style="text-decoration: underline;">Example:</span></strong></p>
+<p>Message D = 1010001101 (10 bits)</p>
+<p>Predetermined P = 110101 (6 bits)</p>
+<p>FCS R = to be calculated 5 bits</p>
+<p>Hence, n = 15 K = 10 and (n – k) = 5</p>
+<p>5 zeros are added to the actual data bits.</p>
+<p>The product is divided by P.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-7125 alignnone" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/Page-40-Image-67.jpg?resize=265%2C359&#038;ssl=1" alt="" width="265" height="359"></p>
+<p>The remainder is inserted into the actual data bits to provide T = 101000110101110 that is sent.</p>
+<p>Suppose that there are no errors, and the receiver gets T perfect. The received frame is divided by P.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-7126 alignnone" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/Page-40-Image-68.jpg?resize=268%2C363&#038;ssl=1" alt="" width="268" height="363"></p>
+<p>Because of no remainder, there are no errors.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain distance vector routing with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In distance-vector routing (DVR), each router is required to inform the topology changes to its neighboring routers periodically. Historically it is known as the old ARPNET routing algorithm or Bellman-Ford algorithm.</p>
+<p><span style="text-decoration: underline;"><strong>How the DVR Protocol Works</strong></span></p>
+<ul class="list">
+<li>In DVR, each router maintains a routing table. It contains only one entry for each router. It contains two parts − a preferred outgoing line to use for that destination and an estimate of time (delay). Tables are updated by exchanging the information with the neighbor’s nodes.</li>
+<li>Each router knows the delay in reaching its neighbors (Ex − sending echo requests).</li>
+<li>Routers periodically exchange routing tables with each of their neighbors.</li>
+<li>It compares the delay in its local table with the delay in the neighbor’s table and the cost of reaching that neighbor.</li>
+<li>If the path via the neighbor has a lower cost, then the router updates its local table to forward packets to the neighbor.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Example − Distance Vector Router Protocol:</strong></span></p>
+<p>In the network shown below, there are three routers, A, B, and C, with the following weights − AB =2, BC =3 and CA =5.</p>
+<p><strong>Step 1</strong> − In this DVR network, each router shares its routing table with every neighbor. For example, A will share its routing table with neighbors B and C, and neighbors B and C will share their routing table with A.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-7129 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/11i.png?resize=207%2C211&#038;ssl=1" alt="" width="207" height="211"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form A</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form B</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form C</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Step 2</strong> − If the path via a neighbor has a lower cost, then the router updates its local table to forward packets to the neighbor. In this table, the router updates the lower cost for A and C by updating the new weight from 4 to 3 in router A and from 4 to 3 in router C.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form A</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form B</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form C</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Step 3</strong> − The final updated routing table with lower cost distance vector routing protocol for all routers A, B, and C is given below −</p>
+<p><span style="text-decoration: underline;">Router A:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form A</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;">Router B:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form B</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;">Router C:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>Form C</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h2>Short Answer Questions: Attempt any Eight questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>Why do we need network topology? Explain star topology along with its merits and demerits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A network topology is the physical and substantial arrangement of a network. This decides, how do these computers in the network link to each other.</p>
+<p>A network topology is all about the positioning of a network, including its nodes and relating lines. Generally, it denotes the interrelated model of network components.</p>
+<p>Network topology is important because of the following reasons:</p>
+<p><span style="text-decoration: underline;">1. Performance management:</span></p>
+<p>Performance management, therefore, is the key to topology, no matter the size or nature of a network and its various devices. There are also multiple different types of topology beyond the physical and logical classification.</p>
+<p><span style="text-decoration: underline;">2. Scalability  and Flexibility:</span></p>
+<p>Hybrid topology, meanwhile, incorporates the best of several models. It may allow scalability and flexibility, for example, to move between point-to-point systems and ring topologies.</p>
+<p><span style="text-decoration: underline;">3. Smooth Communication:</span></p>
+<p>A good topology that works well in practice will help you create ‘systems.’ These can be helpful to use as reference points. Once again, topology diagrams work brilliantly as roadmaps.</p>
+<p><span style="text-decoration: underline;">4. Network Health Diagnostics:</span></p>
+<p>Topologies also help us to identify problem areas in our networks. For example, we may experience packet loss at points A through F. Which of the points between the two are letting down the network?</p>
+<p>Topology allows you to home in on weak links in the chain. You can narrow down the field too, for example, points C or D, and make adjustments.</p>
+<p><span style="text-decoration: underline;"><strong>Start Topology:</strong></span></p>
+<p>A star may be a topology for a Local Area Network (LAN) during which all nodes are individually connected to a central connection point, sort of a hub or a switch. A star takes more cable than e.g. a bus, but the benefit is that if a cable fails, just one node is going to be brought down. Each device within the network is connected to a central device called the hub.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-7132 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/Star-Topology.png?resize=313%2C194&#038;ssl=1" alt="Star Topology" width="313" height="194" /></p>
+<p><span style="text-decoration: underline;">Advantage:</span></p>
+<ul style="list-style-type: square;">
+<li>Centralized management of the network through the use of the central computer, hub, or switch.</li>
+<li>Easy to add another computer to the network.</li>
+<li>If one computer on the network fails, the rest of the network continues to function normally.</li>
+</ul>
+<p><span style="text-decoration: underline;">Disadvantage:</span></p>
+<ul style="list-style-type: square;">
+<li>It may have a higher cost to implement, especially when using a switch or router as the central network device.</li>
+<li>The central network device determines the performance and number of nodes the network can handle.</li>
+<li>If the central computer, hub, or switch fails, the entire network goes down, and all computers are disconnected from the network.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define Protocol. Why do we need standards?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A network protocol is an established set of rules that determine how data is transmitted between different devices in the same network. Essentially, it allows connected devices to communicate with each other, regardless of any differences in their internal processes, structure, or design.</p>
+<p>There are thousands of different network protocols, but they all perform one of three primary actions:</p>
+<ul class="bulletlist">
+<li>Communication</li>
+<li>Network management</li>
+<li>Security</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Protocol Standards:</strong></span></p>
+<p>Standards are the set of rules for data communication that are needed for the exchange of information among devices. It is important to follow Standards that are created by various  Standard Organizations like IEEE, ISO, ANSI, etc.</p>
+<p>Standards are of two types :</p>
+<ul style="list-style-type: square;">
+<li>De Facto Standard.</li>
+<li>De Jure  Standard.</li>
+</ul>
+<p>We need standards because of following reasons:</p>
+<ul style="list-style-type: square;">
+<li>Standards describe accurately and unambiguously how information is transmitted.</li>
+<li>A manufacturer’s products will work successfully with other manufacturers’ products if they all follow the</li>
+<li>same standards.</li>
+<li>By defining a set of standards, you are providing a framework within which all manufacturers can design</li>
+<li>new, successful products.</li>
+<li>Standards break down complex ideas into smaller, methodical, easier-to-understand components.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write the subnet ID and broadcast address of each subnet if you divide a class C network (192.168.3.0 – 192.168.3.255) into 4 different subnets. What is the new subnet mask?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given</p>
+<p>Class C network = 192.168.3.0</p>
+<p>We want to make 4 different subnets. So let’s borrow 2 bits from the host id such as 2<sup>2</sup> = 4</p>
+<p>Now, let’s divide the class C network into a subnet as</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-39639" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/network.drawio.png?resize=162%2C162&#038;ssl=1" alt="" width="162" height="162"></p>
+<p>Above fig show the fixed bits of each subnet of the network. so,</p>
+<p>192.168.3.00000000 &#8211; 192.168.3.00111111</p>
+<p>192.168.3.10000000 &#8211; 192.168.3.10111111</p>
+<p>192.168.3.01000000 &#8211; 192.168.3.01111111</p>
+<p>192.168.3.11000000 &#8211; 192.168.3.11111111</p>
+<p>are the 4 subnets dealingit in detail we can write it as</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 21.1068%; height: 24px; text-align: center;"><strong> Network ID</strong></td>
+<td style="width: 29.4723%; height: 24px; text-align: center;"><strong>Usable IP Range</strong></td>
+<td style="width: 23.166%; height: 24px; text-align: center;"><strong>Broadcast Address</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.1068%; height: 24px; text-align: center;">192.168.3.0</td>
+<td style="width: 29.4723%; height: 24px; text-align: center;">192.168.3.1 &#8211; 192.168.3.61</td>
+<td style="width: 23.166%; height: 24px; text-align: center;">192.168.3.62</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.1068%; height: 24px; text-align: center;">192.168.3.63</td>
+<td style="width: 29.4723%; height: 24px; text-align: center;">192.168.3.64 &#8211; 192.168.3.126</td>
+<td style="width: 23.166%; height: 24px; text-align: center;">192.168.3.127</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.1068%; height: 24px; text-align: center;">192.168.3.128</td>
+<td style="width: 29.4723%; height: 24px; text-align: center;">192.168.3.129-192.168.3.190</td>
+<td style="width: 23.166%; height: 24px; text-align: center;">192.168.3.191</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.1068%; height: 24px; text-align: center;">192.168.3.192</td>
+<td style="width: 29.4723%; height: 24px; text-align: center;">192.168.3.193 &#8211; 192.168.3.254</td>
+<td style="width: 23.166%; height: 24px; text-align: center;">192.168.3.255</td>
+</tr>
+</tbody>
+</table></div>
+<p>when we divide the network into 4 subnets we fix two bits.</p>
+<p>initially we had default subnet mask for class  C = 11111111.11111111.11111111.00000000 = 255.255.255.0  where 24 bits were for network and other for host.</p>
+<p>Now, we have more 2 bits added in network and 2 bits reduced form host so it will look like 11111111.11111111.11111111.11000000 .</p>
+<p>Hence, the new subnet mask is 255.255.255.192</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is circuit-switched network? Explain phases during communication in a circuit-switched network?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Circuit switching is a switching technique that establishes a dedicated path between sender and receiver.</p>
+<p>In the Circuit Switching Technique, once the connection is established then the dedicated path will remain to exist until the connection is terminated.</p>
+<p>Circuit switching in a network operates in a similar way as the telephone works.</p>
+<p>Communication through circuit switching has 3 phases:</p>
+<ul class="points">
+<li>Circuit establishment</li>
+<li>Data transfer</li>
+<li>Circuit Disconnect</li>
+</ul>
+<ul class="list">
+<li><strong>Circuit Establishment</strong>: In this phase, a dedicated circuit is established from the source to the destination through a number of intermediate switching centers. The sender and receiver transmit communication signals to request and acknowledge the establishment of circuits.</li>
+<li><strong>Data Transfer</strong>: Once the circuit has been established, data and voice are transferred from the source to the destination. The dedicated connection remains as long as the end parties communicate.</li>
+<li><strong>Circuit Disconnection</strong>: When the data transfer is complete, the connection is relinquished. The disconnection is initiated by any one of the users. Disconnection involves the removal of all intermediate links from the sender to the receiver.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is a virtual circuit network? Explain frame relay as a virtual circuit-wide area network.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Virtual Circuit is the computer network providing connection-oriented service. It is a connection-oriented network. In a virtual circuit, resources are reserved for the time interval of data transmission between two nodes. This network is a highly reliable medium of transfer. Virtual circuits are costly to implement.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-7141 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/Untitled-Diagram-166-1.png?resize=433%2C253&#038;ssl=1" alt="" width="433" height="253"></p>
+<p><span style="text-decoration: underline;">Working of Virtual Circuit:</span></p>
+<ul style="list-style-type: square;">
+<li>In the first step, a medium is set up between the two end nodes.</li>
+<li>Resources are reserved for the transmission of packets.</li>
+<li>Then a signal is sent to the sender to tell the medium is set up and transmission can be started.</li>
+<li>It ensures the transmission of all packets.</li>
+<li>A global header is used in the first packet of the connection.</li>
+<li>Whenever data is to be transmitted a new connection is set up.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Why TCP is called a connection-oriented and reliable protocol? Differentiate TCP with UDP.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">TCP is a connection-oriented protocol because it requires a logical connection to be established between the two processes before data is exchanged. The connection must be maintained during the entire time that communication is taking place, then released next.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Connection-oriented transport means any data remaining in the buffer is sent before the connection is terminated. The release is accomplished in a three-way handshake between client and server processes.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">TCP provides for the recovery of segments that get lost, are damaged, duplicated, or received out of their correct order. TCP is described as a &#8216;reliable&#8217; protocol because it attempts to recover from these errors.</p>
+<p>The difference between TCP and UDP is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-striped">
+<tbody>
+<tr>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+<tr>
+<td>It is a connection-oriented protocol.</td>
+<td>It is a connectionless protocol.</td>
+</tr>
+<tr>
+<td>TCP reads data as streams of bytes, and the message is transmitted to segment boundaries.</td>
+<td>UDP messages contain packets that were sent one by one. It also checks for integrity at the arrival time.</td>
+</tr>
+<tr>
+<td>TCP messages make their way across the internet from one computer to another.</td>
+<td>It is not connection-based, so one program can send lots of packets to another.</td>
+</tr>
+<tr>
+<td>TCP rearranges data packets in a specific order.</td>
+<td>UDP protocol has no fixed order because all packets are independent of each other.</td>
+</tr>
+<tr>
+<td>The speed for TCP is slower.</td>
+<td>UDP is faster as error recovery is not attempted.</td>
+</tr>
+<tr>
+<td>The header size is 20 bytes</td>
+<td>The header size is 8 bytes.</td>
+</tr>
+<tr>
+<td>TCP is heavy-weight. TCP needs three packets to set up a socket connection before any user data can be sent.</td>
+<td>UDP is lightweight. There are no tracking connections, ordering of messages, etc.</td>
+</tr>
+<tr>
+<td>TCP does error checking and also makes error recovery.</td>
+<td>UDP performs error checking, but it discards erroneous packets.</td>
+</tr>
+<tr>
+<td>Acknowledgment segments</td>
+<td>No Acknowledgment segments</td>
+</tr>
+<tr>
+<td>Using handshake protocols like SYN, SYN-ACK, ACK</td>
+<td>No handshake (so connectionless protocol)</td>
+</tr>
+<tr>
+<td>TCP is reliable as it guarantees the delivery of data to the destination router.</td>
+<td>The delivery of data to the destination can’t be guaranteed in UDP.</td>
+</tr>
+<tr>
+<td>TCP offers extensive error-checking mechanisms because it provides flow control and acknowledgment of data.</td>
+<td>UDP has just a single error checking mechanism which is used for checksums.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain architecture of WWW. What is URL?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>The architecture of WWW:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>The World Wide Web (WWW) is a collection of documents and other web resources which are identified by URLs, interlinked by hypertext links, and can be accessed and searched by browsers via the Internet.</li>
+<li>The World Wide Web is also called the Web and it was invented by Tim Berners-Lee in 1989.</li>
+<li>A website is a collection of web pages belonging to a particular organization.</li>
+<li>The pages can be retrieved and viewed by using a browser.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-7146 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/architecture-www.jpeg?resize=382%2C312&#038;ssl=1" alt="" width="382" height="312"></p>
+<p><span style="text-decoration: underline;">1. Client (Browser):</span></p>
+<ul style="list-style-type: square;">
+<li>The web browser is a program, which is used to communicate with a web server on the Internet.</li>
+<li>Each browser consists of three parts: a controller, client protocol, and interpreter.</li>
+<li>The controller receives input from an input device and uses the programs to access the documents.</li>
+<li>After accessing the document, the controller uses one of the interpreters to display the document on the screen.</li>
+</ul>
+<p><span style="text-decoration: underline;">2. Server:</span></p>
+<ul style="list-style-type: square;">
+<li>A computer that is available for the network resources and provides service to the other computer on request is known as the server.</li>
+<li>The web pages are stored on the server.</li>
+<li>The server accepts a TCP connection from a client browser.</li>
+<li>It gets the name of the file required.</li>
+<li>The server gets the stored file. Returns the file to the client and releases the top connection.</li>
+</ul>
+<p><span style="text-decoration: underline;">3. Uniform Resource Locator (URL):</span></p>
+<ul style="list-style-type: square;">
+<li>The URL is a standard for specifying any kind of information on the Internet.</li>
+<li>The URL consists of four parts: protocol, host computer, port, and path.</li>
+<li>The protocol is the client or server program which is used to retrieve the document or file. The protocol can be FTP or HTTP.</li>
+<li>The host is the name of the computer on which the information is located.</li>
+<li>The URL can optionally contain the port number and it is separated from the hostname by a colon.</li>
+<li>The path is the pathname of the file where the file is stored.</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Definition of URL:</span></strong></p>
+<ul style="list-style-type: square;">
+<li>The URL is a standard for specifying any kind of information on the Internet.</li>
+<li>The URL consists of four parts: protocol, host computer, port, and path.</li>
+<li>The protocol is the client or server program which is used to retrieve the document or file. The protocol can be FTP or HTTP.</li>
+<li>The host is the name of the computer on which the information is located.</li>
+<li>The URL can optionally contain the port number and it is separated from the hostname by a colon.</li>
+<li>The path is the pathname of the file where the file is stored.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain in brief about software defined network? What are its features?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software-defined networking (SDN) is an approach via which we take the control plane away from the switch and assign it to a centralized unit called the SDN controller. Hence, a network administrator can shape traffic via a centralized console without having to touch the individual switches. The data plane still resides in the switch and when a packet enters a switch, its forwarding activity is decided based on the entries of flow tables, which are pre-assigned by the controller. A flow table consists of match fields (like input port number and packet header) and instructions. The packet is first matched against the match fields of the flow table entries.</p>
+<p>Then the instructions of the corresponding flow entry are executed. The instructions can be forwarding the packet via one or multiple ports, dropping the packet, or adding headers to the packet. If a packet doesn’t find a corresponding match in the flow table, the switch queries the controller which sends a new flow entry to the switch. The switch forwards or drops the packet based on this flow entry.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-7149 alignnone" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/sdn.png?resize=257%2C340&#038;ssl=1" alt="" width="257" height="340"></p>
+<p>A typical SDN architecture consists of three layers.</p>
+<ul style="list-style-type: square;">
+<li><strong>Application layer:</strong><br />
+It contains the typical network applications like intrusion detection, firewall, and load balancing</li>
+<li><strong>Control layer:</strong><br />
+It consists of the SDN controller which acts as the brain of the network. It also allows hardware abstraction to the applications written on top of it.</li>
+<li><strong>Infrastructure layer:</strong><br />
+This consists of physical switches which form the data plane and carries out the actual movement of data packets.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Features of SDN:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li><b>Agility</b>. As business and applications need to change, administrators can adjust network configuration as required.</li>
+<li><b>Centralized management</b>. SDN consolidates network intelligence, which provides a holistic view of the network configuration and activity.</li>
+<li><b>Programmability</b>. The ability to directly program network features and configure network resources quickly and easily through automated SDN services.</li>
+<li><b>Open connectivity</b>. SDN is based on and implemented via open standards. As a result, SDN streamlines network design and provides consistent networking in a vendor-neutral architecture.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any TWO)</p>
+<ol>
+<li>Protocol and standards</li>
+<li>Switch</li>
+<li>Checksum</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) Protocol and Standards:</strong></span></p>
+<p>A network protocol is an established set of rules that determine how data is transmitted between different devices in the same network. Essentially, it allows connected devices to communicate with each other, regardless of any differences in their internal processes, structure, or design.</p>
+<p>There are thousands of different network protocols, but they all perform one of three primary actions:</p>
+<ul class="bulletlist">
+<li>Communication</li>
+<li>Network management</li>
+<li>Security</li>
+</ul>
+<p><strong>Protocol Standards:</strong></p>
+<p>Standards are the set of rules for data communication that are needed for the exchange of information among devices. It is important to follow Standards that are created by various  Standard Organizations like IEEE, ISO, ANSI, etc.</p>
+<p>Standards are of two types :</p>
+<ul style="list-style-type: square;">
+<li>De Facto Standard.</li>
+<li>De Jure  Standard.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>b) Switch:</strong></span></p>
+<ul class="points">
+<li>When a user accesses the internet or another computer network outside their immediate location, messages are sent through the network of transmission media. This technique of transferring information from one computer network to another network is known as <strong>switching</strong>.</li>
+<li>Switching in a computer network is achieved by using switches. A switch is a small hardware device that is used to join multiple computers together with one local area network (LAN).</li>
+<li>Network switches operate at layer 2 (Data link layer) in the OSI model.</li>
+<li>Switching is transparent to the user and does not require any configuration in the home network.</li>
+<li>Switches are used to forward the packets based on MAC addresses.</li>
+<li>A Switch is used to transfer the data only to the device that has been addressed. It verifies the destination address to route the packet appropriately.</li>
+<li>It is operated in full duplex mode.</li>
+<li>Packet collision is minimum as it directly communicates between source and destination.</li>
+<li>It does not broadcast the message as it works with limited bandwidth.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>c) Checksum:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>In the checksum error detection scheme, the data is divided into k segments each of m bits.</li>
+<li>At the sender’s end, the segments are added using 1’s complement arithmetic to get the sum. The sum is complemented to get the checksum.</li>
+<li>The checksum segment is sent along with the data segments.</li>
+<li>At the receiver’s end, all received segments are added using 1’s complement arithmetic to get the sum. The sum is complemented.</li>
+<li>If the result is zero, the received data is accepted; otherwise discarded.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-7152 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/detect13.jpg?resize=537%2C499&#038;ssl=1" alt="" width="537" height="499"></p>
+</div>
+</body></html>

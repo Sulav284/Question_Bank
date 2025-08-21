@@ -1,0 +1,237 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>CN Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attemt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>A bit stream 1101011011 is transmitted using the standard CRC method. The generator polynomial is 10011. What is the actual bit transmitted?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 2</h3>
+<div><p><p>What are the features of the application layer? Why is DNS required? Explain about recursive, non-recursive, and iterative DNS queries.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The features of the application layer are:</p>
+<ul style="list-style-type: square;">
+<li><strong>End-to-End Communication</strong>: Makes it possible for software programs running on various devices to interact.</li>
+<li><strong>Data presentation</strong>: Data presentation makes ensuring that the data is structured correctly and that the apps that receive it can understand it.</li>
+<li><strong>Protocol Support</strong>: Offers many applications HTTP, FTP, SMTP, and DNS services.</li>
+<li><strong>Resource Sharing</strong>: Files, printers, and other resources may be shared by networked devices thanks to resource sharing.</li>
+<li><strong>User Interface</strong>: Enables users to engage with programs on the network.</li>
+</ul>
+<p>The Domain Name System (DNS) is an essential part of the internet that converts domain names into IP addresses so that users may access websites and other resources:</p>
+<ul style="list-style-type: square;">
+<li><strong>Eliminates the need to memorize IP addresses</strong>:<br />
+It would surely be awful to have to memorize the IP addresses of all the websites one frequently accesses, including Google, Facebook, Twitter, and so on. DNS servers are a creative approach to convert domain or subdomain names to IP addresses.</li>
+<li><strong>Increasing the speed of internet connections</strong>:<br />
+DNS speeds up internet by caching, load balancing, using nearby servers, efficient hierarchy, and pre-fetching queries.</li>
+<li><strong>Scalability</strong>:<br />
+DNS effectively arranges and maintains millions of domain names, facilitating the expansion of the internet.</li>
+<li><strong>Load balancing enabled</strong>:<br />
+To balance the traffic and prevent any one server from becoming overburdened, the DNS server might prioritize or cycle these addresses.</li>
+</ul>
+<p><span style="text-decoration: underline;">Recursive DNS Query</span>: A DNS server receives a query from the DNS resolver (client) and is responsible for contacting further DNS servers until it receives a response or returns an error. The customer awaits the outcome.</p>
+<p><span style="text-decoration: underline;">Non-Recursive DNS Query</span>: When a DNS resolver sends a query to a DNS server, the server does not query other servers; instead, it just returns the best response it has (either authoritative or cached). It returns an error if it is unsure.</p>
+<p><span style="text-decoration: underline;">Iterative DNS Query</span>: The DNS resolver sends a query to a DNS server, and if the server is unable to respond, it provides the resolver with the address of another DNS server to try. Until it receives an error or the answer, the resolver keeps asking questions.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Provide reasons for transitions from IPv4 to IPv6. Describe the IPv6 datagram format.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Reasons for Transition from IPv4 to IPv6:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Resolve the Space Limitation</strong>:<br />
+The 32-bit addresses used by IPv4 provide over 4.3 billion distinct addresses, however this is inadequate given how quickly the internet and linked devices are expanding. An address space that is much bigger is made possible by IPv6&#8217;s 128-bit addresses.</li>
+<li><strong>Enhanced Security</strong>:<br />
+IPv6 improves data security by virtue of its integrated support for IPsec (Internet Protocol Security) for authentication and encryption.</li>
+<li><strong>Optimal Routing</strong>:<br />
+The size of routing tables is decreased by IPv6&#8217;s hierarchical addressing scheme, which streamlines routing.</li>
+<li><strong>Removal of NAT</strong>:<br />
+IPv6&#8217;s large address space eliminates the requirement for Network Address Translation (NAT), making end-to-end communication possible and streamlining network administration.</li>
+</ol>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-49663 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/IPv6-header.drawio.png?resize=459%2C242&#038;ssl=1" alt="" width="459" height="242"></p>
+<p style="text-align: center;">fig: IPv6 datagram format</p>
+<p>The IPv6 datagram has a fixed header of 40 bytes and an optional extension header. The structure is as follows:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Version (4 bits):</strong>
+<ul style="list-style-type: square;">
+<li>The IP version is specified (6 for IPv6).</li>
+</ul>
+</li>
+<li><strong>Traffic Class (8 bits):</strong>
+<ul style="list-style-type: square;">
+<li>It is used to distinguish between traffic priority for QoS.</li>
+</ul>
+</li>
+<li><strong>Flow Label (20 bits):</strong>
+<ul style="list-style-type: square;">
+<li>It finds data flows that need to be handled differently, such real-time streaming.</li>
+</ul>
+</li>
+<li><strong>Payload Length (16 bits):</strong>
+<ul style="list-style-type: square;">
+<li>The payload&#8217;s size, including data and extension headers, is shown in bytes.</li>
+</ul>
+</li>
+<li><strong>Next Header (8 bits):</strong>
+<ul style="list-style-type: square;">
+<li>Specifies the type of the next header (e.g., TCP, UDP, or an extension header).</li>
+</ul>
+</li>
+<li><strong>Hop Limit (8 bits):</strong>
+<ul style="list-style-type: square;">
+<li>It replaces the IPv4 Time-to-Live (TTL) field, which indicates the most hops a packet is allowed to make.</li>
+</ul>
+</li>
+<li><strong>Source Address (128 bits):</strong>
+<ul style="list-style-type: square;">
+<li>The IPv6 address of the sender.</li>
+</ul>
+</li>
+<li><strong>Destination Address (128 bits):</strong>
+<ul style="list-style-type: square;">
+<li>The IPv6 address of the recipient.</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attemt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Explain about connection-oriented network services.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Connection-oriented network services are protocols for communication that establish a specific connection between the sender and the recipient prior to the start of data transmission. These services guarantee that all data packets are transferred correctly and in the correct order while also preserving a steady connection, which ensures reliable data transport.</p>
+<p>characteristics:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;">Establishment of the Connection</span>: Before data transfer starts, a virtual circuit is created.</li>
+<li><span style="text-decoration: underline;">Acknowledgment</span>: The recipient confirms that the data has been received.</li>
+<li><span style="text-decoration: underline;">Realiability of connection</span>: Data packets are delivered in an orderly and error-free <span style="text-decoration: underline;">manner when there is reliable communication.</span></li>
+<li><span style="text-decoration: underline;">Examples of Protocols</span>: The connection-oriented Transmission Control Protocol (TCP) is widely used.</li>
+</ol>
+<p>Applications including file transfers, email, and video conferencing where precision and dependability are crucial frequently employ these services.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Illustrate the functionality of Media Access Control.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Media Access Control (MAC) is a sublayer of the Data Link Layer. Among its features are the following:</p>
+<ul style="list-style-type: square;">
+<li>It is in charge of encapsulating frames so they may be sent across the LLC and higher levels of the OSI network, providing an abstraction of the physical layer.</li>
+<li>It fixes the source station&#8217;s and destination station&#8217;s (or groups of destination stations&#8217;) addressing.</li>
+<li>When more than one data frame has to be sent, it carries out multiple access resolutions. It chooses the transmission channel access techniques.</li>
+<li>It also creates frame check sequences, which helps prevent transmission mistakes; it also carries out collision resolution and starts retransmission in the event of collisions.</li>
+<li>Verifies data integrity using techniques like Cyclic Redundancy Check (CRC).</li>
+<li>Ensures devices are identified using unique MAC addresses for proper data delivery.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why do you think Network Functions Virtualization architecture is required? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Network services like as load balancers, routers, and firewalls are isolated from proprietary hardware by Network services Virtualization (NFV). The software that performs these tasks runs on general-purpose servers in virtual machines or containers. This design increases the network&#8217;s ability to adapt to changing needs, optimizes resource usage, and lessens reliance on particular technology. Network Functions Virtualization architecture is required because of the following reason:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Cost Reduction</strong>: By substituting virtualized services running on common servers for specialized, costly hardware, NFV lowers the requirement for such gear.</li>
+<li><strong>Flexibility and Agility</strong>: It makes it simpler to scale up or down as needed by enabling the quick deployment of network services.</li>
+<li><strong>Simplified Management</strong>: By allowing for central management of virtualized network operations, complexity may be decreased.</li>
+<li><strong>Faster Innovation</strong>: Without requiring hardware modifications, NFV allows for rapid upgrades and the deployment of new services.</li>
+<li><strong>Energy Efficiency</strong>: Less energy is used when network operations are consolidated onto fewer hardware platforms.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Assume a class C network and divide it into three subnets. What is the value of the new subnet?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Class C network has a default subnet mask of 255.255.255.0 (or /24) additionally, since 2<sup>2</sup> = 4 subnets, you need at least 2 bits to generate 3 subnets.</p>
+<p>We need to divide the network into 3 subnets. To do this, we need to borrow bits from the host portion so, by borrowing 2 bits, the new subnet mask becomes 255.255.255.192 (or /26).</p>
+<p>It is possible to build four subnets using a subnet mask of /26 (2<sup>2</sup> = 4). However, only three subnets are required and the other can be left unused.</p>
+<p>Assuming the original network is 192.168.1.0/24, we may compute the subnets for a Class C network to view the subnets:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>192.168.1.0/26</strong> is the first subnet where broadcast: 192.168.1.62, useable range: 192.168.1.1 to 192.168.1.62</li>
+<li><strong>192.168.1.64/26</strong> is the second subnet where broadcast: 192.168.1.127, useable range: 192.168.1.65 to 192.168.1.126</li>
+<li> <strong>192.168.1.128/26</strong> is the third subnet where broadcast: 192.168.1.191, useable range: 192.168.1.129 to 192.168.1.190</li>
+<li><strong>192.168.1.192/26</strong> is the fourth subnet where broadcast: 192.168.1.255, useable range: 192.168.1.193 to 192.168.1.254</li>
+</ol>
+<p>Hence, the new subnet mask is <strong>255.255.255.192</strong> (or /26), allowing for 4 subnets with 62 usable IP addresses per subnet.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Difference between web serverand proxy server.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Web Server</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Proxy Server</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It provides and hosts online content for users, such as browsers.</td>
+<td style="width: 50%; text-align: center;">It serves as a bridge between other servers and clients.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It manages HTTP requests and provides HTML-based answers.</td>
+<td style="width: 50%; text-align: center;">It sends requests to the target server, filters them, or caches them.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It communicates directly with clients in order to provide resources.</td>
+<td style="width: 50%; text-align: center;">It communicates indirectly by sending requests on customers&#8217; behalf.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is sent with limited caching for static information.</td>
+<td style="width: 50%; text-align: center;">Responses are frequently cached to speed up and lower demand.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It manages client authentication and protects hosted material.</td>
+<td style="width: 50%; text-align: center;">IT adds anonymity, inhibits malicious communications, and filters content.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">for eg: Apache, Nginx, IIS.</td>
+<td style="width: 50%; text-align: center;">for eg: Squid, HAProxy.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain the working mechanism of token bucket.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The token bucket algorithm allow to vary the output rate depending on the size of brust. In this algorithm the bucket holds token to transmit a packet, the host must capture and destroy one token. Token are generated by a clock at the rate of one token every second. Following are the coomponents to be known in token bucket:</p>
+<p><span style="text-decoration: underline;">Bucket and Tokens</span>: Each token, which is stored in a virtual bucket, denotes authorization to transport a unit of data, such as a byte or a packet.</p>
+<p><span style="text-decoration: underline;">Token Generation</span>: The permitted data transmission rate is represented by the set rate at which tokens are added to the bucket.</p>
+<p><span style="text-decoration: underline;">Bucket Capacity</span>: The bucket can&#8217;t hold more tokens than it can hold because of its maximum capacity.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-49497 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/token-bucket.drawio-1.png?resize=405%2C210&#038;ssl=1" alt="" width="405" height="210"></p>
+<p><strong>Algorithm</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Step 1: A token is added at every Δt time</li>
+<li>Step 2: The bucket can hold b-token. If a token arrive when bucket is full, it is                          declared.</li>
+<li>Step 3: When a packet of m bytes arrived m tokens are removed from the bucket                    and the packet is sent to the network.</li>
+<li>Step 4: If less than n tokens are available no tokens are removed from the bucket                    and the packet is considredto be non conformant.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What do you understand by PPP protocol? Explain its link setup process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Point-to-Point protocol is referred to as PPP. It is the most widely used point-to-point access protocol. The PPP protocol will be utilized if the user want to access the internet from home. PPP is a data link layer communication protocol that allows two network devices, like a computer and a router, to interact directly. Through serial channels like DSL, leased lines, and dial-up connections, it encapsulates data flows.</p>
+<p><strong>Features of PPP</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Multiple network layer protocols, such as IPv4 and IPv6, are supported by PPP.</li>
+<li>It offers types of authentication, including as PAP and CHAP.</li>
+<li>It makes ensuring that errors are found and fixed.</li>
+<li>It enables the dynamic assignment of IP addresses.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain any two wireless transmission media.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Wireless transmission media describes communication technologies that send signals or data without the need of actual connections or wires. Instead, they use electromagnetic waves like microwaves, radio waves, or infrared to make it possible to send data across long distances. Wi-Fi, Bluetooth, and satellite communication are a few examples.</p>
+<p>Any two wireless transmission media are:</p>
+<p><strong>a. Radiowaves</strong>:<br />
+Long-distance wireless communication is made possible by radio waves, a form of electromagnetic wave. Their ability to travel great distances and pass through barriers like walls and buildings makes them popular for wireless communication. They are appropriate for broadcasting and mobile communication because to their low frequency and ability to pass through barriers. Its applications include Wi-Fi networks, television transmission, and FM/AM radios.</p>
+<p>Characteristics:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Frequency Range</span>: From 3 Hz to 300 GHz.</li>
+<li><span style="text-decoration: underline;">Propagation</span>: Can travel through air, vacuum, and even some solid materials.</li>
+</ul>
+<p><strong>b. Microwaves</strong>:<br />
+Microwaves are a specific type of electromagnetic wave with frequencies ranging from 1 GHz to 300 GHz, or wavelengths between 1 millimeter and 30 centimeters.Using high-frequency electromagnetic waves, microwaves provide point-to-point communication. They need a direct line of sight and are less susceptible to interference, among other features. Its applications include cellular networks, bluetooth gadgets, satellite communication, point-to-point communication lines, and other wireless communication technologies all make substantial use of them.</p>
+<p>Characteristics:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;">Line-of-Sight Propagation</span>: Microwaves need unhindered, uncluttered routes to transmit since they normally move in straight lines.</li>
+<li><span style="text-decoration: underline;">High Bandwidth</span>: Because they can handle high data transfer rates, they may be used for broadband communication.</li>
+<li>Specific frequency bands, such as the L, S, C, X, and Ku bands, are used by microwaves for a variety of purposes.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>ICMP</li>
+<li>IGMP</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>ICMP (Internet Control Message Protocol)</strong> :<br />
+Internet Control Message Protocol (ICMP) is a network layer protocol that is used in IP networks for diagnostic and problem reporting purposes. It facilitates the communication of network conditions and error messages (such as &#8220;unreachable destination&#8221;) between devices. Echo Request/Reply, which is utilized by ping, and Destination Unreachable are examples of common ICMP messages. It helps with debugging and guarantees improved network traffic management.</p>
+<p>Internet Control Message Protocol (ICMP) is used for error reporting. Error Reporting by ICMP works by sending messages to the sender from the receiver in the case when data is not received.</p>
+<p>b. <b><strong>IGMP</strong></b> <strong>(</strong><b><strong>Internet Group Management Protocol) :<br />
+</strong></b>In order to communicate with IP networks via multicasting, hosts and neighboring routers employ the IGMP protocol, which effectively leverages resources to send data packets and messages. Because multicast communication can involve one or more senders and receivers, IGMP can be utilized in online conferencing tools, gaming, and video streaming. This protocol may be used on IPv4 networks and IPv6 networks.</p>
+<p>In order to control multicast group memberships on an IP network, IGMP is required. It guarantees that multicast traffic is only routed to hosts that are interested in receiving it and enables routers to identify which hosts are members of certain multicast groups. This lessens network congestion.</p>
+<p><b><strong> </strong></b></p>
+</div>
+</body></html>

@@ -1,0 +1,380 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>AI Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Long Answer Questions.</h2><h3>Question 1</h3>
+<div><p><p>Define admissible heuristic with an example. Explain the working mechanism and limitations of hill climbing search.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Admissible heuristics are used to estimate the cost of reaching the goal state in a search algorithm. Admissible heuristics never overestimate the cost of reaching the goal state. The use of admissible heuristics also results in optimal solutions as they always find the cheapest path solution.</p>
+<p>For a heuristic to be admissible to a search problem, needs to be lower than or equal to the actual cost of reaching the goal.</p>
+<figure class="w-richtext-figure-type-image w-richtext-align-center">
+<div><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/global-uploads.webflow.com/5ef788f07804fb7d78a4127a/61c9563ef8b9a0b82dc84da1_Admissible%20heuristic-min.png?ssl=1" alt="Admissible heuristic" /></div><figcaption>Source: Hamrocsit</figcaption></figure>
+<p>‍</p>
+<p>Here is an example:</p>
+<p>In the A* search algorithm, the evaluation function (where {\displaystyle n}n is the current node) is:</p>
+<p>f(n)=g(n)+h(n)</p>
+<p>where</p>
+<p>f(n) = evaluation function.</p>
+<p>g(n) = cost from start node to current node</p>
+<p>h(n) = estimated cost from current node to goal</p>
+<p>Here, h(n) gets calculated with the use of the heuristic function. If a non-admissible heuristic was used, it is possible that the algorithm would not reach the optimal solution because of an overestimation in the evaluation function.</p>
+<p>&nbsp;</p>
+<p>A hill-climbing algorithm is a local search algorithm that moves continuously upward (increasing) until the best solution is attained. This algorithm comes to an end when the peak is reached.</p>
+<p>This algorithm has a node that comprises two parts: state and value. It begins with a non-optimal state (the hill’s base) and upgrades this state until a certain precondition is met. The heuristic function is used as the basis for this precondition. The process of continuous improvement of the current state of iteration can be termed as climbing. This explains why the algorithm is termed as a <em>hill-climbing algorithm</em>.</p>
+<h3 id="state-space-diagram-analysis">State-space diagram analysis</h3>
+<p>A state-space diagram provides a graphical representation of states and the optimization function. If the objective function is the y-axis, we aim to establish the local maximum and global maximum.</p>
+<p>If the cost function represents this axis, we aim to establish the local minimum and global minimum. More information about local minimum, local maximum, global minimum, and global maximum can be found here.</p>
+<p>The following diagram shows a simple state-space diagram. The objective function has been shown on the y-axis, while the state-space represents the x-axis.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.section.io/engineering-education/understanding-hill-climbing-in-ai/hill-climbing-algorithm-in-ai.png?ssl=1" alt="Hill Climbing Algorithm in AI" /></p>
+<p>Image Source: Hamrocsit</p>
+<p>A state-space diagram consists of various regions that can be explained as follows;</p>
+<ul style="list-style-type: square;">
+<li><strong>Local maximum:</strong> A local maximum is a solution that surpasses other neighboring solutions or states but is not the best possible solution.</li>
+<li><strong>Global maximum:</strong> This is the best possible solution achieved by the algorithm.</li>
+<li><strong>Current state:</strong> This is the existing or present state.</li>
+<li><strong>Flat local maximum:</strong> This is a flat region where the neighboring solutions attain the same value.</li>
+<li><strong>Shoulder:</strong> This is a plateau whose edge is stretching upwards.</li>
+</ul>
+<h3 id="problems-with-hill-climbing">Problems with hill climbing</h3>
+<p>There are three regions in which a hill-climbing algorithm cannot attain a global maximum or the optimal solution: local maximum, ridge, and plateau.</p>
+<h4 id="local-maximum">Local maximum</h4>
+<p>At this point, the neighboring states have lower values than the current state. The greedy approach feature will not move the algorithm to a worse off state. This will lead to the hill-climbing process’s termination, even though this is not the best possible solution.</p>
+<p>This problem can be solved using momentum. This technique adds a certain proportion (m) of the initial weight to the current one. m is a value between 0 and 1. Momentum enables the hill-climbing algorithm to take huge steps that will make it move past the local maximum.</p>
+<h4 id="plateau">Plateau</h4>
+<p>In this region, the values attained by the neighboring states are the same. This makes it difficult for the algorithm to choose the best direction.</p>
+<p>This challenge can be overcome by taking a huge jump that will lead you to a non-plateau space.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.section.io/engineering-education/understanding-hill-climbing-in-ai/plateau.png?ssl=1" alt="Plateau" /></p>
+<p>Image Source: Hamrocsit</p>
+<h4 id="ridge">Ridge</h4>
+<p>The hill-climbing algorithm may terminate itself when it reaches a ridge. This is because the peak of the ridge is followed by downward movement rather than upward movement.</p>
+<p>This impediment can be solved by going in different directions at once.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.section.io/engineering-education/understanding-hill-climbing-in-ai/ridge-in-hill-climbing.png?ssl=1" alt="Ridge in Hill Climbing" /></p>
+<p>Image Source: Hamrocsit</p>
+<p>‍</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How do you define problem? What are criteria for defining problem? Compare Constraint Satisfaction Problem and Real World Problem in detail with appropriate example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A problem is a situation (difficult/easy) experienced by an agent. The problem is solved by a sequence of actions that reduce the difference between the initial situation and the goal.  A problem when defined with its components is called a well-defined problem.</p>
+<p>Criteria for defining the problem:</p>
+<ul style="list-style-type: square;">
+<li><strong>Initial State</strong>: It is the starting state or initial step of the agent towards its goal.</li>
+<li><strong>Actions</strong>: It is the description of the possible actions available to the agent.</li>
+<li><strong>Transition Model</strong>: It describes what each action does.</li>
+<li><strong>Goal Test</strong>: It determines if the given state is a goal state.</li>
+<li><strong>Path cost</strong>: It assigns a numeric cost to each path that follows the goal. The problem-solving agent selects a cost function, which reflects its performance measure.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Constraint Satisfaction Problem:</strong></p>
+<p>The problem is intended to illustrate or exercise various problem-solving methods. It can be given a concise, exact description and hence is usable by different researchers to compare the performance of algorithms.</p>
+<p>A constraint satisfaction problem (CSP) consists of<br />
+➢ a set of variables,<br />
+➢ a domain for each variable, and<br />
+➢ a set of constraints.<br />
+The aim is to choose a value for each variable so that the resulting possible world satisfies the constraints.</p>
+<p>Example: <strong>Crypto Arithmetic Problem</strong></p>
+<p>States: Arrangement of any numbers on the given arithmetic.<br />
+Initial State: Unsolved digits.<br />
+Actions: Replace the digits with unique numbers.<br />
+Transition model: Returns the arithmetic with the added numbers.<br />
+Goal test: Checks whether all the bits are replaced.<br />
+Path cost: There is no need for path cost because only final states are counted.</p>
+<p>Solution:</p>
+<p style="text-align: left;">   A B C</p>
+<p style="text-align: left;">+D E F</p>
+<p style="text-align: left;"><span style="text-decoration: underline;">                </span></p>
+<p style="text-align: left;">=G H I</p>
+<p>=&gt;</p>
+<p style="text-align: left;">1. A ≠ B ≠ C ≠ D ≠ E ≠ F ≠ G ≠ H ≠ I<br />
+2. C + F = I<br />
+C + F = 10 + I (I as carry)<br />
+3. B + E = H<br />
+B + E = 10 + H<br />
+B + E + 1 = H<br />
+B + E + 1 =10 + H (H as carry)<br />
+4. A + D = G<br />
+A + D + 1 = G</p>
+<p style="text-align: left;">Step 1:</p>
+<p style="text-align: left;">Domain of C = {1, 2, 3, 4, 5, 6, 7, 8, 9}<br />
+Domain of F = {1, 2, 3, 4, 5, 6, 7, 8, 9}<br />
+So,<br />
+Domain of I = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}<br />
+Select C = 4 &amp; F = 9 Then I = 3 (Carry = 1)<br />
+So,</p>
+<p style="text-align: left;"> A B 4</p>
+<p style="text-align: left;">+D E 9</p>
+<p><span style="text-decoration: underline;">              </span></p>
+<p style="text-align: left;">=G H 3</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">Step 2:</p>
+<p style="text-align: left;">Domain of B = {1, 2, 5, 6, 7, 8}<br />
+Domain of E = {1, 2, 5, 6, 7, 8}<br />
+So,<br />
+Domain of H = {0, 1, 2, 5, 6, 7, 8}<br />
+Select B = 2 &amp; E = 8<br />
+Then H = 10+1 {previous carry = 1 + (Carry = 1)}<br />
+So,</p>
+<p style="text-align: left;"> A 2 4</p>
+<p style="text-align: left;">+D 8 9</p>
+<p><span style="text-decoration: underline;">               </span></p>
+<p style="text-align: left;">G 1 3</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">Step 3:</p>
+<p style="text-align: left;">Domain of A = {0, 5, 6, 7}<br />
+Domain of D = {0, 5, 6, 7}<br />
+So, Domain of G = {5, 6}<br />
+Select A = 0 &amp; D = 5 Then G = 6 (with addition of Carry)<br />
+So,<br />
+Hence, the required solutions are:<br />
+A = 0, B = 2, C = 4, D = 5, E = 8, F = 9, G = 6, H = 1, I = 3.</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"> 0 2 4</p>
+<p style="text-align: left;">+5 8 9</p>
+<p><span style="text-decoration: underline;">                </span></p>
+<p>6 1 3</p>
+<p>&nbsp;</p>
+<p><strong>Real-World Problem:</strong></p>
+<p>Those problem whose solution people actually care about. Such problems tend not to have a single agreed upon description, but we can give the general flavour of their formulations.</p>
+<p>Example:</p>
+<p>Consider the airline travel problems that must be solved by a travel-planning website:</p>
+<p>States: Each state obviously includes a location (like an airport) and the current time. Furthermore, because the cost of an action ( a flight segment) may depend on previous segments, their fare bases, and their status of domestic or international, the state must record extra information about these &#8220;historical&#8221; aspects.</p>
+<p>Initial state: Specified by user&#8217;s query.</p>
+<p>Actions: Take any flight from current location, in any seat class, leaving after the current time, leaving enough time for within-airport transfer if needed.</p>
+<p>Transition model: The state resulting from taking a flight will have the flight&#8217;s destination as the current location and the flight&#8217;s arrival time as the current time.</p>
+<p>Goal test: Are we at the final destination specified by the user?</p>
+<p>Path cost: This depends on monetary cost, waiting time, flight time, customs, immigration procedure, seat quality, time of day, type of airplane, frequent-flyer mileage awards and so on.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Expert System with example. What are stages of expert system development ? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An expert system is a computer system whose performance is guided by specific, expert knowledge in solving problems. It is a computer system that simulates the decision-making process of a human expert in a specific domain. An expert system is an “intelligent” program that solves problems in a narrow problem area by using high-quality, specific knowledge rather than an algorithm. Expert systems are used by most large or medium-sized organizations as a major tool for improving productivity and quality. An expert system’s knowledge is obtained from expert sources and coded in a form suitable for the system to use in its process.</p>
+<p>Examples:</p>
+<p><strong>MYCIN</strong> would attempt to diagnose patients based on reported symptoms and medical test results.</p>
+<p><strong>CALEX</strong> is a user-friendly computer program that simulates human problem-solving behavior. It is a blackboard-based integrated system for agricultural management. CALEX can be used by growers, pest control advisors, consultants, and other managers.</p>
+<p><strong>DENDRAL’s</strong> primary aim was to help organic chemists in identifying unknown organic molecules, by analyzing their mass spectra and using knowledge of chemistry.</p>
+<p><strong>Emycin</strong> is an expert system, a framework for building programs that record the knowledge of domain experts and use that knowledge to help non-expert users solve problems.</p>
+<p>&nbsp;</p>
+<p><strong>Stages of Expert System Development:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-17489 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/es.jpg?resize=1025%2C201&#038;ssl=1" alt="" width="1025" height="201"></p>
+<p><strong>Identification</strong></p>
+<ul style="list-style-type: square;">
+<li>The problem must be suitable for an expert system to solve it.</li>
+<li>Find the experts in the task domain for the ES project.</li>
+<li>Establish the cost-effectiveness of the system.</li>
+</ul>
+<p><strong>Conceptualization</strong></p>
+<ul style="list-style-type: square;">
+<li>Identify the ES Technology.</li>
+<li> Know and establish the degree of integration with the other systems and databases.</li>
+<li>Realize how the concepts can represent the domain knowledge best.</li>
+</ul>
+<p><strong>Formalization</strong></p>
+<ul style="list-style-type: square;">
+<li>The various techniques of knowledge representation and heuristic search are used in expert systems.</li>
+<li>The expert system tools can greatly assist the development process.</li>
+<li>Other expert systems may solve similar problems and thus may be adequate for the problem at hand.</li>
+</ul>
+<p><strong>Implementation</strong></p>
+<p>During the implementation stage, the formalized concepts are programmed onto the computer that has been chosen for system development, using the predetermined techniques and tools to implement a first-pass prototype of the expert system.</p>
+<p><strong>Testing</strong></p>
+<p>Testing provides opportunities to identify the weakness in the structure and implementation of the system and to make the appropriate corrections.<br />
+Depending on the types of problems encountered, the testing procedure may indicate that the system was proper.</p>
+</div>
+<h2>Section- B: Short Answer Questions.</h2><h3>Question 4</h3>
+<div><p><p>How syntactic and semantic analyses are performed in natural language processing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3 title=""><span title="">Syntactic Analysis</span></h3>
+<p title=""><span title="">The syntactic analysis involves analyzing the grammatical syntax of a sentence to understand its meaning. </span></p>
+<p title=""><span title="">For example, consider the following sentence: “</span><i title=""><span title="">The cow jumped over the moon</span></i>“</p>
+<p title=""><span title="">Using Syntactic analysis, a computer would be able to understand the parts of speech of the different words in the sentence. Based on the understanding, it can then try and estimate the meaning of the sentence. In the case of the above example (however ridiculous it might be in real life), there is no conflict about the interpretation. Thus, the syntactic analysis does the job just fine. </span></p>
+<p title=""><span title="">However, human language is nuanced and not always, is a sentence as simple as the one described above. Consider this: “</span><i>Does this all sound like a joke to you?</i>“</p>
+<p title=""><span title="">A human would easily understand the irateness locked in the sentence. However, a syntactic analysis may just be too naive for it. That leads us to the need for something better and more sophisticated, i.e., Semantic Analysis.</span></p>
+<p title=""><span title="">Syntactic analysis is much easier to implement than semantic analysis. The typical process includes:</span></p>
+<p><b>Tokenization:</b> Breaking a text into sentence tokens &amp; then a sentence into word tokens</p>
+<p><b>Lemmatization: </b><span title="">Identifying the lemma of a word. Example: Cri will be the lemma for all cry, crying, cried.</span></p>
+<p><b>POS Tagging: </b><span title="">Identifying the part of speech (POS) of a particular word in a sentence.</span></p>
+<p title=""><span style="font-size: 14pt;"><strong><span title="">Semantic Analysis</span></strong></span></p>
+<p title=""><span title="">In the case of semantic analysis, a computer understands the meaning of a text by analyzing the text as a whole and not just looking at individual words. The context in which a word is used is very important when it comes to semantic analysis. Let’s revisit the same example: “</span><i title=""><span title="">Does it all sound like a joke to you?</span></i><span title="">” While the word “joke” may be positive on its own, something sounding like a joke may not be so. Thus, the context here is derived by analyzing the whole sentence instead of isolated words.</span></p>
+<p title=""><span title="">The semantic analysis does throw better results, but it also requires substantially more training and computation. We will now understand why. </span></p>
+<p>A company receives an online review from a customer.  “Contrary to my request, the hairstylist dyed my hair orange! I thought it was a joke, but no. I’ll never go back!”</p>
+<p>The company’s semantic analysis tool will proceed to the analysis of these statements. Here, artificial intelligence must understand the meaning of the words used. For example, “orange” should be analyzed as a homonym and a polysemantic word (i.e. one with multiple meanings). The machine must recognize that the single word corresponds to a color and not a fruit. The use of the word “joke” (with a generally positive connotation) must also be identifiable in a negative context. Finally, the tool must be able to identify the customer&#8217;s deep satisfaction that gives meaning to the message. These analyses allow for the classification of customer requests into different categories, by theme, feeling, intentions, or risks. For example, faced with a negative review like the above, the message could be categorized as one of “dissatisfaction,” with a high level of risk.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What do you mean by Rational Agent? What are differences between Utility based agent and model based agent?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Rational Agent is an Intelligent Agent that makes decisions based on logical reasoning and optimizes its behavior to achieve a specific goal.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Model-Based Agent</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Utility-Based Agent</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Maintains internal model of part of its environment, then chooses an action like a reflex agent.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Distinguish among the possible states on the basis of some utility function to select a goal state.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It is specifically useful in partially observable environments.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It is useful when there are multiple possible alternatives to the goal state.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Simpler.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Complex.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-18571" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/mod.jpg?resize=346%2C266&#038;ssl=1" alt="" width="346" height="266"></td>
+<td style="width: 50%; text-align: center; height: 24px;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18570" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/ut.jpg?resize=484%2C360&#038;ssl=1" alt="" width="484" height="360"></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is state space representation? Illustrate with one example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The initial state, actions, and transition model together define the <strong>state space</strong> of the problem implicitly.</p>
+<p><strong>State-space</strong> of a problem is a set of all states which can be reached from the initial state followed by any sequence of actions.</p>
+<p>The state space forms a directed map or graph where nodes are the states, links between the nodes are actions, and the path is a sequence of states connected by the sequence of actions.</p>
+<p>Major components of state space representation:</p>
+<ul style="list-style-type: square;">
+<li>Initial State</li>
+<li>Goal State</li>
+<li>Operator or legal moves</li>
+</ul>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p><strong>WATER JUG PROBLEM</strong></p>
+<p>You are given two jugs, a 4-gallon one and a 3-gallon one. Neither has any measuring mark on it. There is a pump that can be used to fill the jugs with water. How can you get exactly 2 gallons of water into the 4-gallon jug?</p>
+<p>=&gt;</p>
+<p>The state space for this problem can be described as the set of ordered pairs of integers (X, Y)<br />
+where,<br />
+X represents the quantity of water in the 4-gallon jug X= 0,1,2,3,4<br />
+Y represents the quantity of water in the 3-gallon jug Y=0,1,2,3</p>
+<p>Then,</p>
+<p><strong>Initial State</strong>: (0,0)<br />
+<strong>Goal State</strong>: (2,0)<br />
+<strong>Operator / Production Rule</strong>:<br />
+&#8211; Fill the 4 or 3-gallon jug.<br />
+&#8211; Empty the 4 or 3-gallon jug.<br />
+&#8211; Pour from either of the jugs to another.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17491 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/wj.jpg?resize=717%2C351&#038;ssl=1" alt="" width="717" height="351"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is forward chaining? Explain with appropriate example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Forward chaining is also known as a forward deduction or forward reasoning method when using an inference engine. Forward chaining is a form of reasoning which start with atomic sentences in the knowledge base and applies inference rules (Modus Ponens) in the forward direction to extract more data until a goal is reached. An end goal is achieved through the manipulation of knowledge that exists in the knowledge base. The Forward-chaining algorithm starts from known facts, triggers all rules whose premises are satisfied, and adds their conclusion to the known facts. This process repeats until the problem is solved.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-18578" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/answer.jpg?resize=689%2C890&#038;ssl=1" alt="" width="689" height="890"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Convert Following Sentences into Predicate</p>
+<p>a) All animal who can bark are dog.</p>
+<p>b) Someone is firing a gun</p>
+<p>c) All tigers are not fierce</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a=&gt;</p>
+<p>let:</p>
+<p>A(x): x is an animal.</p>
+<p>B(x): x can bark.</p>
+<p>D(x): x is a dog.</p>
+<p>Then, &#8220;All animal who can bark are dog.&#8221; is:<br />
+∀x A(x) ∧ B(x)→ D(x)</p>
+<p>b=&gt;</p>
+<p>let:</p>
+<p>F(x): x is firing.</p>
+<p>G(x): x has gun.</p>
+<p>∃x F(x) ∧ G(x)</p>
+<p>c=&gt;</p>
+<p>let:</p>
+<p>T(x): x is a Tiger.</p>
+<p>F(x): x is fierce.</p>
+<p>Then, &#8220;All tigers are not fierce&#8221; is:</p>
+<p>∃x T(x) ∧ ¬ F(x)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define game. Write the benefits and limitations of depth limited search.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Benefits of DLS are;</strong></p>
+<p>1.Depth limited search is more efficient than DFS, using less time and memory.<br />
+2.If a solution exists, DFS guarantees that it will be found in a finite amount of time.<br />
+3.To address the drawbacks of DFS, we set a depth limit and run our search technique repeatedly through the search tree.<br />
+4.DLS has applications in graph theory that are highly comparable to DFS.</p>
+<p><strong>Limitations of DLS are;</strong></p>
+<p>1. It is not complete if the solution is below the limit L (d&lt;l), because it cannot find the soln.</p>
+<p>2. It may not find the optimal if there are more than soln.</p>
+<p>3. It is not time efficient since it takes O(b^L).</p>
+<p>4. It may cause loops if tree search used on the graph.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is fuzzy logic? Discuss the different operators used in genetic algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Fuzzy Logic (FL) is a method of reasoning that resembles human reasoning. The approach of FL imitates the way of decision making in humans that involves all intermediate possibilities between digital values YES and NO. The conventional logic block that a computer can understand takes precise input and produces a definite output as TRUE or FALSE, which is equivalent to human’s YES or NO.</p>
+<p>Using Different types of operator in genetic algorithm is given below:</p>
+<h3 class="h3">1. Initialization</h3>
+<p>The process of a genetic algorithm starts by generating the set of individuals, which is called population. Here each individual is the solution for the given problem. An individual contains or is characterized by a set of parameters called Genes. Genes are combined into a string and generate chromosomes, which is the solution to the problem. One of the most popular techniques for initialization is the use of random binary strings.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/tutorial/machine-learning/images/genetic-algorithm-in-machine-learning2.png?ssl=1" alt="Genetic Algorithm in Machine Learning" /></p>
+<h3 class="h3">2. Fitness Assignment</h3>
+<p>Fitness function is used to determine how fit an individual is? It means the ability of an individual to compete with other individuals. In every iteration, individuals are evaluated based on their fitness function. The fitness function provides a fitness score to each individual. This score further determines the probability of being selected for reproduction. The high the fitness score, the more chances of getting selected for reproduction.</p>
+<h3 class="h3">3. Selection</h3>
+<p>The selection phase involves the selection of individuals for the reproduction of offspring. All the selected individuals are then arranged in a pair of two to increase reproduction. Then these individuals transfer their genes to the next generation.</p>
+<p>There are three types of Selection methods available, which are:</p>
+<ul class="points">
+<li>Roulette wheel selection</li>
+<li>Tournament selection</li>
+<li>Rank-based selection</li>
+</ul>
+<h3 class="h3">4. Reproduction</h3>
+<p>After the selection process, the creation of a child occurs in the reproduction step. In this step, the genetic algorithm uses two variation operators that are applied to the parent population. The two operators involved in the reproduction phase are given below:</p>
+<ul class="points">
+<li><strong>Crossover:</strong> The crossover plays a most significant role in the reproduction phase of the genetic algorithm. In this process, a crossover point is selected at random within the genes. Then the crossover operator swaps genetic information of two parents from the current generation to produce a new individual representing the offspring.<br />
+<img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/tutorial/machine-learning/images/genetic-algorithm-in-machine-learning3.png?ssl=1" alt="Genetic Algorithm in Machine Learning" /><br />
+The genes of parents are exchanged among themselves until the crossover point is met. These newly generated offspring are added to the population. This process is also called or crossover. Types of crossover styles available:</p>
+<ul class="points">
+<li>One point crossover</li>
+<li>Two-point crossover</li>
+<li>Livery crossover</li>
+<li>Inheritable Algorithms crossover</li>
+</ul>
+</li>
+<li><strong>Mutation</strong><br />
+The mutation operator inserts random genes in the offspring (new child) to maintain the diversity in the population. It can be done by flipping some bits in the chromosomes.<br />
+Mutation helps in solving the issue of premature convergence and enhances diversification. The below image shows the mutation process:<br />
+Types of mutation styles available,&nbsp;</p>
+<ul class="points">
+<li><strong>Flip bit mutation</strong></li>
+<li><strong>Gaussian mutation</strong></li>
+<li><strong>Exchange/Swap mutation</strong></li>
+</ul>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/tutorial/machine-learning/images/genetic-algorithm-in-machine-learning4.png?ssl=1" alt="Genetic Algorithm in Machine Learning" /></li>
+</ul>
+<h3 class="h3">5. Termination</h3>
+<p>After the reproduction phase, a stopping criterion is applied as a base for termination. The algorithm terminates after the threshold fitness solution is reached. It will identify the final solution as the best solution in the population.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Give an example of reinforcement learning. Explain the types of ANN.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Reinforcement Learning</strong> is defined as a Machine Learning method that is concerned with how software agents should take actions in an environment. Reinforcement Learning is a part of the deep learning method that helps you to maximize some portion of the cumulative reward. Some of the autonomous driving tasks where reinforcement learning could be applied include trajectory optimization, motion planning, dynamic pathing, controller optimization, and scenario-based learning policies for highways. For example, parking can be achieved by learning automatic parking policies.</p>
+<p>Following are the Types of ANN.</p>
+<p><strong>1. Feedforward Neural Network</strong></p>
+<p>The feedforward neural network is one of the most basic artificial neural networks. In this ANN, the data or the input provided travels in a single direction. It enters into the ANN through the input layer and exits through the output layer while hidden layers may or may not exist. So the feedforward neural network has a front propagated wave only and usually does not have backpropagation.</p>
+<p><strong>2. Recurrent Neural Network</strong></p>
+<p>The Recurrent Neural Network saves the output of a layer and feeds this output back to the input to better predict the outcome of the layer. The first layer in the RNN is quite similar to the feed-forward neural network and the recurrent neural network starts once the output of the first layer is computed. After this layer, each unit will remember some information from the previous step so that it can act as a memory cell in performing computations.</p>
+<p><strong>3. Convolutional Neural Network</strong></p>
+<p>A Convolutional neural network has some similarities to the feed-forward neural network, where the connections between units have weights that determine the influence of one unit on another unit. But a CNN has one or more than one convolutional layers that use a convolution operation on the input and then pass the result obtained in the form of output to the next layer. CNN has applications in speech and image processing which is particularly useful in computer vision.</p>
+<p><strong>4. Modular Neural Network</strong></p>
+<p>A Modular Neural Network contains a collection of different neural networks that work independently towards obtaining the output with no interaction between them. Each of the different neural networks performs a different sub-task by obtaining unique inputs compared to other networks. The advantage of this modular neural network is that it breaks down a large and complex computational process into smaller components, thus decreasing its complexity while still obtaining the required output.</p>
+<p><strong>5. Radial basis function Neural Network</strong></p>
+<p>Radial basis functions are those functions that consider the distance of a point concerning the center. RBF functions have two layers. In the first layer, the input is mapped into all the Radial basis functions in the hidden layer and then the output layer computes the output in the next step. Radial basis function nets are normally used to model the data that represents any underlying trend or function.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Writes short note of the following(any TWO)</p>
+<p>a. Pragmatic Analysis</p>
+<p>b. Unification and lifting</p>
+<p>c. Turing test</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong> a.  Pragmatic Analysis</strong></p>
+<ul style="list-style-type: square;">
+<li>Pragmatic Analysis is part of the process of extracting information from text.</li>
+<li>It focuses on taking a structured set of text and figuring out the actual meaning of the text.</li>
+<li>It also focuses on the meaning of the words of the time and context.</li>
+<li>Effects on interpretation can be measured using PA by understanding the communicative and social content.</li>
+</ul>
+<p><strong> b.</strong></p>
+<p><strong> Unification</strong></p>
+<ul class="points">
+<li>Unification is a process of making two different logical atomic expressions identical by finding a substitution. Unification depends on the substitution process.</li>
+<li>It takes two literals as input and makes them identical using substitution.</li>
+<li>Let Ψ<sub>1</sub> and Ψ<sub>2</sub> be two atomic sentences and 𝜎 be a unifier such that, <strong>Ψ<sub>1</sub>𝜎 = Ψ<sub>2</sub>𝜎</strong>, then it can be expressed as <strong>UNIFY(Ψ<sub>1</sub>, Ψ<sub>2</sub>)</strong>.</li>
+<li><strong>Example: Find the MGU for Unify{King(x), King(John)}</strong></li>
+</ul>
+<p><strong> C. Turing Test</strong></p>
+<p>The Turing Test is a method of inquiry in artificial intelligence (<a href="https://www.techtarget.com/searchenterpriseai/definition/AI-Artificial-Intelligence" rel="nofollow noopener" target="_blank">AI</a>) for determining whether or not a computer is capable of thinking like a human being. The test is named after Alan Turing, the founder of the Turing Test and an English computer scientist, cryptanalyst, mathematician and theoretical biologist.</p>
+<p>Turing proposed that a computer can be said to possess artificial intelligence if it can mimic human responses under specific conditions. The original Turing Test requires three terminals, each of which is physically separated from the other two. One terminal is operated by a computer, while the other two are operated by humans.</p>
+<p>During the test, one of the humans functions as the questioner, while the second human and the computer function as respondents. The questioner interrogates the respondents within a specific subject area, using a specified format and context. After a preset length of time or number of questions, the questioner is then asked to decide which respondent was human and which was a computer.</p>
+<p>The test is repeated many times. If the questioner makes the correct determination in half of the test runs or less, the computer is considered to have artificial intelligence because the questioner regards it as &#8220;just as human&#8221; as the human respondent.</p>
+</div>
+</body></html>

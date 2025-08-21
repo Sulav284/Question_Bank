@@ -1,0 +1,466 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Question Bank 2080(new) 2080</title>
+    </head>
+    <body>
+        <h1>DBMS Question Bank 2080(new) - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Consider a banking database with three labels and primary key underlined as given below:</p>
+<p>Customer (<span>CustomerID ,</span> CustomerName, Address, Phone, Email)</p>
+<p>Borrows (<span>CustomerID,</span> <span>LoanNumber</span> )</p>
+<p>Loan ( <span>LoanNumber</span> , LoanType, Amount )</p>
+<p>Write both relational algebra and SQL queries:</p>
+<ol>
+<li>To display name of all customers who live in “Lalitpur” in ascending order of name.</li>
+<li>To count total number of customers having loan at the bank.</li>
+<li>To find name of those customers who have loan amount greater than or equal to 500000.</li>
+<li>To find average loan amount of each accoun’t type.</li>
+</ol>
+<p> </p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a:</strong></p>
+<p><strong>Relational Algebra:</strong></p>
+<p><span class="mord"><span class="mord mathnormal">π</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">CustomerName</span></span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">Address</span><span class="mrel mtight">=</span>&#8220;<span class="mord mathnormal mtight">L</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">tp</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">r</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Customer</span></span><span class="mclose">)) </span><span class="mord text"><span class="mord">ORDER BY CustomerName ASC</span></span></p>
+<p><strong>SQL:</strong></p>
+<p>SELECT CustomerName<br />
+FROM Customer<br />
+WHERE Address = &#8216;Lalitpur&#8217;<br />
+ORDER BY CustomerName ASC;</p>
+<p><strong>b:</strong></p>
+<p><strong>Relational Algebra :</strong></p>
+<p>G<sub>COUNT(CustomerID)</sub> (Customer⋈Borrow);</p>
+<p><strong>SQL:</strong></p>
+<p>SELECT COUNT(DISTINCT Customer.CustomerID) AS TotalCustomersWithLoan<br />
+FROM Customer<br />
+INNER JOIN Borrows ON Customer.CustomerID = Borrows.CustomerID;</p>
+<p><strong>c:</strong></p>
+<p><strong>Relational Algebra:</strong></p>
+<p><span class="base"><span class="mord"><span class="mord mathnormal">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">C</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">er</span><span class="mord mathnormal mtight">N</span><span class="mord mathnormal mtight">am</span><span class="mord mathnormal mtight">e</span></span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">σ</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">A</span><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span><span class="mrel mtight">≥</span>500000</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mopen">(</span><span class="mord text"><span class="mord">Loan</span></span><span class="mrel">⋈</span></span><span class="base"><span class="mord text"><span class="mord">Borrows</span></span><span class="mrel">⋈</span></span><span class="base"><span class="mord text"><span class="mord">Customer</span></span><span class="mclose">))</span></span></p>
+<p><strong>SQL:</strong></p>
+<p>SELECT DISTINCT c.CustomerName<br />
+FROM Customer c<br />
+JOIN Borrows b ON c.CustomerID = b.CustomerID<br />
+JOIN Loan l ON b.LoanNumber = l.LoanNumber<br />
+WHERE l.Amount &gt;= 500000;</p>
+<p><strong>d:</strong></p>
+<p><strong>Relational algebra:</strong></p>
+<p><span class="mord"><span class="mord mathnormal">ρ<sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">LoanType</span><span class="mpunct mtight">,</span><span class="mord text mtight">AVG(Amount)</span></span></span></span><span class="vlist-s">​</span></span></span></span></sub><span class="mopen">(</span><span class="mord text">Loan</span><span class="mclose">)</span></span></span></p>
+<p><strong>SQL:</strong></p>
+<p>SELECT LoanType, AVG(Amount) AS AverageLoanAmount<br />
+FROM Loan<br />
+GROUP BY LoanType;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are informal design guidelines for relational schemas? why do we need functional dependencies? Explain 2NF, 3NF with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When designing relational schemas, it’s essential to follow certain guidelines to ensure data quality, minimize redundancy, and prevent anomalies. some informal design guidelines are:</p>
+<ol style="list-style-type:decimal;">
+<li><em><span style="text-decoration: underline;">Normalization</span> </em>: Normalization is a database design technique that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update, and Deletion Anomalies. Normalization rules divide larger tables into smaller tables and link them using relationships.</li>
+<li><em><span style="text-decoration: underline;">Atomicity</span> </em>: This is the situation which tells that a transaction should either be comitted completely or should not be comitted.It should not be comitted partially</li>
+<li><span style="text-decoration: underline;"><em>Data Integrity Constraints</em></span> : Enforce data integrity using constraints such as primary keys, foreign keys, unique constraints, and check constraints. These constraints help maintain data accuracy and consistency.</li>
+</ol>
+<p>A functional dependency is a constraint that specifies the relationship between two sets of attributes where one set can accurately determine the value of other sets. It is denoted as <strong>X → Y</strong>, where X is a set of attributes that is capable of determining the value of Y. Functional dependencies are crucial in database design for several reasons :</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><em>Data Integrity</em></span> : Functional dependencies help maintain data integrity by ensuring that certain relationships between attributes (columns) in a relation (table) are preserved.</li>
+<li><span style="text-decoration: underline;"><em>Normalization</em></span> : Normalization is a database design technique that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update, and Deletion Anomalies. Normalization rules divide larger tables into smaller tables and link them using relationships.</li>
+<li><span style="text-decoration: underline;"><em>Schema Design </em></span>: Functional dependencies guide the design of database schemas. They help determine the appropriate structure for tables and the relationships between them</li>
+</ol>
+<p>In summary, functional dependencies are essential in database design and management as they contribute to data integrity, normalization, query optimization, schema design, indexing, and data validation.</p>
+<p><span style="text-decoration: underline;"><strong>Second Normal form (2NF):</strong></span></p>
+<p>For a table to be in the Second Normal Form,</p>
+<ol class="content">
+<li>It should be in the First Normal form.</li>
+<li>And, it should not have Partial Dependency.</li>
+</ol>
+<p><strong>Example</strong>: Let’s say a school wants to store the data of teachers and the subjects they teach. They create a table <code>Teacher</code> that looks like this: Since a teacher can teach more than one subject, the table can have multiple rows for the same teacher.</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Subject</td>
+<td>Teacher_Age</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Maths</td>
+<td>38</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Physics</td>
+<td>38</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Biology</td>
+<td>38</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Physics</td>
+<td>40</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Chemistry</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Candidate Keys: {<code>Teacher_Id</code>, <code>Subject</code>}<br />
+Non-prime attribute: <code>Teacher_Age</code></p>
+<p>This table is in 1 NF because each attribute has atomic values. However, it is not in 2NF because the non-prime attribute <code>Teacher_Age</code> is dependent on <code>Teacher_Id</code> alone which is a proper subset of the candidate key. This violates the rule for 2NF as the rule says “no non-prime attribute is dependent on the proper subset of any candidate key of the table”.</p>
+<p>To make the table complies with 2NF we can disintegrate it in two tables like this:</p>
+<p>Teacher_Details table:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Teacher_Age</td>
+</tr>
+<tr>
+<td>111</td>
+<td>38</td>
+</tr>
+<tr>
+<td>222</td>
+<td>38</td>
+</tr>
+<tr>
+<td>333</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Teacher_Subject table:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Maths</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Physics</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Biology</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Physics</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Chemistry</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Now the tables are in the Second normal form (2NF).</p>
+<p><span style="text-decoration: underline;"><strong>Third Normal Form (3NF):</strong></span></p>
+<p>A table is said to be in the Third Normal Form when,</p>
+<ol class="content">
+<li>It is in the Second Normal form.</li>
+<li>And, it doesn’t have Transitive Dependency.</li>
+</ol>
+<p><strong>Example</strong>: Let’s say a company wants to store the complete address of each employee, they create a table named <code>Employee_Details</code> that looks like this:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Zip</td>
+<td>Emp_State</td>
+<td>Emp_City</td>
+<td>Emp_District</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>John</td>
+<td>282005</td>
+<td>UP</td>
+<td>Agra</td>
+<td>Dayal Bagh</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Ajeet</td>
+<td>222008</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>M-City</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>Lora</td>
+<td>282007</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>Urrapakkam</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>Lilly</td>
+<td>292008</td>
+<td>UK</td>
+<td>Pauri</td>
+<td>Bhagwan</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>Steve</td>
+<td>222999</td>
+<td>MP</td>
+<td>Gwalior</td>
+<td>Ratan</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Super keys: {<code>Emp_Id</code>}, {<code>Emp_Id</code>, <code>Emp_Name</code>}, {<code>Emp_Id</code>, <code>Emp_Name</code>, <code>Emp_Zip</code>}…so on<br />
+Candidate Keys: {<code>Emp_Id</code>}</p>
+<p>Non-prime attributes: all attributes except <code>Emp_Id</code> are non-prime as they are not part of any candidate keys.</p>
+<p>Here, <code>Emp_State</code>, <code>Emp_City</code> &amp; <code>Emp_District</code> dependent on <code>Emp_Zip</code>. Further<code> Emp_zip</code> is dependent on <code>Emp_Id</code> what makes non-prime attributes (<code>Emp_State</code>,<code> Emp_City</code> &amp; <code>Emp_District</code>) transitively dependent on super key (<code>Emp_Id</code>). This violates the rule of 3NF.</p>
+<p>To make this table complies with 3NF we have to disintegrate the table into two tables to remove the transitive dependency:</p>
+<p>Employee Table:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Zip</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>John</td>
+<td>282005</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Ajeet</td>
+<td>222008</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>Lora</td>
+<td>282007</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>Lilly</td>
+<td>292008</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>Steve</td>
+<td>222999</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Employee_Zip table:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Zip</td>
+<td>Emp_State</td>
+<td>Emp_City</td>
+<td>Emp_District</td>
+</tr>
+<tr>
+<td>282005</td>
+<td>UP</td>
+<td>Agra</td>
+<td>Dayal Bagh</td>
+</tr>
+<tr>
+<td>222008</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>M-City</td>
+</tr>
+<tr>
+<td>282007</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>Urrapakkam</td>
+</tr>
+<tr>
+<td>292008</td>
+<td>UK</td>
+<td>Pauri</td>
+<td>Bhagwan</td>
+</tr>
+<tr>
+<td>222999</td>
+<td>MP</td>
+<td>Gwalior</td>
+<td>Ratan</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain deadlock with example. What are different deadlock prevention protocols? Explain deadlock detection and starvation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Deadlock happens when every process holds a resource and waits for another process to hold another resource. A deadlock occurs when no process can proceed and becomes blocked. Deadlock is also known as circular wait. Other processes block requested resources while a process is deadlocked.</p>
+<p>When a transaction waits indefinitely to obtain a lock, The database management system should detect whether the transaction is involved in a deadlock or not. Deadlock prevention mechanism proposes two schemes:</p>
+<ul style="list-style-type: square;">
+<li><b><strong>Wait-Die Scheme: </strong></b></li>
+<li><b><strong>Wound Wait Scheme: </strong></b></li>
+</ul>
+<p>When a transaction waits indefinitely to obtain a lock, the database management system should detect whether the transaction is involved in a deadlock or not. This is called deadlock detection.</p>
+<p>Starvation happens when a low priority program requests a system resource but cannot run because a higher priority program has been employing that resource for a long time. Starvation occurs when low priority procedures are blocked while high priority operations proceed. High-priority processes continue to use the requested resources.</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>What are the characteristics of database approach? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Chatacteristic of database approach are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Data Independence</strong> : One of the fundamental characteristics of database approach in DBMS is data independence. This refers to the ability to modify the structure of a database without impacting the programs that access the data.</li>
+<li><strong>Data integrity</strong> : Data integrity mean to maintaining the data validation and constraints throughout the table and also throughout the transaction.</li>
+<li><strong>Data sharing</strong> : The database approach also emphasizes data sharing, enabling multiple users to access and update data simultaneously. Techniques such as locking and concurrency control are employed to facilitate these characteristics of database approach.</li>
+<li><strong>Backup and recovery</strong> : Database backups involve creating copies of the entire database or specific portions to restore data in case of loss. Regular backup schedules can be established, and backups can be stored on separate servers or in the cloud.</li>
+<li><strong>Scalability</strong> : Scalability is one of the critical characteristics of the database approach, enabling databases to handle vast amounts of data and numerous users without performance degradation. Techniques like horizontal scaling and vertical scaling are utilized to achieve scalability.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define data independence. Explain three-schema architecture.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><em>Data Independence</em></span> is defined as a property of DBMS that helps you to change the Database schema at one level of a database system without requiring you to change the schema at the next higher level. Data independence helps you to keep data separated from all programs that make use of it.</p>
+<p>Data Abstraction is a process of hiding unwanted or irrelevant details from the end user. It provides a different view and helps in achieving data independence which is used to enhance the security of data.</p>
+<p>Mainly there are three levels of abstraction for DBMS, which are as follows −</p>
+<ul class="list">
+<li>Physical or Internal Level</li>
+<li>Logical or Conceptual Level</li>
+<li>View or External Level</li>
+</ul>
+<p><strong>1. Physical or Internal Level:</strong></p>
+<p>It is the lowest level of abstraction for DBMS which defines how the data is actually stored, it defines data structures to store data and access methods used by the database. Actually, it is decided by developers or database application programmers how to store the data in the database.</p>
+<p>So, overall, the entire database is described on this level that is physical or internal level. It is a very complex level to understand. For example, customer information is stored in tables, and data is stored in the form of blocks of storage such as bytes, gigabytes, etc.</p>
+<p><strong>2. Logical or Conceptual Level:</strong></p>
+<p>The logical level is the intermediate level or the next higher level. It describes what data is stored in the database and what relationship exists among those data. It tries to describe the entire or whole data because it describes what tables are to be created and what are the links among those tables that are created.</p>
+<p>It is less complex than the physical level. The logical level is used by developers or database administrators (DBA). So, overall, the logical level contains tables (fields and attributes) and relationships among table attributes.</p>
+<p><strong>3. View or External Level:</strong></p>
+<p>It is the highest level. At the view level, there are different levels of views and every view only defines a part of the entire data. It also simplifies interaction with the user and it provides many views or multiple views of the same database.</p>
+<p>View level can be used by all users (all levels’ users). This level is the least complex and easy to understand.A user can interact with a system using GUI that is view level and can enter details at GUI or screen and the user does not know how data is stored and what data is stored, this detail is hidden from the user.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is specialization? What are different constraints on specialization?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In specialization, an entity is divided into sub-entities based on its characteristics. It is a top-down approach where the higher-level entity is specialized into two or more lower-level entities. Specialization is also called as ” Top-Down approch”. Specialization is used to identify the subset of an entity set that shares some distinguishing characteristics.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37604 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/specialization.drawio.png?resize=402%2C349&#038;ssl=1" alt="" width="402" height="349"></p>
+<p>There are three constraints that may apply to a specialization/generalization: membership constraints, disjoint constraints and completeness constraints.</p>
+<ul style="list-style-type: square;">
+<li><strong>Membership constraints</strong> : It determines which entity can be a member of the low-level entity set. It is the evaluation of membership on the basis whether an entity satisfies an explicit condition or not.</li>
+<li><strong>Disjoint constraints</strong> : It describes relationship between members of the subclasses and indicates whether members of a superclass can be a member of one, or more than one subclass. It is denoted by d in EER diagram.</li>
+<li><strong>Completeness constraints</strong> : Total specifies every entity in the superclass must be a member of some subclass in the specialization. It is denoted by double line in the EER diagram.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is relational database? Explain different characteristic of a relation. Defain domain constraint.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-shrink-0 flex flex-col relative items-end">
+<div>
+<div class="pt-0.5 juice:pt-0">
+<div class="gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full juice:h-8 juice:w-8">
+<div class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-6 w-6">A relational database is a type of database that stores and organizes data into tables, where each table consists of rows (records) and columns (attributes). These tables are related to each other through common fields, allowing for efficient querying and retrieval of data. Here&#8217;s a detailed explanation of different characteristics of relations in a relational database, along with the definition of a domain constraint:</div>
+<div>Characteristic of  :</div>
+<ol style="list-style-type:decimal;">
+<li><strong>Structure as Tables:</strong> Data is organized into tables (relations), where each table represents an entity (e.g., customers, orders, products) and each row represents an instance of that entity.</li>
+<li><strong>Unique Row Identifier:</strong> Each row in a table is uniquely identified by a primary key, which ensures that no two rows have the same values for the primary key columns. This supports efficient indexing and retrieval.</li>
+<li><strong>Columns Define Attributes:</strong> Each column in a table represents an attribute of the entity being modeled. Columns have a defined data type (e.g., integer, string, date), which ensures uniformity and data integrity.</li>
+<li><strong>Data Integrity:</strong> Relational databases enforce data integrity through constraints such as primary key constraints (ensuring uniqueness), foreign key constraints (maintaining relationships between tables), and domain constraints.</li>
+<li><strong>Normalization:</strong> Relational databases aim to minimize redundancy and dependency by normalizing tables into smaller, logical units, reducing data duplication and ensuring data consistency.</li>
+</ol>
+<h3>Domain Constraint:</h3>
+<p>A domain constraint defines the permissible values for a column in a table. It specifies the set of possible values that a column can hold based on its data type and other constraints defined (such as NOT NULL constraints).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is tuple realtion calculus ?  Given the following schema, write tuple relational calculus for selecting name and address of employee who are working in a company having Cid=E01</p>
+<p>Employee(<span>Eid</span>, Ename, Address, Cid)</p>
+<p>Company(<span>Cid,</span> CName)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 9</h3>
+<div><p><p>Explain schedule based on recoverability and serializability.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><em><strong>Schedule based on recoverability</strong></em></span> :</p>
+<p>For some schedules it is easy to recover from transaction and system failuers, whereas for other schedules the recovery process can be quite involved. Different types of schedules are:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>Recoverable Schedule</strong> : One where no transaction needs to be rolled back. A schedule S is recoverable if no transaction T in S commits until all transactions T that have written an item that T reades have committed.</li>
+<li><strong>Cascade Schedule</strong> : One where every transaction reads only the items that are written by committed transactions.</li>
+<li><strong>Schedules requiring cascaded rollback</strong> : A schedule in which uncommitted transactions that reads an item from a failed transaction must be rolled back.</li>
+<li><strong>Strict Schedule</strong> : A schedule in which a transaction can neither read nor write an item X until the last transaction that wrote X has committed.</li>
+</ol>
+<p><span style="text-decoration: underline;"><em><strong>Schedules based on serializibility</strong></em></span> :</p>
+<p>The concept of serializibility of schedules is used to identify which schedule are correct when transaction execution have interleaving of their operations in schedules.</p>
+<p>1. <strong>Conflict Serializable</strong> : A schdule is called conflict serializable if it can be transformd into a serial schedule by swapping non-conflicting operation. Two operations are said to be conflicting if all conditions satisfy :</p>
+<ul style="list-style-type: square;">
+<li>They belong to different transaction.</li>
+<li>They operate on the same data item.</li>
+<li>At least one of them is a write program.</li>
+</ul>
+<p>2. <strong>View serializable</strong> : A schedule is called view serializable if its view equals to a serial schedule (no ovrlaping transactions). A conflict schedule is a view serializable but if the serializibility contains blind writes, then the view serializable doesn&#8217;t conflict serializabl.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How timestamp ordering protocol is used for ensuring concurrency control?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><em>Timestamp-based protocol </em></span>is the most commonly used concurrency protocol is the timestamp-based protocol. This protocol uses either system time or a logical counter as a timestamp.</p>
+<p>Lock-based protocols manage the order between the conflicting pairs among transactions at the time of execution, whereas timestamp-based protocols start working as soon as a transaction is created.</p>
+<p>Every transaction has a timestamp associated with it, and the ordering is determined by the age of the transaction. A transaction created at 0002 clock time would be older than all other transactions that come after it. For example, any transaction ‘y’ entering the system at 0004 is two seconds younger and the priority would be given to the older one.</p>
+<p>In addition, every data item is given the latest read and write timestamp. This lets the system know when the last ‘read and write operation was performed on the data item.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why database recovery is essential? Explain recovery technique based on immediate update.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Database recovery is essential because it ensures the durability and reliability of data in a database system, even in the face of unexpected events or failures. The primary goal of database recovery is to bring the database back to a consistent and reliable state after a system failure or an unexpected event. Common system failures include hardware failures, software crashes, power outages, and human errors.</p>
+<p>One of the techniques used for database recovery is based on immediate update, often referred to as the &#8220;Immediate Update&#8221; or &#8220;Write-Ahead Logging&#8221; technique. This technique involves the following key concepts:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Transaction Logging:</strong>
+<ul style="list-style-type: square;">
+<li>Every change or modification made to the database is first recorded in a log file before it is applied to the actual database.</li>
+<li>The log file contains a chronological record of all transactions and the changes they make to the database.</li>
+<li>The log entry includes information about the transaction, such as its start and end times, the affected data items, and the before-and-after values of the modified data.</li>
+</ul>
+</li>
+<li><strong>Write-Ahead Logging (WAL):</strong>
+<ul style="list-style-type: square;">
+<li>The principle behind this technique is that a log entry must be written to the log file before the corresponding data change is applied to the database.</li>
+<li>The &#8220;write-ahead&#8221; part ensures that the log entry is persisted to a stable storage (e.g., a disk) before the corresponding database modification occurs.</li>
+<li>This guarantees that, in case of a failure, the system can replay the log entries to bring the database back to a consistent state by reapplying the changes.</li>
+</ul>
+</li>
+<li><strong>Checkpointing:</strong>
+<ul style="list-style-type: square;">
+<li>Periodically, the system performs a checkpoint operation where all the dirty (modified) pages in the buffer pool are written to the database files.</li>
+<li>After writing the dirty pages, a checkpoint record is added to the log, indicating that the changes up to that point are now permanent.</li>
+<li>This checkpoint serves as a reference point for recovery, allowing the system to start replaying log entries from this point onward in case of a failure.</li>
+</ul>
+</li>
+<li><strong>Recovery Process:</strong>
+<ul style="list-style-type: square;">
+<li>When a system failure occurs (e.g., a crash or power outage), the database management system uses the log entries to recover the database.</li>
+<li>It starts by identifying the most recent checkpoint record and begins replaying log entries from that checkpoint onward.</li>
+<li>By reapplying the changes recorded in the log, the system brings the database back to a consistent state, ensuring that all committed transactions&#8217; effects are retained.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Transaction processing</li>
+<li>Weak entity</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong>Transaction Processing</strong> : Transaction processing refers to the management and execution of database transactions in a reliable and consistent manner within a database management system (DBMS). A transaction is a logical unit of work that consists of one or more operations, such as reading or updating data, which must be executed atomically (all or nothing), consistently, isolatedly, and durably—often abbreviated as ACID properties</li>
+<li><strong>Weak entity</strong> : It is the type of entity that doesn&#8217;t have enough attribute to build a primary key.It contains a partial key which is represented by dashed underline symbol. In a weak entity set, it is a combination of primary keyand partial key of the strong entity set. The member of a weak entity set is called subordinate entity set. It is represnted by a double rectangle symbol. The relationship between one strong and a weak entity set is shown by using the double diamond symbol.</li>
+</ol>
+</div>
+</body></html>

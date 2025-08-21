@@ -1,0 +1,768 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>OS Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Long Answer Question</h2><h3>Question 1</h3>
+<div><p><p>Discuss about single level and two level directory system. Consider the following process and answer the following questions.</p>
+<p> </p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>       Process</td>
+<td>          Allocation</td>
+<td>    Max</td>
+<td>      Available</td>
+</tr>
+<tr>
+<td></td>
+<td>     A    B    C     D</td>
+<td>    A    B    C    D</td>
+<td>     A   B    C     D</td>
+</tr>
+<tr>
+<td>       P0</td>
+<td>     0    0     1      2</td>
+<td>   0     0     1     2</td>
+<td>     1    5      2     0</td>
+</tr>
+<tr>
+<td>       P1</td>
+<td>     1     0     0     0</td>
+<td>   1      7      5     0</td>
+<td></td>
+</tr>
+<tr>
+<td>       P2</td>
+<td>     1     3     5      4</td>
+<td>   2      3     5      6</td>
+<td></td>
+</tr>
+<tr>
+<td>       P3</td>
+<td>    0     6     3       2</td>
+<td>   0      6     5       2</td>
+<td></td>
+</tr>
+<tr>
+<td>       P4</td>
+<td>    0     0    1        4</td>
+<td>    0    6      5       6</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>a. What is the content of matrix Need?</p>
+<p>b.  Is the system in safe state?</p>
+<p>c.  If P1 request (0,4,2,0) can the request be granted immediately.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>directory</strong> is a container that is used to contain folders and files. It organizes files and folders in a hierarchical manner. There are several logical structures of a directory, these are given below.</p>
+<ul style="list-style-type: square;">
+<li><strong>Single-level directory –</strong><br />
+The single-level directory is the simplest directory structure. In it, all files are contained in the same directory which makes it easy to support and understand.A single level directory has a significant limitation, however, when the number of files increases or when the system has more than one user. Since all the files are in the same directory, they must have a unique name. if two users call their dataset test, then the unique name rule violated.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/222-13.png?ssl=1" alt=""></p>
+<ul style="list-style-type: square;">
+<li><strong>Two-level directory –</strong><br />
+As we have seen, a single level directory often leads to confusion of files names among different users. the solution to this problem is to create a separate directory for each user.In the two-level directory structure, each user has their own <i>user files directory (UFD)</i>. The UFDs have similar structures, but each lists only the files of a single user. system’s <i>master file directory (MFD)</i> is searches whenever a new user id=s logged in. The MFD is indexed by username or account number, and each entry points to the UFD for that user.</li>
+</ul>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/222-2-1.png?ssl=1" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Solution of the numeric:</p>
+<p>i) The content of need matrix is given by:</p>
+<p>Since, Need=Max-Allocation,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       Process</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">       Need</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;"></td>
+<td style="width: 33.384%; height: 24px; text-align: center;">     A    B    C     D</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       P0</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">     0     0     0     0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       P1</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">     0     7     5     0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       P2</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">     1     0     0      2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       P3</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">     0     0     2      0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.0923%; height: 24px;">       P4</td>
+<td style="width: 33.384%; height: 24px; text-align: center;">    0     6    4      2</td>
+</tr>
+</tbody>
+</table></div>
+<p>ii)</p>
+<p>Let us check if the system is in safe state or not.</p>
+<p>Iteration 1:</p>
+<p>for P0,</p>
+<p>Need[0]≤Available</p>
+<p>=&gt;[0,0,0,0]≤[1,5,2,0]</p>
+<p>=&gt;<strong>True</strong></p>
+<p>So, complete[0]=True and,</p>
+<p>Available=&gt;Available+Allocation[0]</p>
+<p>=&gt;[1,5,2,0]+[0,0,1,2]</p>
+<p>=&gt;[1,5,3,2]</p>
+<p>Iteration 2:</p>
+<p>for P1,</p>
+<p>Need[1]≤Available</p>
+<p>=&gt;[0,7,5,0]≤[1,5,3,2]</p>
+<p>=&gt;<strong>False</strong></p>
+<p>So, complete[1]=False.</p>
+<p>Iteration 3:</p>
+<p>for P2,</p>
+<p>Need[2]≤Available</p>
+<p>=&gt;[1,0,0,2]≤[1,5,3,2]</p>
+<p>=&gt;<strong>True</strong></p>
+<p>So, complete[2]=True and,</p>
+<p>Available=&gt;Available+Allocation[2]</p>
+<p>=&gt;[1,5,3,2]+[1,3,5,4]</p>
+<p>=&gt;[2,8,8,6]</p>
+<p>Iteration 4:</p>
+<p>for P3,</p>
+<p>Need[3]≤Available</p>
+<p>=&gt;[0,0,2,0]≤[2,8,8,6]</p>
+<p>=&gt;<strong>True</strong></p>
+<p>So, complete[3]=True and,</p>
+<p>Available=&gt;Available+Allocation[3]</p>
+<p>=&gt;[2,8,8,6]+[0,6,3,2]</p>
+<p>=&gt;[2,14,11,8]</p>
+<p>Iteration 5:</p>
+<p>for P4,</p>
+<p>Need[4]≤Available</p>
+<p>=&gt;[0,6,4,2]≤[2,14,11,8]</p>
+<p>=&gt;<strong>True</strong></p>
+<p>So, complete[4]=True and,</p>
+<p>Available=&gt;Available+Allocation[4]</p>
+<p>=&gt;[2,14,11,8]+[0,0,1,4]</p>
+<p>=&gt;[2,14,12,12]</p>
+<p>Repeating the iterations for the processes with complete[ ]=False.</p>
+<p>Iteration 6:</p>
+<p>for P1,</p>
+<p>Need[1]≤Available</p>
+<p>=&gt;[0,7,5,0]≤[2,14,12,12]</p>
+<p>=&gt;<strong>True</strong></p>
+<p>So, complete[1]=True and,</p>
+<p>Available=&gt;Available+Allocation[1]</p>
+<p>=&gt;[2,14,12,12]+[1,0,0,0]</p>
+<p>=&gt;[3,14,12,12]</p>
+<p>Since, complete[i]=True for all i=0,1,2,3,4, the system is in safe state.</p>
+<p>iii)The request can be granted:</p>
+<ul style="list-style-type: square;">
+<li>If the request is less than or equal to the need.</li>
+<li>If the request is less than or equal to the available.</li>
+</ul>
+<p>Let us check the conditions.</p>
+<p><strong>Condition 1:</strong></p>
+<p>Request(P1)≤Need[1]</p>
+<p>=&gt;[0,4,2,0]≤[0,7,5,0] <strong>(True)</strong></p>
+<p><strong>Condition 2:</strong></p>
+<p>Request(P1)≤Available</p>
+<p>=&gt;[0,4,2,0]≤[1,5,2,0] <strong>(True)</strong></p>
+<p>Hence request can be granted.</p>
+<p>After having granted the request, the table needs to be modified as:</p>
+<p><span id="MathJax-Element-15-Frame" class="MathJax" style="box-sizing: border-box; display: inline-table; font-style: normal; font-weight: normal; line-height: normal; font-size: 16px; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;/math&gt;"><span id="MathJax-Span-211" class="math"><span id="MathJax-Span-212" class="mrow"><span id="MathJax-Span-213" class="mi">A</span><span id="MathJax-Span-214" class="mi">v</span><span id="MathJax-Span-215" class="mi">a</span><span id="MathJax-Span-216" class="mi">i</span><span id="MathJax-Span-217" class="mi">l</span><span id="MathJax-Span-218" class="mi">a</span><span id="MathJax-Span-219" class="mi">b</span><span id="MathJax-Span-220" class="mi">l</span><span id="MathJax-Span-221" class="mi">e </span><span id="MathJax-Span-222" class="mo">= </span><span id="MathJax-Span-223" class="mi">A</span><span id="MathJax-Span-224" class="mi">v</span><span id="MathJax-Span-225" class="mi">a</span><span id="MathJax-Span-226" class="mi">i</span><span id="MathJax-Span-227" class="mi">l</span><span id="MathJax-Span-228" class="mi">a</span><span id="MathJax-Span-229" class="mi">b</span><span id="MathJax-Span-230" class="mi">l</span><span id="MathJax-Span-231" class="mi">e </span><span id="MathJax-Span-232" class="mo">− </span><span id="MathJax-Span-233" class="mi">R</span><span id="MathJax-Span-234" class="mi">e</span><span id="MathJax-Span-235" class="mi">q</span><span id="MathJax-Span-236" class="mi">u</span><span id="MathJax-Span-237" class="mi">e</span><span id="MathJax-Span-238" class="mi">s</span><span id="MathJax-Span-239" class="mi">t </span><span id="MathJax-Span-240" class="mo">= </span><span id="MathJax-Span-241" class="mo">[</span><span id="MathJax-Span-242" class="mn">1,</span><span id="MathJax-Span-243" class="mn">5,</span><span id="MathJax-Span-244" class="mn">2,</span><span id="MathJax-Span-245" class="mn">0</span><span id="MathJax-Span-246" class="mo">]</span><span id="MathJax-Span-247" class="mo">−</span><span id="MathJax-Span-248" class="mo">[</span><span id="MathJax-Span-249" class="mn">0,</span><span id="MathJax-Span-250" class="mn">4,</span><span id="MathJax-Span-251" class="mn">2,</span><span id="MathJax-Span-252" class="mn">0</span><span id="MathJax-Span-253" class="mo">] </span><span id="MathJax-Span-254" class="mo">= </span><span id="MathJax-Span-255" class="mo">[</span><span id="MathJax-Span-256" class="mn">1,</span><span id="MathJax-Span-257" class="mn">1,</span><span id="MathJax-Span-258" class="mn">0,</span><span id="MathJax-Span-259" class="mn">0</span><span id="MathJax-Span-260" class="mo">]</span></span></span></span></p>
+<p><span id="MathJax-Element-16-Frame" class="MathJax" style="box-sizing: border-box; display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 16px; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;/math&gt;"><span id="MathJax-Span-261" class="math"><span id="MathJax-Span-262" class="mrow"><span id="MathJax-Span-263" class="mi">A</span><span id="MathJax-Span-264" class="mi">l</span><span id="MathJax-Span-265" class="mi">l</span><span id="MathJax-Span-266" class="mi">o</span><span id="MathJax-Span-267" class="mi">c</span><span id="MathJax-Span-268" class="mi">a</span><span id="MathJax-Span-269" class="mi">t</span><span id="MathJax-Span-270" class="mi">i</span><span id="MathJax-Span-271" class="mi">o</span><span id="MathJax-Span-272" class="mi">n </span><span id="MathJax-Span-273" class="mo">= A</span><span id="MathJax-Span-275" class="mi">l</span><span id="MathJax-Span-276" class="mi">l</span><span id="MathJax-Span-277" class="mi">o</span><span id="MathJax-Span-278" class="mi">c</span><span id="MathJax-Span-279" class="mi">a</span><span id="MathJax-Span-280" class="mi">t</span><span id="MathJax-Span-281" class="mi">i</span><span id="MathJax-Span-282" class="mi">o</span><span id="MathJax-Span-283" class="mi">n[1] </span><span id="MathJax-Span-288" class="mo">+ </span><span id="MathJax-Span-289" class="mi">R</span><span id="MathJax-Span-290" class="mi">e</span><span id="MathJax-Span-291" class="mi">q</span><span id="MathJax-Span-292" class="mi">u</span><span id="MathJax-Span-293" class="mi">e</span><span id="MathJax-Span-294" class="mi">s</span><span id="MathJax-Span-295" class="mi">t </span><span id="MathJax-Span-296" class="mo">= </span><span id="MathJax-Span-297" class="mo">[</span><span id="MathJax-Span-298" class="mn">1,</span><span id="MathJax-Span-299" class="mn">0,</span><span id="MathJax-Span-300" class="mn">0,</span><span id="MathJax-Span-301" class="mn">0</span><span id="MathJax-Span-302" class="mo">]</span><span id="MathJax-Span-303" class="mo">+</span><span id="MathJax-Span-304" class="mo">[</span><span id="MathJax-Span-305" class="mn">0,</span><span id="MathJax-Span-306" class="mn">4,</span><span id="MathJax-Span-307" class="mn">2,</span><span id="MathJax-Span-308" class="mn">0</span><span id="MathJax-Span-309" class="mo">] </span><span id="MathJax-Span-310" class="mo">= </span><span id="MathJax-Span-311" class="mo">[</span><span id="MathJax-Span-312" class="mn">1,</span><span id="MathJax-Span-313" class="mn">4,</span><span id="MathJax-Span-314" class="mn">2,</span><span id="MathJax-Span-315" class="mn">0</span><span id="MathJax-Span-316" class="mo">]</span></span></span></span></p>
+<p><span id="MathJax-Element-17-Frame" class="MathJax" style="box-sizing: border-box; display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 16px; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;/math&gt;"><span id="MathJax-Span-317" class="math"><span id="MathJax-Span-318" class="mrow"><span id="MathJax-Span-319" class="mi">N</span><span id="MathJax-Span-320" class="mi">e</span><span id="MathJax-Span-321" class="mi">e</span><span id="MathJax-Span-322" class="mi">d[1] </span><span id="MathJax-Span-323" class="mo">= </span><span id="MathJax-Span-324" class="mi">N</span><span id="MathJax-Span-325" class="mi">e</span><span id="MathJax-Span-326" class="mi">e</span><span id="MathJax-Span-327" class="mi">d[1] </span><span id="MathJax-Span-332" class="mo">− </span><span id="MathJax-Span-333" class="mi">R</span><span id="MathJax-Span-334" class="mi">e</span><span id="MathJax-Span-335" class="mi">q</span><span id="MathJax-Span-336" class="mi">u</span><span id="MathJax-Span-337" class="mi">e</span><span id="MathJax-Span-338" class="mi">s</span><span id="MathJax-Span-339" class="mi">t </span><span id="MathJax-Span-340" class="mo">= </span><span id="MathJax-Span-341" class="mo">[</span><span id="MathJax-Span-342" class="mn">0,</span><span id="MathJax-Span-343" class="mn">7,</span><span id="MathJax-Span-344" class="mn">5,</span><span id="MathJax-Span-345" class="mn">0</span><span id="MathJax-Span-346" class="mo">]</span><span id="MathJax-Span-347" class="mo">−</span><span id="MathJax-Span-348" class="mo">[</span><span id="MathJax-Span-349" class="mn">0</span><span id="MathJax-Span-350" class="mn">4</span><span id="MathJax-Span-351" class="mn">2</span><span id="MathJax-Span-352" class="mn">0</span><span id="MathJax-Span-353" class="mo">] </span><span id="MathJax-Span-354" class="mo">= </span><span id="MathJax-Span-355" class="mo">[</span><span id="MathJax-Span-356" class="mn">0,</span><span id="MathJax-Span-357" class="mn">3,</span><span id="MathJax-Span-358" class="mn">3,</span><span id="MathJax-Span-359" class="mn">0</span><span id="MathJax-Span-360" class="mo">]</span></span></span></span></p>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.4867%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;"><strong>       Process</strong></td>
+<td style="width: 23.3841%; height: 24px; text-align: center;"><strong>          Allocation</strong></td>
+<td style="width: 24.2618%; height: 24px; text-align: center;"><strong>    Max</strong></td>
+<td style="width: 20.2877%; text-align: center; height: 24px;"><strong>Need</strong></td>
+<td style="width: 18.0894%; height: 24px; text-align: center;"><strong>      Available</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;"></td>
+<td style="width: 23.3841%; height: 24px; text-align: center;">     A    B    C     D</td>
+<td style="width: 24.2618%; height: 24px; text-align: center;">    A    B    C    D</td>
+<td style="width: 20.2877%; text-align: center; height: 24px;">     A     B     C     D</td>
+<td style="width: 18.0894%; height: 24px; text-align: center;">     A   B    C     D</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;">       P0</td>
+<td style="width: 23.3841%; height: 24px; text-align: center;">     0    0     1      2</td>
+<td style="width: 24.2618%; height: 24px; text-align: center;">   0     0     1     2</td>
+<td style="width: 20.2877%; height: 24px; text-align: center;">     0     0     0     0</td>
+<td style="width: 18.0894%; height: 24px; text-align: center;">    <strong> 1    1      0     0</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;"><strong>       P1</strong></td>
+<td style="width: 23.3841%; height: 24px; text-align: center;"><strong>     1     4     2     0</strong></td>
+<td style="width: 24.2618%; height: 24px; text-align: center;"><strong>   1      7      5     0</strong></td>
+<td style="width: 20.2877%; height: 24px; text-align: center;"><strong>     0     3     3     0</strong></td>
+<td style="width: 18.0894%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;">       P2</td>
+<td style="width: 23.3841%; height: 24px; text-align: center;">     1     3     5      4</td>
+<td style="width: 24.2618%; height: 24px; text-align: center;">   2      3     5      6</td>
+<td style="width: 20.2877%; height: 24px; text-align: center;">     1     0     0      2</td>
+<td style="width: 18.0894%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;">       P3</td>
+<td style="width: 23.3841%; height: 24px; text-align: center;">    0     6     3       2</td>
+<td style="width: 24.2618%; height: 24px; text-align: center;">   0      6     5       2</td>
+<td style="width: 20.2877%; height: 24px; text-align: center;">     0     0     2      0</td>
+<td style="width: 18.0894%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 13.4768%; height: 24px;">       P4</td>
+<td style="width: 23.3841%; height: 24px; text-align: center;">    0     0    1        4</td>
+<td style="width: 24.2618%; height: 24px; text-align: center;">    0    6      5       6</td>
+<td style="width: 20.2877%; height: 24px; text-align: center;">    0     6    4      2</td>
+<td style="width: 18.0894%; height: 24px;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, the sequence of operations can be as:</p>
+<p>P0, P2, P3, P4, P1.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>When does race condition occur in inter process communication? What does busy waiting mean and how it can be handled using sleep and wakeup strategy?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>IPC is a capability supported by operating system that allows one process to communicate with another process. The processes can be running on the same computer or on different computers connected through a network . IPC enables one application to control another application, and for several application to share the same data without interfering with one another.</p>
+<p><img data-recalc-dims="1" decoding="async" title="IPC_shared_memory" src="https://i0.wp.com/www.tutorialsspace.com/Operating-System/Os-Images/IPC_shared_memory.png" alt="IPC shared memory" /></p>
+<p>&nbsp;</p>
+<h2 class="center"><span class="darkpurplecolor">Race Conditions:</span></h2>
+<p>The situation where two or more processes reading or writing some share data and the final results depends on who runs precisely when are called RACE CONDITIONS.</p>
+<p class="redcolor">Let&#8217;s take an Example:</p>
+<p><img data-recalc-dims="1" decoding="async" title="Race Condition" src="https://i0.wp.com/www.tutorialsspace.com/Operating-System/Os-Images/Race_Condition.png" alt="Race Condition" /></p>
+<p>A print spooler: When a process wants to print a file it enters the filename in a special spooler directly. Another process, the Printer Daemon, periodically checks to see if there are any files to be printed, and if there are, it prints them and removes their name from the directory. Imagine that our spooler directory has a large number of slots, numbered 0,1,2,&#8230;.. each one capable of holding a filename. also imagine that there are two shared variables,</p>
+<p><b>out :</b> points to next file to printed.</p>
+<p><b>in :</b> points to next free slot in the directory.</p>
+<p><b>slots 0 to 3 files already printed.</b></p>
+<p><b>slots 4 to 6 files names which has to be printed.</b></p>
+<p class="center"><span class="redcolor">Now the main issue comes: </span>Process A reads in and store the value, 7, in a local variable called next-free-slot. Just then a clock interrupt occurs and the CPU decides that process A has Run long enough, it switches to process B. Process B also reads in, and also gets a 7, so it stores the name of its in slot 7 and update into be an 8. Then it goes off and does other things. Eventually, process A once again, starting from the place at left off last time. It looks next free slot, finds a7 there, and writes its file name 7 in slot 7, erasing the name that process B just put there. Then it computes next-free-slot+1 , which is 8, and sets in to 8. The spooler directory is now internally consistent, so the printer daemon will not notice anything wrong, but process B will never receive any output.</p>
+<p><strong>Busy waiting,</strong> also known as spinning, or busy looping is a <a href="https://www.baeldung.com/cs/inter-process-communication#1-what-is-a-process" rel="nofollow noopener" target="_blank">process</a> <a href="https://www.baeldung.com/cs/semaphore#process-synchronization" rel="nofollow noopener" target="_blank">synchronization</a> technique<strong> in which a process/task waits and constantly checks for a condition to be satisfied before proceeding with its execution</strong>. In busy waiting, a process executes instructions that test for the entry condition to be true, such as the availability of a <a href="https://www.baeldung.com/java-concurrent-locks" rel="nofollow noopener" target="_blank">lock</a> or resource in the computer system.</p>
+<p>For resource availability, consider a scenario where a process needs a resource for a specific program. However, the resource is currently in use and unavailable at the moment, therefore the process has to wait for resource availability before it can continue. This is what is known as busy waiting as illustrated below:</p>
+<p><a href="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/Busywaiting.svg" target="_blank" rel="noopener nofollow"><img loading="lazy" decoding="async" class="aligncenter wp-image-53968" src="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/Busywaiting.svg" alt="" width="500" height="388"></a></p>
+<p>There are two general approaches to waiting in operating systems: <strong>firstly, a process/task can continuously check for the condition to be satisfied while consuming the processor – busy waiting.</strong></p>
+<p><strong>Secondly, a process can wait without consuming the processor. </strong>In such a case, the process/task is alerted or awakened when the condition is satisfied. The latter is known as sleeping, blocked waiting, or sleep waiting.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define shell and system call. suppose  a disk has 201 cylinders, numbered from 0 to 200. At  same time the disk arm is at cylinder 95, and there is a queue of disk access requests for cylinders 82,170,43,140,24,16 and 190. Calculate the seek time for the disk scheduling algorithm FCFS,SSTF,SCAN and C-SCAN.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>system call</strong> is a mechanism that provides the interface between a process and the operating system. It is a programmatic method in which a computer program requests a service from the kernel of the OS. System call offers the services of the operating system to the user programs via API (Application Programming Interface). System calls are the only entry points for the kernel system.</p>
+<p>A shell is an environment or a special user program which provide an interface to user to use operating system services. It executes programs based on the input provided by the user. It is a command line interpreter (CLI).</p>
+<p>&nbsp;</p>
+<p>Solution of numeric:</p>
+<p><strong>FCFS:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17481 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/FCFS.jpg?resize=554%2C379&#038;ssl=1" alt="" width="554" height="379"></p>
+<p>Seek time=(95-82)+(170-82)+(170-43)+(140-43)+(140-24)+(24-16)+(190-16)</p>
+<p>=623</p>
+<p>&nbsp;</p>
+<p><strong>SSTF:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-17482 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/SSTF.jpg?resize=558%2C352&#038;ssl=1" alt="" width="558" height="352"></p>
+<p>Seek time=(95-82)+(82-43)+(43-24)+(24-16)+(140-16)+(170-140)+(190-170)</p>
+<p>=253</p>
+<p>&nbsp;</p>
+<p><strong>SCAN:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17483 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/scan.jpg?resize=595%2C406&#038;ssl=1" alt="" width="595" height="406"></p>
+<p>Seek Time=(140-95)+(170-140)+(190-170)+(200-190)+(200-82)+(82-43)+(43-24)+(24-16)</p>
+<p>=289</p>
+<p><strong>CSCAN</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-18265 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/cscan.jpg?resize=556%2C381&#038;ssl=1" alt="" width="556" height="381"></p>
+<p>Seek Time=(140-95)+(170-140)+(190-170)+(200-190)+(200-0)+(16-0)+(24-16)+(43-24)+(82-43)</p>
+<p>=387</p>
+</div>
+<h2> Section B: Short Answer Questions</h2><h3>Question 4</h3>
+<div><p><p>Distinguish between starvation and deadlock . How does the system schedule process using multiple queues?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Distinguish between starvation and deadlock are given below.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt" style="width: 100%;">
+<tbody>
+<tr>
+<th style="width: 13.3333%;">Features</th>
+<th style="width: 35.8788%;">Deadlock</th>
+<th style="width: 49.5758%;">Starvation</th>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Definition</strong></td>
+<td style="width: 35.8788%;">Deadlock happens when every process holds a resource and waits for another process to hold another resource.</td>
+<td style="width: 49.5758%;">Starvation happens when a low priority program requests a system resource but cannot run because a higher priority program has been employing that resource for a long time.</td>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Basic</strong></td>
+<td style="width: 35.8788%;">A deadlock occurs when no process can proceed and becomes blocked.</td>
+<td style="width: 49.5758%;">Starvation occurs when low priority procedures are blocked while high priority operations proceed.</td>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Other names</strong></td>
+<td style="width: 35.8788%;">Deadlock is also known as circular wait.</td>
+<td style="width: 49.5758%;">Starvation is known as a Lived lock.</td>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Resources</strong></td>
+<td style="width: 35.8788%;">Other processes block requested resources while a process is deadlocked.</td>
+<td style="width: 49.5758%;">High-priority processes continue to use the requested resources.</td>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Arising Condition</strong></td>
+<td style="width: 35.8788%;">Mutual exclusion&#8217;s occurrence, Hold and wait, No preemption, and Circular wait all happen simultaneously.</td>
+<td style="width: 49.5758%;">Uncontrolled resource management, enforcement of priorities.</td>
+</tr>
+<tr>
+<td style="width: 13.3333%;"><strong>Prevention</strong></td>
+<td style="width: 35.8788%;">It can be prevented by avoiding the situations that lead to deadlock.</td>
+<td style="width: 49.5758%;">Aging may prevent it.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>A multi-level queue scheduling algorithm partitions the ready queue into several separate queues. The processes are permanently assigned to one queue, generally based on some property of the process, such as memory size, process priority, or process type. Each queue has its own scheduling algorithm.</p>
+<p><strong>For example,</strong> separate queues might be used for foreground and background processes. The foreground queue might be scheduled by the Round Robin algorithm, while the background queue is scheduled by an FCFS algorithm.</p>
+<p>In addition, there must be scheduling among the queues, which is commonly implemented as fixed-priority preemptive scheduling. <strong>For example,</strong> The foreground queue may have absolute priority over the background queue.</p>
+<p>Let us consider an example of a multilevel queue-scheduling algorithm with five queues:</p>
+<ol style="list-style-type:decimal;">
+<li>System Processes</li>
+<li>Interactive Processes</li>
+<li>Interactive Editing Processes</li>
+<li>Batch Processes</li>
+<li>Student Processes</li>
+</ol>
+<p>Each queue has absolute priority over lower-priority queues. No process in the batch queue, for example, could run unless the queues for system processes, interactive processes, and interactive editing processes were all empty. If an interactive editing process entered the ready queue while a batch process was running, the batch process will be preempted.</p>
+<p><img data-recalc-dims="1" decoding="async" class="blur-up lazyloaded" src="https://i0.wp.com/s3.studytonight.com/tutorials/uploads/pictures/1611836984-71449.png?ssl=1" alt="Multilevel Queue Scheduling Algorithm" data-src="https://s3.studytonight.com/tutorials/uploads/pictures/1611836984-71449.png" /></p>
+<p>In this case, if there are no processes on the higher priority queue only then the processes on the low priority queues will run. For <strong>Example:</strong> Once processes on the system queue, the Interactive queue, and Interactive editing queue become empty, only then the processes on the batch queue will run.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>List any two demerits of disabling interrupt to achieve mutual exclusion. Describe about fixed and variable partitioning</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul class="list">
+<li>Whenever disabling interrupts, the CPU will be unable to switch processes and processes can use shared variables without another process accessing it.</li>
+<li>The system clock depends on interrupts so it can drift.</li>
+<li>The disabling interrupt does not work well on multiprocessors because the time to disable and enable on all processes is high.</li>
+</ul>
+<p><strong>1. </strong><strong>Fixed Partitioning</strong><strong> :</strong><br />
+Multi-programming with fixed partitioning is a contiguous memory management technique in which the main memory is divided into fixed sized partitions which can be of equal or unequal size. Whenever we have to allocate a process memory then a free partition that is big enough to hold the process is found. Then the memory is allocated to the process.If there is no free space available then the process waits in the queue to be allocated memory. It is one of the most oldest memory management technique which is easy to implement.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/20200515204405/fixedpartition.png?ssl=1" alt=""></p>
+<div id="GFG_AD_gfg_mobile_336x280"></div>
+<p><strong>2. </strong><strong>Variable Partitioning</strong><strong> :</strong><br />
+Multi-programming with variable partitioning is a contiguous memory management technique in which the main memory is not divided into partitions and the process is allocated a chunk of free memory that is big enough for it to fit. The space which is left is considered as the free space which can be further used by other processes. It also provides the concept of compaction. In compaction the spaces that are free and the spaces which not allocated to the process are combined and single large memory space is made.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/20200515204900/variablepartitiongfg.png?ssl=1" alt=""></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>For the following dataset, compute average waiting time for SRTN and SJF.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>        Process</td>
+<td>      Arrival Time</td>
+<td>      Burst Time</td>
+</tr>
+<tr>
+<td>     P0</td>
+<td>      0</td>
+<td>     7</td>
+</tr>
+<tr>
+<td>     P1</td>
+<td>      2</td>
+<td>     4</td>
+</tr>
+<tr>
+<td>     P2</td>
+<td>      4</td>
+<td>     1</td>
+</tr>
+<tr>
+<td>     P3</td>
+<td>     5</td>
+<td>     4</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For <strong>SJF (pre-emptive),</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-17488" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/gant.jpg?resize=745%2C140&#038;ssl=1" alt="" width="745" height="140"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 148px;">
+<tbody>
+<tr style="height: 76px;">
+<td style="width: 24.2307%; text-align: center; height: 76px;"><strong>Process</strong></td>
+<td style="width: 42.4359%; text-align: center; height: 76px;"><strong>Turnaround Time i.e. TAT</strong></p>
+<p><strong>(Completion Time-Arrival Time)</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 76px;"><strong>Waiting Time i.e. WAT</strong></p>
+<p><strong>(TAT-Burst Time)</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P0</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">16-0=16</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">16-7=9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P1</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">7-2=5</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">5-4=1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P2</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">5-4=1</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">1-1=0</td>
+</tr>
+<tr>
+<td style="width: 24.2307%; text-align: center;">P3</td>
+<td style="width: 42.4359%; text-align: center;">11-5=6</td>
+<td style="width: 33.3333%; text-align: center;">6-4=2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average waiting time=(9+1+0+2)/4=3 ms</p>
+<p>For <strong>SRTN</strong>,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-17488" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/gant.jpg?resize=745%2C140&#038;ssl=1" alt="" width="745" height="140"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 148px;">
+<tbody>
+<tr style="height: 76px;">
+<td style="width: 24.2307%; text-align: center; height: 76px;"><strong>Process</strong></td>
+<td style="width: 42.4359%; text-align: center; height: 76px;"><strong>Turnaround Time i.e. TAT</strong></p>
+<p><strong>(Completion Time-Arrival Time)</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 76px;"><strong>Waiting Time i.e. WAT</strong></p>
+<p><strong>(TAT-Burst Time)</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P0</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">16-0=16</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">16-7=9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P1</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">7-2=5</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">5-4=1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 24.2307%; height: 24px; text-align: center;">P2</td>
+<td style="width: 42.4359%; height: 24px; text-align: center;">5-4=1</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">1-1=0</td>
+</tr>
+<tr>
+<td style="width: 24.2307%; text-align: center;">P3</td>
+<td style="width: 42.4359%; text-align: center;">11-5=6</td>
+<td style="width: 33.3333%; text-align: center;">6-4=2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average waiting time=(9+1+0+2)/4=3 ms</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Discuss the advantages disadvantages of implementing file system using Linked List.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Linked list is a dynamic arrangement that contains a “link” to the structure containing the subsequent items. It’s a set of structures ordered not by their physical placement in memory (like an array) but by logical links that are stored as a part of the info within the structure itself.</p>
+<h2><strong><u>Advantages Of Linked List</u>:</strong></h2>
+<ul style="list-style-type: square;">
+<li><strong>Dynamic data structure:</strong> A linked list is a dynamic arrangement so it can grow and shrink at runtime by allocating and deallocating memory. So there is no need to give the initial size of the linked list.</li>
+<li><strong>No memory wastage:</strong> In the Linked list, efficient memory utilization can be achieved since the size of the linked list increase or decrease at run time so there is no memory wastage and there is no need to pre-allocate the memory.</li>
+<li><strong>Implementation:</strong> Linear data structures like stacks and queues are often easily implemented using a linked list.</li>
+<li><strong>Insertion and Deletion Operations:</strong> Insertion and deletion operations are quite easier in the linked list. There is no need to shift elements after the insertion or deletion of an element only the address present in the next pointer needs to be updated.</li>
+</ul>
+<h2><strong><u>Disadvantages Of Linked List</u>:</strong></h2>
+<ul style="list-style-type: square;">
+<li><strong>Memory usage:</strong> More memory is required in the linked list as compared to an array. Because in a linked list, a pointer is also required to store the address of the next element and it requires extra memory for itself.</li>
+<li><strong>Traversal:</strong> In a Linked list traversal is more time-consuming as compared to an array. Direct access to an element is not possible in a linked list as in an array by index. For example, for accessing a node at position n, one has to traverse all the nodes before it.</li>
+<li><strong>Reverse Traversing:</strong> In a singly linked list reverse traversing is not possible, but in the case of a doubly-linked list, it can be possible as it contains a pointer to the previously connected nodes with each node. For performing this extra memory is required for the back pointer hence, there is a wastage of memory.</li>
+<li><strong>Random Access:</strong> Random access is not possible in a linked list due to its dynamic memory allocation.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Consider the page references 7,0,1,2,0,3,0,4,2,3,0,3,2, Find the number of page fault using OPR and  FIFO, with 4 page frame.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To calculate the page faults using OPR and FIFO page replacement algorithms, we first need to understand how these algorithms work.</p>
+<p>FIFO (First-In-First-Out) algorithm replaces the page that has been in the memory for the longest time. It&#8217;s a simple algorithm that keeps track of the order in which pages were loaded into the memory and replaces the oldest page first.</p>
+<p>OPR (Optimal Page Replacement) algorithm replaces the page that will not be used for the longest period of time. It&#8217;s an optimal algorithm that has the advantage of knowing the future behavior of the program and replacing the page that will not be needed for the longest time.</p>
+<p>Let&#8217;s consider the given page references and find the number of page faults using FIFO and OPR algorithms, with a 4-page frame:</p>
+<p>FIFO Algorithm:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 58.9087%; height: 143px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">3</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">4</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 9.97031%; height: 24px;">3</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">7</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 9.97031%; height: 24px;">1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">0</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 9.97031%; height: 24px;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">1</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">3</td>
+<td style="width: 10%; height: 24px;">3</td>
+<td style="width: 9.97031%; height: 24px;">3</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;"></td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">2</td>
+<td style="width: 10%; height: 24px;">3</td>
+<td style="width: 10%; height: 24px;">3</td>
+<td style="width: 10%; height: 24px;">4</td>
+<td style="width: 10%; height: 24px;">4</td>
+<td style="width: 9.97031%; height: 24px;">4</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;"></td>
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;"></td>
+<td style="width: 10%; height: 23px;">F</td>
+<td style="width: 10%; height: 23px;"></td>
+<td style="width: 9.97031%; height: 23px;"></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 17.6101%; height: 133px;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;">0</td>
+<td style="width: 33.3333%;">3</td>
+<td style="width: 33.3333%;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">1</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">3</td>
+<td style="width: 33.3333%;">3</td>
+<td style="width: 33.3333%;">3</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">4</td>
+<td style="width: 33.3333%;">4</td>
+<td style="width: 33.3333%;">4</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">F</td>
+<td style="width: 33.3333%;"></td>
+<td style="width: 33.3333%;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Total number of page faults using FIFO algorithm = 7</p>
+<p>OPR Algorithm:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 66.3522%; height: 127px;">
+<tbody>
+<tr>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">3</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">4</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">3</td>
+</tr>
+<tr>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">7</td>
+<td style="width: 10%;">3</td>
+<td style="width: 10%;">3</td>
+<td style="width: 10%;">3</td>
+<td style="width: 10%;">3</td>
+<td style="width: 10%;">3</td>
+</tr>
+<tr>
+<td style="width: 10%;"></td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">0</td>
+<td style="width: 10%;">4</td>
+<td style="width: 10%;">4</td>
+<td style="width: 10%;">4</td>
+</tr>
+<tr>
+<td style="width: 10%;"></td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+<td style="width: 10%;">1</td>
+</tr>
+<tr>
+<td style="width: 10%;"></td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+<td style="width: 10%;">2</td>
+</tr>
+<tr>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;">F</td>
+<td style="width: 10%;"></td>
+<td style="width: 10%;"></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 20.1258%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">0</td>
+<td style="width: 33.3333%; height: 24px;">3</td>
+<td style="width: 33.3333%; height: 24px;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">3</td>
+<td style="width: 33.3333%; height: 24px;">3</td>
+<td style="width: 33.3333%; height: 24px;">3</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">4</td>
+<td style="width: 33.3333%; height: 24px;">4</td>
+<td style="width: 33.3333%; height: 24px;">4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">1</td>
+<td style="width: 33.3333%; height: 24px;">1</td>
+<td style="width: 33.3333%; height: 24px;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">0</td>
+<td style="width: 33.3333%; height: 24px;">0</td>
+<td style="width: 33.3333%; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">F</td>
+<td style="width: 33.3333%; height: 24px;"></td>
+<td style="width: 33.3333%; height: 24px;">F</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page faults using OPR algorithm: 8.</p>
+<p>Therefore, the number of page faults using FIFO algorithm is 7, and the number of page faults using OPR algorithm is 8.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe the working mechanism of DMA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Direct memory access (DMA) is a method that allows an input/output (I/O) device to send or receive data directly to or from the main memory, bypassing the CPU to speed up memory operations. The process is managed by a chip known as a DMA controller (DMAC).</p>
+<p dir="ltr">DMA  are used to communicate data between the peripheral device and the system memory. All four system resources rely on certain lines on a bus. Some lines on the bus are used for IRQs, some for addresses (the I/O addresses and the memory address) and some for DMA .</p>
+<p dir="ltr">A DMA  enables a device to transfer data without exposing the CPU to a work overload. Without the DMA , the CPU copies every piece of data using a peripheral bus from the I/O device. Using a peripheral bus occupies the CPU during the read/write process and does not allow other work to be performed until the operation is completed With DMA, the CPU can process other tasks while data transfer is being performed. The transfer of data is first initiated by the CPU. The data block can be transferred to and from memory by the DMAC in three ways.</p>
+<p dir="ltr">In burst mode, the system bus is released only after the data transfer is completed. In cycle stealing mode, during the transfer of data between the DMA  and I/O device, the system bus is relinquished for a few clock cycles so that the CPU can perform other tasks. When the data transfer is complete, the CPU receives an interrupt request from the DMA controller. In transparent mode, the DMAC can take charge of the system bus only when it is not required by the processor. However, using a DMA controller might cause cache coherency problems. The data stored in RAM accessed by the DMA controller may not be updated with the correct cache data if the CPU is using external memory. Solutions include flushing cache lines before starting outgoing DMA transfers, or performing a cache invalidation on incoming DMA transfers when external writes are signaled to the cache controller.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the task of disk controller ? List some drawback of segmentation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The disk controller is the circuit that connects the CPU to a floppy disk, hard disk, and other disk drive types. It is similar to a miniaturized computer because it contains a small CPU and memory for obtaining and transferring data from a physical disk drive. It offers the interface between the bus and the disk driver that helps to connect it to the rest of the system. A disk controller is the hardware component that <b>controls access to disk drives</b>. A disk controller communicates with one or more disk drives to initiate and end connections to clients.</p>
+<p>Segmentation is a memory management technique in which the memory is divided into the variable size parts. Each part is known as a segment which can be allocated to a process.</p>
+<p>Drawback of segmentation is given below:</p>
+<ol class="points">
+<li>It can have external fragmentation.</li>
+<li>it is difficult to allocate contiguous memory to variable sized partition.</li>
+<li>Costly memory management algorithms.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write the structure and advantages of TLB.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Translation look aside buffer can be defined as a memory cache which can be used to reduce the time taken to access the page table again and again. It is a memory cache which is closer to the CPU and the time taken by CPU to access TLB is lesser then that taken to access main memory.TLB follows the concept of locality of reference which means that it contains only the entries of those many pages that are frequently accessed by the CPU.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/operating-system/images/os-translation-look-aside-buffer.png?ssl=1" alt="OS Translation Look aside buffer" /></p>
+<p>In translation look aside buffers, there are tags and keys with the help of which, the mapping is done. TLB hit is a condition where the desired entry is found in translation look aside buffer. If this happens then the CPU simply access the actual location in the main memory. However, if the entry is not found in TLB (TLB miss) then CPU has to access page table in the main memory and then access the actual frame in the main memory. Therefore, in the case of TLB hit, the effective access time will be lesser as compare to the case of TLB miss. If the probability of TLB hit is P% (TLB hit rate) then the probability of TLB miss (TLB miss rate) will be (1-P) %. Therefore, the effective access time can be defined as;</p>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">
+<div class="tools">    EAT = P (t + m) + (<span class="number">1</span> &#8211; p) (t + k.m + m)</div>
+</div>
+</div>
+</div>
+<p>Where, p → TLB hit rate, t → time taken to access TLB, m → time taken to access main memory k = 1, if the single level paging has been implemented.</p>
+<p>By the formula, we come to know that</p>
+<ol class="points">
+<li>Effective access time will be decreased if the TLB hit rate is increased.</li>
+<li>Effective access time will be increased in the case of multilevel paging.</li>
+</ol>
+<h2><strong>Advantages-</strong></h2>
+<p>The advantages of using TLB are-</p>
+<ul style="list-style-type: square;">
+<li>TLB reduces the effective access time.</li>
+<li>Only one memory access is required when TLB hit occurs.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Why do we need the concept of locality of reference ? List the advantages and disadvantages of Round Robin algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Locality of reference refers to a phenomenon in which a computer program tends to access same set of memory locations for a particular time period. In other words, <b>Locality of Reference</b> refers to the tendency of the computer program to access instructions whose addresses are near one another. The property of locality of reference is mainly shown by loops and subroutine calls in a program.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/Untitled-Diagram-14.jpg?resize=491%2C311&#038;ssl=1" width="491" height="311" alt=""></p>
+<div id="GFG_AD_gfg_mobile_336x280"></div>
+<ol style="list-style-type:decimal;">
+<li>In case of loops in program control processing unit repeatedly refers to the set of instructions that constitute the loop.</li>
+<li>In case of subroutine calls, everytime the set of instructions are fetched from memory.</li>
+<li>References to data items also get localized that means same data item is referenced again and again.</li>
+</ol>
+<p><strong> </strong><strong>Round Robin (RR)</strong><strong>:</strong></p>
+<p>Advantages:</p>
+<ol style="list-style-type:decimal;">
+<li>Every process gets an equal share of the CPU.</li>
+<li>RR is cyclic in nature, so there is no starvation.</li>
+</ol>
+<p>Disadvantages:</p>
+<ol style="list-style-type:decimal;">
+<li>Setting the quantum too short increases the overhead and lowers the CPU efficiency, but setting it too long may cause a poor response to short processes.</li>
+<li>The average waiting time under the RR policy is often long.</li>
+<li>If time quantum is very high then RR degrades to FCFS.</li>
+</ol>
+</div>
+</body></html>

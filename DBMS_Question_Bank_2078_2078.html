@@ -1,0 +1,435 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>DBMS Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Short Answer Questions: Attempt any Two Questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What are different types of Database users and their roles? Explain the Data independence with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The users of the database can be classified into the following groups −</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Native users</strong> − The native users need not be aware of the presence of the database system. They are end-users of the database who works through menu-driven application programs, where the type and range of response are always indicated to the user</li>
+<li><strong>Online users</strong> − Online users may communicate with databases directly through an online terminal or indirectly through user interfaces and application programs.</li>
+<li><strong>Sophisticated Users</strong> − They are those users who interact with the system without writing the program instead they form their requests in the database query language. They are the SQL programmers, who are going to deal directly with the database. They write queries to delete or select or insert and update the database.</li>
+<li><strong>Specialized Users</strong> − Specialized users who write specialized database applications that do not fit into the fractional database processing framework.</li>
+<li><strong>Application Programmer</strong> − The application programmer users who are responsible for developing the application programs or user interface. The application programs could be written in a high-level language. For example − Java, .net, PHP etc,</li>
+<li><strong>Database Administrator (DBA)</strong> − It is a person or the group in charge of implementing the database system within the organization. The DBA has all the privileges allowed by the DBMS and can assign or remove the privileges from the users.</li>
+</ol>
+<p>Data independence is the ability to modify the scheme without affecting the programs and the application to be rewritten. Data is separated from the programs so that the changes made to the data will not affect the program execution and the application.</p>
+<p>There are two levels of data independence based on three levels of abstraction. These are as follows −</p>
+<ul class="list">
+<li>Physical Data Independence</li>
+<li>Logical Data Independence</li>
+</ul>
+<h4>Logical Data Independence:</h4>
+<p>The capacity to change the conceptual schema without having to change the external schemas and their associated application programs is called logical data independence. When the modification is done to the conceptual schema (i.e tables) the mapping called “external mapping” is changed automatically by DBMS.</p>
+<p><strong><em><span style="text-decoration: underline;">Examples of changes under Physical Data Independence</span></em></strong></p>
+<p>Due to Physical independence, any of the below changes will not affect the conceptual layer.</p>
+<ul style="list-style-type: square;">
+<li>Using a new storage device like Hard Drive or Magnetic Tapes</li>
+<li>Modifying the file organization technique in the Database</li>
+<li>Switching to different data structures.</li>
+<li>Changing the access method.</li>
+<li>Modifying indexes.</li>
+<li>Changes to compression techniques or hashing algorithms.</li>
+<li>Change of Location of Database from say C drive to D Drive</li>
+</ul>
+<h4>Physical Data Independence:</h4>
+<p>The capacity to change the internal schema without having to change the conceptual schema is called physical data independence. When a schema at a lower level is changed, only the mappings between this schema and higher-level schemas need to be changed in a DBMS. This mapping is called “logical mapping”.</p>
+<p>For example, the internal schema may be changed when certain file structures are reorganized or new indexes are created to improve database performance.</p>
+<p><em><span style="text-decoration: underline;">Examples of changes under Logical Data Independence</span></em></p>
+<p>Due to Logical independence, any of the below changes will not affect the external layer.</p>
+<ol style="list-style-type:decimal;">
+<li>Add/Modify/Delete a new attribute, entity or relationship is possible without a rewrite of existing application programs</li>
+<li>Merging two records into one</li>
+<li>Breaking an existing record into two or more records</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the components of ER diagram? Explain the function of various symbols use in ER diagram. Construct an ER diagram to store data in a library of your college.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>ER diagram has three main components:</p>
+<ol style="list-style-type:decimal;">
+<li>Entity</li>
+<li>Attribute</li>
+<li>Relationship</li>
+</ol>
+<h4>1. Entity:</h4>
+<p>An entity can be a person, place, event, or object that is relevant to a given system. For example, a school system may include students, teachers, major courses, subjects, fees, and other items. Entities are represented in ER diagrams by a rectangle and named using singular nouns.</p>
+<h4>2. Attribute:</h4>
+<p>An attribute is a property, trait, or characteristic of an entity, relationship, or another attribute. For example, the attribute Inventory Item Name is an attribute of the entity Inventory Item.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6753" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Attributes-ER-Diagrams.jpeg?resize=277%2C173&#038;ssl=1" alt="Attribute E-R Modal Component" width="277" height="173" /></p>
+<h4>3. Relationship:</h4>
+<p>A relationship describes how entities interact. For example, the entity “Carpenter” may be related to the entity “table” by the relationship “builds” or “makes”. Relationships are represented by diamond shapes and are labeled using verbs.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6754 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Relationship-ER-diagrams.jpeg?resize=412%2C72&#038;ssl=1" alt="Relationship E-R Modal Component" width="412" height="72" /></p>
+<h3>Symbols used in E-R Diagram:</h3>
+<p>The major symbols that are used in E-R diagrams are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Rectangles: </strong>This Entity Relationship Diagram symbol represents entity types</li>
+<li><strong>Ellipses: </strong>Symbols represent attributes</li>
+<li><strong>Diamonds: </strong>This symbol represents relationship types</li>
+<li><strong>Lines: </strong>It links attributes to entity types and entity types with other relationship types</li>
+<li><strong>Primary key: </strong>attributes are underlined</li>
+<li><strong>Double Ellipses: </strong>Represent multi-valued attributes</li>
+</ul>
+<p>The ER diagram to store data in a library of our college is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6756 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/image.png?resize=3856%2C2792&#038;ssl=1" alt="ER diagram for library management system" width="3856" height="2792" /></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain deadlock and starvation. Explain Time stamp based protocol for concurrency control?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Starvation:</strong></span></p>
+<p>Starvation is the situation when a transaction has to wait for an indefinite period of time to acquire a lock.</p>
+<p><span style="text-decoration: underline;">Reasons for Starvation:</span></p>
+<ul style="list-style-type: square;">
+<li>If the waiting scheme for locked items is unfair. ( priority queue )</li>
+<li>Victim selection (the same transaction is selected as a victim repeatedly )</li>
+<li>Resource leak.</li>
+<li>Via denial-of-service attack.</li>
+</ul>
+<p><span style="text-decoration: underline;">Solution:</span></p>
+<ul style="list-style-type: square;">
+<li>Increasing Priority</li>
+<li>Modification in Victim Selection algorithm</li>
+<li>First Come First Serve approach</li>
+<li>Wait-die and wound wait scheme</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Deadlock:</strong></span></p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Deadlock means that there is a set of two or more transactions that are all stuck because they are all waiting for locks to be released that have been acquired earlier by one of the other transactions in the set. Note that this means that none of the transactions can therefore ever make progress. It also means that assuming that transactions follow a protocol like two-phase locking to guarantee serializability, this cannot be resolved by some transaction releasing a lock, but only by aborting one or more of the transactions.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">A typical example is where transaction T1 is holding a lock on record r1 and is requesting a lock on record r2, and transaction T2 is holding a lock on record r2 and requesting a lock on record r1. If neither transaction will release the locks they already have, this means that both T1 and T2 are stuck.</p>
+<p><span style="text-decoration: underline;"><strong>Timestamp-based protocol for concurrency control:</strong></span></p>
+<p>The most commonly used concurrency protocol is the timestamp-based protocol. This protocol uses either system time or a logical counter as a timestamp.</p>
+<p>Lock-based protocols manage the order between the conflicting pairs among transactions at the time of execution, whereas timestamp-based protocols start working as soon as a transaction is created.</p>
+<p>Every transaction has a timestamp associated with it, and the ordering is determined by the age of the transaction. A transaction created at 0002 clock time would be older than all other transactions that come after it. For example, any transaction &#8216;y&#8217; entering the system at 0004 is two seconds younger and the priority would be given to the older one.</p>
+<p>In addition, every data item is given the latest read and write timestamp. This lets the system know when the last ‘read and write operation was performed on the data item.</p>
+</div>
+<h2>Short Answer Questions: Attempts any Eight Questios (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>What is difference between logical data independence and physical data independence?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The major difference between logical data independence and physical data independence is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Physical Data Independence</th>
+<th>Logical Data Independence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is mainly concerned with how the data is stored in the system.</td>
+<td>It is mainly concerned with the structure or the changing data definition.</td>
+</tr>
+<tr>
+<td>It is easy to retrieve.</td>
+<td>It is difficult to retrieve because the data is mainly dependent on the logical structure of the data.</td>
+</tr>
+<tr>
+<td>As compared to logical independence it is easy to achieve physical data independence.</td>
+<td>As compared to physical independence it is not easy to achieve logical data independence.</td>
+</tr>
+<tr>
+<td>Any change at the physical level does not require change at the application level.</td>
+<td>The change in the logical level requires a change at the application level.</td>
+</tr>
+<tr>
+<td>The modifications made at the internal level may or may not be needed to improve the performance of the structure.</td>
+<td>The modifications made at the logical level are significant whenever the logical structure of the database is to be changed.</td>
+</tr>
+<tr>
+<td>It is concerned with the internal schema.</td>
+<td>It is concerned with the conceptual schema.</td>
+</tr>
+<tr>
+<td>Example: Change in compression techniques, Hashing algorithms, and storage devices, etc.</td>
+<td>Example: Add/Modify or Delete a new attribute.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain Relationship and Relationship sets with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A relationship represents the association between entity types. For example, ‘Enrolled in’ is a relationship that exists between entity type Student and Course. In ER diagram, the relationship is represented by a diamond and connecting the entities with lines.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6779 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Database-Management-System-ER-Model-8.png?resize=872%2C162&#038;ssl=1" alt="Relationship" width="872" height="162" /></p>
+<p>A set of relationships of the same type is known as a relationship set. The following relationship set depicts S1 being enrolled in C2, S2 being enrolled in C1, and S3 being enrolled in C3.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6780 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Database-Management-S-ystem-ER-Model-9.png?resize=767%2C385&#038;ssl=1" alt="Relationship Set in DBMS" width="767" height="385" /></p>
+<p>The number of entity sets that participate in a relationship set is termed as the degree of that relationship set. Thus,</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Degree of a relationship set = Number of entity sets participating in a relationship set</pre>
+<p><span style="text-decoration: underline;"><strong>Types of Relationship sets:</strong></span></p>
+<p>On the basis of the degree of a relationship set, a relationship set can be classified into the following types-</p>
+<ol style="list-style-type:decimal;">
+<li>Unary relationship set</li>
+<li>Binary relationship set</li>
+<li>Ternary relationship set</li>
+<li>N-ary relationship set</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1. Unary Relationship set:</strong></span></p>
+<p>A unary relationship set is a relationship set where only one entity set participates in a relationship set.</p>
+<p>Example: One person is married to only one person</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6781 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Unary-Relationship-Set.png?resize=323%2C248&#038;ssl=1" alt="Unary Relationship" width="323" height="248" /></p>
+<p><strong><span style="text-decoration: underline;">2. Binary relationship set:</span></strong></p>
+<p>A binary relationship set is a relationship set where two entity sets participate in a relationship set.</p>
+<p>Example: Student is enrolled in a Course</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-6779" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Database-Management-System-ER-Model-8.png?resize=872%2C162&#038;ssl=1" alt="" width="872" height="162"></p>
+<p><span style="text-decoration: underline;"><strong>3. Ternary Relationship Set:</strong></span></p>
+<p>A ternary relationship set is a relationship set where three entity sets participate in a relationship set.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6782 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Ternary-Relationship-Set-1.png?resize=532%2C273&#038;ssl=1" alt="Ternary Relationship Set" width="532" height="273" /></p>
+<p><span style="text-decoration: underline;"><strong>4. N-ary Relationship set:</strong></span></p>
+<p>An N-ary relationship set is a relationship set where ‘n’ entity sets to participate in a relationship set.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Retrive the TName, SName, SPhone for “ABC” school using SQL from given relation as below.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">TEACHER (TID, TName, TAddress, TQualification)
+SCHOOL (SID, SName, SAddress, SPhone)
+SCHOOL_TEACHER (SID, TID, No_of Period)</pre</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given Tables,</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">TEACHER (TID, TName, TAddress, TQualification)
+SCHOOL (SID, SName, SAddress, SPhone)
+SCHOOL_TEACHER (SID, TID, No_of Period)</pre>
+<p>The SQL to retrieve the TName, SName, SPhone for the “ABC” school using SQL from the above tables is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">SELECT T.TName, S.SName, S.SPhone
+FROM TEACHER T
+JOIN SCHOOL_TEACHER ST ON T.TID = ST.TID
+JOIN SCHOOL S ON ST.SID = S.SID
+WHERE S.SName = 'ABC';</pre>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is integrity? Explain different types of database integrity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Database integrity defines the validity and consistency of stored information. Integrity is generally defined in terms of constraints, which are consistency rules that the database is not allowed to violate. Constraints can apply to each attribute or they can apply to relationships between tables.</p>
+<p>Integrity constraints provide that changes (update deletion, insertion) made to the database by authorized users do not result in a loss of data consistency. Therefore, integrity constraints guard against accidental damage to the database.</p>
+<p>There are various types of data integrity which are as follows −</p>
+<ul class="list">
+<li><strong>Logical Integrity</strong> − In a relational database, logical consistency provides the data remains intact as it is used in several ways. Logical integrity, like physical integrity, defends information from human error and hackers, but in a different way. There are multiple forms of logical consistency.
+<p>Logical integrity is negotiated when an error occurs, including when a human operator makes a mistake while manually entering information into the database. There are some common reasons why data integrity can be compromised including bugs and malware and transferring information from one site within a database to another where some fields are absent.</li>
+<li><strong>Referential Integrity</strong> − This defines all procedures and rules enforced to provide that data is stored and used consistently. This is the notion of foreign keys.
+<p>The principle of foreign keys defines that the foreign key value can be in two states. The first state is that the foreign key value would define a primary key value of another table, or it can be null. Being null can simply define that there are no relationships, or that the relationship is unfamiliar.</li>
+<li><strong>User-Defined Integrity</strong> − There are sets of data, generated by users, external entity, referential, and domain integrity. If an employer makes a column to input corrective action of employees, this data can be defined as “user-defined.”</li>
+<li><strong>Domain Integrity</strong> − Domain integrity is a sequence of rules and procedures that provide all data items that pertain to the correct domains. For instance, if a user types a birth date in a street address area, the system will display an error message that will avoid the user from filling that field with the wrong information.
+<p>The concept of data integrity provides that all data in a database can be traced and connected to other information. This provides that everything is recoverable and searchable. Having an individual, well-defined, and well-controlled data integrity system improves stability, performance, reusability, and maintainability.</li>
+<li><strong>Physical integrity</strong> − Physical integrity defines the safeguarding of data&#8217;s completeness and precision during storage and retrieval. Physical integrity is at risk when natural disasters appear, electricity goes out, or hackers interrupt database functions.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define Functonal dependencies. Explain trival and non trival dependencies?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div>
+<p>Functional dependency is a set of constraints between two attributes in a relation. Functional dependency says that if two tuples have the same values for attributes A1, A2,&#8230;, An, then those two tuples must have to have same values for attributes B1, B2, &#8230;, Bn.</p>
+<p>Functional dependency is represented by an arrow sign (→) that is, X→Y, where X functionally determines Y. The left-hand side attributes determine the values of attributes on the right-hand side.</p>
+<p><span style="text-decoration: underline;"><strong>Trival Functional Dependency:</strong></span></p>
+<p>In Trivial Functional Dependency, a dependent is always a subset of the determinant.</p>
+<p>i.e. If X → Y and Y is the subset of X, then it is called trivial functional dependency</p>
+<p>For example:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>roll_no</th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42</td>
+<td>abc</td>
+<td>17</td>
+</tr>
+<tr>
+<td>43</td>
+<td>pqr</td>
+<td>18</td>
+</tr>
+<tr>
+<td>44</td>
+<td>xyz</td>
+<td>18</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, <strong>{roll_no, name} → name</strong> is a trivial functional dependency since the dependent <strong>name</strong> is a subset of determinant set <strong>{roll_no, name}</strong></p>
+<p>Similarly, <strong>roll_no → roll_no </strong>is also an example of trivial functional dependency.</p>
+<p><span style="text-decoration: underline;"><strong>Non-Trivial Functional Dependency:</strong></span></p>
+<p>In Non-trivial functional dependency, the dependent is strictly not a subset of the determinant.</p>
+<p>i.e. If X → Y and Y are not a subset of X, then it is called Non-trivial functional dependency.</p>
+<p>For example,</p>
+<figure class="table">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th><strong>roll_no</strong></th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42</td>
+<td>abc</td>
+<td>17</td>
+</tr>
+<tr>
+<td>43</td>
+<td>pqr</td>
+<td>18</td>
+</tr>
+<tr>
+<td>44</td>
+<td>xyz</td>
+<td>18</td>
+</tr>
+</tbody>
+</table></div>
+</figure>
+<p>Here, <strong>roll_no → name</strong> is a non-trivial functional dependency, since the dependent <strong>name</strong> is <strong>not a subset of </strong>determinant<strong> roll_no</strong></p>
+<p>Similarly, <strong>{roll_no, name} → age</strong> is also a non-trivial functional dependency, since <strong>age</strong> is<strong> not a subset of {roll_no, name} </strong></p>
+</div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain the difference between “Join” and “Natural Join” of algebriac operations with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between &#8220;Join&#8221; and &#8220;Natural Join&#8221; of algebraic operations are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>SN</th>
+<th>NATURAL JOIN</th>
+<th>INNER JOIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Natural Join joins two tables based on the same attribute name and datatypes.</td>
+<td>Inner Join joins two tables on the basis of the column which is explicitly specified in the ON clause.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>In Natural Join, The resulting table will contain all the attributes of both the tables but keep only one copy of each common column</td>
+<td>In Inner Join, The resulting table will contain all the attributes of both the tables including duplicate columns also</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>In Natural Join, If there is no condition specified then it returns the rows based on the common column</td>
+<td>In Inner Join, only those records will return which exist in both the tables</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>SYNTAX:<br />
+SELECT *<br />
+FROM table1 NATURAL JOIN table2;</td>
+<td>SYNTAX:<br />
+SELECT *<br />
+FROM table1 INNER JOIN table2 ON table1.Column_Name = table2.Column_Name;</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is Checkpoints in database recovery? How does it help in database recovery? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The checkpoint in Database Recovery is used to declare a point before which the DBMS was in a consistent state, and all transactions were committed. During transaction execution, such checkpoints are traced. After execution, transaction log files will be created.</p>
+<p>Upon reaching the savepoint/checkpoint, the log file is destroyed by saving its update to the database. Then a new log is created with upcoming execution operations of the transaction and it will be updated until the next checkpoint and the process continues.</p>
+<p class="h2"><span style="text-decoration: underline;"><strong>Database Recovery using Checkpoint:</strong></span></p>
+<p>In the following manner, a recovery system recovers the database from this failure:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6787 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/dbms-checkpoint.png?resize=527%2C311&#038;ssl=1" alt="Recovery using Checkpoint" width="527" height="311" /></p>
+<ul class="points">
+<li>The recovery system reads the logs backward from the end to the last checkpoint i.e. from T4 to T1.</li>
+<li>It will keep track of two lists – Undo and Redo.</li>
+<li>Whenever there is a log with instructions &lt;Tn, start&gt;and &lt;Tn, commit&gt; or only &lt;Tn, commit&gt; then it will put that transaction in Redo List. T2 and T3 contain &lt;Tn, Start&gt; and &lt;Tn, Commit&gt; whereas T1 will have only &lt;Tn, Commit&gt;. Here, T1, T2, and T3 are in the redo list.</li>
+<li>Whenever a log record with no instruction of commit or abort is found, that transaction is put to Undo List &lt;Here, T4 has &lt;Tn, Start&gt; but no &lt;Tn, commit&gt; as it is an ongoing transaction. T4 will be put on the undo list.</li>
+</ul>
+<p>All the transactions in the redo-list are deleted with their previous logs and then redone before saving their logs. All the transactions in the undo list are undone and their logs are deleted.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define schedule and serializability. How can you test the serializability?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Schedule:</strong></span></p>
+<p>A series of operations from one transaction to another transaction is known as a schedule. It is used to preserve the order of the operation in each individual transaction.</p>
+<p><span style="text-decoration: underline;"><strong>Serializability:</strong></span></p>
+<p>The serializability of schedules is used to find non-serial schedules that allow the transaction to execute concurrently without interfering with one another.</p>
+<p>It identifies which schedules are correct when executions of the transaction have to interleave their operations.</p>
+<p><span style="text-decoration: underline;"><strong>Testing of Serializability:</strong></span></p>
+<p>The Serializability of a schedule is tested using a Serialization graph.</p>
+<p>Assume a schedule S1. For S1, a graph called Precedence Graph is constructed. This graph consists of a pair G = (V, E), where E is a set of edges, and V is a set of all vertices. All the transactions participating in the schedule are stored in the vertices. The set of edges is used to contain all edges Ti -&gt;Tj for which one of the three conditions holds:</p>
+<ol style="list-style-type:decimal;">
+<li>Create a node Ti → Tj if Ti executes write (Q) before Tj executes read (Q).</li>
+<li>Create a node Ti → Tj if Ti executes read (Q) before Tj executes write (Q).</li>
+<li>Create a node Ti → Tj if Ti executes write (Q) before Tj executes write (Q).</li>
+</ol>
+<p><span style="text-decoration: underline;"><em>Schedule S Precedence Graph</em></span></p>
+<ul style="list-style-type: square;">
+<li>If a precedence graph contains a single edge Ti → Tj, then all the instructions of Ti are executed before the first instruction of Tj is executed.</li>
+<li>If a precedence graph for schedule S contains a cycle, then S is non-serializable. If the precedence graph has no cycle, then S is known as serializable.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Define Boyce-Codd normal form with example. How it is different that 3<sup>rd</sup> Normal form.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>BCNF (Boyce Codd Normal Form) is the advanced version of 3NF. A table is in BCNF if every functional dependency X-&gt;Y, X is the super key of the table. For BCNF, the table should be in 3NF, and for every FD. LHS is super key.</p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>Consider a relation R with attributes (student, subject, teacher).</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered" style="width: 29%; height: 120px;">
+<thead>
+<tr style="height: 24px;">
+<th style="height: 24px;">Student</th>
+<th style="height: 24px;">Teacher</th>
+<th style="height: 24px;">Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 24px;">
+<td style="height: 24px;">Suresh</td>
+<td style="height: 24px;">P.Naresh</td>
+<td style="height: 24px;">Java</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">Bipin</td>
+<td style="height: 24px;">K.Das</td>
+<td style="height: 24px;">Math</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">Prince</td>
+<td style="height: 24px;">P.Naresh</td>
+<td style="height: 24px;">Computer Graphics</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">Raju</td>
+<td style="height: 24px;">R.Prasad</td>
+<td style="height: 24px;">Computer Network</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Difference between BCNF and 3NF:</strong></span></p>
+<p>The difference between BCNF and 3NF are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>S.NO.</th>
+<th>3NF</th>
+<th>BCNF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>In 3NF there should be no transitive dependency that is no non-prime attribute should be transitively dependent on the candidate key.</td>
+<td>In BCNF for any relation A-&gt;B, A should be a super key of the relation.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>It is stronger than BCNF.</td>
+<td>It is comparatively stronger than 3NF.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>In 3NF the functional dependencies are already in 1NF and 2NF.</td>
+<td>In BCNF the functional dependencies are already in 1NF, 2NF, and 3NF.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>The redundancy is high in 3NF.</td>
+<td>The redundancy is comparatively low in BCNF.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>In 3NF there is the preservation of all functional dependencies.</td>
+<td>In BCNF there may or may not be the preservation of all functional dependencies.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>It is comparatively easier to achieve.</td>
+<td>It is difficult to achieve.</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Lossless decomposition can be achieved by 3NF.</td>
+<td>Lossless decomposition is hard to achieve in BCNF.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</body></html>

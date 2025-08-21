@@ -1,0 +1,824 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>CN Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempt any two questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What is transmission media? How do guided media differ from unguided media? Explain different types of guided media in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Transmission media is a communication channel that carries the information from the sender to the receiver. Data is transmitted through the electromagnetic signals.</p>
+<p>The main functionality of the transmission media is to carry the information in the form of bits through <strong>LAN</strong>(Local Area Network).</p>
+<p>It is a physical path between transmitter and receiver in data communication.</p>
+<p>In a copper-based network, the bits in the form of electrical signals.</p>
+<p>In a fibre based network, the bits in the form of light pulses.</p>
+<p><strong><span style="text-decoration: underline;">Differences between guided and unguided media:</span></strong></p>
+<p>The major differences between guided and unguided transmission media are as follows −</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Guided media</th>
+<th>Unguided media</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The signal requires a physical path for transmission.</td>
+<td>The signal is broadcasted through air or sometimes water</td>
+</tr>
+<tr>
+<td>It is called wired communication or bounded transmission media.</td>
+<td>It is called wireless communication or unbounded transmission media.</td>
+</tr>
+<tr>
+<td>It provides direction to signal for travelling. Twisted pair cable, coaxial cable and fibre optic cable are its types.</td>
+<td>It does not provide any direction. Radio waves, microwave and infrared are its types.</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Guided transmission media:</h4>
+<p>Guided transmission media consists of physical connection between source and destination through a wire or a cable.</p>
+<p>There are three basic types of guided media which are as follows −</p>
+<ul class="list">
+<li>Twisted pair cable</li>
+<li>Co-axial cable</li>
+<li>Fiber-optic cable</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>1. Twisted Pair Cable:</strong></span></p>
+<p>Twisted-Pair Cable consists of two insulated conductors wire wound (normally copper), twisted together. In which one wire is to carry the signal to destination and other is used as a ground reference. Twisting is done so that the noise will equally affect the wire from the external environment.</p>
+<p class="conh"><em><span style="text-decoration: underline;"><span id="advantage-of-twisted-pair-cable">Advantage:</span></span></em></p>
+<ol style="list-style-type:decimal;">
+<li>The frequency range is 0 to 3.5 kHz</li>
+<li>Repeater spacing is 2 KM</li>
+</ol>
+<p class="conh"><em><span style="text-decoration: underline;"><span id="disadvantage-of-twisted-pair-cable">Disadvantage:</span></span></em></p>
+<ol style="list-style-type:decimal;">
+<li>No capacity to carrying a signal over long distances without the use of repeaters.</li>
+<li>Not suitable for broadband applications because of low bandwidth capacity.</li>
+<li>Poor security and easy to tap.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>2. Co-axial cable:</strong></span></p>
+<p>Coaxial cable has a central core conductor of stranded or solid wire (usually copper) enclosed in an insulating protection cover, which is, in turn, encased in an outer conductor of metal foil or a combination of the two. The outer metallic work as a shield against noise and as a conductor, which complete the circuit. The whole cable is covered by a plastic cover.</p>
+<p class="conh1"><em><span style="text-decoration: underline;">Types:</span></em></p>
+<ol style="list-style-type:decimal;">
+<li><strong>BaseBand</strong>: (50 ohms) used for digital transmission.</li>
+<li><strong>BroadBand</strong>: uses for analog transmission on standard TV cable.</li>
+</ol>
+<p><em><span style="text-decoration: underline;">Advantage:</span></em></p>
+<ol style="list-style-type:decimal;">
+<li>Carries signals of higher data rate and bandwidth.</li>
+<li>Used in analog telephone networks and traditional Cable TV networks.</li>
+</ol>
+<p class="conh"><em><span style="text-decoration: underline;">Disadvantage:</span></em></p>
+<ol style="list-style-type:decimal;">
+<li>The network depends on a single cable.</li>
+<li>Expensive and difficult to install when compared with twisted pair.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>3. Fiber Optic Cable:</strong></span></p>
+<p>Fiber-Optic Cable is made of glass and transmits of data is based on the concept of reflection of light through glass. A glass core is surrounded by less dense glass called cladding.</p>
+<p><em><span style="text-decoration: underline;">Advantage:</span></em></p>
+<ul style="list-style-type: square;">
+<li>Noise resistance</li>
+<li>Less signal attenuation</li>
+<li>Higher bandwidth</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Disadvantage:</span></em></p>
+<ul style="list-style-type: square;">
+<li>They are very expensive</li>
+<li>hard to install and maintained</li>
+<li>Fragility (easily broken)</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is flow control? Explain Stop-and-Wait ARQ with suitable example. How is it different from G-Back-N ARQ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Flow control is a technique that allows two stations working at different speeds to communicate with each other. It is a set of measures taken to regulate the amount of data that a sender sends so that a fast sender does not overwhelm a slow receiver. In data link layer, flow control restricts the number of frames the sender can send before it waits for an acknowledgment from the receiver.</p>
+<p>Two method have been developed to control the follow of data:</p>
+<ol style="list-style-type:decimal;">
+<li>Stop and Wait</li>
+<li>Sliding Window</li>
+</ol>
+<p><strong>Stop-and-wait ARQ:</strong></p>
+<p><em><span style="text-decoration: underline;">Characteristics:</span></em></p>
+<ul style="list-style-type: square;">
+<li>Used in Connection-oriented communication.</li>
+<li>It offers error and flows control</li>
+<li>It is used in Data Link and Transport Layers</li>
+<li>Stop and Wait for ARQ mainly implements the Sliding Window Protocol concept with Window Size 1</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Working:</span></em></p>
+<p>1) Sender A sends a data frame or packet with sequence number 0.<br />
+2) Receiver B, after receiving the data frame, sends an acknowledgement with sequence number 1 (the sequence number of the next expected data frame or packet)<br />
+There is only a one-bit sequence number that implies that both sender and receiver have a buffer for one frame or packet only.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6727 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Stop-and-Wait-ARQ-7.png?resize=470%2C488&#038;ssl=1" alt="Stop and Wait ARQ" width="470" height="488" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Stop-and-Wait-ARQ-7.png?w=842&amp;ssl=1 842w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Stop-and-Wait-ARQ-7.png?resize=768%2C796&amp;ssl=1 768w" sizes="auto, (max-width: 470px) 100vw, 470px" /></p>
+<p>The Stop and Wait ARQ solves the problems but may cause big performance issues as the sender always waits for acknowledgement even if it has the next packet ready to send. Consider a situation where you have a high bandwidth connection and propagation delay is also high (you are connected to some server in some other country through a high-speed connection). To solve this problem, we can send more than one packet at a time with a larger sequence number.</p>
+<p>So Stop and Wait ARQ may work fine where propagation delay is very less for example LAN connections but performs badly for distant connections like satellite connections.</p>
+<p><strong><em>Difference Between Stop-and-wait and Go-back ARQ:</em></strong></p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Key</th>
+<th>Stop and Wait ARQ</th>
+<th>Go-Back-N ARQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sender window size</td>
+<td>In Stop and Wait, Sender window size is 1.</td>
+<td>In Go-Back-N, Sender window size is N.</td>
+</tr>
+<tr>
+<td>Receiver Window size</td>
+<td>In Stop and Wait, Receiver window size is 1.</td>
+<td>In Go-Back-N, Receiver window size is 1.</td>
+</tr>
+<tr>
+<td>Minimum Sequence Number</td>
+<td>In Stop and Wait, Minimum Sequence Number is 2.</td>
+<td>In Go-Back-N, Minimum Sequence Number is N+1 where N is number of packets sent.</td>
+</tr>
+<tr>
+<td>Efficiency</td>
+<td>In Stop and Wait, Efficiency formular is 1/(1+2*a) where a is ratio of propagation delay vs<br />
+transmission delay.</td>
+<td>In Go-Back-N, Efficiency formular is N/(1+2*a) where a is ratio of propagation delay vs<br />
+transmission delay and N is number of packets sent.</td>
+</tr>
+<tr>
+<td>Acknowledgement Type</td>
+<td>In Stop and Wait, Acknowledgement type is individual.</td>
+<td>In Go-Back-N, Acknowledgement type is cumulative.</td>
+</tr>
+<tr>
+<td>Supported Order</td>
+<td>In Stop and Wait, no specific order is needed at receiver end.</td>
+<td>In Go-Back-N, in-order delivery only are accepted at receiver end.</td>
+</tr>
+<tr>
+<td>Retransmissions</td>
+<td>In Stop and Wait, in case of packet drop,number of retransmition is 1.</td>
+<td>In Go-Back-N, in case of packet drop,numbers of retransmitions are N.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain link state routing with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Link state routing is a technique in which each router shares the knowledge of its neighborhood with every other router in the internetwork.</p>
+<h4 class="h2">Link State Routing has two phases:</h4>
+<p class="h3"><strong><span style="text-decoration: underline;">1. Reliable Flooding</span></strong></p>
+<ul class="points">
+<li><strong>Initial state:</strong> Each node knows the cost of its neighbors.</li>
+<li><strong>Final state:</strong> Each node knows the entire graph.</li>
+</ul>
+<p class="h3"><span style="text-decoration: underline;"><strong>2. Route Calculation</strong></span></p>
+<p>Each node uses Dijkstra&#8217;s algorithm on the graph to calculate the optimal routes to all nodes.</p>
+<ul class="points">
+<li>The Link state routing algorithm is also known as Dijkstra&#8217;s algorithm which is used to find the shortest path from one node to every other node in the network.</li>
+<li>The Dijkstra&#8217;s algorithm is an iterative, and it has the property that after k<sup>th</sup> iteration of the algorithm, the least cost paths are well known for k destination nodes.</li>
+</ul>
+<p>Let&#8217;s understand through an example:</p>
+<p><em><span style="text-decoration: underline;">Notaions:</span></em></p>
+<ul class="points">
+<li><strong>D(v):</strong> It defines the cost of the path from source code to destination v that has the least cost currently.</li>
+<li><strong>P(v):</strong> It defines the previous node (neighbor of v) along with current least cost path from source to v.</li>
+<li><strong>N:</strong> It is the total number of nodes available in the network.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6729 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/link-state-routing.png?resize=353%2C228&#038;ssl=1" alt="Link State Routing" width="353" height="228" /></p>
+<p>In the above example, Source Vertex is A</p>
+<p><span style="text-decoration: underline;"><strong>Step 1:</strong></span></p>
+<p>The first step is an initialization step. The currently known least cost path from A to its directly attached neighbors, B, C, D are 2,5,1 respectively. The cost from A to B is set to 2, from A to D is set to 1 and from A to C is set to 5. The cost from A to E and F are set to infinity as they are not directly linked to A.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B),P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2, A</td>
+<td>5, A</td>
+<td>1,A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+</tbody>
+</table></div>
+<p class="h4"><span style="text-decoration: underline;"><strong>Step 2:</strong></span></p>
+<p>In the above table, we observe that vertex D contains the least cost path in step 1. Therefore, it is added in N. Now, we need to determine a least-cost path through D vertex.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B), P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2, A</td>
+<td>5, A</td>
+<td>1, A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD</td>
+<td>2, A</td>
+<td>4, D</td>
+<td></td>
+<td>2,D</td>
+<td>∞</td>
+</tr>
+</tbody>
+</table></div>
+<p class="h4"><span style="text-decoration: underline;"><strong>Step 3:</strong></span></p>
+<p>In the above table, we observe that both E and B have the least cost path in step 2. Let&#8217;s consider the E vertex. Now, we determine the least cost path of remaining vertices through E.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B),P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2,A</td>
+<td>5,A</td>
+<td>1,A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD</td>
+<td>2,A</td>
+<td>4,D</td>
+<td></td>
+<td>2,D</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADE</td>
+<td>2,A</td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+</tbody>
+</table></div>
+<p class="h4"><span style="text-decoration: underline;"><strong>Step 4:</strong></span></p>
+<p>In the above table, we observe that B vertex has the least cost path in step 3. Therefore, it is added in N. Now, we determine the least cost path of remaining vertices through B.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B),P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2,A</td>
+<td>5,A</td>
+<td>1,A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD</td>
+<td>2,A</td>
+<td>4,D</td>
+<td></td>
+<td>2,D</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADE</td>
+<td>2,A</td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ADEB</td>
+<td></td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+</tbody>
+</table></div>
+<p class="h4"><span style="text-decoration: underline;"><strong>Step 5:</strong></span></p>
+<p>In the above table, we observe that C vertex has the least cost path in step 4. Therefore, it is added in N. Now, we determine the least cost path of remaining vertices through C.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B),P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2,A</td>
+<td>5,A</td>
+<td>1,A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD</td>
+<td>2,A</td>
+<td>4,D</td>
+<td></td>
+<td>2,D</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADE</td>
+<td>2,A</td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ADEB</td>
+<td></td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ADEBC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+</tbody>
+</table></div>
+<p>The final table is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Step</th>
+<th>N</th>
+<th>D(B),P(B)</th>
+<th>D(C),P(C)</th>
+<th>D(D),P(D)</th>
+<th>D(E),P(E)</th>
+<th>D(F),P(F)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>2,A</td>
+<td>5,A</td>
+<td>1,A</td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD</td>
+<td>2,A</td>
+<td>4,D</td>
+<td></td>
+<td>2,D</td>
+<td>∞</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADE</td>
+<td>2,A</td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ADEB</td>
+<td></td>
+<td>3,E</td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ADEBC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>4,E</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ADEBCF</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h2>Short Answer Questions: Attempt any Eight questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>Explain client/server network. How is it different from peer to  peer network?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In client-server network relationships, certain computers act as servers and others act as clients.</p>
+<p>A server is simply a computer that provides the network resources and provides service to other computers when they request it. A client is the computer running a program that requests the service from a server. Local area network (LAN) is based on client server network relationship.</p>
+<p>A client-server network is one on which all available network resources such as files, directories, applications and shared devices, are centrally managed and hosted and then are accessed by the client.</p>
+<p>Client server networks are defined by the presence of servers on a network that provide security and administration of the network.</p>
+<p><strong><em><span style="text-decoration: underline;">Advantages:</span></em></strong></p>
+<p>The advantages of client server network are as follows:</p>
+<ul class="list">
+<li>It is very secure.</li>
+<li>Gives better performance.</li>
+<li>It has centralized backup.</li>
+<li>It is very reliable.</li>
+</ul>
+<p><strong><em><span style="text-decoration: underline;">Disadvantages:</span></em></strong></p>
+<p>The disadvantages of client server network are as follows −</p>
+<ul class="list">
+<li>It requires professional administration.</li>
+<li>It is more hardware and software intensive.</li>
+<li>It requires expensive dedicated software.</li>
+</ul>
+<p>The difference between client server and peer to peer network is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>S.NO</th>
+<th>Client-Server Network</th>
+<th>Peer-to-Peer Network</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>In Client-Server Network, Clients and server are differentiated, Specific server and clients are present.</td>
+<td>In Peer-to-Peer Network, Clients and server are not differentiated.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Client-Server Network focuses on information sharing.</td>
+<td>While Peer-to-Peer Network focuses on connectivity.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>In Client-Server Network, Centralized server is used to store the data.</td>
+<td>While in Peer-to-Peer Network, Each peer has its own data.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>In Client-Server Network, Server respond the services which is request by Client.</td>
+<td>While in Peer-to-Peer Network, Each and every node can do both request and respond for the services.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Client-Server Network are costlier than Peer-to-Peer Network.</td>
+<td>While Peer-to-Peer Network are less costlier than Client-Server Network.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Client-Server Network are more stable than Peer-to-Peer Network.</td>
+<td>While Peer-to-Peer Network are less stable if number of peer is increase.</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Client-Server Network is used for both small and large networks.</td>
+<td>While Peer-to-Peer Network is generally suited for small networks with fewer than 10 computers.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is CSMA/CD? Why is there no need for CSMA/CD on a full-duplex Ethernet LAN?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Carrier Sense Multiple Access with Collision Detection (CSMA/CD) is a network protocol for carrier transmission that operates in the Medium Access Control (MAC) layer. It senses or listens whether the shared channel for transmission is busy or not, and defers transmissions until the channel is free. The collision detection technology detects collisions by sensing transmissions from other stations. On detection of a collision, the station stops transmitting, sends a jam signal, and then waits for a random time interval before retransmission.</p>
+<p>There is no need for CSMA/CD on a full-duplex Ethernet LAN because of the following reasons:</p>
+<ul style="list-style-type: square;">
+<li>For a full duplex transmission the chance for collision as well as contention is less compared to half duplex.</li>
+<li>Everyone can send and recieve datas independantly.</li>
+<li>so there is no chance for carrier sensing and collision detection.</li>
+<li>it makes no need for CSMA/CD on a full-duplex Ethernet LAN.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What subnet ID and broadcast address of each subnet if you divide a class B network (150.10.0.0 – 150.10.255.255) in 4 different subnets. What is the new subnet mask?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given class B network = 150.10.0.0</p>
+<p>Default subnet mask for class B = 255.255.0.0</p>
+<p>We want to make 4 different subnets. So let&#8217;s borrow 2 bits from the host id such as 2<sup>2</sup> = 4</p>
+<p>Subnet mask = 11111111.11111111.11000000.00000000</p>
+<p>New subnet marks = 255.255.192.0</p>
+<p>Now, let&#8217;s divide the class B network into a subnet</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Subnet ID</p>
+<p>150.10.0.0</p>
+<p>150.10.64.0</p>
+<p>150.10.128.0</p>
+<p>150.10.192.0</td>
+<td style="width: 50%; text-align: center;">Broadcast ID</p>
+<p>150.10.63.255</p>
+<p>150.10.127.255</p>
+<p>150.10.191.255</p>
+<p>150.10.255.255</td>
+</tr>
+</tbody>
+</table></div>
+<p>New subnet mask = 255.255.192.0</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the structure of IPv6 address. Compare IPv6 address with IPv4 address.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Internet Protocol Version 6 address (IPv6 address) is a numeric label used to identify and locate a network interface of a computer or a network node participating in a computer network using IPv6. IP addresses are included in the packet header to indicate the source and the destination of each packet. The IP address of the destination is used to make decisions about routing IP packets to other networks.</p>
+<p><strong><em><span style="text-decoration: underline;">IPv6 Structure:</span></em></strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6733 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/global_unicast_address.jpg?resize=441%2C74&#038;ssl=1" alt="IPv6 Structure" width="441" height="74" /></p>
+<p>This address type is equivalent to IPv4’s public address. Global Unicast addresses in IPv6 are globally identifiable and uniquely addressable.</p>
+<p>Global Routing Prefix: The most significant 48-bits are designated as Global Routing Prefix which is assigned to the specific autonomous system. The three most significant bits of Global Routing Prefix are always set to 001.</p>
+<p><span style="text-decoration: underline;"><strong>Difference between IPv4 and IPv6:</strong></span></p>
+<p>The difference between IPv4 and IPv6 is:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%; height: 867px;">
+<thead>
+<tr style="height: 24px;">
+<th style="height: 24px;"><strong>IPv4</strong></th>
+<th style="height: 24px;"><strong>IPv6</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 48px;">
+<td style="height: 48px;">IPv4 has a 32-bit address length</td>
+<td style="height: 48px;">IPv6 has a 128-bit address length</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">It Supports Manual and DHCP address configuration</td>
+<td style="height: 48px;">It supports Auto and renumbering address configuration</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">In IPv4 end to end, connection integrity is Unachievable</td>
+<td style="height: 48px;">In IPv6 end to end, connection integrity is Achievable</td>
+</tr>
+<tr style="height: 51px;">
+<td style="height: 51px;">It can generate 4.29×10<sup>9</sup> address space</td>
+<td style="height: 51px;">The address space of IPv6 is quite large it can produce a 3.4×10<sup>38</sup> address space</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">The Security feature is dependent on the application</td>
+<td style="height: 48px;">IPSEC is an inbuilt security feature in the IPv6 protocol</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">Address representation of IPv4 is in decimal</td>
+<td style="height: 48px;">Address Representation of IPv6 is in hexadecimal</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">Fragmentation performed by Sender and forwarding routers</td>
+<td style="height: 48px;">In IPv6 fragmentation is performed only by the sender</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">In IPv4 Packet flow identification is not available</td>
+<td style="height: 48px;">In IPv6 packet flow identification are Available and uses the flow label field in the header</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">In IPv4 checksum field is available</td>
+<td style="height: 48px;">In IPv6 checksum field is not available</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">It has broadcast Message Transmission Scheme</td>
+<td style="height: 48px;">In IPv6 multicast and anycast message transmission scheme is available</td>
+</tr>
+<tr style="height: 72px;">
+<td style="height: 72px;">In IPv4 Encryption and Authentication facility not provided</td>
+<td style="height: 72px;">In IPv6 Encryption and Authentication are provided</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">IPv4 has a header of 20-60 bytes.</td>
+<td style="height: 48px;">IPv6 has a header of 40 bytes fixed</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">IPv4 consists of 4 fields which are separated by a dot (.)</td>
+<td style="height: 48px;">IPv6 consists of 8 fields, which are separated by a colon (:)</td>
+</tr>
+<tr style="height: 96px;">
+<td style="height: 96px;">IPv4’s  IP addresses are divided into five different classes. Class A, Class B, Class C, Class D, Class E.</td>
+<td style="height: 96px;">IPv6 does not have any classes of IP addresses.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">IPv4 supports VLSM(Variable Length subnet mask).</td>
+<td style="height: 48px;">IPv6 does not support VLSM.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px;">Example of IPv4:  66.94.29.13</td>
+<td style="height: 48px;">Example of IPv6: 2001:0000:3238:DFE1:0063:0000:0000:FEFB</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is virtual circuit network? Explain ATM as a virtual circuit wide area network.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A virtual circuit network is a category of the packet switching network, where a virtual path is established between the source and the destination systems for data communication to occur. This path appears to the user as if it is a dedicated physical path, but actually is a logical circuit allocated from a managed pool of circuit resources as per traffic requirements. The network resources forming parts of this path can be shared by other communications, however, is not visible to this user.</p>
+<p><span style="text-decoration: underline;"><strong>2nd Part:</strong></span></p>
+<p>ATM also known as cell relay, is a streamlined packet transfer interface that takes advantage of the reliability and fidelity of modern digital facilities to provide faster packet switching than x2. Like packet switching and frame relay, ATM involves the transfer of data in discrete chunks and allows multiple logical connections to be multiplexed over a single physical interface.</p>
+<p>In the case of ATM, the information flow on each logical connection is organized into fixed-size packets called cells. It is a streamlined protocol with minimal error and flows control capabilities. This reduces the overhead of processing ATM cells and reduces the number of overhead bits required with each cell, enabling ATMs to operate at high data rates.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is routing table? Differentiate static routing table with dynamic roting table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A routing table is a set of rules, often viewed in a table format, that is used to determine where data packets traveling over an Internet Protocol (IP) network will be directed. All IP-enabled devices, including routers and switches, use routing tables.</p>
+<p>See below a Routing Table:</p>
+<pre> <b>Destination</b>      <b>Subnet mask</b>         <b>Interface</b>
+ 128.75.43.0      255.255.255.0       Eth0
+ 128.75.43.0      255.255.255.128     Eth1
+ 192.12.17.5      255.255.255.255     Eth3
+ default                              Eth2</pre>
+<p>The entry corresponding to the <i>default</i> gateway configuration is a network destination of 0.0.0.0 with a network mask (net mask) of 0.0.0.0. The Subnet Mask of the default route is always 255.255.255.255.</p>
+<p><strong>Difference Between Static Routing and Dynamic Routing:</strong></p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>Static Routing</th>
+<th>Dynamic Routing</th>
+</tr>
+<tr>
+<td>In static routing routes are user-defined.</td>
+<td>In dynamic routing, routes are updated according to the topology.</td>
+</tr>
+<tr>
+<td>Static routing does not use complex routing algorithms.</td>
+<td>Dynamic routing uses complex routing algorithms.</td>
+</tr>
+<tr>
+<td>Static routing provides high or more security.</td>
+<td>Dynamic routing provides less security.</td>
+</tr>
+<tr>
+<td>Static routing is manual.</td>
+<td>Dynamic routing is automated.</td>
+</tr>
+<tr>
+<td>Static routing is implemented in small networks.</td>
+<td>Dynamic routing is implemented in large networks.</td>
+</tr>
+<tr>
+<td>In static routing, additional resources are not required.</td>
+<td>In dynamic routing, additional resources are required.</td>
+</tr>
+<tr>
+<td>In static routing, failure of the link disrupts the rerouting.</td>
+<td>In dynamic routing, the failure of the link does not interrupt the rerouting.</td>
+</tr>
+<tr>
+<td>Less Bandwidth is required in Static Routing.</td>
+<td>More Bandwidth is required in Dynamic Routing.</td>
+</tr>
+<tr>
+<td>Static Routing is difficult to configure.</td>
+<td>Static Routing is easy to configure.</td>
+</tr>
+<tr>
+<td>Another name for static routing is non-adaptive routing.</td>
+<td>Another name for dynamic routing is adaptive routing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is open-loop congestion control? Compare it with closed-loop congestion control.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In this kind of control system, the output doesn’t change the action of the control system otherwise; the working of the system which depends on time is also called the open-loop control system. It doesn’t have any feedback. It is very simple, needs low maintenance, has a quick operation, and is cost-effective. The accuracy of this system is low and less dependable. An example of the open-loop type is shown below. The main advantages of the open-loop control system are easy, and needs less protection; the operation of this system is fast &amp; inexpensive and the disadvantages are, that it is reliable and has less accuracy.</p>
+<p>The comparison between Open Loop and Closed Loop Control systems are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td><strong>Open Loop Control System</strong></td>
+<td><strong>Closed-Loop Control System</strong></td>
+</tr>
+<tr>
+<td>In this system, the controlled action is free from the output</td>
+<td>In this system, the output mainly depends on the controlled act of the system.</td>
+</tr>
+<tr>
+<td>This control system is also called a Non-feedback control system</td>
+<td>This type of control system is also called a feedback control system</td>
+</tr>
+<tr>
+<td>The components of this system include a controlled process and controller.</td>
+<td>The components of this kind of system include an amplifier, controlled process, controller, and feedback</td>
+</tr>
+<tr>
+<td>The construction of this system is simple</td>
+<td>The construction of this system is complex</td>
+</tr>
+<tr>
+<td>The consistency is non-reliable</td>
+<td>The consistency is reliable</td>
+</tr>
+<tr>
+<td>The accuracy of this system mainly depends on the calibration</td>
+<td>These are accurate due to feedback</td>
+</tr>
+<tr>
+<td>The stability of these systems is stable</td>
+<td>The stability of these systems is less stable</td>
+</tr>
+<tr>
+<td>The optimization in this system is not possible</td>
+<td>The optimization in this system is  possible</td>
+</tr>
+<tr>
+<td>The response is fast</td>
+<td>The response is slow</td>
+</tr>
+<tr>
+<td>The calibration of this system is difficult</td>
+<td>The calibration of this system is easy</td>
+</tr>
+<tr>
+<td>The disturbance of this system will be affected</td>
+<td>The disturbance of this system will  not be affected</td>
+</tr>
+<tr>
+<td>These systems are non-linear</td>
+<td>These systems are linear</td>
+</tr>
+<tr>
+<td>The best examples of this control system are automatic washing machines, traffic lights, TV remotes,<br />
+immersion rods,  etc.</td>
+<td>Examples of this kind of control system are AC, control systems for temperature, pressure, and speed,<br />
+toaster, and refrigerator.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the different approaches for multimedia streaming? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Streaming media is video or audio content sent in compressed form over the internet and played immediately over a user&#8217;s device, rather than being saved to the device&#8217;s hard drive or solid-state drive.</p>
+<p>During the streaming process, the media file that&#8217;s played on the user&#8217;s device is retrieved from a remote location and transmitted continuously over the internet using a wired or wireless connection.</p>
+<p>With streaming media, a user does not have to download an entire audio or video file to play it. Instead, the file is sent in a continuous stream of data to the user&#8217;s device so it can play as it arrives in real-time or near real-time. The user can also pause, rewind or fast-forward the file, just as they could with a downloaded file unless the content is being streamed life, in which case the user can only watch or possibly participate in the event.</p>
+<p>Streaming files &#8212; audio, video, and others &#8212; are stored on a server somewhere on the World Wide Web (WWW). When a user requests the file, it gets transmitted over the web as sequential packets of data that are streamed instantly. Since streaming data is broken down into data packets, its transmission is similar to that of other types of data sent over the internet.</p>
+<p>The file is played within a browser on the client&#8217;s device. An audio or video player hosted by the browser accepts the flow of data packets from the streaming service&#8217;s remote server and interprets them as video or audio, then plays the media for the user. Unlike traditional media systems where files are downloaded and stored on the device, streaming media files are deleted automatically once the user ends the streaming.</p>
+<p>Some streaming services rely on User Datagram Protocol (UDP) to stream their content, while others use Transmission Control Protocol (TCP). Both UDP and TCP are transport protocols used to move data packets across networks. TCP opens a dedicated connection before transmitting data, which makes it a more reliable protocol than UDP. However, TCP also takes longer to transmit data compared to UDP. TCP and UDP are both used with the Internet Protocol (IP).</p>
+<p>Most streaming services use content delivery networks (CDNs) to store content in locations that are closer to users. Such proximity reduces streaming latency, speeds up content delivery, and reduces buffering.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short note on (any two):</p>
+<ol>
+<li>Blackbone network</li>
+<li>ISDN</li>
+<li>ALOHA</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Blackbone network:</strong></span></p>
+<p>A <b>backbone network</b> is a network containing a high-capacity connectivity infrastructure that forms the main link, or backbone, to the different parts of the network. The network consists of various LANs, WANs, and subnetworks. The connectivity may cover a local area within a building or vicinity or may have a global outreach that spans vast geographical areas. The backbone has a capacity that far exceeds that of the individual networks connected to it.</p>
+<p>A backbone network normally consists of cabling, switches, bridges, routers, and gateways in varying segments. Individual nodes do not connect directly to the backbone but do so through their LANs and ISPs or larger organizational infrastructures.</p>
+<p><span style="text-decoration: underline;"><strong>ISDN:</strong></span></p>
+<p>ISDN is a circuit-switched telephone network system, but it also provides access to packet-switched networks that allows digital transmission of voice and data. This results in potentially better voice or data quality than an analog phone can provide. It provides a packet-switched connection for data in increments of 64 kilobit/s. It provided a maximum of 128 kbit/s bandwidth in both upstream and downstream directions. A greater data rate was achieved through channel bonding. Generally, ISDN B channels of three or four BRIs (six to eight 64 kbit/s channels) are bonded.</p>
+<p><span style="text-decoration: underline;">ISDN Interfaces: </span></p>
+<p>The following are the interfaces of ISDN:</p>
+<ol style="list-style-type:decimal;">
+<li>Basic Rate Interface (BRI):</li>
+<li>Primary Rate Interface(PRI):</li>
+<li>Broadband-ISDN</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>ALOHA:</strong></span></p>
+<p>The Aloha Protocol allows several stations to send data frames over the same communication channel at the same time. This protocol is a straightforward communication method in which each network station is given equal priority and works independently.</p>
+<p>Aloha is a medium access control (MAC) protocol for the transmission of data via a shared network channel. Using this protocol, several data streams originating from multiple nodes are transferred through a multi-point transmission channel.</p>
+<p>There are two types of Aloha protocols − Pure Aloha and Slotted Aloha.</p>
+<ul class="list">
+<li>In Pure Aloha, the time of transmission is continuous. Whenever a station has an available frame, it sends the frame. If there is a collision and the frame is destroyed, the sender waits for a random amount of time before retransmitting it.</li>
+<li>In Slotted Aloha, time is divided into discrete intervals called slots, corresponding to a frame.</li>
+</ul>
+</div>
+</body></html>

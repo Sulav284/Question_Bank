@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Question Papers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Question Papers</h1>
+  </header>
+
+  <div class="container" id="papers"></div>
+
+  <script>
+    // List of all HTML files
+    const files = [
+      "AI_2080_new__2080.html",
+      "AI_Model_Question_0.html",
+      "AI_Question_Bank_2076_2076.html",
+      "AI_Question_Bank_2078_2078.html",
+      "AI_Question_Bank_2079_2079.html",
+      "AI_Question_Bank_2080_2080.html",
+      "AI_Question_Bank_2081_2081.html",
+      "CN_Model_Question_0.html",
+      "CN_Question_Bank_2076_2076.html",
+      "CN_Question_Bank_2078_2078.html",
+      "CN_Question_Bank_2079_2079.html",
+      "CN_Question_Bank_2080_2080.html",
+      "CN_Question_Bank_2080_new_2080.html",
+      "CN_Question_Bank_2081_2081.html",
+      "DBMS_Model_Question_0.html",
+      "DBMS_Question_Bank_2076_2076.html",
+      "DBMS_Question_Bank_2078_2078.html",
+      "DBMS_Question_Bank_2079_2079.html",
+      "DBMS_Question_Bank_2080_2080.html",
+      "DBMS_Question_Bank_2080_new__2080.html",
+      "OS_Model_Question_0.html",
+      "OS_Question_Bank_2076_2076.html",
+      "OS_Question_Bank_2078_2078.html",
+      "OS_Question_Bank_2079_2079.html",
+      "OS_Question_Bank_2080_2080.html",
+      "OS_Question_Bank_2080__new__2080.html",
+      "OS_Question_Bank_2081_2081.html",
+      "TOC_Model_Question_0.html",
+      "TOC_Question_Bank_2076_2076.html",
+      "TOC_Question_Bank_2078_2078.html",
+      "TOC_Question_Bank_2079_2079.html",
+      "TOC_Question_Bank_2080_2080.html",
+      "TOC_Question_Bank_2080_new_2080.html",
+      "TOC_Question_Bank_2081_2081.html"
+    ];
+
+    const container = document.getElementById("papers");
+
+    files.forEach(file => {
+      const name = file.replace(/_/g, " ").replace(".html", "");
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <h2>${name}</h2>
+        <a href="${file}" target="_blank">Open Paper</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

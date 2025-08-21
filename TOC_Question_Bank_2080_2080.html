@@ -1,0 +1,265 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOC Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>TOC Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is NFA? How is it different from DFA? How is NFA to DFA conversion done? Convert the following NFA into DFA.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25562" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/dfa.jpg?resize=305%2C97&ssl=1" alt="" width="305" height="97"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>NFA stands for &#8220;Nondeterministic Finite Automaton,&#8221; while DFA stands for &#8220;Deterministic Finite Automaton.&#8221; Both NFA and DFA are theoretical models used in automata theory and formal language theory to describe and recognize languages. They are primarily used to study regular languages.</p>
+<p>Here&#8217;s an overview of the key differences between NFA and DFA:</p>
+<ol style="list-style-type:decimal;">
+<li>Determinism:
+<ul style="list-style-type: square;">
+<li>DFA: In a Deterministic Finite Automaton, for each state and input symbol, there is exactly one transition to another state. In other words, the next state is determined uniquely by the current state and input symbol.</li>
+<li>NFA: In a Nondeterministic Finite Automaton, for a given state and input symbol, there can be multiple possible transitions to different states, or no transition at all. It allows for more flexibility and non-uniqueness in the choice of transitions.</li>
+</ul>
+</li>
+<li>Acceptance:
+<ul style="list-style-type: square;">
+<li>DFA: A DFA either accepts or rejects an input string by reaching a designated accepting state (or not) after processing the entire input string.</li>
+<li>NFA: An NFA accepts an input string if there exists at least one path of transitions that leads to an accepting state when processing the entire input string.</li>
+</ul>
+</li>
+<li>Complexity:
+<ul style="list-style-type: square;">
+<li>DFAs are simpler and easier to analyze because they are deterministic and have unique transitions for each input symbol.</li>
+<li>NFAs, due to their non-deterministic nature, can sometimes be more compact and expressive in representing certain languages.</li>
+</ul>
+</li>
+</ol>
+<p>To convert an NFA to a DFA, you can follow a well-defined algorithm called the &#8220;powerset construction&#8221; or &#8220;subset construction&#8221; method. Here are the steps involved in this conversion:</p>
+<ol style="list-style-type:decimal;">
+<li>Create the initial state of the DFA, which corresponds to the ε-closure of the start state of the NFA. The ε-closure of a state in the NFA is the set of states reachable from that state by following ε (empty string) transitions.</li>
+<li>For each state set in the DFA that you have created, determine the possible transitions from that state set for each input symbol. To do this, consider the ε-closure of the union of all NFA states in the state set for that input symbol.</li>
+<li>Each state set in the DFA represents a state in the resulting DFA. If the state set contains an accepting state from the NFA, the corresponding DFA state is an accepting state.</li>
+<li>Repeat steps 2 and 3 until you have created states for all possible state sets in the DFA.</li>
+<li>The resulting DFA is now equivalent to the original NFA in terms of the languages they recognize.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25563" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_114931_CamScanner.jpg?resize=920%2C1088&#038;ssl=1" alt="" width="920" height="1088"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How does Turing machine accept a string? Design a Turing Machine over the alphabet {0,1,a} that processes the string defined by L = {a01a,a10a,a0101a}. Show both transition diagram and table. Show acceptance of a0101a.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>As turing machines are deterministic, meaning that their transition function uniquely defines its future action given an input and a state.<br />
+Regardless of the tape&#8217;s ultimate content, acceptance is contingent only upon reaching the accept state.<br />
+A Turing machine is said to accept a string if it eventually reaches a halting state, also known as an accept state, after beginning with the string on its tape and the machine in its initial state.</p>
+<p>Numerical part:</p>
+<p>The strings that make up the language L={a01a,a10a,a0101a} are composed of the following:</p>
+<ul style="list-style-type: square;">
+<li>Begin and finish with a.</li>
+<li>Include a certain pattern of 0&#8217;s and 1&#8217;s in between as.</li>
+</ul>
+<p>The Turing machine will do the following:</p>
+<ul style="list-style-type: square;">
+<li>Make sure the string begins and finishes with an a and that the numbers 01, 10, or 0101 correspond to the sequence in between.</li>
+<li>Any string that deviates from this pattern should be rejected.</li>
+</ul>
+<p>The Turing Machine uses the alphabet <span class="katex"><span class="katex-mathml">{0,1,a,B} </span></span><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord amsrm">B</span></span></span></span> is the blank symbol.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 267px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 21.3514%; text-align: center; height: 24px;"><strong>Current State</strong></td>
+<td style="width: 20.3861%; text-align: center; height: 24px;"><strong>Read Symbol</strong></td>
+<td style="width: 22.3166%; text-align: center; height: 24px;"><strong>Write Symbol</strong></td>
+<td style="width: 15.9459%; text-align: center; height: 24px;"><strong>Move</strong></td>
+<td style="width: 20%; text-align: center; height: 24px;"><strong>Next State</strong></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></sub><span class="vlist-s">​</span></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">a</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">a</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">0</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">0</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">01</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">1</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">1</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">10</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">01</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">1</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">1</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">check-a</span></span></span></span></sub><span class="vlist-s">​</span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">10</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">0</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">0</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">check-a</span></span></span></span></sub><span class="vlist-s">​</span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0101</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">0</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">0</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">01</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">check-a</span></span></span></span></sub><span class="vlist-s">​</span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">a</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">a</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">R</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">accept</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">check-a</span></span></span></span></sub><span class="vlist-s">​</span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">other</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">other</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">&#8211;</td>
+<td style="width: 20%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">reject</span></span></span></sub></span></span></span></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 21.3514%; text-align: center; height: 27px;"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">accept</span></span></span></sub></span></span></span></td>
+<td style="width: 20.3861%; text-align: center; height: 27px;">any</td>
+<td style="width: 22.3166%; text-align: center; height: 27px;">any</td>
+<td style="width: 15.9459%; text-align: center; height: 27px;">&#8211;</td>
+<td style="width: 20%; text-align: center; height: 27px;"> <span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">reject</span></span></span></sub></span></span></span></td>
+</tr>
+</tbody>
+</table></div>
+<p>Processing <span class="katex"><span class="katex-mathml">a0101a</span></span></p>
+<p>(q<sub>0</sub>, <span class="katex"><span class="katex-mathml">a0101a</span></span>) |- (R, q<sub>1</sub>, 0101a)<br />
+|- (R, q<sub>01</sub>, 101a)<br />
+|- (R, <span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">check-a</span></span></span></span></sub></span></span>, 01a)<br />
+|- (R, <span class="mord mathnormal">q<span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight">reject</span></span></span></span></sub></span></span>, 1a)</p>
+<p>Hence the Turing machine doesn&#8217;t accept the string.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define context free grammar with an example. Explain with example, how context free grammar is converted to Chomsky Normal Form.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Context-Free Grammar (CFG):</strong></p>
+<p>A Context-Free Grammar (CFG) is a formal grammar that is used to generate languages in the context of formal language theory. It consists of a set of production rules that define how strings in a language can be generated. A CFG is defined by a 4-tuple (N, Σ, P, S), where:</p>
+<ul style="list-style-type: square;">
+<li>N: a finite set of non-terminal symbols.</li>
+<li>Σ: a finite set of terminal symbols (disjoint from N).</li>
+<li>P: a finite set of production rules, where each rule has the form A → α, where A is a non-terminal and α is a string of terminals and/or non-terminals.</li>
+<li>S: the start symbol, which is a specific non-terminal symbol in N.</li>
+</ul>
+<p>Example of CFG:</p>
+<ul style="list-style-type: square;">
+<li>N (Non-terminals): {S}</li>
+<li>Σ (Terminals): {a, b}</li>
+<li>P (Production Rules): S → aSb | ε</li>
+<li>S: {S}</li>
+</ul>
+<p><strong>Converting CFG to Chomsky Normal Form (CNF):</strong></p>
+<p>The Chomsky Normal Form (CNF) is a specific form of CFG in which all production rules have two forms:</p>
+<ol style="list-style-type:decimal;">
+<li>A → BC, where A, B, and C are non-terminals.</li>
+<li>A → a, where A is a non-terminal, and &#8220;a&#8221; is a terminal.</li>
+</ol>
+<p>Converting a CFG to CNF involves several steps:</p>
+<p>Step 1: Convert into simplified grammar by following steps:</p>
+<p>1a. Remove ε-productions (productions that generate the empty string ε) from the CFG.</p>
+<p>1b. Remove unit productions (productions of the form A → B, where A and B are non-terminals).</p>
+<p>1c. Remove useless symbols (non-terminals and terminals that cannot be reached from the start symbol).</p>
+<p>Step 2: Convert productions into CNF.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25568" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_115924_CamScanner.jpg?resize=912%2C1399&#038;ssl=1" alt="" width="912" height="1399"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Define string, substring, empty string, and empty language over alphabet {a,b}.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>String:</strong> In the context of the alphabet {a, b}, a string is a finite sequence of characters where each character is either &#8216;a&#8217; or &#8216;b&#8217;. For example, &#8220;ababba&#8221; and &#8220;aaa&#8221; are strings over this alphabet.</li>
+<li><strong>Substring:</strong> A substring is a contiguous sequence of characters within a string. In other words, it&#8217;s a part of a string that appears consecutively. For example, in the string &#8220;ababba,&#8221; &#8220;ab&#8221; is a substring, and &#8220;bb&#8221; is another substring.</li>
+<li><strong>Empty String (ε or λ):</strong> The empty string, denoted by ε or λ, is a string with no characters at all. It is the shortest possible string and is often used as a placeholder. In the alphabet {a, b}, ε represents an empty string with no &#8216;a&#8217; or &#8216;b&#8217; characters.</li>
+<li><strong>Empty Language (Ø or {}):</strong> The empty language, denoted by Ø or {}, is a set of strings that contains no strings at all. In other words, it is a language that does not recognize any strings over the given alphabet {a, b}. It&#8217;s also sometimes referred to as the &#8220;null language&#8221; or &#8220;language of no words.&#8221;</li>
+</ol>
+<p>To summarize:</p>
+<ul style="list-style-type: square;">
+<li>A string is a sequence of characters over an alphabet.</li>
+<li>A substring is a contiguous part of a string.</li>
+<li>An empty string (ε or λ) has no characters.</li>
+<li>An empty language (Ø or {}) contains no strings.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Design a DFA that accepts single line and multi-line comments of the C-Language.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-46046" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/Untitled-Diagram.drawio-2.png?resize=758%2C710&#038;ssl=1" alt="" width="758" height="710"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write regular expression over {a,b} that represents</p>
+<p>a. Strings having exactly two a’s and atleast two b’s.</p>
+<p>b. Strings having an even number of a’s and each a followed by at least one b.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a = (b<sup>*</sup> a b<sup>+</sup> b<sup>+</sup> a b<sup>*</sup>) + ( b<sup>+ </sup>a b<sup>+</sup> a b<sup>*</sup>) + ( b<sup>* </sup>a b<sup>+</sup> a b<sup>+</sup>) + ( b<sup>+ </sup>a a b<sup>+</sup>)</p>
+<p>b = (b<sup>* </sup>a b<sup>+ </sup>a b<sup>+</sup>)<sup>*</sup></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Using pumping lemma, prove that the language L = {a<sup>i</sup>b<sup>j</sup>c<sup>k</sup> | j=i+k} is not regular.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25574" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_120954_CamScanner.jpg?resize=899%2C1010&#038;ssl=1" alt="" width="899" height="1010"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Design a PDA over {x,y} which accepts strings defined by the language L = {x<sup>n</sup>y<sup>n</sup>xy | n>=0}. Show acceptance of xyxy.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25576" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_122839_CamScanner.jpg?resize=879%2C861&#038;ssl=1" alt="" width="879" height="861"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Design a Turing machine that computes a function f(n)=0.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25584" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_122755_CamScanner.jpg?resize=829%2C445&#038;ssl=1" alt="" width="829" height="445"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How abstract, decision and optimization problems are different from each other?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Abstract problems, decision problems, and optimization problems are distinct types of computational problems that vary in their nature and the types of solutions they seek. Here&#8217;s how they differ:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Abstract Problems:</strong>
+<ul style="list-style-type: square;">
+<li>Abstract problems are general computational tasks that may or may not have a clear decision or optimization component.</li>
+<li>They are often used to model real-world problems in a simplified or idealized form.</li>
+<li>Abstract problems may not always involve concrete inputs or outputs, and they are not always concerned with specific criteria for success.</li>
+<li>Examples of abstract problems include the Traveling Salesman Problem (TSP), the Tower of Hanoi, and the Halting Problem.</li>
+</ul>
+</li>
+<li><strong>Decision Problems:</strong>
+<ul style="list-style-type: square;">
+<li>Decision problems are a specific type of computational problem where the goal is to answer a yes/no (binary) question based on some input.</li>
+<li>The output is typically either &#8220;yes&#8221; (true) or &#8220;no&#8221; (false), indicating whether a specific property holds for the input.</li>
+<li>Decision problems often serve as the foundation for more complex problems, and their solutions are typically Boolean.</li>
+<li>Example: In the &#8220;Graph Connectivity&#8221; decision problem, given a graph, the question is whether there exists a path between two specified nodes.</li>
+</ul>
+</li>
+<li><strong>Optimization Problems:</strong>
+<ul style="list-style-type: square;">
+<li>Optimization problems involve finding the best solution among a set of feasible solutions according to some criteria or objective function.</li>
+<li>Instead of a binary &#8220;yes/no&#8221; answer, optimization problems seek to find the optimal (best) solution based on a defined measure of quality.</li>
+<li>The goal is to maximize or minimize an objective function while satisfying a set of constraints.</li>
+<li>Example: The Traveling Salesman Problem (TSP) is an optimization problem where the objective is to find the shortest possible route that visits a set of cities and returns to the starting city.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How is PDA to CFG conversion done? Consider a PDA that accepts by empty stack, P=({p,q},{0,1},{Z},δ,p,z); with δ defined as</p>
+<p>δ(p,0,z)=(p,0z), δ(p,0,0)=(p,00), δ(p,1,0)=(p,ε), δ(p,ε,z)=(q,ε),</p>
+<p>Now construct an equivalent CFG.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25596" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_135617_CamScanner.jpg?resize=895%2C290&#038;ssl=1" alt="" width="895" height="290"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-25592" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_124640_CamScanner.jpg?resize=882%2C1375&#038;ssl=1" alt="" width="882" height="1375"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25591" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_124700_CamScanner.jpg?resize=887%2C826&#038;ssl=1" alt="" width="887" height="826"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is the meaning of the term “Context Free” in context free grammar? Justify with a suitable example. What is the need of a parse tree?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the context of &#8220;Context-Free Grammar&#8221; (CFG), the term &#8220;context-free&#8221; refers to a specific property of this type of grammar. A context-free grammar is called &#8220;context-free&#8221; because the production rules it defines are applied without consideration of the surrounding context of symbols in a string. In other words, the replacement of non-terminals with their corresponding production rules is solely based on the non-terminal itself, regardless of the symbols that come before or after it. This property simplifies the parsing and generation of strings in the language defined by the CFG.</p>
+<p>Let&#8217;s illustrate this with an example:</p>
+<p>Consider a simple context-free grammar that generates balanced parentheses expressions:</p>
+<ul style="list-style-type: square;">
+<li>N: {S}</li>
+<li>Σ: {(, )}</li>
+<li>P:
+<ul style="list-style-type: square;">
+<li>S → (S) | ε</li>
+</ul>
+</li>
+<li>S: S</li>
+</ul>
+<p>In this grammar, we have a single non-terminal &#8220;S,&#8221; terminals &#8220;(,&#8221; and &#8220;),&#8221; and the production rules defining the language. This grammar generates well-formed parentheses expressions, such as &#8220;()&#8221;, &#8220;(())&#8221;, and &#8220;((())),&#8221; but not unbalanced expressions like &#8220;(()&#8221; or &#8220;)(&#8220;.</p>
+<p>The term &#8220;context-free&#8221; in this context means that when we apply the production rules, we do so without considering the surrounding context of symbols. For example, when we encounter a non-terminal &#8220;S,&#8221; we can replace it with &#8220;(S)&#8221; or ε (empty string) regardless of what other symbols are present before or after it in the string. This simplifies the process of recognizing and generating valid expressions.</p>
+<p><strong>Parse Tree:</strong> A parse tree is a graphical representation of the syntactic structure of a string in a context-free grammar. It shows how the string can be generated or derived by applying the production rules of the grammar. Parse trees are useful for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Visualization:</strong> Parse trees provide a visual representation of how a string is structured according to the grammar. They help humans understand the syntax of the language and how different components fit together.</li>
+<li><strong>Error Detection:</strong> Parse trees can highlight syntactic errors in a string by showing where the derivation goes wrong or where unexpected symbols occur.</li>
+<li><strong>Ambiguity Resolution:</strong> In some cases, a context-free grammar might generate ambiguous strings, i.e., strings with multiple valid parse trees. Parse trees help resolve ambiguity by showing all possible derivations.</li>
+<li><strong>Compiler Design:</strong> In compiler construction, parse trees are used to represent the abstract syntax of a programming language. They serve as the basis for subsequent phases like semantic analysis and code generation.</li>
+</ol>
+</div>
+</body></html>

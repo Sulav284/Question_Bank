@@ -1,0 +1,748 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>DBMS Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section  A: Long Answer Questions.</h2><h3>Question 1</h3>
+<div><p><p>What is Database Management System? Explain the DBMS architecture with a diagram. What is data independence?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Database Management Systems (DBMS) are software systems used to store, retrieve, and run queries on data. A DBMS serves as an interface between an end-user and a database, allowing users to create, read, update, and delete data in the database.</p>
+<p><span style="text-decoration: underline;"><strong>DBMS Architecture:</strong></span></p>
+<p>The Database Management System (DBMS) architecture shows how data in the database is viewed by the users. It is not concerned about how the data are handled and processed by the DBMS.</p>
+<p>It helps in the implementation, design, and maintenance of a database to store and organize information for companies. The concept of DBMS depends upon its architecture. The architecture can be designed as centralized, decentralized, or hierarchical.</p>
+<p>The architecture of DBMS can be defined at three levels as follows −</p>
+<ul class="list">
+<li>External levels.</li>
+<li>Conceptual levels.</li>
+<li>Internal levels.</li>
+</ul>
+<p>The main objective of the three-level architecture is nothing but to separate each user view of the data from the way the database is physically represented. The database&#8217;s internal structure should be unaffected while changes to the physical aspects of storage.</p>
+<p>The DBA should be able to change the conceptual structure of the database without affecting all other users.</p>
+<p><span style="text-decoration: underline;"><strong>External level/ View level:</strong></span></p>
+<p>The external level describes a part of the database that is relevant to each user. This level insulates the users from the details of the conceptual and the internal level.</p>
+<p><span style="text-decoration: underline;"><strong>Conceptual level/ logic level:</strong></span></p>
+<p>The conceptual level describes what data is stored in the database and the relationship among the data.</p>
+<p>It represents the following −</p>
+<ul class="list">
+<li>All the entities, attributes, and relationships.</li>
+<li>The constraints on the data.</li>
+<li>Security and integrity information.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Internal level/ storage level:</strong></span></p>
+<p>The internal level is the physical representation of the database on the computer. This level describes how the data is stored in the database. It covers the data structure and file organization used to store the data on storage devices.</p>
+<p>The levels in the architecture of DBMS are shown below in diagram form −</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-7201 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/levels_in_architecture_of_dbms.jpg?resize=478%2C355&#038;ssl=1" alt="" width="478" height="355"></p>
+<p><span style="text-decoration: underline;">Data independence Definition:</span><i class="fa fa-edit" aria-hidden="true"></i></p>
+<p>Data Independence is defined as a property of DBMS that helps you to change the Database schema at one level of a database system without requiring you to change the schema at the next higher level. Data independence helps you to keep data separated from all programs that make use of it.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is entities and its types? How do we reduce different types of entities and relationships of ER diagram into Tables? Explain with assuming different types of entities and relations.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An entity in DBMS can be a real-world object with an existence, For example, in a College database, the entities can be professors, Students, Courses, etc.</p>
+<p>Entities have attributes, which can be considered as properties describing them, for example, for the Professor entity, the attributes are  Professor_Name, Professor_Address, Professor_Salary<strong>,</strong> etc. The attribute value gets stored in the database.</p>
+<p>The following are the types of entities in DBMS −</p>
+<p><span style="text-decoration: underline;">1. Strong Entity:</span></p>
+<p>The strong entity has a primary key. Weak entities are dependent on strong entities. Its existence is not dependent on any other entity.</p>
+<p>Strong Entity is represented by a single rectangle.</p>
+<p><span style="text-decoration: underline;">2. Weak Entity:</span></p>
+<p>The weak entity in DBMS does not have a primary key and is dependent on the parent entity. It mainly depends on other entities.</p>
+<p>The weak Entity is represented by a double rectangle.</p>
+<p><span style="text-decoration: underline;"><strong>ER Diagram to Table:</strong></span></p>
+<p>There are various points for the conversion of the ER diagram to the table:</p>
+<p><span style="text-decoration: underline;">1. The respective Entity type becomes a table</span></p>
+<p>According to the following ER diagram, COURSE, LECTURE, SUBJECT, and STUDENT forms their tables.</p>
+<p><span style="text-decoration: underline;">2. Every attribute of a single value converts into a column for the table</span></p>
+<p>In the entity of the STUDENT, the STUDENT _ID and STUDENT_NAME form the columns of the table of the STUDENT. In the same way, COURSE_ID and COURSE_NAME structure the columns of the COURSE table and so on.</p>
+<p><span style="text-decoration: underline;">3. A separate table represents the multivalued attribute</span></p>
+<p>In the table of STUDENT, a Hobby is considered a multivalued attribute. Hence, it is impossible to describe the multiple values in just a single column of the table of STUDENT. Therefore, we can make a table STUD_HOBBY under the name of HOBBY and STUDENT_ID. We can create a composite key by using both columns.</p>
+<p><span style="text-decoration: underline;">4. The primary key represents the critical attribute of the entity type</span></p>
+<p>In the following ER diagram, LECTURE_ID, STUDENT_ID, COURSE_ID, and SUBJECT_ID are considered the key attributes of the entity.</p>
+<p><span style="text-decoration: underline;">5. The components stand for the composite attribute</span></p>
+<p>In the following ER Diagram, the student address stands for a composite attribute. It consists of PIN, STATE, STREET, CITY, and DOOR#. In the table of the STUDENT, the respective attributes can be merged in an individual column.</p>
+<p><span style="text-decoration: underline;">6. The derived attributes are not included in the table</span></p>
+<p>In the table of STUDENT, Age is considered as the derived attribute. The age can be calculated anytime by using the differences between the Date of Birth and the current date.</p>
+<p>By applying these rules, you can easily assign mapping in the tables and change the ER diagram to columns and tables.</p>
+<p>Following is the structure of the table for the ER Diagram:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-7204 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/dbms-reduction-of-er-diagram-into-table2.png?resize=628%2C425&#038;ssl=1" alt="" width="628" height="425"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is normalization? Why normalization is required? Explain 1NF, 2NF, and 3NF with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Normalization is a database design technique that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update, and Deletion Anomalies. Normalization rules divide larger tables into smaller tables and link them using relationships. The purpose of Normalisation in SQL is to eliminate redundant (repetitive) data and ensure data is stored logically.</p>
+<p>Normalization is required because of the following reasons:</p>
+<ul style="list-style-type: square;">
+<li>By using normalization redundancy of database or data duplication can be resolved.</li>
+<li>We can minimize null values by using normalization.</li>
+<li>Results in a more compact database (due to less data redundancy/zero).</li>
+<li>Minimize/avoid data modification problems.</li>
+<li>It simplifies the query.is</li>
+<li>The database structure is clearer and easier to understand.</li>
+<li>The database can be expanded without affecting existing data.</li>
+<li>Finding, sorting, and indexing can be faster because the table is small and more rows can be accommodated on the data page.</li>
+</ul>
+<p>Here are the most commonly used normal forms:</p>
+<ul style="list-style-type: square;">
+<li>First normal form(1NF)</li>
+<li>Second normal form(2NF)</li>
+<li>Third normal form(3NF)</li>
+<li>Boyce &amp; Codd normal form (BCNF)</li>
+<li>Fourth normal form(4NF)</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>1. First Normal Form (1NF):</strong></span></p>
+<p>For a table to be in the First Normal Form, it should follow the following 4 rules:</p>
+<ol class="content">
+<li>It should only have single(atomic) valued attributes/columns.</li>
+<li>Values stored in a column should be of the same domain</li>
+<li>All the columns in a table should have unique names.</li>
+<li>And the order in which data is stored does not matter.</li>
+</ol>
+<p><strong>Example</strong>: Let’s say a company wants to store the names and contact details of its employees. It creates a table in the database that looks like this:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Address</td>
+<td>Emp_Mobile</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Herschel</td>
+<td>New Delhi</td>
+<td>8912312390</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Jon</td>
+<td>Kanpur</td>
+<td>8812121212,<br />
+9900012222</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Ron</td>
+<td>Chennai</td>
+<td>7778881212</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Lester</td>
+<td>Bangalore</td>
+<td>9990000123,<br />
+8123450987</td>
+</tr>
+</tbody>
+</table></div>
+<p>This table is not in 1NFas the rule says “each attribute of a table must have atomic (single) values”, the Emp_Mobile values for employees <code>Jon</code> &amp; <code>Lester</code> violates that rule.</p>
+<p>To make the table complies with 1NF we need to create separate rows for each mobile number in such a way so that none of the attributes contains multiple values.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Address</td>
+<td>Emp_Mobile</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Herschel</td>
+<td>New Delhi</td>
+<td>8912312390</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Jon</td>
+<td>Kanpur</td>
+<td>8812121212</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Jon</td>
+<td>Kanpur</td>
+<td>9900012222</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Ron</td>
+<td>Chennai</td>
+<td>7778881212</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Lester</td>
+<td>Bangalore</td>
+<td>9990000123</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Lester</td>
+<td>Bangalore</td>
+<td>8123450987</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>2. Second Normal form (2NF):</strong></span></p>
+<p>For a table to be in the Second Normal Form,</p>
+<ol class="content">
+<li>It should be in the First Normal form.</li>
+<li>And, it should not have Partial Dependency.</li>
+</ol>
+<p><strong>Example</strong>: Let’s say a school wants to store the data of teachers and the subjects they teach. They create a table <code>Teacher</code> that looks like this: Since a teacher can teach more than one subject, the table can have multiple rows for the same teacher.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Subject</td>
+<td>Teacher_Age</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Maths</td>
+<td>38</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Physics</td>
+<td>38</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Biology</td>
+<td>38</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Physics</td>
+<td>40</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Chemistry</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+<p>Candidate Keys: {<code>Teacher_Id</code>, <code>Subject</code>}<br />
+Non-prime attribute: <code>Teacher_Age</code></p>
+<p>This table is in 1 NF because each attribute has atomic values. However, it is not in 2NF because the non-prime attribute <code>Teacher_Age</code> is dependent on <code>Teacher_Id</code> alone which is a proper subset of the candidate key. This violates the rule for 2NF as the rule says “no non-prime attribute is dependent on the proper subset of any candidate key of the table”.</p>
+<p>To make the table complies with 2NF we can disintegrate it in two tables like this:</p>
+<p><span style="text-decoration: underline;">Teacher_Details table:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Teacher_Age</td>
+</tr>
+<tr>
+<td>111</td>
+<td>38</td>
+</tr>
+<tr>
+<td>222</td>
+<td>38</td>
+</tr>
+<tr>
+<td>333</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;">Teacher_Subject table:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Teacher_Id</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Maths</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Physics</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Biology</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Physics</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Chemistry</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now the tables are in the Second normal form (2NF).</p>
+<p><span style="text-decoration: underline;"><strong>3. Third Normal Form (3NF):</strong></span></p>
+<p>A table is said to be in the Third Normal Form when,</p>
+<ol class="content">
+<li>It is in the Second Normal form.</li>
+<li>And, it doesn&#8217;t have Transitive Dependency.</li>
+</ol>
+<p><strong>Example</strong>: Let’s say a company wants to store the complete address of each employee, they create a table named <code>Employee_Details</code> that looks like this:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Zip</td>
+<td>Emp_State</td>
+<td>Emp_City</td>
+<td>Emp_District</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>John</td>
+<td>282005</td>
+<td>UP</td>
+<td>Agra</td>
+<td>Dayal Bagh</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Ajeet</td>
+<td>222008</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>M-City</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>Lora</td>
+<td>282007</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>Urrapakkam</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>Lilly</td>
+<td>292008</td>
+<td>UK</td>
+<td>Pauri</td>
+<td>Bhagwan</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>Steve</td>
+<td>222999</td>
+<td>MP</td>
+<td>Gwalior</td>
+<td>Ratan</td>
+</tr>
+</tbody>
+</table></div>
+<p>Super keys: {<code>Emp_Id</code>}, {<code>Emp_Id</code>, <code>Emp_Name</code>}, {<code>Emp_Id</code>, <code>Emp_Name</code>, <code>Emp_Zip</code>}…so on<br />
+Candidate Keys: {<code>Emp_Id</code>}</p>
+<p>Non-prime attributes: all attributes except <code>Emp_Id</code> are non-prime as they are not part of any candidate keys.</p>
+<p>Here, <code>Emp_State</code>, <code>Emp_City</code> &amp; <code>Emp_District</code> dependent on <code>Emp_Zip</code>. Further<code> Emp_zip</code> is dependent on <code>Emp_Id</code> what makes non-prime attributes (<code>Emp_State</code>,<code> Emp_City</code> &amp; <code>Emp_District</code>) transitively dependent on super key (<code>Emp_Id</code>). This violates the rule of 3NF.</p>
+<p>To make this table complies with 3NF we have to disintegrate the table into two tables to remove the transitive dependency:</p>
+<p><span style="text-decoration: underline;">Employee Table:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Id</td>
+<td>Emp_Name</td>
+<td>Emp_Zip</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>John</td>
+<td>282005</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Ajeet</td>
+<td>222008</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>Lora</td>
+<td>282007</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>Lilly</td>
+<td>292008</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>Steve</td>
+<td>222999</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;">Employee_Zip table:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>Emp_Zip</td>
+<td>Emp_State</td>
+<td>Emp_City</td>
+<td>Emp_District</td>
+</tr>
+<tr>
+<td>282005</td>
+<td>UP</td>
+<td>Agra</td>
+<td>Dayal Bagh</td>
+</tr>
+<tr>
+<td>222008</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>M-City</td>
+</tr>
+<tr>
+<td>282007</td>
+<td>TN</td>
+<td>Chennai</td>
+<td>Urrapakkam</td>
+</tr>
+<tr>
+<td>292008</td>
+<td>UK</td>
+<td>Pauri</td>
+<td>Bhagwan</td>
+</tr>
+<tr>
+<td>222999</td>
+<td>MP</td>
+<td>Gwalior</td>
+<td>Ratan</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h2>Section B: Short Answer Questions.</h2><h3>Question 4</h3>
+<div><p><p>What do you mean by Schema and Instance in DBMS? Explain both with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Schema is the overall description of the database. The basic structure of how the data will be stored in the database is called schema.</p>
+<p>Schema is of three types: Logical Schema, Physical Schema, and view Schema.</p>
+<ol style="list-style-type:decimal;">
+<li>Logical Schema – It describes the database designed at a logical level.</li>
+<li>Physical Schema – It describes the database design at the physical level.</li>
+<li>View Schema – It defines the design of the database at the view level.</li>
+</ol>
+<p><span style="text-decoration: underline;">Example – </span></p>
+<p>Let’s say a table teacher in our database name school, the teacher table requires the name, dob, DOJ in their table so we design a structure as :</p>
+<p><strong>Teacher table</strong></p>
+<pre>name: String
+doj: date
+dob: date</pre>
+<p>Above given is the schema of the table teacher.</p>
+<p><span style="text-decoration: underline;"><strong>Instance:</strong></span></p>
+<p>Instances are the collection of information stored at a particular moment. The instances can be changed by certain CRUD operations such as addition, or deletion of data. It may be noted that any search query will not make any kind of changes in the instances.</p>
+<p><span style="text-decoration: underline;">Example – </span></p>
+<p>Let’s say a table teacher in our database whose name is School, suppose the table has 50 records so the instance of the database has 50 records for now and tomorrow we are going to add another fifty records so tomorrow the instance has a total of 100 records. This is called an instance.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is conflict schedule? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Conflict serializability orders any conflicting operations in the same way as some serial execution. A pair of operations is said to conflict if they operate on the same data item and one of them is a write operation.</p>
+<p>That means</p>
+<ul class="list">
+<li>Readi(x) readj(x) &#8211; non conflict   read-read operation</li>
+<li>Readi(x) writej(x) &#8211; conflict         read-write operation.</li>
+<li>Writei(x) readj(x) &#8211; conflic      t write-read operation.</li>
+<li>Writei(x) writej(x) &#8211; conflict      write-write operation.</li>
+</ul>
+<p>Where I and j denote two different transactions Ti and Tj.</p>
+<h2 id="example">Example</h2>
+<p>Let&#8217;s see an example based on the following schedule.</p>
+<div>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Transaction 1</th>
+<th>Transaction 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1(A)</td>
+<td>W2(B)</td>
+</tr>
+<tr>
+<td>W1(A)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>R2(A)</td>
+</tr>
+<tr>
+<td>R1(B)</td>
+<td>W2(A)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>In the above schedule, <strong>we can notice that:</strong></p>
+<ul style="list-style-type: square;">
+<li><span class="highlight--red">W1(A)</span> and <span class="highlight--red">R2(A)</span> are part of different transactions.</li>
+<li>Both apply to the same data item, i.e., A.</li>
+<li><span class="highlight--red">W1(A)</span> is a write operation.</li>
+</ul>
+<p><span class="highlight--red">W1(A)</span> and <span class="highlight--red">R2(A)</span> are <span class="highlight--red">conflicting operations</span> as they satisfy all the above conditions.</p>
+<p>Similarly, W1(A) and W2(A) are conflicting operations as they are part of different transactions working on the same data item, and one of them is the write operation.</p>
+<p><span class="highlight--red">W1(A)</span> and <span class="highlight--red">W2(B)</span> are <span class="highlight--red">non-conflicting</span> operations as they work on different data items and thus do not satisfy all the given conditions.</p>
+<p><span class="highlight--red">R1(A)</span> and <span class="highlight--red">R2(A)</span> are <span class="highlight--red">non-conflicting</span> operations as none of them is a write operation and thus does not satisfy the third condition.</p>
+<p><span class="highlight--red">W1(A)</span> and <span class="highlight--red">R1(A)</span> are <span class="highlight--red">non-conflicting</span> as they belong to the same transactions and thus do not satisfy the first condition.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Retrieve the TName, and No_of_priod of teachers who teach in “ABC” school using Relational Algebra.</p>
+<p>TEACHER  (TID, TName, TAddress, TQualification)</p>
+<p>SCHOOL (SID, SName, SAddress, SPhone)</p>
+<p>SCHOOL_TEACHER (SID, TID, No_of Period).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>Explain aggregation with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In aggregation, the relation between two entities is treated as a single entity. In aggregation, relationship with its corresponding entities is aggregated into a higher level entity.</p>
+<p>For Example, Employee working for a project may require some machinery. So, REQUIRE relationship is needed between relationship WORKS_FOR and entity MACHINERY. Using aggregation, WORKS_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into single entity and relationship REQUIRE is created between aggregated entity and MACHINERY.<br />
+<img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/aggregation.png?ssl=1" alt="img3" /></p>
+<p><strong>Representing aggregation via schema –</strong></p>
+<p>To represent aggregation, create a schema containing:</p>
+<ol style="list-style-type:decimal;">
+<li>primary key of the aggregated relationship</li>
+<li>primary key of the associated entity set</li>
+<li>descriptive attribute, if exists.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define functional dependencies. Explain 2nd normal form with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A functional dependency is a constraint that specifies the relationship between two sets of attributes where one set can accurately determine the value of other sets. It is denoted as <strong>X → Y</strong>, where X is a set of attributes that is capable of determining the value of Y. The attribute set on the left side of the arrow, <strong>X </strong>is called <strong>Determinant</strong>, while on the right side, <strong>Y </strong>is called the <strong>Dependent</strong>.</p>
+<h2>Example</h2>
+<p>The following is an example that would make it easier to understand functional dependency −</p>
+<p>We have a <strong>&lt;Department&gt;</strong> table with two attributes − <strong>DeptId </strong>and <strong>DeptName</strong>.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td valign="top" width="638"><strong>DeptId </strong>= Department ID<br />
+<strong>DeptName </strong>= Department Name</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <strong>DeptId </strong>is our primary key. Here, <strong>DeptId </strong>uniquely identifies the <strong>DeptName </strong>attribute. This is because if you want to know the department name, then at first you need to have the <strong>DeptId</strong>.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td valign="top" width="294"><strong>DeptId</strong></td>
+<td valign="top" width="294"><strong>DeptName</strong></td>
+</tr>
+<tr>
+<td valign="top" width="294">001</td>
+<td valign="top" width="294">Finance</td>
+</tr>
+<tr>
+<td valign="top" width="294">002</td>
+<td valign="top" width="294">Marketing</td>
+</tr>
+<tr>
+<td valign="top" width="294">003</td>
+<td valign="top" width="294">HR</td>
+</tr>
+</tbody>
+</table></div>
+<p>Therefore, the above functional dependency between <strong>DeptId </strong>and <strong>DeptName </strong>can be determined as <strong>DeptId </strong>is functionally dependent on <strong>DeptName</strong> −</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td valign="top" width="638"><strong>DeptId -&gt; DeptName</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<h1 class="h1">Second Normal Form (2NF)</h1>
+<ul class="points">
+<li>In the 2NF, relational must be in 1NF.</li>
+<li>In the second normal form, all non-key attributes are fully functional dependent on the primary key</li>
+</ul>
+<p><strong>Example:</strong> Let&#8217;s assume, a school can store the data of teachers and the subjects they teach. In a school, a teacher can teach more than one subject.</p>
+<p><strong>TEACHER table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>TEACHER_ID</th>
+<th>SUBJECT</th>
+<th>TEACHER_AGE</th>
+</tr>
+<tr>
+<td>25</td>
+<td>Chemistry</td>
+<td>30</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Biology</td>
+<td>30</td>
+</tr>
+<tr>
+<td>47</td>
+<td>English</td>
+<td>35</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Math</td>
+<td>38</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Computer</td>
+<td>38</td>
+</tr>
+</tbody>
+</table></div>
+<p>In the given table, non-prime attribute TEACHER_AGE is dependent on TEACHER_ID which is a proper subset of a candidate key. That&#8217;s why it violates the rule for 2NF.</p>
+<p>To convert the given table into 2NF, we decompose it into two tables:</p>
+<p><strong>TEACHER_DETAIL table:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>TEACHER_ID</th>
+<th>TEACHER_AGE</th>
+</tr>
+<tr>
+<td>25</td>
+<td>30</td>
+</tr>
+<tr>
+<td>47</td>
+<td>35</td>
+</tr>
+<tr>
+<td>83</td>
+<td>38</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>TEACHER_SUBJECT table:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>TEACHER_ID</th>
+<th>SUBJECT</th>
+</tr>
+<tr>
+<td>25</td>
+<td>Chemistry</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Biology</td>
+</tr>
+<tr>
+<td>47</td>
+<td>English</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Math</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Computer</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain Assertion and Triggers with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Assertions</strong><br />
+When a constraint involves 2 (or) more tables, the table constraint mechanism is sometimes hard and results may not come as expected. To cover such situation SQL supports the creation of assertions that are constraints not associated with only one table. And an assertion statement should ensure a certain condition will always exist in the database. DBMS always checks the assertion whenever modifications are done in the corresponding table.</p>
+<p><strong>Syntax –</strong></p>
+<div id="GFG_AD_gfg_mobile_336x280"></div>
+<pre>CREATE ASSERTION  [ assertion_name ]
+CHECK ( [ condition ] );</pre>
+<p><strong>Example –</strong></p>
+<pre>CREATE TABLE sailors (sid int,sname varchar(20), rating int,primary key(sid),
+CHECK(rating &gt;= 1 AND rating &lt;=10)
+CHECK((select count(s.sid) from sailors s) + (select count(b.bid)from boats b)&lt;100) );</pre>
+<p>In the above example, we enforcing CHECK constraint that the number of boats and sailors should be less than 100. So here we are able to CHECK constraints of two tablets simultaneously.</p>
+<p><strong>Triggers</strong></p>
+<p>A trigger is a database object that is associated with the table, it will be activated when a defined action is executed for the table. The trigger can be executed when we run the following statements:</p>
+<ol style="list-style-type:decimal;">
+<li>INSERT</li>
+<li>UPDATE</li>
+<li>DELETE</li>
+</ol>
+<p>And it can be invoked before or after the event.</p>
+<p><strong>Syntax –</strong></p>
+<pre>create trigger [trigger_name]       
+[before | after]          
+{insert | update | delete} 
+on [table_name]  
+[for each row]    
+[trigger_body]</pre>
+<p><strong>Example –</strong></p>
+<pre>create trigger t1  before  UPDATE on sailors
+for each row
+begin
+   if new.age&gt;60 then
+      set new.age=old.age;
+   else
+      set new.age=new.age;
+   end if;
+end;
+$</pre>
+<p>In the above example, we are creating triggers before updates. so, if the new age is greater than 60 we should not update else we should update. We can call this trigger by using “$” symbol.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is concurrency control? What are its advantages in DBMS?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Concurrency control concept comes under the Transaction in database management system (DBMS). It is a procedure in DBMS which helps us for the management of two simultaneous processes to execute without conflicts between each other, these conflicts occur in multi user systems.</p>
+<p>Concurrency can simply be said to be executing multiple transactions at a time. It is required to increase time efficiency. If many transactions try to access the same data, then inconsistency arises. Concurrency control required to maintain consistency data.</p>
+<p>For example, if we take ATM machines and do not use concurrency, multiple persons cannot draw money at a time in different places. This is where we need concurrency.</p>
+<h2>Advantages</h2>
+<p>The advantages of concurrency control are as follows −</p>
+<ul class="list">
+<li>Waiting time will be decreased.</li>
+<li>Response time will decrease.</li>
+<li>Resource utilization will increase.</li>
+<li>System performance &amp; Efficiency is increased.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is Buffer Management in DBMS? Expalain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2>BUFFER MANAGEMENT</h2>
+<div>The <b>buffer manager </b>is the software layer that is responsible for bringing pages from physical disk to main memory as needed. The buffer manages the available main memory by dividing the main memory into a collection of pages, which we called as <b>buffer pool. </b> The main memory pages in the buffer pool are called <b>frames.</b></div>
+<div><b>                                                     </b>Page Requests from Higher Level</div>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td><a href="https://i0.wp.com/1.bp.blogspot.com/-foJC6BR-5mk/VzwoG-WE-tI/AAAAAAAAAG0/abuaFAf7z9caMewwNadTyW7-m6sjGn7PQCLcB/s1600/ukgli.jpg?ssl=1" rel="nofollow noopener" target="_blank"><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/1.bp.blogspot.com/-foJC6BR-5mk/VzwoG-WE-tI/AAAAAAAAAG0/abuaFAf7z9caMewwNadTyW7-m6sjGn7PQCLcB/s400/ukgli.jpg?resize=400%2C162&#038;ssl=1" width="400" height="162" border="0" alt=""></a></td>
+</tr>
+<tr>
+<td class="tr-caption"><b>Buffer Management in a DBMS</b></td>
+</tr>
+</tbody>
+</table></div>
+<div>
+<ul style="list-style-type: square;">
+<li><b>Data must be in RAM for DBMS to operate on it!</b></li>
+<li><b>Buffer manager hides the fact that not all data is in RAM.</b></li>
+</ul>
+</div>
+<div class="separator"></div>
+<div><b>  </b></div>
+<div>       The goal of the buffer manager is to ensure that the data requests made by programs are satisfied by copying data from secondary storage devices into buffer. Infact, if a program performs reading from existing buffers. similarly, if a program performs an output statement: it calls the buffer manager for output operation &#8211; to satisfy the requests by writing to the buffers. Therefore, we can say that input and output operation occurs between the program and the buffer area only.</div>
+<div>if an input operation does not find the requested  page in the buffer pool, then the buffer manager (software) will have to do a physical transfer the page from the secondary memory (disk) to a free block in buffer pool and then make the requested page placed in the buffer pool, that is, available to the program requesting the original input operation. A similar scenario will take place in the revers order for an output operation. That is, the buffer manager (software) makes a new empty buffer a available to the program for outputting the page. If there is no space in the buffer pool then the buffer manager (software) physically transfer one of the page from buffer pool to the disk (secondary memory) to provide the empty space in the buffer pool for the output operation of the program to display the page in the buffer pool.</div>
+<div>In addition to the buffer pool itself, the buffer manager maintains same block keeping information and two variable for each frame in the pool ; <b>pin &#8211; count</b> and <b>dirty.</b> The number of times the page is requested in the frame &#8211; each time the pin &#8211; count variable is incremented for that frame (because that page is in this frame). For satisfying each request of the user ; the pin &#8211; counter variable is decremented each time for that frame. Thus, if a page is requested the pin &#8211; count is incremented ; if it fulfills the request the pin &#8211; count is decremented. In addition to this, if the page has been modified the Boolean variable; dirty is set as &#8216;on&#8217;. Otherwise &#8216;off &#8216;.</div>
+<div>
+<div class="separator"><a href="https://i0.wp.com/3.bp.blogspot.com/-TTM5tFqzx3M/Vzw9OOI7fnI/AAAAAAAAAHE/gTa2poIp9Q8vVmM5EiaYwOcHlyCUdcWEQCLcB/s1600/dhdf.gif?ssl=1" rel="nofollow noopener" target="_blank"><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/3.bp.blogspot.com/-TTM5tFqzx3M/Vzw9OOI7fnI/AAAAAAAAAHE/gTa2poIp9Q8vVmM5EiaYwOcHlyCUdcWEQCLcB/s1600/dhdf.gif?ssl=1" border="0" alt=""></a></div>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is transaction? Draw states of transaction and explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Transactions </strong><strong>:</strong><br />
+Transactions are a set of operations used to perform a logical set of work. A transaction usually means that the data in the database has changed. One of the major uses of DBMS is to protect the user’s data from system failures. It is done by ensuring that all the data is restored to a consistent state when the computer is restarted after a crash. The transaction is any one execution of the user program in a DBMS. Executing the same program multiple times will generate multiple transactions.</p>
+<h2>States of Transactions</h2>
+<p>A transaction in a database can be in one of the following states −</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/dbms/images/transaction_states.png?ssl=1" alt="Transaction States" /></p>
+<ul class="list">
+<li><b>Active</b> − In this state, the transaction is being executed. This is the initial state of every transaction.</li>
+<li><b>Partially Committed</b> − When a transaction executes its final operation, it is said to be in a partially committed state.</li>
+<li><b>Failed</b> − A transaction is said to be in a failed state if any of the checks made by the database recovery system fails. A failed transaction can no longer proceed further.</li>
+<li><b>Aborted</b> − If any of the checks fails and the transaction has reached a failed state, then the recovery manager rolls back all its write operations on the database to bring the database back to its original state where it was prior to the execution of the transaction. Transactions in this state are called aborted. The database recovery module can select one of the two operations after a transaction aborts −
+<ul class="list">
+<li>Re-start the transaction</li>
+<li>Kill the transaction</li>
+</ul>
+</li>
+<li><b>Committed</b> − If a transaction executes all its operations successfully, it is said to be committed. All its effects are now permanently established on the database system.</li>
+</ul>
+</div>
+</body></html>

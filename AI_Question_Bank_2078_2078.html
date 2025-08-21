@@ -1,0 +1,260 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>AI Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempt any two questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>How informed search are different than uniformed? Given following stae space, illustrate how depth limited search and iterative depending dearch works? Use your own assumption for depth search.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5946 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search.jpg?resize=363%2C181&ssl=1" alt="" width="363" height="181" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search.jpg?w=1000&ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search.jpg?resize=768%2C384&ssl=1 768w" sizes="auto, (max-width: 363px) 100vw, 363px" /></p>
+<p>Hence, A is start and K is goal.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between Informed Search and Uninformed Search is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered" style="width: 100%; height: 216px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="height: 24px; width: 16.9697%;"><strong>Parameters</strong></td>
+<td style="height: 24px; width: 34.6667%;"><strong>Informed Search</strong></td>
+<td style="height: 24px; width: 47.1515%;"><strong>Uninformed Search</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px; width: 16.9697%;">Utilizing Knowledge</td>
+<td style="height: 48px; width: 34.6667%;">It uses knowledge during the process of searching.</td>
+<td style="height: 48px; width: 47.1515%;">It does not require using any knowledge during the process of searching.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px; width: 16.9697%;">Speed</td>
+<td style="height: 24px; width: 34.6667%;">Finding the solution is quicker.</td>
+<td style="height: 24px; width: 47.1515%;">Finding the solution is much slower comparatively.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px; width: 16.9697%;">Completion</td>
+<td style="height: 48px; width: 34.6667%;">It can be both complete and incomplete.</td>
+<td style="height: 48px; width: 47.1515%;">It is always bound to be complete.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="height: 48px; width: 16.9697%;">Consumption of Time</td>
+<td style="height: 48px; width: 34.6667%;">Due to a quicker search, it consumes much less time.</td>
+<td style="height: 48px; width: 47.1515%;">Due to slow searches, it consumes comparatively more time.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px; width: 16.9697%;">Cost Incurred</td>
+<td style="height: 24px; width: 34.6667%;">The expenses are much lower.</td>
+<td style="height: 24px; width: 47.1515%;">The expenses are comparatively higher.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Given state space</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5946 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search.jpg.webp?resize=363%2C181&#038;ssl=1" sizes="auto, (max-width: 363px) 100vw, 363px" srcset="https://hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search.jpg.webp 1000w, https://hamrocsit.com/wp-content/uploads/2022/04/depth-limit-search-768x384.jpg.webp 768w" alt="- Hamro CSIT" width="363" height="181" /></p>
+<p>Depth limited search</p>
+<p>let us assume depth limit = 4 and source=A, destination=K  since, depth limited modified version of depth-first search, let&#8217;s use state</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6948 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/qn1.png?resize=1000%2C600&#038;ssl=1" alt="qn1" width="1000" height="600" /></p>
+<p>Hence, by using depth limited search the path from source to destination is ,</p>
+<p>A <b>→ </b>B <b>→</b> E <b>→ </b>I <b>→</b>K</p>
+<p><span style="text-decoration: underline;"><strong>Iterative deepening Search:</strong></span></p>
+<p>Iterative deepening search is the combination of both breadth-filled search and depth-first search. Here, a depth-limited search is run repeatedly, increasing the depth limit with each iteration until it reaches depth &#8216;d&#8217;. the depth of the shallowest goal stack.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6949 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Untitled-1.png?resize=531%2C266&#038;ssl=1" alt="Untitled-1" width="531" height="266" /></p>
+<p>1st iteration depth (d) = 0  [A]</p>
+<p>2nd iteration depth (d) = 0 + 1 [A -&gt; B -&gt; C -&gt; D]</p>
+<p>3rd iteration depth(d) = 2 [A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; G]</p>
+<p>4th iteration depth (d) = 3 [A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; G -&gt; I -&gt; J]</p>
+<p>5th iteration depth (d) = 4 [A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; G -&gt; I -&gt; J-&gt; K]</p>
+<p>Hence by using an iterative deepening search, the path from source to destination is</p>
+<p>A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; G -&gt; I -&gt; J-&gt; K</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Consider following facts</p>
+<p>Every traffic chases driver. Every driver who horns is smart. No traffic catches any smart driver. Any traffic who chases some driver but does not catch him frusted.</p>
+<p>Now configure FoPL knowledge base for above statements. Use resolution algorithm to draw a conclusion that “If all drivers horn, then all traffics are frusted.”</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-7222" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/download-2-1-scaled.jpg?resize=1918%2C2560&#038;ssl=1" alt="" width="1918" height="2560"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-7221" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/download-3-scaled.jpg?resize=1835%2C2560&#038;ssl=1" alt="" width="1835" height="2560"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-7223" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/download-4-scaled.jpg?resize=2412%2C2560&#038;ssl=1" alt="" width="2412" height="2560"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-7224" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/download-5-scaled.jpg?resize=1806%2C2560&#038;ssl=1" alt="" width="1806" height="2560"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe mathematical model of neural network. What does it means to train a neural networl? Write algoritmn for preceptron learning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h2>Short Answer Questions: Attempt any eight questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>What is Turing test? How it can be used to measure intelligence of machine?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Turing Test is a method of inquiry in artificial intelligence (AI) for determining whether or not a computer is capable of thinking like a human being. The test is named after Alan Turing, the founder of the Turing Test and an English computer scientist, cryptanalyst, mathematician, and theoretical biologist.</p>
+<p><span style="text-decoration: underline;"><strong>Measure of Intelligence of machine using Turing Test:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6952 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/Turing-Diagram-159676.png?resize=822%2C536&#038;ssl=1" alt="Turing-Diagram-159676" width="822" height="536" /></p>
+<p>The Turing test is based on a party game &#8220;Imitation game,&#8221; with some modifications. This game involves three players in which one player is Computer, another player is a human responder, and the third player is a human Interrogator, who is isolated from the other two players and his job is to find which player is a machine among the two of them.</p>
+<p>Consider, that Player A is a computer, Player B is a human, and Player C is an interrogator. The interrogator is aware that one of them is a machine, but he needs to identify this on the basis of questions and their responses.</p>
+<p>The conversation between all players is via keyboard and screen so the result would not depend on the machine&#8217;s ability to convert words into speech.</p>
+<p>The test result does not depend on each correct answer, but only on how closely it responds to a human answer. The computer is permitted to do everything possible to force a wrong identification by the interrogator.</p>
+<p>The questions and answers can be like:</p>
+<p><strong>Interrogator:</strong> Are you a computer?</p>
+<p><strong>PlayerA (Computer):</strong> No</p>
+<p><strong>Interrogator:</strong> Multiply two large numbers such as (256896489*456725896)</p>
+<p><strong>Player A:</strong> Long pause and give the wrong answer.</p>
+<p>In this game, if an interrogator would not able to identify which is a machine and which is a human, then the computer passes the test successfully, and the machine is said to be intelligent and can think like a human.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How agent can be configured used PEAS framework? Illustrate with example</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are certain types of AI agents. But apart from these types, there are many agents which are being designed and created today and they differ from each other in some aspects and have some aspects in common too. So, to group similar types of agents together, a system was developed which is known as <b>PEAS system</b>.</p>
+<p><b>PEAS stands for Performance, Environment, Actuators, and Sensors</b>. Based on these properties of an agent, they can be grouped together or can be differentiated from each other. Each agent has these following properties defines for it.</p>
+<p><b>Performance:</b><br />
+The output which we get from the agent. All the necessary results that an agent gives after processing comes under its performance.</p>
+<p><b>Environment:</b><br />
+All the surrounding things and conditions of an agent fall in this section. It basically consists of all the things under which the agents work.</p>
+<p><b>Actuators:</b><br />
+The devices, hardware or software through which the agent performs any actions or processes any information to produce a result are the actuators of the agent.</p>
+<p><b></b>Sensors:<br />
+The devices through which the agent observes and perceives its environment are the sensors of the agent.</p>
+<p><b>EXAMPLE:</b></p>
+<p>Let us take an example of a self-driven car. As the name suggests, it is a car which drives on its own, by taking all the necessary decisions while driving without any help from the user (customer). In other words, we can say that this car drives on its own and requires no driver. The <b>PEAS</b> description for this agent will be as follows:</p>
+<p><b>Performance:</b> The performance factors for a self-driven car will be the Speed, Safety while driving (both of the car and the user), Time is taken to drive to a particular location, the comfort of the user, etc.</p>
+<p><b>Environment:</b> The road on which the Car is being driven, other cars present on the road, pedestrians, crossings, road signs, traffic signals, etc. , all act as its environment.</p>
+<p><b>Actuators:</b> All those devices through which the control of the car is handled, are the actuators of the car. For example, the Steering, Accelerator, Breaks, Horn, Music system, etc.</p>
+<p><b></b>Sensors: All those devices through which the car gets an estimate about its surroundings and it can draw certain perceptions out of it are its sensors. For example, Camera, Speedometer, GPS, Odometer, Sonar, etc.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Construct semantic network for following facts</p>
+<p>Ram is person. Persons are humans. All human have nose. Humans are instances of mammals. Ram has weight of 60 kg. Weight of Ram is less than weight of Sita.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The semantic network for the following facts</p>
+<p>Ram is person. Persons are humans. All human have nose. Humans are instances of mammals. Ram has weight of 60 kg. Weight of Ram is less than weight of Sita.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-7212 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/sementic-net.jpg?resize=800%2C400&#038;ssl=1" alt="" width="800" height="400"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is iscrossover operation in genetic algorithm? Given following chromosomes show the result of one-point and two point crossover.</p>
+<p>C1 = 01100010</p>
+<p>C2 = 10101100</p>
+<p>Choose appropriate crossover points as per your own suggestions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Crossover operation in the genetic algorithm is used to generate offspring from the given two chromosomes. Here, two strings are picked from the mating pool at random to crossover in order to produce superior offspring.</p>
+<p>c1 = 01100010</p>
+<p>c2 = 10101100</p>
+<p><span style="text-decoration: underline;">One-point crossover:</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; border-left: none; margin-bottom: 0;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; border: none; text-align: center;">c1:</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; border: none; text-align: center;">c2:</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+</tbody>
+</table></div>
+<div style="margin: 0; padding: 0; margin-left: 34%; margin-bottom: 15px;">Let this be the crossover point.</div>
+<p>Then the result of the one-point crossover is:</p>
+<p>d1: 0 1 1 0 1 1 0 0</p>
+<p>d2: 0 0 1 0 0 0 1 0</p>
+<p>where d1 and d2 are offspring of c1 and c2</p>
+<p><span style="text-decoration: underline;"><strong>Two Point Crossover:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; border-left: none; margin-bottom: 0;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; border: none; text-align: center;">c1:</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">0</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; border: none; text-align: center;">c2:</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center; border-right: 3px solid #000;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+</tbody>
+</table></div>
+<div style="margin: 0; padding: 0; margin-left: 34%;">1st crossover point</div>
+<div style="margin: 0; padding: 0; margin-left: 66%; margin-bottom: 15px;">2nd crossover point</div>
+<p>Then the result of the two-point crossover is:</p>
+<p>d1: 0 1 1 0 1 0 1 0</p>
+<p>d2: 1 0 1 0 0 1 0 0</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is expert system? How its works? Mention role of inference engine in expert system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An expert system is a computer program that is designed to solve complex problems and to provide decision-making ability like a human expert. It performs this by extracting knowledge from its knowledge base using the reasoning and inference rules according to the user queries.</p>
+<p>Below is the block diagram that represents the working of an expert system:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6957 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/expert-systems-in-ai.png?resize=615%2C254&#038;ssl=1" alt="Expert systems in AI" width="615" height="254" /></p>
+<p><span style="text-decoration: underline;"><strong>Role of Inference Engine:</strong></span></p>
+<ul class="points">
+<li style="list-style-type: none;">
+<ul class="points">
+<li>The inference engine is known as the brain of the expert system as it is the main processing unit of the system. It applies inference rules to the knowledge base to derive a conclusion or deduce new information. It helps in deriving an error-free solution to queries asked by the user.</li>
+<li>With the help of an inference engine, the system extracts knowledge from the knowledge base.</li>
+<li>There are two types of inference engines:
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Deterministic Inference engine:</span> The conclusions drawn from this type of inference engine are assumed to be true. It is based on <strong>facts</strong> and <strong>rules</strong>.</li>
+<li><span style="text-decoration: underline;">Probabilistic Inference engine:</span> This type of inference engine contains uncertainty in conclusions, and is based on probability.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The inference engine uses the below modes to derive the solutions:</p>
+<ul class="points">
+<li><span style="text-decoration: underline;">Forward Chaining:</span> It starts from the known facts and rules, and applies the inference rules to add their conclusion to the known facts.</li>
+<li><span style="text-decoration: underline;">Backward Chaining:</span> It is a backward reasoning method that starts from the goal and works backward to prove the known facts.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How semantic and pragmatic analysis is done in natural language processing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Semantic and Pragmatic analysis is done in natural language processing.</p>
+<p><span style="text-decoration: underline;"><strong>Semantic Analysis:</strong></span></p>
+<p>It is the process of converting syntactic representations into meaning representations.</p>
+<p>This involves the following tasks:</p>
+<p><span style="text-decoration: underline;">Word Sense:</span> Words have different meanings in different contexts</p>
+<p>Example: Susmita had a bat in her office</p>
+<p>bat = &#8220;a baseball thing&#8221;</p>
+<p>bat = &#8220;a flying mammal&#8221;</p>
+<p><span style="text-decoration: underline;">Sentence level analysis:</span> Once the word is understood, the sentence must be assigned some meaning.</p>
+<p>Example: I saw an astronomer with a telescope.</p>
+<p><span style="text-decoration: underline;"><strong>Pragmatic Analysis:</strong></span></p>
+<p>Pragmatic Analysis deals with the overall communicative and social content and its effect on interpretation. It means abstracting or deriving the meaningful use of language in situations. In this analysis, the main focus is always on what was said in reinterpreting what is meant.</p>
+<p>Pragmatic analysis helps users to discover this intended effect by applying a set of rules that characterize cooperative dialogues.</p>
+<p>E.g., “close the window?” should be interpreted as a request instead of an order.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How philosophy, sociology and economics influence the study of artificial intelligence?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Philosophy, sociology, and economics all have a significant impact on the study of artificial intelligence in different ways:</p>
+<ol style="list-style-type:decimal;">
+<li>Philosophy: Philosophy influences AI by helping us to understand fundamental questions about intelligence, knowledge, and ethics. For example, philosophers have asked questions like: What is intelligence? Can machines be conscious or have free will? What ethical considerations are involved in creating intelligent machines? These philosophical questions help guide researchers as they explore and develop AI technologies.</li>
+<li>Sociology: Sociology influences AI by providing insight into how AI technologies are created, used, and perceived by society. Sociologists study the social, cultural, and political implications of AI, and how these technologies affect different groups of people. They also investigate issues related to bias and discrimination in AI systems, and the social and ethical implications of automation.</li>
+<li>Economics: Economics influences AI by examining the economic impact of AI technologies on businesses, industries, and society as a whole. Economists study the cost-benefit analysis of using AI technologies, the effects of automation on employment and wages, and the potential for AI to disrupt existing markets and create new ones. They also investigate issues related to ownership and control of AI technologies, and how these technologies can be used to address social and economic challenges.</li>
+</ol>
+<p>Overall, philosophy, sociology, and economics are important fields for understanding and shaping the development of AI technologies, and for ensuring that these technologies are used in ways that are beneficial to society.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Given following search space, determine if these exists any alpha and beta cutoffs.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5945 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/metacutoff.jpg?resize=358%2C231&ssl=1" alt="" width="358" height="231" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/metacutoff.jpg?w=1000&ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/metacutoff.jpg?resize=768%2C496&ssl=1 768w" sizes="auto, (max-width: 358px) 100vw, 358px" /></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31304" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/SmartSelect_20240310_140217_CamScanner.jpg?resize=430%2C381&#038;ssl=1" alt="" width="430" height="381"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is prosterior probability? Consider a scenario that a patient have liver disease is 15% probability. A test says that 5% of patients are alcholic. Among those patients diagnosed with liver disease, 7% are alcoholic. Now computer the chance of having liver disease, if the patient is alcoholic.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The posterior probability is the probability of one event occurring with some relationship to one or more other events.</p>
+<p>Example: \(P\left ( \frac{A}{B} \right ) = \frac{P(A ∩ B)}{P(B)}\)</p>
+<p>Where, \(P\left ( \frac{A}{B} \right )\) is the probability of A occurring given the probability of B</p>
+<p>Given,</p>
+<p>Probability of patient having liver disease</p>
+<p>P(L) = 15% = 0.15</p>
+<p>Probability of patient being alcoholic</p>
+<p>P(L) = 5% = 0.05</p>
+<p>Probability of people being alcoholic given that they are having liver disease.</p>
+<p>\(P\left ( \frac{A}{L} \right )\) = 7% = 0.07</p>
+<p>Now, probability of having liver disease if the patient is alcoholic: \(P\left ( \frac{L}{A} \right )\) = ?</p>
+<p>We know,</p>
+<p>\(P\left ( \frac{L}{A} \right ) = \frac{P(L) . P\left ( \frac{A}{L} \right )}{P(A)}\)</p>
+<p>= \(\frac{0.5 \times 0.07}{0.05}\)</p>
+<p>= 0.21</p>
+<p>= 21%</p>
+<p>Hence, the probability of having the liver disease if the patient is alcoholic is 21%.</p>
+</div>
+</body></html>

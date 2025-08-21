@@ -1,0 +1,690 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Model Question 0</title>
+    </head>
+    <body>
+        <h1>OS Model Question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is sleep and wakeup? Demonstrate problem with suitable code snippet and illustration.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Sleep: </strong>When a process or thread is put to sleep, it means it is temporarily suspended or halted, allowing other processes or threads to execute in the meantime. Sleeping is often used when a process or thread needs to wait for a certain condition to be met, such as waiting for input, a resource to become available, or a specific period to elapse. Suppose you have a program that reads data from a file. If the file is not yet available, the program might go to sleep until the file becomes accessible.</p>
+<p><strong>Wakeup: </strong>Waking up a process or thread means resuming its execution after it has been put to sleep. Waking up is necessary when the condition for which the process or thread went to sleep has been satisfied, and it can continue its execution. Continuing with the file example, once the file becomes available, the program that was sleeping can be awakened to process the data.</p>
+<p><strong>Producer consumer problem</strong> is one of the most popular problem simulating sleep and wake mechanism. The problem describes two processes, the producer and the consumer that shares a common fixed-size buffer use it as a queue. The producer’s job is to generate data, put it into the buffer, and start again.<br />
+At the same time, the consumer is consuming the data (i.e., removing it from the buffer), one piece at a time.</p>
+<p><strong>Problem</strong>: Given the common fixed-size buffer, the task is to make sure that the producer can’t add data into the buffer when it is full and the consumer can’t remove data from an empty buffer.</p>
+<p><strong>Solution</strong>: The producer is to either go to sleep or discard data if the buffer is full. The next time the consumer removes an item from the buffer, it notifies the producer, who starts to fill the buffer again. In the same manner, the consumer can go to sleep if it finds the buffer to be empty. The next time the producer puts data into the buffer, it wakes up the sleeping consumer.</p>
+<p>#include &lt;stdio.h&gt;<br />
+#include &lt;stdlib.h&gt;</p>
+<p>// Initialize a mutex to 1<br />
+int mutex = 1;</p>
+<p>// Number of full slots as 0<br />
+int full = 0;</p>
+<p>// Number of empty slots as size<br />
+// of buffer<br />
+int empty = 10, x = 0;</p>
+<p>// Function to produce an item and<br />
+// add it to the buffer<br />
+void producer()<br />
+{<br />
+// Decrease mutex value by 1<br />
+&#8211;mutex;</p>
+<p>// Increase the number of full<br />
+// slots by 1<br />
+++full;</p>
+<p>// Decrease the number of empty<br />
+// slots by 1<br />
+&#8211;empty;</p>
+<p>// Item produced<br />
+x++;<br />
+printf(&#8220;\nProducer produces&#8221;<br />
+&#8220;item %d&#8221;,<br />
+x);</p>
+<p>// Increase mutex value by 1<br />
+++mutex;<br />
+}</p>
+<p>// Function to consume an item and<br />
+// remove it from buffer<br />
+void consumer()<br />
+{<br />
+// Decrease mutex value by 1<br />
+&#8211;mutex;</p>
+<p>// Decrease the number of full<br />
+// slots by 1<br />
+&#8211;full;</p>
+<p>// Increase the number of empty<br />
+// slots by 1<br />
+++empty;<br />
+printf(&#8220;\nConsumer consumes &#8221;<br />
+&#8220;item %d&#8221;,<br />
+x);<br />
+x&#8211;;</p>
+<p>// Increase mutex value by 1<br />
+++mutex;<br />
+}</p>
+<p>// Driver Code<br />
+int main()<br />
+{<br />
+int n, i;<br />
+printf(&#8220;\n1. Press 1 for Producer&#8221;<br />
+&#8220;\n2. Press 2 for Consumer&#8221;<br />
+&#8220;\n3. Press 3 for Exit&#8221;);</p>
+<p>// Using &#8216;#pragma omp parallel for&#8217;<br />
+// can give wrong value due to<br />
+// synchronization issues.</p>
+<p>// &#8216;critical&#8217; specifies that code is<br />
+// executed by only one thread at a<br />
+// time i.e., only one thread enters<br />
+// the critical section at a given time<br />
+#pragma omp critical</p>
+<p>for (i = 1; i &gt; 0; i++) {</p>
+<p>printf(&#8220;\nEnter your choice:&#8221;);<br />
+scanf(&#8220;%d&#8221;, &amp;n);</p>
+<p>// Switch Cases<br />
+switch (n) {<br />
+case 1:</p>
+<p>// If mutex is 1 and empty<br />
+// is non-zero, then it is<br />
+// possible to produce<br />
+if ((mutex == 1)<br />
+&amp;&amp; (empty != 0)) {<br />
+producer();<br />
+}</p>
+<p>// Otherwise, print buffer<br />
+// is full<br />
+else {<br />
+printf(&#8220;Buffer is full!&#8221;);<br />
+}<br />
+break;</p>
+<p>case 2:</p>
+<p>// If mutex is 1 and full<br />
+// is non-zero, then it is<br />
+// possible to consume<br />
+if ((mutex == 1)<br />
+&amp;&amp; (full != 0)) {<br />
+consumer();<br />
+}</p>
+<p>// Otherwise, print Buffer<br />
+// is empty<br />
+else {<br />
+printf(&#8220;Buffer is empty!&#8221;);<br />
+}<br />
+break;</p>
+<p>// Exit Condition<br />
+case 3:<br />
+exit(0);<br />
+break;<br />
+}<br />
+}<br />
+}</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>When page fault occurs and how it is handled? Demonstrate second chance and LRU page replacement algorithm for memory with three frames and following reference string: 1,3,7,4,5,2,3,6,4,5,7,8,5,1,4</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>page fault</strong> occurs in a computer&#8217;s memory management system when a program attempts to access a page (a block of data or code) that is not currently in physical memory (RAM). This can happen when the required page is not present in the working set of pages, and the operating system needs to fetch it from the secondary storage (e.g., disk) into the RAM.</p>
+<p>Given reference string: 1,3,7,4,5,2,3,6,4,5,7,8,5,1,4 and frames = 3.</p>
+<p>Second chance page replacement algorithm:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 101.012%; height: 96px;">
+<tbody>
+<tr>
+<td style="width: 6.12142%; text-align: center;"><strong>1</strong></td>
+<td style="width: 6.12139%; text-align: center;"><strong>3</strong></td>
+<td style="width: 5.95282%; text-align: center;"><strong>7</strong></td>
+<td style="width: 5.9528%; text-align: center;"><strong>4</strong></td>
+<td style="width: 6.29005%; text-align: center;"><strong>5</strong></td>
+<td style="width: 6.45873%; text-align: center;"><strong>2</strong></td>
+<td style="width: 7.19228%; text-align: center;"><strong>3</strong></td>
+<td style="width: 6.71583%; text-align: center;"><strong>6</strong></td>
+<td style="width: 6.30905%; text-align: center;"><strong>4</strong></td>
+<td style="width: 6.98361%; text-align: center;"><strong>5</strong></td>
+<td style="width: 7.13323%; text-align: center;"><strong>7</strong></td>
+<td style="width: 7.30188%; text-align: center;"><strong>8</strong></td>
+<td style="width: 6.51304%; text-align: center;"><strong>5</strong></td>
+<td style="width: 5.93266%; text-align: center;"><strong>1</strong></td>
+<td style="width: 5.63161%; text-align: center;"><strong>4</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;">1 (0)</td>
+<td style="width: 6.12139%; height: 24px; text-align: center;">1(0)</td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">1(0)</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">4(0)</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">4(0)</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">4(0)</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">3(0)</td>
+<td style="width: 6.71583%; text-align: center;">3(0)</td>
+<td style="width: 6.30905%; text-align: center;">3(0)</td>
+<td style="width: 6.98361%; text-align: center;">5(0)</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">5(0)</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">5(0)</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">5(1)</td>
+<td style="width: 5.93266%; text-align: center;">5(0)</td>
+<td style="width: 5.63161%; text-align: center;">5(0)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;">3(0)</td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">3(0)</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">3(0)</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">5(0)</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">5(0)</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">5(0)</td>
+<td style="width: 6.71583%; text-align: center;">6(0)</td>
+<td style="width: 6.30905%; text-align: center;">6(0)</td>
+<td style="width: 6.98361%; text-align: center;">6(0)</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 5.93266%; text-align: center;">1(0)</td>
+<td style="width: 5.63161%; text-align: center;">1(0)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;"></td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">7(0)</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">2(0)</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">2(0)</td>
+<td style="width: 6.71583%; text-align: center;">2(0)</td>
+<td style="width: 6.30905%; text-align: center;">4(0)</td>
+<td style="width: 6.98361%; text-align: center;">4(0)</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">4(0)</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">8(0)</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">8(0)</td>
+<td style="width: 5.93266%; text-align: center;">8(0)</td>
+<td style="width: 5.63161%; text-align: center;">4(0)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;"></td>
+<td style="width: 5.95282%; height: 24px; text-align: center;"></td>
+<td style="width: 5.9528%; height: 24px; text-align: center;"></td>
+<td style="width: 6.29005%; height: 24px; text-align: center;"></td>
+<td style="width: 6.45873%; height: 24px; text-align: center;"></td>
+<td style="width: 7.19228%; height: 24px; text-align: center;"></td>
+<td style="width: 6.71583%; text-align: center;"></td>
+<td style="width: 6.30905%; text-align: center;"></td>
+<td style="width: 6.98361%; text-align: center;"></td>
+<td style="width: 7.13323%; height: 24px; text-align: center;"></td>
+<td style="width: 7.30188%; height: 24px; text-align: center;"></td>
+<td style="width: 6.51304%; height: 24px; text-align: center;"><strong>HIT</strong></td>
+<td style="width: 5.93266%; text-align: center;"></td>
+<td style="width: 5.63161%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page faults: 14</p>
+<p>LRU page replacement algorithm:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 101.012%; height: 96px;">
+<tbody>
+<tr>
+<td style="width: 6.12142%; text-align: center;"><strong>1</strong></td>
+<td style="width: 6.12139%; text-align: center;"><strong>3</strong></td>
+<td style="width: 5.95282%; text-align: center;"><strong>7</strong></td>
+<td style="width: 5.9528%; text-align: center;"><strong>4</strong></td>
+<td style="width: 6.29005%; text-align: center;"><strong>5</strong></td>
+<td style="width: 6.45873%; text-align: center;"><strong>2</strong></td>
+<td style="width: 7.19228%; text-align: center;"><strong>3</strong></td>
+<td style="width: 6.71583%; text-align: center;"><strong>6</strong></td>
+<td style="width: 6.30905%; text-align: center;"><strong>4</strong></td>
+<td style="width: 6.98361%; text-align: center;"><strong>5</strong></td>
+<td style="width: 7.13323%; text-align: center;"><strong>7</strong></td>
+<td style="width: 7.30188%; text-align: center;"><strong>8</strong></td>
+<td style="width: 6.51304%; text-align: center;"><strong>5</strong></td>
+<td style="width: 5.93266%; text-align: center;"><strong>1</strong></td>
+<td style="width: 5.63161%; text-align: center;"><strong>4</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;">1</td>
+<td style="width: 6.12139%; height: 24px; text-align: center;">1</td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">1</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">4</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">4</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">4</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">3</td>
+<td style="width: 6.71583%; text-align: center;">3</td>
+<td style="width: 6.30905%; text-align: center;">3</td>
+<td style="width: 6.98361%; text-align: center;">5</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">5</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">5</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">5</td>
+<td style="width: 5.93266%; text-align: center;">5</td>
+<td style="width: 5.63161%; text-align: center;">5</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;">3</td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">3</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">3</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">5</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">5</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">5</td>
+<td style="width: 6.71583%; text-align: center;">6</td>
+<td style="width: 6.30905%; text-align: center;">6</td>
+<td style="width: 6.98361%; text-align: center;">6</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">7</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">7</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">7</td>
+<td style="width: 5.93266%; text-align: center;">1</td>
+<td style="width: 5.63161%; text-align: center;">1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;"></td>
+<td style="width: 5.95282%; height: 24px; text-align: center;">7</td>
+<td style="width: 5.9528%; height: 24px; text-align: center;">7</td>
+<td style="width: 6.29005%; height: 24px; text-align: center;">7</td>
+<td style="width: 6.45873%; height: 24px; text-align: center;">2</td>
+<td style="width: 7.19228%; height: 24px; text-align: center;">2</td>
+<td style="width: 6.71583%; text-align: center;">2</td>
+<td style="width: 6.30905%; text-align: center;">4</td>
+<td style="width: 6.98361%; text-align: center;">4</td>
+<td style="width: 7.13323%; height: 24px; text-align: center;">4</td>
+<td style="width: 7.30188%; height: 24px; text-align: center;">8</td>
+<td style="width: 6.51304%; height: 24px; text-align: center;">8</td>
+<td style="width: 5.93266%; text-align: center;">8</td>
+<td style="width: 5.63161%; text-align: center;">4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 6.12142%; height: 24px; text-align: center;"></td>
+<td style="width: 6.12139%; height: 24px; text-align: center;"></td>
+<td style="width: 5.95282%; height: 24px; text-align: center;"></td>
+<td style="width: 5.9528%; height: 24px; text-align: center;"></td>
+<td style="width: 6.29005%; height: 24px; text-align: center;"></td>
+<td style="width: 6.45873%; height: 24px; text-align: center;"></td>
+<td style="width: 7.19228%; height: 24px; text-align: center;"></td>
+<td style="width: 6.71583%; text-align: center;"></td>
+<td style="width: 6.30905%; text-align: center;"></td>
+<td style="width: 6.98361%; text-align: center;"></td>
+<td style="width: 7.13323%; height: 24px; text-align: center;"></td>
+<td style="width: 7.30188%; height: 24px; text-align: center;"></td>
+<td style="width: 6.51304%; height: 24px; text-align: center;"><strong>HIT</strong></td>
+<td style="width: 5.93266%; text-align: center;"></td>
+<td style="width: 5.63161%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page faults: 14</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is I-node? Why it is superior to other file allocation approaches? Consider 20-GB disk with 8-KB block size. How much memory space will be occupied if contiguous, and File allocation table is used for file allocation? Assume that each FAT entry takes 4 byte.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An <strong>inode</strong> (index node) is a data structure used in a Unix-style file system to store information about a file or a directory. Each file or directory on the file system is associated with an inode, which contains metadata such as file size, ownership, permissions, timestamps, and pointers to the actual data blocks on the disk. It is superior to other file allocation approaches because:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Efficient Metadata Storage:</strong> Inodes store all the metadata related to a file compactly and efficiently.</li>
+<li><strong>Efficient File Access:</strong> Direct pointers in inodes allow for quick access to data blocks, reducing access time.</li>
+<li><strong>Support for Variable-Sized Files:</strong> Inodes can support variable-sized files by using direct, indirect, double-indirect, and triple-indirect pointers.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Given:</p>
+<p>Size of disk = 20 GB = 20 * 2<sup>20</sup> KB</p>
+<p>Size of block = 8 KB</p>
+<p>Thus, number of blocks = (20 * 2<sup>20</sup>) / 8 = 2621440</p>
+<p>Number of entries in FAT = 2621440</p>
+<p>Since size of an entry = 4 byte,</p>
+<p>Size of FAT = 2621440 * 4 byte = 10485760 byte = 10 MB</p>
+</div>
+<h2>Section B: Attempt any eight questions</h2><h3>Question 4</h3>
+<div><p><p>Define the terms shell and system call. How it is handled? Illustrate with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>shell</strong> is a command-line interface (CLI) program that provides an interactive way for users to communicate with the operating system (OS). Shells interpret user commands and execute them by invoking system programs or system calls.</p>
+<p>A <strong>system call</strong> is a request made by a program or process to the kernel of an operating system for a service or resource. System calls provide an interface for user-level processes to interact with the kernel, which is the core of the operating system.</p>
+<p>When a user enters a command in the shell, such as executing a program or accessing a file, the shell interprets the command and decides whether it needs to execute a system call to the kernel to perform the requested operation. The shell then invokes the appropriate system call, passing the necessary parameters to the kernel. The kernel then executes the requested operation and returns the result to the shell.</p>
+<p>Let&#8217;s consider an example where a user wants to list the files in a directory using the ls command in a Unix-like shell:</p>
+<ol style="list-style-type:decimal;">
+<li>The user enters the ls command in the shell.</li>
+<li>The shell interprets the command and determines that it needs to list the files in the current directory.</li>
+<li>The shell invokes the ls system call, passing the path of the current directory as a parameter to the kernel.</li>
+<li>The kernel receives the ls system call request and executes it by accessing the file system data structures to retrieve information about the files in the directory.</li>
+<li>The kernel returns the list of files to the shell.</li>
+<li>The shell displays the list of files to the user on the command-line interface.</li>
+</ol>
+<p>In this example, the shell acts as an interface between the user and the kernel, and it handles user commands by invoking the appropriate system calls to perform the requested operations.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are main goals of interactive system scheduling? Discuss priority scheduling along with its pros and cons.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The main goals of interactive system scheduling are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Responsiveness:</strong> Interactive systems aim to respond quickly to user inputs to provide a smooth and interactive experience. Quick response times are crucial for user satisfaction and productivity.</li>
+<li><strong>Fairness:</strong> Interactive scheduling should be fair to all users, ensuring that no particular user or process monopolizes system resources. Fairness helps prevent one user&#8217;s tasks from negatively impacting others.</li>
+<li><strong>Predictability:</strong> Users should experience consistent and predictable response times, allowing them to anticipate system behavior and interact with it effectively.</li>
+<li><strong>Efficiency:</strong> While ensuring responsiveness, the system should also utilize resources efficiently, avoiding unnecessary overhead and ensuring optimal utilization of CPU and other resources.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Priority Scheduling:</strong></p>
+<p>Priority scheduling assigns priorities to processes based on certain criteria, and the process with the highest priority is scheduled to execute first. In the context of interactive systems, priority scheduling can be used to give higher priority to tasks that require quick responses, such as user input handling.</p>
+<p><strong>Pros:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Responsiveness:</strong> Priority scheduling ensures that high-priority tasks are scheduled quickly, leading to improved responsiveness for interactive applications.</li>
+<li><strong>Flexibility:</strong> It allows administrators or users to set priorities based on the importance of tasks or processes.</li>
+<li><strong>Customization:</strong> Different tasks can be assigned different priorities, allowing for customization based on the nature of the application.</li>
+</ol>
+<p><strong>Cons:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Starvation:</strong> Lower-priority tasks may face starvation if higher-priority tasks continuously arrive, preventing the lower-priority tasks from being scheduled.</li>
+<li><strong>Priority Inversion:</strong> In certain situations, priority inversion may occur, where a lower-priority task holds a resource needed by a higher-priority task, causing delays in execution.</li>
+<li><strong>Complexity:</strong> Managing and adjusting priorities dynamically can add complexity to the scheduler, potentially impacting system stability.</li>
+</ol>
+<p><strong>Example:</strong> Consider a system with three processes: A, B, and C. Process A is a background task, process B is an interactive task, and process C is a high-priority real-time task. Priority scheduling can be used to assign priorities to these processes. The scheduler will select the process with the highest priority for execution.</p>
+<p>Process A (Background) &#8211; Priority 0<br />
+Process B (Interactive) &#8211; Priority 1<br />
+Process C (Real-Time) &#8211; Priority 2</p>
+<p>In this example, process C, being a real-time task, will be scheduled with the highest priority, ensuring it gets immediate attention. Process B, being an interactive task, will have a higher priority than the background task A.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How starvation differs from deadlock? Consider the following situation of processes and resources:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Process</strong></td>
+<td><strong>Has</strong></td>
+<td><strong>Max</strong></td>
+</tr>
+<tr>
+<td>P1</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>2</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>a. What will happen if process P3 requests 1 resource?</p>
+<p>b. What will happen if process P4 requests 1 resource?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Deadlock</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Starvation</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">Deadlock is a situation where no process got blocked and no process proceeds.</td>
+<td style="width: 50%;">Starvation is a situation where the low priority process got blocked and the high priority processes proceed.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Deadlock is an infinite waiting.</td>
+<td style="width: 50%;">Starvation is a long waiting but not infinite.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Every deadlock is always a starvation.</td>
+<td style="width: 50%;">Every starvation need not be deadlock.</td>
+</tr>
+<tr>
+<td style="width: 50%;">The requested resource is blocked by the other process.</td>
+<td style="width: 50%;">The requested resource is continuously be used by the higher priority processes.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Deadlock happend when mutual exclusion, hold and wait, no preemption and circular wait occurs simulataneously.</td>
+<td style="width: 50%;">It occurs due to the uncontrolled priority and resource management.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Given,</p>
+<p>free = 5.</p>
+<p>Since, Need matrix = Max &#8211; Has</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Process</td>
+<td style="width: 50%;">Need</td>
+</tr>
+<tr>
+<td style="width: 50%;">P1</td>
+<td style="width: 50%;">4</td>
+</tr>
+<tr>
+<td style="width: 50%;">P2</td>
+<td style="width: 50%;">4</td>
+</tr>
+<tr>
+<td style="width: 50%;">P3</td>
+<td style="width: 50%;">3</td>
+</tr>
+<tr>
+<td style="width: 50%;">P4</td>
+<td style="width: 50%;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>The request can be granted if:</p>
+<ul style="list-style-type: square;">
+<li>Request ≤ Need</li>
+<li>Request ≤ Free</li>
+</ul>
+<p>a. In case of P3 both conditions are satisfied, so request can be granted. And, after granting the requests, the table needs to be modified as:</p>
+<p>Free = Free &#8211; Request = 3 &#8211; 1 = 2</p>
+<p>Has = Has + Request = 2 + 1 = 3</p>
+<p>Need = Need &#8211; Request = 3 &#8211; 1 = 2</p>
+<p>b. In case of P4 both conditions are satisfied, so request can be granted. And, after granting the requests, the table needs to be modified as:</p>
+<p>Free = Free &#8211; Request = 3 &#8211; 1 = 2</p>
+<p>Has = Has + Request = 2 + 1 = 3</p>
+<p>Need = Need &#8211; Request = 4 &#8211; 1 = 3</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define the term race condition. Justify that race condition leads data loss or incorrect data.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A<strong> race condition</strong> is a situation in concurrent programming where the behavior of a system depends on the relative timing of events, such as the order in which threads are scheduled to run. It arises when multiple threads or processes access shared resources or data concurrently, and the outcome depends on the order of their execution.</p>
+<p>Race conditions can lead to data loss or incorrect data due to the following reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Lost Updates:</strong> When multiple threads are simultaneously attempting to update a shared resource, one thread&#8217;s update might overwrite the changes made by another thread. This can result in lost updates and lead to incorrect data.</li>
+<li><strong>Inconsistent Reads:</strong> If one thread is reading a shared resource while another thread is updating it, the reading thread may observe an inconsistent state, leading to incorrect data interpretation.</li>
+<li><strong>Data Corruption:</strong> Concurrent access without proper synchronization can result in data corruption, where the shared resource becomes a mix of conflicting changes from multiple threads. This corruption can lead to unpredictable behavior and incorrect results.</li>
+<li><strong>Deadlocks:</strong> In some cases, improper synchronization attempts to avoid race conditions can lead to deadlocks, where threads are unable to proceed because they are waiting for resources held by each other. Deadlocks can result in the system coming to a standstill.</li>
+</ol>
+<p>Here&#8217;s a simple pseudocode example that demonstrates a race condition:</p>
+<p>counter = 0</p>
+<p>def increment_counter():<br />
+global counter<br />
+for _ in range(1000000):<br />
+counter += 1</p>
+<p># Create two threads to increment the counter<br />
+thread1 = threading.Thread(target=increment_counter)<br />
+thread2 = threading.Thread(target=increment_counter)</p>
+<p># Start both threads<br />
+thread1.start()<br />
+thread2.start()</p>
+<p># Wait for both threads to finish<br />
+thread1.join()<br />
+thread2.join()</p>
+<p>print(&#8220;Final Counter Value:&#8221;, counter)</p>
+<p>&nbsp;</p>
+<p>In this example, both threads are concurrently updating the counter variable without proper synchronization. Due to the race condition, the final value of the counter is unpredictable and may not be the expected result of 2000000. Running the program multiple times may yield different results, demonstrating the unpredictability introduced by the race condition.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain directory implementation techniques employed in operating systems briefly.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>1. Linear List:</strong></p>
+<p>In a linear list directory structure, files are organized as a linear sequence or table. Each entry in the list corresponds to a file in the directory. The list may contain information such as file name, file attributes, and pointers to the actual file data.</p>
+<p><strong>File Creation in linear list:</strong> To create a new file, you can add its information to the end of the linear list.</p>
+<p>File1<br />
+File2<br />
+File3<br />
+NewFile</p>
+<p><strong>File Updation in linear list: </strong>To update a file, you may need to search the linear list for the file, modify its information, and save the changes.</p>
+<p>File1 (Updated)<br />
+File2<br />
+File3<br />
+NewFile</p>
+<p><strong>File Deletion in linear list:</strong> To delete a file, you must search for the file in the linear list, remove its entry, and adjust the list accordingly.</p>
+<p>File1 (Updated)<br />
+File2 (Deleted)<br />
+File3<br />
+NewFile</p>
+<h4>Advantages:</h4>
+<ul style="list-style-type: square;">
+<li><strong>Simplicity:</strong> Linear lists are straightforward to implement and understand.</li>
+<li><strong>Ease of Management:</strong> Adding or removing files can be relatively simple.</li>
+</ul>
+<h4>Disadvantages:</h4>
+<ul style="list-style-type: square;">
+<li><strong>Inefficiency:</strong> Searching for a specific file in a linear list may require scanning the entire list, leading to inefficiency, especially as the directory size grows.</li>
+<li><strong>Limited Scalability:</strong> The efficiency of this method diminishes as the number of files increases.</li>
+</ul>
+<p><strong>2. Hash Table:</strong></p>
+<p>In a hash table directory structure, a hash function is applied to the file name to determine its storage location within the table. The hash function maps file names to indices in the table, providing a quick and direct access mechanism. Collisions (cases where two file names hash to the same index) can be resolved using various collision resolution techniques.</p>
+<p><strong>File Creation in hash table: </strong>To create a new file, hash its name to determine the table index and insert its information into the hash table.</p>
+<p>[Hash1] -&gt; File1<br />
+[Hash2] -&gt; File2<br />
+[Hash3] -&gt; File3<br />
+[Hash4] -&gt; NewFile</p>
+<p><strong>File Updation in hash table: </strong>To update a file, hash its name to find its index, update its information, and replace the old entry.</p>
+<p>[Hash1] -&gt; File1 (Updated)<br />
+[Hash2] -&gt; File2<br />
+[Hash3] -&gt; File3<br />
+[Hash4] -&gt; NewFile</p>
+<p><strong>File Deletion in hash table:</strong> To delete a file, hash its name to find its index, remove its entry, and handle any collisions or empty slots.</p>
+<p>[Hash1] -&gt; File1 (Updated)<br />
+[Hash2] -&gt; null<br />
+[Hash3] -&gt; File3<br />
+[Hash4] -&gt; NewFile</p>
+<p>In a hash table, searching, updating, and deleting files are often more efficient on average due to the direct access provided by the hash function. However, handling collisions is an additional consideration.</p>
+<h4>Advantages:</h4>
+<ul style="list-style-type: square;">
+<li><strong>Efficiency:</strong> Retrieving a file based on its name can be done in constant time on average if the hash function is well-designed.</li>
+<li><strong>Scalability:</strong> Hash tables can efficiently handle large directories without a significant decrease in performance.</li>
+</ul>
+<h4>Disadvantages:</h4>
+<ul style="list-style-type: square;">
+<li><strong>Collision Handling:</strong> Collisions must be managed using techniques like chaining or open addressing, adding complexity.</li>
+<li><strong>Hash Function Design:</strong> The effectiveness of a hash table relies on a well-designed hash function.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Consider the segment table:</p>
+<p>What are the physical address for the following logical addresses?</p>
+<p>a. 0,430</p>
+<p>b. 1,10</p>
+<p>c. 1,11</p>
+<p>d. 2,500</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Segment</strong></td>
+<td><strong>Base</strong></td>
+<td><strong>Length</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>219</td>
+<td>600</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2300</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2</td>
+<td>90</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1327</td>
+<td>580</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1952</td>
+<td>965</td>
+</tr>
+</tbody>
+</table></div>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. 219 + 430 = 649</p>
+<p>b. 2300 + 10 = 2310</p>
+<p>c. 2300 + 11 = 2311</p>
+<p>d. Illegal address since size of segment 2 is 100 and the offset in logical address is 500.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the main purpose of disk scheduling algorithms? Which disk scheduling technique is best but impractical? Explain the algorithm with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The primary purpose of disk scheduling algorithms is to optimize the order in which disk I/O requests are serviced to minimize the overall seek time and maximize the throughput of a disk storage system. Disk scheduling is essential because it helps in efficiently managing and serving multiple requests from different processes or users.</p>
+<p><strong>Disk Scheduling Techniques:</strong></p>
+<p><strong>First-Come-First-Serve (FCFS):</strong></p>
+<p>Requests are serviced in the order they arrive. It is a simple algorithm. FCFS can lead to poor performance due to the &#8220;convoy effect&#8221; where earlier requests create a convoy for subsequent requests, causing delays.</p>
+<p><strong>Shortest Seek Time First (SSTF):</strong></p>
+<p>The request with the shortest seek time is serviced first. This minimizes arm movement and seek time. SSTF can lead to starvation for requests located farther from the current position. This can result in some requests being consistently ignored.</p>
+<p><strong>SCAN (Elevator) Algorithm:</strong></p>
+<p>The disk arm moves in one direction, servicing requests along the way until it reaches the end, then reverses direction. It mimics the movement of an elevator. SCAN may lead to delays for requests located at the ends of the disk if there is continuous incoming traffic.</p>
+<p><strong>C-SCAN (Circular SCAN) Algorithm:</strong></p>
+<p>Similar to SCAN, but the arm returns to the starting position without servicing requests on the return journey. C-SCAN may lead to delays for requests located at the ends of the disk if there is continuous incoming traffic, similar to SCAN.</p>
+<p><strong>LOOK Algorithm:</strong></p>
+<p>Similar to SCAN, but the arm only reverses direction if there are no more requests in the current direction. LOOK addresses the convoy effect of SCAN but may still result in delays for some requests.</p>
+<p><strong>Best but Impractical Disk Scheduling Algorithm:</strong></p>
+<p>The &#8220;Shortest Access Time First&#8221; (SATF) or &#8220;Shortest Positioning Time First&#8221; (SPTF) algorithm is theoretically the best but impractical. It would involve predicting the future position of the disk arm based on the expected time to reach each request and servicing the request with the shortest predicted positioning time. While this would minimize seek time and maximize disk efficiency, it is impractical because accurately predicting future disk arm positions is challenging, and the overhead of predicting and recalculating continuously would outweigh the benefits.</p>
+<p><strong>Example of SATF Algorithm:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Predict Future Positions:</strong> Predict the future positions of the disk arm for each pending request based on current speed, acceleration, and other factors.</li>
+<li><strong>Select Shortest Predicted Positioning Time:</strong> Choose the request with the shortest predicted positioning time as the next request to be serviced.</li>
+<li><strong>Repeat the Process:</strong> Continuously predict and select requests based on the shortest predicted positioning time.</li>
+</ol>
+<p>While SATF is theoretically optimal, the challenges of accurate prediction and constant recalculation make it impractical for real-world disk scheduling. Instead, simpler algorithms like SSTF, SCAN, C-SCAN, and LOOK are commonly used in practice, balancing simplicity and effectiveness.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How threads differ from processes? Explain thread usages.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Thread</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Process</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">A basic unit of execution within a process.</td>
+<td style="width: 50%;">An independent program in execution.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Threads share the same memory space and resources but have their execution context.</td>
+<td style="width: 50%;">It has its memory space, resources, and is managed by the operating system.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Threads within a process share the same memory space, allowing them to communicate and share data more easily.</td>
+<td style="width: 50%;">Each process has its separate memory space. Processes do not share memory directly with each other.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Lower resource overhead, as threads within a process share resources and have less isolation.</td>
+<td style="width: 50%;">Higher resource overhead, as each process has its own memory space, file descriptors, and system resources.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Threads within the same process can communicate through shared memory, making communication more efficient.</td>
+<td style="width: 50%;">Inter-process communication (IPC) mechanisms, such as message passing or shared files, are used for communication between processes.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Independent entities with their execution state. Processes are more isolated from each other.</td>
+<td style="width: 50%;">Threads share the same execution state within a process. They are more tightly connected and dependent on each other.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Thread Usages:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Parallelism: </strong>Threads can be used to achieve parallelism in a program by dividing tasks among multiple threads. Each thread works on a specific part of the overall task simultaneously.</li>
+<li><strong>Multitasking: </strong>Threads within a process can be used for multitasking, allowing the program to perform multiple operations concurrently. For example, a web browser may use threads for handling user interface interactions and fetching data from the internet simultaneously.</li>
+<li><strong>Efficiency: </strong>Threads can improve the efficiency of a program by allowing concurrent execution of tasks. For instance, in a server application, threads can handle multiple client requests concurrently, improving responsiveness.</li>
+<li><strong>Shared Resources: </strong>Threads can be employed to share resources and data efficiently within a process. This can enhance communication and collaboration between different components of a program.</li>
+<li><strong>Responsive User Interfaces: </strong>In graphical user interface (GUI) applications, threads can be used to keep the user interface responsive while performing background tasks. For example, a file download can occur in a separate thread while the main thread handles user interactions.</li>
+<li><strong>Modularity: </strong>Threads allow for modular design by breaking down complex tasks into smaller, more manageable threads. Each thread can focus on a specific aspect of the task, improving code organization and maintainability.</li>
+<li><strong>Asynchronous Programming: </strong>Threads can be employed for asynchronous programming, enabling non-blocking execution. This is particularly useful in scenarios where waiting for a task to complete would cause delays.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a) Linux Scheduling</p>
+<p>b) Fragmentation</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a) Linux Scheduling:</strong></p>
+<p>Linux uses a dynamic priority-based scheduling algorithm that aims to provide fair and efficient CPU utilization for processes. The Linux scheduler is part of the kernel&#8217;s process management system, and its primary goal is to allocate CPU time to processes in a way that optimizes system performance and responsiveness.</p>
+<p><strong>Key Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Completely Fair Scheduler (CFS):</strong> The main scheduling policy in Linux is the Completely Fair Scheduler, which allocates CPU time based on the concept of fairness. It strives to distribute CPU time equally among active processes, ensuring that each process gets a fair share.</li>
+<li><strong>Time-sharing:</strong> Linux supports time-sharing scheduling, allowing multiple processes to share the CPU in a time-sliced manner. Each process is given a time quantum during which it can execute.</li>
+<li><strong>Priority Levels:</strong> Processes are assigned priority levels, ranging from -20 (highest priority) to +19 (lowest priority). The priority of a process is dynamically adjusted based on its recent CPU usage.</li>
+<li><strong>Real-time Scheduling:</strong> Linux also supports real-time scheduling policies for processes with strict timing requirements. Real-time tasks are given higher priority and can preempt non-real-time tasks.</li>
+<li><strong>Scheduling Classes:</strong> Linux provides different scheduling classes, such as the Completely Fair Scheduler (CFS) for general-purpose tasks and the Round Robin (RR) scheduler for real-time tasks.</li>
+</ol>
+<p><strong>b) Fragmentation:</strong></p>
+<p>Fragmentation refers to the division of memory into small, non-contiguous blocks, making it challenging to allocate large contiguous blocks of memory, even when the total free memory is sufficient. Fragmentation can occur in both primary memory (RAM) and secondary memory (disk).</p>
+<p><strong>Types of Fragmentation:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Internal Fragmentation:</strong> Occurs when allocated memory blocks have unused space, leading to inefficient memory utilization. Example<strong>:</strong> In fixed-size partitioning, if a process requires less memory than the partition size, the remaining space is wasted.</li>
+<li><strong>External Fragmentation:</strong> Arises when free memory is scattered throughout the system, making it difficult to find contiguous blocks for larger allocations. Example<strong>:</strong> In dynamic memory allocation, if small gaps exist between allocated blocks, it may be challenging to allocate a larger block that requires contiguous space.</li>
+</ol>
+</div>
+</body></html>

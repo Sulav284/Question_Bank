@@ -1,0 +1,313 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOC Question Bank 2080 new 2080</title>
+    </head>
+    <body>
+        <h1>TOC Question Bank 2080 new - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Describe the extended transition function of NFA. Construct a NFA, using transition table and transition diagram , over  {0, 1} that accept the string having substring 01 and ends with 1. Show the acceptance of 0111.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The extended transition function is a function that takes a state q and a string of input symbol w and returns the set of states. In DFA it returns a single state but NFA can return multiple states.</p>
+<p>for example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37862 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/extendedNFA.drawio.png?resize=384%2C106&#038;ssl=1" alt="" width="384" height="106"></p>
+<p>Now computing for δ<sup>^</sup>(q<sub>0</sub>, 01101)</p>
+<p>solution:</p>
+<p style="text-align: center;"> δ<sup>^</sup>(q<sub>0</sub>, 01101)</p>
+<p style="text-align: center;"> δ<sup>^</sup>(q<sub>0</sub>, ε) = {q<sub>0</sub>}</p>
+<p style="text-align: center;">δ<sup>^</sup>(q<sub>0</sub>, 0) = {q<sub>0, </sub>q<sub>1</sub>}</p>
+<p style="text-align: center;">δ<sup>^</sup>(q<sub>0</sub>, 01) = δ{q<sub>0, </sub>1} U δ{q<sub>1, </sub>1} = {q<sub>0</sub>} U {q<sub>1</sub>} = {q<sub>0</sub>, q<sub>1</sub>}</p>
+<p style="text-align: center;">δ<sup>^</sup>(q<sub>0</sub>, 011) = δ{q<sub>0, </sub>1} U δ{q<sub>2, </sub>1} = {q<sub>0</sub>} U {Φ} = {q<sub>0</sub>}</p>
+<p style="text-align: center;">δ<sup>^</sup>(q<sub>0</sub>, 0110) = δ{q<sub>0, </sub>0} = {q<sub>0</sub>, q<sub>1</sub>}</p>
+<p style="text-align: center;">δ<sup>^</sup>(q<sub>0</sub>, 01101) = δ{q<sub>0, </sub>1} U δ{q<sub>1, </sub>1}</p>
+<p style="text-align: center;">= {q<sub>0</sub>} U {q<sub>1</sub>}</p>
+<p style="text-align: center;">= {q<sub>0</sub>, q<sub>1</sub>}</p>
+<p style="text-align: center;">= Accepted.</p>
+<p>For other part,</p>
+<p>let w=w&#8217; where w&#8217; is the string having substring 01 and ends with 1.</p>
+<p>for NFA first we need to fulfill the basic condition so basic NFA will be as:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37869 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/nfa.drawio-1.png?resize=384%2C60&#038;ssl=1" alt="" width="384" height="60"></p>
+<p>The above fig show the basic NFA where the string has substring 01. Now for NFA which also ends with 1 will be as:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37870 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/editedNFA.drawio.png?resize=384%2C106&#038;ssl=1" alt="" width="384" height="106"></p>
+<p>now,</p>
+<p>transition table will be as:</p>
+<blockquote><div class="tiled-gallery type-rectangular tiled-gallery-unresized" data-original-width="500" data-carousel-extra='null' itemscope itemtype="http://schema.org/ImageGallery" > <div class="gallery-row" style="width: 500px; height: 577px;" data-original-width="500" data-original-height="577" > <div class="gallery-group images-1" style="width: 500px; height: 577px;" data-original-width="500" data-original-height="577" > <div class="tiled-gallery-item tiled-gallery-item-large" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> <a href="https://hamrocsit.com/question/37859/transition-table-drawio/" border="0" itemprop="url"> <meta itemprop="width" content="496"> <meta itemprop="height" content="573"> <img decoding="async" class="" data-attachment-id="37872" data-orig-file="https://hamrocsit.com/wp-content/uploads/2024/06/Transition-table.drawio.png" data-orig-size="265,306" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Transition table.drawio" data-image-description="" data-medium-file="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Transition-table.drawio.png?fit=265%2C306&#038;ssl=1" data-large-file="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Transition-table.drawio.png?fit=265%2C306&#038;ssl=1" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Transition-table.drawio.png?w=496&#038;h=573&#038;ssl=1" width="496" height="573" loading="lazy" data-original-width="496" data-original-height="573" itemprop="http://schema.org/image" title="Transition table.drawio" alt="Transition table.drawio" style="width: 496px; height: 573px;" /> </a> </div> </div> <!-- close group --> </div> <!-- close row --> </div>
+<p>for string o111 we need to show this as</p>
+<p>δ(q<sub>0, </sub>0111)</p>
+<p>= δ (δ(q<sub>0, </sub>0), 111)</p>
+<p>= δ(δ(δ(q<sub>0, </sub>0), 1),11)</p>
+<p>= δ(δ(δ(δ(q<sub>0, </sub>0), 1), 1), 1)</p>
+<p>=</p>
+<p>&nbsp;</p></blockquote>
+<p style="text-align: center;">
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define CFG. Construct a CFG that generates the language of all palindromes over {a,b} that do not contain the substring aa. Show the leftmost derevation and construct the equivalent parse tree for string babbbab.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A grammar is said to be context free if every rule has a non-terminal on the LHS. A context free grammar is a set of recursive rules used to generate patterns of strings.</p>
+<p>A grammar G = (V, T, P, S) is said to be context free grammar where,</p>
+<p>V = Finite set of non-terminal .</p>
+<p>T = Finite set of terminals.</p>
+<p>S = Starting symbol.</p>
+<p>P = Production rule.</p>
+<p>To construct a Context free grammar that generates the language of all palindromes over {a, b} that do not contain the substring &#8220;aa&#8221;, as follow:</p>
+<p>V = {S, A}</p>
+<p>T = {a, b}</p>
+<p>S = {S}</p>
+<p>P will be as,</p>
+<p style="text-align: center;">A→aAa|bAb|a|b|ε</p>
+<p style="text-align: center;">S→a|b|A|ε</p>
+<p>Hence, it is the required grammar for the palindrome. we need to ensure that the aa is not the substring of the string formed.</p>
+<p>now, for string babbbab</p>
+<p>S→A</p>
+<p>S→bAb                               ( A→bAb )</p>
+<p>S→baAab                           ( A→aAa )</p>
+<p>S→babAbab                       ( A→bAb )</p>
+<p>S→babbbab                        ( A→b )</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37895 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/parse-tree.drawio.png?resize=379%2C379&#038;ssl=1" alt="" width="379" height="379"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How Turing Machine is used as a computing function? Construct a TM for simulating a function f(x) = 2x for x = {1}. Itetrate the TM for input 11 and generate the output 1111.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Turing machine is a theoratical model which can be considered as a finite control machine connected to R/W head. It contain:</p>
+<ol style="list-style-type:decimal;">
+<li>A finite control.</li>
+<li>An input tape that is divided into cells.</li>
+<li>Tape head that scan one cell at a time.</li>
+</ol>
+<p>It is considered as a computing function as it can define a set of rules that describe how it processes input symbol and moves on its tape. It operates in discrete steps and can computefunctions through state transitions and tape manipulation, following the principles of algorithmic computation.</p>
+<p>Let, a Turing Machine be T then,</p>
+<p>T = (Q, Σ, ¬, δ, q<sub>0</sub>, B, f) where,</p>
+<p>Q = {q<sub>0</sub> , q<sub>1</sub> , q<sub>2</sub> , q<sub>3</sub> }</p>
+<p>Σ = {1}</p>
+<p>q<sub>0</sub> = {q<sub>0 </sub>}</p>
+<p>and now</p>
+<p>δ(q<sub>0</sub>, 1) = (q<sub>1</sub>, 1, R)</p>
+<p>δ(q<sub>1</sub>, 1) = (q<sub>2</sub>, 1, R)</p>
+<p>δ(q<sub>2</sub>, B) = (q<sub>3</sub>, 1, R)</p>
+<p>δ(q<sub>3</sub>, B) = (q<sub>3</sub>, 1, R)</p>
+<p>δ(q<sub>3</sub>, B) = (q<sub>0</sub>, B, L)</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37897" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Untitled-Diagram.drawio-1.png?resize=516%2C223&#038;ssl=1" alt="" width="516" height="223"></p>
+<p>itetrating the TM for input 11 and outpot 1111</p>
+<p>for input 11 starting with q<sub>0</sub></p>
+<p>δ(q<sub>0</sub>, 1) = (q<sub>1</sub>, 1, R)</p>
+<p>δ(q<sub>1</sub>, 1) = (q<sub>2</sub>, 1, R)</p>
+<p>δ(q<sub>2</sub>, B) = (q<sub>3</sub>, 1, R)</p>
+<p>δ(q<sub>3</sub>, B) = (q<sub>3</sub>, 1, R)</p>
+<p>hence, the output 1111 is obtained.</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Differentiate Kleen closure from positive closure. Compute positive and Kleen closure of {ab}.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 150px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Kleen closure</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Positiv Closure</strong></td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; text-align: center; height: 72px;">
+<ul style="list-style-type: square;">
+<li>The set of all the strings over an alphabet Σ with length &#8216;zero&#8217; i.e empty string is called Kleen closure.</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 72px;">
+<ul style="list-style-type: square;">
+<li>The set of all the strings over an alphabet Σ except empty string is considered as positive closure.</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 50%; text-align: center; height: 27px;">
+<ul style="list-style-type: square;">
+<li>It is denoted by Σ</li>
+</ul>
+<p><sup>*</sup>.</td>
+<td style="width: 50%; text-align: center; height: 27px;">
+<ul style="list-style-type: square;">
+<li>It is denoted by Σ</li>
+</ul>
+<p><sup>+</sup>.</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 50%; text-align: center; height: 27px;">
+<ul style="list-style-type: square;">
+<li>It is calculated as Σ<sup style="font-family: inherit;">*</sup><span style="font-family: inherit; font-size: inherit;"> = Σ</span><sup style="font-family: inherit;">0 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">1 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">2</sup><span style="font-family: inherit; font-size: inherit;"> U Σ</span><sup style="font-family: inherit;">3</sup></li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 27px;">
+<ul style="list-style-type: square;">
+<li>It is calculated as Σ<sup style="font-family: inherit;">+</sup><span style="font-family: inherit; font-size: inherit;"> = Σ</span><sup style="font-family: inherit;">1 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">2</sup><span style="font-family: inherit; font-size: inherit;"> U Σ</span><sup style="font-family: inherit;">3</sup></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>for given alphabet Σ = {a, b}</p>
+<p>kleen closure (Σ<sup style="font-family: inherit;">*</sup>) = <span style="font-family: inherit; font-size: inherit;">Σ</span><sup style="font-family: inherit;">0 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">1 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">2</sup><span style="font-family: inherit; font-size: inherit;"> U Σ</span><sup style="font-family: inherit;">3</sup></p>
+<p style="text-align: center;">={Φ} U {a , b} U {ab, ba, aa, bb} U &#8230;&#8230;&#8230;.</p>
+<p>Positive  closure (Σ<sup style="font-family: inherit;">+</sup>) = <span style="font-family: inherit; font-size: inherit;">Σ</span><sup style="font-family: inherit;">1 </sup><span style="font-family: inherit; font-size: inherit;">U Σ</span><sup style="font-family: inherit;">2</sup><span style="font-family: inherit; font-size: inherit;"> U Σ</span><sup style="font-family: inherit;">3</sup></p>
+<p style="text-align: center;">={a , b} U {ab, ba, aa, bb} U &#8230;&#8230;&#8230;.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Design a Melay machine over {a, b} that generates output ‘A’ if the input string ends with aa else output ‘B’ if the string ends with bb.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Melay Machine :</p>
+<p>Produces output, which depends on both current state ans input symbol. It also produces on output.</p>
+<p>∑ = {a, b},<br />
+Δ = {A, B},<br />
+Φ = means no output.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-46028 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/melay.drawio.png?resize=411%2C238&#038;ssl=1" alt="" width="411" height="238"></p>
+<p style="text-align: center;"><strong>fig : Melay machine over {a, b} that generates output Δ = {A, B}</strong></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Construct regular expression over {1,2,….9} that represents</p>
+<ol>
+<li>strings of even numbers with length 4 starting with 2 and ending with 8.</li>
+<li>strings starting with odd numbers and ending with even numbers.</li>
+</ol>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a.</p>
+<p>2 +[1-9] +[1-9]+ (2U4U6U8) + 8</p>
+<p>b.<br />
+(1U3U5U7U9)<sup>+</sup> + (2U4U6U8)<sup>+</sup></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Prove that th language L ={a<sup>n</sup> b<sup>n</sup> c<sup>n</sup> | n≥0} is not a context free grammar.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let us consider that L is context free then by pumping lemma we know that there exist a pumping length &#8216;p&#8217; such that</p>
+<p style="text-align: center;">string S ≤ p</p>
+<p>Here, let us represent the language as</p>
+<p style="text-align: center;">a<sup>p</sup> b<sup>2p</sup> c<sup>p</sup></p>
+<p>consider the value of power a and c are same</p>
+<p style="text-align: center;">S = xyz</p>
+<p style="text-align: center;">m = l+n</p>
+<p>the breaking of a<sup>p</sup> b<sup>2p</sup> c<sup>p </sup>in terms of xyz such that</p>
+<p style="text-align: center;">|xy|≤p</p>
+<p style="text-align: center;">|y|≥0</p>
+<p style="text-align: left;">now,</p>
+<p style="text-align: center;">x = a<sup>l</sup></p>
+<p style="text-align: center;">y = a<sup>m</sup></p>
+<p style="text-align: center;">z = b<sup>2p</sup> c<sup>p</sup></p>
+<p>then,</p>
+<p style="text-align: center;">l+m = p</p>
+<p>now, for checking xy<sup>i</sup>z then let us pump y by 2. so, i=2</p>
+<p style="text-align: center;">xy<sup>2</sup>z = a<sup>l</sup> (a<sup>m</sup>)<sup>2 </sup>b<sup>2p</sup> c<sup>p </sup></p>
+<p style="text-align: center;">= a<sup>l</sup> a<sup>m </sup> a<sup>m</sup><sup> </sup><sup> </sup>b<sup>2p</sup> c<sup>p </sup></p>
+<p style="text-align: center;">= a<sup>l+m</sup> <sup> </sup>b<sup>2p</sup> c<sup>p </sup>a<sup>m</sup></p>
+<p style="text-align: center;">= a<sup>p</sup> <sup> </sup>b<sup>2p</sup> c<sup>p </sup>a<sup>m </sup> ∉ L</p>
+<p>hence, L is not a context free.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Construct a PDA that accepts string over Σ ={a,b} that contains equal number of a’s followed by equal number of b’s. Show acceptance of aabb and aab.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3></h3>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-35866 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/04/pda.drawio.png?resize=302%2C196&amp;ssl=1" alt="- Hamro CSIT" width="302" height="196" data-recalc-dims="1" /></p>
+<p>This language accepts L = {ε, ab, aabb, aaabbb, ……………………….. }</p>
+<p>Here, in this example, the number of <b>‘a’</b> and <b>‘b’</b> have to be same.</p>
+<ul class="list">
+<li>Initially we put a special symbol <b>‘$’</b> into the empty stack.</li>
+<li>Then at state <b>q<sub>2</sub></b>, if we encounter input 0 and top is Null, we push 0 into stack. This may iterate. And if we encounter input 1 and top is 0, we pop this 0.</li>
+<li>Then at state <b>q<sub>3</sub></b>, if we encounter input 1 and top is 0, we pop this 0. This may also iterate. And if we encounter input 1 and top is 0, we pop the top element.</li>
+<li>If the special symbol ‘$’ is encountered at top of the stack, it is popped out and it finally goes to the accepting state q<sub>4</sub>.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe how multi-stack TM is different from the semi-infinite tape TM?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Multi-stack TM</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>semi-infinite tape TM</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>It has multiple stacks (typically two or more), each of which operates independently like a standard stack data structure.</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>It has a single tape that extends infinitely in one direction (usually to the right).</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>It can push symbols onto and pop symbols off of each stack independently.</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>The tape provides a linear, sequential storage mechanism, unlike the independent stacks of a multi-stack TM.</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>With multiple stacks, it can manage more complex computations efficiently, particularly tasks that benefit from parallel stack operations.</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>It is equivalent in computational power to the standard single-tape Turing Machine.</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>Useful for problems that involve nested structures or require efficient management of multiple independent data structures simultaneously (e.g., parsing nested expressions, simulating recursive function calls).</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center; height: 24px;">
+<ul style="list-style-type: square;">
+<li>Commonly used in theoretical computer science to explore fundamental questions about computability and complexity, though its practical applications are more limited compared to multi-stack TMs.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is intractability? Define time and space complexity of turing machine.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-size: 12pt;">Intractability is a technique for solving problems not to be solvable in polynomial time. The problem that can be solved within a reasonable time and space constraints is called tractable.</span></p>
+<h2>Time and Space Complexity of a Turing Machine</h2>
+<p>For a Turing machine, the time complexity refers to the measure of the number of times the tape moves when the machine is initialized for some input symbols and the space complexity is the number of cells of the tape written.</p>
+<p>Time complexity all reasonable functions −</p>
+<p><b>T(n) = O(n log n)</b></p>
+<p>TM’s space complexity −</p>
+<p><b>S(n) = O(n)</b></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How conversion of PDA to CFG done ? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_135617_CamScanner.jpg?resize=895%2C290&amp;ssl=1" alt="- Hamro CSIT" /></p>
+<p><img decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_124640_CamScanner.jpg?resize=882%2C1375&amp;ssl=1" alt="- Hamro CSIT" /></p>
+<p><img decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230927_124700_CamScanner.jpg?resize=887%2C826&amp;ssl=1" alt="- Hamro CSIT" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>State Arden’s theorem. Convert following DFA into its regular expression using Arden theorem.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37900 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Ardens.drawio.png?resize=242%2C211&ssl=1" alt="" width="242" height="211"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>This method is used to find regular expression recognized by a transaction system. According to Arden&#8217;s theorem for regular expression P and Q over alphabets if P doesn&#8217;t contain any empty string then</p>
+<p>R = Q + RP have a unique solution R = QP*</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-46035 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/ardhen.png?resize=258%2C199&#038;ssl=1" alt="" width="258" height="199"></p>
+<p>let us consider,q<sub>1</sub>= Q<sub>1, </sub>q<sub>2</sub>= Q<sub>2, </sub>q<sub>3</sub>= Q<sub>3 </sub>in above diagram</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Let us write equation for each state</p>
+<p>Q<sub>1</sub> = ε+ Q<sub>1</sub>0 + Q<sub>3</sub>0</p>
+<p>Q<sub>2</sub> = Q<sub>1</sub>1 + Q<sub>2</sub>1 +Q<sub>3</sub>1</p>
+<p>Q<sub>3</sub> = Q<sub>2</sub>0</p>
+<p>Now,</p>
+<p>Q<sub>2</sub> = Q<sub>1</sub>1 + Q<sub>2</sub>1 + (Q<sub>2</sub>0) 1</p>
+<p>Q<sub>2</sub> = Q<sub>1</sub>1 + Q<sub>2</sub>1 + (Q<sub>2</sub>0) 1</p>
+<p>Q<sub>2</sub> = Q<sub>1</sub>1 <sub> </sub>(1 + 0 1*)</p>
+<p>for Q<sub>1</sub></p>
+<p>Q<sub>1</sub> = ε+ Q<sub>1</sub>0 + Q<sub>3</sub>0</p>
+<p>Q<sub>1</sub> = ε+ Q<sub>1</sub>0 + (Q<sub>2</sub>0)0</p>
+<p>Q<sub>1</sub> = ε+ Q<sub>1</sub>0 + (Q<sub>1</sub>1 (1 + 01*))00</p>
+<p>Q<sub>1</sub> = ε+ Q<sub>1 </sub>(0 + 1<sub> </sub>(1 + 01*)00)*</p>
+<p>compearing it with R = Q + RP so,</p>
+<p>R = Q<sub>1</sub></p>
+<p>Q = ε</p>
+<p>P = (0 + 1<sub> </sub>(1 + 01*)00)*</p>
+<p>Now we can write the unique soln as,</p>
+<p>R = QP*</p>
+<p>Q<sub>1 </sub>= ε (0 + 1(1 + 01*)00)*</p>
+<p>Q<sub>1 </sub>= (0 + 1(1 + 01*)00)*</p>
+<p>hence, above is the required answer.</p>
+</div>
+</body></html>

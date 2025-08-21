@@ -1,0 +1,375 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Model Question 0</title>
+    </head>
+    <body>
+        <h1>DBMS Model Question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Consider the following database and write SQL as given:</p>
+<p>Customer (Cno, Cname, Caddress, Ccontact)</p>
+<p>Purchase (Cno, Pid)</p>
+<p>Product (Pid, Pname, price, quantity)</p>
+<p>a. Find the names of all products having price 1000.</p>
+<p>b. Find the name of those customers who purchased Dell Laptop</p>
+<p>c. Find the total number of products purchased by customer ‘Ram’</p>
+<p>d. Increase price of all products by 5%</p>
+<p>e. Find total price of Apple Mobiles.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a.</p>
+<p>SELECT Pname<br />
+FROM Product<br />
+WHERE price = 1000;</p>
+<p>b.</p>
+<p>SELECT Cname</p>
+<p>FROM Customer NATURAL JOIN Purchase NATURAL JOIN Product</p>
+<p>WHERE Pname = &#8220;Dell Laptop&#8221;;</p>
+<p>c.</p>
+<p>SELECT COUNT(Pid) AS TotalPurchases<br />
+FROM Purchase<br />
+WHERE Cno IN (<br />
+SELECT Cno<br />
+FROM Customer<br />
+WHERE Cname = &#8216;Ram&#8217;<br />
+);</p>
+<p>d.</p>
+<p>UPDATE Product<br />
+SET price = price * 0.05;</p>
+<p>e.</p>
+<p>SELECT SUM(price)</p>
+<p>FROM Product</p>
+<p>WHERE Pname = &#8220;Apple Mobiles&#8221;;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the benefits of using normalization? Discuss 1NF, 2NF, and 3NF with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Normalization</strong> is the process of organizing data in the database. It is the process of decomposing relations with anomalies to produce well-structured relations.</p>
+<p>Normalization is important for the following purposes:</p>
+<p>1. To avoid redundancy by storing each fact within the database only once<br />
+2. To put data into a form that is more able to accurately accommodate change<br />
+3. To avoid certain updating “anomalies”<br />
+4. To facilitate the enforcement of data constraints.<br />
+5. To avoid unnecessary coding. Extra programming in tiggers, and stored procedures can be required to handle the non-normalized data and this in turn can impair performance significantly.</p>
+<p>&nbsp;</p>
+<p><strong>1 NF</strong></p>
+<p>A table is in the first normal form (1NF) if and only if all columns contain only atomic values: i.e, there are no repeating groups (columns) within a row.</p>
+<p>It is to be noted that all entries in a field must be of same kind and each field must have a unique name, but the order of the field (column) is irrelevant.</p>
+<p>Each column must be unique and the order of the rows is irrelevant.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25876" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/1.jpg?resize=300%2C187&#038;ssl=1" alt="" width="300" height="187"></p>
+<p><strong>2 NF</strong></p>
+<p>A table is in second normal form (2NF) if and only if :</p>
+<ul style="list-style-type: square;">
+<li>It is in 1NF and</li>
+<li>Every non-key attribute is fully dependent on the primary key.i.e. It should not have partial dependency.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25877" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/2.jpg?resize=398%2C110&#038;ssl=1" alt="" width="398" height="110"></p>
+<p>Here, score_id should be a primary key but student_id + subject_id together makes a more meaningful primary key. student_id + subject_id can uniquely identify any row of data in score table teacher column only depends on subject and not on student. This is called partial dependency.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25878" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/2.1.jpg?resize=362%2C197&#038;ssl=1" alt="" width="362" height="197"></p>
+<p><strong>3 NF</strong></p>
+<p>A table is in Third Normal Form (3NF) if and only if:</p>
+<ul style="list-style-type: square;">
+<li>The relation must be in 2NF and</li>
+<li>no transitive dependencies exist within the relation.</li>
+</ul>
+<p>A transitive dependency is when an attribute is indirectly functionally dependent on the key (that is, the dependency is through another non-key attribute).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25880" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/33.jpg?resize=351%2C46&#038;ssl=1" alt="" width="351" height="46"></p>
+<p>Here, exam_name is just another column in the score table. It is not a primary key or even a part of the primary key, and total_marks depends on it. This is a transitive dependency. When a non-prime attribute depends on other non-prime attributes rather than depending upon prime attributes or primary key.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25879" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/3.jpg?resize=368%2C228&#038;ssl=1" alt="" width="368" height="228"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Relational Algebra and explain its six fundamental operations with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Relational Algebra</strong> is a theoretical language and a set of operations used to manipulate and query relations (tables) in a relational database. These operations form the basis for performing various operations on relational databases. There are six fundamental operations in relational algebra:</p>
+<p><strong>Selection (σ):</strong></p>
+<p>Selects rows from a relation that satisfy a given condition.</p>
+<p><strong>Symbol:</strong> σ&lt;sub&gt;condition&lt;/sub&gt;(relation)</p>
+<p><strong>Example:</strong> Retrieve all customers who are located in &#8216;New York&#8217;.</p>
+<p>σ&lt;sub&gt;Caddress=&#8217;New York'&lt;/sub&gt;(Customer)</p>
+<p><strong>Projection (π):</strong></p>
+<p><strong>Definition:</strong> Selects specific columns from a relation.</p>
+<p><strong>Symbol:</strong> π&lt;sub&gt;column1, column2, &#8230;&lt;/sub&gt;(relation)</p>
+<p><strong>Example:</strong> Retrieve the names and addresses of all customers.</p>
+<p>π&lt;sub&gt;Cname, Caddress&lt;/sub&gt;(Customer)</p>
+<p><strong>Union (∪):</strong></p>
+<p><strong>Definition:</strong> Combines tuples from two relations, removing duplicates.</p>
+<p><strong>Symbol:</strong> relation1 ∪ relation2</p>
+<p><strong>Example:</strong> Retrieve the union of customers who made a purchase and customers located in &#8216;New York&#8217;.</p>
+<p>Purchase ∪ σ&lt;sub&gt;Caddress=&#8217;New York'&lt;/sub&gt;(Customer)</p>
+<p><strong>Set Difference (-):</strong></p>
+<p><strong>Definition:</strong> Retrieves tuples in the first relation that are not present in the second relation.</p>
+<p><strong>Symbol:</strong> relation1 &#8211; relation2</p>
+<p><strong>Example:</strong> Retrieve customers who haven&#8217;t made a purchase.</p>
+<p>Customer &#8211; Purchase</p>
+<p><strong>Cartesian Product (×):</strong></p>
+<p><strong>Definition:</strong> Combines all possible pairs of tuples from two relations.</p>
+<p><strong>Symbol:</strong> relation1 × relation2</p>
+<p><strong>Example:</strong> Retrieve all possible combinations of customers and products.</p>
+<p>Customer × Product</p>
+<p><strong>Renaming (ρ):</strong></p>
+<p><strong>Definition:</strong> Renames the attributes of a relation or the relation itself.</p>
+<p><strong>Symbol:</strong> ρ&lt;sub&gt;new_name(attribute1, attribute2, &#8230;)&lt;/sub&gt;(relation)</p>
+<p><strong>Example:</strong> Rename the &#8216;Cname&#8217; attribute in the Customer relation to &#8216;CustomerName&#8217;.</p>
+<p>ρ&lt;sub&gt;CustomerName(Cno, CustomerName, Caddress, Ccontact)&lt;/sub&gt;(Customer)</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is database schema? What are functions of database administrator?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>database schema</strong> is a blueprint or a structural plan that defines the organization and arrangement of data in a database system. It represents the logical and physical structure of the database, including tables, fields, relationships, constraints, and other elements.</p>
+<p>Some of the key functions of a Database Administrator include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Database Design:</strong>
+<ul style="list-style-type: square;">
+<li>Designing the database schema to meet the requirements of the organization.</li>
+<li>Ensuring that the database structure is efficient and supports data integrity.</li>
+</ul>
+</li>
+<li><strong>Installation and Configuration:</strong>
+<ul style="list-style-type: square;">
+<li>Installing and configuring database management systems (DBMS) based on the organization&#8217;s needs.</li>
+<li>Setting up and optimizing database parameters for performance.</li>
+</ul>
+</li>
+<li><strong>Data Security:</strong>
+<ul style="list-style-type: square;">
+<li>Implementing and managing security measures to protect the database from unauthorized access.</li>
+<li>Assigning user roles and privileges to control data access.</li>
+</ul>
+</li>
+<li><strong>Backup and Recovery:</strong>
+<ul style="list-style-type: square;">
+<li>Implementing backup and recovery procedures to prevent data loss in case of system failures.</li>
+<li>Testing and validating backup and recovery processes regularly.</li>
+</ul>
+</li>
+<li><strong>Performance Monitoring and Tuning:</strong>
+<ul style="list-style-type: square;">
+<li>Monitoring database performance and identifying areas for improvement.</li>
+<li>Implementing optimization techniques to enhance database performance.</li>
+</ul>
+</li>
+<li><strong>Database Maintenance:</strong>
+<ul style="list-style-type: square;">
+<li>Performing routine maintenance tasks, such as indexing, data purging, and reorganization.</li>
+<li>Ensuring the overall health and stability of the database system.</li>
+</ul>
+</li>
+<li><strong>Troubleshooting and Problem Resolution:</strong>
+<ul style="list-style-type: square;">
+<li>Identifying and resolving issues related to database functionality and performance.</li>
+<li>Responding to and addressing database-related incidents promptly.</li>
+</ul>
+</li>
+<li><strong>Database Documentation:</strong>
+<ul style="list-style-type: square;">
+<li>Creating and maintaining documentation for database structures, configurations, and procedures.</li>
+<li>Ensuring that documentation is up-to-date and accessible to relevant personnel.</li>
+</ul>
+</li>
+<li><strong>Data Migration and Upgrades:</strong>
+<ul style="list-style-type: square;">
+<li>Planning and executing database migrations or upgrades to new versions.</li>
+<li>Ensuring a smooth transition of data and functionality during upgrades.</li>
+</ul>
+</li>
+<li><strong>Collaboration with Developers and Analysts:</strong>
+<ul style="list-style-type: square;">
+<li>Collaborating with application developers and data analysts to understand and meet database requirements.</li>
+<li>Providing support and expertise to application development teams.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Construct an E-R diagram for online course registration where students register courses online.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-35874" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/online-reg-er-.drawio.png?resize=633%2C343&#038;ssl=1" alt="" width="633" height="343"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Discuss referential integrity with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Referential Integrity:</strong></p>
+<p>Referential integrity is a concept in relational database design that ensures the consistency and accuracy of relationships between tables. It is based on the idea that foreign key values in one table must match primary key values in another table. In other words, it ensures that relationships between tables are valid and that there are no orphaned or dangling references.</p>
+<p>Key points related to referential integrity:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Foreign Key Constraint:</strong>
+<ul style="list-style-type: square;">
+<li>A foreign key is a column or a set of columns in a table that refers to the primary key of another table.</li>
+<li>It establishes a link between the two tables, creating a relationship.</li>
+</ul>
+</li>
+<li><strong>Primary Key-foreign Key Relationship:</strong>
+<ul style="list-style-type: square;">
+<li>The foreign key in one table refers to the primary key in another table, creating a parent-child relationship.</li>
+<li>The table containing the primary key is the parent table, and the table containing the foreign key is the child table.</li>
+</ul>
+</li>
+<li><strong>Enforcement of Relationships:</strong>
+<ul style="list-style-type: square;">
+<li>Referential integrity is enforced through the use of foreign key constraints.</li>
+<li>The foreign key constraint ensures that values in the foreign key column must match values in the referenced primary key column.</li>
+</ul>
+</li>
+<li><strong>Actions on Update or Delete:</strong>
+<ul style="list-style-type: square;">
+<li>Referential integrity constraints often include actions to be taken on update or delete of the referenced primary key.</li>
+<li>Common actions include cascading updates or deletes, setting null values, or restricting the operation.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<p>Consider two tables: Customer and Purchase.</p>
+<p>CREATE TABLE Customer (<br />
+Cno INT PRIMARY KEY,<br />
+Cname VARCHAR(255),<br />
+Caddress VARCHAR(255),<br />
+Ccontact VARCHAR(15)<br />
+);</p>
+<p>CREATE TABLE Purchase (<br />
+Pid INT PRIMARY KEY,<br />
+Cno INT,<br />
+FOREIGN KEY (Cno) REFERENCES Customer(Cno) ON DELETE CASCADE<br />
+);</p>
+<p>In this example:</p>
+<ul style="list-style-type: square;">
+<li>The Customer table has a primary key Cno.</li>
+<li>The Purchase table has a primary key Pid and a foreign key Cno that references the Cno in the Customer table.</li>
+<li>The ON DELETE CASCADE clause specifies that if a customer is deleted from the Customer table, all corresponding purchases in the Purchase table associated with that customer will be automatically deleted.</li>
+</ul>
+<p>This ensures referential integrity: a purchase cannot exist without a corresponding customer, and if a customer is deleted, their purchases are also removed to maintain consistency.</p>
+<p>For instance, if we attempt to delete a customer with associated purchases without the ON DELETE CASCADE clause, the database would reject the operation due to referential integrity constraints.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is functional dependency? Why do we need inference rules?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Functional dependency</strong> is a relationship between two sets of attributes in a relation. It describes how the values of one set of attributes uniquely determine the values of another set of attributes. A functional dependency is denoted as A → B, where A and B are sets of attributes. This means that for every combination of values of attributes in A, there is a unique combination of values in B.</p>
+<p>For example, consider a relation R with attributes A, B, and C, where A → B:</p>
+<p>R(A, B, C)<br />
+1. A1 B1 C1<br />
+2. A2 B2 C2<br />
+3. A1 B3 C3</p>
+<p>In this case, knowing the value of A uniquely determines the value of B. If A1 → B1, and A2 → B2, then the functional dependency holds.</p>
+<p><strong>Inference Rules:</strong></p>
+<p>Inference rules in the context of relational databases are used to derive additional functional dependencies from a given set of functional dependencies. These rules help in analyzing and understanding the relationships between attributes in a database schema. Some common inference rules include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Reflexivity: </strong>If B is a subset of A, then A → B.</li>
+<li><strong>Augmentation: </strong>If A → B, then AC → BC (where C is an additional set of attributes).</li>
+<li><strong>Transitivity: </strong>If A → B and B → C, then A → C.</li>
+<li><strong>Union: </strong>If A → B and A → C, then A → BC.</li>
+<li><strong>Decomposition: </strong>If A → BC, then A → B and A → C.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why do we need concurrency control? Discuss two phase locking protocol.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Concurrency control</strong> is a crucial aspect of database management systems (DBMS) that ensures the consistency and integrity of data in a multi-user environment where multiple transactions can be executed concurrently. The need for concurrency control arises due to several reasons:</p>
+<p><strong>Multiple Concurrent Transactions: </strong>In a multi-user database system, multiple transactions can be executed simultaneously. Without proper concurrency control, these transactions may interfere with each other, leading to data inconsistency and errors.</p>
+<p><strong>Isolation of Transactions: </strong>Each transaction should execute independently of other transactions, without being aware of or affecting the concurrent transactions. Concurrency control mechanisms ensure the isolation of transactions, preventing interference and maintaining the ACID properties (Atomicity, Consistency, Isolation, Durability) of transactions.</p>
+<p><strong>Data Consistency: </strong>Concurrent execution of transactions can lead to conflicts when multiple transactions attempt to read or modify the same data simultaneously. Concurrency control mechanisms prevent such conflicts and ensure that the final state of the database is consistent.</p>
+<p><strong>Preventing Lost Updates: </strong>Without proper concurrency control, simultaneous updates by multiple transactions might result in lost updates. Concurrency control mechanisms help in coordinating access to data to prevent one transaction&#8217;s updates from being overwritten by another.</p>
+<p><strong>Deadlocks and Resource Contention: </strong>Concurrent execution of transactions can lead to situations where transactions are waiting for each other, resulting in a deadlock. Concurrency control mechanisms detect and resolve deadlocks, ensuring that transactions can proceed without being blocked indefinitely.</p>
+<p><strong>Maintaining Transaction Atomicity: </strong>Transactions must be atomic, meaning they are either fully completed or fully rolled back. Concurrency control mechanisms help in managing transactions to ensure that even in a concurrent environment, the atomicity of transactions is maintained.</p>
+<p><strong>Serializability: </strong>Concurrency control ensures that the execution of concurrent transactions is equivalent to some serial order of their execution. This property, known as serializability, ensures that the final state of the database is the same as if transactions were executed one after the other in some order.</p>
+<p><strong>Optimistic and Pessimistic Concurrency Control: </strong>Concurrency control mechanisms provide different strategies to balance between optimistic and pessimistic approaches. Optimistic concurrency control assumes that conflicts are rare and defers conflict resolution until the end of the transaction, while pessimistic concurrency control involves locking data during a transaction to prevent conflicts.</p>
+<p>Two-Phase Locking (2PL) is a concurrency control mechanism used in database management systems to ensure that transactions are executed in a way that maintains data consistency. It consists of two phases: the &#8220;Growing Phase&#8221; and the &#8220;Shrinking Phase.&#8221; In Two-Phase Locking, transactions follow specific rules regarding when they can acquire and release locks on data items.</p>
+<p>The different types of locks in Two-Phase Locking are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>Shared Lock (S-lock): This type of lock allows multiple transactions to read a data item simultaneously but prevents any transaction from writing to it until the lock is released. Shared locks are denoted as &#8220;S.&#8221;</li>
+<li>Exclusive Lock (X-lock): An exclusive lock allows only one transaction to have both read and write access to a data item. While a data item has an exclusive lock, no other transaction can obtain any type of lock on it. Exclusive locks are denoted as &#8220;X.&#8221;</li>
+</ol>
+<p>Now, let&#8217;s explain some variations of Two-Phase Locking:</p>
+<p>a. Basic Two-Phase Locking: In basic 2PL, transactions can acquire locks as needed during their execution but cannot release any locks until they have acquired all the required locks. Once all locks are acquired, the transaction can proceed with its operations. After completing its operations, the transaction releases all its locks.</p>
+<p>b. Conservative Two-Phase Locking: Conservative 2PL is a stricter variant of basic 2PL. In conservative 2PL, transactions must specify all the locks they need at the beginning (before acquiring any locks) and then attempt to acquire them all at once. If any requested lock cannot be acquired immediately, the transaction releases all previously acquired locks and starts over.</p>
+<p>c. Strict Two-Phase Locking: In strict 2PL, a transaction cannot release any lock once acquired. This means that a transaction holds all of its locks until it completes and commits or aborts. Strict 2PL ensures serializability but may lead to resource contention.</p>
+<p>d. Rigorous Two-Phase Locking: Rigorous 2PL combines aspects of strict 2PL and conservative 2PL. Transactions declare all the locks they need upfront, like in conservative 2PL, but they release locks once they are no longer needed, like in basic 2PL. This approach aims to strike a balance between strictness and efficiency.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Why do we need database recovery? Discuss shadow paging technique for database recovery.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Database recovery</strong> is essential to ensure the durability and consistency of a database system in the face of failures, crashes, or errors. The need for database recovery arises due to various reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>System Failures: </strong>Unexpected system failures, such as power outages or hardware malfunctions, can cause the database system to crash. Recovery mechanisms help bring the database back to a consistent state after such failures.</li>
+<li><strong>Transaction Failures: </strong>Transactions may encounter errors or be aborted due to various reasons. Recovery mechanisms ensure that the database returns to a consistent state, either by undoing the effects of incomplete transactions or by completing committed transactions.</li>
+<li><strong>Human Errors: </strong>Accidental deletion or modification of data by users or administrators can lead to data inconsistency. Recovery mechanisms provide a way to roll back or correct such errors.</li>
+<li><strong>Software Bugs: </strong>Bugs or errors in the database management system software can potentially corrupt the data or compromise the integrity of the database. Recovery mechanisms help mitigate the impact of software-related issues.</li>
+<li><strong>Data Corruption: </strong>Physical or logical corruption of data can occur due to various reasons. Database recovery helps restore the database to a healthy state by identifying and correcting corrupted data.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Shadow paging</strong> is a simple technique for database recovery that involves maintaining a shadow or copy of the entire database. The key idea is to use two copies of the database: the current database and a shadow copy. Changes made by transactions are applied to the shadow copy, and when a transaction is committed, the shadow copy becomes the new current database.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-30494" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/shad.png?resize=309%2C167&#038;ssl=1" alt="" width="309" height="167"></p>
+<p>Here are the main steps involved in the shadow paging technique:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Page Table: </strong>Maintain a page table that maps logical page numbers to their corresponding physical locations in both the current database and the shadow copy.</li>
+<li><strong>Shadow Copy: </strong>Create a shadow copy of the entire database. Initially, the current database and the shadow copy are identical.</li>
+<li><strong>Transaction Execution: </strong>When a transaction modifies data, the changes are applied to the corresponding pages in the shadow copy, leaving the current database unchanged.</li>
+<li><strong>Commit Operation: </strong>When a transaction is committed, update the page table to point to the new locations in the shadow copy. The shadow copy becomes the new current database.</li>
+<li><strong>Abort Operation: </strong>If a transaction is aborted or encounters an error, simply discard the changes made in the shadow copy, and the current database remains unchanged.</li>
+<li><strong>Recovery: </strong>In the event of a system failure or crash, the recovery process involves discarding the changes made in the shadow copy and reverting to the previous state captured in the current database.</li>
+</ol>
+<p><strong>Advantages of Shadow Paging:</strong></p>
+<ul style="list-style-type: square;">
+<li>Simple and easy to implement.</li>
+<li>Requires minimal changes to the existing database structure.</li>
+<li>Efficient for read-heavy workloads.</li>
+</ul>
+<p><strong>Disadvantages of Shadow Paging:</strong></p>
+<ul style="list-style-type: square;">
+<li>Inefficient for write-heavy workloads as it involves copying the entire database.</li>
+<li>Requires additional space to store the shadow copy.</li>
+<li>Transaction commit involves updating the page table, which may introduce contention.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate concept of Centralized and Client/Server Architectures for DBMSs with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Centralized Architecture:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-30496" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/cen.png?resize=360%2C254&#038;ssl=1" alt="" width="360" height="254"></p>
+<p>In a centralized database architecture, all database processing is concentrated on a single server or a central machine. This server is responsible for managing and controlling access to the database. Clients, which could be individual computers or terminals, connect to the central server to request and perform database operations. The central server holds the entire database, and clients interact with it to retrieve or modify data.</p>
+<p><strong>Characteristics of Centralized Architecture:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Single Point of Control: </strong>There is a single central server that controls all aspects of database management.</li>
+<li><strong>Data and Processing on the Same Machine: </strong>The database server and the application processing are typically on the same machine.</li>
+<li><strong>Simple Management: </strong>Management and administration are centralized, making it simpler to control and maintain.</li>
+<li><strong>Limited Scalability: </strong>Scaling the system is challenging, and increased load may lead to performance bottlenecks.</li>
+<li><strong>Reduced Network Traffic: </strong>Since the database is on the same machine as the application, there is minimal network traffic.</li>
+</ol>
+<p><strong>Example of Centralized Architecture:</strong></p>
+<p>Consider a small business that uses a single computer as a server to host its database, and all employees access this central server to perform tasks related to the database, such as entering and retrieving information.</p>
+<p><strong>Client/Server Architecture:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-30497" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/serv.png?resize=342%2C208&#038;ssl=1" alt="" width="342" height="208"></p>
+<p>In a client/server database architecture, the database processing is distributed between a client and a server. The client is responsible for the user interface and application processing, while the server manages the database and processes database-related operations. Clients and servers communicate over a network, allowing multiple clients to connect to the server simultaneously.</p>
+<p><strong>Characteristics of Client/Server Architecture:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Distributed Processing: </strong>Database processing is distributed between clients and servers.</li>
+<li><strong>Separation of Concerns: </strong>The client is responsible for the user interface and application logic, while the server manages the database.</li>
+<li><strong>Improved Scalability: </strong>Scalability is enhanced as additional clients can be added without overloading the central server.</li>
+<li><strong>Increased Network Traffic: </strong>Communication between clients and servers introduces network traffic.</li>
+<li><strong>Enhanced Performance: </strong>The distribution of processing can lead to improved overall system performance.</li>
+</ol>
+<p><strong>Example of Client/Server Architecture:</strong></p>
+<p>Consider a large corporation where multiple departments use various applications to access a centralized database server. Each department has its own client applications that communicate with the central database server over the network. This allows different departments to work concurrently without overloading a single central server.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define Transaction and explain its desirable properties.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>transaction</strong> is a logical unit of work that represents a sequence of one or more operations (database queries or updates) executed as a single, indivisible, and atomic unit. Transactions are fundamental to ensure the consistency and integrity of a database despite system failures, crashes, or errors. A transaction typically consists of a series of operations that transform the database from one consistent state to another. The key properties that define a transaction are often abbreviated as ACID:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Atomicity: </strong>Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all the operations within the transaction are executed successfully, or none of them are. If any part of the transaction fails, the entire transaction is rolled back, and the database remains in its original state.</li>
+<li><strong>Consistency: </strong>Consistency ensures that a transaction brings the database from one consistent state to another consistent state. The database must adhere to a set of integrity constraints before and after the transaction. If the transaction violates any integrity constraint, it is rolled back.</li>
+<li><strong>Isolation: </strong>Isolation ensures that the intermediate state of a transaction is not visible to other transactions until the transaction is committed. This property prevents interference between concurrent transactions. Each transaction appears to execute in isolation, as if it is the only transaction in the system.</li>
+<li><strong>Durability: </strong>Durability ensures that once a transaction is committed, its effects are permanent and will survive subsequent system failures or crashes. The committed changes become part of the permanent state of the database, even in the event of power outages or other failures.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Explain constraints and characteristics of specialization and generalization of data model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Specialization:</strong></p>
+<p>Specialization is the process of defining a set of subclasses or subtypes from an existing entity based on some distinguishing characteristics or attributes.</p>
+<p><strong>Characteristics:</strong></p>
+<p><strong>Top-Down Approach:</strong> Specialization is a top-down approach where a general entity is divided into more specific entities.</p>
+<p><strong>Disjoint or Overlapping:</strong> Specialization can be disjoint (entities belong to only one subtype) or overlapping (entities can belong to multiple subtypes).</p>
+<p><strong>Completeness:</strong> Subtypes can be complete (every instance of the general entity belongs to a subtype) or incomplete (some instances may not belong to any subtype).</p>
+<p><strong>Specialization Hierarchy:</strong> Subtypes can further have additional specializations, creating a hierarchy.</p>
+<p>&nbsp;</p>
+<p><strong>Generalization:</strong></p>
+<p>Generalization is the process of combining multiple entities or attributes into a more generalized form.</p>
+<p><strong>Characteristics:</strong></p>
+<p><strong>Bottom-Up Approach:</strong> Generalization is a bottom-up approach where common attributes or entities are abstracted to create a more general entity.</p>
+<p><strong>Superclass or Supertype:</strong> The resulting entity is called a superclass or supertype, and the original entities are its subclasses or subtypes.</p>
+<p><strong>Attribute Inheritance:</strong> The superclass inherits attributes from its subclasses, and instances of the superclass can represent instances of any of its subclasses.</p>
+<p><strong>Generalization Hierarchy:</strong> Superclasses can be further generalized, creating a hierarchy.</p>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+<p><strong>Completeness Constraint </strong><strong>(Total/Partial): </strong></p>
+<p>Specifies whether every superclass entity must belong to at least one subclass (total specialization) or if it can exist without being a member of any subclass (partial specialization). Example:</p>
+<p>Total Specialization: Every person must be either an employee or a customer.</p>
+<p>Partial Specialization: A person can be neither an employee nor a customer.</p>
+<p><strong>Disjointness Constraint (</strong><strong>Disjoint/Overlap):</strong></p>
+<p>Specifies whether an entity instance can belong to more than one subclass (overlap) or only to one subclass (disjoint). Example:</p>
+<p>Disjoint: An entity instance can be either an employee or a manager, but not both.</p>
+<p>Overlap: An entity instance can be both an employee and a manager.</p>
+<p><strong>Exclusiveness Constraint </strong><strong>(Exclusive/Inclusive):</strong></p>
+<p>Specifies whether an entity instance can be a member of more than one subclass simultaneously (inclusive) or only one subclass at a time (exclusive). Example:</p>
+<p>Exclusive: An entity instance can be either a full-time employee or a part-time employee but not both.</p>
+<p>Inclusive: An entity instance can be a full-time and a part-time employee simultaneously.</p>
+</div>
+</body></html>

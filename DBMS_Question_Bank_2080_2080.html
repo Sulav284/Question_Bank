@@ -1,0 +1,319 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>DBMS Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Consider a banking database with three tables and primary keys underlined as given below:</p>
+<p>Customer(<span>CustomerID</span>, CustomerName, Address, Phone, Email)</p>
+<p>Owns(<span>CustomerID</span>, AccountNumber)</p>
+<p>Account(<span>AccountNumber</span>, AccountType, Balance)</p>
+<p>Write both relational algebra and SQL queries:</p>
+<p>a. To display name of all customers who live in “Kathmandu”.</p>
+<p>b. To count total number of customers.</p>
+<p>c. To find name of those customers who have balance greater than or equal to 100000.</p>
+<p>d. To find average balance of each account type.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a:</p>
+<p><strong>Relational Algebra:</strong></p>
+<p>π<sub>CustomerName</sub>  ( σ<sub>Address = &#8216;Kathmandu&#8217;</sub> (Customer))</p>
+<p><strong>SQL:</strong></p>
+<p>SELECT CustomerName<br />
+FROM Customer<br />
+WHERE Address = &#8216;Kathmandu&#8217;;</p>
+<p>&nbsp;</p>
+<p>b:</p>
+<p><strong>Relational Algebra:</strong></p>
+<p>G<sub>COUNT(CustomerID)</sub> (Customer);</p>
+<p><strong>SQL:</strong></p>
+<p>SELECT COUNT(*) AS TotalCustomers<br />
+FROM Customer;</p>
+<p>&nbsp;</p>
+<p>c:</p>
+<p><strong>Relational Algebra:</strong></p>
+<p>π<sub>CustomerName</sub>  (σ<sub>Balance &gt;= 100000</sub>  (Customer ⨝ Owns ⨝ Account))</p>
+<p><strong>SQL:</strong></p>
+<p>SELECT CustomerName</p>
+<p>FROM Customer join Owns join Account<br />
+WHERE Balance &gt;= 100000;</p>
+<p>&nbsp;</p>
+<p>d:</p>
+<p><strong>Relational Algebra:</strong></p>
+<p><sub>AccountType</sub>G<sub>AVG(Balance)</sub>  (Account);</p>
+<p><strong>SQL:</strong></p>
+<p>SELECT AVG(Balance)<br />
+FROM Account<br />
+GROUP BY AccountType;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define normalization. Why normalization is important in database design? Explain 1NF, 2NF and 3NF with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Normalization is the process of organizing data in the database. It is the process of decomposing relations with anomalies to produce well-structured relations.</p>
+<p>Normalization is important for the following purposes:</p>
+<p>1. To avoid redundancy by storing each fact within the database only once<br />
+2. To put data into a form that is more able to accurately accommodate change<br />
+3. To avoid certain updating “anomalies”<br />
+4. To facilitate the enforcement of data constraints.<br />
+5. To avoid unnecessary coding. Extra programming in tiggers, and stored procedures can be required to handle the non-normalized data and this in turn can impair performance significantly.</p>
+<p>&nbsp;</p>
+<p><strong>1 NF</strong></p>
+<p>A table is in the first normal form (1NF) if and only if all columns contain only atomic values: i.e, there are no repeating groups (columns) within a row.</p>
+<p>It is to be noted that all entries in a field must be of same kind and each field must have a unique name, but the order of the field (column) is irrelevant.</p>
+<p>Each column must be unique and the order of the rows is irrelevant.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25876" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/1.jpg?resize=300%2C187&#038;ssl=1" alt="" width="300" height="187"></p>
+<p><strong>2 NF</strong></p>
+<p>A table is in second normal form (2NF) if and only if :</p>
+<ul style="list-style-type: square;">
+<li>It is in 1NF and</li>
+<li>Every non-key attribute is fully dependent on the primary key.i.e. It should not have partial dependency.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25877" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/2.jpg?resize=398%2C110&#038;ssl=1" alt="" width="398" height="110"></p>
+<p>Here, score_id should be a primary key but student_id + subject_id together makes a more meaningful primary key. student_id + subject_id can uniquely identify any row of data in score table teacher column only depends on subject and not on student. This is called partial dependency.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25878" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/2.1.jpg?resize=362%2C197&#038;ssl=1" alt="" width="362" height="197"></p>
+<p><strong>3 NF</strong></p>
+<p>A table is in Third Normal Form (3NF) if and only if:</p>
+<ul style="list-style-type: square;">
+<li>The relation must be in 2NF and</li>
+<li>no transitive dependencies exist within the relation.</li>
+</ul>
+<p>A transitive dependency is when an attribute is indirectly functionally dependent on the key (that is, the dependency is through another non-key attribute).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25880" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/33.jpg?resize=351%2C46&#038;ssl=1" alt="" width="351" height="46"></p>
+<p>Here, exam_name is just another column in the score table. It is not a primary key or even a part of the primary key, and total_marks depends on it. This is a transitive dependency. When a non-prime attribute depends on other non-prime attributes rather than depending upon prime attributes or primary key.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25879" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/3.jpg?resize=368%2C228&#038;ssl=1" alt="" width="368" height="228"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is two-phase locking? What are different types of locks in two-phase locking? Explain basic, conservative, strict, rigorous two-phase locking. What is lock conversion?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="group w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-5">
+<div class="p-4 justify-center text-base md:gap-6 md:py-6 m-auto">
+<div class="flex flex-1 gap-4 text-base mx-auto md:gap-6 gizmo:gap-3 gizmo:md:px-5 gizmo:lg:px-1 gizmo:xl:px-5 md:max-w-2xl lg:max-w-[38rem] gizmo:md:max-w-3xl gizmo:lg:max-w-[40rem] gizmo:xl:max-w-[48rem] xl:max-w-3xl }">
+<div class="relative flex w-[calc(100%-50px)] flex-col gap-1 gizmo:w-full md:gap-3 lg:w-[calc(100%-115px)] agent-turn">
+<div class="flex flex-grow flex-col gap-3 max-w-full">
+<div class="min-h-[20px] flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>Two-Phase Locking (2PL) is a concurrency control mechanism used in database management systems to ensure that transactions are executed in a way that maintains data consistency. It consists of two phases: the &#8220;Growing Phase&#8221; and the &#8220;Shrinking Phase.&#8221; In Two-Phase Locking, transactions follow specific rules regarding when they can acquire and release locks on data items.</p>
+<p>The different types of locks in Two-Phase Locking are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>Shared Lock (S-lock): This type of lock allows multiple transactions to read a data item simultaneously but prevents any transaction from writing to it until the lock is released. Shared locks are denoted as &#8220;S.&#8221;</li>
+<li>Exclusive Lock (X-lock): An exclusive lock allows only one transaction to have both read and write access to a data item. While a data item has an exclusive lock, no other transaction can obtain any type of lock on it. Exclusive locks are denoted as &#8220;X.&#8221;</li>
+</ol>
+<p>Now, let&#8217;s explain some variations of Two-Phase Locking:</p>
+<p>a. Basic Two-Phase Locking: In basic 2PL, transactions can acquire locks as needed during their execution but cannot release any locks until they have acquired all the required locks. Once all locks are acquired, the transaction can proceed with its operations. After completing its operations, the transaction releases all its locks.</p>
+<p>b. Conservative Two-Phase Locking: Conservative 2PL is a stricter variant of basic 2PL. In conservative 2PL, transactions must specify all the locks they need at the beginning (before acquiring any locks) and then attempt to acquire them all at once. If any requested lock cannot be acquired immediately, the transaction releases all previously acquired locks and starts over.</p>
+<p>c. Strict Two-Phase Locking: In strict 2PL, a transaction cannot release any lock once acquired. This means that a transaction holds all of its locks until it completes and commits or aborts. Strict 2PL ensures serializability but may lead to resource contention.</p>
+<p>d. Rigorous Two-Phase Locking: Rigorous 2PL combines aspects of strict 2PL and conservative 2PL. Transactions declare all the locks they need upfront, like in conservative 2PL, but they release locks once they are no longer needed, like in basic 2PL. This approach aims to strike a balance between strictness and efficiency.</p>
+<p>Lock Conversion refers to changing the type of lock on a data item while a transaction is still active. In Two-Phase Locking, lock conversion can occur as follows:</p>
+<ul style="list-style-type: square;">
+<li>Shared Lock (S-lock) can be converted to an Exclusive Lock (X-lock) if the transaction intends to write to the data item. This conversion is allowed because an exclusive lock provides both read and write access.</li>
+<li>Exclusive Lock (X-lock) cannot be converted to a shared lock. Once a transaction holds an exclusive lock on a data item, it must release the exclusive lock entirely before acquiring any other locks on the same item.</li>
+</ul>
+<p>Lock conversion helps optimize concurrency by allowing transactions to upgrade their locks from shared to exclusive when they need to modify a data item while ensuring that other transactions can continue to read it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is flat-file system? What are the advantages of using DBMS approach?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A flat-file system, also known as a flat-file database, is a simple data storage system where data is stored in plain text or binary files, typically organized in a tabular format. In a flat-file system, each file represents a specific dataset, and there is usually no formal structure or relationships defined between different files. Data is often stored in a flat-file system using fixed-length records or delimited text formats (such as CSV files). Each record corresponds to an individual data entry, and records are stored sequentially in the file.</p>
+<p>Advantages of using a Database Management System (DBMS) approach over a flat-file system:</p>
+<ol style="list-style-type:decimal;">
+<li>Data Integrity: DBMSs provide mechanisms for enforcing data integrity constraints, such as primary keys, foreign keys, and unique constraints. This ensures that the data in the database remains accurate and consistent.</li>
+<li>Data Relationships: DBMSs support the establishment of relationships between different tables or data entities. This allows for the modeling of complex data structures and the ability to retrieve related data efficiently through JOIN operations.</li>
+<li>Data Security: DBMSs offer user authentication and authorization features to control who can access and modify data. This enhances data security by limiting access to authorized users.</li>
+<li>Concurrent Access: DBMSs support concurrent access to data by multiple users or applications while managing data concurrency and ensuring data consistency through locking mechanisms.</li>
+<li>Data Redundancy Reduction: A DBMS helps reduce data redundancy by allowing data to be stored in normalized form, where data is stored in separate tables to eliminate duplicate information. This reduces storage space and improves data maintenance.</li>
+<li>Data Query and Retrieval: DBMSs provide powerful query languages like SQL (Structured Query Language) that enable users to retrieve and manipulate data easily. This makes it more efficient to search for specific information within large datasets.</li>
+<li>Data Indexing: DBMSs use indexing techniques to speed up data retrieval operations, making queries faster and more efficient, especially when dealing with large datasets.</li>
+<li>Backup and Recovery: DBMSs offer built-in backup and recovery mechanisms, which help protect data from loss due to hardware failures or accidental deletions.</li>
+<li>Scalability: DBMSs are designed to handle large volumes of data and can scale horizontally (by adding more servers) or vertically (by adding more resources to a single server) to accommodate growing data needs.</li>
+<li>Data Maintenance: DBMSs simplify data maintenance tasks such as data updates, inserts, and deletes, ensuring data consistency and reliability.</li>
+<li>Data Accessibility: DBMSs provide data access to multiple users and applications concurrently, allowing for centralized data management and accessibility.</li>
+<li>Data Redundancy Reduction: By providing data normalization and enforcing referential integrity, DBMSs help reduce data redundancy, which minimizes the chances of inconsistencies in the data.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define data abstraction, data model, schemas, instances and database state.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>Data Abstraction:</strong> Data abstraction refers to the process of simplifying complex real-world data by representing it in a structured and manageable form. It involves hiding the low-level details and exposing only the relevant information. Data abstraction is essential in database systems to facilitate data management and manipulation.</li>
+<li><strong>Data Model:</strong> A data model is a formal representation or blueprint that defines how data is structured, organized, and stored in a database. It specifies the types of data, their relationships, constraints, and operations that can be performed on the data. Common data models include the relational model, hierarchical model, network model, and object-oriented model, among others.</li>
+<li><strong>Schemas:</strong> In the context of databases, a schema is a logical design or blueprint that defines the structure and organization of data within a database. It includes the definition of tables, columns, data types, relationships, constraints, and other metadata. Schemas provide a high-level view of how data is organized in a database.</li>
+<li><strong>Instances:</strong> Database instances refer to the actual data stored in a database at a specific point in time. An instance represents the concrete data values that adhere to the schema defined for the database. It is essentially a snapshot of the data in the database at a given moment.</li>
+<li><strong>Database State:</strong> The database state is the collection of all data instances currently stored in a database system. It represents the complete set of data and their relationships as they exist at a particular point in time. The database state can change as data is inserted, updated, or deleted, reflecting the dynamic nature of database systems.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is conceptual data model? Explain different types of attributes used in ER diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A conceptual data model is an abstract representation of data structures and relationships within a domain, independent of any specific database management system (DBMS) or implementation details. It focuses on capturing the essential business concepts and their relationships. Conceptual data models are often used in the early stages of database design to create a high-level understanding of the data requirements.</p>
+<p>In an Entity-Relationship (ER) diagram, which is a common tool for creating conceptual data models, there are several types of attributes that can be used to describe entities and their characteristics:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Simple Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A simple attribute is an atomic, indivisible attribute that cannot be further divided.</li>
+<li>Example: In an ER diagram for a &#8220;Person&#8221; entity, &#8220;Name&#8221; can be a simple attribute.</li>
+</ul>
+</li>
+<li><strong>Composite Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A composite attribute is an attribute that can be divided into smaller sub-parts, each with its meaning. These sub-parts are often related.</li>
+<li>Example: In an ER diagram for a &#8220;Address&#8221; entity, a &#8220;Composite&#8221; attribute like &#8220;Street Address&#8221; can be divided into &#8220;Street Name,&#8221; &#8220;Street Number,&#8221; and &#8220;Apartment Number.&#8221;</li>
+</ul>
+</li>
+<li><strong>Derived Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A derived attribute is an attribute whose value can be computed or derived from other attributes in the database.</li>
+<li>Example: In an ER diagram for an &#8220;Employee&#8221; entity, the &#8220;Age&#8221; attribute could be derived from the &#8220;Date of Birth&#8221; attribute.</li>
+</ul>
+</li>
+<li><strong>Multi-valued Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A multi-valued attribute is an attribute that can have multiple values for a single entity.</li>
+<li>Example: In an ER diagram for a &#8220;Student&#8221; entity, the &#8220;Phone Numbers&#8221; attribute can be multi-valued as a student may have multiple phone numbers.</li>
+</ul>
+</li>
+<li><strong>Key Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A key attribute is an attribute that uniquely identifies an entity within an entity set.</li>
+<li>Example: In an ER diagram for a &#8220;Product&#8221; entity, the &#8220;ProductID&#8221; can be a key attribute that uniquely identifies each product.</li>
+</ul>
+</li>
+<li><strong>Composite Key Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A composite key attribute is a combination of two or more attributes that, when taken together, uniquely identify an entity within an entity set.</li>
+<li>Example: In an ER diagram for a &#8220;Customer&#8221; entity, a composite key attribute could be a combination of &#8220;CustomerID&#8221; and &#8220;Email.&#8221;</li>
+</ul>
+</li>
+<li><strong>Multi-valued Key Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>A multi-valued key attribute is an attribute or combination of attributes that, when taken together, uniquely identify an entity and allow multiple values.</li>
+<li>Example: In an ER diagram for an &#8220;Order&#8221; entity, a multi-valued key attribute could be a combination of &#8220;OrderID&#8221; and &#8220;ItemID&#8221; to uniquely identify items within an order.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is relational model? Define the terms domain, attribute, tuple and relation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The relational model is a mathematical and logical framework for organizing and structuring data in a relational database management system (RDBMS). It was introduced by Edgar F. Codd in 1970 and has since become the foundation for most modern database systems. In the relational model, data is organized into tables (relations) with rows (tuples) and columns (attributes), and relationships between tables are established through keys.</p>
+<p>Here are the key terms in the relational model:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Domain:</strong>
+<ul style="list-style-type: square;">
+<li>A domain is a set of atomic values with a common data type and set of constraints. Domains define the allowed values for attributes in a relation.</li>
+<li>Example: The domain of a &#8220;Date of Birth&#8221; attribute might be all valid dates, and the domain of a &#8220;Product ID&#8221; attribute might be all positive integers.</li>
+</ul>
+</li>
+<li><strong>Attribute:</strong>
+<ul style="list-style-type: square;">
+<li>An attribute is a named property or characteristic of an entity or object that is stored in a relation (table) as a column.</li>
+<li>Example: In a &#8220;Customer&#8221; relation, attributes might include &#8220;CustomerID,&#8221; &#8220;CustomerName,&#8221; &#8220;Email,&#8221; and &#8220;PhoneNumber.&#8221;</li>
+</ul>
+</li>
+<li><strong>Tuple:</strong>
+<ul style="list-style-type: square;">
+<li>A tuple is a single row or record in a relation (table). It represents a single instance or entity within the domain that the relation models.</li>
+<li>Example: In a &#8220;Student&#8221; relation, each tuple might represent a unique student, with attributes like &#8220;StudentID,&#8221; &#8220;Name,&#8221; and &#8220;GPA&#8221; having values specific to that student.</li>
+</ul>
+</li>
+<li><strong>Relation:</strong>
+<ul style="list-style-type: square;">
+<li>A relation is a table in the relational model. It consists of a set of tuples organized into rows and columns, where each column represents an attribute, and each row represents a tuple.</li>
+<li>Example: A &#8220;Product&#8221; relation might have columns like &#8220;ProductID,&#8221; &#8220;ProductName,&#8221; &#8220;Price,&#8221; and rows representing individual products.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is tuple relational calculus? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Tuple Relational Calculus (TRC) is one of the two main query languages used to retrieve data from relational databases, the other being Domain Relational Calculus (DRC). TRC is a declarative query language that specifies what data you want to retrieve from a database without specifying how to retrieve it, leaving that task to the database management system (DBMS). It is based on the mathematical concept of first-order logic and is often used for querying relational databases in a more human-readable and intuitive manner.</p>
+<p>Here&#8217;s an overview of Tuple Relational Calculus:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Declarative Nature:</strong> TRC is a declarative language, which means you specify the result you want, but not the step-by-step process of how to obtain it. This allows for a higher level of abstraction and allows users to focus on what data they need rather than how to retrieve it.</li>
+<li><strong>Use of Variables:</strong> In TRC, you define variables that represent tuples in the database relations. These variables are used to express conditions and constraints on the tuples you want to retrieve.</li>
+<li><strong>Selection (σ) Operation:</strong> The selection operation (σ) is used in TRC to specify conditions that must be satisfied by the tuples in the result. It filters tuples based on a given predicate.
+<p>Example: To retrieve all employees who have a salary greater than $50,000, you might write: σ (Salary &gt; 50000)(Employee)</li>
+<li><strong>Projection (π) Operation:</strong> The projection operation (π) is used to specify which attributes or columns of the tuples you want to include in the result. It selects specific attributes from the relations.
+<p>Example: To retrieve only the names and email addresses of all customers, you might write: π (CustomerName, Email)(Customer)</li>
+<li><strong>Join and Set Operations:</strong> TRC can also handle complex queries involving joins (combining data from multiple relations based on common attributes) and set operations like union, intersection, and difference.
+<p>Example: To retrieve a list of employees who work in a specific department and are also members of a project team, you might use joins and selections as needed.</li>
+<li><strong>Existential Quantifier (∃):</strong> TRC allows the use of the existential quantifier (∃) to express the existence of tuples that satisfy certain conditions. It&#8217;s useful for queries that involve subqueries or nested conditions.
+<p>Example: To find departments with at least one employee earning more than $60,000, you might write: ∃ (σ (Salary &gt; 60000)(Employee))</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define transaction. What are different desirable properties of transaction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A transaction in the context of database management is a unit of work or a sequence of one or more database operations that are treated as a single, indivisible, and logical unit.</p>
+<p>Different desirable properties of transactions are commonly referred to as the ACID properties:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Atomicity:</strong> Atomicity ensures that a transaction is treated as an indivisible unit, meaning that either all its operations are completed successfully, or none of them are. If any part of a transaction fails, the entire transaction is rolled back, and the database returns to its previous state. Atomicity guarantees that the database remains in a consistent state.</li>
+<li><strong>Consistency:</strong> Consistency ensures that a transaction takes the database from one consistent state to another. In other words, a transaction should only be allowed to execute if it satisfies all the integrity constraints defined in the database schema. If a transaction violates any constraints, it is rolled back to maintain data integrity.</li>
+<li><strong>Isolation:</strong> Isolation guarantees that concurrent execution of multiple transactions does not result in interference or data corruption. Each transaction is executed in isolation from other transactions until it is completed and committed. This prevents transactions from seeing intermediate, uncommitted changes made by other transactions. Isolation levels (such as Read Uncommitted, Read Committed, Repeatable Read, and Serializable) determine the degree of isolation in a database system.</li>
+<li><strong>Durability:</strong> Durability ensures that once a transaction is committed, its changes are permanently saved and will survive any subsequent failures, such as system crashes or power outages. Durability is typically achieved through mechanisms like write-ahead logging and database backups. It ensures the long-term persistence of data changes.</li>
+</ol>
+<p>These ACID properties collectively provide a framework for managing transactions in a way that ensures data integrity and reliability in a database system. By adhering to these properties, database systems can handle concurrent access by multiple users or applications while maintaining the correctness and consistency of the data.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Why do we need concurrency control in databses? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Concurrency control is a crucial aspect of database management systems (DBMS), and it is necessary for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Multiple Concurrent Users:</strong> In most database systems, multiple users or applications access the database simultaneously. Without concurrency control, these users can interfere with each other&#8217;s operations, leading to data inconsistencies and corruption.</li>
+<li><strong>Data Consistency:</strong> Concurrency control ensures that the database remains in a consistent state even when multiple transactions are executing concurrently. It prevents scenarios where one transaction reads data that another transaction is in the process of modifying, potentially leading to incorrect or inconsistent results.</li>
+<li><strong>Isolation of Transactions:</strong> Concurrency control mechanisms provide isolation between transactions, meaning that each transaction sees a consistent snapshot of the data as if it were the only transaction accessing the database. This prevents transactions from observing intermediate or partially completed changes made by other transactions.</li>
+<li><strong>Data Integrity:</strong> It ensures that the integrity constraints defined in the database schema are not violated by concurrent transactions. Without concurrency control, concurrent updates could lead to constraint violations, which can compromise data quality.</li>
+<li><strong>Prevention of Lost Updates:</strong> Concurrency control prevents the &#8220;lost update&#8221; problem, where one transaction&#8217;s changes may be overwritten by another transaction if they access and modify the same data concurrently. This ensures that all updates to the database are preserved.</li>
+<li><strong>Deadlock Detection and Resolution:</strong> Concurrency control mechanisms can detect and resolve deadlocks, which occur when two or more transactions are waiting for resources that are held by each other. Concurrency control helps in breaking deadlocks and allowing transactions to proceed.</li>
+<li><strong>Optimizing Resource Utilization:</strong> Concurrency control allows multiple transactions to share database resources efficiently. It ensures that transactions do not unnecessarily block each other, maximizing the utilization of system resources.</li>
+<li><strong>Improved System Performance:</strong> Properly designed concurrency control mechanisms can lead to improved system performance by allowing multiple transactions to execute in parallel, reducing idle time and increasing the throughput of the system.</li>
+<li><strong>Data Security:</strong> Concurrency control helps in enforcing access controls and data security policies. It ensures that only authorized users can access and modify data, preventing unauthorized changes.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why database recovery is essential? Explain recovery technique based on immediate update.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Database recovery is essential because it ensures the durability and reliability of data in a database system, even in the face of unexpected events or failures. The primary goal of database recovery is to bring the database back to a consistent and reliable state after a system failure or an unexpected event. Common system failures include hardware failures, software crashes, power outages, and human errors.</p>
+<p>One of the techniques used for database recovery is based on immediate update, often referred to as the &#8220;Immediate Update&#8221; or &#8220;Write-Ahead Logging&#8221; technique. This technique involves the following key concepts:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Transaction Logging:</strong>
+<ul style="list-style-type: square;">
+<li>Every change or modification made to the database is first recorded in a log file before it is applied to the actual database.</li>
+<li>The log file contains a chronological record of all transactions and the changes they make to the database.</li>
+<li>The log entry includes information about the transaction, such as its start and end times, the affected data items, and the before-and-after values of the modified data.</li>
+</ul>
+</li>
+<li><strong>Write-Ahead Logging (WAL):</strong>
+<ul style="list-style-type: square;">
+<li>The principle behind this technique is that a log entry must be written to the log file before the corresponding data change is applied to the database.</li>
+<li>The &#8220;write-ahead&#8221; part ensures that the log entry is persisted to a stable storage (e.g., a disk) before the corresponding database modification occurs.</li>
+<li>This guarantees that, in case of a failure, the system can replay the log entries to bring the database back to a consistent state by reapplying the changes.</li>
+</ul>
+</li>
+<li><strong>Checkpointing:</strong>
+<ul style="list-style-type: square;">
+<li>Periodically, the system performs a checkpoint operation where all the dirty (modified) pages in the buffer pool are written to the database files.</li>
+<li>After writing the dirty pages, a checkpoint record is added to the log, indicating that the changes up to that point are now permanent.</li>
+<li>This checkpoint serves as a reference point for recovery, allowing the system to start replaying log entries from this point onward in case of a failure.</li>
+</ul>
+</li>
+<li><strong>Recovery Process:</strong>
+<ul style="list-style-type: square;">
+<li>When a system failure occurs (e.g., a crash or power outage), the database management system uses the log entries to recover the database.</li>
+<li>It starts by identifying the most recent checkpoint record and begins replaying log entries from that checkpoint onward.</li>
+<li>By reapplying the changes recorded in the log, the system brings the database back to a consistent state, ensuring that all committed transactions&#8217; effects are retained.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. Natural join</p>
+<p>b. Shadow paging</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>Natural Join:</strong></p>
+<ul style="list-style-type: square;">
+<li>A natural join is a type of relational database operation that combines two tables based on the equality of values in their common columns, which have the same name and data type.</li>
+<li>Unlike other join operations like inner join or outer join, a natural join does not require explicitly specifying the join condition. It automatically identifies matching columns based on their names.</li>
+<li>Natural joins can simplify query writing by eliminating the need to specify join conditions explicitly, but they can also be error-prone if column names change or if multiple columns share the same name unintentionally.</li>
+<li>It&#8217;s important to use natural joins carefully and consider the potential risks of unexpected column matching when designing database schemas.</li>
+</ul>
+<p>b. <strong>Shadow Paging:</strong></p>
+<ul style="list-style-type: square;">
+<li>Shadow paging is a disk-based data recovery technique used in database systems to ensure durability and recoverability of data in the event of a failure.</li>
+<li>In shadow paging, the database is divided into fixed-size pages, and a shadow page table is maintained. The shadow page table keeps track of the current active version of each page and its corresponding shadow copy.</li>
+<li>When a transaction modifies a page, it creates a shadow copy of the entire page. The shadow copy is modified, leaving the original page intact.</li>
+<li>During a transaction, the shadow page table is updated to reflect the changes made by the transaction. If the transaction commits, the shadow page table is updated to make the shadow copies the new active versions.</li>
+<li>In the event of a failure (e.g., system crash), the shadow page table can be used to recover the database to a consistent state by reverting to the last committed version of each page.</li>
+<li>Shadow paging is relatively simple to implement but can be less space-efficient than other recovery techniques, as it requires maintaining shadow copies of all modified pages.</li>
+</ul>
+</div>
+</body></html>

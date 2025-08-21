@@ -1,0 +1,440 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>AI Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Prepare state space graph for the following puzzle problem, where only move left, move right, move up and move down actions are allowed. On the so constructed state space, label the states as A, B, C, ……Z and use the greedy best to test whether it finds the goal or  not.</p>
+<p>Initial State:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Goal State:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Assume the path cost from one step to another as 1 and heuristic function, f(n), as a number of misplaced cells.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-30207" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20240222_092708_CamScanner.jpg?resize=555%2C892&#038;ssl=1" alt="" width="555" height="892"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write the rules to convert statements in predicate logic into CNF form. Convert the following sentences into FOPL.</p>
+<p>All students of BSC CSIT are intelligent person.</p>
+<p>All friends of intelligent person are smart.</p>
+<p>Laxmi is a friend of Rojina.</p>
+<p>Rojina is smart.</p>
+<p>All beautiful students are girl.</p>
+<p>Laxmi is beautiful.</p>
+<p>Using resolution algorithm infer that “Laxmi is smart”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To convert statements in predicate logic into Conjunctive Normal Form (CNF), you need to follow these rules:</p>
+<ol style="list-style-type:decimal;">
+<li>Eliminate implications: Replace implications (-&gt;) with their equivalent forms using the equivalence rules:
+<ul style="list-style-type: square;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mrel">→</span></span><span class="base"><span class="mord mathnormal">Q</span></span></span></span></span> becomes <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord mathnormal">P</span><span class="mbin">∨</span></span><span class="base"><span class="mord mathnormal">Q</span></span></span></span></span></li>
+</ul>
+</li>
+<li>Move negations inwards: Apply De Morgan&#8217;s laws to move negations (<span class="math math-inline"><span class="katex"><span class="katex-mathml">¬</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span></span></span></span></span>) inwards until they only affect atomic propositions.
+<ul style="list-style-type: square;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mopen">(</span><span class="mord mathnormal">P</span><span class="mbin">∧</span></span><span class="base"><span class="mord mathnormal">Q</span><span class="mclose">)</span></span></span></span></span> becomes <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord mathnormal">P</span><span class="mbin">∨</span></span><span class="base"><span class="mord">¬</span><span class="mord mathnormal">Q</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mopen">(</span><span class="mord mathnormal">P</span><span class="mbin">∨</span></span><span class="base"><span class="mord mathnormal">Q</span><span class="mclose">)</span></span></span></span></span> becomes <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord mathnormal">P</span><span class="mbin">∧</span></span><span class="base"><span class="mord">¬</span><span class="mord mathnormal">Q</span></span></span></span></span></li>
+</ul>
+</li>
+<li>Standardize variables: Rename variables to ensure that each variable has a unique name within each sentence.</li>
+<li>Skolemize existential quantifiers: Replace existential quantifiers (<span class="math math-inline"><span class="katex"><span class="katex-mathml">∃</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∃</span></span></span></span></span>) with Skolem functions. Introduce Skolem constants or Skolem variables as necessary.</li>
+<li>Distribute disjunctions over conjunctions: Use the distributive law to distribute disjunctions (<span class="math math-inline"><span class="katex"><span class="katex-mathml">∨</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∨</span></span></span></span></span>) over conjunctions (<span class="math math-inline"><span class="katex"><span class="katex-mathml">∧</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∧</span></span></span></span></span>) to obtain CNF.</li>
+</ol>
+<p>Now, let&#8217;s convert your statements into First-Order Predicate Logic (FOPL) and then infer &#8220;Laxmi is smart&#8221; using the resolution algorithm.</p>
+<p>1. All students of BSC CSIT are intelligent person.</p>
+<p>FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mord text"><span class="mord"> Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p>2. All friends of intelligent person are smart.</p>
+<p>FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mord">∀</span><span class="mord mathnormal">y</span><span class="mopen">(</span><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord mathnormal">y</span><span class="mclose">)</span><span class="mbin">∧</span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord mathnormal">y</span><span class="mclose">))</span></span></span></span></span></p>
+<p>3. Laxmi is a friend of Rojina.</p>
+<p>FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mpunct">,</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>4. Rojina is smart.</p>
+<p>FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>5. All beautiful students are girls.</p>
+<p>FOPL:<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord text"><span class="mord">Beautiful</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mbin">∧</span></span><span class="base"><span class="mord text"><span class="mord">Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Girl</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">))</span></span></span></span></span></p>
+<p>6. Laxmi is beautiful.</p>
+<p>FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Beautiful</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>Now, to infer &#8220;Laxmi is smart&#8221; using the resolution algorithm, we will negate it and add it to the knowledge base, then try to derive a contradiction.</p>
+<p>Negation of &#8220;Laxmi is smart&#8221;: FOPL: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>Add this negation to the knowledge base along with the other statements,</p>
+<ol style="list-style-type:decimal;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mord text"><span class="mord"> Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mord">∀</span><span class="mord mathnormal">y</span><span class="mopen">(</span><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord mathnormal">y</span><span class="mclose">)</span><span class="mbin">∧</span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord mathnormal">y</span><span class="mclose">))</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mpunct">,</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord text"><span class="mord">Beautiful</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mbin">∧</span></span><span class="base"><span class="mord text"><span class="mord">Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">)</span><span class="mrel">→</span></span><span class="base"><span class="mord text"><span class="mord">Girl</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">))</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Beautiful</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mclose">)</span></span></span></span></span> (Negation of the query)</li>
+</ol>
+<p>Converting it into CNF as:</p>
+<ol style="list-style-type:decimal;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">¬Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">) ∨ </span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">¬</span></span></span></span></span></span><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord mathnormal">y</span><span class="mclose">) ∨ <span class="mord text"><span class="mord">¬</span></span></span></span><span class="base"><span class="mord text"><span class="mord">Intelligent</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">) ∨ </span></span><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord mathnormal">y</span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Friend</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mpunct">,</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></li>
+<li>Smart(Rojina)</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">¬Beautiful</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">) ∨ <span class="mord text"><span class="mord">¬</span></span></span></span><span class="base"><span class="mord text"><span class="mord">Student</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord text"><span class="mord">BSC CSIT</span></span><span class="mclose">) ∨ </span></span><span class="base"><span class="mord text"><span class="mord">Girl</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></li>
+<li>Beautiful(Laxmi)</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">¬</span><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Laxmi</span></span><span class="mclose">)</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">Smart</span></span><span class="mopen">(</span><span class="mord text"><span class="mord">Rojina</span></span><span class="mclose">)</span></span></span></span></span></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is the role of activation function in ANN. How sigmoid function works? Discuss about perceptron learning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The activation function in an Artificial Neural Network (ANN) serves as a mathematical function that determines the output of a neuron or a node in the network, given its input.</p>
+<ol style="list-style-type:decimal;">
+<li>Introducing Non-Linearity: Activation functions introduce non-linearity to the network. This is crucial because real-world data and problems are often non-linear. Without non-linear activation functions, the entire network would behave like a linear model, limiting its ability to model complex patterns.</li>
+<li>Enabling Complex Representations: Activation functions enable neurons to learn and represent complex functions and features in data. They allow the network to capture intricate relationships between input and output variables.</li>
+<li>Learning and Adaptation: Activation functions play a critical role during the training phase of the neural network. They help adjust the weights and biases of neurons through backpropagation, which is the process of updating network parameters to minimize the error between predicted and actual outputs.</li>
+</ol>
+<p>One of the commonly used activation functions is the sigmoid function.</p>
+<p><strong>Sigmoid Activation Function:</strong> The sigmoid function, also known as the logistic function, is defined as follows:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mrel">=1 / ( </span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1 <span class="mbin mtight">+ </span><span class="mord mathnormal mtight">e<sup>-x</sup>)</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p>Here&#8217;s how the sigmoid function works:</p>
+<ul style="list-style-type: square;">
+<li>The sigmoid function takes an input <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> and maps it to an output between 0 and 1.</li>
+<li>As <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> becomes very negative, the sigmoid function approaches 0, and as <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> becomes very positive, it approaches 1.</li>
+<li>The sigmoid function has a smooth, S-shaped curve, making it well-suited for tasks where you want to model the probability or likelihood of a binary outcome (0 or 1).</li>
+</ul>
+<p>However, the sigmoid function has some drawbacks, including the vanishing gradient problem, which can slow down training in deep networks. For this reason, other activation functions like ReLU (Rectified Linear Unit) and its variants are often preferred for deep neural networks.</p>
+<p><strong>Perceptron Learning:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26192" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/perceptron.jpg?resize=314%2C143&#038;ssl=1" alt="" width="314" height="143"></p>
+<p>The perceptron is one of the simplest forms of artificial neural networks and is often used for binary classification tasks. It has the following characteristics:</p>
+<ul style="list-style-type: square;">
+<li>Input features are multiplied by corresponding weights, and the results are summed.</li>
+<li>The sum is passed through an activation function, traditionally a step function, which outputs either 0 or 1 based on whether the sum is above or below a certain threshold.</li>
+<li>The perceptron learning algorithm is a supervised learning algorithm that updates the weights based on misclassifications. It tries to find a set of weights that correctly classifies the training data.</li>
+</ul>
+<p>The perceptron learning algorithm can only learn linearly separable functions, which means it&#8217;s limited to problems where a straight line (hyperplane) can separate the data into two classes. For more complex tasks, multi-layer neural networks with non-linear activation functions are required.</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is Turing Test? What properties an agent should have to pass the Turing Test?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Turing Test is a method for determining whether or not a computer is capable of thinking like a human. The test is named after Alan Turing, an English mathematician who pioneered artificial intelligence during the 1940s and 1950s, and who is credited with devising the original version of the test.</p>
+<p>According to this kind of test, a computer is deemed to have artificial intelligence if it can mimic human responses under specific conditions.</p>
+<p>Consider the following setting.</p>
+<p>There are two rooms, A and B. One of the rooms contains a computer. The other contains a human. The interrogator is outside and does not know which one is a computer. He can ask questions through a teletype and receives answers from both A and B. The interrogator needs to identify whether A or B are humans. To pass the Turing test, the machine has to fool the interrogator into believing that it is human.</p>
+<p>To pass a Turing test, a computer must have the following capabilities:</p>
+<p><strong>❑ Natural Language Processing:</strong><br />
+Must be able to communicate in English successfully.</p>
+<p><strong>❑ Knowledge representation:</strong><br />
+To store what it knows and hears.</p>
+<p><strong>❑ Automated reasoning:</strong><br />
+Answer the Questions based on the stored information.</p>
+<p><strong>❑ Machine learning:</strong><br />
+Must be able to adapt to new circumstances.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are the properties of intelligent agent? How simple reflex agents work? Give an example of simple reflex agent.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Intelligent Agent is an autonomous entity that observes through sensors and acts upon an environment using actuators and directs its activities towards achieving the goal. They typically possess the following key properties:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Sensing</strong>: Intelligent agents have the ability to perceive and gather information from their environment through sensors or sensors. This information can be in the form of data, sensory inputs, or other types of observations.</li>
+<li><strong>Reasoning</strong>: Intelligent agents can process the information they gather to make decisions and generate actions. They use various forms of reasoning, such as logical reasoning, probabilistic reasoning, or heuristic-based reasoning, to determine their course of action.</li>
+<li><strong>Planning</strong>: Agents can plan and set goals based on their objectives. They consider various possible actions and choose the most appropriate ones to achieve their goals.</li>
+<li><strong>Learning</strong>: Intelligent agents can learn from their interactions with the environment. This learning can be supervised (with labeled data), unsupervised (without labeled data), or reinforcement-based (learning from rewards and punishments).</li>
+<li><strong>Adaptability</strong>: Agents can adapt to changes in their environment or goals. They can adjust their behavior and decision-making based on new information or changing circumstances.</li>
+<li><strong>Autonomy</strong>: Agents can operate autonomously without human intervention, making decisions and taking actions independently.</li>
+<li><strong>Communication</strong>: In some cases, agents can communicate with other agents or humans to exchange information or coordinate activities.</li>
+</ol>
+<p><strong>Simple Reflex Agent</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-26197" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/sr.jpg?resize=294%2C217&#038;ssl=1" alt="" width="294" height="217"></p>
+<ul style="list-style-type: square;">
+<li>The Simple reflex agents are the simplest agents.</li>
+<li>These agents make decisions on the basis of the current percepts and ignore the rest of the percept history.</li>
+<li>These agents only succeed in the fully observable environment.</li>
+<li>The Simple reflex agent works on the Condition action rule, which means it maps the current state to action.</li>
+<li>Such as a Room Cleaner agent, it works only if there is dirt in the room.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why alpha beta pruning is necessary? How alpha beta pruning is done in game search, illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Alpha-beta pruning is a crucial optimization technique used in game tree search algorithms, such as the minimax algorithm, to significantly reduce the number of nodes evaluated during the search. It is used to improve the efficiency of evaluating possible moves in a game by eliminating branches of the game tree that do not need to be explored further. Alpha-beta pruning helps reduce the search space and speeds up the decision-making process in games.</p>
+<p>Here&#8217;s how alpha-beta pruning works in game tree search:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Minimax Algorithm</strong>: Alpha-beta pruning is often used in conjunction with the minimax algorithm, which is a decision-making algorithm used in two-player, zero-sum games like chess, checkers, or tic-tac-toe. In these games, one player&#8217;s gain is the other player&#8217;s loss.</li>
+<li><strong>Evaluation Function</strong>: The game tree represents all possible moves and their outcomes. To evaluate the quality of a move, an evaluation function is used to assign a score to each game state. The goal of the maximizing player is to maximize the score, while the minimizing player aims to minimize it.</li>
+<li><strong>Search Tree</strong>: The game tree is explored recursively, starting from the current game state and considering all possible moves for both players. The tree can become quite large as it represents all possible future game states.</li>
+<li><strong>Alpha and Beta Values</strong>: During the search, two values, alpha and beta, are maintained for each node in the tree. Alpha represents the best score found so far for the maximizing player (the highest score), while beta represents the best score for the minimizing player (the lowest score).</li>
+<li><strong>Pruning Rules</strong>:
+<ul style="list-style-type: square;">
+<li><strong>Alpha Pruning</strong>: If the current node&#8217;s score is greater than or equal to beta, it means that the minimizing player will never choose this branch because there&#8217;s already a better option for them. Therefore, there&#8217;s no need to explore this branch further. The search can backtrack to the parent node (undo the move) and continue exploring other branches.</li>
+<li><strong>Beta Pruning</strong>: If the current node&#8217;s score is less than or equal to alpha, it means that the maximizing player will never choose this branch because there&#8217;s already a better option for them. Again, there&#8217;s no need to explore this branch further.</li>
+</ul>
+</li>
+<li><strong>Efficiency</strong>: By pruning branches that are guaranteed to be worse than previously explored ones, alpha-beta pruning reduces the number of nodes that need to be evaluated, dramatically speeding up the search process.</li>
+</ol>
+<p>Example:</p>
+<p>Suppose we have a simple game tree like this:</p>
+<p>A<br />
+/ \<br />
+B  C<br />
+/ \ / \<br />
+D E F G</p>
+<ul style="list-style-type: square;">
+<li>A is the root node representing the current game state.</li>
+<li>B and C are the children nodes representing possible moves for the maximizing player.</li>
+<li>D, E, F, and G are the children nodes representing possible moves for the minimizing player.</li>
+</ul>
+<p>Let&#8217;s assume that we are using alpha-beta pruning to find the best move for the maximizing player at node A. We start with alpha as negative infinity and beta as positive infinity.</p>
+<p>1. We evaluate node B and find that its score is 3. We update alpha to 3 because it&#8217;s the best score we&#8217;ve seen so far.</p>
+<p>A<br />
+/ \<br />
+(alpha=3)<br />
+B C<br />
+/ \ / \<br />
+D E F G</p>
+<p>2. We then evaluate node D and find that its score is 2. Since 2 is less than alpha (3), we can prune the rest of node B&#8217;s children because the minimizing player will never choose node D.</p>
+<p>A<br />
+/ \<br />
+(alpha=3)<br />
+B C<br />
+/<br />
+D</p>
+<p>3. We move on to evaluating node E. Let&#8217;s say its score is 4. Now, alpha remains 3, and we update it to the minimum of 3 and 4, which is still 3.</p>
+<p>A<br />
+/ \<br />
+(alpha=3)<br />
+B C<br />
+/ \<br />
+D E</p>
+<p>4. Now, we evaluate node C and find that its score is 5. We update beta to 5 because it&#8217;s the best score for the minimizing player.</p>
+<p>A<br />
+/ \<br />
+(alpha=3)<br />
+B C<br />
+/ \<br />
+D E<br />
+(beta=5)</p>
+<p>5. Since alpha (3) is less than beta (5), we can prune the rest of the nodes under B because the maximizing player will never choose node B.</p>
+<p>A<br />
+/ \<br />
+(alpha=3)<br />
+C<br />
+/<br />
+(beta=5)</p>
+<p>6. The search is complete, and the best move for the maximizing player is to choose node C with a score of 5.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How knowledge is represented using frames? Represent following knowledge using frames.</p>
+<p>Ram is name of an employee. His age is 27. He is male. He belongs to the department HR, where the number of employees is 110 and the average salary of the department is Rs. 45000. All departments are under Tribhuvan University. The organization type of Tribhuvan University is Educational.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Knowledge representation using frames is a structured and organized way of storing and representing information in artificial intelligence and knowledge-based systems. Frames are used to represent objects, concepts, or entities and their associated attributes, relationships, and behaviors. Here&#8217;s how knowledge is represented using frames:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Frame Structure</strong>: Each frame represents a specific entity or concept and consists of the following components:
+<ul style="list-style-type: square;">
+<li><strong>Slots</strong>: Slots are attributes or properties associated with the frame. They describe the characteristics or features of the entity being represented. Each slot has a name and can have a value associated with it.</li>
+<li><strong>Values</strong>: Values are the actual data or information stored in the slots. Values can be simple data types (such as numbers, strings) or references to other frames, creating a hierarchical structure.</li>
+<li><strong>Relationships</strong>: Frames can be related to each other through slots. For example, a &#8220;Person&#8221; frame may have a slot for &#8220;Address,&#8221; which can point to another frame representing an address.</li>
+<li><strong>Methods or Procedures</strong>: Frames can also contain procedures or methods that define how to interact with or manipulate the data in the frame.</li>
+</ul>
+</li>
+<li><strong>Hierarchy</strong>: Frames can be organized into a hierarchy or taxonomy, where more specific frames inherit attributes and behaviors from more general frames. This hierarchy allows for the representation of complex relationships and subtypes.</li>
+<li><strong>Inheritance</strong>: Frames can inherit attributes and behaviors from other frames in the hierarchy. This means that if a slot is not defined in a specific frame, it can inherit that slot&#8217;s value from a more general frame.</li>
+<li><strong>Instantiation</strong>: Frames can be instantiated to represent specific instances of a concept. For example, the &#8220;Employee&#8221; frame can be instantiated multiple times to represent individual employees, each with their own values for attributes like name, ID, and department.</li>
+<li><strong>Default Values</strong>: Frames can specify default values for slots. These default values are used when a specific value is not provided. For instance, if the &#8220;Employee&#8221; frame has a default salary of $50,000, an instantiated employee frame without a specified salary will inherit this default value.</li>
+<li><strong>Frame-Based Reasoning</strong>: Frames can be used for reasoning and decision-making. AI systems can use the information stored in frames to make inferences, solve problems, and answer questions.</li>
+<li><strong>Knowledge Base</strong>: A collection of frames forms a knowledge base, which can be queried and updated by an AI system to retrieve information or make decisions.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-26202" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231010_164935_CamScanner.jpg?resize=410%2C377&#038;ssl=1" alt="" width="410" height="377"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define selection, crossover, and mutation operations in genetic algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Genetic algorithms (GAs) are optimization and search algorithms inspired by the process of natural selection and genetics. GAs work with a population of candidate solutions, and they use various genetic operations to evolve and improve these solutions over successive generations. Three fundamental genetic operations in a genetic algorithm are selection, crossover (also known as recombination), and mutation. Here&#8217;s what each of these operations entails:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Selection</strong>:
+<ul style="list-style-type: square;">
+<li>Selection is the process of choosing individuals from the current population to become parents for the next generation. It is a critical step because it determines which individuals contribute their genetic material to the next generation.</li>
+<li>The selection process is typically biased toward choosing individuals with higher fitness scores. In a maximization problem, higher fitness means a higher chance of being selected.</li>
+<li>Various selection techniques exist, including roulette wheel selection, tournament selection, rank-based selection, and more. These techniques assign probabilities to individuals based on their fitness, and individuals with higher fitness have a higher probability of being chosen.</li>
+<li>The goal of selection is to favor individuals that have characteristics that make them suitable candidates for the optimization problem at hand.</li>
+</ul>
+</li>
+<li><strong>Crossover (Recombination)</strong>:
+<ul style="list-style-type: square;">
+<li>Crossover is the genetic operation responsible for combining the genetic material of two parent individuals to create one or more offspring. It simulates the process of genetic recombination in sexual reproduction.</li>
+<li>During crossover, two parent solutions are selected, and a specific crossover operator (e.g., one-point crossover, two-point crossover, uniform crossover) is applied to their genetic representations (often represented as strings or vectors).</li>
+<li>The result of crossover is one or more offspring solutions that inherit genetic material from both parents. The hope is that this process will produce offspring with favorable combinations of genetic traits.</li>
+<li>Crossover introduces diversity into the population and can lead to the discovery of new, potentially better solutions.</li>
+</ul>
+</li>
+<li><strong>Mutation</strong>:
+<ul style="list-style-type: square;">
+<li>Mutation is a genetic operation that introduces small, random changes to the genetic material of an individual. It is used to maintain genetic diversity within the population and explore new regions of the search space.</li>
+<li>Mutation typically involves flipping or modifying individual bits or elements in the genetic representation of an individual with a small probability. The specific mutations depend on the encoding and problem being solved.</li>
+<li>While crossover combines genetic material from two parents, mutation introduces novelty independently. It allows the genetic algorithm to escape local optima and explore a wider range of potential solutions.</li>
+<li>The mutation rate determines how frequently mutations occur. A low mutation rate ensures that the population remains relatively stable, while a higher mutation rate increases the likelihood of exploring new solutions.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Using your own assumptions, design PEAS framework for following intelligent agents.</p>
+<p>a. Covid-19 prediction system</p>
+<p>b. Vaccine recommender system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Covid-19 Prediction System:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Measure</strong>:
+<ul style="list-style-type: square;">
+<li>Accuracy of Covid-19 predictions (e.g., true positives, true negatives, false positives, false negatives).</li>
+<li>Timeliness of predictions (how quickly predictions are made).</li>
+<li>Sensitivity and specificity of predictions.</li>
+<li>User satisfaction and trust in the system&#8217;s predictions.</li>
+</ul>
+</li>
+<li><strong>Environment</strong>:
+<ul style="list-style-type: square;">
+<li>Medical data and patient records, including symptoms, medical history, and test results.</li>
+<li>Current Covid-19 pandemic conditions (e.g., infection rates, variants).</li>
+<li>Healthcare facilities and resources.</li>
+<li>External data sources (e.g., research findings, global health data).</li>
+</ul>
+</li>
+<li><strong>Actuators</strong>:
+<ul style="list-style-type: square;">
+<li>Reporting Covid-19 risk assessments and predictions to users and healthcare professionals.</li>
+<li>Providing recommendations for testing and isolation.</li>
+<li>Alerting healthcare authorities in case of potential outbreaks.</li>
+</ul>
+</li>
+<li><strong>Sensors</strong>:
+<ul style="list-style-type: square;">
+<li>Collecting and analyzing medical data, including symptoms, lab tests, and patient information.</li>
+<li>Monitoring real-time pandemic data and updates.</li>
+<li>Accessing relevant medical databases and research publications.</li>
+<li>Receiving input from users regarding symptoms and test results.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Vaccine Recommender System:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Measure</strong>:
+<ul style="list-style-type: square;">
+<li>Accuracy of vaccine recommendations based on individual health profiles.</li>
+<li>User satisfaction with the recommended vaccines.</li>
+<li>Vaccine uptake rates and vaccination coverage.</li>
+<li>Timeliness of recommendations (e.g., during outbreaks or for travel).</li>
+</ul>
+</li>
+<li><strong>Environment</strong>:
+<ul style="list-style-type: square;">
+<li>Individual health data, including medical history, allergies, age, and location.</li>
+<li>Availability of various vaccines (e.g., Covid-19 vaccines, flu vaccines).</li>
+<li>Vaccine administration centers and schedules.</li>
+<li>Public health guidelines and recommendations.</li>
+</ul>
+</li>
+<li><strong>Actuators</strong>:
+<ul style="list-style-type: square;">
+<li>Providing personalized vaccine recommendations to individuals.</li>
+<li>Generating vaccination schedules and reminders.</li>
+<li>Integrating with healthcare providers&#8217; systems for appointment scheduling.</li>
+<li>Tracking vaccine inventory and distribution.</li>
+</ul>
+</li>
+<li><strong>Sensors</strong>:
+<ul style="list-style-type: square;">
+<li>Collecting and analyzing individual health data and medical history.</li>
+<li>Monitoring vaccine availability and safety data.</li>
+<li>Accessing public health guidelines and recommendations.</li>
+<li>Receiving feedback from users on the recommended vaccines.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Describe the components of expert system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26206" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/es.jpg?resize=300%2C185&#038;ssl=1" alt="" width="300" height="185"></p>
+<p>The components of an expert system include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Knowledge Base (KB)</strong>:
+<ul style="list-style-type: square;">
+<li>The knowledge base is a central component of an expert system and stores all the relevant domain-specific information and expertise. It includes facts, rules, procedures, and heuristics.</li>
+<li><strong>Facts</strong>: These are statements about the world, often represented in the form of data or assertions. Facts serve as the foundation of knowledge in the system.</li>
+<li><strong>Rules</strong>: Rules are statements that describe how to make inferences or decisions based on the available facts. They represent the expert&#8217;s logic and reasoning processes.</li>
+<li><strong>Procedures</strong>: Procedures are sequences of actions or steps that the system can follow to solve specific problems or achieve goals.</li>
+<li><strong>Heuristics</strong>: Heuristics are rules of thumb or guidelines used for decision-making and problem-solving. They capture the expert&#8217;s experience and judgment.</li>
+</ul>
+</li>
+<li><strong>Inference Engine (IE)</strong>:
+<ul style="list-style-type: square;">
+<li>The inference engine is responsible for processing the information in the knowledge base to make decisions, draw conclusions, and answer questions.</li>
+<li>It uses various reasoning techniques, such as forward chaining (data-driven reasoning) or backward chaining (goal-driven reasoning), to derive new facts and make decisions based on the existing knowledge.</li>
+</ul>
+</li>
+<li><strong>User Interface (UI)</strong>:
+<ul style="list-style-type: square;">
+<li>The user interface serves as the interaction point between the expert system and the user. It allows users to input questions, provide information, and receive responses and explanations.</li>
+<li>The UI can be designed as a text-based interface, a graphical user interface (GUI), or even a natural language interface for more user-friendly interactions.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why pragmatic analysis is necessary in NLP? How pragmatic analysis is done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pragmatic analysis is a crucial aspect of Natural Language Processing (NLP) because it focuses on the interpretation of language in real-world contexts, considering the speaker&#8217;s intentions, the context, and the implied meaning beyond the literal words used. While syntactic and semantic analysis deal with sentence structure and word meaning, pragmatic analysis helps NLP systems understand the nuances, implications, and subtleties of human communication.</p>
+<p><strong>Example:</strong> Consider a scenario in which two friends, Alice and Bob, are discussing plans for the weekend.</p>
+<p><strong>Dialogue:</strong></p>
+<p>Alice: &#8220;It&#8217;s so hot in here!&#8221;</p>
+<p>Bob: &#8220;The window is open.&#8221;</p>
+<p><strong>Process of Pragmatic Analysis:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Literal Meaning</strong>:
+<ul style="list-style-type: square;">
+<li>At the surface level, Alice&#8217;s statement &#8220;It&#8217;s so hot in here!&#8221; expresses discomfort with the temperature.</li>
+</ul>
+</li>
+<li><strong>Pragmatic Interpretation</strong>:
+<ul style="list-style-type: square;">
+<li>Pragmatic analysis goes beyond the literal meaning and considers the context. In this case, the context includes the fact that Bob responds with &#8220;The window is open.&#8221;</li>
+</ul>
+</li>
+<li><strong>Implicature</strong>:
+<ul style="list-style-type: square;">
+<li>Bob&#8217;s response implies that he believes opening the window is a solution to the problem of the room being hot. This implicature is based on the assumption that people usually open windows to cool down a room.</li>
+<li>The implicature here is that Bob is suggesting a solution to Alice&#8217;s discomfort.</li>
+</ul>
+</li>
+<li><strong>Indirect Speech Act</strong>:
+<ul style="list-style-type: square;">
+<li>Alice&#8217;s statement is an example of an indirect speech act. She does not directly request Bob to open the window but rather makes an indirect statement about the temperature.</li>
+<li>Bob&#8217;s response also involves an indirect speech act by suggesting a solution without explicitly saying, &#8220;Please open the window.&#8221;</li>
+</ul>
+</li>
+<li><strong>Contextual Information</strong>:
+<ul style="list-style-type: square;">
+<li>Pragmatic analysis takes into account contextual information, such as the fact that Alice and Bob are in the same room and are likely aware of the temperature.</li>
+<li>It also considers their shared knowledge about how to regulate room temperature, which influences the implicature.</li>
+</ul>
+</li>
+<li><strong>Speaker Intentions</strong>:
+<ul style="list-style-type: square;">
+<li>Pragmatic analysis attempts to understand the speaker&#8217;s intentions behind their words. In this case, Alice is indirectly expressing discomfort and seeking a solution, while Bob is responding by providing a solution.</li>
+</ul>
+</li>
+<li><strong>Common Ground</strong>:
+<ul style="list-style-type: square;">
+<li>Pragmatic analysis assumes that there is a common ground of shared knowledge and expectations between the speakers. In this case, both Alice and Bob understand the implication of opening the window to cool down the room.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How iterative deepening search is used to find path from initial state to goal state in state space representation of any problem? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Iterative Deepening Search (IDS) is a search algorithm used to find a path from an initial state to a goal state in a state space representation of a problem. It combines the benefits of breadth-first search (BFS) and depth-first search (DFS) while avoiding some of their drawbacks. The key idea behind IDS is to perform a series of limited-depth-depth-first searches, gradually increasing the depth limit with each iteration until the goal state is found. IDS ensures completeness (it will find a solution if one exists) and optimality (it finds the shortest path) while using memory efficiently.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26208" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231010_171035_CamScanner.jpg?resize=345%2C482&#038;ssl=1" alt="" width="345" height="482"></p>
+<p>&nbsp;</p>
+</div>
+</body></html>
