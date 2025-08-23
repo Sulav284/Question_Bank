@@ -1,0 +1,495 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OOPS Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>OOPS Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>When inline functions may not work? Define and write syntax for default arguments. Write a program to display N number of characters by using default arguments for both parameters. Assume that the function takes two arguments, one character to be printed and other how many times the character to be printed respectively.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Inline functions may not work in certain situations, such as:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Complex Functions</strong>: Inline functions are expanded by the compiler at the call site, so if a function is too complex or contains a lot of code, it may result in code bloat and decrease in performance rather than improvement. In such cases, the compiler may choose not to inline the function.</li>
+<li><strong>Recursive Functions</strong>: Recursive functions, which call themselves, are typically not suitable for inlining. Inlining them would lead to infinite expansion.</li>
+<li><strong>Functions with Loops</strong>: Functions that contain loops may not be good candidates for inlining because they can lead to code duplication and increased binary size.</li>
+</ol>
+<p>Here&#8217;s the syntax for default arguments in C++:</p>
+<p>return_type function_name(parameter_type parameter_name = default_value);</p>
+<p>&nbsp;</p>
+<p>Now, let&#8217;s write a C++ program that displays a character a certain number of times using default arguments:</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<p>#include &lt;iostream&gt;</p>
+<p>// Function to display a character &#8216;ch&#8217; &#8216;n&#8217; number of times with default arguments<br />
+void displayCharacter(char ch = &#8216;*&#8217;, int n = 10) {<br />
+for (int i = 0; i &lt; n; i++) {<br />
+std::cout &lt;&lt; ch;<br />
+}<br />
+std::cout &lt;&lt; std::endl;<br />
+}</p>
+<p>int main() {<br />
+int num;</p>
+<p>// Display &#8216;*&#8217; 10 times (using default arguments)<br />
+displayCharacter();</p>
+<p>// Display &#8216;#&#8217; 5 times<br />
+displayCharacter(&#8216;#&#8217;, 5);</p>
+<p>// Prompt the user for input<br />
+std::cout &lt;&lt; &#8220;Enter a character: &#8220;;<br />
+char inputChar;<br />
+std::cin &gt;&gt; inputChar;</p>
+<p>std::cout &lt;&lt; &#8220;Enter the number of times to display the character: &#8220;;<br />
+std::cin &gt;&gt; num;</p>
+<p>// Display the user-defined character &#8216;num&#8217; times<br />
+displayCharacter(inputChar, num);</p>
+<p>return 0;<br />
+}</p>
+<p>In this program, we have defined a function <code>displayCharacter</code> with default arguments <code>char ch = '*'</code> and <code>int n = 10</code>. This means that if you call the function without providing any arguments, it will display &#8216;*&#8217; 10 times by default. You can also provide custom values for the character and the number of times it should be displayed when calling the function.</p>
+</div>
+</div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>State the use of new operator. An educational institute wishes to maintain a data of its employee. The hierarchial relationships of related classes are as follows.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25022" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/Capture.jpg?resize=336%2C161&ssl=1" alt="" width="336" height="161"></p>
+<p>Define all the classes to represent above hierarchy and define functions to retrieve individual information as and when required.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <code>new</code> operator in C++ is used for dynamic memory allocation. It allows you to allocate memory for a data type (such as an integer, an array, or a user-defined object) on the heap, which is the region of memory that is managed by the program at runtime. The <code>new</code> operator returns a pointer to the allocated memory. It is primarily used for the following purposes:</p>
+<p><strong>1. Dynamic Object Creation</strong>: You can use new to create objects of classes or structures dynamically. This is useful when you want to create objects with a lifetime that extends beyond the scope of the current function or when you need to manage the memory explicitly.</p>
+<p>MyClass *objPtr = new MyClass; // Allocates memory for an object of MyClass</p>
+<p><strong>2. Dynamic Array Allocation</strong>: You can use new to allocate memory for arrays of elements whose size is determined at runtime. This is particularly useful when you don&#8217;t know the size of the array at compile-time.</p>
+<p>int *arr = new int[10]; // Allocates an array of 10 integers</p>
+<p><strong>3. User-Defined Data Structures</strong>: You can use <code>new</code> to allocate memory for user-defined data structures or objects, such as linked lists, trees, or other complex data structures.</p>
+<p>Node *nodePtr = new Node; // Allocates memory for a linked list node</p>
+<p><strong>4. Resource Management</strong>: <code>new</code> can be used to allocate memory for resources like files, network connections, or other external resources. This allows you to control the lifetime of these resources explicitly.</p>
+<p>FileHandle *file = new FileHandle(&#8220;file.txt&#8221;); // Allocates memory for a file resource</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>#include &lt;iostream&gt;<br />
+#include &lt;string&gt;</p>
+<p>class Staff {<br />
+protected:<br />
+int Code;<br />
+std::string Name;</p>
+<p>public:<br />
+Staff(int code, const std::string&amp; name) : Code(code), Name(name) {}</p>
+<p>void displayStaffInfo() {<br />
+std::cout &lt;&lt; &#8220;Code: &#8221; &lt;&lt; Code &lt;&lt; std::endl;<br />
+std::cout &lt;&lt; &#8220;Name: &#8221; &lt;&lt; Name &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>class Teacher : public Staff {<br />
+private:<br />
+std::string Subject;<br />
+double Salary;</p>
+<p>public:<br />
+Teacher(int code, const std::string&amp; name, const std::string&amp; subject, double salary)<br />
+: Staff(code, name), Subject(subject), Salary(salary) {}</p>
+<p>void displayTeacherInfo() {<br />
+displayStaffInfo(); // Reuse the base class function<br />
+std::cout &lt;&lt; &#8220;Subject: &#8221; &lt;&lt; Subject &lt;&lt; std::endl;<br />
+std::cout &lt;&lt; &#8220;Salary: $&#8221; &lt;&lt; Salary &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>class Typist : public Staff {<br />
+private:<br />
+int Speed; // Typing speed in words per minute</p>
+<p>public:<br />
+Typist(int code, const std::string&amp; name, int speed)<br />
+: Staff(code, name), Speed(speed) {}</p>
+<p>void displayTypistInfo() {<br />
+displayStaffInfo(); // Reuse the base class function<br />
+std::cout &lt;&lt; &#8220;Typing Speed (wpm): &#8221; &lt;&lt; Speed &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>int main() {<br />
+// Create objects of the derived classes<br />
+Teacher teacher(101, &#8220;John Doe&#8221;, &#8220;Mathematics&#8221;, 50000.0);<br />
+Typist typist(201, &#8220;Alice Smith&#8221;, 70);</p>
+<p>// Display information for the teacher and typist<br />
+std::cout &lt;&lt; &#8220;Teacher Information:&#8221; &lt;&lt; std::endl;<br />
+teacher.displayTeacherInfo();<br />
+std::cout &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; &#8220;Typist Information:&#8221; &lt;&lt; std::endl;<br />
+typist.displayTypistInfo();</p>
+<p>return 0;<br />
+}</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is constructor? Why constructor is needed in a class? Illustrate the types of constructor with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A constructor in object-oriented programming is a special member function of a class that gets called automatically when an object of the class is created. It is used to initialize the object&#8217;s data members and perform any necessary setup or initialization tasks. Constructors have the same name as the class and do not have a return type.</p>
+<p>Constructors are needed in a class for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Initialization</strong>: Constructors ensure that objects of a class are properly initialized when they are created. This is important to avoid undefined or unexpected behavior caused by uninitialized data members.</li>
+<li><strong>Setting Default Values</strong>: Constructors can set default values for data members if no explicit values are provided during object creation. This allows for flexibility in object initialization.</li>
+<li><strong>Resource Allocation</strong>: Constructors can allocate resources like memory, file handles, network connections, or database connections. This ensures that the necessary resources are acquired and managed properly.</li>
+<li><strong>Parameterization</strong>: Constructors can accept parameters to customize the initialization of objects. This allows you to create objects with different initial states based on the provided arguments.</li>
+</ol>
+<p><strong>Types of Constructors:</strong></p>
+<p><strong>1. Default Constructor</strong>: A default constructor is a constructor that takes no parameters. If you don&#8217;t provide any constructors in your class, the compiler will automatically generate a default constructor for you. It initializes the data members with default values (zero or null) or performs no initialization if possible.</p>
+<p>class MyClass {<br />
+public:<br />
+// Default constructor (implicitly provided by the compiler)<br />
+};</p>
+<p><strong>2. Parameterized Constructor</strong>: A parameterized constructor is a constructor that takes one or more parameters. It allows you to initialize the object&#8217;s data members with specific values provided during object creation.</p>
+<p>class Student {<br />
+private:<br />
+int rollNumber;<br />
+std::string name;</p>
+<p>public:<br />
+// Parameterized constructor<br />
+Student(int roll, const std::string&amp; n) : rollNumber(roll), name(n) {}<br />
+};</p>
+<p>int main() {<br />
+// Creating an object of Student with parameterized constructor<br />
+Student student1(101, &#8220;Alice&#8221;);<br />
+}</p>
+<p><strong>3. Copy Constructor</strong>: A copy constructor is a constructor that creates a new object by copying the values from an existing object of the same class. It is used when objects are passed by value or when objects are created as copies of existing objects.</p>
+<p>class Point {<br />
+private:<br />
+int x, y;</p>
+<p>public:<br />
+// Copy constructor<br />
+Point(const Point&amp; other) : x(other.x), y(other.y) {}<br />
+};</p>
+<p>int main() {<br />
+Point p1(1, 2);<br />
+Point p2 = p1; // Using the copy constructor to create p2 as a copy of p1<br />
+}</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"></div>
+</div>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Write a C++ program to display the number of objects created using static member.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;iostream&gt;</p>
+<p>class MyClass {<br />
+private:<br />
+static int count; // Static member variable to keep track of the object count</p>
+<p>public:<br />
+MyClass() {<br />
+count++; // Increment the object count when a new object is created<br />
+}</p>
+<p>// Static member function to retrieve the object count<br />
+static int getObjectCount() {<br />
+return count;<br />
+}<br />
+};</p>
+<p>// Initialize the static member variable to 0<br />
+int MyClass::count = 0;</p>
+<p>int main() {<br />
+MyClass obj1; // Create the first object<br />
+MyClass obj2; // Create the second object<br />
+MyClass obj3; // Create the third object</p>
+<p>// Display the number of objects created<br />
+std::cout &lt;&lt; &#8220;Number of objects created: &#8221; &lt;&lt; MyClass::getObjectCount() &lt;&lt; std::endl;</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain about friend function and friend class with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C++, a friend function and a friend class are features that provide access to the private and protected members of a class from outside the class. This allows certain functions or classes to have special access privileges, even though they are not part of the class hierarchy. Friends are typically used in situations where you need to grant specific functions or classes access to the private members of a class while still maintaining encapsulation.</p>
+<p><strong>Friend Function:</strong></p>
+<p>A friend function is a function that is not a member of a class but is granted access to the private and protected members of the class. To declare a function as a friend of a class, you use the friend keyword in the class declaration.</p>
+<p>Here&#8217;s an example:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>class MyClass {<br />
+private:<br />
+int data;</p>
+<p>public:<br />
+MyClass(int value) : data(value) {}</p>
+<p>// Declare a friend function<br />
+friend void displayData(const MyClass&amp; obj);<br />
+};</p>
+<p>// Define the friend function<br />
+void displayData(const MyClass&amp; obj) {<br />
+std::cout &lt;&lt; &#8220;Data from friend function: &#8221; &lt;&lt; obj.data &lt;&lt; std::endl;<br />
+}</p>
+<p>int main() {<br />
+MyClass obj(42);<br />
+displayData(obj); // Call the friend function to access private data<br />
+return 0;<br />
+}</p>
+<p>In this example, the displayData function is declared as a friend of the MyClass class. It can access the private member data of MyClass objects.</p>
+<p><strong>Friend Class:</strong></p>
+<p>A friend class is a class that is granted access to the private and protected members of another class. To declare a class as a friend of another class, you use the friend keyword in the class declaration.</p>
+<p>Here&#8217;s an example:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>class MyClass {<br />
+private:<br />
+int data;</p>
+<p>public:<br />
+MyClass(int value) : data(value) {}</p>
+<p>// Declare a friend class<br />
+friend class FriendClass;<br />
+};</p>
+<p>// Define the friend class<br />
+class FriendClass {<br />
+public:<br />
+void displayData(const MyClass&amp; obj) {<br />
+std::cout &lt;&lt; &#8220;Data from friend class: &#8221; &lt;&lt; obj.data &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>int main() {<br />
+MyClass obj(42);<br />
+FriendClass fc;<br />
+fc.displayData(obj); // Call the friend class method to access private data<br />
+return 0;<br />
+}</p>
+<p>In this example, the FriendClass class is declared as a friend of the MyClass class. Objects of FriendClass can access the private member data of MyClass objects.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the use of reinterpret cast operator? Why do we need virtual function?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Use of reinterpret_cast Operator:</strong></p>
+<p>In C++, the `reinterpret_cast` operator is used for type casting or converting one pointer type to another pointer type, even if the two pointer types are unrelated. It is the most powerful, yet potentially dangerous, casting operator because it allows you to perform low-level type conversions that can lead to undefined behavior if not used carefully. The `reinterpret_cast` operator should be used sparingly and with a deep understanding of the underlying memory layout of the objects involved.</p>
+<p>Here are some common use cases for the `reinterpret_cast` operator:</p>
+<p>&#8211; <strong>Pointer Type Conversion</strong>: It can be used to convert between different pointer types, such as converting a pointer to an integer or vice versa.</p>
+<p>int num = 42;<br />
+int* ptr = &amp;num;<br />
+uintptr_t addr = reinterpret_cast&lt;uintptr_t&gt;(ptr);</p>
+<p>&#8211; <strong>Type Punning</strong>: It is used in situations where you need to interpret the bits of one data type as another data type. This is commonly used in low-level programming and systems programming.</p>
+<p>float floatValue = 3.14f;<br />
+int* intPtr = reinterpret_cast&lt;int*&gt;(&amp;floatValue);</p>
+<p>&#8211; <strong>Working with Low-Level Memory</strong>: When working with raw memory buffers or hardware interactions, `reinterpret_cast` can be used to interpret the memory content as different types.</p>
+<p>struct HardwareRegister {<br />
+uint32_t value;<br />
+};</p>
+<p>HardwareRegister* reg = reinterpret_cast&lt;HardwareRegister*&gt;(0x12345678);</p>
+<p>It&#8217;s important to exercise caution when using `reinterpret_cast`, as it bypasses many of the type safety checks provided by C++ and can lead to undefined behavior if misused.</p>
+<p><strong>Need for Virtual Functions:</strong></p>
+<p>Virtual functions in C++ are a fundamental feature of polymorphism and play a crucial role in building flexible and extensible object-oriented programs. They are used in scenarios where you need to perform different operations on objects of different derived classes through a common base class pointer. Virtual functions enable runtime method binding, which means the appropriate function implementation is determined at runtime based on the actual derived class type of the object being operated on.</p>
+<p>Here&#8217;s why we need virtual functions:</p>
+<p>&#8211; <strong>Polymorphism</strong>: Virtual functions enable polymorphism, allowing you to write code that can work with objects of various derived classes through a common interface (base class pointer or reference).</p>
+<p>class Shape {<br />
+public:<br />
+virtual void draw() {<br />
+// Base class draw function<br />
+}<br />
+};</p>
+<p>class Circle : public Shape {<br />
+public:<br />
+void draw() override {<br />
+// Circle-specific draw function<br />
+}<br />
+};</p>
+<p>void drawShape(Shape* shapePtr) {<br />
+shapePtr-&gt;draw(); // Calls the appropriate derived class&#8217;s draw function<br />
+}</p>
+<p>&#8211; <strong>Dynamic Binding</strong>: Virtual functions provide dynamic binding, which means the correct function implementation is determined at runtime based on the actual type of the object, not just the type of the pointer or reference.</p>
+<p>&#8211; <strong>Extensibility</strong>: Virtual functions allow you to add new derived classes without modifying existing code that works with the base class. This promotes code extensibility and flexibility.</p>
+<p>&#8211; <strong>Abstraction</strong>: They enable the creation of abstract base classes, which define a common interface for derived classes to implement. This abstraction simplifies complex systems and promotes code organization.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between concrete class and abstract class. Define class template and function template with syntax.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Concrete Class:</strong></p>
+<p>A concrete class in C++ is a class that can be instantiated, meaning you can create objects (instances) of that class. Concrete classes define and provide implementations for all their member functions. These classes are designed for direct use and are used to create objects with specific behaviors and attributes. Concrete classes cannot have pure virtual functions, and they provide complete implementations for all their member functions.</p>
+<p>Here&#8217;s an example of a concrete class:</p>
+<p>class Rectangle {<br />
+private:<br />
+int length;<br />
+int width;</p>
+<p>public:<br />
+Rectangle(int len, int wid) : length(len), width(wid) {}</p>
+<p>int calculateArea() {<br />
+return length * width;<br />
+}<br />
+};</p>
+<p><strong>Abstract Class:</strong></p>
+<p>An abstract class in C++ is a class that cannot be instantiated on its own. It serves as a base class or interface for other classes and contains one or more pure virtual functions. A pure virtual function is a function declared in the abstract class but without a function body, making it mandatory for derived classes to provide their implementations for these functions. Abstract classes are used to define a common interface that derived classes must adhere to.</p>
+<p>Here&#8217;s an example of an abstract class:</p>
+<p>class Shape {<br />
+public:<br />
+virtual double calculateArea() = 0; // Pure virtual function</p>
+<p>virtual void draw() {<br />
+// Virtual function with default implementation<br />
+}<br />
+};</p>
+<p><strong>Class Template:</strong></p>
+<p>A class template in C++ is a blueprint for creating a family of classes. It allows you to define a class in which some or all of its data members and member functions are parameterized by one or more template parameters. These parameters are specified when you create an instance of the template class, and they allow you to create different classes with the same structure but different data types.</p>
+<p>Syntax of a class template:</p>
+<p>template &lt;typename T1, typename T2, &#8230;&gt;<br />
+class ClassName {<br />
+// Class definition with template parameters<br />
+};</p>
+<p>Here&#8217;s an example of a class template for a simple generic container:</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<p>template &lt;typename T&gt;<br />
+class MyContainer {<br />
+private:<br />
+T data;</p>
+<p>public:<br />
+MyContainer(T value) : data(value) {}</p>
+<p>T getValue() {<br />
+return data;<br />
+}<br />
+};</p>
+<p><strong>Function Template:</strong></p>
+<p>A function template in C++ allows you to define a family of functions where some or all of the function&#8217;s arguments are parameterized by one or more template parameters. Function templates provide a way to create functions that can work with different data types while maintaining type safety.</p>
+<p>Syntax of a function template:</p>
+<p>template &lt;typename T1, typename T2, &#8230;&gt;<br />
+return_type functionName(T1 param1, T2 param2, &#8230;) {<br />
+// Function definition with template parameters<br />
+}</p>
+<p>Here&#8217;s an example of a function template for finding the maximum of two values:</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">template &lt;typename T&gt;<br />
+T max(T a, T b) {<br />
+return (a &gt; b) ? a : b;<br />
+}</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Describe the chain of constructors and destructors in inheritance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C++ inheritance, when you have a base class and one or more derived classes, constructors and destructors are called in a specific order, often referred to as the &#8220;chain of constructors&#8221; and &#8220;chain of destructors.&#8221; This order ensures that objects are properly constructed and destroyed, preserving the integrity of the inheritance hierarchy. The rules for constructor and destructor chaining are as follows:</p>
+<p><strong>Constructor Chaining:</strong></p>
+<p>1. Base Class Constructor: When an object of a derived class is created, the constructor of the base class is called first. This ensures that the base class part of the derived object is properly initialized.</p>
+<p>2. Derived Class Constructor: After the base class constructor completes its execution, the constructor of the derived class is called. This allows the derived class to initialize its own members.</p>
+<p>Here&#8217;s an example:</p>
+<p>class Base {<br />
+public:<br />
+Base() {<br />
+std::cout &lt;&lt; &#8220;Base class constructor&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>class Derived : public Base {<br />
+public:<br />
+Derived() {<br />
+std::cout &lt;&lt; &#8220;Derived class constructor&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>int main() {<br />
+Derived derivedObj;<br />
+return 0;<br />
+}</p>
+<p>When you create a `Derived` object, the output will be:</p>
+<p>Base class constructor<br />
+Derived class constructor</p>
+<p><strong>Destructor Chaining:</strong></p>
+<p>The destruction process follows the reverse order of constructors:</p>
+<p>1. Derived Class Destructor: When an object of a derived class goes out of scope or is explicitly deleted, the destructor of the derived class is called first. This allows the derived class to perform its cleanup operations.</p>
+<p>2. Base Class Destructor: After the derived class destructor completes its execution, the destructor of the base class is called. This ensures that the base class part of the object is properly cleaned up.</p>
+<p>Here&#8217;s an example:</p>
+<p>class Base {<br />
+public:<br />
+~Base() {<br />
+std::cout &lt;&lt; &#8220;Base class destructor&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>class Derived : public Base {<br />
+public:<br />
+~Derived() {<br />
+std::cout &lt;&lt; &#8220;Derived class destructor&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>int main() {<br />
+Derived derivedObj;<br />
+return 0;<br />
+}</p>
+<p>When the `derivedObj` goes out of scope or is explicitly destroyed, the output will be:</p>
+<p>Derived class destructor<br />
+Base class destructor</p>
+<p>In summary, the chain of constructors and destructors in C++ inheritance ensures that the base class part of an object is constructed before the derived class part and is destructed after the derived class part. This order is essential for proper object initialization and cleanup when working with inheritance hierarchies.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>List any two operators that cannot be overloaded. Write a program to handle the possible exception in taking “age” as input. Here the exception must be thrown in the input is negative or greater than 200.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Two operators that cannot be overloaded in C++ are:</p>
+<p><strong>1. Scope Resolution Operator (::)</strong>: It is used to access the global scope or to qualify the name of a class, namespace, or enumeration.</p>
+<p><strong>2. Conditional Operator (?:)</strong>: It is used for conditional expressions, and it cannot be overloaded because it is a ternary operator with a fixed behavior.</p>
+<p>&nbsp;</p>
+<p>#include &lt;iostream&gt;<br />
+#include &lt;stdexcept&gt;</p>
+<p>int main() {<br />
+int age;</p>
+<p>try {<br />
+std::cout &lt;&lt; &#8220;Enter your age: &#8220;;<br />
+std::cin &gt;&gt; age;</p>
+<p>if (age &lt; 0 || age &gt; 200) {<br />
+throw std::out_of_range(&#8220;Age is out of range (0-200)&#8221;);<br />
+}</p>
+<p>std::cout &lt;&lt; &#8220;Your age is: &#8221; &lt;&lt; age &lt;&lt; std::endl;<br />
+} catch (const std::exception&amp; e) {<br />
+std::cerr &lt;&lt; &#8220;Error: &#8221; &lt;&lt; e.what() &lt;&lt; std::endl;<br />
+}</p>
+<p>return 0;<br />
+}</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Create a class named Point with data members x(int) and y(int). Add operator overloading to find the Euclidean distance between two points.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;iostream&gt;<br />
+#include &lt;cmath&gt;</p>
+<p>class Point {<br />
+private:<br />
+int x;<br />
+int y;</p>
+<p>public:<br />
+Point(int xCoord, int yCoord) : x(xCoord), y(yCoord) {}</p>
+<p>// Overload the &#8216;-&#8216; operator to calculate the Euclidean distance<br />
+double operator-(const Point&amp; other) const {<br />
+int deltaX = x &#8211; other.x;<br />
+int deltaY = y &#8211; other.y;<br />
+return std::sqrt(deltaX * deltaX + deltaY * deltaY);<br />
+}<br />
+};</p>
+<p>int main() {<br />
+Point p1(1, 2);<br />
+Point p2(4, 6);</p>
+<p>double distance = p1 &#8211; p2;</p>
+<p>std::cout &lt;&lt; &#8220;Euclidean distance between p1 and p2: &#8221; &lt;&lt; distance &lt;&lt; std::endl;</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain the reason for member function overriding when using virtual function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Member function overriding is a key concept in C++ when working with virtual functions and inheritance. The reason for member function overriding is to enable polymorphism, dynamic binding, and the ability to provide specialized implementations of virtual functions in derived classes.</p>
+<p>Here&#8217;s a detailed explanation of why member function overriding is necessary when using virtual functions:</p>
+<p><strong>1. Polymorphism:</strong></p>
+<p>Polymorphism is the ability of objects of different classes to respond to the same function call in a way that is appropriate for their specific types. In C++, this is achieved through virtual functions and function overriding. By defining a virtual function in a base class and allowing derived classes to provide their own implementations, you enable polymorphism.</p>
+<p><strong>2. Dynamic Binding:</strong></p>
+<p>Virtual functions enable dynamic binding or late binding. When you call a virtual function on a base class pointer or reference that points to an object of a derived class, the appropriate derived class&#8217;s function implementation is called at runtime. This is in contrast to static binding, where the function call is resolved at compile-time based on the type of the pointer or reference.</p>
+<p><strong>3. Specialization:</strong></p>
+<p>Derived classes often have specific behaviors or attributes that are unique to them. By overriding virtual functions, you allow derived classes to provide specialized implementations of those functions to meet their specific requirements. This allows you to take advantage of the base class&#8217;s interface while tailoring the behavior to the individual-derived classes.</p>
+<p><strong>4. Code Reusability and Extensibility:</strong></p>
+<p>Virtual functions and member function overriding promote code reusability and extensibility. You can create a base class with a common interface and then derive multiple classes from it, each providing its own implementation of virtual functions. This allows you to write generic code that works with objects of the base class but can also work seamlessly with objects of any derived class.</p>
+<p>Here&#8217;s an example to illustrate the importance of member function overriding with virtual functions:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>class Shape {<br />
+public:<br />
+virtual void draw() {<br />
+std::cout &lt;&lt; &#8220;Drawing a shape&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>class Circle : public Shape {<br />
+public:<br />
+void draw() override {<br />
+std::cout &lt;&lt; &#8220;Drawing a circle&#8221; &lt;&lt; std::endl;<br />
+}<br />
+};</p>
+<p>int main() {<br />
+Shape* shapePtr = new Circle;<br />
+shapePtr-&gt;draw(); // Calls the overridden draw function of Circle</p>
+<p>delete shapePtr;<br />
+return 0;<br />
+}</p>
+<p>In this example, the `Shape` class defines a virtual function `draw()`, and the `Circle` class overrides this function with its own specialized implementation. When we create a `Circle` object and call `draw()` on a `Shape*` pointer pointing to that object, the appropriate derived class&#8217;s function is called at runtime, demonstrating polymorphism and dynamic binding. This is possible because of member function overriding with virtual functions.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What do you mean by stream? Explain different stream class for file input/output.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C++, a stream refers to a sequence of data that flows between a program and a source or destination, such as a file, a keyboard, or a network connection. Streams are used for input and output operations, allowing data to be read from or written to various sources or destinations in a structured and consistent manner. C++ provides a powerful stream library known as the Standard Input/Output Library, which includes a variety of stream classes for file input and output.</p>
+<p>Here are the key stream classes for file input/output in C++:</p>
+<p><strong>1. ifstream (Input File Stream):</strong></p>
+<p>The ifstream class is used for reading data from files. It allows you to open a file for input and perform read operations. You can use `&gt;&gt;` and `getline()` operations to read data from the file.</p>
+<p>#include &lt;fstream&gt;<br />
+ifstream inputFile(&#8220;data.txt&#8221;); // Open a file for reading<br />
+int num;<br />
+inputFile &gt;&gt; num; // Read an integer from the file</p>
+<p><strong>2. ofstream (Output File Stream):</strong></p>
+<p>The ofstream class is used for writing data to files. It allows you to open a file for output and perform write operations. You can use `&lt;&lt;` operations to write data to the file.</p>
+<p>#include &lt;fstream&gt;<br />
+ofstream outputFile(&#8220;output.txt&#8221;); // Open a file for writing<br />
+int num = 42;<br />
+outputFile &lt;&lt; num; // Write an integer to the file</p>
+<p><strong>3. fstream (File Stream):</strong></p>
+<p>The fstream class is a combination of `ifstream` and `ofstream` and is used for both reading and writing to files. It allows you to open a file in both input and output modes.</p>
+<p>#include &lt;fstream&gt;<br />
+fstream file(&#8220;data.txt&#8221;, ios::in | ios::out); // Open a file for both reading and writing<br />
+int num;<br />
+file &gt;&gt; num; // Read an integer from the file<br />
+num++;<br />
+file &lt;&lt; num; // Write an updated integer to the file</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

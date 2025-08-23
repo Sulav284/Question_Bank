@@ -1,0 +1,678 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OOPS Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>OOPS Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any Two questions:(2x10=20)</h2><h3>Question 1</h3>
+<div><p><p>Write a program according to the specification given below:</p>
+<ul>
+<li>– Create a class Account with data members acc no, balance, and min_balance(static)</li>
+<li>-Include methods for reading and displaying values of objects</li>
+<li>– Define static member function to display min_balance</li>
+<li>-Create array of objects to store data of 5 accounts and read and display values of each object</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="generic">/**
+ * @author Suresh Chand (sureshchand12a@gmail.com)
+ * @brief https://hamrocsit.com/question/3733/
+ * @version 0.1
+ * @date 2022-04-16
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+#include &lt;iostream&gt;
+using namespace std;
+#define SIZE 5
+
+class Account{
+
+    public:
+        string acc_no;
+        int balance;
+
+        //static data member
+        static int min_balance;
+
+        //read the data
+        void readData(){
+            cout &lt;&lt; "\nEnter Account No: ";
+            cin &gt;&gt; acc_no;
+
+            cout &lt;&lt; "Enter balance: ";
+            cin &gt;&gt; balance;
+        }
+
+        //print data
+        void displayData(){
+            cout &lt;&lt; "Account No: " &lt;&lt; acc_no &lt;&lt; endl;
+            cout &lt;&lt; "Balance: " &lt;&lt; balance &lt;&lt; endl;
+        }
+
+        //read minimum balance
+        static void readMinBalance(){
+            cout &lt;&lt; "\nEnter Minimum Balance: ";
+            cin &gt;&gt; min_balance;
+        }
+
+        //static function to print static member
+        static void dispMinBalance(){
+            cout &lt;&lt; "Minimum Balance: " &lt;&lt; min_balance &lt;&lt; endl &lt;&lt; endl;
+        }
+};
+
+//Initialize static data member
+int Account::min_balance = 0;
+
+int main(){
+
+    Account acc[SIZE];
+    int i = 0;
+
+    //Read the account data
+    Account::readMinBalance();
+
+    cout &lt;&lt; "\n=======Enter Account Data=======" &lt;&lt; endl;
+    for(i = 0; i &lt; SIZE; i++){
+        acc[i].readData();
+    }
+
+    //print the account data
+    cout &lt;&lt; "\n=======Account Details=======\n" &lt;&lt; endl;
+    for(i = 0; i &lt; SIZE; i++){
+        acc[i].displayData();
+        acc[i].dispMinBalance();
+    }
+
+    return 0;
+}</pre>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter Minimum Balance: 100
+
+=======Enter Account Data=======
+
+Enter Account No: HAMROCSIT1
+Enter balance: 200
+
+Enter Account No: HAMROCSIT2
+Enter balance: 300
+
+Enter Account No: HAMROCSIT3
+Enter balance: 400
+
+Enter Account No: HAMROCSIT4
+Enter balance: 500
+
+Enter Account No: HAMROCSIT5
+Enter balance: 600
+
+=======Account Details=======
+
+Account No: HAMROCSIT1
+Balance: 200
+Minimum Balance: 100
+
+Account No: HAMROCSIT2
+Balance: 300
+Minimum Balance: 100
+
+Account No: HAMROCSIT3
+Balance: 400
+Minimum Balance: 100
+
+Account No: HAMROCSIT4
+Balance: 500
+Minimum Balance: 100
+
+Account No: HAMROCSIT5
+Balance: 600
+Minimum Balance: 100</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is meant by type conversion? Define two way of converting one user defined data type (object) to another user defined object? Write a program that converts object of another distance class with data members feet and inch.(Assume 1m = 3.3 feet and 1cm = 0.4 inch)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Type casting refers to changing an variable of one data type into another.</p>
+<p>Type conversion can be classified into the following two types:</p>
+<p><span style="text-decoration: underline;"><strong>1.Implicit Type Conversion</strong></span></p>
+<p>When the type conversion is performed automatically by the compiler without programmers intervention, such type of conversion is known as implicit type conversion or type promotion.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+
+    int x = 10; // integer x
+    char y = 'a'; // character c
+
+    // y implicitly converted to int. ASCII
+    // value of 'a' is 97
+    x = x + y;
+
+    // x is implicitly converted to float
+    float z = x + 1.0;
+
+    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; endl
+        &lt;&lt; "y = " &lt;&lt; y &lt;&lt; endl
+        &lt;&lt; "z = " &lt;&lt; z &lt;&lt; endl;
+
+    return 0;
+}
+</pre>
+<p><span style="text-decoration: underline;"><strong>2.Explicit Type Conversion</strong></span></p>
+<p>The type conversion performed by the programmer by posing the data type of the expression of specific type is known as explicit type conversion. The explicit type conversion is also known as type casting.</p>
+<p>Type casting in c is done in the following form:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">(data_type)expression;</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    double x = 1.2;
+    // Explicit conversion from double to int
+    int sum = (int)x + 1;
+    cout &lt;&lt; "Sum = " &lt;&lt; sum;
+    return 0;
+}
+</pre>
+<p><span style="text-decoration: underline;"><strong>Program Part:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;iostream&gt;
+using namespace std;
+
+class Distance{
+
+    public:
+        int inch = 20;
+        int feet = 15;
+
+        void display(){
+            cout &lt;&lt; "Inch: " &lt;&lt; inch &lt;&lt; endl;
+            cout &lt;&lt; "Feet: " &lt;&lt;  feet &lt;&lt; endl;
+        }
+
+};
+
+class Distance_two{
+
+    public:
+        float meter;
+        float cm;
+
+        void operator = (Distance a){
+            meter = (1 / 3.3) * a.feet;
+            cm = (1 / 0.4) * a.inch;
+        }
+
+        void display(){
+            cout &lt;&lt; "Meter: " &lt;&lt; meter &lt;&lt; endl;
+            cout &lt;&lt; "Centimeter: " &lt;&lt;  cm &lt;&lt; endl;
+        }
+
+};
+
+int main(){
+
+    Distance a;
+    Distance_two b;
+
+    //CLass type conversion with operator overloading
+    b = a;
+
+    //displaying data
+    a.display();
+    b.display();
+
+    return 0;
+}</pre>
+<p>The output of above program is:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Inch: 20
+Feet: 15
+Meter: 4.54545
+Centimeter: 50</pre>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How ambiguity arises in multipath inheritance? How can you remove this type of ambiguity? Explain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multipath Inheritance is a derivation of a class from other derived classes, which are derived from the same base class. In this type of inheritance, there involves other inheritance like multiple, multilevel, hierarchical etc.</p>
+<p>There is ambiguity in this type of inheritance.</p>
+<p><span style="text-decoration: underline;"><strong>Ambiguity in Multipath Inheritance:</strong></span></p>
+<p>Suppose we have classes A, B, C and D. classes B and C are derived from A and class D is derived from classes B and C.</p>
+<p>Both derived classes inherits the features of base class. Hence when we derive a new class by inheriting features form these two classes derived from the same base class, then same features from the first base is inherited to the finally derived class from two paths. This cause <code>ambiguity</code> in accessing first base class members.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic"># include&lt;iostream&gt;
+
+class A
+{
+    private:
+        //...
+
+    public:
+        void display(){
+            //...
+        }
+};
+
+class B: public A
+{
+    //...
+};
+
+class C: public A
+{
+    //..
+};
+
+class D: public B, public C
+{
+    //...
+};
+
+int main(){
+    D obj;
+    obj.display();
+    return 0;
+}</pre>
+<p>To eliminate this problem, C++ has a mechanism to inherit a single copy of properties from the common base class.</p>
+<p>This is done by declaring the base class as <code>virtual</code> while creating derive classes from this base class.</p>
+<p>After removing ambiguity :-</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic"># include&lt;iostream&gt;
+
+class A
+{
+    private:
+        //...
+
+    public:
+        void display(){
+            //...
+        }
+};
+
+class B: virtual public A
+{
+    //...
+};
+
+class C: virtual public A
+{
+    //..
+};
+
+class D: public B, public C
+{
+    //...
+};
+
+int main(){
+    D obj;
+    obj.display();
+    return 0;
+}</pre>
+</div>
+<h2>Group B: Attempt any Eight questions:(8x5=40)</h2><h3>Question 4</h3>
+<div><p><p>What is structured programming? Discuss characteristics and problems associated with structured programming.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Structure Programming is a programming language that contain well-structured steps and procedures that uses different functions for different tasks in a program.</p>
+<p><span style="text-decoration: underline;"><strong>Characteristics of Structure Programming Language:</strong></span></p>
+<ol style="list-style-type: lower-roman;">
+<li>Emphasis is on doing thing (algorithms)</li>
+<li>Large programs are divided into smaller program known as functions</li>
+<li>Most of the functions share global data.</li>
+<li>Employs top-down approach in program design</li>
+<li>Data move openly around the system from function to function.</li>
+<li>Functions transform data from one form to another</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Problems of using Structure Programming</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>Since it is Machine-Independent, So it takes time to convert into machine code.</li>
+<li>The converted machine code is not the same as for assembly language.</li>
+<li>The program depends upon changeable factors like data-types. Therefore it needs to be updated with the need on the go.</li>
+<li>Usually the development in this approach takes longer time as it is language-dependent. Whereas in the case of assembly language, the development takes lesser time as it is fixed for the machine.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is the use of get and getline functions? Explain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>get()</b> is used for accessing character array. It includes white space characters.</p>
+<p>Synatx:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">get(string_name, size);</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+int main()
+{
+    char name[25];
+
+    //Example Of get
+    cout &lt;&lt; "Enter Your Name: ";
+    cin.get(name, 25);
+    cout &lt;&lt; "Hello, " &lt;&lt; name;
+    
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter Your Name: Hamro CSIT
+Hello, Hamro CSIT</pre>
+<p><strong>getline()</strong> is a standard library function that is used to read a string or a line from an input stream. The getline() function extracts characters from the input stream and appends it to the string object until the delimiting character is encountered. While doing so the previously stored value in the string object <i>str</i> will be replaced by the input string if any.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">getline( istream&amp; is, string&amp; str );</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+int main()
+{
+    string name;
+
+    //Example Of get
+    cout &lt;&lt; "Enter Your Name: ";
+    getline(cin, name);
+    cout &lt;&lt; "Hello, " &lt;&lt; name;
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter Your Name: Hamro CSIT
+Hello, Hamro CSIT</pre>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is meant by pass by reference? How can we pass arguments by reference by using reference variable? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pass-by-reference means <b>to pass the reference of an argument in the calling function to</b> the corresponding formal parameter of the called function. The called function can modify the value of the argument by using its reference passed in.</p>
+<p>To pass a value by reference, argument pointers are passed to the functions just like any other value. So accordingly you need to declare the function parameters as pointer types as in the following function <b>swap()</b>, which exchanges the values of the two integer variables pointed to, by their arguments.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+void swap(int *x, int *y) {
+
+   int temp;
+
+   temp = *x;
+   *x = *y;
+   *y = temp;
+  
+   return;
+}
+
+int main () {
+
+   int a = 100;
+   int b = 200;
+ 
+   printf("Before swap, value of a : %d\n", a );
+   printf("Before swap, value of b : %d\n", b );
+ 
+   swap(&amp;a, &amp;b);
+ 
+   printf("After swap, value of a : %d\n", a );
+   printf("After swap, value of b : %d\n", b );
+ 
+   return 0;
+}</pre>
+<p><span style="text-decoration: underline;"><strong>c++ code:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;iostream&gt;
+using namespace std;
+
+void swap(int *x, int *y) {
+
+   int temp;
+
+   temp = *x;
+   *x = *y;
+   *y = temp;
+  
+   return;
+}
+
+int main () {
+
+    int a = 100;
+    int b = 200;
+ 
+    cout &lt;&lt; "Before swap, value of a : " &lt;&lt; a &lt;&lt; endl;
+    cout &lt;&lt; "Before swap, value of b : " &lt;&lt; b &lt;&lt; endl;
+ 
+    swap(&amp;a, &amp;b);
+ 
+    cout &lt;&lt; "After swap, value of a : " &lt;&lt; a &lt;&lt; endl;
+    cout &lt;&lt; "After swap, value of b : " &lt;&lt; b &lt;&lt; endl;
+ 
+   return 0;
+}</pre>
+<p>The output of above programs is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Before swap, value of a : 100
+Before swap, value of b : 200
+After swap, value of a : 200
+After swap, value of b : 100</pre>
+<p>It shows that the change has reflected outside the function as well, unlike call by value where the changes do not reflect outside the function.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is constructor? Explain the concept of default and default copy with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A constructor is a special type of member function of a class which initializes objects of a class. In C++, Constructor is automatically called when object(instance of class) create. It is special member function of the class because it does not have any return type.</p>
+<p>There are two types of constructors</p>
+<ol style="list-style-type:decimal;">
+<li>Default Constructor</li>
+<li>Parameterized Constructor</li>
+<li>Copy Constructor</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1. Default Constructor:</strong></span></p>
+<p>Default constructor is the constructor which doesn’t take any argument. It has no parameters.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+using namespace std;
+
+class construct{
+    public:
+    int a, b;
+
+    // Default Constructor
+    construct(){
+        a = 10;
+        b = 20;
+    }
+};
+
+int main(){
+    construct c;
+    cout &lt;&lt; "a: " &lt;&lt; c.a &lt;&lt; endl
+        &lt;&lt; "b: " &lt;&lt; c.b;
+    return 1;
+}
+</pre>
+<p>The output of above code is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">a: 10
+b: 20</pre>
+<p>if we do not define any constructor explicitly, the compiler will automatically provide a default constructor implicitly.</p>
+<p><span style="text-decoration: underline;"><strong>2. Copy Constructor:</strong></span></p>
+<p>A copy constructor is a member function that initializes an object using another object of the same class. A copy constructor has the following general function prototype:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">ClassName (const ClassName &amp;old_obj);</pre>
+<p>Following is a simple example of copy constructor.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;iostream&gt;
+using namespace std;
+
+class Point
+{
+private:
+    int x, y;
+    public:
+    Point(int x1, int y1) { x = x1; y = y1; }
+
+    // Copy constructor
+    Point(const Point &amp;p1) {x = p1.x; y = p1.y; }
+
+    int getX() { return x; }
+    int getY() { return y; }
+};
+
+int main(){
+    Point p1(10, 15); // Normal constructor is called here
+    Point p2 = p1; // Copy constructor is called here
+
+    // Let us access values assigned by constructors
+    cout &lt;&lt; "p1.x = " &lt;&lt; p1.getX() &lt;&lt; ", p1.y = " &lt;&lt; p1.getY();
+    cout &lt;&lt; "\np2.x = " &lt;&lt; p2.getX() &lt;&lt; ", p2.y = " &lt;&lt; p2.getY();
+
+    return 0;
+}
+</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">p1.x = 10, p1.y = 15
+p2.x = 10, p2.y = 15</pre>
+<p>The argument on copy constructor must passed as reference because It is called when an object is passed by value. Copy constructor itself is a function. So if we pass an argument by value in a copy constructor, a call to copy constructor would be made to call copy constructor which becomes a non-terminating chain of calls. Therefore compiler doesn’t allow parameters to be passed by value.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is the concept of friend function? How it violates the data hiding principle? Justify with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A friend function is a function that is specified outside a class but has the ability to access the class member&#8217;s protected and private data. A friend can be a member’s function, function template, or function, or a class or class template, in which case the entire class and all of its members are friends.</p>
+<p>Syntax:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">class className{
+      // Other Declarations
+      friend returnType functionName(arg list);
+};</pre>
+<p>In C++, a friend function is a function that has access to all members of the class that declares it a friend. In other words, a friend function is an honorary class member, able to see and do all the things members can do, without being a member itself.</p>
+<p>Let&#8217;s take an example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+
+using namespace std;
+
+class Box{
+    double width;
+
+    public:
+        friend void printWidth(Box box);
+        void setWidth(double wid);
+};
+
+void Box::setWidth(double wid){
+    width = wid;
+}
+
+// Note: printWidth() is not a member function of any class.
+void printWidth(Box box){
+    /* Because printWidth() is a friend of Box, it can
+    directly access any member of this class */
+    cout &lt;&lt; "Width of box : " &lt;&lt; box.width &lt;&lt; endl;
+}
+
+// Main function for the program
+int main(){
+    Box box;
+
+    // set box width without member function
+    box.setWidth(10.0);
+
+    // Use friend function to print the wdith.
+    printWidth(box);
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Width of box : 10</pre>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is exception? Why exception handling is better to use? Explain exception handling with try….. catch by using suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Exceptions are run-time anomalies or abnormal conditions that a program encounters during its execution.</p>
+<p>It is better to have exception handling because of following reason</p>
+<ol style="list-style-type:decimal;">
+<li>Exception handling can control run tune errors that occur in the program.</li>
+<li>It can avoid abnormal termination of the program and also shows the behavior of program to users.</li>
+<li>It can provide a facility to handle exceptions, throws message regarding exception and completes the execution of program by catching the exception</li>
+<li>It can separate the error handling code and normal code by using try-catch block.</li>
+<li>It can produce the normal execution flow for a program.</li>
+<li>It can implement a clean way to propagate error. that is. when an invoking method cannot manage a particular situations, then it throws an exception and asks the invoking method to deal with such situation.</li>
+<li> It develops a powerful coding which ensures that the exceptions can be prevented.</li>
+<li>It also allows to handle related exceptions by single exception handler. All the related errors are grouped together by using exceptions. And then they are handled by using single exception handler.</li>
+</ol>
+<p>Exceptions provide a way to transfer control from one part of a program to another. C++ exception handling is built upon three keywords: <b>try, catch,</b> and <b>throw</b>.</p>
+<ul class="list">
+<li><b>throw</b> − A program throws an exception when a problem shows up. This is done using a <b>throw</b> keyword.</li>
+<li><b>catch</b> − A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The <b>catch</b> keyword indicates the catching of an exception.</li>
+<li><b>try</b> − A <b>try</b> block identifies a block of code for which particular exceptions will be activated. It&#8217;s followed by one or more catch blocks.</li>
+</ul>
+<p>Synatx:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">try {
+   // protected code
+} catch( ExceptionName e1 ) {
+   // catch block
+} catch( ExceptionName e2 ) {
+   // catch block
+} catch( ExceptionName eN ) {
+   // catch block
+}</pre>
+<p>Let&#8217;s take an example</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+using namespace std;
+
+double division(int a, int b) {
+   if( b == 0 ) {
+      throw "Division by zero condition!";
+   }
+   return (a/b);
+}
+
+int main () {
+   int x = 50;
+   int y = 0;
+   double z = 0;
+ 
+   try {
+      z = division(x, y);
+      cout &lt;&lt; z &lt;&lt; endl;
+   } catch (const char* msg) {
+     cerr &lt;&lt; msg &lt;&lt; endl;
+   }
+
+   return 0;
+}</pre>
+<p>Because we are raising an exception of type <b>const char*</b>, so while catching this exception, we have to use const char* in catch block. If we compile and run above code, this would produce the following result −</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Division by zero condition!</pre>
+</div>
+<h3>Question 10</h3>
+<div><p><p>When class templates are useful? How can you define a class that can implement stack with integer as well as sack of strings? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When need same code for different data types then we can use Template.</p><p>For example, a software company may need sort() for different data types. Rather than writing and maintaining the multiple codes, we can write one sort() and pass data type as a parameter.</p><p></p></div>
+<h3>Question 11</h3>
+<div><p><p>What is meant by stream? Write a program that reads content of file data.txt and displays the content in monitor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Stream in C++ means a stream of characters that gets transferred between the program thread and input or output. There are a number of C++ stream classes eligible and defined which is related to the files and streams for providing input-output operations. </p><p>All the classes and structures maintaining the file and folders with hierarchies are defined within the file with <var>iostream</var> standard library. Classes associated with the C++ stream include ios class, istream class, and ostream class.</p><p><strong><span style="text-decoration: underline;">Program to read data from file:</span></strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;iostream>
+#include &lt;fstream>
+using namespace std;
+
+int main() {
+	fstream file;
+	file.open("data.txt", ios::in);
+
+	if (!file) {
+		cout &lt;&lt; "File Doesn't Exists!!!" &lt;&lt; endl;
+	}else {
+		char ch;
+		while (1) {
+			file >> ch;
+			if (file.eof())
+				break;
+			cout &lt;&lt; ch;
+		}
+	}
+	file.close();
+
+	return 0;
+}</pre></div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Manipulators</li>
+<li>Protected Access Specifier</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h4 class="wp-block-heading"><span style="text-decoration: underline;">a) Manipulator:</span></h4><p>Manipulators are operators that are used to format the data display. The most commonly used manipulator are <var>endl</var> and <var>setw</var>.</p><p><strong><span style="text-decoration: underline;">1) Endl</span></strong>:</p><p>The endl manipulator works same as the &#8220;\n&#8221; (i.e. new line). The endl manipulator, when ysed in an output statement, causes a line feed to be inserted.</p><p>Example:</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">cout &lt;&lt; "m = 1" &lt;&lt; endl;
+cout &lt;&lt; "n = 2" &lt;&lt; endl;</pre><p>The endline in above example will cause to print m = 1 in one line and n = 2 in next line.</p><p><strong><span style="text-decoration: underline;">2. setw:</span></strong></p><p>The setw manipulator helps to shift the output statements to right. It is used for shifting output right wards according to need.</p><p>Example:</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">cout &lt;&lt; setw(5) &lt;&lt; sum &lt;&lt; endl;</pre><p>The manipulator setw(5) in above example will right shift the  output value of sum in the screen.</p><h4 class="wp-block-heading"><span style="text-decoration: underline;">b) Protected Access Specifier</span></h4><p>Protected access modifier is similar to private access modifier in the sense that it can’t be accessed outside of it’s class unless with the help of friend class, the difference is that the class members declared as Protected can be accessed by any subclass(derived class) of that class as well. </p><p>Let&#8217;s take an example</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include&lt;iostream>
+using namespace std;
+
+class Parent{
+    protected:
+        int protectedID;
+};
+
+class Child : public Parent{
+    public:
+        void setId(int id){
+            protectedID = id;
+        }
+     
+        void displayId(){
+            cout &lt;&lt; "Protected ID is: " &lt;&lt; protectedID &lt;&lt; endl;
+        }
+};
+ 
+int main() {
+     
+    Child obj1;
+    obj1.setId(81);
+    obj1.displayId();
+    
+    return 0;
+}</pre><p>The output of above program is</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Protected ID is: 81</pre><p>In the <var>Base class</var>, We have defined <var>protectedID</var> as private that and <var>Child class</var> also can access protected data of the patrent </p></div>
+</body></html>

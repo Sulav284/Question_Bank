@@ -1,0 +1,242 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>A computer manager needs to know how efficiency of her new computer program depends on the size of incoming data and how many tables are used to arrange each data set. Efficiency will be measured the number of processed requests per hour. Applying the program to data set of different sizes and number of tables are used, she gets the following results.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Processed requests, Y</strong></td>
+<td>16</td>
+<td>26</td>
+<td>17</td>
+<td>41</td>
+<td>50</td>
+<td>55</td>
+<td>40</td>
+</tr>
+<tr>
+<td><strong>Data size, (gigabytes), X<sub>1</sub></strong></td>
+<td>15</td>
+<td>10</td>
+<td>10</td>
+<td>8</td>
+<td>7</td>
+<td>7</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Number of tables, X<sub>2</sub></strong></td>
+<td>1</td>
+<td>2</td>
+<td>10</td>
+<td>10</td>
+<td>20</td>
+<td>20</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<p>The regression equation obtained is Y = 52.7 – 2.87 X<sub>1</sub> + 0.85 X<sub>2</sub>.</p>
+<p>Total sum of square = 1452</p>
+<p>Sum of square due to regression = 1143.3.</p>
+<p>a) Interpret the values of regression coefficients b<sub>1</sub> and b<sub>2</sub>.</p>
+<p>b) Test the significance of the regression model at 0.05 level of significance.</p>
+<p>c) Is there significant relationship between processed request and number of tables at 0.05 level of significance? Given standard error of b<sub>2</sub>=0.55.</p>
+<p>d) What percentage of variation of processed requests is explained by data size and number of tables?</p>
+<p>e) Compute standard error of estimate.</p>
+<p>f) Estimate the number of processed requests if data size is 9 gigabytes and number of tables used are 8.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26269" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_170838_CamScanner.jpg" alt="" width="911" height="1282"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-26270" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_170922_CamScanner.jpg" alt="" width="911" height="1517"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>In an experiment to determine which of three different missile systems is preferable, the propellant burning rate is measuresd. The data after coding are given in the table. Use Kruskal-Wallis test (significance level of 0.01) to test the hypothesis that the propellant burning rates are same for three missile systems.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Missile system I</strong></td>
+<td>22.3</td>
+<td>16.7</td>
+<td>22.7</td>
+<td>19.3</td>
+<td>18.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Missile system II</strong></td>
+<td>23.4</td>
+<td>19.5</td>
+<td>17.5</td>
+<td>20.8</td>
+<td>16.0</td>
+<td>19.9</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Missile system III</strong></td>
+<td>18.4</td>
+<td>19.5</td>
+<td>17.8</td>
+<td>18.0</td>
+<td>19.6</td>
+<td>22.8</td>
+<td>17.1</td>
+</tr>
+</tbody>
+</table></div>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-26273" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_170957_CamScanner.jpg" alt="" width="891" height="1412"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26274" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171018_CamScanner.jpg" alt="" width="913" height="1291"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is Latin Square Design? Under what conditions can this be used? Give lay out and analysis of Latin Square Design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26278" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_173555_CamScanner.jpg" alt="" width="913" height="1141"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26279" src="https://hamrocsit.com/wp-content/uploads/2023/10/Screenshot_20231013_173626_CamScanner.jpg" alt="" width="894" height="905"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26280" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_173648_CamScanner.jpg" alt="" width="907" height="1164"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26281" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_173744_CamScanner.jpg" alt="" width="739" height="944"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26282" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_173814_CamScanner.jpg" alt="" width="902" height="725"></p>
+</div>
+<h2>Group B: Attempt any eight questions</h2><h3>Question 4</h3>
+<div><p><p>What do you understand by estimation? If we want to determine average mechanical aptitude of a large group of workers, how large a random sample is needed to be able to assert with probability 0.95 that the sample mean will not differ from the true mean by more than 2.0 points? Assume that population standard deviation is 30.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Estimation</strong> refers to the process of making educated guesses or predictions about population parameters (characteristics) based on sample data. When we want to understand and describe a population, it is often impractical or impossible to collect data from every individual in that population. Instead, we take a sample (a subset of the population) and use statistical methods to estimate population parameters.<img loading="lazy" decoding="async" class="alignnone size-full wp-image-26277" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171036_CamScanner.jpg" alt="" width="896" height="1372"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>A random sample of students is asked their opinion on proposed core curriculum change. The results are as follows:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Class</strong></td>
+<td colspan="2"><strong>Options</strong></td>
+</tr>
+<tr>
+<td><strong>Favoring</strong></td>
+<td><strong>Opposing</strong></td>
+</tr>
+<tr>
+<td><strong>Freshman</strong></td>
+<td>125</td>
+<td>80</td>
+</tr>
+<tr>
+<td><strong>Sophomore</strong></td>
+<td>60</td>
+<td>140</td>
+</tr>
+<tr>
+<td><strong>Junior</strong></td>
+<td>50</td>
+<td>60</td>
+</tr>
+<tr>
+<td><strong>Senior</strong></td>
+<td>40</td>
+<td>55</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test the hypothesis that opinion on the change is independent of class standing. Use 0.01 significance level.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26287" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171101_CamScanner.jpg" alt="" width="903" height="1461"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26288" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171118_CamScanner.jpg" alt="" width="920" height="1013"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define Central limit theorem. The life of a certain brand of an electric bulb may be considered a random variable with mean 1350 hours and standard deviation 55o hours. Using central limit theorem, find the probability that the average life time of 100 bulbs exceeds 1440 hours.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Central Limit Theorem (CLT)</strong>:</p>
+<p>The Central Limit Theorem is a fundamental concept in statistics that states that the distribution of the sample means (or sums) of a large enough number of independent, identically distributed random variables approaches a normal (Gaussian) distribution, regardless of the original distribution of the individual random variables. In other words, when you take multiple random samples from a population and calculate the means of those samples, the distribution of those sample means will be approximately normal, even if the original population is not normally distributed.</p>
+<p>The Central Limit Theorem has several key components:</p>
+<ol style="list-style-type:decimal;">
+<li>The sample size should be sufficiently large. There is no fixed rule for what constitutes &#8220;sufficiently large,&#8221; but a common guideline is that a sample size of 30 or greater is often adequate.</li>
+<li>The samples should be independent, which means that the outcome of one sample does not affect the outcome of another.</li>
+<li>The individual random variables should have a finite mean (μ) and finite variance (σ^2).</li>
+</ol>
+<p>Given data:</p>
+<ul style="list-style-type: square;">
+<li>Mean (μ) of the electric bulb lifetime = 1350 hours.</li>
+<li>Standard deviation (σ) of the electric bulb lifetime = 550 hours.</li>
+<li>Sample size (n) = 100 bulbs.</li>
+</ul>
+<p>We want to find the probability that the average lifetime of 100 bulbs exceeds 1440 hours. To do this, we can standardize the problem using the Central Limit Theorem.</p>
+<p>The formula for the standardization of a sample mean is:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Z </span><span class="mrel">= </span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-s">(</span></span></span></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord accent mtight"><span class="vlist-t"><span class="mord mathnormal mtight">X</span></span></span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">μ</span></span></span></span><span class="vlist-s">​) / (<span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">σ</span>/√<span class="mord sqrt mtight"><span class="svg-align"><span class="mord mathnormal mtight">n</span></span>​ </span></span></span></span>) </span></span></span></span></span></span></span></span></span></p>
+<p>Where:</p>
+<ul style="list-style-type: square;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Z</span></span></span></span></span> is the standard normal random variable.</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="mord mathnormal">X</span></span></span></span></span></span></span></span></span> is the sample mean.</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">μ</span></span></span></span></span> is the population mean.</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">σ</span></span></span></span></span> is the population standard deviation.</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span></span></span></span></span> is the sample size.</li>
+</ul>
+<p>Placing values, we get</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Z</span><span class="mrel">=</span></span><span class="base"><span class="mord">1.6364</span></span></span></span></span></p>
+<p>Now, we need to find the probability that a standard normal random variable exceeds <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Z</span><span class="mrel">=</span></span><span class="base"><span class="mord">1.6364</span></span></span></span></span>. You can use a standard normal distribution table or calculator to find this probability. For <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mrel">=</span></span><span class="base"><span class="mord">1.6364</span></span></span></span></span>, the probability is approximately 0.9495.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define multiple correlation. In a trivariate distribution X<sub>1</sub>, X<sub>2</sub>, and X3, the simple correlation coefficients are given as r<sub>12</sub>= 0.5, r<sub>23</sub>=0.6 and r<sub>13</sub>=0.7. Find</p>
+<p>i. partial correlation coefficient between X<sub>1</sub> an X<sub>2</sub> keeping X<sub>3</sub> constant.</p>
+<p>ii. multiple correlation coefficient assuming X<sub>1</sub> as dependent variable.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26290" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171139_CamScanner.jpg" alt="" width="884" height="1419"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What do you understand by Design of Experiment? Prepare one way analysis of variance table and carry out the test for the significance of difference in the average yields between different varieties of seed. Given:</p>
+<p>Total sum of squares = 258</p>
+<p>Sum of square between varieties of seed = 50</p>
+<p>Total number of observations = 20</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Design of Experiments (DOE)</strong> is a systematic and structured approach used in statistics and scientific research to plan, conduct, and analyze experiments in order to efficiently and effectively gather information, optimize processes, and make informed decisions. DOE allows researchers to investigate and understand the relationships between multiple variables and their impact on outcomes or responses. It is widely used in various fields, including manufacturing, engineering, pharmaceuticals, agriculture, and social sciences.<img loading="lazy" decoding="async" class="alignnone size-full wp-image-26293" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171202_CamScanner.jpg" alt="" width="912" height="1193"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define type I and type II error in testing of hypothesis. It is claimed that Samsung and Huwaei mobiles are equally popular in Kathmandu. A random sample of 600 people from Kathmandu showed 350 have Samsung mobile. Test the claim at 5% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>1. Type I Error (False Positive)</strong>:</p>
+<p>Type I error occurs when a null hypothesis that is actually true is incorrectly rejected. In other words, it&#8217;s a false positive result.</p>
+<p>This error is often denoted as α (alpha), which represents the level of significance, and it indicates the probability of making a Type I error.</p>
+<p>Type I errors are considered more serious in situations where making an incorrect rejection of the null hypothesis has significant consequences or costs. For example, in medical testing, a Type I error might mean diagnosing a healthy person as having a disease.</p>
+<p><strong>2. Type II Error (False Negative)</strong>:</p>
+<p>Type II error occurs when a null hypothesis that is actually false is incorrectly not rejected. It&#8217;s a false negative result.</p>
+<p>This error is often denoted as β (beta) and is used to represent the probability of making a Type II error.</p>
+<p>Type II errors can be problematic when failing to reject the null hypothesis means that a real effect or relationship goes undetected. For example, in medical testing, a Type II error might mean failing to diagnose a person who actually has a disease.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26294" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_171222_CamScanner.jpg" alt="" width="903" height="1516"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Customers of certain Internet service provider connect to the internet at the average rate of 10 new connections per minute. Connections are modelle by binomial counting process.</p>
+<p>a. What frame length gives the probability 0.1 of an arrival during given frame?</p>
+<p>b. Find the mean and variance for the number of seconds between two consecutive connections.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26298" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_190905_CamScanner.jpg" alt="" width="899" height="1443"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write short notes on any two:</p>
+<p>a. Difference betweeen parametric and non-parametric test.</p>
+<p>b. Required assumptions for linear regression model.</p>
+<p>c. Stochastic process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Difference betweeen parametric and non-parametric test.</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">P-tests</td>
+<td style="width: 50%;">NP-tests</td>
+</tr>
+<tr>
+<td style="width: 50%;">The tests whose models specify certain conditions about parameters of the population from which the sample has been drawn.</td>
+<td style="width: 50%;">The tests whose models don&#8217;t specify any conditions about parameters of population from which sample has been drawn.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Mostly applied only to the data measured in ratio and interval scale.</td>
+<td style="width: 50%;">Mostly only applied to data measured in nominal and ordinal scale.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Most powerful.</td>
+<td style="width: 50%;">Weaker.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Designed to test the statistical hypothesis of one or more parameters of population.</td>
+<td style="width: 50%;">Designed to test statistical hypothesis which don&#8217;t involve any parameters of population.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>b. Required assumptions for linear regression model.</strong></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-26297" src="https://hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231013_190647_CamScanner.jpg" alt="" width="916" height="1030"></p>
+<p><strong>c. Stochastic process.</strong></p>
+<p>A stochastic process, also known as a random process, is a mathematical concept used in probability theory and statistics to model and analyze the evolution of a system or a phenomenon over time. It&#8217;s essentially a collection of random variables, each of which represents a state or an outcome at a specific point in time. Here are some key points about stochastic processes:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Random Variables Over Time:</strong> A stochastic process involves random variables that evolve with time. Each random variable represents the state of the system or process at a particular time point.</li>
+<li><strong>Sequential Nature:</strong> Stochastic processes are inherently sequential in nature. You can think of them as a sequence or a collection of random events or observations that unfold over time.</li>
+<li><strong>Classification:</strong> Stochastic processes can be classified into different types based on various characteristics. Common classifications include discrete-time vs. continuous-time processes, stationary vs. non-stationary processes, and Markov vs. non-Markov processes, among others.</li>
+<li><strong>Applications:</strong> Stochastic processes find applications in various fields, such as finance, physics, engineering, biology, and economics. For example, in finance, they are used to model stock prices, in physics to simulate random motion, and in biology to study population dynamics.</li>
+<li><strong>Markov Property:</strong> In a Markov process, the future behavior of the process depends only on its present state and not on its past states. This property is often used to simplify the analysis of stochastic processes.</li>
+<li><strong>Examples:</strong> Common examples of stochastic processes include the Poisson process (used to model the arrival of events over time), Brownian motion (used to describe random motion), and autoregressive integrated moving average (ARIMA) models (used for time series analysis).</li>
+<li><strong>Modeling and Analysis:</strong> Stochastic processes are used to model uncertainty and randomness in real-world phenomena. They allow researchers and analysts to make probabilistic predictions and assess the likelihood of various outcomes.</li>
+<li><strong>Simulation:</strong> Stochastic processes are often used in Monte Carlo simulations, a technique for estimating the behavior of complex systems by repeatedly sampling random variables to understand the range of possible outcomes.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+</body></html>

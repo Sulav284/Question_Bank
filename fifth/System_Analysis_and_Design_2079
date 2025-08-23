@@ -1,0 +1,268 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>SAD Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Differentiate between black box and white box testing. Explain different stages of testing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differences between black box and white box testing are as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Black box testing</td>
+<td style="width: 50%; height: 24px;">White box testing</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Treats the software as a &#8220;black box&#8221; , focusing on external behavior.</td>
+<td style="width: 50%; height: 24px;">Involves understanding the internal logic, code, and structure of the software.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Involves understanding the internal logic, code, and structure of the software.</td>
+<td style="width: 50%; height: 24px;">Tester has full knowledge of the internal code and implementation<br />
+details.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Test cases are designed based on specifications and expected<br />
+system behavior.</td>
+<td style="width: 50%; height: 24px;">Test cases are designed based on an understanding of the internal<br />
+code and paths.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Emphasizes testing the software&#8217;s functionality, user interface, and<br />
+outputs.</td>
+<td style="width: 50%; height: 24px;">Focuses on testing internal code structure, control flow, and data<br />
+flow.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Does not require programming skills from the tester.</td>
+<td style="width: 50%; height: 24px;">Requires programming skills and knowledge of the code from the<br />
+tester.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Second part:<br />
+The different stages of testing are as follows:</p>
+<p>Inspections: It is a testing technique in which participants examine program code for predictable language specific errors. Syntax, grammar etc. can be checked by some other automated inspection software.</p>
+<p>b. Desk checking: the technique in which the programmer understands the logic of the program and runs through the code with a paper and pencil. The reviewer acts as a computer, mentally checking each step and its results for the entire set of computer<br />
+instructions.</p>
+<p>c. Unit checking: Automated testing in which each module is tested alone in an attempt to discover any errors that may exist in the module’s code.</p>
+<p>d. Integration testing: The process of bringing together more than one module that the program comprises for testing purposes.</p>
+<p>e. System testing: The process of bringing together of all the programs that a system comprises for testing purposes. The system can be tested by using black box or white box testing.</p>
+<p>f. Stub testing: It is a testing used in testing modules, especially when modules are written and tested in top to down fashion.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why do we use DFD? Draw context diagram and data flow diagrams of a retail<br />
+clothing store in a mall that sells different cloths to its customers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data flow diagrams (DFDs) are a type of flowchart that shows how data moves through<br />
+a system. They are used to visualize and understand the flow of data in a system, and to<br />
+identify any potential problems or areas for improvement.</p>
+<p>DFDs are used because of the following reasons:</p>
+<p><strong>a. To understand the flow of data in a system:</strong> DFDs can help you to understand how<br />
+data is processed, stored, and transmitted in a system. This can be helpful for<br />
+troubleshooting problems, identifying potential bottlenecks, and improving the<br />
+overall efficiency of the system.</p>
+<p><strong>b. To communicate with others about a system:</strong> DFDs can be used to communicate the<br />
+design of a system to other people, such as developers, managers, and customers.<br />
+This can help to ensure that everyone is on the same page about how the system<br />
+works.</p>
+<p><strong>c. To document a system:</strong> DFDs can be used to document the design of a system. This<br />
+can be helpful for future reference, and for training new employees.<br />
+Hence why DFD’s are used.</p>
+<p>Context diagram and data flow diagrams of a retail clothing store in a mall are as<br />
+follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28629" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_3087.jpg?resize=1202%2C1582&#038;ssl=1" alt="" width="1202" height="1582"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28630" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_3088.jpg?resize=1248%2C1610&#038;ssl=1" alt="" width="1248" height="1610"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28631" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_3089.jpg?resize=1206%2C1612&#038;ssl=1" alt="" width="1206" height="1612"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Compare structured development with object-oriented development. Explain use<br />
+case diagram and class diagram with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Structured Development and Object-Oriented Development (OOP) are two different approaches to software development.</p>
+<p>Structured Development is a top-down approach that breaks down a large system into smaller, more manageable modules. Structured development methodologies, such as the Waterfall model, emphasize planning, documentation, and code reusability. They are well-suited for projects with well-defined requirements.</p>
+<p>Object-Oriented Development (OOP) is a bottom-up approach that focuses on modeling real-world objects and their interactions. OOP methodologies, such as Agile and Scrum, emphasize flexibility, adaptability, and code maintainability. They are well-suited for projects with evolving requirements.</p>
+<p>The differences between them are listed below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="font-weight: 400;">
+<tbody>
+<tr>
+<td width="208">Feature</td>
+<td width="208">Structured development</td>
+<td width="208">Object Oriented development</td>
+</tr>
+<tr>
+<td width="208">1 approach</td>
+<td width="208">Top-down</td>
+<td width="208">Bottom-up</td>
+</tr>
+<tr>
+<td width="208">Focus</td>
+<td width="208">Functions and modules</td>
+<td width="208">Objects and their interactions</td>
+</tr>
+<tr>
+<td width="208">Methodologies</td>
+<td width="208">Waterfall and spiral</td>
+<td width="208">Agile, scrum</td>
+</tr>
+<tr>
+<td width="208">Strengths</td>
+<td width="208">Planning, documentation, code reusability</td>
+<td width="208">Flexibility, adaptability and code maintainability</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="font-weight: 400;"><strong>Second part</strong></p>
+<p style="font-weight: 400;"><strong>Use Case Diagram</strong></p>
+<p style="font-weight: 400;">A use case diagram is a type of diagram that shows the interactions between a system and its users. It is used to identify the different types of users that will interact with the system, and the different use cases that each user will perform.</p>
+<p style="font-weight: 400;"><strong>Class Diagram</strong></p>
+<p style="font-weight: 400;">A class diagram is a type of diagram that shows the classes that make up a system and the relationships between them. It is used to identify the different objects that will exist</p>
+<p style="font-weight: 400;">in the system, and the different ways that these objects will interact.</p>
+<p style="font-weight: 400;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28107" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/Screenshot-2023-12-06-at-08.22.32.png?resize=1194%2C1132&#038;ssl=1" alt="" width="1194" height="1132"></p>
+<p>&nbsp;</p>
+<p style="font-weight: 400;"><strong>Case diagram</strong></p>
+<p style="font-weight: 400;">A use case diagram is a type of Unified Modeling Language (UML) diagram that represents a system and its actors, illustrating the interactions between them. Use case diagrams are commonly used during the analysis and design phases of software development to capture and define the system&#8217;s functional requirements.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28106" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/Screenshot-2023-12-06-at-08.21.42.png?resize=1376%2C1066&#038;ssl=1" alt="" width="1376" height="1066"></p>
+</div>
+<h2>Section B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain common skills of a project manager. Which skill do you think is most important?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Project managers play a crucial role in the success of any project, ensuring that projects are completed on time, within budget, and to the required quality standards. They oversee all aspects of the project, from planning and execution to monitoring and evaluation.</p>
+<p>Effective project managers possess a wide range of skills, including:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"> <strong>Communication</strong></span>: Project managers must be able to communicate effectively with all stakeholders, including team members, clients, sponsors, and vendors. This involves clear and concise written and verbal communication, as well as the ability to listen<br />
+actively and build rapport with others.</li>
+<li><span style="text-decoration: underline;"><strong>Leadership</strong></span>: Project managers are responsible for motivating and leading their teams to achieve project goals. This requires strong leadership skills, such as the ability to set a clear vision, delegate tasks effectively, and provide feedback constructively.</li>
+<li><span style="text-decoration: underline;"><strong>Organization</strong></span>: Project managers must be highly organized to manage complex projects with multiple moving parts. This involves the ability to prioritize tasks, create and maintain schedules, and track progress.</li>
+<li><span style="text-decoration: underline;"><strong>Problem-solving</strong></span>: Project managers often encounter unexpected challenges and setbacks. They must be able to think critically and creatively to identify solutions and keep the project moving forward.</li>
+<li><span style="text-decoration: underline;"><strong>Decision-making</strong></span>: Project managers frequently need to make quick and sound decisions. This requires the ability to gather and analyze information, weigh different options, and consider the potential impact of each decision.</li>
+<li><span style="text-decoration: underline;"><strong>Time management</strong></span>: Project managers must be able to effectively manage their time and the time of their team members. This involves setting realistic deadlines, tracking progress, and identifying bottlenecks.</li>
+<li><span style="text-decoration: underline;"><strong>Risk management</strong></span>: Project managers must be able to identify, assess, and mitigate potential risks. This involves developing contingency plans and taking proactive measures to prevent problems from occurring.</li>
+<li><span style="text-decoration: underline;"><strong>Stakeholder management</strong></span>: Project managers must be able to manage the expectations of all project stakeholders. This involves keeping stakeholders informed of project progress, addressing concerns, and building relationships.</li>
+<li><span style="text-decoration: underline;"><strong><span style="text-decoration: underline;">Technical skills</span></strong></span>: Project managers need to have a basic understanding of the technical aspects of the project. This allows them to communicate effectively with technical team members and make informed decisions about technical matters.</li>
+<li><span style="text-decoration: underline;"><strong>Adaptability</strong></span>: Project managers must be able to adapt to changing circumstances. This involves being flexible, open to feedback, and willing to change plans as needed.</li>
+</ol>
+<p>Among these skills, I believe that communication is the most important skill for a project manager. Effective communication is essential for building relationships, managing expectations, resolving conflicts, and ensuring that everyone is on the same page. Without strong communication skills, project managers will struggle to lead their teams,<br />
+achieve project goals, and satisfy stakeholders.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe the project identification and selection process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Project identification and selection process consists of 3 major steps:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;"><strong>Identifying potential development projects</strong></span>: This initial stage involves brainstorming and gathering potential project ideas from various sources, such as customer feedback, market trends, internal suggestions, and strategic objectives..</li>
+<li><span style="text-decoration: underline;"><strong>Classifying and ranking projects</strong></span>: This process can be performed by top managers, a steering committee, business unit or the IS development group. The criteria used to assign the merit of a given project can vary based on the size of the organization.<br />
+The criteria are cost, duration, complexity, system size and focus. An important project evaluation method that is widely used for accessing information system development project is called value chain analysis.</li>
+<li><span style="text-decoration: underline;"><strong> Selecting IS development projects</strong></span>: The selection of projects is the final activity in the project identification and selection process. The most promising projects are selected for further development. This decision is often made by a project selection committee or senior management team.</li>
+</ol>
+<p>Various factors must be considered before selecting a project. These factors include:<br />
+a. Existing system and ongoing projects<br />
+b. Resource availability<br />
+c. Evaluation criteria<br />
+d. Current business conditions<br />
+e. Perspectives of decision makers<br />
+Hence this is the project identification and selection process.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>List and describe the steps in the project initiation and planning process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Many activities are performed during project initialization and planning. Many activities performed during initialization and planning could also be completed using the next phase of SDLC-system analysis. Proper and insightful project initiation and planning, including determining project scope and identifying project activities can reduce the time needed to complete later project phases.<br />
+Key Steps in Project Initiation and Planning:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Project Identification and Selection:</strong> This involves identifying potential project ideas, screening them for viability, and selecting the most promising ones for further development.</li>
+<li><strong>Defining Project Scope:</strong> The project scope outlines the boundaries of the project, specifying what is included and excluded. Clearly defined scope prevents project creep and ensures everyone is aligned on the project and deliverables.</li>
+<li><strong>Establishing Project Objectives:</strong> Project objectives are specific, measurable, achievable, relevant, and time-bound (SMART) goals that define what the project aims to achieve. These objectives should align with the organization and strategic goals.</li>
+<li><strong>Creating a Project Charter:</strong> The project charter is a formal document that authorizes the project and provides an overview of its key elements, including objectives, scope, budget, schedule, and risks.</li>
+<li><strong>Developing a Project Management Plan (PMP):</strong> The PMP is a comprehensive roadmap for the project, detailing the tasks, resources, timelines, budget, risk mitigation strategies, and communication plans.</li>
+<li><strong>Initiating Project Communications:</strong> A communication plan outlines how and when project information will be shared with stakeholders, ensuring transparency and keeping everyone informed throughout the project lifecycle.</li>
+<li><strong>Approving Project Initiation:</strong> Once the project plan and other key documents are finalized, formal approval is granted to proceed with project execution.<br />
+Thus, these are the steps involved in project initiation and planning.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain Joint Application Design in brief. How is it better than traditional information gathering techniques?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Joint Application Design (JAD) is a collaborative workshop-based approach to gather and refine software requirements. It involves bringing together users, business experts, and technical specialists in an interactive setting to discuss, analyze, and document the specific needs and expectations for the software application.<br />
+Advantages of JAD over Traditional Information Gathering Techniques:<br />
+1. Enhanced Collaboration and Communication: JAD fosters a collaborative environment where users and technical experts can directly interact and exchange ideas, leading to a better understanding of user needs and technical feasibility.<br />
+2. Rapid Requirements Definition: JAD&#8217;s structured and focused approach allows for rapid identification and refinement of requirements, reducing the time spent on traditional information gathering methods.<br />
+3. Reduced Misunderstandings JAD&#8217;s interactive nature helps minimize misunderstandings and ensures that everyone is on the same page regarding requirements, reducing rework and delays later in the project.<br />
+4. Early User Involvement JAD actively involves users from the outset, ensuring that their needs and feedback are incorporated early in the design process, leading to increased user satisfaction.<br />
+5. Improved Requirements Quality: The collaborative and iterative nature of JAD leads to more comprehensive, accurate, and well-defined requirements, reducing the risk of post- development issues.<br />
+6. Improved Project Success Rate: JAD&#8217;s collaborative, rapid, and user-centric approach has been shown to improve project success rates by reducing rework, enhancing communication, and ensuring that projects meet user needs.<br />
+Thus, these are the advantaged of Joint Application Design over traditional information gather techniques.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is conceptual data modeling? Explain conceptual data modeling process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Conceptual data modeling is the first stage of data modeling, which involves creating a high- level representation of the data that will be used in a system. It focuses on identifying the core entities, attributes, and relationships between these entities, without considering the physical implementation of the data. The goal of conceptual data modeling is to create a shared understanding of the data among stakeholders, ensuring that everyone is on the same page about the data requirements before moving on to the next stages of data modeling.<br />
+The conceptual data modeling process typically involves the following steps:<br />
+1. Define the business domain: The first step is to clearly define the business domain of the system, including the types of entities, their attributes, and the relationships between them. This can be done through interviews, workshops, and document reviews.<br />
+2. Identify entities: Entities are the core objects of the system that represent real-world concepts or things. They are nouns that represent the things that the system manages or operates on. For example, in an e-commerce system, entities could include products, customers, orders, and payments.<br />
+3. Identify attributes: Attributes are the specific characteristics or properties of an entity. They are adjectives that describe the entity. For example, the product entity might have attributes such as name, description, price, and category.<br />
+4. Identify relationships: Relationships are the connections between entities. They show how entities are related to each other. Relationships can be one-to-one (1:1), one-to-many (1:N), or many-to-many (N:N). For example, a customer can place many orders, and an order can be placed by one customer.<br />
+5. Document the conceptual data model: The conceptual data model is typically documented using diagrams, such as entity-relationship diagrams (ERDs), which visually represent the entities, attributes, and relationships.<br />
+Thus, this is conceptual data modeling.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Compare form with report. Explain the process of designing forms and reports.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Forms and reports are both essential tools for data management, but they serve different purposes and follow distinct design processes.<br />
+Forms<br />
+Purpose:<br />
+Data Collection: Forms are primarily used to collect and input data into a database or system.<br />
+Design Process:<br />
+1. Identify Data Requirements: Determine the specific information to be collected, considering the purpose of the form and the overall data needs.<br />
+2. Choose Form Layout: Decide on the layout of the form, including the positioning of fields, labels, and other elements. Consider user-friendliness and ease of navigation.<br />
+3. Select Input Fields: Choose appropriate input fields based on the type of data being collected (e.g., text boxes, drop-down menus, date pickers).<br />
+4. Apply Data Validation: Implement data validation rules to ensure the accuracy and integrity of the entered data.<br />
+5. Integrate with Database: Connect the form to the relevant database or system to store the collected data.<br />
+Reports<br />
+Purpose:<br />
+Data Analysis and Presentation: Reports are used to analyze, summarize, and present data in a clear and organized manner.<br />
+Design Process:<br />
+1. Define Report Scope: Determine the specific data to be included in the report, considering the stakeholders and the desired insights.<br />
+2. Choose Report Format: Decide on the format of the report, such as tabular, graphical, or a combination of both.<br />
+3. Select Data Sources: Identify the data sources that will provide the information for the report.<br />
+4. Structure Report Layout: Design the layout of the report, including headings, tables, charts, and other visual elements.</p>
+<p>5. Apply Formatting: Apply formatting to enhance the readability and visual appeal of the report.<br />
+6. Implement Data Aggregation: Implement data aggregation techniques to summarize and condense large datasets.<br />
+7. Add Visualizations: Incorporate charts, graphs, and other visualizations to effectively communicate data patterns and trends.<br />
+8. Ensure Accuracy: Verify the accuracy and completeness of the data presented in the report.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define system maintenance. Explain the process of maintaining information systems in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System maintenance is the process of keeping a computer system or network running smoothly and efficiently. It involves a range of activities, including:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"> Preventive maintenance</span> : This involves taking steps to prevent problems from occurring in the first place, such as regularly backing up data, updating software, and cleaning hardware.</li>
+<li><span style="text-decoration: underline;"> Corrective maintenance</span> : This involves fixing problems that have already occurred, such as troubleshooting software errors, replacing hardware components, and restoring data from<br />
+backups.</li>
+<li><span style="text-decoration: underline;">Adaptive maintenance</span> : This involves making changes to a system to adapt to new requirements or technologies.</li>
+</ul>
+<p>The process of maintaining information systems:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Obtaining maintenance requests :</strong> Users, customers, or system administrators identify issues or potential improvements in the system. These issues or improvement suggestions are formally submitted as maintenance requests. The maintenance requests are logged, reviewed, and prioritized based on factors such as urgency, impact, and resources required.</li>
+<li><strong>Transforming requests into changes :</strong> Each maintenance request is analyzed to understand its nature and scope. This involves determining whether the request is for corrective, adaptive, perfective, or preventive maintenance. Based on the analysis and feasibility study, a decision is made to approve, modify, or reject the maintenance request.</li>
+<li><strong>Designing changes :</strong> Detailed requirements for the changes are gathered from stakeholders, ensuring that all aspects of the request are understood. This includes designing new functionalities, modifications to existing components, and ensuring compatibility with the rest of the system. This helps in planning for mitigation strategies.</li>
+<li><strong>Implementing changes :</strong> Making the actual changes to the system based on the design specifications. This involves coding, configuring, and setting up new or modified components. The new added features and codes are tested to ensure they work as intended and do not introduce new issues. Once testing is successfully completed, the changes are deployed to the live environment.</li>
+</ol>
+<p>These steps ensure that the system is maintained effectively, addressing issues and implementing improvements systematically and efficiently.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>write short notes on:</p>
+<p>a. CASE tools</p>
+<p>b. Baseline project plan</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>CASE tools</p>
+<p>CASE tools, or Computer-Aided Software Engineering tools, are specialized software applications designed to assist throughout the various stages of creating computer programs. These tools help in gathering user requirements, planning the program&#8217;s structure, automating parts of code generation, facilitating testing, managing project changes, documenting the program, overseeing project progress, and designing databases. Essentially, CASE tools act as digital assistants, streamlining the software development process and enhancing collaboration among developers.<br />
+Here are some common features and functionalities provided by CASE tools:<br />
+1. Requirements Analysis: Helps in capturing, documenting, and analyzing user requirements. This may include tools for creating use case diagrams, requirement specifications, and prototypes.<br />
+2. System Design: Aids in creating system architecture, data models, and interface designs. Tools may include diagramming tools for creating Entity-Relationship Diagrams (ERD), Data Flow Diagrams (DFD), and other design artifacts.<br />
+3. Code Generation: Some tools can automatically generate code based on high-level design specifications. This can be a time-saving feature that helps ensure consistency between design and implementation.<br />
+4. Testing and Debugging: CASE tools often include features for testing and debugging software. This may involve tools for creating test cases, analyzing code coverage, and identifying and fixing bugs.<br />
+5. Version Control: Helps manage different versions of source code, ensuring that changes are tracked, and developers can collaborate effectively.<br />
+6. Documentation</p>
+<p>Baseline project plan<br />
+A baseline project plan is like a roadmap for a project, but in simpler terms: Imagine you want to build a treehouse. Your baseline project plan would be a list of all the things you need to do to make that happen. It&amp;#39;s like a checklist that helps you stay organized<br />
+and know what steps to take.<br />
+Here&#8217;s what it might include:<br />
+1. Get Materials: Make a list of all the wood, nails, and other things you need for the treehouse.<br />
+2. Design the Treehouse: Draw a picture or make a plan of how you want the treehouse to look.<br />
+3. Ask for Help: Figure out who can help you build it, like friends or family.<br />
+4. Build the Base: Start with the base of the treehouse and make sure it&#8217;s strong and sturdy.<br />
+5. Add Walls and Roof: Put up the walls and add a roof to protect from rain.<br />
+6. Make it Fun: Think about cool things to add, like a ladder, slide, or a secret trapdoor.<br />
+7. Paint or Decorate: Add some color or decorations to make it look awesome.<br />
+8. Check Everything: Make sure everything is safe and secure.<br />
+So, a baseline project plan for a treehouse is basically a simple list of steps to follow—from gathering materials to checking that everything is safe and fun.</p>
+</div>
+</body></html>

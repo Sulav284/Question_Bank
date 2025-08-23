@@ -1,0 +1,348 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MC Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>MC Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the global structure of multimedia with block diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multimedia is the field concerned with the computer controlled integration of text, graphics, drawing, still amd moving images (video), animation, audio and so on. The global structure of multimedia refers to the comprehensive framework that integrates various forms of media content such as text, images, audio, video, animation, and interactive elements into a cohesive system.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38909" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/multimeida.drawio.png?resize=471%2C457&#038;ssl=1" alt="" width="471" height="457"></p>
+<p><strong>Application domain</strong> : It provides function to user to develop and present multimedia projects. This includes software tools and multimedia project development methodology. The application domain encompasses the various end-user applications and services that utilize multimedia content.</p>
+<p><strong>System domain</strong> : It supports for using the functions of the device domain. The system domain refers to the underlying infrastructure and technologies that support the development, storage, management, and distribution of multimedia content. Eg: Operating system, communication and database system.</p>
+<p><strong>Device domain</strong> : Basic concept and skill for processing various multimedia elements and for handling physical device. The device domain encompasses the hardware devices that capture, display, and interact with multimedia content. This domain focuses on the physical devices and their capabilities.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the JPEG compression process steps in detail with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JPEG stands for Joint Photographic Expert Group. We perform JPEG compression to reduce the size of the file without damaging its quality. Reducing the size of image will also improve the efficiency of system as it will give less load on it.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38913" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/JPEG.drawio.png?resize=867%2C299&#038;ssl=1" alt="" width="867" height="299"></p>
+<ul style="list-style-type: square;">
+<li><strong>Step 1</strong> : The input image is divided into a small block which is having 8&#215;8 dimensions. The dimension is sum up to 64 units. Each unit of image is called pixel.</li>
+<li><strong>Step 2</strong> : JPEG uses [Y, Cb, Cr] model instead of using [R, G, B] model. So in the 2<sup>nd </sup>step, RGB is converted into YCbCr.</li>
+<li><strong>Step 3</strong> : After the conversion of colors, it is forwarded to DCT. DCT uses a cosinne function and does not use complex numbers. It converts information which are in a block of pixels from the spatial domain to the frequency domain.</li>
+<li><strong>Step 4</strong> : Humans are unable to see important aspects of the image because they are having high frequencies. The matrix after DCT conversion can only preserve values at the lowest frequency to the certain point. Quantization is used to reduce the number of bits per sample.</li>
+<li><strong>Step 5</strong> : The zigzag scan is used to map the 8 x 8 matrix to a 1 x 64 vector. Zigzag scanning is used to group low frequency coefficients to the top level of the vector and the high coefficent to the bottom. To remove the large number of zero in the quantized matrix, the zigzag matrix is used.</li>
+<li><strong>Step 6</strong> : Next step is vectoring, DPCM is applied to DC component. DC components are large and vary but they are usually close to the previous block. DPCM encodes the difference between the current block and the previous block.</li>
+<li><strong>Step 7</strong> : In this step, Run &#8211; Length Encoding (RLE) is applied to AC components. This is done because AC components have a lot of zeros in it. It encodes in pair of (skip, value) in which skip is non zero value and value is the actual coded value of the non zero components.</li>
+<li><strong>Step 8</strong> : In this step, DC components are coded into Huffman.</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you mean by Huffman coding? Explain the Huffman coding process with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Huffman Coding</strong> is entropy coding or lossless coding, where during the decoding of data completely regenerates the original data. Its main concept is to assign variable &#8211; length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding character. The most frequent character gets the smallest code and the least frequent character gets largest code.</p>
+<p><strong>Huffman coding process</strong> :</p>
+<p>Input in an array of unique characters along with their frequency of occourances and outout is Huffman Tree.</p>
+<ul style="list-style-type: square;">
+<li><strong>Step 1 :</strong> Create a leaf node for each unique character and build a min heap of all leaf nodes. (Min Heap is used as a priority queue. The value of frequency field is used to compare two nodes in min heap. Initially, the least frequent character is at root.)</li>
+<li><strong>Step 2 :</strong> Extract two nodes with the minimum frequency from the min heap.</li>
+<li><strong>Step 3 :</strong> Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted nodes as its left child and the other extracted node as its right child. Add this node to min heap.</li>
+<li><strong>Step 4 :</strong> Repeat step 2 and 3 until the heap contains only one node. The remaining node is the root node and the tree is complete.</li>
+</ul>
+<p>Example :</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Character</strong></td>
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Frequency</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">a</td>
+<td style="width: 50%; height: 24px; text-align: center;">05</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">b</td>
+<td style="width: 50%; height: 24px; text-align: center;">09</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">c</td>
+<td style="width: 50%; height: 24px; text-align: center;">12</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">d</td>
+<td style="width: 50%; height: 24px; text-align: center;">13</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">e</td>
+<td style="width: 50%; height: 24px; text-align: center;">16</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">f</td>
+<td style="width: 50%; height: 24px; text-align: center;">45</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here,</p>
+<p>no of character = 6</p>
+<p>i.e code must be of length 3</p>
+<p>2<sup>2 </sup>&lt; 6 (not suitable to use)</p>
+<p>2<sup>3</sup><sup> </sup>&lt; 6 (suitable to use)</p>
+<p><strong>Step 1 :</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-38923 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step1.drawio.png?resize=801%2C64&#038;ssl=1" alt="" width="801" height="64"></p>
+<p><strong>Step 2:</strong> Selecting two leaf with least value</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-38922 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step2.drawio.png?resize=228%2C56&#038;ssl=1" alt="" width="228" height="56"></p>
+<p><strong>Step 3 : </strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-38921 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step3.drawio.png?resize=700%2C204&#038;ssl=1" alt="" width="700" height="204"></p>
+<p><strong>Step 4 :</strong> Selecting two leaf with minimum output</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-38920 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step4.drawio.png?resize=221%2C53&#038;ssl=1" alt="" width="221" height="53"></p>
+<p><strong>Step 5 : </strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-38919 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step5.drawio.png?resize=760%2C205&#038;ssl=1" alt="" width="760" height="205"></p>
+<p><strong>Step 6 :</strong> Selecting the minimum value generating nodes</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-38918" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step6.drawio.png?resize=433%2C169&#038;ssl=1" alt="" width="433" height="169"></p>
+<p><strong>Step 7 : </strong></p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38917" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step7.drawio.png?resize=1009%2C361&#038;ssl=1" alt="" width="1009" height="361"></p>
+<p><strong>Step 8 :</strong> Selecting node 25 and 30 .</p>
+<p><strong>Step 9 :</strong></p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38916" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step9.drawio.png?resize=842%2C515&#038;ssl=1" alt="" width="842" height="515"></p>
+<p><strong>Step 10 :</strong> selecting node <sub> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-38915" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step10.drawio.png?resize=78%2C40&#038;ssl=1" alt="" width="78" height="40"> </sub> and 55.</p>
+<p><strong>Step 11 :</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38924 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/step11.drawio-1.png?resize=769%2C652&#038;ssl=1" alt="" width="769" height="652"></p>
+<p>The codes are as follows :</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Character</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Code-word</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Frequency</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">f</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">45</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">c</td>
+<td style="width: 33.3333%; text-align: center;">100</td>
+<td style="width: 33.3333%; text-align: center;">12</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">d</td>
+<td style="width: 33.3333%; text-align: center;">101</td>
+<td style="width: 33.3333%; text-align: center;">13</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">a</td>
+<td style="width: 33.3333%; text-align: center;">1100</td>
+<td style="width: 33.3333%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">b</td>
+<td style="width: 33.3333%; text-align: center;">1101</td>
+<td style="width: 33.3333%; text-align: center;">9</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">e</td>
+<td style="width: 33.3333%; text-align: center;">111</td>
+<td style="width: 33.3333%; text-align: center;">16</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Bits used before coding</strong> = (5 x 3) + (9 x 3) + (12 x 3) + (13 x 3) + (16 x 3) + (45 x 3) = 300</p>
+<p><strong>Bits used after coding</strong> = (5 x 4) + (9 x 4) + (12 x 3) + (13 x 3) + (16 x 3) + (45 x 0) =179</p>
+<p>Therefore,</p>
+<p>$$\frac{{300-179}}{{300}} = 40.3%$$</p>
+<p>so, 40.3 % of space is shared or compressed after using Hauffman Coding.</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain the properties of multimedia computing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multimedia is the field concerned with the computer controlled integration of text, graphics, drawing, still amd moving images (video), animation, audio and so on. Properties of multimedia are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Combination of media </strong>: A simple text processing program with in corporate image is often called multimedia application. Because two media are processed through one program. But one should talk multimedia only when both contineous and discrete media are utilized. So text processing program with incorporate images is not a multimedia application.</li>
+<li><strong>Computer support integrated</strong> : Computer is idle tool for multimedia application. All the multimedia applications are dependent of computer tools and softwares.</li>
+<li><strong>Time dependent or time independent</strong> : Multimedia can be time dependent or time independent i.e videos, animation and audio are time dependent. Images, graphics, texts are time independent which don&#8217;t need time to be determined.</li>
+<li><strong>Interactivity</strong> : Multimedias are usually accessed by the users as per their need like playing movies, playing games, interacting with the menus and buttons.</li>
+<li><strong>Immersive</strong> : Multimedia are immersive i.e they feel it real like virtual reality, 3D movies etc.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Difference between bitmap and vector graphics.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Bitmap and vector graphics are two primary types of digital images used in multimedia and graphic design. Bitmap and vector graphics have some difference as:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 189px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Bitmap </strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Vector graphics</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">A bitmap contains an exact pixel by pixel value of image.</td>
+<td style="width: 50%; text-align: center; height: 48px;">Stores image as mathematical representation such as lines.</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;">A bitmap file is fixed in resolution.</td>
+<td style="width: 50%; text-align: center; height: 21px;">A vector graphics is resolution independent.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">The file size of bitmap is completely  determined by image resolution and its depth.</td>
+<td style="width: 50%; text-align: center; height: 24px;">The file size of vector graphics is depends on the number of graphic elements it contain.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">A bitmap image is easier to render.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Displaying a vector graphic usually involves a large amount of processing.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It supports compression.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It usually doesn&#8217;t support compression.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It is large in size and it cost less.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It is smaller in size and comparatively higher in cost.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the computer based animation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Computer based Animation</strong> is an animation performed by computer using graphical tools to produce visual effects. To animate something is like injecting life to it. Basic steps for computer basedanimation are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Input Process</strong> : At the initial stage of generating animation, the drawing must be digitized in order to generate key frames. for digitizing the drawings the method of optical scanning, tracing along with data tablet is used.</li>
+<li><strong>Composition stage</strong> : In this stage the foreground and background figures are combined to generate the individual frames for the final animation.</li>
+<li><strong>In between process</strong> : the animation of movement from one position to another needs a composition of frames with intermediate frames in betweeen key frames. This is called in between process, which is created out by the interpolation method.</li>
+<li><strong>Changing colors</strong> : For changing colors, computer aided animation uses LUt or CLUT (Color LookUp Table) in a frame buffer and process of double buffering. The LUT animation is generated by manipulating the color loopup table. This simplest method is to cycle the color in LUT.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How speech is generated? Describe.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Speech generation is the computer &#8211; generated simulation of human speech. It contain following steps for generation of speech:</p>
+<ul style="list-style-type: square;">
+<li><strong>Basic notations</strong> : Speech consist of fundamental frequency as it&#8217;s component as it is used to present a voice of sound. A voiced sound is generated via vocal cords. It consist of morph, phoneme (allphone) as smallest speech unit. They can be represented in two ways and they are : Text notation and Phoneme notation. Text notations are usually the words and text which are converted to speech. Phoneme notation generate the speech depending on the concatenation of the phoneme sound and symbols sound.</li>
+<li><strong>Reproduce speech output</strong> : The easy way to reproduce the speech output is to use the previously recorded speech and playing it back. Speech can be recorded as PCM (Pulse Code Modulation) or using the process of digitization of sound. It has two basic way to represent or produce the sound : Naturally produced sound and pre-recorded sound. Naturally produced sounds are the human sounds which are recorded as the input data are sometimes are used whiche generation of sound. Pre-recorded sounds are collected and concatenated based on the speech requirement and then the speech are generated.</li>
+<li><strong>Time dependent sound concatenation</strong> : Speech generation/ output can also be performed by sound concatenation in a timely fashion. Individual speech units are composed like building blocks, where the composition can occur at different levels. In simplest case, the individual phones are understood as speech units. It is composed of some basic as timings and phoneme, syllables. Phoneme and Syllables are first collected from different sources and then they are concatenated over the time.</li>
+<li><strong>Frequency dependent sound concatenation</strong> : Speech generation/ output can also be based on a frequency &#8211; dependent sound concatenation. Format are frequency maxima in the spectrum of the speech signal. Format synthesis simulates the vocal tract through a filter. It is composed of some basic as pitch, tones and voice influcation. Pitch and tones are focused and they are concatenated over the voice fluctuation based on the speech. The endings of sentences, breaking of the words high and low tones etc are maintained.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-38947 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/coomponent-of-speech-.drawio.png?resize=665%2C211&#038;ssl=1" alt="" width="665" height="211"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What are the multimedia interface component?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multimedia interface component are the elements that allow user to interact with multimedia system. These components enable the integration of text, audio, video, graphics, and animation into a single interactive experience. Here are some key multimedia interface components:</p>
+<ul style="list-style-type: square;">
+<li><strong>Text</strong> : Text is the most basic component, used for displaying information, instructions, and interactive content. Text appears in all multimedia creations of some kind. Text in multimedia systems can communicate specific information or serve as a supplement to the information provided by the other media.</li>
+<li><strong>Audio</strong> : Audio can be implemented at the user interface for application control. It includes sound effect, background music, narration and dilogue. Sound is the most serious aspect of multimedia, delivering the joy of music, special effects, and other forms of entertainment.</li>
+<li><strong>Graphics</strong> : Graphics components include static images such as photographs, drawings, charts, and diagrams.  Graphics are at the heart of any multimedia presentation. Non-text information, such as a sketch, chart, or photograph, is represented digitally. Adobe Photoshop is a popular graphics editing program that allows you to effortlessly change graphics and make them more effective and appealing.</li>
+<li><strong>Animation</strong> : Animation involves the use of moving graphics to create a dynamic and engaging experience. It’s a set of visuals that give the impression of movement. Animation is the process of making a still image appear to move. A presentation can also be made lighter and more appealing by using animation.</li>
+<li><strong>Video</strong> : Video components involve the integration of moving images, which can include live-action footage, animations, or a combination of both. The term video refers to a moving image that is accompanied by sound, such as a television picture. Text can be included in videos, either as captioning for spoken words or as text embedded in an image, as in a slide presentation.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Discuss the animation language.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Animation languages are specialized programming or scripting languages designed to create animations and control multimedia elements. Different languages for describing animation are:</p>
+<p><strong><span style="text-decoration: underline;">Linear list Notations</span> : </strong></p>
+<p>Linear list notation language is animation supporting language where each event in the animation is described by atarting and ending frame number and an action that has to take place. SCEFO (Scene Format) is example of linear list notation.</p>
+<p><strong><span style="text-decoration: underline;">Graphical Language</span> : </strong></p>
+<p>Graphical language describe animation in a more visual way than textual languages. This language is used for expressing and editing the changes in an animation. Auto CAD is an example of graphical language.</p>
+<p><strong><span style="text-decoration: underline;">General Purpose Language</span> : </strong></p>
+<p>It is a high level language developed for normal application software development that support the features of animation along with graphic drawing. for example: C, C++, Java etc.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain the abstraction levels of programming.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-38983 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/abstraction-level.drawio.png?resize=393%2C467&#038;ssl=1" alt="" width="393" height="467"></p>
+<p style="text-align: center;"><strong>fig: abstraction levels of programming of multimedia</strong></p>
+<ul style="list-style-type: square;">
+<li>Abstraction level in programming defines different approaches with a varying degree of details for representing, accessing and manipulating data.</li>
+<li>A device is not part of the operating system but is directly accessible to every component and application.</li>
+<li>A library, the simplest abstraction level includes the necessary function for controlling the corresponding hardware with specific device access operation.</li>
+<li>Device driver are simply the implementation of device access and scheduling.</li>
+<li>Higher programming language contain abstraction of multimedia data.</li>
+<li>An object oriented environment provides most flexibility for programmers.</li>
+<li>A multimedia application may access each level.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain the application of multimedia in media integration.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Media integration specifies relationships between various media elements to represent to represent and manipulate a multimedia object. It contains :</p>
+<ul style="list-style-type: square;">
+<li>Multimedia editor</li>
+<li>Hypermedia/Hypertext editor</li>
+<li>Authoring tools</li>
+</ul>
+<p>Application of multimedia in media integration can be as</p>
+<ul style="list-style-type: square;">
+<li><b>Virtual reality : </b>It is used to describe physical environments with the help of head-mounted displays. It is simulated experience in which user believe it as a real world. A person using VR equipment is able to look around the artificial world, more around in it.</li>
+<li><strong>Interactive video</strong> : Interactive video research addresses various problems in the area of interactive TV and Video-on-Demand. Interactive TV specifies that the TV viewer can become more active participant than in the case today.</li>
+<li><strong>Education and E-Learning </strong>: E-learning platforms integrate text, audio, video, animations, and interactive quizzes to enhance the learning experience. Multimedia tools like video conferencing, virtual whiteboards, and collaborative documents are used to facilitate online education.</li>
+<li><strong>Healthcare </strong>: Multimedia tools like 3D animations, virtual reality (VR), and interactive simulations are used for medical education and training. Multimedia content, including instructional videos and interactive guides, helps patients understand medical procedures and treatment plans.</li>
+<li><strong>E-Commerce </strong>: E-commerce platforms use multimedia, such as 360-degree product views, video demonstrations, and interactive features, to enhance product presentation. Augmented reality allows customers to virtually try on clothing, accessories, and makeup, providing an interactive shopping experience.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Explain the digital image representation with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-shrink-0 flex flex-col relative items-end">
+<div>
+<div class="pt-0">
+<div class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+<div class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8">Digital image representation involves converting visual information into a format that a computer can store, process, and display. This process is typically done through the use of pixels and color models.</div>
+</div>
+</div>
+</div>
+</div>
+<ul style="list-style-type: square;">
+<li>Digital image is represented by matrix of numbeic values each representing a quantized intensity value. When I is two dimensional matrix, then I(r, c) is the intensity value at the position corresponding to row(r) and column(c) of the matrix.</li>
+<li>The point at which an image is sampled are known as picture elements, commonly abbreviated as pixels.</li>
+<li>If there are just two intensity values for example black and white, they are represented by the numbers 0 and 1; such images are called binary-valued images.</li>
+<li>When 8 bit integers are used to store each pixel value, the gray levels range from 0 (black) to 255 (white).</li>
+<li>An image composed of pixels in an electronics/ digital syatem is said to be digital image.</li>
+<li>Digital image with higher dimension consist of higher no of pixels and vice versa which is directly proportional to quality of image.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>For example</strong></span></p>
+<p>Consider a simple 3&#215;3 RGB image. Each pixel&#8217;s color is represented by three values corresponding to red, green, and blue intensities. Here is an example of how such an image might be represented:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class=" aligncenter" style="width: 61.6705%; height: 293px;">
+<thead>
+<tr style="height: 24px;">
+<th style="height: 24px;">Pixel Position</th>
+<th style="height: 24px;">Red (R)</th>
+<th style="height: 24px;">Green (G)</th>
+<th style="height: 24px;">Blue (B)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 24px;">
+<td style="height: 24px;">(1,1)</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(1,2)</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(1,3)</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">255</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(2,1)</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(2,2)</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">255</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(2,3)</td>
+<td style="height: 24px;">255</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">255</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(3,1)</td>
+<td style="height: 24px;">192</td>
+<td style="height: 24px;">192</td>
+<td style="height: 24px;">192</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(3,2)</td>
+<td style="height: 24px;">128</td>
+<td style="height: 24px;">128</td>
+<td style="height: 24px;">128</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px;">(3,3)</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">0</td>
+<td style="height: 24px;">0</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</body></html>

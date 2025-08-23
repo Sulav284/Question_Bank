@@ -1,0 +1,479 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DL Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>DL Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20 </p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Answer any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Differentiate between synchronous and asynchronous counter. Design a 3-bit synchronous binary counter using T Flip Flop. Draw its timing diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between synchronous and asynchronous counter:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th style="text-align: center;">SN</th>
+<th style="text-align: center;">Synchronous Counter</th>
+<th style="text-align: center;">Asynchronous Counter</th>
+</tr>
+<tr>
+<td style="text-align: center;">1.</td>
+<td style="text-align: center;">In synchronous counter, all flip flops are triggered with same clock simultaneously.</td>
+<td style="text-align: center;">In asynchronous counter, different flip flops are triggered with different clock, not simultaneously.</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.</td>
+<td style="text-align: center;">Synchronous Counter is faster than asynchronous counter in operation.</td>
+<td style="text-align: center;">Asynchronous Counter is slower than synchronous counter in operation.</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.</td>
+<td style="text-align: center;">Synchronous Counter does not produce any decoding errors.</td>
+<td style="text-align: center;">Asynchronous Counter produces decoding error.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.</td>
+<td style="text-align: center;">Synchronous Counter is also called Parallel Counter.</td>
+<td style="text-align: center;">Asynchronous Counter is also called Serial Counter.</td>
+</tr>
+<tr>
+<td style="text-align: center;">5.</td>
+<td style="text-align: center;">Synchronous Counter designing as well implementation are complex due to increasing the number of states.</td>
+<td style="text-align: center;">Asynchronous Counter designing as well as implementation is very easy.</td>
+</tr>
+<tr>
+<td style="text-align: center;">6.</td>
+<td style="text-align: center;">Synchronous Counter will operate in any desired count sequence.</td>
+<td style="text-align: center;">Asynchronous Counter will operate only in fixed count sequence (UP/DOWN).</td>
+</tr>
+<tr>
+<td style="text-align: center;">7.</td>
+<td style="text-align: center;">Synchronous Counter examples are: Ring counter, Johnson counter.</td>
+<td style="text-align: center;">Asynchronous Counter examples are: Ripple UP counter, Ripple DOWN counter.</td>
+</tr>
+<tr>
+<td style="text-align: center;">8.</td>
+<td style="text-align: center;">In synchronous counter, propagation delay is less.</td>
+<td style="text-align: center;">In asynchronous counter, there is high propagation delay.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51284 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/T-flip-flop.drawio.png?resize=859%2C350&#038;ssl=1" alt="" width="859" height="350"></p>
+<p><strong>Timing Diagram:</strong></p>
+</div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51698 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/timing-diagram-for-the-3-%E2%80%93-bit-counter-1042x720-1-e1739710521244.jpg?resize=497%2C272&#038;ssl=1" alt="" width="497" height="272" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/timing-diagram-for-the-3-%E2%80%93-bit-counter-1042x720-1-e1739710521244.jpg?w=1014&amp;ssl=1 1014w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/timing-diagram-for-the-3-%E2%80%93-bit-counter-1042x720-1-e1739710521244.jpg?resize=768%2C421&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/timing-diagram-for-the-3-%E2%80%93-bit-counter-1042x720-1-e1739710521244.jpg?resize=600%2C329&amp;ssl=1 600w" sizes="auto, (max-width: 497px) 100vw, 497px" /></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain De-Morgan’s Law. Simplify the Boolean function F(P,Q,R,S) =Π(0,1,4,5,11,14,15) and d(P,Q,R,S) =Σ(2,3,7,8,9,13) using K-Map in both SOP and POS form.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>De Morgan&#8217;s Laws are fundamental rules in both set theory and Boolean algebra that describe the relationship between conjunctions (AND operations) and disjunctions (OR operations) through negation.</p>
+<ul style="list-style-type: square;">
+<li class="mb-2 last:mb-0"><strong>First Law</strong>: The negation of a conjunction is equivalent to the disjunction of the negations. In symbolic form: $$\neg (A \land B) \equiv \neg A \lor \neg B $$.</li>
+<li class="mb-2 last:mb-0"><strong>Second Law</strong>: The negation of a disjunction is equivalent to the conjunction of the negations. In symbolic form: $$ \neg (A \lor B) \equiv \neg A \land \neg B $$.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-57042" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-04-06-at-11.11.00%E2%80%AFAM.jpeg?resize=1060%2C1880&#038;ssl=1" alt="" width="1060" height="1880"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain design procedure of combinatorial circuits. Design a combinatorial circuit with three inputs x, y, and z, and three outputs A, B, and C. When the binary input is 0, 1, 2 or 3, the binary output is one greater than the input. When the input is 4, 5, 6, or 7, the binary output is one less than the input.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="dad65929">
+<div class="f9bf7997 d7dc56a8 c05b5566">
+<div class="ds-markdown ds-markdown--block">
+<h3><span style="font-size: 12pt;"><strong>Design Procedure of Combinational Circuits</strong></span></h3>
+<h3><span style="font-size: 12pt;">Combinational circuits are digital circuits where the output depends only on the current input. The design procedure involves the following steps:</span></h3>
+<p><strong>Steps to Design Combinational Circuits:</strong></p>
+<ol start="1">
+<li><strong>Understand the Problem</strong>:
+<ul style="list-style-type: square;">
+<li>Clearly define the inputs and outputs.</li>
+<li>Understand the relationship between inputs and outputs.</li>
+</ul>
+</li>
+<li><strong>Construct the Truth Table</strong>:
+<ul style="list-style-type: square;">
+<li>List all possible input combinations.</li>
+<li>Determine the corresponding output for each input combination.</li>
+</ul>
+</li>
+<li><strong>Simplify the Boolean Expression</strong>:
+<ul style="list-style-type: square;">
+<li>Use the truth table to write the Boolean expression for each output.</li>
+<li>Simplify the expression using Boolean algebra or Karnaugh Maps (K-maps).</li>
+</ul>
+</li>
+<li><strong>Implement the Circuit</strong>:
+<ul style="list-style-type: square;">
+<li>Use logic gates (AND, OR, NOT, etc.) to implement the simplified Boolean expressions.</li>
+</ul>
+</li>
+<li><strong>Verify the Design</strong>:
+<ul style="list-style-type: square;">
+<li>Test the circuit with all possible input combinations to ensure it meets the requirements.</li>
+</ul>
+</li>
+</ol>
+<h3><span style="font-size: 12pt;"><strong>Problem Statement:</strong></span></h3>
+<p>Design a combinational circuit with three inputs <span class="katex"><span class="katex-mathml">x,y,z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mord mathnormal">y</span><span class="mpunct">,</span><span class="mord mathnormal">z</span></span></span></span> and three outputs <span class="katex"><span class="katex-mathml">A,B,C</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mord mathnormal">B</span><span class="mpunct">,</span><span class="mord mathnormal">C</span></span></span></span>. The output should be:</p>
+<ul style="list-style-type: square;">
+<li>One greater than the input when the binary input is 0, 1, 2, or 3.</li>
+<li>One less than the input when the binary input is 4, 5, 6, or 7.</li>
+</ul>
+<h3><span style="font-size: 12pt;"><strong>Step 1: Truth Table</strong></span></h3>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th><span style="font-size: 12pt;">Input (x y z)</span></th>
+<th><span style="font-size: 12pt;">Decimal</span></th>
+<th><span style="font-size: 12pt;">Output Condition</span></th>
+<th><span style="font-size: 12pt;">Output (A B C)</span></th>
+<th><span style="font-size: 12pt;">Decimal</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="font-size: 12pt;">0 0 0</span></td>
+<td><span style="font-size: 12pt;">0</span></td>
+<td><span style="font-size: 12pt;">Input + 1</span></td>
+<td><span style="font-size: 12pt;">0 0 1</span></td>
+<td><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">0 0 1</span></td>
+<td><span style="font-size: 12pt;">1</span></td>
+<td><span style="font-size: 12pt;">Input + 1</span></td>
+<td><span style="font-size: 12pt;">0 1 0</span></td>
+<td><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">0 1 0</span></td>
+<td><span style="font-size: 12pt;">2</span></td>
+<td><span style="font-size: 12pt;">Input + 1</span></td>
+<td><span style="font-size: 12pt;">0 1 1</span></td>
+<td><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">0 1 1</span></td>
+<td><span style="font-size: 12pt;">3</span></td>
+<td><span style="font-size: 12pt;">Input + 1</span></td>
+<td><span style="font-size: 12pt;">1 0 0</span></td>
+<td><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">1 0 0</span></td>
+<td><span style="font-size: 12pt;">4</span></td>
+<td><span style="font-size: 12pt;">Input &#8211; 1</span></td>
+<td><span style="font-size: 12pt;">0 1 1</span></td>
+<td><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">1 0 1</span></td>
+<td><span style="font-size: 12pt;">5</span></td>
+<td><span style="font-size: 12pt;">Input &#8211; 1</span></td>
+<td><span style="font-size: 12pt;">1 0 0</span></td>
+<td><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">1 1 0</span></td>
+<td><span style="font-size: 12pt;">6</span></td>
+<td><span style="font-size: 12pt;">Input &#8211; 1</span></td>
+<td><span style="font-size: 12pt;">1 0 1</span></td>
+<td><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 12pt;">1 1 1</span></td>
+<td><span style="font-size: 12pt;">7</span></td>
+<td><span style="font-size: 12pt;">Input &#8211; 1</span></td>
+<td><span style="font-size: 12pt;">1 1 0</span></td>
+<td><span style="font-size: 12pt;">6</span></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h3><span style="font-size: 12pt;"><strong>Step 2: Boolean Expressions for Outputs</strong></span></h3>
+<p><span style="font-size: 12pt;">Using the truth table, we derive the Boolean expressions for <span class="katex"><span class="katex-mathml">A,B,</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mord mathnormal">B</span><span class="mpunct">,</span></span></span></span> and <span class="katex"><span class="katex-mathml">C</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">C</span></span></span></span>:</span></p>
+<h4><span style="font-size: 12pt;"><strong>Output A:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">A=x′yz+xy′z′+xy′z+xyz′</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">yz</span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">z</span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord mathnormal">y</span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<h4><span style="font-size: 12pt;"><strong>Output B:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">B=x′y′z+x′yz′+xy′z+xyz′</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">B</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">z</span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">y</span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">z</span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord mathnormal">y</span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<h4><span style="font-size: 12pt;"><strong>Output C:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">C=x′y′z′+x′y′z+x′yz′+xy′z′+xyz</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">C</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">z</span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord mathnormal">y</span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mord mathnormal">yz</span></span></span></span></li>
+</ul>
+<h3><span style="font-size: 12pt;"><strong>Step 3: Simplify Boolean Expressions</strong></span></h3>
+<p><span style="font-size: 12pt;">Using Karnaugh Maps (K-maps) or Boolean algebra, simplify the expressions:</span></p>
+<h4><span style="font-size: 12pt;"><strong>Simplified Output A:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">A=x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">x</span></span></span></span></li>
+</ul>
+<h4><span style="font-size: 12pt;"><strong>Simplified Output B:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">B=y⊕z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">B</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">y</span><span class="mbin">⊕</span></span><span class="base"><span class="mord mathnormal">z</span></span></span></span></li>
+</ul>
+<h4><span style="font-size: 12pt;"><strong>Simplified Output C:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li><span class="katex" style="font-size: 12pt;"><span class="katex-mathml">C=z′</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">C</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<h3><span style="font-size: 12pt;"><strong>Step 4: Implement the Circuit</strong></span></h3>
+<p><span style="font-size: 12pt;">Using the simplified Boolean expressions, the circuit can be implemented as follows:</span></p>
+<ol start="1">
+<li><span style="font-size: 12pt;"><strong>Output A</strong>:</span>
+<ul style="list-style-type: square;">
+<li><span style="font-size: 12pt;">Directly connect input <span class="katex"><span class="katex-mathml">x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span> to output <span class="katex"><span class="katex-mathml">A</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span></span></span></span>.</span></li>
+</ul>
+</li>
+<li><span style="font-size: 12pt;"><strong>Output B</strong>:</span>
+<ul style="list-style-type: square;">
+<li><span style="font-size: 12pt;">Use an XOR gate with inputs <span class="katex"><span class="katex-mathml">y</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">y</span></span></span></span> and <span class="katex"><span class="katex-mathml">z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">z</span></span></span></span>.</span></li>
+</ul>
+</li>
+<li><span style="font-size: 12pt;"><strong>Output C</strong>:</span>
+<ul style="list-style-type: square;">
+<li><span style="font-size: 12pt;">Use a NOT gate with input <span class="katex"><span class="katex-mathml">z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">z</span></span></span></span>.</span></li>
+</ul>
+</li>
+</ol>
+<h3><span style="font-size: 12pt;"><strong>Circuit Diagram:</strong></span></h3>
+<div class="md-code-block">
+<div class="md-code-block-banner-wrap">
+<div class="md-code-block-banner">
+<div class="md-code-block-infostring"><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51720 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp_Image_2025-02-16_at_21.08.39_1406675b-removebg-preview-e1739719506286.png?resize=286%2C193&#038;ssl=1" alt="" width="286" height="193"></div>
+<div class="md-code-block-action"><strong>Explanation:</strong></div>
+</div>
+</div>
+</div>
+<ol start="1">
+<li><strong>Output A</strong>:
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">A=x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">x</span></span></span></span>: The output <span class="katex"><span class="katex-mathml">A</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span></span></span></span> is directly equal to the input <span class="katex"><span class="katex-mathml">x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span>.</li>
+</ul>
+</li>
+<li><strong>Output B</strong>:
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">B=y⊕z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">B</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">y</span><span class="mbin">⊕</span></span><span class="base"><span class="mord mathnormal">z</span></span></span></span>: The output <span class="katex"><span class="katex-mathml">B</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">B</span></span></span></span> is the XOR of inputs <span class="katex"><span class="katex-mathml">y</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">y</span></span></span></span> and <span class="katex"><span class="katex-mathml">z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">z</span></span></span></span>.</li>
+</ul>
+</li>
+<li><strong>Output C</strong>:
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">C=z′</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">C</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span>: The output <span class="katex"><span class="katex-mathml">C</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">C</span></span></span></span> is the complement of input <span class="katex"><span class="katex-mathml">z</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">z</span></span></span></span>.</li>
+</ul>
+</li>
+</ol>
+<h3><span style="font-size: 12pt;"><strong>Verification:</strong></span></h3>
+<h3><span style="font-size: 12pt;">Verify the circuit with all input combinations using the truth table. For example:</span></h3>
+<ul style="list-style-type: square;">
+<li>For input <span class="katex"><span class="katex-mathml">000</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">000</span></span></span></span>, the output is <span class="katex"><span class="katex-mathml">001</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">001</span></span></span></span> (1 in decimal, which is <span class="katex"><span class="katex-mathml">0+1</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">0</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span></span></span></span>).</li>
+<li>For input <span class="katex"><span class="katex-mathml">100</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">100</span></span></span></span>, the output is <span class="katex"><span class="katex-mathml">011</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">011</span></span></span></span> (3 in decimal, which is <span class="katex"><span class="katex-mathml">4−1</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">4</span><span class="mbin">−</span></span><span class="base"><span class="mord">1</span></span></span></span>).</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<div class="ds-flex">
+<div class="ds-flex abe97156">
+<div class="ds-icon-button" tabindex="0">
+<div class="ds-icon"></div>
+</div>
+<div class="ds-icon-button" tabindex="0">
+<div class="ds-icon"></div>
+</div>
+<div class="ds-icon-button" tabindex="0">
+<div class="ds-icon"></div>
+</div>
+<div class="ds-icon-button" tabindex="0">
+<div class="ds-icon"></div>
+</div>
+</div>
+<div></div>
+</div>
+</div>
+</div>
+<div class="e886deb9">
+<div class="e214291b"></div>
+</div>
+<div class="cbcaa82c">
+<div class="aaff8b8f">
+<div class="e98de67b"></div>
+<div class="cefa5c26">
+<div class="dd442025 b699646e"></div>
+</div>
+</div>
+</div>
+</div>
+<h2>SECTION B: Answer any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Given A=46 and B=35 represent them in binary and perform A-B using 1’s complement method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>A = 46 = 101110</p>
+<p>B = 35 = 100011</p>
+<p>Let,<br />
+complement of B =    011100</p>
+<p>Now,</p>
+<p style="text-align: center;">  101110<br />
++011100<br />
+&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+1 001010<br />
++ 1<br />
+&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+001011</p>
+<p>Hence, substraction of A-B i.e 46 &#8211; 35 by using 1&#8217;s complement is 001011  i.e 11.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is Multiplexer. Design 8 to 1 Multiplexer with low level Multiplexers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="page" data-page-number="10" data-loaded="true">
+<div class="textLayer">A multiplexer is a combinational circuit that selects binary information from one of many input lines and directs it to a single output line. Multiplexing is the process of transmitting a large number of information over a single line.</div>
+<div class="textLayer"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51251" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/multiplexer.drawio.png?resize=663%2C260&#038;ssl=1" alt="" width="663" height="260">The selection of a particular input lines is controlled by a set of selection lines. Normally there are 2𝑛 input lines and 𝑛 selection lines whose bit combinations determine which input is selected. A multiplexer is also called a data selector, since it selects one of many inputs and steers the binary information to the output line.</div>
+<div class="textLayer">
+<div></div>
+</div>
+</div>
+<div class="page" data-page-number="11" data-loaded="true">
+<div class="canvasWrapper"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51252" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/mux.drawio.png?resize=812%2C445&#038;ssl=1" alt="" width="812" height="445"></div>
+<div class="textLayer"></div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write about D flip flop with necessary circuit, block diagram, characteristic table and equation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51246" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/D-flip-flop.drawio.png?resize=972%2C279&#038;ssl=1" alt="" width="972" height="279"></p>
+<p style="text-align: center;"><strong>a. Logical diagram with NAND gates</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51247 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/d-flf.drawio.png?resize=541%2C401&#038;ssl=1" alt="" width="541" height="401"></p>
+<p>The D flip-flop is a modification of clocked RS flip-flop. NAND gates 1 and 2 form a basic flip-flop and gates 3 and 4 modify it into a clocked RS flip-flop.</p>
+<p>The D flip-flop has only two inputs: D and CP. The D input of the flip-flop is directly given to S. And the complement of this value is given as the R input.</p>
+<ul style="list-style-type: square;">
+<li>As long as CP is 0, the outputs of gates 3 and 4 are at the 1 level and the circuit cannot change state regardless of the value of D.</li>
+<li>When CP changes to 1, the value of D is sampled and the information is passed to the output.<br />
+<strong>    1.</strong> If D=1 &amp; CP=1, the output of gate 3 goes to 0 and this makes the output Q=1, Q’=0. This is the set state of the D flip-flop.<br />
+<strong>    2.</strong> If D=0 &amp; CP=1, the output Q’=1 and Q=0, which is the reset state of the D Flip-flop.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Simplify F(A, B, C, D) = Σ(1,3,4,6,9,11,12,14) and realize the equation using NOR gates only.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-53485" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/CamScanner_09-03-2025_22.181-scaled.jpg?resize=929%2C1235&#038;ssl=1" alt="" width="929" height="1235"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-53486" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot-2025-03-09-221708.png?resize=889%2C339&#038;ssl=1" alt="" width="889" height="339"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Mention different types of shift registers. Explain SIPO with timing diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Shift registers is sequential circuits that provide the ability to store and move data. They are extensively utilized for data modification, data transport, and storage in digital electronics. Shift registers come in several varieties, such as:</p>
+<ul style="list-style-type: square;">
+<li><strong>Serial-In Serial-Out (SISO)</strong>: Serial input and output of data are both possible.</li>
+<li><strong>Serial-In Parallel-Out (SIPO)</strong>:Data is input serially and output in parallel using serial-in parallel-out, or SIPO.</li>
+<li><strong>Parallel-In Serial-Out (PISO)</strong>: Data is serially output after being input in parallel.</li>
+<li><strong>Parallel-In Parallel-Out (PIPO)</strong>: Input and output of data occur simultaneously.</li>
+</ul>
+<p>A SIPO shift register may have data read out either serially (one bit at a time) or parallelly (all bits at once). This type of shift register may be used to transform serial data streams into parallel data formats.</p>
+<p>The data is fed into the shift register one bit at a time through a single input line.  On each clock pulse, the bits in the register shift to the right (or left, depending on design), and the new bit enters the first position.After a certain number of clock cycles, the entire data can be read out simultaneously from the output lines.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51259 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/timing-diagram.drawio.png?resize=401%2C379&#038;ssl=1" alt="" width="401" height="379"></p>
+<ul style="list-style-type: square;">
+<li><strong>Clock Signal</strong>: The clock signal indicates when the data should be shifted. Each rising edge of the clock signal triggers the shift operation.</li>
+<li><strong>Serial Data In</strong>: The serial data in line shows the bits being fed into the shift register. For example, the bits 0, 1, 0, 1, 1, 0, 1, 0 are fed in serially.</li>
+<li><strong>Output Lines: </strong>Q<sub>0</sub>, Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub> represent the output of the shift register.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is decoder? Describe the 3 to 8 line decoder circuit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="page" data-page-number="5" data-loaded="true">
+<div class="textLayer">A decoder is a combinational circuit that converts binary information from 𝑛 input lines to a maximum of 2𝑛 unique output lines.</div>
+<ul style="list-style-type: square;">
+<li class="textLayer">If 𝑛-bit decoded information has unused or don’t care combinations, the decoder output will have less than 2𝑛 outputs.</li>
+<li class="textLayer">The decoders presented here are called 𝑛 − 𝑡𝑜 − 𝑚 line decoders where 𝑚 ≤ 2𝑛. Their purpose is to generate the 2𝑛 (or less) minterms of 𝑛 input variables.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51248 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/decoder.drawio.png?resize=353%2C92&#038;ssl=1" alt="" width="353" height="92"></p>
+<p style="text-align: center;"><strong>fig: Decoder</strong></p>
+</div>
+<div class="page" data-page-number="6" data-loaded="true">
+<div class="canvasWrapper">
+<div class="page" data-page-number="6" data-loaded="true">
+<div class="textLayer">3-to-8 line decoder:</div>
+<div class="textLayer">The three inputs are decoded into eight outputs, each output representing one of the minterms of the 3-input variables.</div>
+<div class="textLayer">A particular application of this decoder would be a binary-to-octal conversion. The input variable may represent a binary number and the outputs will then represent the eight digits in the octal number system.</div>
+<div></div>
+<ul style="list-style-type: square;">
+<li class="textLayer">Three inputs: 𝑋,𝑌 &amp; 𝑍</li>
+<li class="textLayer">Eight outputs: 𝐷0− 𝐷7</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51249 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/3-8-decoder.png?resize=359%2C235&#038;ssl=1" alt="" width="359" height="235"></p>
+<div class="textLayer" style="text-align: center;"><strong>Fig: 3-to-8 line decoder </strong></div>
+<div class="textLayer">Truth table:</div>
+<div><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51250 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/truth-table.drawio.png?resize=419%2C259&#038;ssl=1" alt="" width="419" height="259"></div>
+<div></div>
+<div class="textLayer">
+<p>From the truth table it is observed that the output variables are mutually exclusive because only one output can be equal to 1 at any one time. The output line whose value is equal to 1 represents the minterm equivalent of the binary number presently available in the input lines.</p>
+<div class="endOfContent"></div>
+</div>
+</div>
+<div class="page" data-page-number="7" data-loaded="true">
+<div class="canvasWrapper"></div>
+<div class="textLayer"></div>
+</div>
+</div>
+<div class="textLayer"></div>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain state diagram, state table, state reduction and state assignment with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>State Table:</p>
+<p>The time sequence of inputs, outputs and flip-flop states is enumerated in a state table. It consists of three sections labeled present state, next state and output. Present state designates the states of flip-flops before clock and next state shows the state after clock. Output section lists the values of the output variables during the present state.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51299 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/state-table.drawio.png?resize=414%2C318&#038;ssl=1" alt="" width="414" height="318"></p>
+<p>&nbsp;</p>
+<p>State Diagram:</p>
+<p>The information available in a state table may be represented graphically in a state diagram.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51297 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/st-diagram.drawio.png?resize=309%2C232&#038;ssl=1" alt="" width="309" height="232"></p>
+<p>&nbsp;</p>
+<p>State Reduction</p>
+<p>The reduction of number of flip-flops in a sequential circuit is referred to as the state reduction problem. State reduction algorithms are concerned with procedures for reducing the number of states in a state table while keeping the external input-output requirements unchanged.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-51300 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/st-reduvtion.drawio.png?resize=313%2C262&#038;ssl=1" alt="" width="313" height="262"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Design a 2 bit asynchronous binary counter using T flip flop. Draw its timing diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Circuit Diagram:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-51718 " src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/2bitsynchronous-660x233-removebg-preview-e1739718386555.png?resize=268%2C211&#038;ssl=1" alt="" width="268" height="211"></p>
+<p><strong>Truth table :</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 41.4433%; height: 158px;">
+<tbody>
+<tr>
+<td style="width: 25%;">CLK Pulse</td>
+<td style="width: 25%;">Q0</td>
+<td style="width: 25%;">Q1</td>
+<td style="width: 25%;">Binary Count</td>
+</tr>
+<tr>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">00</td>
+</tr>
+<tr>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">01</td>
+</tr>
+<tr>
+<td style="width: 25%;">2</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">10</td>
+</tr>
+<tr>
+<td style="width: 25%;">3</td>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">11</td>
+</tr>
+<tr>
+<td style="width: 25%;">4</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">00</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Timing Diagram:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-51719" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/2bitsynchronous-660x233-removebg-preview-1-e1739718506912.png?resize=349%2C224&#038;ssl=1" alt="" width="349" height="224"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Encoder</li>
+<li>Error detection codes</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Encoder:</strong><br />
+An encoder is a digital circuit that converts information from one format to another. In the context of digital electronics, an encoder is often used to convert a set of inputs into a binary code. There are different types of encoders, but a common example is the binary encoder. It takes multiple input lines and produces a binary code representing the active input line. For example, in a 4-to-2 binary encoder:</p>
+<p>Inputs (A, B, C, D): Four input lines representing a binary-coded value.<br />
+Outputs (Y1, Y2): Two output lines representing the binary encoding of the active input.<br />
+Encoders are essential components in digital systems for tasks such as data compression, data transmission, and interface with various devices.</p>
+<p><strong>Error detection codes</strong> :<br />
+An error detection codes can be used to detect errors during transmission. A parity bit is an extra bit included with a message to make the total number of 1’s either odd or even. For a message of four bits parity (P) is chosen so that the sum of all 1’s is odd (in all five bits) or the sum of all 1’s is even. In the receiving end, all the incoming bits (in this case five) are applied to a “parity-check” network for checking. An error is detected if the check parity does not correspond to the adopted one.The parity method detects the presence of one, three or any odd combination of errors. An even combination of errors is undetectable. Additional error-detection schemes may be needed to take care of an even combination of errors.</p>
+</div>
+</body></html>

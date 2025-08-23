@@ -1,0 +1,437 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>DS Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Prove that for all integers x and y, if x<sup>2</sup> + y<sup>2</sup> is even then x + y is even. Using induction prove that 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ………………. + n<sup>3</sup> = n<sup>2</sup>(n + 1)<sup>2</sup> / 4</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Solution I:</strong></span></p>
+<p>x<sup>2</sup> + y<sup>2</sup> is even</p>
+<p>We know that,</p>
+<p>(x+y)<sup>2</sup> = x<sup>2</sup> + 2xy + y<sup>2</sup></p>
+<p>(x+y)<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> + 2xy</p>
+<p>Since, 2xy is always even and we have given (x<sup>2</sup> + y<sup>2</sup>) is even. Addition of both even number results even number. So,</p>
+<p>(x+y)<sup>2</sup> is even. Eventually, x + y is also even.</p>
+<p><span style="text-decoration: underline;"><strong>Solution II:</strong></span></p>
+<p>Let P(n) = 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ………………. + n<sup>3</sup></p>
+<p><span style="text-decoration: underline;">Basic Step:</span></p>
+<p>P(1) = \(\frac{1^2 (1 + 1)^2}{4}\) = 1</p>
+<p>So, P(1) is true</p>
+<p><span style="text-decoration: underline;">Induction HypothesisL</span></p>
+<p>Suppose P(k) is true.</p>
+<p>P(k) = 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ………………. + k<sup>3</sup> = \(\frac{k^2 (k + 1)^2 }{4}\)</p>
+<p>Inductive Step:</p>
+<p>Now, we wish to show P(k+1) is true for this, we add (k+1)<sup>3</sup> on both sides then</p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ………………. + k<sup>3</sup> + (k+1)<sup>3</sup> = \(\frac{k^2 (k + 1)^2 }{4} + (k+1)^3\)</p>
+<p>= \(\frac{k^2 (k + 1)^2 }{4} + \frac{4(k+1)^3}{4}\)</p>
+<p>Taking (k+1)<sup>2</sup> common from both terms,</p>
+<p>= \((k + 1)^2 \left \{ \frac{k^2}{4} + \frac{4(k+1)}{4} \right \}\)</p>
+<p>= \((k + 1)^2 \left \{ \frac{k^2 }{4} + \frac{4k+4)}{4} \right \}\)</p>
+<p>= \((k + 1)^2 \left \{ \frac{k^2 + 4k + 4}{4} \right \}\)</p>
+<p>= \(\frac{(k + 1)^2  (k + 2)^2}{4}\)</p>
+<p>= \(\frac{(k + 1)^2 (k + 1 + 1)^2}{4}\)</p>
+<p>Therefore, P(k+1) = \(\frac{(k + 1)^2 (k + 1 + 1)^2}{4}\) is true.</p>
+<p>Thus, by mathematical induction, P(n) is true for all n.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>State division and remainder algorithm. Suppose that the domain of the propositional function P(x) consists of the integer 0, 1, 2, 3 and 4. Write out each of the following propositions using disjunctions, conjunctions and negations.</p>
+<ol>
+<li>∃x P(x)</li>
+<li>∀x P(x)</li>
+<li>∃x ¬P(x)</li>
+<li>∀x ¬P(x)</li>
+<li>¬∃x P(x)</li>
+<li>¬∀x P(x)</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><em>Division and Remainder Algorithm:</em></span></p>
+<p>Let a be an integer and &#8216;d&#8217; be positive integer then there exists two unique integer q and r with 0 &lt; r &lt; d such that a = dq + r</p>
+<p>where</p>
+<p>a = dividend</p>
+<p>d = divisior</p>
+<p>q = quotient</p>
+<p>r = remainder</p>
+<p>i.e.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">dividend = divisor * quotient + Remainder</pre>
+<p>For Example:</p>
+<p>let a = 19, d = 3</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">3 ) 19 ( 6
+   -18
+  -----
+     1
+19 = 3 x 6  + 1</pre>
+<p><span style="text-decoration: underline;"><strong>Second Part:</strong></span></p>
+<p>As we know that Universal Quantifier can be expressed as conjunctions and Existential Quantifier can be expressed as Disjunctions, given functions can be written as following:</p>
+<p>a) ∃x P(x) = P(0) ∨ P(1) ∨ P(2) ∨ P(3) ∨ P(4)</p>
+<p>b) ∀x P(x) = P(0) ∧ P(1) ∧ P(2) ∧ P(3) ∧ P(4)</p>
+<p>c) ∃x ¬P(x) =  ¬P(0) ∨ ¬P(1) ∨ ¬P(2) ∨ ¬P(3) ∨ ¬P(4)</p>
+<p>d) ∀x ¬P(x) = ¬P(0) ∧ ¬P(1) ∧ ¬P(2) ∧ ¬P(3) ∧ ¬P(4)</p>
+<p>e) ¬∃x P(x) = ¬ (P(0) ∨ P(1) ∨ P(2) ∨ P(3) ∨ P(4))</p>
+<p>f) ¬∀x P(x) = ¬ (P(0) ∧ P(1) ∧ P(2) ∧ P(3) ∧ P(4))</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>List all the necessary conditions for the graph to be isomorphic with an  example. Find the maximal flow from the node SOURCE to SINK in the following network flow.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6450 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/sd-cut-2078-new.png?resize=512%2C246&ssl=1" alt="" width="512" height="246"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The necessary conditions for the graph to be isomorphic are</p>
+<ol style="list-style-type:decimal;">
+<li>nunber of vertices must be equal</li>
+<li>number of edges must be equal</li>
+<li>number of degree of vertices must be equal</li>
+<li>Sub-graph consisting same degree must be same.</li>
+<li>Adjacent matrix must be same.</li>
+</ol>
+<p><em><span style="text-decoration: underline;">Example:</span></em> In below, We will check whether below graph is isomorphic.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6188 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/isomorphic.png?resize=585%2C285&#038;ssl=1" alt="Isomorphic Graphs" width="585" height="285" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/isomorphic.png?w=1480&amp;ssl=1 1480w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/isomorphic.png?resize=1024%2C498&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/isomorphic.png?resize=768%2C374&amp;ssl=1 768w" sizes="auto, (max-width: 585px) 100vw, 585px" /></p>
+<p><strong>Point 1:</strong> No. of vertices of G =No. of vertices of H = 8</p>
+<p><strong>Point 2:</strong> No. of edges of G = No. of edges of H = 10</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Degree of verticesof G</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Degree of vertices of H</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(a) = 2</td>
+<td style="width: 50%; text-align: center;">deg(s) = 3</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(b) = 3</td>
+<td style="width: 50%; text-align: center;">deg(t) = 2</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(c) = 2</td>
+<td style="width: 50%; text-align: center;">deg(u) = 2</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(d) = 3</td>
+<td style="width: 50%; text-align: center;">deg(v) = 3</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(e) = 2</td>
+<td style="width: 50%; text-align: center;">deg(w) = 3</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(f) = 3</td>
+<td style="width: 50%; text-align: center;">deg(x) = 2</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(g) = 2</td>
+<td style="width: 50%; text-align: center;">deg(y) = 2</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">deg(h) = 3</td>
+<td style="width: 50%; text-align: center;">deg(z) = 3</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Point 3: </strong>Degree of vertices of G = degre of vertices of  H as there ae equal no. of verticeshabing degre 2 and 3.</p>
+<p><strong>Point 4:</strong>Subgraph of G is not equal to sub graph of H</p>
+<p>So, They are not isomorphic.</p>
+<p><span style="text-decoration: underline;"><strong>Problem II:</strong></span></p>
+<p>Given graph is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6450 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/sd-cut-2078-new.png?resize=595%2C286&#038;ssl=1" alt="" width="595" height="286"></p>
+<p>&nbsp;</p>
+<p>Let’s find maximum flow from S to D using S-D cut method.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 312px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">X</td>
+<td style="width: 33.3333%; height: 24px;">\(\bar{X}\)</td>
+<td style="width: 33.3333%; height: 24px;">K(X, \(\bar{X}\))</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A}</td>
+<td style="width: 33.3333%; height: 24px;">{B, C, D, E, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 15 = 20</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B}</td>
+<td style="width: 33.3333%; height: 24px;">{C,D, E,F}</td>
+<td style="width: 33.3333%; height: 24px;">15 + 5 + 5 = 25</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, C}</td>
+<td style="width: 33.3333%; height: 24px;">{B, D, E, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 5 + 5 = 15</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B, C}</td>
+<td style="width: 33.3333%; height: 24px;">{D, E, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 5 + 5 + 5 = 20</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B, D}</td>
+<td style="width: 33.3333%; height: 24px;">{C, E, F}</td>
+<td style="width: 33.3333%; height: 24px;">15 + 5 + 15 = 35</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A,C, E}</td>
+<td style="width: 33.3333%; height: 24px;">{B, D, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 5 + 5 = 15</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B, C, D}</td>
+<td style="width: 33.3333%; height: 24px;">{E, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 15 = 20</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, C, D, E}</td>
+<td style="width: 33.3333%; height: 24px;">{B, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 15 = 20</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B, C, E}</td>
+<td style="width: 33.3333%; height: 24px;">{D, F}</td>
+<td style="width: 33.3333%; height: 24px;">5 + 5 + 5 = 15</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">{A, B, C, D, E}</td>
+<td style="width: 33.3333%; height: 24px;">{F}</td>
+<td style="width: 33.3333%; height: 24px;">15 + 5 = 20</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here,</p>
+<p>maximum flow= minimum cut = 15</p>
+<p>Finally, <strong>the maximum flow is 15.</strong></p>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>What is the coefficient of x<sup>2</sup> in (1 + x)<sup>11</sup>? Describe how relation can be represented using matrix.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p><em><span style="text-decoration: underline;">In Short:</span></em></p>
+<p><sup>11</sup>C<sub>2</sub> = \(\frac{11!}{2! \times (11 &#8211; 2)!}\) = 55</p>
+<p><em><span style="text-decoration: underline;">Explanation:</span></em></p>
+<p>In the example of (a + b)<sup>n</sup>, the (r + 1)<sup>th</sup> term, denoted by t<sub>r + 1</sub>, is given by</p>
+<p>t<sub>r + 1</sub> = <sup>n</sup>C<sub>r</sub> . a<sup>n-r</sup> . b<sup>r</sup></p>
+<p>Letting a = 1, b = x and n = 11, we get</p>
+<p>t<sub>r + 1</sub> = <sup>11</sup>C<sub>r</sub> . 1<sup>11-r</sup> . x<sup>r</sup></p>
+<p>As, we need the cofficient of x<sup>2</sup>, we have to take r = 2</p>
+<p><sup>11</sup>C<sub>2</sub> = \(\frac{11!}{2! \times (11 &#8211; 2)!}\) = 55</p>
+<p>The coefficient of x<sup>2</sup> in (1 + x)<sup>11</sup> is 55.</p>
+<p><span style="text-decoration: underline;"><strong>Representaton of Relation using Matrix:</strong></span></p>
+<p>Let A = {a<sub>1</sub>, a<sub>2</sub>, &#8230;&#8230;.., a<sub>m</sub>} and B = {b<sub>1</sub>, b<sub>2</sub>, &#8230;&#8230;&#8230;, b<sub>n</sub>) are finite sets containing m and n elements respectively and set R be a relation from A to B then R can be represented by the <em>mn</em> matrix.</p>
+<p>M<sub>R</sub> = [m<sub>ij</sub>] where m<sub>ij</sub> = \(\left\{\begin{matrix}1 \enspace if \enspace (a_i, b_j) \enspace ∈ \enspace R \\ 0 \enspace if \enspace (a_i, b_j) \enspace ∉ \enspace R\end{matrix}\right.\)</p>
+<p>The matrix M<sub>R</sub> is called matrix of R.</p>
+<p><span style="text-decoration: underline;"><em>Example:</em></span></p>
+<p>Let A = {1, 3, 4}, R = {(1, 1), (1, 3), (3, 3), (4, 4)}</p>
+<p>M<sub>R</sub> = \(\begin{bmatrix}1 &amp; 1 &amp; 0\\ 0 &amp; 1&amp; 0\\ 0 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Solve the recurrence relation a<sub>n</sub> = 5a<sub>n-1</sub> – 6a<sub>n-2</sub> with initial conditions a<sub>0</sub> = 1, a<sub>1</sub> = 4.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given recurrance relation is</p>
+<p>a<sub>n</sub> = 5a<sub>n-1</sub> – 6a<sub>n-2</sub></p>
+<p>Here, degree = 2</p>
+<p>The characteristics equation is</p>
+<p>r<sup>2</sup> = 5r &#8211; 6</p>
+<p>or, r<sup>2</sup> &#8211; 5r + 6 = 0</p>
+<p>or, r<sup>2</sup> &#8211; 2r &#8211; 3r + 6 = 0</p>
+<p>or, r(r-2) &#8211; 3(r-2) = 0</p>
+<p>or, (r-3)(r-2) = 0</p>
+<p>or, r = 3, 2</p>
+<p>or, r<sub>1</sub> = 3 and r<sub>2</sub> = 2</p>
+<p>Now, The general solution of homogenuous equation is:</p>
+<p>a<sub>n</sub> = A<sub>1</sub>r<sub>1</sub><sup>n</sup> + A<sub>2</sub>r<sub>2</sub><sup>n</sup></p>
+<p>or, a<sub>n</sub> = A<sub>1</sub>3<sup>n</sup> + A<sub>2 </sub>2<sup>n</sup>  &#8212;&#8212;&#8212;&#8211;(i)</p>
+<p>Given condition are</p>
+<p>a<sub>0</sub> = 1, a<sub>1</sub> = 4</p>
+<p>From equation (i), when condition a<sub>0</sub> = 1:</p>
+<p>1 = A<sub>1</sub> + A<sub>2</sub> . 3<sup>0</sup></p>
+<p>or, A<sub>1</sub> = 1 &#8211; A<sub>2</sub>    &#8212;&#8212;&#8212;&#8212;&#8212;(ii)</p>
+<p>From equation (i), when condition a<sub>1</sub> = 4:</p>
+<p>4 = A<sub>1</sub> . 2<sup>1</sup> + A<sub>2</sub> . 3<sup>1</sup></p>
+<p>or, 4 = 3 . A<sub>1</sub> + 2 . A<sub>2</sub> &#8212;&#8212;&#8212;&#8212;-(iii)</p>
+<p>Fromequation (ii) and (iii), We get</p>
+<p>4 = 3 (1 &#8211; A<sub>2</sub>) + 2 A<sub>2</sub></p>
+<p>or, 4 = 3 &#8211; 3 A<sub>2</sub> + 2 A<sub>2</sub></p>
+<p>or, 4-3 = &#8211; A<sub>2</sub></p>
+<p>∴ A<sub>2</sub> = -1</p>
+<p>Also,</p>
+<p>A<sub>1</sub> = 1 &#8211; (-1) = 2</p>
+<p>From equation (i), the general solution is</p>
+<p style="text-align: center;">\(a_n = 2 . 3^n &#8211; 1 . 2^n \)</p>
+<p>This is the required solution.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Prove that if n is positive integer, then n is odd if and only if 5n + 6 is odd.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>First Part:</strong></span></p>
+<p>First we will proof in (→) direction</p>
+<p>“If n is odd then 5n + 6 is odd”</p>
+<p>Let n be a positive odd number</p>
+<p>Let, n = 2m + 1, where m ∈ Z<sup>+</sup></p>
+<p>5n + 6 = 5(2m + 1) + 6</p>
+<p>= 10m + 5 + 6</p>
+<p>= 10m + 11</p>
+<p>10m is even and 11 is odd, therefore 10m + 11 is odd.</p>
+<p>Thus, if n is odd then 5n + 6 is also odd.</p>
+<p><span style="text-decoration: underline;"><strong>Second Part:</strong></span></p>
+<p>Next, we will proof in (<strong>←</strong>) direction</p>
+<p>“If 5n+6 is odd, then n is also odd”</p>
+<p>Let, 5n + 6 = 2m + 1, where m ∈ Z<sup>+</sup></p>
+<p>Now, assume n = 2k (n is even) in the above statement</p>
+<p>5n + 6  = 10k + 6</p>
+<p>10k is even and 6 is even. Therefore, 5n + 6 is also even. But it is contradictory.</p>
+<p>Therefore, our assumtion that n is incorrect. thus, n must be odd.</p>
+<p><span style="text-decoration: underline;"><strong>Final Decision:</strong></span></p>
+<p>From the above 2 cases we can conclude that if n is a positive integer then n is odd if and only if 5n+6 is odd.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define preposition. Consider the argument “John, a student in this class knows how to write program in C. Everyone who knows how to write program in C can get a high paying job. Therefore, someone in this class can get high paying job”. Now, explain which rules of inferences are sed for each step.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Preposition:</strong></span></p>
+<p>It is declarative sentence (thta is a sentence that declares a fact that is either true or false but not both.</p>
+<p><span style="text-decoration: underline;"><em>Example:</em></span></p>
+<ol style="list-style-type:decimal;">
+<li>Kathmandu is the capital of Nepal</li>
+<li>1 + 1 = 3</li>
+<li>2 + 5 = 7</li>
+</ol>
+<p>Prepositions 1 and 3 are true while 2 is false.</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Let R(x) = x knows C Program</p>
+<p>C(x) = x in the class</p>
+<p>P(x) = x can get  a high paying job</p>
+<p>J = John</p>
+<p>Then the premises are: C(J), R(J), ∀x(R(x) → P(x))</p>
+<p>and the conclusion is: ∃x (C(x) ∧ P(x))</p>
+<p>The following steps can be used to establish the conclusion from the premises.</p>
+<p><strong>Step 1: </strong>C(J) : Premise</p>
+<p><strong>Step 2: </strong>R(J) : Premise</p>
+<p><strong>Step 3: </strong>∀x(R(x) → P(x)) : Premise</p>
+<p>Use the rule of inference universal instantiation</p>
+<p>∀x P(x) ⇒ P(c) for ∀ x(R(x) → P(x))</p>
+<p><strong>Step 4:</strong> R(x) → P(x) : Universal instantiation</p>
+<p>Apply Modulus ponens using steps 2 and 4</p>
+<p><strong>Step 5:</strong> P(J) : Modulus ponens from 2 and 4</p>
+<p>Apply conjunction using step 1 and 5 and then apply existential generalization to the final step to get the conclusion.</p>
+<p><strong>Step 6:</strong> C(J) ∧ P(J) : Conjunction from 1 and 5</p>
+<p><strong>Step 7:</strong> ∃x (C(x) ∧ P(x)) : Existential generalization of 6</p>
+<p>Therefore, <strong>the conclusion is that, there is someone in the class who can get a high paying job.</strong></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Show that if there are 30 students in a class, then at least two have same names that begin with the same letter. Explain the pascal’s triangle.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Let n = number of students = 30</p>
+<p>Let m = number of alphabet = 26</p>
+<p>Now,</p>
+<p>\(k = \left [ \frac{n}{m} \right ]\) = \(\left [ \frac{30}{26} \right ]\) = 1.5 ≈ 2</p>
+<p>So, By the Pigeonhole Principle, at least two have same names that begin with same letter.</p>
+<p><span style="text-decoration: underline;"><strong>Pascal’s Triangle</strong></span></p>
+<p>Pascal’s Triangle is a kind of number pattern. Pascal’s Triangle is the triangular arrangement of numbers that gives the coefficients in the expansion of any binomial expression. The numbers are so arranged that they reflect as a triangle. Firstly, 1 is placed at the top, and then we start putting the numbers in a triangular pattern. The numbers which we get in each step are the addition of the above two numbers. It is similar to the concept of triangular numbers.</p>
+<p>The n<sup>th</sup> row in the triangle consists of the bionomial cofficients.</p>
+<p>\(\left ( \begin{matrix}n\\ k\end{matrix} \right )\) 0, k = 0, 1, &#8230;&#8230;&#8230;.. n</p>
+<p>This triangle is known as Pascal triangle.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6165 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/Pascals_triangle_5-300x216-1.png?resize=239%2C172&#038;ssl=1" alt="" width="239" height="172"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Illustrate the Dijkstra’s Algorithm to find the shortest path from source node to destination node with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Dijkstra’s algorithm finds the shortest path from a particular node, called the source node to every other node in a connected graph. It produces a shortest path tree with the source node as the root. It is profoundly used in computer networks to generate optimal routes with the aim of minimizing routing costs.</p>
+<p><strong>Algorithm:</strong></p>
+<p>Precondition: G = (V, w) is a weighted graph with initial vertex v<sub>0 </sub>then it holds following steps:</p>
+<ol style="list-style-type:decimal;">
+<li>Initialize the distance field to 0 for v<sub>0</sub> and to for each of other vertices.</li>
+<li>Enqueue all the vertices into a propriety queue Q with highest propriety being the lowest distance field value.</li>
+<li>Repeat step 4-10 until Q is empty</li>
+<li>The distance and back reference fields of every vertex that is not in Q are correct.</li>
+<li>Dequeue the highest priority vertex in v</li>
+<li>Do step 7-10 for each vertex w that are adjacent to v and in the propriety queue.</li>
+<li>Let S be the sum of the v&#8217;s distance field plus the weight of the edge from v to w</li>
+<li>If s less than w&#8217;s distance field, do step 9-10, otherwise go back to step 3</li>
+<li>Assign s to w&#8217;s distance field</li>
+<li>Assign v to w&#8217;s back reference field.</li>
+</ol>
+<p>Below is a directed weighted graph. We will find shortest path between all the vertices using Dijkstra’a Algorithm.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-3862 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1.png?resize=550%2C380&#038;ssl=1" alt="" width="550" height="380"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="size-medium wp-image-3863 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/2.png?resize=550%2C380&#038;ssl=1" alt="" width="550" height="380"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="size-medium wp-image-3864 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/3.png?resize=550%2C380&#038;ssl=1" alt="" width="550" height="380"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="size-medium wp-image-3865 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/4.png?resize=550%2C380&#038;ssl=1" alt="" width="550" height="380"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="size-medium wp-image-3866 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/5.png?resize=550%2C380&#038;ssl=1" alt="" width="550" height="380"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the significance of Minimum Spanning Tree? Describe how Kruskal’s algorithm can be used to find the MST.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Minimum spanning trees are used for network designs (i.e. telephone or cable networks). They are also used to find approximate solutions for complex mathematical problems like the Traveling Salesman Problem. Other, diverse applications include: Cluster Analysis.</p>
+<p><span style="text-decoration: underline;"><strong>Kruskal&#8217;s Algorithm:</strong></span></p>
+<p style="font-weight: 400;">Kruskal&#8217;s Algorithm is used to find the minimum spanning tree for a connected weighted graph. The main target of the algorithm is to find the subset of edges by using which, we can traverse every vertex of the graph.</p>
+<p style="font-weight: 400;">The Kruskal&#8217;s algorithm is given as follows:</p>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;">List all the edges of G with non-decreasing order of their weights.</li>
+<li style="font-weight: 400;">Select an edge of minimum weight. This will be the first edge of T.</li>
+<li style="font-weight: 400;">At each stage, select an edge of minimum weights from all remaining edges of G if it doesn’t form a cycle with previously selected edges in T. Then add the edge to T.</li>
+<li style="font-weight: 400;">Repeat step 3 until n-1 edges have been selected.</li>
+</ol>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6168 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/fb4b5cc3-a4d3-4e64-bd41-fd31a1d20447-1.png?resize=144%2C175&#038;ssl=1" alt="" width="144" height="175"></p>
+<p style="font-weight: 400;">Edges of given graph with non-decreasing order of their weights:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="font-weight: 400;">
+<tbody>
+<tr>
+<td style="text-align: center;" width="57">(1, 6)</td>
+<td style="text-align: center;" width="63">(4, 3)</td>
+<td style="text-align: center;" width="54">(2, 7)</td>
+<td style="text-align: center;" width="54">(2, 3)</td>
+<td style="text-align: center;" width="54">(7, 4)</td>
+<td style="text-align: center;" width="54">(4, 5)</td>
+<td style="text-align: center;" width="54">(5, 7)</td>
+<td style="text-align: center;" width="54">(5, 6)</td>
+<td style="text-align: center;" width="54">(1, 2)</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="57">7</td>
+<td style="text-align: center;" width="63">8</td>
+<td style="text-align: center;" width="54">9</td>
+<td style="text-align: center;" width="54">10</td>
+<td style="text-align: center;" width="54">11</td>
+<td style="text-align: center;" width="54">13</td>
+<td style="text-align: center;" width="54">15</td>
+<td style="text-align: center;" width="54">17</td>
+<td style="text-align: center;" width="54">18</td>
+</tr>
+</tbody>
+</table></div>
+<p style="font-weight: 400;"><em>Pick edge (1, 6):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6169 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/4a77b081-2519-41f7-80fd-8d97b1445979-1.png?resize=166%2C229&#038;ssl=1" alt="" width="166" height="229"></p>
+<p><i>Pick edge (4,3):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6170 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/2cacfb4b-d1b6-4c85-b27b-4d62f5e0008c-1.png?resize=178%2C231&#038;ssl=1" alt="" width="178" height="231"></p>
+<p>&nbsp;</p>
+<p><i>Pick edge (2,7):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6171 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/3267c641-d0d4-4909-8101-d8025034ef62.png?resize=163%2C231&#038;ssl=1" alt="" width="163" height="231"></p>
+<p><i>Pick edge (2,3):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6172 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/dbfcbe40-3a01-48af-88ba-66e8917fefd8.png?resize=157%2C218&#038;ssl=1" alt="" width="157" height="218"></p>
+<p style="font-weight: 400;"><em>Pick edge (7,4):</em> Since including this edge results in cycle, discard it.</p>
+<p style="font-weight: 400;"><em>Pick edge (4,5):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6173 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/4c59c8d3-a59b-4b26-ad64-a8987db579c0.png?resize=155%2C218&#038;ssl=1" alt="" width="155" height="218"></p>
+<p style="font-weight: 400;"><em>Pick edge (5,7):</em> Since including this edge results in cycle, discard it.</p>
+<p style="font-weight: 400;"><em>Pick edge (5,6):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6174 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/1136a0ce-2dab-4dc5-9baf-f59b45f8a9fe.png?resize=155%2C221&#038;ssl=1" alt="" width="155" height="221"></p>
+<p>Since the number of edges included equals (n– 1), the algorithm stops here.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define zero-one matrix. Explain the types of function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Zero-one matrix:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>A matrix with entries that either 0 or 1 is called a zero-one matrix.</li>
+<li>Zero-one matrix are often used to represent discrete structures.</li>
+<li>The boolean arthematic is based on the boolean operations ∨ and ∧, which operate on pains of bits defined by</li>
+</ul>
+<p>b<sub>1</sub> ∧ b<sub>2</sub> = \(\left\{\begin{matrix}1 \enspace if \enspace b_1 = b_2 = 1\\ 0 \enspace otherwise\end{matrix}\right.\)</p>
+<p>b<sub>1</sub> ∨ b<sub>2</sub> = \(\left\{\begin{matrix}1 \enspace if \enspace b_1 = 1 \enspace b_2 = 1\\ 0 \enspace otherwise\end{matrix}\right.\)</p>
+<p><span style="text-decoration: underline;"><strong>Types of Function:</strong></span></p>
+<p>There are three types of function:</p>
+<p><span style="text-decoration: underline;"><em>1. One to one function(Injective):</em></span></p>
+<p>A function is called one to one if for all elements a and b in A, if f(a) = f(b),then it must be the case that a = b. It never maps distinct elements of its domain to the same element of its co-domain.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6179 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/injective-function.png?resize=180%2C169&#038;ssl=1" alt="" width="180" height="169"></p>
+<p><span style="text-decoration: underline;"><em>2. Onto function(Surjective):</em></span></p>
+<p>A function is called an onto function if each element in the co-domain has at least one pre – image in the domain.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6178 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/surjective-function.png?resize=190%2C177&#038;ssl=1" alt="" width="190" height="177"></p>
+<p><span style="text-decoration: underline;"><em>2. Bijective function:</em></span></p>
+<p>A function from A to B is one-to-one correspondence orbijective, if f is both injective(one-to-one) and surjective(onto).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6177 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/bijective-function.png?resize=188%2C180&#038;ssl=1" alt="" width="188" height="180"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Represent any three set operations using Venn-diagram. Give a recursive defined function to find the factorial of any given positive integer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Part a):</strong></span></p>
+<p>Let take an example of three sets.</p>
+<p>X = {1, 2, 5, 6, 7, 9}, Y = {1, 3, 4, 5, 6, 8} and Z = {3, 5, 6, 7, 8, 10}</p>
+<p>Now, We will find required values such as X ∩ Y ∩ Z, X ∩ Y and Y ∩ Z</p>
+<p>X ∩ Y ∩ Z = {5, 6}</p>
+<p>X ∩ Y = {1, 5, 6}</p>
+<p>Y ∩ Z = {3, 5, 6, 8}</p>
+<p>X ∩ Z = {5, 6, 7}</p>
+<p>The venn-digram of above set is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6182 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/2-9-min.jpg?resize=348%2C261&#038;ssl=1" alt="" width="348" height="261" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/2-9-min.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/2-9-min.jpg?resize=768%2C576&amp;ssl=1 768w" sizes="auto, (max-width: 348px) 100vw, 348px" /></p>
+<p><span style="text-decoration: underline;"><strong>Part b):</strong></span></p>
+<p>If n ∈ Z<sup>+</sup> then factorial is defined as</p>
+<p>n! = n . (n-1) . (n-2) . (n-3) . . . . . 3 . 2 . 1</p>
+<p>The recursive defined function to find the factorial of any given positive integer is</p>
+<p>\(\left\{\begin{matrix}f(n) = n \times f(n-1) \enspace if \enspace n &gt; 1\\ 0 \enspace otherwise\end{matrix}\right.\)</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

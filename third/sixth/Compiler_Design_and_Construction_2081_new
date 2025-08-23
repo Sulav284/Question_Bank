@@ -1,0 +1,810 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CDC Question Bank 2081(new) 2081</title>
+    </head>
+    <body>
+        <h1>CDC Question Bank 2081(new) - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Discuss about Directed Acyclic Graph with an example. Represent the expression A = (B + C) – (D – E) using 3AC, Quadruple and Triple.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Directed Acyclic Graph (DAG) is a finite directed graph with no directed cycles, meaning it consists of vertices (nodes) connected by edges (arrows) where traversal never loops back to the same node. It identifies the common sub expression in the expression. It is similar to syntax tree with the difference that it forms an acyclic graph for sub-expression rather than the inserting a duplicate graph.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-59198 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/04/Untitled-Diagram-Page-3.drawio.png?resize=264%2C256&#038;ssl=1" alt="" width="264" height="256"></p>
+<p style="text-align: center;"><strong>fig: DAG for expression a+a*(b-c)+(b-c)*d</strong></p>
+<p><strong>3 Address Code:</strong></p>
+<p>t1 = B + C<br />
+t2 = D &#8211; E<br />
+A = t1 &#8211; t2</p>
+<p><strong>Quadruple: </strong>A table representation with four fields: Operator, Operand 1, Operand 2, Result.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 95.5761%; height: 142px;">
+<thead>
+<tr>
+<th style="width: 6.99586%; text-align: center;"></th>
+<th style="width: 24.9146%; text-align: center;"><strong>Operator</strong></th>
+<th style="width: 25.4066%; text-align: center;"><strong>Operand 1</strong></th>
+<th style="width: 23.374%; text-align: center;"><strong>Operand 2</strong></th>
+<th style="width: 16.6667%; text-align: center;"><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 6.99586%; text-align: center;">1</td>
+<td style="width: 24.9146%; text-align: center;">+</td>
+<td style="width: 25.4066%; text-align: center;">B</td>
+<td style="width: 23.374%; text-align: center;">C</td>
+<td style="width: 16.6667%; text-align: center;">t1</td>
+</tr>
+<tr>
+<td style="width: 6.99586%; text-align: center;">2</td>
+<td style="width: 24.9146%; text-align: center;">–</td>
+<td style="width: 25.4066%; text-align: center;">D</td>
+<td style="width: 23.374%; text-align: center;">E</td>
+<td style="width: 16.6667%; text-align: center;">t2</td>
+</tr>
+<tr>
+<td style="width: 6.99586%; text-align: center;">3</td>
+<td style="width: 24.9146%; text-align: center;">–</td>
+<td style="width: 25.4066%; text-align: center;">t1</td>
+<td style="width: 23.374%; text-align: center;">t2</td>
+<td style="width: 16.6667%; text-align: center;">A</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Triples : </strong>A compact form where results are referenced by their position</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 98.0071%; height: 131px;">
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>Operator</strong></th>
+<th style="text-align: center;"><strong>Operand 1</strong></th>
+<th style="text-align: center;"><strong>Operand 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">(1)</td>
+<td style="text-align: center;">(2)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p class="mb-2 last:mb-0">Create the LR(1) parsing table for following grammar.<br />
+S → AA<br />
+A → 0A<br />
+A → ε</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given grammar,</p>
+<p class="mb-2 last:mb-0" style="text-align: center;">S → AA<br />
+A → 0A<br />
+A → 1</p>
+<p class="mb-2 last:mb-0"><strong>augmented grammar</strong></p>
+<p>S → .S<br />
+S → AA (Production 1)<br />
+A → 0A (Production 2)<br />
+A → 1     (Production 3)</p>
+<p class="mb-2 last:mb-0"><strong>I<sub>0</sub>: Closure of S → S</strong><br />
+S&#8217; → .S, $<br />
+S → .AA, $<br />
+A → .0A, 0|1</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, S)</strong><br />
+<strong>I<sub>1</sub>:</strong><br />
+S&#8217; → S., $</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, A)</strong><br />
+<strong>I2:</strong><br />
+S → A.A, $<br />
+A → .0A, $<br />
+A → .1, 0|1</p>
+<p class="mb-2 last:mb-0"><strong>goto (I0, 0)</strong><br />
+<strong>I3:</strong><br />
+A → 0.A, 0|1<br />
+A → .0A, 0|1<br />
+A → .1, 0|1</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, 1)</strong><br />
+<strong>I4:</strong><br />
+A → 1., 0|1 (reduced 3)</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>2</sub>, A)</strong><br />
+<strong>I5:</strong><br />
+S → AA., $ . (reduce 1)</p>
+<p><strong>goto(I<sub>2</sub>, 0)</strong><br />
+<strong>I6:</strong><br />
+A <strong> →</strong> 0.A , $<br />
+A <strong> →</strong> .0A , $<br />
+A <strong> →</strong> .1 , $</p>
+<p><strong>goto(I<sub>2</sub>, 1)</strong><br />
+<strong>I<sub>7</sub>:</strong><br />
+A <strong> →</strong> 1. , $ (reduce 3)</p>
+<p><strong>goto(I<sub>3</sub>, A)</strong><br />
+<strong>I<sub>8</sub>:</strong><br />
+A <strong> →</strong> 0A. , 0|1 (reduce 2)</p>
+<p><strong>goto(I<sub>3</sub>, 0) = I<sub>3</sub></strong><br />
+<strong>goto(I<sub>3</sub>, 1) = I<sub>4</sub></strong></p>
+<p><strong>goto(I<sub>6</sub>, A)</strong><br />
+<strong>I9:</strong><br />
+A <strong> →</strong> 0A. , $ (reduce 2)</p>
+<p><strong>goto(I<sub>6</sub>, 0) = I<sub>6</sub></strong><br />
+<strong>goto(I<sub>6</sub>, 1) = I<sub>7</sub></strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-59177 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/04/LR1.drawio.png?resize=395%2C239&#038;ssl=1" alt="" width="395" height="239"></p>
+<p>Now, let&#8217;s construct LR(1) parse table</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 17.0907%;"></td>
+<td style="width: 49.5759%; text-align: center;"><strong>Action</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Goto</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 24px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 16.7543%; height: 24px;"><strong>states</strong></td>
+<td style="width: 16.5791%; height: 24px; text-align: center;"><strong>0</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>1</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>$</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>S</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>A</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>0</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s3</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s4</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">1</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>1</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>Accept</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>2</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s6</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s7</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">5</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>3</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s3</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s4</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">8</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>4</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r3</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r3</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>5</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r1</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>6</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s6</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">s7</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>7</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r3</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>8</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r2</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r2</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;"><strong>9</strong></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">r2</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Since, there are no conflicts, so it is LR(1) parsable.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the optimization techniques for code optimization. Convert the following program to basic block and control flow.<br />
+M = A + B<br />
+N = C + D<br />
+IF (M > N)<br />
+X = M – N;<br />
+ELSE<br />
+E = M + N + X</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Optimizations techniques are classified into two categories:</p>
+<ul style="list-style-type: square;">
+<li>Machine Independent optimization techniques</li>
+<li>Machine dependent optimization techniques</li>
+</ul>
+<p class="mb-2 last:mb-0"><strong>Machine Independent Optimization Techniques: </strong>Machine independent optimization techniques are program transformations that improve the target code without taking into consideration any properties of the target machine.</p>
+<ul style="list-style-type: square;">
+<li class="mb-2 last:mb-0"><strong>Constant Folding: </strong>It involves folding the constants. The expressions that contain the operands having constant values at compile time are evaluated. Those expressions are then replaced with their respective results.</li>
+<li class="mb-2 last:mb-0"><strong>Constant Propagation: </strong>In this technique, if some variable has been assigned some constant value, then it replaces that variable with its constant value in the further program during compilation.</li>
+<li class="mb-2 last:mb-0"><strong>Redundant Code Elimination: </strong>Removes unnecessary source code or instructions that are never executed.</li>
+<li class="mb-2 last:mb-0"><strong>Variable Propagation: </strong> Substitutes one variable with another to simplify the expression.</li>
+<li class="mb-2 last:mb-0"><strong>Strength Reduction: </strong>Simplifies operations by replacing complex operations with simpler ones.</li>
+<li class="mb-2 last:mb-0"><strong>Loop Optimization:</strong> Enhances the efficiency of loops by minimizing execution time. Focuses on reducing overhead associated with loops, improving overall performance.</li>
+</ul>
+<p><strong>Machine Dependent Optimization Techniques:</strong>These techniques focus on register allocation and the use of special machine-instruction sequences based on the target machine architecture after code generation.</p>
+<ul style="list-style-type: square;">
+<li class="mb-2 last:mb-0"><strong>Peephole Optimization: </strong>A simple and effective method for improving the efficiency of the target program. It examines short sequences of instructions (peepholes) and replaces them with more efficient alternatives where possible.</li>
+<li class="mb-2 last:mb-0"><strong>Redundant Load and Store Elimination</strong>: : This optimization technique removes unnecessary load and store operations from a program.</li>
+<li class="mb-2 last:mb-0"><strong>Dead Code Elimination</strong>: Dead Code Elimination refers to the technique of removing code statements that do not execute or are unreachable during program execution.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Compute the FIRST and FOLLOW of all the non-terminals in following grammar.<br />
+S → AB<br />
+A → 0A’ | 1A’ | ε<br />
+A’ → SSA’ | ε<br />
+B → AS | 1</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>FIRST</strong></p>
+<ol start="1">
+<li>
+<p class="ds-markdown-paragraph"><strong>FIRST(A):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">A → 0A&#8217;: FIRST(0A&#8217;) = {0}</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">A → 1A&#8217;: FIRST(1A&#8217;) = {1}</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">A → ε: FIRST(ε) = {ε}</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FIRST(A) = {0, 1, ε}</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FIRST(A&#8217;):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>A&#8217; → SSA&#8217;</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(S) must be computed first (since S → AB).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">FIRST(S) = FIRST(A) (since A can derive ε, we also check B).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">FIRST(A) = {0, 1, ε}, so FIRST(S) = FIRST(A) ∪ FIRST(B) (if A → ε).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">FIRST(B) = FIRST(A) ∪ {1} = {0, 1, ε} (since B → AS | 1).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Thus, FIRST(S) = {0, 1, ε}.</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Now, FIRST(SSA&#8217;) = FIRST(S) = {0, 1} (since S can derive ε, but SSA&#8217; requires at least one S to be non-ε).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">A&#8217; → ε: FIRST(ε) = {ε}</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FIRST(A&#8217;) = {0, 1, ε}</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FIRST(S):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>S → AB</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(A) = {0, 1, ε}, so FIRST(AB) = FIRST(A) ∪ FIRST(B) (if A → ε).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">FIRST(B) = {0, 1, ε} (from B → AS | 1).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Thus, FIRST(S) = {0, 1, ε}.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FIRST(B):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>B → AS</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(A) = {0, 1, ε}, so FIRST(AS) = FIRST(A) ∪ FIRST(S) (if A → ε).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">FIRST(S) = {0, 1, ε}, so FIRST(AS) = {0, 1, ε}.</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">B → 1: FIRST(1) = {1}</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FIRST(B) = {0, 1, ε}</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>FOLLOW</strong></p>
+<ol start="1">
+<li>
+<p class="ds-markdown-paragraph"><strong>FOLLOW(S):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">S is the start symbol: $ ∈ FOLLOW(S).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>A&#8217; → SSA&#8217;</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">The first S is followed by S, so FIRST(S) ⊆ FOLLOW(S).</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(S) = {0, 1, ε}, so add {0, 1} (excluding ε).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">The second S is followed by A&#8217;, so FIRST(A&#8217;) ⊆ FOLLOW(S).</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(A&#8217;) = {0, 1, ε}, so add {0, 1}.</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Since A&#8217; → ε, we also add FOLLOW(A&#8217;) to FOLLOW(S) (from A&#8217; → SSA&#8217;).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">B → AS: S is at the end, so FOLLOW(B) ⊆ FOLLOW(S).</p>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FOLLOW(S) = {0, 1, $} (after resolving dependencies).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FOLLOW(A):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>S → AB</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">A is followed by B, so FIRST(B) ⊆ FOLLOW(A).</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(B) = {0, 1, ε}, so add {0, 1}.</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Since B → ε, we also add FOLLOW(S) to FOLLOW(A).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>B → AS</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">A is followed by S, so FIRST(S) ⊆ FOLLOW(A).</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">FIRST(S) = {0, 1, ε}, so add {0, 1}.</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">Since S → ε, we also add FOLLOW(B) to FOLLOW(A).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FOLLOW(A) = {0, 1, $} (after resolving dependencies).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FOLLOW(A&#8217;):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>A → 0A&#8217; | 1A&#8217;</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">A&#8217; is at the end, so FOLLOW(A) ⊆ FOLLOW(A&#8217;).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>A&#8217; → SSA&#8217;</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">A&#8217; is at the end, so FOLLOW(A&#8217;) ⊆ FOLLOW(A&#8217;) (recursive, no new additions).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FOLLOW(A&#8217;) = FOLLOW(A) = {0, 1, $}.</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph"><strong>FOLLOW(B):</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph"><strong>S → AB</strong>:</p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">B is at the end, so FOLLOW(S) ⊆ FOLLOW(B).</p>
+</li>
+</ul>
+</li>
+<li>
+<p class="ds-markdown-paragraph">∴ FOLLOW(B) = FOLLOW(S) = {0, 1, $}.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 90.1075%; height: 162px;">
+<thead>
+<tr>
+<th style="width: 41.4254%; text-align: center;">Non-Terminal</th>
+<th style="width: 26.0579%; text-align: center;"><strong>FIRST</strong></th>
+<th style="width: 30.5122%; text-align: center;"><strong>FOLLOW</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 41.4254%; text-align: center;"><strong>S</strong></td>
+<td style="width: 26.0579%; text-align: center;">{0, 1, ε}</td>
+<td style="width: 30.5122%; text-align: center;">{0, 1, $}</td>
+</tr>
+<tr>
+<td style="width: 41.4254%; text-align: center;"><strong>A</strong></td>
+<td style="width: 26.0579%; text-align: center;">{0, 1, ε}</td>
+<td style="width: 30.5122%; text-align: center;">{0, 1, $}</td>
+</tr>
+<tr>
+<td style="width: 41.4254%; text-align: center;"><strong>A&#8217;</strong></td>
+<td style="width: 26.0579%; text-align: center;">{0, 1, ε}</td>
+<td style="width: 30.5122%; text-align: center;">{0, 1, $}</td>
+</tr>
+<tr>
+<td style="width: 41.4254%; text-align: center;"><strong>B</strong></td>
+<td style="width: 26.0579%; text-align: center;">{0, 1, ε}</td>
+<td style="width: 30.5122%; text-align: center;">{0, 1, $}</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are the operations performed in symbol table? Discuss about activation tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The operations performed in symbol table are:</p>
+<p><strong>Allocate</strong>:<br />
+The act of allocating resources or memory to a data structure or variable. Memory allocation is required prior to the use of data structures such as arrays or objects.</p>
+<p><strong>Free</strong>:<br />
+The process of returning memory that has been allotted to the system. Crucial for preventing memory leaks and guaranteeing that no memory is left over.</p>
+<p class="mb-2 last:mb-0"><strong>Insert</strong>:<strong><br />
+</strong>The process of including a new member in a data structure, like an array, linked list, or tree. This process modifies the structure to preserve order or, if required, add a new element.</p>
+<p class="mb-2 last:mb-0"><strong>Lookup</strong>:<br />
+The process of looking through a data structure and finding a value or element. frequently seen in dictionaries and databases where fast access to information is necessary.</p>
+<p class="mb-2 last:mb-0"><strong> Set Attribute</strong>:<strong><br />
+</strong>Giving an object or element&#8217;s property (attribute) a value. used to specify an object&#8217;s properties or actions in object-oriented programming.</p>
+<p class="mb-2 last:mb-0"><strong>Get Attribute</strong>:<br />
+Obtaining a value from an object or element&#8217;s property (attribute). frequently used to read or retrieve an object&#8217;s stated features.</p>
+<p>An activation record  is a data structure used to manage information about a single invocation of a function or procedure. When a function or procedure is called, an activation record is created to store parameters, local variables, return addresses, and other relevant information. The activation records are typically organized in a stack-like manner, with each record pointing to its caller&#8217;s activation record. An <strong>activation tree</strong> can be viewed as a hierarchical representation of the call stack, where each node represents an activation record and its associated function or procedure call.</p>
+<p>The structure of function calls in programming, especially when recursive and nested functions are being executed, is represented by an activation tree. It is a crucial idea for comprehending how programs handle control flow, local variables, and function calls.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What are the roles of macros and preprocessor? Discuss about one pass and multi pass compiler.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Roles of Macros and Preprocessor</strong></p>
+<p class="ds-markdown-paragraph"><strong>Preprocessor</strong>:</p>
+<ul style="list-style-type: square;">
+<li class="ds-markdown-paragraph">Performs file inclusion, macro expansion, and conditional compilation.</li>
+<li>Code reuse is made possible via macros, which define a series of instructions that may be inserted into the code prior to compilation.</li>
+<li>They aid in code maintenance by minimizing repetition and simplifying intricate phrases.</li>
+</ul>
+<p><strong>Macros:</strong></p>
+<ul style="list-style-type: square;">
+<li>
+<p class="ds-markdown-paragraph">Used for constants (#define PI 3.14) and function-like substitutions (#define SQUARE(x) (x*x)).</p>
+</li>
+<li>It performs file inclusion, macro substitution, and conditional compilation, shaping the source code based on specified needs.</li>
+</ul>
+<p><strong>One pass and multi pass compiler</strong></p>
+<p><strong>One pass compiler:<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>One pass compiler is a type of compiler that passes all the phases combined within one pass which mean meaning it reads the source code from beginning to end only once to generate the target code.</li>
+<li>It may have limitation in its ability to detect errors and optimize. Complex language characteristics that need additional context or several rounds to adequately evaluate may be beyond its capabilities.</li>
+<li>It is generally faster than multi-pass compilers because it only requires one traversal of the source code.</li>
+<li>It takes more space as the allocated memory can&#8217;t be reused.</li>
+<li>Pascal&#8217;s compiler is an example of one pass compiler.</li>
+</ul>
+<p><strong>Multi-pass Compiler:</strong></p>
+<ul style="list-style-type: square;">
+<li class="ds-markdown-paragraph"> A multi-pass compiler processes the source code in multiple passes, where each pass performs a specific task or analysis on the code.</li>
+<li class="ds-markdown-paragraph">It can evaluate the code more completely and can perform more sophisticated optimizations and analyses.</li>
+<li class="ds-markdown-paragraph">Multiple passes over the source code, each focusing on different aspects making higher in design complexity and slower compilation.</li>
+<li class="ds-markdown-paragraph">It requires more memory to store intermediate representations and data structures used during the compilation process.</li>
+<li class="ds-markdown-paragraph">C++ compiler is an example of multi-pass compiler.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define explicit and implicit type conversion. Why do we need to check type of the system? Justify with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Explicit type conversion, or type casting is the process by which a programmer explicitly changes a variable&#8217;s data type. The programming language&#8217;s particular syntax or functions are used for this. For instance, the (float) in C may be used to change an integer to a float.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">int num_int = 5;  
+float num_float = (float)num_int;
+printf("Integer: %d\n", num_int);
+printf("Float: %.1f\n", num_float);</pre>
+<p>Implicit type conversion is the process by which a programming language automatically changes a data type without the programmer&#8217;s express consent. When executing operations involving several data types, this typically occurs.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">int num_int = 5; 
+float num_float = 2.0; 
+float result = num_int + num_float; 
+printf("Result: %.1f\n", result);</pre>
+<p>Checking the type of a variable or system is crucial for several reasons:</p>
+<ul style="list-style-type: square;">
+<li><strong>Avoiding Errors</strong>: Runtime errors may result from type mismatches. For instance, errors may arise when attempting to execute arithmetic operations on incompatible types, such as adding a string to an integer.</li>
+<li><strong>Verifying Correctness</strong>: Being aware of the type helps guarantee that the actions carried out on the data are legitimate. A function could not operate as intended, for example, if it gets a string when it expects a list.</li>
+<li><strong>Performance Optimization</strong>: Performance characteristics might vary depending on the type of data. Understanding the type can aid in data structure and algorithm optimization.</li>
+<li><strong>Improving Readability and Maintainability</strong>: By making clear the intended data types for functions and operations, explicitly verifying types can help make the code easier to comprehend and maintain.</li>
+</ul>
+<p>Verifying the type of variable guarantees proper function behavior and avoids problems that can result from improper input types. This is particularly crucial in bigger systems where data types might not always be predictable or regulated.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between synthesized and inherited attributes with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An attribute is a property or value linked to a terminal or non-terminal grammar symbol that is used to specify context-sensitive behavior in semantic analysis and parsing. It has two types and they differ in following ways:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;"><strong>Synthesized Attribute</strong></td>
+<td style="width: 50%;"><strong>Inherited Attribute</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">Attributes of a node that are derived from its children nodes are called synthesized attributes.</td>
+<td style="width: 50%;">Attributes which are derived from the parent or siblings of a node are called inherited attributes.</td>
+</tr>
+<tr>
+<td style="width: 50%;">The production must have a non-terminal as its head.</td>
+<td style="width: 50%;">The production must have a non-terminal as a symbol in its body.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It can be evaluated during a single bottom-up traversal of parse tree.</td>
+<td style="width: 50%;">It can be evaluated during a single top-down and sideways traversal of parse tree.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Synthesized attributes can be contained by both the terminals and non-terminals.</td>
+<td style="width: 50%;">Inherited attributes can be only contained by non-terminals.</td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Example</strong>:</p>
+<p>E→F<br />
+E.val = F.val</td>
+<td style="width: 50%;"><strong>Example</strong>:</p>
+<p>E→F<br />
+F.val = E.val</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Construct the LL(1) parsing table for the following grammar.<br />
+S → AS1 | C<br />
+A → 0<br />
+C → 2C | ε</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>S → AS1 | C<br />
+A → 0<br />
+C → 2C | ε</p>
+<p>calculating FIRST</p>
+<p>FIRST(S) = FIRST(A) ∪ FIRST(C) = {0, 2, ε}<br />
+FIRST(A) = {0}<br />
+FIRST(C) = {2, ε}</p>
+<p>calculating FOLLOW</p>
+<p>FOLLOW(S) = {$, 1}<br />
+FOLLOW(A) = FIRST(S) = {0, 1, 2}<br />
+FOLLOW(C) = FOLLOW(S) = {$, 1}</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">FIRST</td>
+<td style="width: 33.3333%; text-align: center;">FOLLOW</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">S</td>
+<td style="width: 33.3333%; text-align: center;">{0, 2, ε}</td>
+<td style="width: 33.3333%; text-align: center;">{$, 1}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">A</td>
+<td style="width: 33.3333%; text-align: center;">{0}</td>
+<td style="width: 33.3333%; text-align: center;">{0, 1, 2}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">C</td>
+<td style="width: 33.3333%; text-align: center;">{2, ε}</td>
+<td style="width: 33.3333%; text-align: center;">{$, 1}</td>
+</tr>
+</tbody>
+</table></div>
+<p>for LL(1) parsing</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 96px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 20%; text-align: center; height: 24px;"></td>
+<td style="width: 20%; text-align: center; height: 24px;">0</td>
+<td style="width: 20%; text-align: center; height: 24px;">1</td>
+<td style="width: 20%; text-align: center; height: 24px;">2</td>
+<td style="width: 20%; text-align: center; height: 24px;">$</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; text-align: center; height: 24px;">S</td>
+<td style="width: 20%; text-align: center; height: 24px;">S → AS1</td>
+<td style="width: 20%; text-align: center; height: 24px;">S → C</td>
+<td style="width: 20%; text-align: center; height: 24px;">S → C</td>
+<td style="width: 20%; text-align: center; height: 24px;">S → C</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; text-align: center; height: 24px;">A</td>
+<td style="width: 20%; text-align: center; height: 24px;">A → 0</td>
+<td style="width: 20%; text-align: center; height: 24px;"></td>
+<td style="width: 20%; text-align: center; height: 24px;"></td>
+<td style="width: 20%; text-align: center; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; text-align: center; height: 24px;">C</td>
+<td style="width: 20%; text-align: center; height: 24px;"></td>
+<td style="width: 20%; text-align: center; height: 24px;">C → ε</td>
+<td style="width: 20%; text-align: center; height: 24px;">C → 2C</td>
+<td style="width: 20%; text-align: center; height: 24px;">C → ε</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the advantages of intermediate code? How do you</p>
+<ul>
+<li><code>t1 = a</code></li>
+<li><code>t2 = b</code></li>
+</ul>
+<p>?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Intermediate code serves as a bridge between the high-level source code and the low-level machine code or assembly language. It offers several advantages in the compilation process:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Portability:</strong> Intermediate code is typically platform-independent, allowing the compiler to generate code for different target architectures from the same intermediate representation. This simplifies the process of cross-compilation and enables the development of language implementations that can run on various platforms without modification.</li>
+<li><strong>Optimization:</strong> Intermediate code provides a convenient and structured representation of the program, making it easier to apply optimization techniques. Compiler optimizations can be performed on the intermediate code level, such as loop optimization, constant folding, and dead code elimination, before generating the final machine code.</li>
+<li><strong>Abstraction:</strong> Intermediate code abstracts away language-specific constructs and implementation details, providing a uniform representation that simplifies subsequent compilation phases. This separation of concerns makes the compiler more modular and facilitates the addition of new language features or optimization passes.</li>
+<li><strong>Debugging:</strong> Intermediate code can aid in debugging by providing a human-readable representation of the program&#8217;s behavior. Debugging tools can analyze and manipulate the intermediate code to track program state, identify errors, and optimize performance.</li>
+<li><strong>Language Interoperability:</strong> Intermediate code can facilitate interoperability between different programming languages. For example, a compiler frontend might translate source code from multiple languages into a common intermediate representation, enabling code reuse and integration across language boundaries.</li>
+</ol>
+<p>To convert procedure call to 3AC following steps should be followed:</p>
+<ul style="list-style-type: square;">
+<li>Identifying the Procedure Call by determining the name of the procedure and its parameters.</li>
+<li>Prepare the Parameters by ensuring they are evaluated and prepared for passing.</li>
+<li>Generate the 3AC for the procedure call, utilizing the temporary variables if parameters are involved.</li>
+<li>If the procedure returns a value, assign it to a temporary variable.</li>
+</ul>
+<p>for eg:</p>
+<p><strong>result = add(a, b)</strong></p>
+<p>t1 = a<br />
+t2 = b<br />
+call add(t1, t2)<br />
+result = call add(t1, t2)</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is a symbol table? Discuss the general structure of an LR parser.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A symbol table is a type of data structure that a compiler uses to hold information on classes, variables, functions, and objects. It serves as a lookup table for managing binding and scope data.</p>
+<p>Contents stored in symbol table are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Identifiers</strong>: Variable and function names are stored in identifiers.</li>
+<li><strong>Types</strong>: Details on an entity&#8217;s data kinds.</li>
+<li><strong>Scope</strong>: Details on the variables&#8217; visibility and extent.</li>
+<li><strong>Memory Locations</strong>: The addresses of data storage locations.</li>
+<li><strong>Attributes</strong>: Extra characteristics such as return types and function arguments.</li>
+</ul>
+<p>A type of bottom-up parser used for syntax analysis in compilers is called an LR parser. It drives the parsing process with a state table and a stack.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-59182 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/04/LR-parser.drawio.png?resize=398%2C314&#038;ssl=1" alt="" width="398" height="314"></p>
+<p style="text-align: center;"><strong>fig: LR parser</strong></p>
+<p><strong>The input buffer<br />
+</strong>It includes the string that has to be processed together with an end-of-input symbol, often $.</p>
+<p><strong>Stack</strong>:<br />
+It keeps track of the grammar symbols and current state as the parser works with the input.</p>
+<p><strong>Action Table:<br />
+</strong>It includes rules that, depending on the current state and the subsequent input symbol, indicate whether to shift, decrease, accept, or error.</p>
+<p><strong>Goto Table:</strong><br />
+It specifies the state transitions according to the grammar non-terminals and the state that is currently on the stack.</p>
+<p>In order to apply actions based on the action table and update the stack appropriately, the parser examines input symbols. When the parser finds a complete valid sequence (a production rule is matched), it replaces the matched symbols with the matching non-terminal, reducing the stack.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Generate the LR(0) item sets for the following grammar.<br />
+A → BB<br />
+B → bB | a</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given grammar,</p>
+<p class="mb-2 last:mb-0" style="text-align: center;">A → BB<br />
+B → bB<br />
+B → a</p>
+<p class="mb-2 last:mb-0"><strong>augmented grammar</strong></p>
+<p>A&#8217; → .A<br />
+A → BB (Production 1)<br />
+B → bB (Production 2)<br />
+B → a     (Production 3)</p>
+<p class="mb-2 last:mb-0"><strong>I<sub>0</sub>: Closure of A → A</strong><br />
+A&#8217; → .A<br />
+A → .BB<br />
+B → .bB</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, A)</strong><br />
+<strong>I<sub>1</sub>:</strong><br />
+A&#8217; → A.</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, B)</strong><br />
+<strong>I2:</strong><br />
+A → B.B<br />
+B → .bB<br />
+B → .a</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, b)</strong><br />
+<strong>I3:</strong><br />
+B → b.B<br />
+B → .bB<br />
+B → .a</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>0</sub>, a)</strong><br />
+<strong>I4:</strong><br />
+B → a. (reduced 3)</p>
+<p class="mb-2 last:mb-0"><strong>goto (I<sub>2</sub>, B)</strong><br />
+<strong>I5:</strong><br />
+A → BB. (reduce 1)</p>
+<p><strong>goto(I<sub>2</sub>, b) = </strong><strong>I<sub>3</sub></strong></p>
+<p><strong>goto(I<sub>2</sub>, a) = </strong><strong>I<sub>4</sub></strong></p>
+<p><strong>goto(I<sub>3</sub>, B)</strong><br />
+<strong>I<sub>6</sub>:</strong><br />
+B <strong> →</strong> bB. (reduce 2)</p>
+<p><strong>goto(I<sub>3</sub>, b) = I<sub>3</sub></strong></p>
+<p><strong>goto(I<sub>3</sub>, a) = I<sub>4</sub></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

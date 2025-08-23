@@ -1,0 +1,243 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SE Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>SE Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain how prototyping model help in developing software? Differentiate between Evolutionary and throw-away prototype model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The prototyping model is a popular software development methodology that involves creating a working model of a software application before creating the final product. This model can be used to help in the development of software in several ways:</p>
+<p>&#8211; Prototyping can help in gathering requirements for the software application by creating a workingmodel that can be used to test and validate user requirements.</p>
+<p>&#8211; The prototyping model allows for early feedback from users, which can be used to refine the software application.</p>
+<p>&#8211; By creating a working model of the software early in the development process, the prototyping model can help in reducing the risk of costly errors or defects in the final product.</p>
+<p>&#8211; The prototyping model can help in speeding up the development process by allowing developers to quickly create a working model of the software application.</p>
+<p>Overall, the prototyping model can be a useful tool in the software development process, helping to ensure that the final product meets the needs of the end-users while reducing the risk of errors or defects.</p>
+<p>Evolutionary and throwaway prototype models are two different approaches to software prototyping.</p>
+<p>Here are the key differences between the two:</p>
+<p>1. Purpose: The purpose of an evolutionary prototype model is to gradually refine and improve a prototype until it becomes a final product, while the purpose of a throwaway prototype model is to quickly build a prototype to test out ideas and gather feedback, with no intention of using the prototype as the basis for the final product.</p>
+<p>2. Iterations: The evolutionary prototype model involves multiple iterations of prototyping, with each iteration building on the previous one to refine and improve the prototype. The throwaway prototype model typically involves a single iteration of prototyping, with the prototype being discarded after it has served its purpose.</p>
+<p>3. Deliverables: The deliverables of the evolutionary prototype model are working prototypes that can be used to gradually refine and improve the final product. The deliverables of the throwaway prototype model are feedback and insights gathered from testing the prototype, which can be used to inform the design of the final product.</p>
+<p>4. Timeframe: The evolutionary prototype model typically takes longer than the throwaway prototype model, as it involves multiple iterations and more time spent refining and improving the prototype. The throwaway prototype model can be completed quickly, as the focus is on building a prototype to test ideas and gather feedback.</p>
+<p>5. Cost: The cost of the evolutionary prototype model is typically higher than the throwaway prototype model, as it involves multiple iterations of prototyping and more time spent refining and improving the prototype.</p>
+<p>In summary, the evolutionary prototype model is used to gradually refine and improve a prototype until it becomes the final product, while the throwaway prototype model is used to quickly build a prototype to test ideas and gather feedback, with no intention of using the prototype as the basis for the final product. The two models differ in their iterations, deliverables, timeframe, and cost.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Differentiate between functional and non-functional requirement. Describe any three functional and non-functional requirement for library management system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 97.007%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Functional Requirements</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Non-Functional Requirements</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Defines a system or its component.</td>
+<td style="width: 50%; text-align: left;">Defines the quality attribute of a software system.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Specifies &#8220;What should the software system do?&#8221;</td>
+<td style="width: 50%; text-align: left;">Places constraints on &#8220;How should the software system fulfill the functional requirements?&#8221;</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Specified by user.</td>
+<td style="width: 50%; text-align: left;">Specified by technical people like architect, software developers.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">It is mandatory.</td>
+<td style="width: 50%; text-align: left;">It is not mandatory.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Defined at a component level.</td>
+<td style="width: 50%; text-align: left;">Applied to a system as a whole.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">It is captured in use case.</td>
+<td style="width: 50%; text-align: left;">It is captured as a quality attribute.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Helps you verify the functionality of the software.</td>
+<td style="width: 50%; text-align: left;">Helps you verify the performance of the software.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Functional Testing like System Integration, End to End, API testing, etc. are done.</td>
+<td style="width: 50%; text-align: left;">Non-Functional Testing like Performance, Stress, Usability, Security testing etc. are done.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Usually easy to define.</td>
+<td style="width: 50%; text-align: left;">Usually more difficult to define.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: left;">Example:</p>
+<p>i. Authentication of user whenever they log into the system.</p>
+<p>ii. System shutdown in case of a cyber-attack.</p>
+<p>iii. A verification email is sent to user whenever they register for the first time on some software system.</td>
+<td style="width: 50%; text-align: left;">Example:</p>
+<p>i. Emails should be sent with a latency of no greater than 12 hours from such an activity.</p>
+<p>ii. The processing of each request should be done within 10 seconds.</p>
+<p>iii. The site should load in 3 seconds when the number of simultaneous users are &gt;10000</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><strong>Library management system</strong></p>
+<p><strong>Functional Requirements:</strong></p>
+<p><strong>1. User Registration:</strong> The system should allow users to register for a library account, which includes providing personal information, such as name, address, and contact details.</p>
+<p><strong>2. Book Checkout:</strong> The system should allow users to check out books from the library by scanning the book&#8217;s barcode or entering its ID number. The system should automatically update the book&#8217;s availability status and the user&#8217;s account information.</p>
+<p><strong>3. Book Reservations:</strong> The system should allow users to reserve books that are currently checked out by other users. Once the reserved book becomes available, the system should notify the user</p>
+<p><strong>Non-Functional Requirements:</strong></p>
+<p><strong>1. Performance:</strong> The system should be able to handle a large number of users simultaneously and process requests quickly, to provide a smooth user experience.</p>
+<p><strong>2. Security:</strong> The system should have appropriate security measures in place to protect user data and prevent unauthorized access, such as user authentication and encryption of sensitive data.</p>
+<p><strong>3. Accessibility:</strong> The system should be accessible to users with disabilities, such as providing alternative input methods for users who cannot use a mouse or keyboard, and providing audio descriptions for users with visual problems.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain in detail about the activities carried out in software configuration management. Why it is required?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software Configuration Management (SCM) is a process to systematically manage, organize, and control the changes in the documents, codes other entities during the Software Development Life Cycle. The primary goal is to increase productivity with minimal mistakes. SCM is a part of cross-disciplinary field of configuration management and it can accurately determine who made which revision.</p>
+<p>Tasks in SCM process:</p>
+<p><strong>a) Configuration Identification:</strong></p>
+<p>Configuration identification is a method of determining the scope of the software system. With the help of this step, you can manage or control something even if you don&#8217;t know what it is. It is a description that contains the CSCI type (Computer Software Configuration Item), a project identifier and version information.</p>
+<p>Activities during this process:<br />
+&#8211; Identification of configuration Items like source code modules, test case, and requirements specification.<br />
+&#8211; Identification of each CSCI in the SCM repository, by using an object-oriented approach<br />
+&#8211; The process starts with basic objects which are grouped into aggregate objects. Details of what, why, when and by whom changes in the test are made<br />
+&#8211; Every object has its own features that identify its name that is explicit to all other objects<br />
+&#8211; List of resources required such as the document, the file, tools, etc.</p>
+<p>Example: Instead of naming a File login.php it should be named login_v1.2.php where v1.2 stands for the version number of the file. Instead of naming folder &#8220;Code&#8221; it should be named &#8220;Code_D&#8217; where D represents code should be backed up daily.</p>
+<p><strong>b) Baseline:</strong></p>
+<p>A baseline is a formally accepted version of a software configuration item. It is designated and fixed at a specific time while conducting the SCM process. It can only be changed through formal change control procedures.</p>
+<p>Activities during this process:<br />
+&#8211; Facilitate construction of various versions of an application<br />
+&#8211; Defining and determining mechanisms for managing various versions of these work products<br />
+&#8211; The functional baseline corresponds to the reviewed system requirements<br />
+&#8211; Widely used baselines include functional, developmental, and product baselines<br />
+&#8211; In simple words, baseline means ready for release.</p>
+<p><strong>c) Change Control:</strong></p>
+<p>Change control is a procedural method which ensures quality and consistency when changes are made in the configuration object. In this step, the change request is submitted to software configuration manager.</p>
+<p>Activities during this process:<br />
+&#8211; Control ad-hoc change to build stable software development environment. Changes are committed to the repository<br />
+&#8211; The request will be checked based on the technical merit; possible side effects and overall impact on other configuration objects.<br />
+&#8211; It manages changes and making configuration items available during the software lifecycle</p>
+<p><strong>d) Configuration Status Accounting:</strong></p>
+<p>Configuration status accounting tracks each release during the SCM process. This stage involves tracking what each version has and the changes that lead to this version.</p>
+<p>Activities during this process:<br />
+&#8211; Keeps a record of all the changes made to the previous baseline to reach a new baseline<br />
+&#8211; Identify all items to define the software configuration<br />
+&#8211; Monitor status of change requests<br />
+&#8211; Complete listing of all changes since the !ast baseline<br />
+&#8211; Allows tracking of progress to next baseline<br />
+&#8211; Allows to check previous releases/versions to be extracted for testing</p>
+<p><strong>e) Configuration Audits and Reviews:</strong></p>
+<p>Software Configuration audits verify that the entire software product satisfies the baseline needs. It ensures that what is built is what is delivered.</p>
+<p>Activities during this process:<br />
+&#8211; Configuration auditing is conducted by auditors by checking that defined processes are being followed and ensuring that SCM goals are satisfied.<br />
+&#8211; To verify compliance with Configuration control standards auditing and reporting the changes made.<br />
+&#8211; SCM audits also ensure that traceability is maintained during the process.<br />
+&#8211; Ensures that changes made to a .baseline comply with the configuration status reports<br />
+&#8211; Validation of completeness and consistency</p>
+</div>
+<h2>Group B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain the Agile software development and its applications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>AGILE</strong> methodology is a practice that promotes continuous iteration of development and testing throughout the software development lifecycle of the project. In the Agile model, both development and testing activities are concurrent, unlike the Waterfall model.</p>
+<p>&#8211; Agile development emphasizes <strong>breaking down</strong> the project into small increments or iterations, each delivering a potentially shippable product. The development team works on short cycles called sprints, typically lasting 1-4 weeks.</p>
+<p>&#8211; Agile development promotes close <strong>collaboration</strong> between the development team and the customer or end-user. Customer feedback is taken regularly to ensure the project aligns with their requirements and expectations.</p>
+<p>&#8211; <strong>Adaptive and flexible:</strong> Agile projects are designed to be adaptable to changing requirements. The development team embraces change and is prepared to adjust their plans based on feedback and evolving priorities.</p>
+<p>&#8211; <strong>Cross-functional teams:</strong> Agile teams are typically cross-functional, consisting of members with diverse skills necessary to complete the project. Roles may include developers, testers, designers, and product owners, among others</p>
+<p>&#8211; <strong>Focus on working software:</strong> The primary goal of Agile is to deliver working software at the end of each iteration. This enables early value delivery and frequent validation of the product.</p>
+<p>Some of the applications of agile software development are:</p>
+<p><strong>1. Web and Mobile Application Development:</strong> Agile software development is commonly used in the development of web and mobile applications because of the need for rapid iteration and response to changing user needs and market conditions.</p>
+<p><strong>2. Software Product Development:</strong> Agile software development can be used to develop software products, such as enterprise software or consumer applications. Agile development allows teams to quickly develop and test new features, and make changes based on customer feedback and market trends.</p>
+<p><strong>3. Game Development:</strong> Agile software development can be used in game development to improve game design and user experience. Agile development allows teams to quickly develop and test new game features, and make changes based on player feedback and market trends.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Differentiate between software engineering and system engineering.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software engineering and system engineering are two related but distinct fields. Here are some key differences between the two:</p>
+<p><strong>1. Focus:</strong> Software engineering is primarily concerned with the development of software applications, while system engineering is concerned with the development of complex systems that may include hardware, software, and other components.</p>
+<p><strong>2. Scope:</strong> Software engineering focuses on the design, development, testing, and maintenance of software applications, while system engineering focuses on the design, development, testing, and maintenance of complex systems that may include multiple software applications, hardware components, and other subsystems.</p>
+<p><strong>3. Development Process:</strong> Software engineering typically follows a software development life cycle (SDLC), which includes phases such as requirements gathering, design, development, testing, and maintenance. System engineering typically follows a systems engineering process (SEP), which includes phases such as requirements analysis, design, implementation, testing, and maintenance.</p>
+<p><strong>4. Skill Set:</strong> Software engineers require expertise in programming languages, software development tools, and software design patterns. System engineers require expertise in systems architecture, systems integration, and systems analysis.</p>
+<p><strong>5. Deliverables:</strong> The deliverables of software engineering include software applications, software documentation, and software testing reports. The deliverables of system engineering include systems architecture diagrams, systems integration plans, and systems testing reports.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What do you understand by software quality assurance?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Software Quality Assurance (SQA)</strong> is a systematic and planned approach to ensure that software products and processes meet specified quality standards. It involves a set of activities and processes designed to prevent defects, identify and resolve issues, and enhance the overall quality of software. Here&#8217;s an explanation of software quality assurance with an example: Software Quality Assurance involves various activities throughout the software development lifecycle. One crucial aspect is the establishment of quality standards and processes. SQA defines guidelines and procedures to be followed by the development team to maintain and enhance the quality of the software. For example, let&#8217;s consider a software development project that aims to build an ecommerce website. In the context of SQA, the quality assurance team would define quality standards for the website, such as performance benchmarks, security requirements, and usability guidelines. These standards would be communicated to the development team. During the development phase, SQA activities would include conducting code reviews to ensure adherence to coding standards, performing unit testing to identify and fix defects in individual modules, and conducting integration testing to validate the interaction between different components. Furthermore, SQA involves functional testing to verify that the website features work as intended, usability testing to assess user-friendliness, and security testing to identify vulnerabilities and ensure data protection.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is behavioral model? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Behavioral Models:</strong></p>
+<p>Behavioral Models are models of the dynamic behavior of a system as it is executing. They show what happens or what is supposed to happen when a system responds to stimulus from its environment. We can think of those stimuli as being of two types:</p>
+<p><strong>i. Data:</strong> Some data arrives that has to be processed by the system.</p>
+<p><strong>ii. Events:</strong> Some event happens that triggers system processing.</p>
+<p>&nbsp;</p>
+<p><strong>Data-driven Modeling:<br />
+</strong></p>
+<p>Many business systems are data-processing systems that are primarily driven by data. They are controlled by the data input to the system, with relatively little external event processing. Data-driven models show the sequence of actions involved in processing input data and generating on associated output.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20519" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/imgf.png?resize=743%2C450&#038;ssl=1" alt="" width="743" height="450"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain the component based software engineering.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Component-based software engineering (CBSE)</strong> is a software development methodology that involves building software systems using pre-built, reusable software components. These components are typically designed to perform a specific function or set of functions and can be combined to create complex software systems. In CBSE, software components are treated as independent units that can be easily assembled to create software systems. This approach offers several benefits, including:</p>
+<p><strong>1. Reusability:</strong> Software components can be reused in multiple projects, reducing the need to develop new software from scratch and saving time and resources.</p>
+<p><strong>2. Modularity:</strong> Software components are designed to be modular, meaning they can be easily combined and configured to create different software systems.</p>
+<p><strong>3. Interoperability:</strong> Software components are designed to work together, allowing for easy integration with other components and systems.</p>
+<p><strong>4. Maintenance:</strong> Software components can be maintained and updated independently, reducing the impact of changes on the overall software system.</p>
+<p><strong>5. Quality:</strong> Software components are typically designed to be high-quality, reliable, and well-tested, reducing the risk of errors and defects in the overall software system.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Draw use case diagram and sequence diagram for online movie ticketing system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20557" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/SmartSelect_20230714_210832_CamScanner.jpg?resize=936%2C1162&#038;ssl=1" alt="" width="936" height="1162"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between verification and validation. Explain the software Inspection process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Verification</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Validation</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">It includes checking documents, design, codes and programs.</td>
+<td style="width: 50%;">It includes testing and validating the actual product.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Verification is the static testing.</td>
+<td style="width: 50%;">Validation is the dynamic testing.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It does not include the execution of the code.</td>
+<td style="width: 50%;">It includes the execution of the code.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It checks whether the software conforms to specifications or not.</td>
+<td style="width: 50%;">It checks whether the software meets the requirements and expectations of a customer or not.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It can find bugs in the early stage of development.</td>
+<td style="width: 50%;">It can only find the bugs that could not be found by verification.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Its goal is application and software architecture and specification.</td>
+<td style="width: 50%;">Its goal is an actual product.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It comes before validation.</td>
+<td style="width: 50%;">It comes after verification.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Software Inspection</strong></p>
+<p>It is a control technique for ensuring that the documentation produced during a given phase remains consistent with the documentation of the previous phases and respects reestablished rules and standards. These involve people examining the source representation with the aim of discovering anomalies and defects. The aim of the inspection is to locate faults and the process should be driven by a fault checklist.</p>
+<p>&nbsp;</p>
+<p><strong>Inspection Process</strong></p>
+<p><strong>i. Planning: </strong>The inspection is planned by the moderator which involves selecting an inspection team, and organizing a meeting room and materials.</p>
+<p><strong>ii. Overview: </strong>In this step, the software and documents to be inspected are presented to the inspection team.</p>
+<p><strong>iii. Individual Preparation: </strong>In this step, each inspection team member studies the specification and the program and looks for defects.</p>
+<p><strong>iv. Inspection Meeting: </strong>During this meeting, the readers read through the work product part by part, and inspectors point out defects for every part.</p>
+<p><strong>v. Rework: </strong>The author makes changes to the work product according to the action plan from the inspection meeting in this step.</p>
+<p><strong>vi. Follow up: </strong>In this step, the changes made by the author are checked to make sure that everything is correct. The moderator should decide whether reinspection of the code and document is required. If not the software is then approved by the moderator for release.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Differentiate between reengineering and reverse engineering.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reengineering and reverse engineering are two related but distinct processes in software engineering. Here are some key differences between the two:</p>
+<p><strong>1. Purpose:</strong> Reengineering is the process of redesigning and improving an existing software system to meet new requirements, improve performance, or reduce costs. Reverse engineering is the process of analyzing an existing software system to understand its design, architecture, and functionality.</p>
+<p><strong>2. Approach:</strong> Reengineering typically involves a forward engineering approach, where the existing software system is analyzed and then redesigned and improved. Reverse engineering typically involves a backward engineering approach, where the existing software system is analyzed in reverse order, from code to design to requirements.</p>
+<p><strong>3. Output:</strong> The output of reengineering is a new and improved software system that meets the new requirements. The output of reverse engineering is a better understanding of the existing software system, which can be used for maintenance, migration, or reengineering.</p>
+<p><strong>4. Scope:</strong> Reengineering typically involves a large-scale redesign and improvement of an existing software system, while reverse engineering can be used for a range of purposes, from understanding the design of a single module to analyzing the architecture of a complex software system.</p>
+<p><strong>5. Process:</strong> Reengineering typically involves several stages, such as requirements gathering, analysis, design, implementation, and testing. Reverse engineering typically involves several stages, such as code analysis, design recovery, and reconstruction.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Suppose that a project was estimated to be 400 KLOC. Calculate the effort and development time for organic and semidetached.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20551" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/pic.jpg?resize=512%2C518&#038;ssl=1" alt="" width="512" height="518"></p>
+</div>
+</body></html>

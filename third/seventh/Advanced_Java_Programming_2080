@@ -1,0 +1,849 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Advanced Java Programming 2080 2080</title>
+    </head>
+    <body>
+        <h1>Advanced Java Programming 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>GROUP A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p><span>Why do we need to synchronize the thread? Justify with an example. An array with an odd number of elements is said to be centered if all elements (except the middle one) are strictly greater than the value of the middle element. Note that only arrays with an odd number of elements have a middle element. Write a function that accepts an integer array and returns 1 if it is a centered array, otherwise it returns 0.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Threads are small processes that execute a task. Multithreading in Java is a process of executing multiple threads simultaneously.</p>
+<p>In simple terms, we need to <span style="font-weight: 400;">synchronize the thread to get data consistency. Synchronization in Java is the capability to control the access of multiple threads to any shared resource. Java Synchronization is a better option where we want to allow only one thread to access the shared resource. Synchronization can be used in ticketing systems or any booking systems, banking transactions, etc. Without<br />
+synchronization we can face problems like data inconsistency and thread interference(one thread interfere other may cause deadlock).</span></p>
+<p>let&#8217;s take an example, where the synchronized block is used to handle synchronization (data consistent) of total seats.</p>
+<div>
+<pre>package synchronizationPackage;
+
+class CSITSeats {
+    int totalSeats = 48;
+    public void book(int reqseats) {
+        synchronized(this) { //this indicates the reference to the class
+            if(reqseats&lt;=totalSeats) {
+                System.out.println("Seats booked = " + reqseats);
+                totalSeats = totalSeats - reqseats;
+                System.out.println("Seats available = " + totalSeats);
+            }
+            else {
+                System.out.println(reqseats + " seats not available");
+                System.out.println("Seats available = "+ totalSeats);
+            }
+        }
+
+    }
+}
+
+public class UsingSynchronizedBlock extends Thread {
+    static CSITSeats csit;
+    int seats;
+    @Override
+    public void run() {
+        csit.book(seats);
+    }
+
+    public static void main(String[] args) {
+        csit = new CSITSeats();
+        UsingSynchronizedBlock sid = new UsingSynchronizedBlock();
+        sid.seats = 24;
+        sid.start();
+        UsingSynchronizedBlock sid1 = new UsingSynchronizedBlock();
+        sid1.seats = 24;
+        sid1.start();
+    }
+}</pre>
+<p>The code for 2nd sub-question is:</p>
+<div>
+<pre>package Practice;
+
+public class CenteredArray {
+    public static int isCenteredArray(int[] arr) {
+        // Check if the array has an odd number of elements
+        if (arr.length % 2 == 0) {
+            return 0; 
+        }
+
+        int middleIndex = arr.length / 2;
+        int middleValue = arr[middleIndex];
+        
+        for (int i = 0; i &lt; arr.length; i++) {
+            if (i != middleIndex &amp;&amp; arr[i] &lt;= middleValue) {
+                return 0; // Return 0 if any element is not greater than the middle element
+            }
+        }
+
+        return 1; // Return 1 if the array is centered
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 10, 1, 20, 15};
+        System.out.println(isCenteredArray(arr)); // Output: 1 (since 10 is the middle value and others are greater)
+    }
+}
+
+</pre>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3>Question 2</h3>
+<div><p><p><span>How does JSP differ from Servlet and show the life cycle of Servlet? How do you create and read the cookies and session using JSP? Illustrate with an example.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JSP differs from servlet in many ways. It is shown in the table:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49528" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-12-28-at-08.38.07.png?resize=1674%2C1234&#038;ssl=1" alt="" width="1674" height="1234"></p>
+<p>&nbsp;</p>
+<p>The life-cycle of Servlet includes:</p>
+<p>The lifecycle of a servlet is managed by the Servlet Container (such as Apache Tomcat) and consists of the following key stages:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49529" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-12-28-at-08.39.47.png?resize=1222%2C628&#038;ssl=1" alt="" width="1222" height="628"></p>
+<p><strong>1. Loading and Instantiation:</strong><br />
+The servlet container loads the servlet class when it receives a request for it or when the web application starts (depending on configuration). The container instantiates the servlet class by calling the servlet’s constructor. The init() method is not yet called.</p>
+<p><strong>2. Initialization (init() method):</strong><br />
+The servlet container calls the init() method to initialize the servlet.<br />
+This method is called once when the servlet is first loaded and is used for one-time setup, such as reading configuration parameters, opening database connections, etc. The init() method takes a ServletConfig object as a parameter, which provides initialization parameters and information about the servlet.</p>
+<p><strong>3. Request Handling (service() method):</strong><br />
+After initialization, the servlet container invokes the service() method for every incoming client request.<br />
+The service() method is responsible for processing the request and generating a response. It handles different types of requests (GET, POST, etc.) using the doGet(), doPost(), etc., methods based on the HTTP method of the request. This method can be called multiple times as the servlet processes multiple requests.</p>
+<p><strong>4. Destruction (destroy() method):</strong><br />
+When the servlet is no longer needed (e.g., when the web application is shut down or the servlet is removed from service), the servlet container calls the destroy() method.<br />
+The destroy() method is used for cleanup activities, such as releasing resources like database connections or file handles. This method is called once, just before the servlet is removed from memory.</p>
+<p><strong>2nd part:<br />
+</strong>Here, first create createCookieAnd Session.jsp page</p>
+<div>
+<pre>&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JSP- creating cookies and sessions&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Create Cookie and Session&lt;/h2&gt;
+  &lt;%
+    // Create a Cookie
+    String userName = "SidRaut";
+    Cookie userCookie = new Cookie("username", userName);
+    userCookie.setMaxAge(60 * 60); // Cookie will expire in 1 hour
+    response.addCookie(userCookie); // Add the cookie to the response
+
+    // Use the implicit session object (no need to declare it explicitly)
+    session.setAttribute("username", userName); // Store username in session
+  %&gt;
+  &lt;h3&gt;Cookie and Session created successfully!&lt;/h3&gt;
+  &lt;p&gt;${"Cookie and Session created successfully!"}&lt;/p&gt;
+  &lt;p&gt;&lt;a href="readCookieAndSession.jsp"&gt;Go to Read Cookie and Session&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>and readCookieAndSesion.jsp page</p>
+<div>
+<div>
+<pre>&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;JSP - Read Cookies and Sessions&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Read Cookie and Session&lt;/h2&gt;
+&lt;%
+  // Retrieve the cookie
+  Cookie[] cookies = request.getCookies();
+  String cookieUserName = null;
+
+  if (cookies != null) {
+    for (Cookie cookie : cookies) {
+      if ("username".equals(cookie.getName())) {
+        cookieUserName = cookie.getValue(); // Get the value of the "username" cookie
+      }
+    }
+  }
+
+  // Retrieve the session
+  HttpSession session = request.getSession(false); // Don't create a new session if one doesn't exist
+  String sessionUserName = (session != null) ? (String) session.getAttribute("username") : null;
+
+  // Set attributes to be displayed using EL
+  request.setAttribute("cookieUserName", cookieUserName);
+  request.setAttribute("sessionUserName", sessionUserName);
+%&gt;
+
+&lt;!-- Display cookie and session values using EL --&gt;
+&lt;h3&gt;Cookie Username: ${cookieUserName != null ? cookieUserName : 'No cookie found!'}&lt;/h3&gt;
+&lt;h3&gt;Session Username: ${sessionUserName != null ? sessionUserName : 'No session found!'}&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="createCookieAndSession.jsp"&gt;Go back to Create Cookie and Session&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>and finally include them in our root index.jsp file to handle create and read cookies and sessions</p>
+<div>
+<pre>&lt;%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;JSP - Hello World with Cookie and Session&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Display a simple Hello World message --&gt;
+&lt;h1&gt;&lt;%= "Hello World!" %&gt;&lt;/h1&gt;
+
+&lt;br/&gt;
+
+&lt;!-- Link to Create Cookie and Session --&gt;
+&lt;p&gt;&lt;a href="createCookieAndSession.jsp"&gt;Create Cookie and Session&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Link to Read Cookie and Session --&gt;
+&lt;p&gt;&lt;a href="readCookieAndSession.jsp"&gt;Read Cookie and Session&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Optional: Link to a Hello Servlet --&gt;
+&lt;p&gt;&lt;a href="hello-servlet"&gt;Hello Servlet&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Optionally, you can add a message indicating what happens on these links --&gt;
+&lt;p&gt;
+  &lt;strong&gt;Note:&lt;/strong&gt; The first link will create a cookie and a session with the username "JohnDoe".&lt;br/&gt;
+  The second link will display the username stored in the cookie and session.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-47897" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-29-at-21.35.03.png?resize=2560%2C1600&#038;ssl=1" alt="" width="2560" height="1600"></p>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p><span>Describe any two types of Layout manager. Using swing components, design a form with three buttons with captions “RED,” “BLUE,” and “GREEN,” respectively. Then write a program to handle the event such that when the user clicks the button, the color of that button will be the same as its caption.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The any two types of Layout Manager are described below:</p>
+<p><strong>FlowLayout:</strong><br />
+FlowLayout is the simplest layout manager. GUI components are arranged on a container from left to<br />
+right in the order in which they are added to the container. It is the default layout manager.<br />
+When the edge of the container is reached, components continue to display on the next line.<br />
+Class FlowLayout allows GUI components to be left aligned, centered(default one) and right aligned.</p>
+<ul style="list-style-type: square;">
+<li>FlowLayout(): creates a flow layout with centered alignment and a default 5 unit horizontal and vertical<br />
+gap.</li>
+<li>FlowLayout(int align): creates a flow layout with the given alignment and a default 5 unit horizontal and vertical gap.</li>
+<li>FlowLayout(int align, int hgap, int vgap): creates a flow layout with the given alignment and the given horizontal and vertical gap.</li>
+</ul>
+<p><strong>BorderLayout :</strong><br />
+BorderLayout manager is the default layout manager for the JFrame. It arranges the components into five regions: NORTH, SOUTH, EAST, WEST AND CENTER. NORTH corresponds to the top of the container, SOUTH corresponds to the bottom, EAST corresponds to the right, WEST corresponds to the left.</p>
+<ul style="list-style-type: square;">
+<li> BorderLayout(): creates a border layout but with no gaps between the components.</li>
+<li> JBorderLayout(int hgap, int vgap): creates a border layout with the given horizontal and vertical gaps between the components.</li>
+</ul>
+<p><strong>2nd part:</strong></p>
+<div>
+<pre>package advanceSwingComponents;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ButtonColorChange {
+
+    public static void main(String[] args) {
+        // Initialize the Swing components on the Event Dispatch Thread
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // Create the main frame (form container)
+                JFrame frame = new JFrame("Color Change Form with Fields");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setLayout(new GridLayout(4, 1, 10, 10)); // GridLayout to organize components
+
+                // Create a panel for text fields and labels
+                JPanel formPanel = new JPanel();
+                formPanel.setLayout(new GridLayout(2, 2, 5, 5)); // 2 rows and 2 columns
+                JLabel nameLabel = new JLabel("Enter Name:");
+                JTextField nameField = new JTextField();
+                JLabel emailLabel = new JLabel("Enter Email:");
+                JTextField emailField = new JTextField();
+
+                formPanel.add(nameLabel);
+                formPanel.add(nameField);
+                formPanel.add(emailLabel);
+                formPanel.add(emailField);
+
+                // Create buttons with captions "RED", "BLUE", "GREEN"
+                JButton redButton = new JButton("RED");
+                JButton blueButton = new JButton("BLUE");
+                JButton greenButton = new JButton("GREEN");
+
+                // Set buttons to be opaque so their background color is visible
+                redButton.setOpaque(true);
+                blueButton.setOpaque(true);
+                greenButton.setOpaque(true);
+
+                // Add ActionListener to the RED button to change its background to RED
+                redButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        redButton.setBackground(Color.RED);  // Set background color to RED
+                    }
+                });
+
+                // Add ActionListener to the BLUE button to change its background to BLUE
+                blueButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        blueButton.setBackground(Color.BLUE); // Set background color to BLUE
+                    }
+                });
+
+                // Add ActionListener to the GREEN button to change its background to GREEN
+                greenButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        greenButton.setBackground(Color.GREEN); // Set background color to GREEN
+                    }
+                });
+
+                // Add formPanel and buttons to the frame
+                frame.add(formPanel);  // Add the panel containing text fields and labels
+                frame.add(redButton);  // Add the "RED" button
+                frame.add(blueButton); // Add the "BLUE" button
+                frame.add(greenButton); // Add the "GREEN" button
+
+                // Set the frame size and center it on the screen
+                frame.setSize(400, 250);
+                frame.setLocationRelativeTo(null); // Center the window on screen
+                frame.setVisible(true); // Make the frame visible
+            }
+        });
+    }
+}</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-47899" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-29-at-21.56.50.png?resize=802%2C500&#038;ssl=1" alt="" width="802" height="500"></p>
+</div>
+</div>
+<h2>Group B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p><span>List the steps to create an RMI application. Differentiate between RMI and CORBA.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-size: 12pt;">The steps to create an RMI application are:</span></p>
+<ul style="list-style-type: square;">
+<li><span style="font-size: 12pt;"><strong>Define the Remote Interface</strong>: Declare remote methods in an interface that extends <code>Remote</code>.</span></li>
+<li><span style="font-size: 12pt;"><strong>Implement the Remote Interface</strong>: Provide the actual method implementations in a class extending <code>UnicastRemoteObject</code>.</span></li>
+<li><span style="font-size: 12pt;"><strong>Develop the Server Application</strong>: Create and register the remote object with the RMI registry.</span></li>
+<li><span style="font-size: 12pt;"><strong>Develop the Client Application</strong>: Lookup the remote object in the registry and invoke its methods.</span></li>
+<li><span style="font-size: 12pt;"><strong>Generate Stubs and Skeletons</strong>: Use <code>rmic</code> to generate stub and skeleton files.</span></li>
+<li><span style="font-size: 12pt;"><strong>Start the RMI Registry</strong>: Run <code>rmiregistry</code> to allow clients to find the server&#8217;s remote object.</span></li>
+<li><span style="font-size: 12pt;"><strong>Start the Server</strong>: Run the server to register the remote object with the RMI registry.</span></li>
+<li><span style="font-size: 12pt;"><strong>Start the Client</strong>: Run the client to invoke remote methods on the server.</span></li>
+<li><span style="font-size: 12pt;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49459" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-12-27-at-14.10.50.png?resize=1688%2C1420&#038;ssl=1" alt="" width="1688" height="1420"></span></li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p><span>Write a JavaFX application with components, buttons, text fields, and labels, arranged in a VBox or HBox layout.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here&#8217;s an example <span style="font-weight: 400;"><span style="box-sizing: border-box; margin: 0px; padding: 0px;">of a JavaFX application with components, buttons, text fields, and labels</span> arranged in a VBox or HBox layout.<br />
+</span></p>
+<div>
+<pre>package com.example.unit6;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+
+public class JavaFXExample extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+
+        // Create the label, text field, and buttons
+        Label label = new Label("Enter something:");
+        TextField textField = new TextField();
+        Button showButton = new Button("Show Text");
+        Button clearButton = new Button("Clear");
+
+        // Create action for Show Button
+        showButton.setOnAction(e -&gt; {
+            String text = textField.getText();
+            label.setText("You entered: " + text);
+        });
+
+        // Create action for Clear Button
+        clearButton.setOnAction(e -&gt; {
+            textField.clear();
+            label.setText("Enter something:");
+        });
+
+        // Create an HBox to arrange the components horizontally
+        HBox hbox = new HBox(10);  // 10px spacing between elements
+        hbox.setPadding(new Insets(20));  // Padding around the HBox
+        hbox.getChildren().addAll(label, textField, showButton, clearButton);
+
+        // Create the Scene and add the HBox
+        Scene scene = new Scene(hbox, 400, 100);  // Width is increased for horizontal layout
+
+        // Set up the Stage (window)
+        primaryStage.setTitle("JavaFX Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);  // Launch the JavaFX application
+    }
+}</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-47931" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-11.25.00.png?resize=1478%2C258&#038;ssl=1" alt="" width="1478" height="258"></p>
+</div>
+<p><span style="font-weight: 400;"> </span></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p><span>Assume a table MOVIE(id, title, genre). Now, using JDBC, perform the following queries:</span><span><br />
+</span><span>a. Add any three records to the MOVIE table.</span><span><br />
+</span><span>b. Using a prepared statement, update the genre to “Comedy” having the title “Jatra”.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here&#8217;s the code:</p>
+<div>
+<pre>import java.sql.*;
+
+public class MovieDatabaseExample {
+    public static void main(String[] args) {
+        // Database URL and credentials
+        String url = "jdbc:mysql://localhost:3306/java_db";
+        String username = "root";
+        String password = "siddhartha";
+
+        // JDBC Connection and Statement
+        Connection conn = null;
+        PreparedStatement insertStmt = null;
+        PreparedStatement updateStmt = null;
+
+        try {
+            conn = DriverManager.getConnection(url, username, password);
+            System.out.println("Connected to the database.");
+
+            // --- Part a: Insert three records into the MOVIE table ---
+            String insertSQL = "INSERT INTO MOVIE (id, title, genre) VALUES (?, ?, ?)";
+            insertStmt = conn.prepareStatement(insertSQL);
+
+            insertStmt.setInt(1, 1);  // ID
+            insertStmt.setString(2, "Jatra");  // Title
+            insertStmt.setString(3, "Cultural Heritage");  // Genre
+            insertStmt.executeUpdate();
+
+            insertStmt.setInt(1, 2);  // ID
+            insertStmt.setString(2, "Sonic 3 - Shadow the Hedgehog");  // Title
+            insertStmt.setString(3, "Action and Animation");  // Genre
+            insertStmt.executeUpdate();
+
+            insertStmt.setInt(1, 3);  // ID
+            insertStmt.setString(2, "Mufasa");  // Title
+            insertStmt.setString(3, "Adventure");  // Genre
+            insertStmt.executeUpdate();
+
+            System.out.println("Three records added to the MOVIE table.");
+
+            String updateSQL = "UPDATE MOVIE SET genre = ? WHERE title = ?";
+            updateStmt = conn.prepareStatement(updateSQL);
+
+            updateStmt.setString(1, "Comedy");  // New genre
+            updateStmt.setString(2, "Jatra");  // Movie title to match
+
+            int rowsAffected = updateStmt.executeUpdate();
+            if (rowsAffected &gt; 0) {
+                System.out.println("Genre for 'Jatra' has been updated to 'Comedy'.");
+            } else {
+                System.out.println("No movie found with the title 'Jatra'.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Step 3: Clean up resources
+            try {
+                if (insertStmt != null) insertStmt.close();
+                if (updateStmt != null) updateStmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-47933" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-11.42.14.png?resize=1042%2C440&#038;ssl=1" alt="" width="1042" height="440"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-47934" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-11.42.40.png?resize=1038%2C466&#038;ssl=1" alt="" width="1038" height="466"></p>
+</div>
+</div>
+<h3>Question 7</h3>
+<div><p><p><span>When do we need an internal frame? How do you create a table using Swing?</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Java Swing, <strong>internal frames</strong> are used when you need to create <strong>MDI (Multiple Document Interface)</strong> applications. An internal frame is similar to a regular frame (<code>JFrame</code>), but it resides within another window, typically a parent container (often called a <strong>JDesktopPane</strong>), instead of being a top-level window. It allows you to create an interface where multiple windows or documents can be opened and managed within a single main application window.</p>
+<p>In Java Swing, you can create tables using the <code>JTable</code> component. <code>JTable</code> is a powerful component that allows you to display and manage tabular data (rows and columns).</p>
+<div>
+<pre>package advanceSwingComponents;
+import javax.swing.*;
+
+public class TableExample {
+    public static void main(String[] args) {
+        // Column names for the table
+        String[] columnNames = {"ID", "Title", "Genre"};
+
+        // Sample data to populate the table
+        Object[][] data = {
+                {1, "Jatra", "Comedy"},
+                {2, "Sonic 3 - Shadow the Hedgehog", "Action and Animation"},
+                {3, "Mufasa", "Adventure"}
+        };
+
+        // Create a table with the data and column names
+        JTable table = new JTable(data, columnNames);
+
+        // Place the table inside a JScrollPane to make it scrollable
+        JScrollPane scrollPane = new JScrollPane(table);
+
+        // Create a frame to display the table
+        JFrame frame = new JFrame("Movie Table");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.add(scrollPane);  // Add the scroll pane containing the table to the frame
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-47936" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-12.01.54.png?resize=435%2C322&#038;ssl=1" alt="" width="435" height="322"></p>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p><span>What do you mean by JSP implicit objects? Discuss Java Mail API.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In JavaServer Pages (JSP), <strong>implicit objects</strong> are predefined objects that the JSP container provides automatically for each page. These objects make it easier for developers to interact with the servlet environment without having to explicitly create or configure them. They provide access to various parts of the web application, such as the request, response, session, and application context, among others.</p>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="assistant" data-message-id="039cee73-78f0-46b3-a731-618519d34488" data-message-model-slug="gpt-4o-mini">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<ul style="list-style-type: square;">
+<li><strong>request</strong>: Represents the client&#8217;s HTTP request, allowing access to form parameters, headers, and attributes.</li>
+<li><strong>response</strong>: Represents the server&#8217;s HTTP response, enabling control over headers and content.</li>
+<li><strong>out</strong>: An instance of <code>JspWriter</code> used to write output (usually HTML) to the client.</li>
+<li><strong>session</strong>: Represents the <code>HttpSession</code> for storing user-specific data across requests.</li>
+<li><strong>application</strong>: Represents the <code>ServletContext</code>, shared across sessions, for storing application-wide attributes.</li>
+<li><strong>config</strong>: Represents <code>ServletConfig</code>, providing initialization parameters for the servlet.</li>
+<li><strong>pageContext</strong>: Provides access to page-scoped, request-scoped, session-scoped, and application-scoped attributes.</li>
+<li><strong>page</strong>: Refers to the current instance of the JSP page.</li>
+<li><strong>exception</strong>: Available in error pages, representing any exception that occurred during request processing.</li>
+</ul>
+<p>These implicit objects are automatically available in the JSP environment and eliminate the need for manual declaration or instantiation, making code cleaner and more efficient.</p>
+<p>The <strong>JavaMail API</strong> is a set of abstract classes and interfaces in the Java programming language that provides a platform-independent and protocol-independent framework for sending and receiving emails. It allows Java applications to interact with email servers and send or retrieve emails via various protocols like SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol), and IMAP (Internet Message Access Protocol).</p>
+<p>import javax.mail.*;<br />
+import javax.mail.internet.*;<br />
+import java.util.Properties;</p>
+<p>public class SendEmailExample {<br />
+public static void main(String[] args) {<br />
+// Set up mail server properties<br />
+Properties properties = new Properties();<br />
+properties.put(&#8220;mail.smtp.host&#8221;, &#8220;smtp.example.com&#8221;);<br />
+properties.put(&#8220;mail.smtp.port&#8221;, &#8220;587&#8221;);<br />
+properties.put(&#8220;mail.smtp.auth&#8221;, &#8220;true&#8221;);<br />
+properties.put(&#8220;mail.smtp.starttls.enable&#8221;, &#8220;true&#8221;);</p>
+<p>// Authenticate using your email credentials<br />
+String username = &#8220;your_email@example.com&#8221;;<br />
+String password = &#8220;your_password&#8221;;</p>
+<p>// Create a session with the mail server<br />
+Session session = Session.getInstance(properties, new Authenticator() {<br />
+protected PasswordAuthentication getPasswordAuthentication() {<br />
+return new PasswordAuthentication(username, password);<br />
+}<br />
+});</p>
+<p>try {<br />
+// Compose the email<br />
+Message message = new MimeMessage(session);<br />
+message.setFrom(new InternetAddress(&#8220;your_email@example.com&#8221;));<br />
+message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(&#8220;recipient@example.com&#8221;));<br />
+message.setSubject(&#8220;Test Email from Java&#8221;);<br />
+message.setText(&#8220;Hello, this is a test email sent using JavaMail API.&#8221;);</p>
+<p>// Send the email<br />
+Transport.send(message);<br />
+System.out.println(&#8220;Email sent successfully!&#8221;);</p>
+<p>} catch (MessagingException e) {<br />
+e.printStackTrace();<br />
+}<br />
+}<br />
+}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 9</h3>
+<div><p><p><span>Describe the role of Result Sets. What is wrong in the following code?</span></p>
+<p> </p>
+<p><span>public class Point {</span></p>
+<p><span>   int p;</span></p>
+<p><span>   public void setP(int p) {</span></p>
+<p><span>      p = p;</span></p>
+<p><span>   }</span></p>
+<p><span>}</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In JDBC (Java Database Connectivity), a <strong>ResultSet</strong> is an object that represents the result of a database query. It provides methods to access and manipulate the data retrieved from a database query, typically a SELECT statement. The <code>ResultSet</code> object is returned by methods such as <code>Statement.executeQuery()</code> and allows the developer to traverse and extract the data from the result set in a structured way.</p>
+<p><strong>Example of Using ResultSet:</strong></p>
+<p>Statement stmt = conn.createStatement();<br />
+ResultSet rs = stmt.executeQuery(&#8220;SELECT id, name FROM users&#8221;);</p>
+<p>while (rs.next()) {<br />
+int id = rs.getInt(&#8220;id&#8221;);<br />
+String name = rs.getString(&#8220;name&#8221;);<br />
+System.out.println(&#8220;ID: &#8221; + id + &#8220;, Name: &#8221; + name);<br />
+}</p>
+<p>rs.close(); // Always close ResultSet when done<br />
+stmt.close(); // Also close Statement</p>
+<p><strong>2nd part:</strong></p>
+<p>The problem in this code lies in the method <code>setP(int p)</code>. The line <code>p = p;</code> is effectively doing <strong>nothing</strong> because both the <strong>parameter</strong> <code>p</code> and the <strong>instance variable</strong> <code>p</code> have the same name. This causes confusion, and the assignment <code>p = p;</code> just assigns the parameter to itself, leaving the instance variable unchanged. Instead, use this keyword to map the instance variable.</p>
+<p>public class Point {<br />
+int p; // instance variable</p>
+<p>public void setP(int p) {<br />
+this.p = p; // &#8216;this.p&#8217; refers to the instance variable, &#8216;p&#8217; is the parameter<br />
+}<br />
+}</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p><span>Write a TCP client-server system in which the client program sends two integers to a server program, which returns the greatest among them.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>First, create a server called TCPServer.java</p>
+<div>
+<div>
+<pre>package Operations;
+
+import java.io.*;
+import java.net.*;
+
+public class TCPServer {
+    public static void main(String[] args) {
+        // Define the port number to listen to
+        int port = 12345;
+
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.println("Server is waiting for client connection...");
+
+            // Accept client connection
+            try (Socket clientSocket = serverSocket.accept()) {
+                System.out.println("Client connected.");
+
+                // Create input and output streams to communicate with the client
+                DataInputStream input = new DataInputStream(clientSocket.getInputStream());
+                DataOutputStream output = new DataOutputStream(clientSocket.getOutputStream());
+
+                // Read two integers from the client
+                int num1 = input.readInt();
+                int num2 = input.readInt();
+                System.out.println("Received numbers: " + num1 + " and " + num2);
+
+                // Determine the greatest number
+                int greatest = Math.max(num1, num2);
+
+                // Send the greatest number back to the client
+                output.writeInt(greatest);
+                System.out.println("Sent the greatest number: " + greatest);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</pre>
+</div>
+<p>and then the client, TCPCLient.java</p>
+<div>
+<pre>package Operations;
+
+import java.io.*;
+import java.net.*;
+
+public class TCPClient {
+    public static void main(String[] args) {
+        // Define the server address and port number
+        String serverAddress = "localhost";
+        int port = 12345;
+
+        try (Socket socket = new Socket(serverAddress, port)) {
+            // Create input and output streams to communicate with the server
+            DataInputStream input = new DataInputStream(socket.getInputStream());
+            DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+
+            // Read two integers from the user
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Enter the first integer: ");
+            int num1 = Integer.parseInt(reader.readLine());
+
+            System.out.print("Enter the second integer: ");
+            int num2 = Integer.parseInt(reader.readLine());
+
+            // Send the integers to the server
+            output.writeInt(num1);
+            output.writeInt(num2);
+            System.out.println("Sent numbers: " + num1 + " and " + num2);
+
+            // Receive the greatest number from the server
+            int greatest = input.readInt();
+            System.out.println("The greatest number received from the server is: " + greatest);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-47944" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-13.02.14.png?resize=570%2C314&#038;ssl=1" alt="" width="570" height="314"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-47945" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-13.02.22.png?resize=574%2C316&#038;ssl=1" alt="" width="574" height="316"></p>
+</div>
+</div>
+</div>
+<h3>Question 11</h3>
+<div><p><p><span>Suppose that 9 integers are written in a file named “magic.txt” in the arrangement of 3 × 3 separated by space. Write a program to check whether the integers in all rows, all columns, and both diagonals sum to the same constant or not.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Suppose magic.txt file looks like:</p>
+<div>
+<pre>2 7 6
+9 5 1
+4 3 8</pre>
+<p>This exactly forms a magic square because all <span style="font-weight: 400;">the integers in all rows, all columns, and both diagonals sum to the same constant</span></p>
+<p><strong>Code:</strong></p>
+<div>
+<pre>package fileHandling;
+
+import java.io.*;
+import java.util.*;
+
+public class MagicSquareChecker {
+    public static void main(String[] args) {
+        String filename = "/Users/siddharthraut/Desktop/College/7th-sem/Advanced-java/Unit-1/src/fileHandling/output.txt";
+
+        // Read the integers from the file into a 2D array
+        int[][] magicSquare = new int[3][3];
+
+        try (Scanner scanner = new Scanner(new File(filename))) {
+            int i = 0, j = 0;
+
+            while (scanner.hasNextInt()) {
+                magicSquare[i][j] = scanner.nextInt();
+                j++;
+                if (j == 3) {
+                    j = 0;
+                    i++;
+                }
+            }
+
+            if (isMagicSquare(magicSquare)) {
+                System.out.println("The integers form a magic square.");
+            } else {
+                System.out.println("The integers do NOT form a magic square.");
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + filename);
+        } catch (Exception e) {
+            System.out.println("An error occurred while reading the file.");
+        }
+    }
+
+    public static boolean isMagicSquare(int[][] square) {
+        int magicSum = Arrays.stream(square[0]).sum();
+
+        // Check the sum of each row
+        for (int i = 1; i &lt; 3; i++) {
+            if (Arrays.stream(square[i]).sum() != magicSum) {
+                return false; // If any row sum doesn't match, it's not a magic square
+            }
+        }
+
+        // Check the sum of each column
+        for (int j = 0; j &lt; 3; j++) {
+            int colSum = 0;
+            for (int i = 0; i &lt; 3; i++) {
+                colSum += square[i][j];
+            }
+            if (colSum != magicSum) {
+                return false; // If any column sum doesn't match, it's not a magic square
+            }
+        }
+
+        int diagonal1Sum = 0;
+        for (int i = 0; i &lt; 3; i++) {
+            diagonal1Sum += square[i][i];
+        }
+        if (diagonal1Sum != magicSum) {
+            return false;
+        }
+
+        int diagonal2Sum = 0;
+        for (int i = 0; i &lt; 3; i++) {
+            diagonal2Sum += square[i][2 - i];
+        }
+        if (diagonal2Sum != magicSum) {
+            return false;
+        }
+
+        // If all sums are equal, it's a magic square
+        return true;
+    }
+}</pre>
+<p>if magic .txt file contains these numbers:<br />
+1 2 3<br />
+4 5 6<br />
+7 8 9<br />
+These doesn&#8217;t forms a magic square because all <span style="font-weight: 400;">the integers in all rows, all columns, and both diagonals sum to the same constant</span></p>
+</div>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p><span>Write a program to create a menu named “File” with menu items “New,” “Save,” and “Exit”.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre>package advanceSwingComponents;
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MenuExample {
+
+    public static void main(String[] args) {
+        // Create a new JFrame
+        JFrame frame = new JFrame("Menu Example");
+
+        // Create a menu bar
+        JMenuBar menuBar = new JMenuBar();
+
+        // Create a "File" menu
+        JMenu fileMenu = new JMenu("File");
+
+        // Create "New", "Save", and "Exit" menu items
+        JMenuItem newItem = new JMenuItem("New");
+        JMenuItem saveItem = new JMenuItem("Save");
+        JMenuItem exitItem = new JMenuItem("Exit");
+
+        // Add action listeners to handle menu item actions
+        newItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Action for "New"
+                JOptionPane.showMessageDialog(frame, "New file created");
+            }
+        });
+
+        saveItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Action for "Save"
+                JOptionPane.showMessageDialog(frame, "File saved");
+            }
+        });
+
+        exitItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Action for "Exit"
+                System.exit(0);  // Exit the application
+            }
+        });
+
+        // Add menu items to the "File" menu
+        fileMenu.add(newItem);
+        fileMenu.add(saveItem);
+        fileMenu.addSeparator();  // Adds a separator between Save and Exit
+        fileMenu.add(exitItem);
+
+        // Add the "File" menu to the menu bar
+        menuBar.add(fileMenu);
+
+        // Set the menu bar for the frame
+        frame.setJMenuBar(menuBar);
+
+        // Set the frame properties
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49530" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-12-28-at-08.43.40.png?resize=772%2C536&#038;ssl=1" alt="" width="772" height="536"></p>
+</div>
+</body></html>

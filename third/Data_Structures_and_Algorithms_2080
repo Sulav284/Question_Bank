@@ -1,0 +1,497 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DSA Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>DSA Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain queue as an ADT. Write a program to implement linear queue. Compare linear queue with circular queue.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Queue as an ADT</strong></p>
+<p>A queue is an Abstract Data Type (ADT) that represents a linear data structure designed for storing and managing a collection of elements. It follows the First-In-First-Out (FIFO) principle, which means that the first element added to the queue is the first one to be removed. Queues are commonly used in computer science and software development for various applications, including scheduling tasks, handling requests, and managing data in a way that ensures fairness and order.</p>
+<p>The primary operations supported by a queue ADT are:</p>
+<ol style="list-style-type:decimal;">
+<li>Enqueue: Add an element to the back (rear) of the queue.</li>
+<li>Dequeue: Remove and return the element from the front of the queue.</li>
+<li>Peek/Front: Retrieve the element at the front of the queue without removing it.</li>
+<li>IsEmpty: Check if the queue is empty.</li>
+<li>Size: Get the number of elements in the queue.</li>
+</ol>
+<p><strong>Program to implement linear queue</strong></p>
+<p>#include &lt;stdio.h&gt;<br />
+#include &lt;stdlib.h&gt;</p>
+<p>#define MAX_SIZE 10</p>
+<p>// Structure to represent the linear queue<br />
+struct Queue {<br />
+int items[MAX_SIZE];<br />
+int front;<br />
+int rear;<br />
+};</p>
+<p>// Function to initialize the queue<br />
+void initialize(struct Queue* q) {<br />
+q-&gt;front = -1;<br />
+q-&gt;rear = -1;<br />
+}</p>
+<p>// Function to check if the queue is empty<br />
+int isEmpty(struct Queue* q) {<br />
+return (q-&gt;front == -1);<br />
+}</p>
+<p>// Function to check if the queue is full<br />
+int isFull(struct Queue* q) {<br />
+return (q-&gt;rear == MAX_SIZE &#8211; 1);<br />
+}</p>
+<p>// Function to add an element to the rear of the queue (enqueue)<br />
+void enqueue(struct Queue* q, int value) {<br />
+if (isFull(q)) {<br />
+printf(&#8220;Queue is full. Cannot enqueue.\n&#8221;);<br />
+return;<br />
+}</p>
+<p>if (isEmpty(q)) {<br />
+q-&gt;front = 0;<br />
+}</p>
+<p>q-&gt;rear++;<br />
+q-&gt;items[q-&gt;rear] = value;<br />
+printf(&#8220;Enqueued: %d\n&#8221;, value);<br />
+}</p>
+<p>// Function to remove and return an element from the front of the queue (dequeue)<br />
+int dequeue(struct Queue* q) {<br />
+int item;<br />
+if (isEmpty(q)) {<br />
+printf(&#8220;Queue is empty. Cannot dequeue.\n&#8221;);<br />
+return -1;<br />
+}</p>
+<p>item = q-&gt;items[q-&gt;front];</p>
+<p>if (q-&gt;front == q-&gt;rear) {<br />
+q-&gt;front = -1;<br />
+q-&gt;rear = -1;<br />
+} else {<br />
+q-&gt;front++;<br />
+}</p>
+<p>return item;<br />
+}</p>
+<p>int main() {<br />
+struct Queue q;<br />
+initialize(&amp;q);</p>
+<p>enqueue(&amp;q, 1);<br />
+enqueue(&amp;q, 2);<br />
+enqueue(&amp;q, 3);</p>
+<p>printf(&#8220;Dequeued: %d\n&#8221;, dequeue(&amp;q));<br />
+printf(&#8220;Dequeued: %d\n&#8221;, dequeue(&amp;q));</p>
+<p>enqueue(&amp;q, 4);</p>
+<p>printf(&#8220;Dequeued: %d\n&#8221;, dequeue(&amp;q));<br />
+printf(&#8220;Dequeued: %d\n&#8221;, dequeue(&amp;q));</p>
+<p>return 0;<br />
+}</p>
+<p><strong>Linear Queue vs Circular Queue</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Linear Queue</td>
+<td style="width: 50%; text-align: center;">Circular Queue</td>
+</tr>
+<tr>
+<td style="width: 50%;">Linear queues have a fixed capacity and can become inefficient when the front of the queue has dequeued elements, leading to unused space at the front.</td>
+<td style="width: 50%;">Circular queues address the inefficiency of linear queues by utilizing a circular array structure, where the front and rear &#8220;wrap around&#8221; when they reach the end of the array.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Enqueue and dequeue operations are straightforward but may require shifting elements when dequeuing.</td>
+<td style="width: 50%;">Circular queues eliminate the need to shift elements when the front element is dequeued, which makes them more efficient.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Linear queues are simple to implement but may not be efficient for scenarios with frequent enqueue and dequeue operations.</td>
+<td style="width: 50%;">Circular queues are suitable for scenarios where elements are frequently added and removed, such as scheduling tasks in an operating system or managing data buffers.</td>
+</tr>
+<tr>
+<td style="width: 50%;"></td>
+<td style="width: 50%;"></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define hash table and hash function. What is collision in hashing? Explain linear probing and quadratic probing with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Hash Table:</strong> A hash table is a data structure that stores key-value pairs in a way that allows for efficient data retrieval. It uses a technique called hashing, which applies a hash function to a key to compute an index into an array of buckets or slots where the corresponding value can be found. Hash tables are used to implement data structures like dictionaries, sets, and associative arrays, providing fast access to data by optimizing the search time.</p>
+<p><strong>Hash Function:</strong> A hash function is a mathematical function that takes an input (or &#8220;key&#8221;) and returns a fixed-size string of characters, typically a numeric index. The purpose of a hash function is to convert the input data (e.g., a string or number) into a unique or nearly unique integer value that can be used as an index to access a data structure like a hash table. The ideal hash function should be deterministic (produce the same output for the same input), efficient to compute, and evenly distribute values across the available slots in the hash table.</p>
+<p><strong>Collision in Hashing:</strong> Collision in hashing occurs when two different keys hash to the same index in the hash table. Since hash functions aim to map keys to unique locations, collisions represent a challenge. There are several techniques for handling collisions, and two of them are linear probing and quadratic probing.</p>
+<p><strong>Linear Probing:</strong> Linear probing is a collision resolution technique where, when a collision occurs, the algorithm searches for the next available slot in a linear manner (incrementing by a constant interval) until an empty slot is found. This ensures that keys with collisions are stored in consecutive locations.</p>
+<p>Suppose you have a hash table with 10 slots, and the hash function is (key % 10) (where % is the modulo operator). You want to insert the keys 25, 35, 45, and 55 into the hash table.</p>
+<ul style="list-style-type: square;">
+<li>Key 25 hashes to index 5.</li>
+<li>Key 35 hashes to index 5 (collision).</li>
+<li>Linear probing looks for the next available slot, which is index 6.</li>
+<li>Key 45 hashes to index 5 (collision) but is stored at index 7.</li>
+<li>Key 55 hashes to index 5 (collision) but is stored at index 8.</li>
+</ul>
+<p>The final state of the hash table might look like this:</p>
+<p>[25, 35, 45, 55, _, _, _, _, _, _]</p>
+<p><strong>Quadratic Probing:</strong> Quadratic probing is another collision resolution technique that, when a collision occurs, searches for the next available slot in a quadratic manner (incrementing by a quadratic formula) until an empty slot is found. This helps avoid clustering issues that can occur with linear probing.</p>
+<p>Quadratic probing reduces clustering because it explores slots further away from the original hash position. It uses a probing sequence like (c1 * i^2 + c2 * i) to find the next available slot.</p>
+<p>Suppose you have a hash table with 10 slots, and the hash function is (key % 10).</p>
+<ul style="list-style-type: square;">
+<li>Key 25 hashes to index 5.</li>
+<li>Key 35 hashes to index 5 (collision).<br />
+Quadratic probing with c1 = 1 and c2 = 1 looks for the next available slots:<br />
+(1 * 1^2 + 1 * 1) = 2 slots away from index 5, so it checks index 7. It&#8217;s empty, so it stores 35 there.</li>
+<li>Key 45 hashes to index 5 (collision).<br />
+Quadratic probing with c1 = 1 and c2 = 1 continues searching for the next available slots:<br />
+(1 * 2^2 + 1 * 2) = 10 slots away from index 5, so it checks index 5 (circularly). It&#8217;s occupied.<br />
+(1 * 3^2 + 1 * 3) = 18 slots away from index 5, so it checks index 8. It&#8217;s empty, so it stores 45 there.</li>
+<li>Key 55 hashes to index 5 (collision).<br />
+Quadratic probing with c1 = 1 and c2 = 1 continues searching for the next available slots:<br />
+(1 * 4^2 + 1 * 4) = 32 slots away from index 5, so it checks index 2. It&#8217;s empty, so it stores 55 there.</li>
+</ul>
+<p>The final state of the hash table after quadratic probing might look like this:</p>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">[25, _, 55, 35, _, _, _, 45, _, _]</div>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain AVL tree with example. Also, explain balancing algorithm for this tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>AVL Tree:</strong></p>
+<p>An AVL tree (Adelson-Velsky and Landis tree) is a self-balancing binary search tree. It is named after the inventors of the tree structure, G. M. Adelson-Velsky and E. M. Landis. AVL trees are designed to maintain a balance between the left and right subtrees of each node, ensuring that the tree remains approximately balanced. This balance property ensures that the height of the tree is logarithmic, resulting in efficient search, insert, and delete operations with time complexity of O(log n).</p>
+<p>In an AVL tree, the balance factor of each node, which is the difference in height between the left and right subtrees, must be within the range of -1, 0, or 1. If the balance factor of any node exceeds this range, the tree is considered unbalanced, and rotation operations are applied to restore balance.</p>
+<p><strong>Balancing Algorithm for AVL Tree:</strong></p>
+<p>The primary balancing operation in an AVL tree is rotation. There are four types of rotations used to balance the tree:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Left Rotation (LL Rotation):</strong> Occurs when the balance factor of a node is greater than 1 (i.e., left-heavy) and the left child of that node is also left-heavy. To balance the tree, a single left rotation is performed. This helps move the right child of the unbalanced node up.</li>
+<li><strong>Right Rotation (RR Rotation):</strong> Occurs when the balance factor of a node is less than -1 (i.e., right-heavy) and the right child of that node is also right-heavy. A single right rotation is performed to balance the tree, moving the left child of the unbalanced node up.</li>
+<li><strong>Left-Right Rotation (LR Rotation):</strong> Occurs when the balance factor of a node is greater than 1 (left-heavy) and the left child is right-heavy. It involves performing a left rotation on the left child followed by a right rotation on the unbalanced node. This combination of rotations balances the tree.</li>
+<li><strong>Right-Left Rotation (RL Rotation):</strong> Occurs when the balance factor of a node is less than -1 (right-heavy) and the right child is left-heavy. It involves performing a right rotation on the right child followed by a left rotation on the unbalanced node. This combination of rotations balances the tree.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-23388" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_223946_CamScanner.jpg?resize=433%2C593&#038;ssl=1" alt="" width="433" height="593"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26254" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/a.jpg?resize=431%2C647&#038;ssl=1" alt="" width="431" height="647"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is asymptotic analysis? Explain theta notation with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Asymptotic Analysis:</strong></p>
+<p>Asymptotic analysis is a method in computer science and mathematics to analyze the efficiency or performance of algorithms and data structures in terms of their growth rates as the input size becomes arbitrarily large. It provides a high-level understanding of how the time and space complexity of algorithms scales with the input size, allowing us to make meaningful comparisons between different algorithms without getting bogged down in the details of constant factors.</p>
+<p>Asymptotic analysis uses various notations, such as Big O (O), Omega (Ω), and Theta (Θ), to describe different aspects of an algorithm&#8217;s behavior concerning its upper bound, lower bound, and tight bound, respectively.</p>
+<p><strong>Theta Notation (Θ):</strong></p>
+<p>Theta notation, represented as Θ, provides a precise and balanced description of the algorithm&#8217;s complexity by specifying both the upper and lower bounds. When we say an algorithm&#8217;s time complexity is Θ(f(n)), it means the algorithm&#8217;s time complexity grows exactly at the same rate as the function f(n) for sufficiently large input sizes.</p>
+<p>Mathematically, for an algorithm with a time complexity of Θ(f(n)), there exist positive constants c1 and c2 such that:</p>
+<p>c1 * f(n) &lt;= T(n) &lt;= c2 * f(n)</p>
+<p>Here, T(n) represents the actual time complexity of the algorithm for a given input size n.</p>
+<p><strong>Example of Theta Notation:</strong></p>
+<p>Let&#8217;s consider a simple example to demonstrate Theta notation. Suppose we have an algorithm that performs a linear search in an array of n elements. The time complexity of a linear search is O(n) because, in the worst case, it may need to traverse the entire array.</p>
+<p>In this case, we can also say that the time complexity of the linear search is Θ(n) because it has both an upper and lower bound of n. The best-case scenario occurs when the element is found in the first position (constant time), and the worst-case scenario is when the element is not present or located in the last position, which involves traversing all n elements.</p>
+<p>So, for the linear search algorithm, we can express its time complexity using Theta notation as:</p>
+<p>T(n) = Θ(n) = 1</p>
+<p>This notation tells us that the algorithm&#8217;s time complexity grows linearly with the input size. It also indicates that the algorithm&#8217;s performance is not worse than a linear function and is not better than a linear function, making it a tight bound representation of its behavior.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain push and pop operations of stack. What are different applications of stack?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning the last item added to the stack is the first one to be removed. It supports two primary operations: push and pop.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Push:</strong> The push operation is used to add an element onto the top of the stack. When you push an element onto the stack, it becomes the new top element. This operation increases the stack&#8217;s size by one. In programming, you can typically implement the push operation using a function like push(element).</li>
+<li><strong>Pop:</strong> The pop operation is used to remove and retrieve the top element from the stack. After a pop operation, the stack&#8217;s size decreases by one, and the next element in the stack becomes the new top element. In most programming languages, you can implement the pop operation using a function like pop().</li>
+</ol>
+<p><strong>Applications of Stacks:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Function Call Management:</strong> Stacks are used to manage function calls in programming languages. Each function call is pushed onto the stack, and when a function returns, it is popped off the stack, allowing the program to return to the previous state.</li>
+<li><strong>Expression Evaluation:</strong> Stacks are used to evaluate mathematical expressions, such as infix expressions, by converting them to postfix (or prefix) notation and then using a stack to perform the evaluation.</li>
+<li><strong>Backtracking:</strong> Stacks are used in algorithms like depth-first search (DFS) to keep track of the visited nodes or states, allowing the algorithm to backtrack when necessary.</li>
+<li><strong>Undo Mechanisms:</strong> Many applications, such as text editors and graphic design software, use stacks to implement undo and redo functionality. Each change is pushed onto the undo stack, and undo operations pop the changes from the stack.</li>
+<li><strong>Syntax Parsing:</strong> Stacks are used in parsing and interpreting programming languages to manage the parsing process. They can help with checking the correctness of nested constructs like parentheses and braces.</li>
+<li><strong>Memory Management:</strong> Stacks play a crucial role in managing function call stacks and local variables in computer memory. They are essential for controlling the execution flow of programs.</li>
+<li><strong>Expression Conversion:</strong> Stacks are used to convert infix expressions to postfix notation, which is easier to evaluate. This is useful in calculators and compilers.</li>
+<li><strong>Task Management:</strong> Stacks can be used to keep track of tasks or subroutines in operating systems, allowing efficient context switching between tasks.</li>
+<li><strong>History Management:</strong> Web browsers and software applications use stacks to manage the navigation history, enabling users to go back and forth between web pages or application screens.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain tail recursion with example. Compare recursion with iteration.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Tail Recursion:</strong></p>
+<p>Tail recursion is a specific form of recursion where the recursive call is the last operation in a function before it returns its result. In other words, in a tail-recursive function, there is no additional computation or processing performed after the recursive call. This has an important implication in terms of optimization because certain programming languages and compilers can optimize tail-recursive calls by reusing the current function&#8217;s stack frame, which eliminates the risk of a stack overflow due to excessive recursion.</p>
+<p>Example:</p>
+<p>def factorial_tail_recursive(n, result=1):<br />
+if n == 0:<br />
+return result<br />
+else:<br />
+return factorial_tail_recursive(n &#8211; 1, n * result)</p>
+<p>In this tail-recursive example, the recursive call factorial_tail_recursive(n &#8211; 1, n * result) is the last operation within the function. The result is updated at each recursive call, and when the base case (n == 0) is reached, the final result is returned without any additional computation. This function can be optimized by some compilers to use constant stack space.</p>
+<p><strong>Recursion vs Iteration</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 416px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Recursion</strong></td>
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Iteration</strong></td>
+</tr>
+<tr style="height: 80px;">
+<td style="width: 50%; height: 80px;">Recursion is a technique where a function calls itself to solve a problem.</td>
+<td style="width: 50%; height: 80px;">Iteration is a technique where a loop is used to repeatedly execute a block of code to solve a problem.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">It is often more concise and easier to understand for problems that can be naturally divided into smaller, similar subproblems.</td>
+<td style="width: 50%; height: 96px;">It can be more efficient for some problems, especially those that don&#8217;t naturally break down into subproblems.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Some problems are naturally expressed in recursive terms, making recursion a more suitable choice.</td>
+<td style="width: 50%; height: 72px;">Iteration is generally more space-efficient as it does not rely on the call stack.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Recursion may lead to stack overflow errors for deep recursion if not optimized (except for tail recursion).</td>
+<td style="width: 50%; height: 24px;">Most programming languages provide good support for iteration with loops, making it easy to implement.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Recursion can have higher memory overhead due to the call stack.</td>
+<td style="width: 50%; height: 24px;">Iteration is often used when performance is a primary concern, as it avoids the overhead of function calls.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Trace selection sort algorithm with array of numbers 2, 81, 6, 45, 11, 21, 23, 41, and 11.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Step 1:</strong> [2, 81, 6, 45, 11, 21, 23, 41, 11] (Original array)</p>
+<ul style="list-style-type: square;">
+<li>The minimum value in the unsorted portion is 2, so we swap it with the first element.</li>
+</ul>
+<p><strong>Step 2:</strong> [2, 81, 6, 45, 11, 21, 23, 41, 11] (2 is in its final sorted position)</p>
+<ul style="list-style-type: square;">
+<li>Now, the remaining unsorted portion is [81, 6, 45, 11, 21, 23, 41, 11].</li>
+<li>The minimum value in this portion is 6, so we swap it with the second element.</li>
+</ul>
+<p><strong>Step 3:</strong> [2, 6, 81, 45, 11, 21, 23, 41, 11] (2 and 6 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 45, 11, 21, 23, 41, 11].</li>
+<li>The minimum value is 11, so we swap it with the third element.</li>
+</ul>
+<p><strong>Step 4:</strong> [2, 6, 11, 45, 81, 21, 23, 41, 11] (2, 6, and 11 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 45, 21, 23, 41, 11].</li>
+<li>The minimum value is 11 (again), so we swap it with the fourth element.</li>
+</ul>
+<p><strong>Step 5:</strong> [2, 6, 11, 11, 81, 21, 23, 41, 45] (2, 6, 11, and 11 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 21, 23, 41, 45].</li>
+<li>The minimum value in this portion is 21, so we swap it with the fifth element.</li>
+</ul>
+<p><strong>Step 6:</strong> [2, 6, 11, 11, 21, 81, 23, 41, 45] (2, 6, 11, 11, and 21 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 23, 41, 45].</li>
+<li>The minimum value is 23, so we swap it with the sixth element.</li>
+</ul>
+<p><strong>Step 7:</strong> [2, 6, 11, 11, 21, 23, 81, 41, 45] (2, 6, 11, 11, 21, and 23 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 41, 45].</li>
+<li>The minimum value is 41, so we swap it with the seventh element.</li>
+</ul>
+<p><strong>Step 8:</strong> [2, 6, 11, 11, 21, 23, 41, 81, 45] (2, 6, 11, 11, 21, 23, and 41 are in their final sorted positions)</p>
+<ul style="list-style-type: square;">
+<li>The remaining unsorted portion is [81, 45].</li>
+<li>The minimum value is 45, so we swap it with the eighth element.</li>
+</ul>
+<p><strong>Step 9:</strong> [2, 6, 11, 11, 21, 23, 41, 45, 81] (All elements are in their final sorted positions)</p>
+<p>The selection sort algorithm is complete, and the array is now sorted in ascending order.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain binary search with an example. What is the time complexity of binary search?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Binary search</strong> is a fast and efficient searching algorithm that is used to search for a specific element in a sorted array or list. It works by repeatedly dividing the search interval in half, which reduces the search space and narrows down the possible location of the target element until it&#8217;s found.</p>
+<p>Here&#8217;s how binary search works:</p>
+<p>1. Initialize two pointers, left and right, to the first and last elements of the sorted array, respectively.</p>
+<p>2. Calculate the middle index, mid, as the average of left and right.</p>
+<p>3. Compare the element at the middle index, arr[mid], with the target element:</p>
+<ul style="list-style-type: square;">
+<li>If arr[mid] is equal to the target, the element is found, and its index is mid.</li>
+<li>If arr[mid] is greater than the target, update right to mid &#8211; 1, effectively eliminating the right half of the search interval.</li>
+<li>If arr[mid] is less than the target, update left to mid + 1, effectively eliminating the left half of the search interval.</li>
+</ul>
+<p>4. Repeat steps 2 and 3 until the element is found or the search interval is empty (i.e., left &gt; right).</p>
+<p>Example:</p>
+<p>[2, 6, 11, 21, 23, 45, 81]</p>
+<p>We want to find the element 23 in this array.</p>
+<ul style="list-style-type: square;">
+<li>Initialize left to 0 and right to 6 (the indices of the first and last elements).</li>
+<li>Calculate mid as (0 + 6) / 2 = 3.</li>
+<li>Compare arr[3] (which is 21) with the target (23). Since 21 is less than 23, we update left to mid + 1, which is 4.</li>
+<li>Now, the new left is 4, and right remains 6. Calculate mid as (4 + 6) / 2 = 5.</li>
+<li>Compare arr[5] (which is 45) with the target (23). Since 45 is greater than 23, we update right to mid &#8211; 1, which is 4.</li>
+<li>Now, the new left is 4, and right is also 4. Calculate mid as (4 + 4) / 2 = 4.</li>
+<li>Compare arr[4] (which is 23) with the target (23). They are equal, so the element is found at index 4.</li>
+<li>The binary search algorithm has successfully located the element 23 in the array, and the result is the index 4.</li>
+</ul>
+<p>The <strong>time complexity</strong> of binary search is O(log n), where n is the number of elements in the sorted array.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Write Dijkstra’s algorithm to find shortest path between any two vertices of a graph.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Dijkstra&#8217;s algorithm is used to find the shortest path in a weighted graph from a source vertex to all other vertices. Here are the steps to execute Dijkstra&#8217;s algorithm:</p>
+<p>1. Create a graph with vertices and edges. Each edge should have a weight representing the cost or distance between two vertices.</p>
+<p>2. Select a source vertex from which you want to find the shortest paths to all other vertices.</p>
+<p>3.  Create a set of unvisited vertices and initialize the distance to the source vertex as 0, and all other vertices as infinity.</p>
+<p>4. Create a data structure (e.g., a priority queue or a min-heap) to store vertices and their tentative distances from the source.</p>
+<p>5. While there are unvisited vertices:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Select the unvisited vertex with the smallest tentative distance.</li>
+<li>For the selected vertex, calculate the tentative distance to all of its unvisited neighbors.</li>
+<li>Update the tentative distances for the neighbors if a shorter path is found.</li>
+<li>Mark the selected vertex as visited to avoid revisiting it.</li>
+</ol>
+<p>6. When all vertices have been visited or if the target vertex (if specific) has been reached, the algorithm terminates.</p>
+<p>7. If you want to find the actual shortest path from the source to a specific target vertex, backtrack from the target vertex to the source vertex using the recorded shortest paths.</p>
+<p>8. The algorithm provides the shortest distances from the source vertex to all other vertices in the graph. Additionally, if you perform backtracking, you can obtain the actual shortest path from the source to a specific target vertex.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Write a program to implement insertion sort.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>void insertionSort(int arr[], int n) {<br />
+int i, j, key;<br />
+for (i = 1; i &lt; n; i++) {<br />
+key = arr[i];<br />
+j = i &#8211; 1;</p>
+<p>// Move elements of arr[0..i-1] that are greater than key<br />
+// to one position ahead of their current position<br />
+while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {<br />
+arr[j + 1] = arr[j];<br />
+j = j &#8211; 1;<br />
+}<br />
+arr[j + 1] = key;<br />
+}<br />
+}</p>
+<p>int main() {<br />
+int arr[] = {12, 11, 13, 5, 6};<br />
+int n = sizeof(arr) / sizeof(arr[0]);</p>
+<p>printf(&#8220;Original Array: &#8220;);<br />
+for (int i = 0; i &lt; n; i++) {<br />
+printf(&#8220;%d &#8220;, arr[i]);<br />
+}<br />
+printf(&#8220;\n&#8221;);</p>
+<p>insertionSort(arr, n);</p>
+<p>printf(&#8220;Sorted Array: &#8220;);<br />
+for (int i = 0; i &lt; n; i++) {<br />
+printf(&#8220;%d &#8220;, arr[i]);<br />
+}<br />
+printf(&#8220;\n&#8221;);</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How can you use linked list to implement stack? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;<br />
+#include &lt;stdlib.h&gt;</p>
+<p>// Define a structure for a singly linked list node<br />
+struct Node {<br />
+int data;<br />
+struct Node* next;<br />
+};</p>
+<p>// Define a structure for the stack, which includes a pointer to the top node<br />
+struct Stack {<br />
+struct Node* top;<br />
+};</p>
+<p>// Function to create a new node with the given data<br />
+struct Node* createNode(int data) {<br />
+struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));<br />
+newNode-&gt;data = data;<br />
+newNode-&gt;next = NULL;<br />
+return newNode;<br />
+}</p>
+<p>// Function to initialize a stack<br />
+void initializeStack(struct Stack* stack) {<br />
+stack-&gt;top = NULL;<br />
+}</p>
+<p>// Function to check if the stack is empty<br />
+int isEmpty(struct Stack* stack) {<br />
+return stack-&gt;top == NULL;<br />
+}</p>
+<p>// Function to push an element onto the stack<br />
+void push(struct Stack* stack, int data) {<br />
+struct Node* newNode = createNode(data);<br />
+newNode-&gt;next = stack-&gt;top;<br />
+stack-&gt;top = newNode;<br />
+printf(&#8220;Pushed: %d\n&#8221;, data);<br />
+}</p>
+<p>// Function to pop an element from the stack<br />
+int pop(struct Stack* stack) {<br />
+if (isEmpty(stack)) {<br />
+printf(&#8220;Stack is empty. Cannot pop.\n&#8221;);<br />
+return -1; // Return a sentinel value or handle as needed<br />
+}<br />
+struct Node* poppedNode = stack-&gt;top;<br />
+int data = poppedNode-&gt;data;<br />
+stack-&gt;top = poppedNode-&gt;next;<br />
+free(poppedNode);<br />
+return data;<br />
+}</p>
+<p>// Function to display the elements in the stack<br />
+void displayStack(struct Stack* stack) {<br />
+if (isEmpty(stack)) {<br />
+printf(&#8220;Stack is empty.\n&#8221;);<br />
+return;<br />
+}</p>
+<p>struct Node* current = stack-&gt;top;<br />
+printf(&#8220;Stack: &#8220;);<br />
+while (current != NULL) {<br />
+printf(&#8220;%d &#8220;, current-&gt;data);<br />
+current = current-&gt;next;<br />
+}<br />
+printf(&#8220;\n&#8221;);<br />
+}</p>
+<p>int main() {<br />
+struct Stack stack;<br />
+initializeStack(&amp;stack);</p>
+<p>push(&amp;stack, 10);<br />
+push(&amp;stack, 20);<br />
+push(&amp;stack, 30);</p>
+<p>displayStack(&amp;stack);</p>
+<p>int popped = pop(&amp;stack);<br />
+if (popped != -1) {<br />
+printf(&#8220;Popped: %d\n&#8221;, popped);<br />
+}</p>
+<p>displayStack(&amp;stack);</p>
+<p>return 0;<br />
+}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Or</strong></p>
+<p>&nbsp;</p>
+<p>You can use a linked list to implement a stack by maintaining a singly linked list where each node represents an element in the stack. The key idea is to perform all stack operations (push and pop) at the front (head) of the linked list, which ensures that the last element inserted becomes the first to be removed, following the Last-In-First-Out (LIFO) principle of a stack.</p>
+<p><strong>Push Operation:</strong></p>
+<ul style="list-style-type: square;">
+<li>To push an element onto the stack, create a new node and insert it at the beginning of the linked list.</li>
+<li>Update the top pointer to point to the newly added node.</li>
+</ul>
+<p>void push(struct Stack* stack, int data) {<br />
+struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));<br />
+newNode-&gt;data = data;<br />
+newNode-&gt;next = stack-&gt;top;<br />
+stack-&gt;top = newNode;<br />
+}</p>
+<p><strong>Pop Operation:</strong></p>
+<ul style="list-style-type: square;">
+<li>To pop an element from the stack, remove the node at the top of the linked list.</li>
+<li>Update the top pointer to point to the next node.</li>
+<li>Return the data from the removed node.</li>
+<li>Check for stack underflow (when the stack is empty) before popping.</li>
+</ul>
+<p>int pop(struct Stack* stack) {<br />
+if (stack-&gt;top == NULL) {<br />
+printf(&#8220;Stack underflow!\n&#8221;);<br />
+exit(1); // Handle underflow as needed<br />
+}<br />
+struct Node* poppedNode = stack-&gt;top;<br />
+int data = poppedNode-&gt;data;<br />
+stack-&gt;top = poppedNode-&gt;next;<br />
+free(poppedNode);<br />
+return data;<br />
+}</p>
+<p><strong>Other Operations:</strong></p>
+<ul style="list-style-type: square;">
+<li>You can also implement additional stack operations like checking if the stack is empty and retrieving the top element without removing it.</li>
+</ul>
+<p>int isEmpty(struct Stack* stack) {<br />
+return (stack-&gt;top == NULL);<br />
+}</p>
+<p>int peek(struct Stack* stack) {<br />
+if (stack-&gt;top == NULL) {<br />
+printf(&#8220;Stack is empty.\n&#8221;);<br />
+exit(1); // Handle as needed<br />
+}<br />
+return stack-&gt;top-&gt;data;<br />
+}</p>
+<p><strong>Initialization:</strong></p>
+<p>Before using the stack, initialize it by creating an empty linked list (setting top to NULL) and allocating memory for the Stack structure:</p>
+<p>struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));<br />
+stack-&gt;top = NULL;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. Abstract data type</p>
+<p>b. Circular linked list</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>Abstract Data Type (ADT):</strong> An abstract data type is a high-level description of a data structure that defines a set of operations and the behavior of those operations without specifying the implementation details. It focuses on what operations can be performed on the data structure and what constraints or rules should be followed, rather than how those operations are implemented. Examples of abstract data types include lists, stacks, queues, trees, and graphs. ADTs are essential in software development because they allow programmers to work with data structures at a higher level of abstraction, promoting modularity and encapsulation.</p>
+<p>b. <strong>Circular Linked List:</strong> A circular linked list is a variation of a singly linked list where the last node in the list points back to the first node, creating a closed loop. In a traditional singly linked list, the last node&#8217;s &#8220;next&#8221; pointer is typically set to NULL, indicating the end of the list. However, in a circular linked list, this pointer connects back to the first node. Circular linked lists have several applications, such as representing a round-robin scheduling algorithm, managing items in a circular buffer, and implementing certain data structures like circular queues. Traversing a circular linked list involves iterating through nodes until you reach the starting point again. It&#8217;s essential to handle circular linked lists carefully to avoid infinite loops during traversal or manipulation.</p>
+</div>
+</body></html>

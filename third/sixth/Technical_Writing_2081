@@ -1,0 +1,282 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TW Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>TW Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any THREE questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the role of audience analysis in technical writing and provide an example of how understanding the audience can affect the content and style of a technical document.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Understanding the audience is crucial for technical writing. This is mostly to meet the need and expectation of the intended readers or audience. By understanding the audience’s knowledge level, roles, interests, cultural background, and personality, a technical writer can make informed decisions on the content, style, and presentation of the document.</p>
+<p><b>Role:</b></p>
+<p>The job role indicates the specific responsibilities and tasks of the audience members. Understanding the role helps the writer include relevant information that aligns with the audience’s professional responsibilities and needs.</p>
+<p><b>Interest:</b></p>
+<p>Knowing what the audience is interested in allows the writer to focus on relevant topics and avoid unnecessary details. This ensures that the document captures the audience’s attention and addresses their specific concerns or interests.</p>
+<p><b>Knowledge Level: </b></p>
+<p>Assessing the audience’s existing knowledge helps the writer determine what information needs to be explained and what can be assumed.This ensures the content is neither too simplistic nor too complex for the audience, facilitating better understanding.</p>
+<p><b>Cultural Background:</b></p>
+<p>Understanding cultural backgrounds helps the writer recognize different communication patterns and preferences.This awareness allows the writer to tailor the document in a way that is culturally sensitive and effective for the audience.</p>
+<p>&nbsp;</p>
+<p><strong>Personality:</strong></p>
+<p>This involves recognizing how personality can influence the way information is processed and received.For instance, some audiences may prefer detailed, data-driven content, while others might respond better to concise and straightforward information.</p>
+<p>&nbsp;</p>
+<p>Example part:</p>
+<p>For example, if the audience consists of experts in a particular field, the technical document can use industry-specific jargon (words) and delve into complex details without needing to explain basic concepts. But in other case, if the audience is composed of non-experts, the document should avoid technical jargon and include more background information and explanations to ensure understanding to normal audience.</p>
+<p data-start="347" data-end="416">For example, consider a user manual for a software application:</p>
+<ul data-start="417" data-end="822">
+<li data-start="417" data-end="621">If the readers are experienced software developers, the manual can focus on advanced features and customization, using technical language and assuming they already understand programming concepts.</li>
+<li data-start="622" data-end="822">But if the readers are regular users, the manual should use simple language, give step-by-step instructions, and include screenshots to make it easier to follow the manual.</li>
+</ul>
+<p>Thus, here according to the nature and expertise of the user / audience, we prepare our technical document.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>You are now studying IT in a reputed campus under Tribhuvan University, Nepal. The campus has a well-equipped computer lab. You remember the school where you completed your secondary-level education. Most schools in Nepal have only a couple of desktop computers. You want to donate about a dozen computers to the school by raising funds. Write a letter to the Chief District Officer requesting him/her to permit you to collect donations. Include the specifications of the computers and the price list with the letter.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="91" data-end="202">28th February<br />
+Kathmandu, Nepal<br data-start="156" data-end="159" /><br data-start="191" data-end="194" /><strong data-start="204" data-end="210">To</strong><br data-start="210" data-end="213" />The Chief District Officer<br data-start="239" data-end="242" />Kathmandu District Administration Office<br data-start="282" data-end="285" />Babarmahal, Kathmandu</p>
+<p data-start="310" data-end="389"><strong>Subject: Request for Permission to Collect Donations for School Computers</strong></p>
+<p data-start="391" data-end="408">Dear Sir/Madam,</p>
+<p data-start="410" data-end="877">I am writing to formally request your permission to raise funds for donating computers to Adarshal Secondary School, a school in Kathmandu where I completed my secondary education. Many schools in Kathmandu, mostly government public schools, face challenges in accessing proper digital resources, making it difficult for students to gain essential computer literacy skills. To address this issue, I intend to collect donations to provide a dozen desktop computers to the school.</p>
+<p data-start="879" data-end="1225">This initiative aims to bridge the digital divide and equip students with the necessary tools to enhance their education. The computers will be used for IT-based learning, research, and skill development. To ensure transparency and efficiency, I have prepared a list of computer specifications and pricing, which is attached for your reference.</p>
+<h3 data-start="1227" data-end="1269"><span style="font-size: 12pt;"><strong data-start="1231" data-end="1267">Specifications of the Computers:</strong></span></h3>
+<ol data-start="1270" data-end="1495">
+<li data-start="1270" data-end="1313"><strong data-start="1272" data-end="1286">Processor:</strong> Intel Core i5 (12th Gen)</li>
+<li data-start="1314" data-end="1335"><strong data-start="1316" data-end="1324">RAM:</strong> 8GB DDR4</li>
+<li data-start="1336" data-end="1362"><strong data-start="1338" data-end="1350">Storage:</strong> 256GB SSD</li>
+<li data-start="1363" data-end="1405"><strong data-start="1365" data-end="1377">Display:</strong> 21.5-inch Full HD Monitor</li>
+<li data-start="1406" data-end="1442"><strong data-start="1408" data-end="1429">Operating System:</strong> Windows 11</li>
+<li data-start="1443" data-end="1495"><strong data-start="1445" data-end="1472">Additional Accessories:</strong> Keyboard, Mouse, UPS</li>
+</ol>
+<p data-start="1497" data-end="1542"><strong><span style="font-size: 12pt;">Estimated Cost per Unit: </span></strong><span style="font-size: 12pt;">NPR 65,000</span></p>
+<p data-start="1543" data-end="1598"><strong><span style="font-size: 12pt;">Total Estimated Cost (12 units): </span></strong><span style="font-size: 12pt;">NPR 7,80,000</span></p>
+<p data-start="1600" data-end="1813">I kindly request your approval to conduct fundraising activities for this cause. I assure you that all funds will be properly managed, and a detailed financial record will be maintained to ensure accountability.</p>
+<p data-start="1815" data-end="2034">I would be grateful for your support in this effort to improve educational resources for students. If any further information are required, please let me know. I look forward to your positive response.</p>
+<p data-start="2036" data-end="2084">Thank you for your time and consideration.</p>
+<p data-start="2086" data-end="2191" data-is-last-node="" data-is-only-node=""><strong data-start="2086" data-end="2100">Sincerely,</strong><br data-start="2100" data-end="2103" />Sabin Thapa<br data-start="2128" data-end="2131" />Software Engineer &#8211; HamroCSIT<br data-start="2162" data-end="2165" /></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe the structure and key components of a technical report. How does this structure enhance the report’s effectiveness?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A technical report is a structured document that conveys information about specific topics or research areas. The structure of a technical report is designed to enhance clarity, accessibility, and effectiveness, ensuring that the information is presented in a logical and comprehensive manner. Here are the key components of a technical report:</p>
+<p>1. <b>Preliminaries</b>:</p>
+<ul style="list-style-type: square;">
+<li><b>Title Page</b>: Provides the report’s title, author’s name, date, and any other relevant information.</li>
+<li><b>Abstract or Summary</b>: A brief overview of the report’s main points and conclusions, allowing readers to quickly understand the report’s purpose and scope.</li>
+<li><b>Table of Contents</b>: Lists the sections and subsections of the report, facilitating easy navigation.</li>
+</ul>
+<p>2. <b>Main Body</b>:</p>
+<ul style="list-style-type: square;">
+<li><b>Introduction</b>: Introduces the main idea, background, and rationale of the study. It sets the context and objectives for the report.</li>
+<li><b>Body</b>: Contains detailed information, analysis, and data that support the conclusions and recommendations. This section is critical for presenting the findings and interpretations of the study.</li>
+<li><b>Conclusion and Recommendations</b>: Summarizes the key findings and suggests actions based on the report’s analysis.</li>
+</ul>
+<p>3. <b>Supplementary Materials</b>:</p>
+<ul style="list-style-type: square;">
+<li><b>Appendices</b>: Include additional materials such as graphs, figures, and data sheets that are too detailed to be included in the main body but are necessary for a comprehensive understanding of the report.</li>
+<li><b>Index</b>: An alphabetical list of names and subjects mentioned in the report, helping readers locate specific information quickly.</li>
+</ul>
+<p><b>Enhancing Effectiveness</b>:</p>
+<ul style="list-style-type: square;">
+<li> <b>Clarity and Accessibility</b>: The structured format, including preliminaries and a detailed table of contents, helps readers easily navigate the report and find pertinent information quickly.</li>
+<li> <b>Comprehensiveness</b>: By including supplementary materials, the report ensures that all relevant data and analyses are available for readers who need more in-depth information.</li>
+<li><b>Objective and Accurate Presentation</b>: The report’s objectivity and focus on empirical data ensure that the information is reliable and unbiased, which is crucial for informed decision-making.</li>
+</ul>
+<p>Overall, the structured approach to writing a technical report enhances its effectiveness by ensuring that it is clear, comprehensive, and accessible to its intended audience.</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>What are the ethical considerations in technical writing, and how can a writer ensure they adhere to ethical standards?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Ethical Considerations in Technical Writing:</b></p>
+<p>1. <b>Accuracy and Honesty:</b> Writers must ensure that the information they provide is accurate and truthful. Misleading or false information can have serious consequences, particularly if the document is used to make important decisions.</p>
+<p>2. <b>Clarity and Precision:</b> Technical documents should be clear and precise to prevent misunderstandings. Ambiguity can lead to errors in interpretation and application.</p>
+<p>3. <b>Confidentiality:</b> Writers must respect confidentiality agreements and ensure sensitive information is protected and not disclosed without proper authorization.</p>
+<p>4. <b>Plagiarism:</b> It’s crucial to avoid plagiarism by properly citing sources and giving credit to original authors. Plagiarism is unethical and can damage the writer’s credibility and reputation.</p>
+<p>5. <b>Objectivity:</b> Writers should maintain objectivity and avoid bias. Presenting information impartially ensures that the audience receives a balanced view.</p>
+<p>6. <b>Respect for Intellectual Property:</b> Respecting copyrights, trademarks, and patents is essential. Unauthorized use of someone else’s intellectual property is unethical.</p>
+<p><b>Ensuring Adherence to Ethical Standards:</b></p>
+<p>• <b>Develop a Personal Code of Ethics:</b> Reflect on personal values and how they align with professional responsibilities.</p>
+<p>• <b>Follow Corporate and Industry Codes:</b> Adhere to any established codes of ethics within the organization or industry.</p>
+<p>• <b>Seek Clarity in Ethical Dilemmas:</b> When faced with ethical dilemmas, clarify your position and consider the legality, consequences, and comfort with the decision.</p>
+<p>• <b>Analyze Decisions:</b> Evaluate decisions based on rights, justice, care, empathy, and consistency with values and principles.</p>
+<p>• <b>Continuous Education:</b> Stay informed about ethical standards and best practices in technical writing through ongoing education and training.</p>
+<p>By keeping these considerations in mind and actively engaging with ethical guidelines, technical writers can maintain integrity and trustworthiness in their work.</p>
+</div>
+<h2>Section B: Attempt any TEN questions.</h2><h3>Question 5</h3>
+<div><p><p>Define FAQ, and draft five FAQs for your website.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>FAQ stands for Frequently Asked Questions.<br />
+It is a section on a website where common questions are listed along with their answers. This helps users find information quickly without needing to contact support directly.</p>
+<p>&nbsp;</p>
+<p><strong>5 FAQs for HamroCSIT</strong></p>
+<p><strong>What is HamroCSIT?</strong><br />
+HamroCSIT is an educational platform for BSc. CSIT students under Tribhuvan University, offering notes, past papers, viva questions, practical files, and more.</p>
+<p><strong>How can I access past exam questions?</strong><br />
+Visit the &#8220;Question Bank&#8221; section on our website under the subject.</p>
+<p><strong>Does HamroCSIT provide entrance preparation?</strong><br />
+Yes! We offer mock tests to help students prepare for the BSc. CSIT entrance exam.</p>
+<p><strong>How can I remove ads on hamrocsit?</strong><br />
+You can disable ads by buying the subscription.</p>
+<p><strong>Is HamroCSIT only for TU students?</strong><br />
+Primarily, yes, but our entrance prep and programming tutorials may benefit students from other universities too.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is a Gantt chart? Make a Gantt chart of your assignment schedule.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Gantt chart is a visual project management tool that displays a schedule of tasks over time. It consists of horizontal bars that represent different tasks, showing their start date, duration, and end date.<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-52345" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/output.png?resize=1939%2C1173&#038;ssl=1" alt="" width="1939" height="1173"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>You have recently prepared an app. Compose a persuasive message in the AIDA method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="52" data-end="119">The app in consideration is HamroCSIT.</p>
+<p data-start="52" data-end="119"><strong data-start="52" data-end="64">Subject:</strong> Enhance Your Study Experience with the HamroCSIT App</p>
+<p data-start="121" data-end="307"><strong data-start="121" data-end="135">Attention:</strong><br data-start="135" data-end="138" />Are you struggling to find the right study materials for your CSIT courses? Do you need a better way to prepare for exams, access past papers, and track your progress?</p>
+<p data-start="309" data-end="543"><strong data-start="309" data-end="322">Interest:</strong><br data-start="322" data-end="325" />The HamroCSIT App is designed to help BSc. CSIT students under Tribhuvan University with notes, past papers, quizzes, and entrance preparation in one place. It makes studying more efficient and organized.</p>
+<p data-start="545" data-end="558"><strong data-start="545" data-end="556">Desire:</strong></p>
+<ul data-start="559" data-end="795">
+<li data-start="559" data-end="613">Access thousands of past papers with solutions.</li>
+<li data-start="614" data-end="668">Take mock tests and track your performance.</li>
+<li data-start="669" data-end="733">Get chapter-wise important questions and past paper solution.</li>
+<li data-start="734" data-end="795">Study anytime, anywhere with an easy-to-use interface</li>
+</ul>
+<p data-start="797" data-end="949"><strong data-start="797" data-end="808">Action:</strong><br data-start="808" data-end="811" />Download the HamroCSIT App today and take control of your exam preparation. Click the link below to get started:www.hamrocsit.com</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is the purpose of an executive summary in a technical document?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="67" data-end="381">An executive summary provides a concise yet comprehensive overview of a technical document, highlighting its key points, findings, and recommendations. It is designed to help decision-makers and stakeholders quickly understand the report’s essential content without reading the full document.</p>
+<p data-start="383" data-end="473">The executive summary should be clear, structured, and self-sufficient, summarizing:</p>
+<ul data-start="474" data-end="604">
+<li data-start="474" data-end="506">Objectives of the report</li>
+<li data-start="507" data-end="531">Methodology used</li>
+<li data-start="532" data-end="564">Key findings and results</li>
+<li data-start="565" data-end="604">Conclusions and recommendations</li>
+</ul>
+<p data-start="606" data-end="833" data-is-last-node="" data-is-only-node="">By presenting the most important insights in a brief and accessible format, the executive summary allows readers to grasp the report’s implications and action points efficiently, supporting informed decision-making.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p class="p1">How does technical writing differ from other forms of writing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Technical writing differs from other forms of writing because of the following reasons:</p>
+<ol style="list-style-type:decimal;">
+<li>Audience: The targeted audience varies from technical and non-technical people where as targeted audience for non technical writing are mostly friends, family and relatives. Example: technical writing document can be a user manual for software that explains how to install and configure the program. a non-technical writing document can be a personal blog post about someone’s experience using that software.</li>
+<li>Content: Technical writing focuses on precise, standardized, and factual information, while non-technical writing is often more conversational and expressive. Example: technical content can be a research paper on artificial intelligence explaining machine learning algorithms with data and references where as non-technical content can be a newspaper article discussing how AI is changing everyday life in a storytelling format.</li>
+<li>Writing style: In technical writing, the content is supposed to be clear, concise, plain and with a direct language. But, in non-technical writing, the writing is simple and with compound sentences. Technical writing style example: &#8220;to reset the router, press and hold the reset button for 10 seconds until the LED indicator blinks.&#8221; (Concise, direct, and instructional). Non-technical writing style example: &#8220;if you&#8217;re experiencing internet issues, one thing you might want to try is resetting your router.&#8221; (Casual and conversational).</li>
+<li>Grammar: Since technical writing follows a clear and concise language, it&#8217;s more likely to be error free. Where as, in non-technical writing, it is more likely to be prone to errors. Example for technical writing: &#8220;the application requires a minimum of 4GB RAM and 500MB of disk space.&#8221; (Precise and grammatically correct). Example for non-technical writing: &#8220;You probably need at least 4GB RAM and some space on your computer, like 500MB or something.&#8221; (Less formal with informal grammar).</li>
+<li>Organization: Technical writings are highly structured, contains short and concise paragraphs and has clear transitions. On the other hand, non-technical writings are less clear, may contain incomplete sentences and grammatical errors. An example of a structured technical report can be a structured report with headings such as Introduction, Methodology, Results, and Conclusion, ensuring logical flow whereas for non-technical report it can be a diary entry where thoughts jump from one topic to another without a structured format.</li>
+</ol>
+<p>These are the reasons how technical writing differs from non-technical writing.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate chronological resumes from functional resumes.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between chronological resume and functional resume are as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 210px;">
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">Chronological resume</td>
+<td style="width: 50%; text-align: center; height: 23px;">Functional resume</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 50%; height: 47px;">1. Provides a history of employment and education in reverse chronological order.</td>
+<td style="width: 50%; height: 47px;">1. Summarizes the most important qualifications of the job.</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 50%; height: 47px;">2. Accounts for every year if the applicant is out of school with no gaps in time.</td>
+<td style="width: 50%; height: 47px;">2. May not account for every year out of school.</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 50%; height: 47px;">3. Tends to emphasize dates in the resume&#8217;s design.</td>
+<td style="width: 50%; height: 47px;">3. Emphasizes skills, accomplishments and job titles regardless of the time frame.</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; height: 23px;">4. Uses predictable headings.</td>
+<td style="width: 50%; height: 23px;">4. Uses less predictable headings designed for the job.</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; height: 23px;">5. Places education and work experience early in the resume.</td>
+<td style="width: 50%; height: 23px;">5. May present education and work experience later in the resume.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are the differences between chronological resume and functional resume.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the key steps in the technical writing process?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The writing process refers to stages that writers follow from the beginning to the end of creating a piece of writing. The most important stages of writing process are planning, drafting, copy editing and publishing. The key steps in technical writing process are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Planning</strong>: Planning is the first step of technical writing process. Planning refers to the stage of writing in which the writer thinks of a topic and prepares to develop the topic into a long discourse. Planning involves the following stages:
+<ul style="list-style-type: square;">
+<li>Choosing a topic: Sometimes we will get a topic with some guidelines from employer. When the topic is given, it would be a bit easier that we need not to brainstorm about out topic. In such case we need to conduct literature review and find out research gap regarding the given topic.</li>
+<li>Brainstorming: It refers to the technique of thinking about a topic before beginning a writing assignment. It involves listing everything that occurs to the mind about the idea as soon as possible.</li>
+<li>Free writing: It is the act of writing freely and the best way to generate ideas for an essay. We can write what came into our mind without judging what we have written or worrying about the grammar and sentence structure. Free writing is also of three types. They are:
+<ul style="list-style-type: square;">
+<li>Open free writing</li>
+<li>Focused free writing</li>
+<li>Lopping</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Shaping an idea: </b>Whenever we choose a topic, we need to shape our ideas related to our selected topic. These ideas will give some direction to our writing. While shaping ideas, we need to apply the strategies of questioning, reading, mapping and outlining that will help to focus our ideas.
+<ul style="list-style-type: disc;">
+<li>Questioning: We can use as much informative wh-questions as &#8216;the basics for shaping ideas&#8217;. They are used to get information that has not been previously mentioned.</li>
+<li>Mapping: It is the way of visually analyzing the parts of a subject matter. It helps us to think about the topic. While forming maps, the writers use key words and phrases they need to answer, and even new sources of information they want to check.</li>
+<li>Outlining: It is a plan for writing and one of the most frequent techniques writers use to discover ideas and the relationships among them. An outline is a list of a writer&#8217;s main points in the order they appear in documents.</li>
+</ul>
+</li>
+<li><strong>Drafting and Revising: </strong>After completing the first stage of planning, we will have enough information and a rough sketch so, now we are ready to write. A draft is an early version of writing. It involves writing to develop ideas in paragraphs and sentences. Revising is the act of going through written matter for clarity, coherence, correctness etc. Revising means to reorganize, make changes to content, relook the word choices. While revising we make notes in the draft.</li>
+<li><strong>Copy editing and publishing: </strong>Copy editing means examining a document for correctness in spelling, grammar, and mechanics. We can even ask for help from our peer to copy edit. Reading loudly helps to identify fragments, grammatical errors and awkward sentences. Publishing means sending document to the person or people who needed or requested it. We make sure that the document looks professional, We should use high quality paper and printer. If we prepare our document several days before deadline we will avoid the difficulty.</li>
+<li><strong>Writing Collaboratively: </strong>Many office writing projects are done collaboratively like: newsletters, proposals, research projects, brochures, web pages and so on. More complex and longer the project, more likely we will work with others. Often collaborative writings are better than individual. Subject of our writing project will guide us to work with various interdisciplinary people. Even short documents sometimes require collaborative writing.</li>
+</ol>
+<p>These are the key steps in technical writing process.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Why is peer review important in technical writing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Peer review is important in technical writing for several reasons:</p>
+<p>1. <b>Quality Assurance</b>: It helps ensure the document’s accuracy, clarity, and consistency by allowing others to identify errors or areas for improvement that the original author might have missed.</p>
+<p>2. <b>Diverse Perspectives</b>: Having multiple reviewers can bring in diverse viewpoints, which can enhance the document’s comprehensiveness and relevance to a broader audience.</p>
+<p>3. <b>Improved Communication</b>: Feedback from peers can help refine the language and structure of the document, making it more accessible and easier to understand for its intended audience.</p>
+<p>4. <b>Error Detection</b>: Peer review acts as a second set of eyes to catch mistakes that the original writer may have overlooked, such as grammatical errors or factual inaccuracies.</p>
+<p>5. <b>Collaboration and Learning</b>: The process encourages collaboration and can be a valuable learning experience for all parties involved, as they exchange knowledge and insights.</p>
+<p>6. <b>Credibility and Trust</b>: A peer-reviewed document is often seen as more credible and trustworthy, as it has been vetted by knowledgeable individuals in the field.</p>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Describe the difference between a technical description and a technical definition.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 356px;">
+<tbody>
+<tr style="height: 20px;">
+<td style="width: 8.719616%; height: 20px;"><strong>Aspect</strong></td>
+<td style="width: 46.823064%; height: 20px;"><strong>Technical description</strong></td>
+<td style="width: 44.457319%; height: 20px;"><strong> Technical definition</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 8.719616%; height: 48px;">Purpose</td>
+<td style="width: 46.823064%; height: 48px;">Provides a detailed explanation of the features, components, and functions of an object, device, or process.</td>
+<td style="width: 44.457319%; height: 48px;"> Provides a precise explanation of a term or  concept within a specific field.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 8.719616%; height: 72px;">Content</td>
+<td style="width: 46.823064%; height: 72px;">Includes information about parts, arrangement, functions, and how they interact within a system.</td>
+<td style="width: 44.457319%; height: 72px;"> Focuses on the essential characteristics of a  term, often relating it to other concepts for clarity.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 8.719616%; height: 96px;">Context</td>
+<td style="width: 46.823064%; height: 96px;">Found in manuals, catalogs, and instructional materials, helping users understand assembly, operation, or troubleshooting.</td>
+<td style="width: 44.457319%; height: 96px;"> Used in academic papers, glossaries, and  technical documents to ensure clarity and  prevent misunderstandings.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 8.719616%; height: 96px;">Example</td>
+<td style="width: 46.823064%; height: 96px;">Describing the components and workings of a car engine, including pistons, crankshaft, and fuel injection system.</td>
+<td style="width: 44.457319%; height: 96px;"> Defining “CPU” as the central processing unit  of a computer, responsible for executing  instructions from software.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 8.719616%; height: 24px;">Summary</td>
+<td style="width: 46.823064%; height: 24px;">Provides a detailed account of a physical object or process.</td>
+<td style="width: 44.457319%; height: 24px;"> Offers a concise and precise explanation of a  term or concept.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 14</h3>
+<div><p><p>Define the following terms:<br data-start="2861" data-end="2864" />a) Pilot study<br data-start="2881" data-end="2884" />b) Clinical research<br data-start="2907" data-end="2910" />c) Alignment<br data-start="2925" data-end="2928" />d) Stakeholder<br data-start="2945" data-end="2948" />e) Rehearsing</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="46" data-end="390"><strong data-start="46" data-end="62">Pilot Study:</strong><br data-start="62" data-end="65" />A <strong data-start="70" data-end="85" data-is-only-node="">pilot study</strong> is a small-scale preliminary study conducted before the main research to test the feasibility, methodology, and potential challenges of the larger study.</p>
+<p data-start="395" data-end="827"><strong data-start="395" data-end="417">Clinical Research:</strong><br data-start="417" data-end="420" /><strong data-start="423" data-end="444">Clinical research</strong> refers to scientific studies that involve human participants to evaluate medical, pharmaceutical, or healthcare interventions. Clinical research is essential in developing new medical advancements and follows strict ethical and regulatory guidelines.</p>
+<p data-start="832" data-end="1080"><strong data-start="832" data-end="846">Alignment:</strong><br data-start="846" data-end="849" /><strong data-start="852" data-end="865">Alignment</strong> refers to the process of ensuring that different elements, such as goals, strategies, processes, or components, are properly coordinated and working towards a common objective.</p>
+<p data-start="1306" data-end="1668"><strong data-start="1306" data-end="1322">Stakeholder:</strong><br data-start="1322" data-end="1325" />A <strong data-start="1330" data-end="1345" data-is-only-node="">stakeholder</strong> is any individual, group, or organization that has an interest in or is affected by a project, business, or decision. Stakeholders can be internal (employees, management) or external (customers, investors, government bodies).</p>
+<p data-start="1673" data-end="2032"><strong data-start="1673" data-end="1688">Rehearsing:</strong><br data-start="1688" data-end="1691" /><strong data-start="1694" data-end="1708">Rehearsing</strong> is the process of practicing a performance, presentation, or task before the actual event. It helps individuals refine their delivery, improve confidence, and ensure smooth execution.</p>
+</div>
+<h3>Question 15</h3>
+<div><p><p>Write short notes on:<br data-start="3157" data-end="3160" />a) Copy editing<br data-start="3178" data-end="3181" />b) Whistleblowing</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Copy Editing</b></p>
+<p>Copy editing is the process of reviewing and correcting written material to improve its accuracy, clarity, and consistency. It involves examining a document for correctness in grammar, punctuation, spelling, and style. The goal of copy editing is to ensure that the text is clear and readable while maintaining the author’s voice and intent. This stage is crucial in preparing a document for publication, as it helps eliminate errors and refine the content for the target audience.</p>
+<p><strong><span style="font-size: 12pt;">Whistleblowing</span></strong></p>
+<p data-start="26" data-end="238">Whistleblowing is the act of exposing unethical or illegal activities within an organization. It involves reporting misconduct to authorities or the public to ensure accountability and transparency.</p>
+<ul data-start="258" data-end="629">
+<li data-start="258" data-end="330">Purpose: Prevent harmful practices and uphold ethical standards.</li>
+<li data-start="331" data-end="419">Protection: Whistleblowers may face retaliation, but laws exist to protect them.</li>
+<li data-start="420" data-end="533">Ethical Duty: Reporting wrongdoing is often a moral obligation, especially when public safety is at risk.</li>
+<li data-start="534" data-end="629">Process: Involves gathering evidence and reporting to internal or external authorities.</li>
+</ul>
+<p data-start="631" data-end="729" data-is-last-node="" data-is-only-node="">Whistleblowing helps maintain integrity and can drive positive organizational and societal change.</p>
+</div>
+</body></html>

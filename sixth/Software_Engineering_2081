@@ -1,0 +1,244 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SE Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>SE Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Explain the importance of software pricing. Highlight COCOMO cost modeling technique. List its disadvantage.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software price is significant for the following main reasons:</p>
+<ul style="list-style-type: square;">
+<li><strong>Maximize Revenue</strong> : The amount of money a business can make is directly impacted by the cost of software.</li>
+<li><strong>Adapt to Competition</strong> : Keeps the product current in the marketplace.</li>
+<li><strong>Sustain Business</strong> : Appropriate pricing promotes future growth and operating expenses.</li>
+<li><strong>Target Specific Audiences</strong> : Different consumer categories are served via customized pricing.</li>
+<li><strong>Competitive Advantage</strong> : A business may differentiate its goods by knowing the pricing methods of its competitors.</li>
+</ul>
+<p><strong>COCOMO (Constructive Cost Model)</strong> is a widely used software cost estimation model developed by Barry Boehm in the late 1970s and later extended and refined. COCOMO provides a framework for estimating the effort, time, and resources required to develop a software project based on various factors such as project size, complexity, and development environment. COCOMO is based on empirical data collected from numerous software projects and has evolved into several versions to accommodate different development environments and project characteristics.</p>
+<p>There are three main versions of the COCOMO model:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Basic COCOMO (COCOMO I):</strong> Basic COCOMO is the original version of the model and is primarily used for early-stage rough estimates of software projects. It estimates software development effort as a function of the project size measured in lines of code (LOC). The formula for Basic COCOMO is as follows: Effort (E) = a * (KLOC)^bWhere:
+<ul style="list-style-type: square;">
+<li>E is the effort required to develop the software project.</li>
+<li>KLOC is the estimated size of the software project in thousands of lines of code.</li>
+<li>a and b are constants derived from historical data and depend on the project type and development environment.</li>
+</ul>
+</li>
+<li> <strong>Intermediate COCOMO (COCOMO II):</strong> Intermediate COCOMO extends the basic model by incorporating additional factors that influence software development effort and cost. It introduces different cost drivers that affect the overall project effort, including product, platform, personnel, project, and process attributes. These cost drivers are categorized into various factors such as product complexity, development environment, team experience, and project constraints. The formula for Intermediate COCOMO is more complex than Basic COCOMO and accounts for these additional factors.</li>
+<li><strong>Detailed COCOMO (COCOMO III):</strong> Detailed COCOMO is the most comprehensive version of the model and provides a detailed breakdown of effort estimation by considering individual software development activities and phases. It takes into account factors such as software requirements, design, implementation, testing, and maintenance. Detailed COCOMO allows for a more fine-grained estimation of effort and resources based on specific project characteristics and development methodologies.</li>
+</ol>
+<p><strong>Disadvantages of COCOMO:</strong></p>
+<ul style="list-style-type: square;">
+<li>Requires accurate estimation of project size and other input parameters, which may be challenging, especially for large and complex projects.</li>
+<li>Assumes a linear relationship between project size and effort, which may not always hold true in practice.</li>
+<li>Does not consider factors such as team dynamics, organizational culture, and external dependencies, which can significantly impact project outcomes.</li>
+<li>May not be suitable for projects using modern development approaches such as agile or iterative methodologies, as it is based on traditional waterfall development models.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Draw use case diagram, class diagram and sequence diagram for online book recommendation system. Make your own assumptions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 3</h3>
+<div><p><p>What do you understand by software process model? Explain different software process activities.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A<strong> software process model</strong> is a structured approach used to guide and manage the software development process. It defines a set of activities, phases, and deliverables that need to be accomplished to successfully develop and deliver software. Each process model provides a specific framework to organize tasks, resources, and schedules in a logical manner. Nevertheless, the four core software engineering tasks must be incorporated into all software processes, regardless of how numerous they are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Software Specification</strong>: In this phase, the needs of the software system are established. Information collection from stakeholders, documentation of the intended features, functions, and limitations, and creation of an understandable and thorough specification document are all part of the process. The development process is outlined in this paper, which guarantees that the finished product achieves its objectives.</li>
+<li><strong>Software development</strong> : It is the actual process of building the software system in accordance with the specifications. It involves a number of duties, including creating code, testing components, developing the software architecture, and integrating them into a working system. Depending on the demands, team preferences, and complexity of the project, this stage might employ a variety of approaches, such as Agile, Waterfall, or Spiral.</li>
+<li><strong>Software validation</strong>: This phase makes that the created software satisfies the criteria and operates as intended. To find and address any flaws or faults, it uses stringent testing procedures such unit testing, integration testing, system testing, and user acceptability testing. Additionally, validation seeks to guarantee that the program satisfies quality requirements and operates as anticipated in practical situations.</li>
+<li><strong>Software Evolution</strong>: This stage extends over the course of the software&#8217;s lifecycle and calls for constant maintenance, monitoring, and updates to keep up with changing user needs and technological advancements. It entails making modifications to the software after it has been first released, including adding new features, resolving bugs, adjusting to new environments, and enhancing performance.</li>
+</ul>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>How risk management is carried out during software development? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The<strong> risk management process</strong> is an iterative process which continues throughout the project as new insights are gained and situations as mentioned. Risk management can be carried out during software development by following process:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-50436" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/01/risk-management.drawio.png?resize=562%2C264&#038;ssl=1" alt="" width="562" height="264"></p>
+<p style="text-align: center;"><strong>fig: Risk Management Process</strong></p>
+<p><strong>Risk identification</strong> : Risk identification is the first stage of risk management. It is concerned with detecting all possible risks to the project as a common proportion of risk.</p>
+<p><strong>Risk analysis</strong> : In risk analysis, all identified risks are examined and each a background document containing, such as the probability of risk occurrence and its impact on the project, the probability may be as high as very high (5-10%), high (25-50%), moderate (50-75%), low (75-95%) and very low (5-5%) risks are tabulated notes according to the standards of the risk.</p>
+<p><strong>Risk planning: </strong>It is the process of consideration of the buy risks that have been identified, and formulation of strategies to manage the risks so as to minimize the effects of risk changes.</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Avoidance Strategies</span> : to avoid occurrence of risk</li>
+<li><span style="text-decoration: underline;">Mitigation Strategies</span> : manage risk reduction by using risk</li>
+<li><span style="text-decoration: underline;">Contingency Plans</span> : (backup for some risk) to be ready to deal with</li>
+</ul>
+<p><strong>Risk Monitoring:</strong> to track and monitor the occurrence of the identified risks. Monitoring requires a regularly recurring review of the possible and probable effect of the risk change.</p>
+<p><strong>Risk Management : </strong>The process of planning, organizing, directing, and controlling human resources is called people management. It also encompasses financial, technological and societal resources used to meet human needs. Management includes all activities, structural and human relations.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>“Software maintenance is one of the most importance activity.” Justify the statement with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Software maintenance</strong> is essential because it guarantees that the program will continue to be useful, effective, and current throughout time. In order to resolve security flaws, enhance performance, correct problems, or adjust to shifting user demands and circumstances, software frequently needs updates after launch. It performs following task:</p>
+<ul style="list-style-type: square;">
+<li>Frequent maintenance helps find and fix issues, avoiding data loss and system breakdowns.</li>
+<li>Updates for software fix bugs and defend against online attacks.</li>
+<li>In order to enhance user experience or adjust to shifting business requirements, maintenance may entail introducing new features.</li>
+<li>Older software systems should be maintained to guarantee their compatibility and continuous functioning.</li>
+</ul>
+<p><strong>for eg</strong>:</p>
+<p>Consider a bank app. After deployment, regular upgrades are necessary for:</p>
+<ul style="list-style-type: square;">
+<li>Address problems like inaccurate transaction records.</li>
+<li>Add functionality like accepting more payment methods.</li>
+<li>Increase security to protect against emerging threats on the internet.</li>
+<li>Check to make sure it functions with updated hardware or operating systems.</li>
+</ul>
+<p>Software maintenance is a continuous process that needs constant attention to be dependable, secure, and in line with business requirements. Hence, maintaining software is crucial to keeping systems operating smoothly and effectively and we can say that software maintenance is one of the most importance activity.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Difference between verification and validation. Explain software inspection process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%;">
+<tbody>
+<tr>
+<td style="text-align: center; width: 46.9755%;"><strong>Verification</strong></td>
+<td style="text-align: center; width: 52.1236%;"><strong>Validation</strong></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">It includes checking documents, design, codes and programs.</td>
+<td style="text-align: center; width: 52.1236%;">It includes testing and validating the actual product.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">Verification is the static testing.</td>
+<td style="text-align: center; width: 52.1236%;">Validation is the dynamic testing.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">It does not include the execution of the code.</td>
+<td style="text-align: center; width: 52.1236%;">It includes the execution of the code.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">It checks whether the software conforms to specifications or not.</td>
+<td style="text-align: center; width: 52.1236%;">It checks whether the software meets the requirements and expectations of a customer or not.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">It can find bugs in the early stage of development.</td>
+<td style="text-align: center; width: 52.1236%;">It can only find the bugs that could not be found by verification.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">Its goal is application and software architecture and specification.</td>
+<td style="text-align: center; width: 52.1236%;">Its goal is an actual product.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 46.9755%;">It comes before validation.</td>
+<td style="text-align: center; width: 52.1236%;">It comes after verification.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p><strong>Software Inspection</strong></p>
+<p>It is a control technique for ensuring that the documentation produced during a given phase remains consistent with the documentation of the previous phases and respects reestablished rules and standards. These involve people examining the source representation with the aim of discovering anomalies and defects. The aim of the inspection is to locate faults and the process should be driven by a fault checklist.</p>
+<p><strong>Inspection Process</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Planning: </strong>The inspection is planned by the moderator which involves selecting an inspection team, and organizing a meeting room and materials.</li>
+<li><strong>Overview: </strong>In this step, the software and documents to be inspected are presented to the inspection team.</li>
+<li><strong>Individual Preparation: </strong>In this step, each inspection team member studies the specification and the program and looks for defects.</li>
+<li><strong>Inspection Meeting: </strong>During this meeting, the readers read through the work product part by part, and inspectors point out defects for every part.</li>
+<li><strong>Rework: </strong>The author makes changes to the work product according to the action plan from the inspection meeting in this step.</li>
+<li><strong>Follow up: </strong>In this step, the changes made by the author are checked to make sure that everything is correct. The moderator should decide whether reinspection of the code and document is required. If not the software is then approved by the moderator for release.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What do you understand by design patterns? What role does it have in object oriented design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that we can customize to solve a particular design problem in our code. Patterns are a toolkit of solutions to common problems in software designs. They define a common language that helps our team to communicate more efficiently. Patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system.</p>
+<p>Design patterns can speed up the development process by providing tested, proven development paradigms. Reusing design patterns helps to prevent issues that can cause major problems and improves code readability for coders and architects familiar with the patterns.</p>
+<p><strong>Role design patterns of in Object-oriented design:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Better Communication</strong>: Design patterns help developers communicate effectively with one another by creating a common language and understanding.</li>
+<li><strong>Increased Flexibility</strong>: Designs may be made more easily by using patterns, which offer an organized foundation for customization and expansion.</li>
+<li><strong>Decreased Complexity</strong>: Design patterns provide code readability and streamline the design process by decomposing complicated issues into smaller, more manageable parts.</li>
+<li><strong>More Reusability</strong>: By encouraging the usage of tried-and-true solutions, design patterns result in more reusable code and shorter development times.</li>
+<li><strong>Improved Code Structure</strong>: By fostering a structured and orderly codebase, patterns increase maintainability and lower the likelihood of mistakes.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain any one application of architecture.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Architectural design is concerned with understanding how a software system should be organized and designing the overall structure of that system. It identifies the main structural components in a system and the relationships between them.</p>
+<p>One common application of software architecture is the layered architecture, which is widely used in web applications. In Layered architecture pattern, the system functionality is organized into separate layers, and each layer only relies on the facilities and services offered by the layer immediately below it. It organizes the system into layers, with related functionality associated with each layer. A layer provides services to the layer above it, so the lowest level layers represent core services that are likely to be used throughout the system.</p>
+<p>For example, in a typical e-commerce website, the system is divided into the following layers:</p>
+<ol style="list-style-type:decimal;">
+<li>Presentation Layer (UI Layer) &#8211; This is the front-end of the application which is responsible for displaying content and handling user interactions. Technologies like HTML, CSS, JS and react or angular are commonly used here.</li>
+<li>Application Layer (Business Logic Layer) &#8211; This layer processes user requests, applies business rules and coordinates data flow between the UI and the database. It is ofter implemented using frameworks like Flask, Django etc.</li>
+<li>Data Layer (Presentation Layer) &#8211; This  layer manages data storage and retrieval, ensuring that the application can read and write data efficiently. It interacts with databases like MySQL, Postgres or MongoDB.</li>
+<li>Infrastructure Layer (Network and Security) &#8211; This layer includes cloud services, authentication mechanisms, caching and communication with external APIs to enhance system performance and security.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Differentiate between structural and behavioral models. What is the importance of behavioral model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%;">
+<tbody>
+<tr>
+<td style="text-align: center; width: 50.5792%;"><strong>Structural </strong></td>
+<td style="text-align: center; width: 48.0695%;"><strong>Behavioral</strong></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 50.5792%;">Focus on representing the static structure or composition of a system, including its components, relationships, and configurations.</td>
+<td style="text-align: center; width: 48.0695%;">Focus on representing the dynamic behavior or functionality of a system, including its actions, states, transitions, and interactions over time.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 50.5792%;">Describe the system’s physical or logical structure without considering its dynamic behavior. They typically represent components, classes, interfaces, and relationships.</td>
+<td style="text-align: center; width: 48.0695%;">Describe how the system responds to stimuli, events, and interactions over time. They capture the system’s behavior under various conditions, including sequences of actions, states, and transitions.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 50.5792%;">Often represented using diagrams such as class diagrams, component diagrams, package diagrams, and deployment diagrams.</td>
+<td style="text-align: center; width: 48.0695%;">Often represented using diagrams such as use case diagrams, sequence diagrams, state machine diagrams, and activity diagrams.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 50.5792%;">Used to visualize and analyze the architecture, organization, and interconnections of a system’s components. They help in understanding system architecture, identifying components, and analyzing their interactions.</td>
+<td style="text-align: center; width: 48.0695%;">Used to specify, simulate, and analyze the dynamic aspects of a system’s operation. They help in specifying requirements, simulating system behavior, and validating system functionality.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 50.5792%;">Typically do not consider the temporal aspect of the system’s behavior. They focus on the system’s static configuration at a particular point in time.</td>
+<td style="text-align: center; width: 48.0695%;">Capture the temporal aspect of the system’s behavior, representing how the system’s actions and interactions unfold over time. They describe sequences of events, states, and transitions that occur during system operation.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Importance of behavioral model are:</p>
+<ul style="list-style-type: square;">
+<li>Developers and stakeholders may better comprehend how a system responds in various scenarios by using behavioral models.</li>
+<li>These models facilitate the communication of complex system behaviors and interactions by acting as a common language for technical teams, stakeholders, and non-technical users.</li>
+<li>It can assist in forecasting the system&#8217;s performance in a variety of scenarios, including heavy loads, user interactions, and modifications to the input data.</li>
+<li>Numerous parts and interactions are common in complex systems. By concentrating on important behaviors and their connections, behavioral models aid in decomposing and streamlining system analysis.</li>
+<li>The system may be tested using behavioral models to make sure it operates as intended. These models may be used to create test cases that verify the system satisfies its functional and non-functional.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Briefly explain on the requirements of engineering process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Requirements of engineering process</strong> is the process that involves all the activities required to create and maintain a system requirement document.To ensure that the problem that is being stated is clear, complete, and to ensure that the solution is correct, reasonable, and effective. The process used for requirement engineering varies widely depending on the application domain, the people involved, and the organization developing the requirement. However, some common processes include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Feasibility study</strong>:<br />
+A feasibility study evaluates a project or product&#8217;s viability. It takes into account a number of factors, including the availability of resources, cost estimates, advantages, and possible hazards. Its main objective is to determine if the intended result can be achieved with the resources and limitations available.</li>
+<li><strong>Requirement elication and analysis</strong>:<br />
+It is a process that covers each stage needed to create and revise a system requirement document. to ensure the accuracy, reason, and practicality of the solution as well as the thoroughness and understandability of the problem. Depending on the application domain, the people involved, and the business generating the demand, requirements engineering processes might differ significantly.</li>
+<li><strong>Requirement specification</strong>:<br />
+After reviewing the feasibility report, the organization&#8217;s management makes any necessary changes to the requirements. The system analyst creates the final system specification after taking into account the organization&#8217;s changing needs and the limitations on the resources that are available.</li>
+<li><strong>Requirement validation</strong>:<br />
+The process of examining requirements for validity, consistency, completeness, realism, and verifiability is known as requirement validation. Its goal is to demonstrate that the requirements truly specify the system that the client desires. Various checks, including as validity, completeness, and consistency checks, are part of the requirement validation process.</li>
+<li><strong>Requirement Change Management</strong>:<br />
+The process of handling modifications to a system requirement is known as requirement change management. It involves comprehending and managing modifications to system requirements. It is necessary because we must determine if the advantages of enforcing new standards outweigh the implementation costs.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the principles of agile development? Explain agile development techniques.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In this software development methodology, which is founded on incremental and iterative development, requirements and solutions are developed through cooperation amongst cross-functional, self-organizing teams. Its primary goal was to assist developers in creating projects that could swiftly adjust to changing requirements. It was therefore created to facilitate quick and simple project completion.</p>
+<p><strong>Agile Development Principles are:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Customer Involvement:</strong> In agile development, customers are closely involved in the development team throughout the development process, to evaluate newly developed increments and provide the feedback.</li>
+<li><strong>Incremental Delivery:</strong> Software is developed in increments with the customer specifying the requirements to be included in each increment.</li>
+<li><strong>People not Process:</strong> The skills of development team should be recognized and team members should be left to develop in their own ways of working.</li>
+<li><strong>Embrace Change:</strong> Agile development process expects the system requirements to change as much as possible.</li>
+<li><strong>Maintain Simplicity:</strong> In agile development, development team actively works to eliminate complexity from the system wherever possible.</li>
+</ul>
+<p><strong>Scrum</strong> is an Agile development techniques for project management that uses sprints, which are iterative cycles that usually run one to four weeks. It places an emphasis on teamwork and adaptability in the face of change. The Product Owner sets priorities for the work, the Scrum Master supports the process, and the Development Team produces the final product. These are important positions in Scrum.<br />
+Scrum makes use of artifacts like the Sprint Backlog, which consists of tasks for the current sprint, the Product Backlog, which is a prioritized list of features, and the Increment, which is the finished work at the conclusion of a sprint. Frequent meetings, such as sprint reviews, daily stand-ups, and retrospectives, aid in ensuring ongoing development and alignment with project objectives.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>System engineering</li>
+<li>Release testing</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. System engineering</p>
+<p>System engineering is a field of engineering and engineering management that focuses on how to design and manage complex system over their life cycle. System engineering highly focuses on the users and domains. Unlike software engineering, system engineering may cover a broader area, that is, entire system development. System engineering focuses highly on hardware engineering. System engineering is an older discipline.</p>
+<p>Example: One of the real-world examples of system engineering is the development of autonomous (self-driving) cars. These vehicles involve multiple subsystems that must work together perfectly.</p>
+<p>Hardware Systems: Cameras, LiDAR sensors, GPS, and radars collect real-time data.<br />
+Software and AI systems: Machine learning algorithms process data to recognize obstacles, predict movements, and make driving decisions.<br />
+Mechanical Systems: The braking, acceleration, and steering mechanisms must respond accurately to software commands.<br />
+Networking and communication: The car needs to interact with traffic signals, cloud systems and even other vehicles.<br />
+In summary, systems engineering bridges multiple disciplines to develop large, complex, and high-stakes systems, ensuring efficiency, safety, and user satisfaction.</p>
+<p>b. Release testing</p>
+<p>Release testing refers to coding practices and test strategies that give teams confidence that a software release candidate is ready for users. Release testing aims to find and eliminate errors and bugs from software releases so that it can be release to users. The primary goal of the release testing process is to convince the customer of the system that is good enough for use. This process gives developers and businesses confidence that the software meets quality standards and functions as expected. More importantly, it reassures customers that the product is &#8220;good enough&#8221; for real-world use—meaning it performs well, is secure, and doesn’t contain critical issues.</p>
+<p>In short, release testing acts as the last checkpoint before a new version of the software goes live, making sure it&#8217;s polished and user-friendly.</p>
+</div>
+</body></html>

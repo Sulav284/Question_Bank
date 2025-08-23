@@ -1,0 +1,537 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CDC Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>CDC Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Give an example of reduce-reduce conflict. Construct the SLR parsing table for the following grammar.</p>
+<p>E→ (L) | a<br />
+L → L, E | E</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reduce- Reduce conflict :<br />
+The reduce-reduce conflict arises when the parser is not able to decide  which sentential form to use for reduction.</p>
+<p>For example:<br />
+A → bc<br />
+B → abc<br />
+and stack contains $ abc, the parser cannot decide whether to reduce it $aA, or to $B</p>
+<p>Given grammer.</p>
+<ul style="list-style-type: square;">
+<li>E→ (L) | a</li>
+<li>L → L, E | E</li>
+</ul>
+<p>step 1: Augment the grammar</p>
+<ul style="list-style-type: square;">
+<li>E&#8217;→ E</li>
+<li>E → (L) | a</li>
+<li>L → L, E | E</li>
+</ul>
+<p>Step 2: Find FIRST and FOLLOW sets.</p>
+<p>First sets:</p>
+<ul style="list-style-type: square;">
+<li>FIRST (E) = {C, a}</li>
+<li>FIRST (L) = {C, a}</li>
+</ul>
+<p>Follow sets:</p>
+<ul style="list-style-type: square;">
+<li>FOLLOW(E&#8217;) = {$}</li>
+<li>FOLLOW(E) = {$, , , )}</li>
+<li>FOLLOW(L) = {)}</li>
+</ul>
+<p>step 3: Construct canonical LR(0) collection for the grammar.</p>
+<p>State I<sub>0</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E&#8217;→ .E</li>
+<li>E → .(L)</li>
+<li>E → .a</li>
+<li>L → .L, E</li>
+<li>L → .E</li>
+</ul>
+<p>State I<sub>1</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E&#8217;→ E.</li>
+</ul>
+<p>State I<sub>2</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E → (.L)</li>
+<li>L → .L, E</li>
+<li>L → .E</li>
+<li>E → .(L)</li>
+<li>E → .a</li>
+</ul>
+<p>State I<sub>3</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E →a.</li>
+</ul>
+<p>State I<sub>4</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E → (L.)</li>
+<li>L → L., E</li>
+</ul>
+<p>State I<sub>5</sub>:</p>
+<ul style="list-style-type: square;">
+<li>E → (L).</li>
+</ul>
+<p>State I<sub>6</sub>:</p>
+<ul style="list-style-type: square;">
+<li>L → L,. E</li>
+<li>E → .(L)</li>
+<li>E → .a</li>
+</ul>
+<p>State I<sub>7</sub>:</p>
+<ul style="list-style-type: square;">
+<li>L → L,E.</li>
+</ul>
+<p>step 4: Now let&#8217;s create SLR Parsing Table</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-52300 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/SLR.drawio.png?resize=369%2C284&#038;ssl=1" alt="" width="369" height="284"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the significances of intermediate code? Differentiate between DAG and Syntax tree. Represent the instruction <span class="katex"><span class="katex-mathml">A = B + C − D * E + G</span></span> using quadruple and triple.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Significance of intermediate are as:</p>
+<ul class="list-disc pl-6 mb-4">
+<li>Enhances portability between different machines.</li>
+<li>Optimizes code before final generation.</li>
+<li>Makes semantic analysis easy.</li>
+</ul>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="w-full border-collapse border border-black">
+<thead>
+<tr>
+<th class="border border-black p-2" style="text-align: center;">Feature</th>
+<th class="border border-black p-2" style="text-align: center;">DAG (Directed Acyclic Graph)</th>
+<th class="border border-black p-2" style="text-align: center;">Syntax Tree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-black p-2" style="text-align: center;">Definition</td>
+<td class="border border-black p-2" style="text-align: center;">A compact representation of an expression where common subexpressions are merged to eliminate redundancy.</td>
+<td class="border border-black p-2" style="text-align: center;">A hierarchical tree structure representing the syntactic structure of an expression.</td>
+</tr>
+<tr>
+<td class="border border-black p-2" style="text-align: center;">Redundancy</td>
+<td class="border border-black p-2" style="text-align: center;">Eliminates redundant computations by merging duplicate subexpressions.</td>
+<td class="border border-black p-2" style="text-align: center;">May contain subexpressions, leading to inefficiencies.</td>
+</tr>
+<tr>
+<td class="border border-black p-2" style="text-align: center;">Storage Efficiency</td>
+<td class="border border-black p-2" style="text-align: center;">More memory efficient due to elimination of repeated computations.</td>
+<td class="border border-black p-2" style="text-align: center;">Less memory efficient as it stores redundant subexpressions separately.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="text-lg mb-4">Solution:</p>
+<p class="ml-4 mb-4">Given instruction,<br />
+A = B + C &#8211; D * E + G</p>
+<p class="text-lg mb-4">Quadruple Representation:</p>
+<p class="ml-4 mb-4">t<sub>1</sub> = D * E<br />
+t<sub>2</sub> = B + C<br />
+t<sub>3</sub> = t<sub>2</sub> &#8211; t<sub>1<br />
+</sub>A = t<sub>3</sub> + G</p>
+<p>where t<sub>1</sub>,  t<sub>2</sub> , t<sub>3 </sub>are temporary variable</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px; text-align: center;"><strong>Op</strong></td>
+<td style="width: 25%; height: 24px; text-align: center;"><strong>Arg 1</strong></td>
+<td style="width: 25%; height: 24px; text-align: center;"><strong>Arg 2</strong></td>
+<td style="width: 25%; height: 24px; text-align: center;"><strong>Result</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px; text-align: center;">*</td>
+<td style="width: 25%; height: 24px; text-align: center;">D</td>
+<td style="width: 25%; height: 24px; text-align: center;">E</td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>1</sub></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px; text-align: center;">+</td>
+<td style="width: 25%; height: 24px; text-align: center;">B</td>
+<td style="width: 25%; height: 24px; text-align: center;">C</td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>2</sub></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px; text-align: center;">&#8211;</td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>2</sub></td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>1</sub></td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>3</sub></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px; text-align: center;">+</td>
+<td style="width: 25%; height: 24px; text-align: center;">t<sub>3</sub></td>
+<td style="width: 25%; height: 24px; text-align: center;">G</td>
+<td style="width: 25%; height: 24px; text-align: center;">A</td>
+</tr>
+</tbody>
+</table></div>
+<p>Triple representation</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;"></td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"><strong> Op</strong></td>
+<td style="width: 30.6306%; height: 24px; text-align: center;"><strong> arg 1</strong></td>
+<td style="width: 54.1828%; height: 24px; text-align: center;"><strong> arg 2</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;">(1)</td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"> *</td>
+<td style="width: 30.6306%; height: 24px; text-align: center;"> D</td>
+<td style="width: 54.1828%; height: 24px; text-align: center;"> E</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;">(2)</td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"> +</td>
+<td style="width: 30.6306%; height: 24px; text-align: center;"> B</td>
+<td style="width: 54.1828%; height: 24px; text-align: center;"> C</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;">(3)</td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"> &#8211;</td>
+<td style="width: 30.6306%; height: 24px; text-align: center;">(2)</td>
+<td style="width: 54.1828%; height: 24px; text-align: center;">(1)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;">(4)</td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"> +</td>
+<td style="width: 30.6306%; height: 24px; text-align: center;">(3)</td>
+<td style="width: 54.1828%; height: 24px; text-align: center;"> G</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.5212%; height: 24px; text-align: center;">(5)</td>
+<td style="width: 29.6653%; height: 24px; text-align: center;"> =</td>
+<td style="width: 30.6306%; height: 24px; text-align: center;">(4)</td>
+<td style="width: 54.1828%; height: 24px; text-align: center;"> A</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Illustrate the concept of backpatching with an example. Convert the regular expression <span class="katex-error" title="ParseError: KaTeX parse error: Expected 'EOF', got '#' at position 10: a(a + b)a#̲">a(a + b)a#</span> to DFA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="line text-purple"><strong>Backpatching</strong>:</div>
+<p>Backpatching is a technique used in compiler design to resolve forward references. It is used when we need to generate code but don&#8217;t yet know the target address. It is common in control structures like if-then-else, while loops, etc.</p>
+<p>Eg.:</p>
+<p>If (a &gt; b) then<br />
+x = 10<br />
+end if.</p>
+<p>Step1: Initial quadruples generated (with blank jump targets)</p>
+<p>100: (&gt;, a, b, t1)<br />
+101: (if, t1, _, ?)<br />
+102: (=, 10, _, x)<br />
+103: (next instruction)</p>
+<p>Step2: After backpatching</p>
+<p>100: (&gt;, a, b, t1)<br />
+101: (if, t1, _, 103)<br />
+102: (=, 10, _, x)<br />
+103: (next instruction)</p>
+<p>given regulat expression,</p>
+<p><span class="katex-error" title="ParseError: KaTeX parse error: Expected 'EOF', got '#' at position 10: a(a + b)a#̲">a(a + b)a#</span></p>
+<p>syntax tree of above RE</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-55488 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/a.jpeg?resize=677%2C708&#038;ssl=1" alt="" width="677" height="708"></p>
+<p>compute follow pos:<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-55489 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/b.jpeg?resize=626%2C793&#038;ssl=1" alt="" width="626" height="793"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any TWO questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain different phases of compiler in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-36712 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/CDC-qn-1-.drawio.png?resize=711%2C423&#038;ssl=1" alt="- Hamro CSIT" width="711" height="423" /></p>
+<p style="text-align: center;"><strong>fig: Block diagram of phases of compiler</strong></p>
+<p>Following are the phases of compiler:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Lexical Anlysis</strong> :<br />
+Lexical analysis is the process where rge source program is read from left to right and grouped into tokens. In this initial stage, the source code is read and transformed into tokens. Tokens, which include operators, symbols, identifiers, and keywords, are the fundamental units of the language. After eliminating comments and whitespace, the lexical analyzer (lexer) produces a stream of tokens for the following stage.</li>
+<li><strong>Syntatic Anlysis</strong> :<br />
+Here, it checks if arrangement of tokens follows grammar rules of programming language. It creates the syntatic structure of the given source program.eg: new_val = old_val + 12.<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-36713 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/syntatic-of-CDC.drawio.png?resize=412%2C394&#038;ssl=1" alt="- Hamro CSIT" width="412" height="394" /></li>
+<li><strong>Semantic Anlysis</strong> :<br />
+It performs a very importantrole to check the semantic rules of the expression according to the source language. It is required when the compilee may require performing some additional checks.<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-36714 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/semantic-analysis.drawio.png?resize=376%2C264&#038;ssl=1" alt="- Hamro CSIT" width="376" height="264" /></li>
+<li><strong>Intermediate Code generator</strong> :<br />
+It generates a simple machine independent intermediate language. It should be generated in such a way that it can be easily translated into target machine code.eg:      A =b+c*d/f<br />
+intermediate code for above expression will be:T1 = c*d<br />
+T2 = T1/f<br />
+T3 = b+T2<br />
+A = T3</li>
+<li><strong>Code Optimization:<br />
+</strong>It is the process of removing unnecessary part of a code. It decreases the time ad space complexity of program.<br />
+eg:Before code optimization<br />
+b = 0<br />
+T1 = a+b<br />
+T2= c*T1<br />
+a = T2After code optimization<br />
+b = 0<br />
+a = c*a</li>
+<li><strong>Code generator:<br />
+</strong>It generates the assembly code for the target CPU from an optimized intermediate representation of program.<br />
+eg:<br />
+A = b+c*d/f<br />
+MOV c,R1<br />
+MULT d,R1<br />
+DIV f,R1<br />
+ADD b,R1<br />
+MOV R1,A</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What types of information are stored in a symbol table? Discuss the activation record.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="mb-2">A symbol table is a data structure used by a compiler to store information about program identifiers such as variables, functions, classes, and objects.</p>
+<p class="mb-2">Information stored in symbol table:</p>
+<ol class="list-decimal list-inside mb-4">
+<li>Identifier Name: The name of a variable, function, or object</li>
+<li>Type information: Data type (e.g., int, float, char, etc.)</li>
+<li>Scope: The block/function where identifier is declared</li>
+<li>Memory location: Address where the variable is stored in memory</li>
+</ol>
+<p class="text-lg font-bold mb-2"><strong>Activation Record:</strong></p>
+<p class="mb-2">An activation record is a data structure used during function calls to store important execution information.</p>
+<p class="mb-2">Components of activation record:</p>
+<ol class="list-decimal list-inside mb-4">
+<li><strong>Return Address</strong>: Address to resume execution after function completion.</li>
+<li><strong>Control Link</strong>: Pointer to activation record of the calling function.</li>
+<li>
+<div class="border-b-2 border-purple-500 pb-4 mb-4">
+<p class="text-lg font-semibold"><strong>Access Link</strong>: Pointer to non-local data in nested function.</p>
+</div>
+</li>
+<li>
+<p class="text-lg font-semibold"><strong>Local variables</strong>: Space allocated for variables declared in the function.</p>
+</li>
+<li>
+<p class="text-lg font-semibold"> <strong>Save of Register Values</strong>: Stores registers that must be restored after function execution.</p>
+</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Compute the FIRST and FOLLOW of the non-terminals in the following grammar:<br data-start="1114" data-end="1117" /><span class="katex"><span class="katex-mathml">S → (L) ∣ 1</span></span><br data-start="1147" data-end="1150" /><span class="katex"><span class="katex-mathml">L → LS ∣∗S</span></span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div>
+<p class="text-lg font-semibold">Given grammar:</p>
+<ul style="list-style-type: square;">
+<li class="text-lg font-semibold"><span class="katex"><span class="katex-mathml">S → (L) ∣ 1</span></span></li>
+<li class="text-lg font-semibold"><span class="katex"><span class="katex-mathml">L → LS ∣∗S</span></span></li>
+</ul>
+<p>Removing the left recursion from above grammar as:</p>
+<ul style="list-style-type: square;">
+<li class="text-lg font-semibold"><span class="katex"><span class="katex-mathml">S → (L) ∣ 1</span></span></li>
+<li class="text-lg font-semibold"><span class="katex"><span class="katex-mathml">L → *SL&#8217;</span></span></li>
+<li>L&#8217; <span class="katex"><span class="katex-mathml">→</span></span> SL&#8217;| ε</li>
+</ul>
+</div>
+<div class="mt-4">
+<p class="text-lg font-semibold">Step 1: Compute FIRST of Non-terminals</p>
+<ul style="list-style-type: square;">
+<li class="text-lg font-semibold">FIRST(S) = { (, 1}</li>
+<li class="text-lg font-semibold">FIRST(L) = { * }</li>
+<li>FIRST(L&#8217;) = {(, 1, ε}</li>
+</ul>
+</div>
+<div class="mt-4">
+<p class="text-lg font-semibold">Step 2: Compute FOLLOW of Non-terminals</p>
+<ul style="list-style-type: square;">
+<li class="text-lg font-semibold">FOLLOW(S) = { $, ) }</li>
+<li class="text-lg font-semibold">FOLLOW(L) = { ) }</li>
+<li>FOLLOW(L&#8217;) = { ) }</li>
+</ul>
+</div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write the code generation algorithm for the instruction a = b op c.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given instruction:</p>
+<p>a = b op c</p>
+<p>Code Generation Algorithm:</p>
+<p>MOV b, R1<br />
+OP c, R1<br />
+MOV R1, a</p>
+<p>Here, R1 is the register.</p>
+<p>Lets take an eg for a = b + c (here, op is +)</p>
+<p>MOV b, R1<br />
+ADD c, R1<br />
+MOV R1, a</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define core item. Compute the LR(1) item sets for the following grammar:<br data-start="1368" data-end="1371" /><span class="katex"><span class="katex-mathml">S → AA</span></span><br data-start="1396" data-end="1399" /><span class="katex"><span class="katex-mathml">A → aA ∣ b</span></span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="mb-4"><span class="font-bold"><strong>Core item</strong>: </span>A core item in a LR parsing table refers to an item that does not include lookahead symbols.</p>
+<p class="mb-4"><span class="font-bold">Given grammar</span><br />
+S → AA<br />
+A → aA | b</p>
+<p class="mb-4"><span class="font-bold">Step1: Augment the Grammar</span></p>
+<ul style="list-style-type: square;">
+<li class="mb-4">S&#8217; → S</li>
+<li class="mb-4">S → AA</li>
+<li class="mb-4">A → aA</li>
+<li class="mb-4">A → b</li>
+</ul>
+<p class="mb-4"><span class="font-bold">Step2: Compute LR(1) items</span></p>
+<ul style="list-style-type: square;">
+<li class="mb-4">S&#8217; → .S, $</li>
+<li class="mb-4">S → .AA, $</li>
+<li class="mb-4">A → .aA, a|b</li>
+<li class="mb-4">A → .b, a|b</li>
+</ul>
+<p>I<sub>0</sub> state:</p>
+<p>I<sub>0</sub> = closure (S&#8217; → .S)</p>
+<ul style="list-style-type: square;">
+<li class="mb-4">S&#8217; → .S, $</li>
+<li class="mb-4">S → .AA, $</li>
+<li class="mb-4">A → .aA, a|b</li>
+<li class="mb-4">A → .b, a|b</li>
+</ul>
+<p>I<sub>1</sub> = Goto (I<sub>0</sub>, S) = closure (S → S., $)</p>
+<ul style="list-style-type: square;">
+<li>S&#8217; → S., $</li>
+</ul>
+<p>I<sub>2</sub> = Goto (I<sub>0</sub>, A) = closure (S → A.A, $)</p>
+<ul style="list-style-type: square;">
+<li>S → A.A, $</li>
+<li class="mb-4">A → .aA,$</li>
+<li class="mb-4">A → .b, $</li>
+</ul>
+<p>I<sub>3</sub> = Goto (I<sub>0 </sub>, a) = closure (A → .aA, a|b)</p>
+<ul style="list-style-type: square;">
+<li class="mb-4">A → a.A, a|b</li>
+<li class="mb-4">A → .b, a|b</li>
+</ul>
+<p>= Goto (I<sub>3 </sub>, a) = closure (A → .aA, a|b) <strong>(Same as I<sub>3</sub>)</strong></p>
+<p>I<sub>4</sub> = Goto (I<sub>0 </sub>, b) = closure (A → .b , a|b)</p>
+<ul style="list-style-type: square;">
+<li>A → b. , a|b</li>
+</ul>
+<p>= Goto (I<sub>3 </sub>, b) = closure (A → b., a|b) <strong>(Same as I<sub>4</sub>)</strong></p>
+<p>I<sub>5</sub> = Goto (I<sub>2 </sub>, A) = closure (S → AA., $)</p>
+<ul style="list-style-type: square;">
+<li>S → AA. , $</li>
+</ul>
+<p>I<sub>6 </sub>= Goto (I<sub>2 </sub>, a) = closure (A → a.A, $)</p>
+<ul style="list-style-type: square;">
+<li class="mb-4">A → a.A, $</li>
+<li>A → .aA, $</li>
+<li class="mb-4">A → .b, $</li>
+</ul>
+<p>= Goto (I<sub>6 </sub>, a) = closure (A → a.A, $) <strong>(Same as I<sub>6</sub>)</strong></p>
+<p>I<sub>7</sub> = Goto (I<sub>2 </sub>, b) = closure (A → b. , $)</p>
+<ul style="list-style-type: square;">
+<li>A → b. , a|b</li>
+</ul>
+<p>= Goto (I<sub>6 </sub>, b) = closure (A → b., $) <strong>(Same as I<sub>7</sub>)</strong></p>
+<p>I<sub>8</sub> = Goto (I<sub>3 </sub>, A) = closure (A → aA., a|b)</p>
+<ul style="list-style-type: square;">
+<li>A → aA., a|b</li>
+</ul>
+<p>I<sub>9</sub> = Goto (I<sub>6 </sub>, A) = closure (A → aA., $)</p>
+<ul style="list-style-type: square;">
+<li>A → aA., $</li>
+</ul>
+<p>Above are the LR(1) item sets for the given grammar.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p data-start="1452" data-end="1574">How do you represent recursion in an activation tree? Generate the three-address code for the following instruction:</p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center"></div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">n = (a + b) * (c - d);
+for(i = 0; i < n; i++) {
+    for(j = 0; j < n; j++) {
+        x = n + i + j;
+    }
+}
+</pre>
+<p> </p>
+</div>
+</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="mb-4">An Activation tree is a tree structure used to represent function calls and their activation during program execution.</p>
+<p class="mb-4">When a function calls itself, i.e., recursion, the activation tree shows multiple instances of the function at different levels.</p>
+<p class="mb-4">Given instruction:</p>
+<p class="mb-4">n = (a + b) * (c &#8211; d)<br />
+for (i = 0; i &lt; n; i++)<br />
+{<br />
+for (j = 0; j &lt; n; j++)<br />
+{<br />
+n = n + i + j;<br />
+}<br />
+}</p>
+<p class="mb-4">Three address code representation:</p>
+<p class="mb-4">t1 = a + b;<br />
+t2 = c &#8211; d;<br />
+n = t1 * t2;<br />
+L1: j = 0;<br />
+if j &gt;= n goto L2;<br />
+i = 0;<br />
+L3: if j &gt;= n goto L4;<br />
+x = a + i + j<br />
+j = j + 1<br />
+goto L3<br />
+L4: i = i + 1<br />
+goto L1<br />
+L2:</p>
+<div class="absolute bottom-0 right-0 p-2"></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the techniques for compiler optimization? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="mb-4"><span class="font-bold"><strong>Code Optimization</strong>:</span> Code optimization is the process of improving the efficiency of code by making it run faster, consume less memory, or use fewer resources while preserving the original functionality and output. The goal is to enhance the performance of the code without altering its expected behavior.</p>
+<p class="font-bold mb-2">Common Code optimization techniques:</p>
+<ol style="list-style-type: lower-alpha;">
+<li class="mb-2"><span class="font-bold"><strong>Constant Folding</strong>:<br />
+</span>In this technique, it involves folding the constants. The expressions that contain the operands having constant values at compile time are evaluated. These expressions are then replaced with their respective results.<br />
+E.g., circumference of circle = (22/7) x Diameter. Here, this technique evaluates the expression 22/7 at compile time. The expression is then replaced with its result 3.14. This saves time at run time.</li>
+<li class="text-lg font-bold mb-4"><strong>Dead Code Elimination</strong>:<br />
+In this technique, it involves eliminating the dead code. The statements are the codes which either never executes or are unreachable, or their output is never used are eliminated.<br />
+Eg: <span class="font-bold">Code before optimization</span> <span class="font-bold">Code after optimization<br />
+</span>i = 0;<br />
+if (i == 1)<br />
+a = x + 5;<br />
+y = 7;</p>
+<p>i = 0;</li>
+<li class="text-lg font-bold mb-4"><strong>Strength Reduction</strong>:<br />
+Here, it involves reducing the strength of expression. This technique replaces the expensive and costly operators with simple and cheaper ones.<br />
+Eg: <span class="font-bold">Code before optimization</span> <span class="font-bold">Code after optimization<br />
+</span>B = A * 2;</p>
+<p>B = A + A;</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Describe the synthesized attribute and inherited attribute with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="mb-4">
+<p class="mb-2"><span class="font-bold"><strong>Synthesized attribute</strong>:</span></p>
+<p class="mb-2">Synthesized attributes are those attributes which are computed using child nodes in a parse tree. Here, the direction of information flows upward from a child to parent. It is commonly used for value computation and type checking. The dependency is only on attributes of children.</p>
+<p class="ml-4 mb-2">For e.g. E → E1 + T</p>
+<p class="ml-4">E.val = E1.val + T.val</p>
+</div>
+<div>
+<p class="mb-2"><span class="font-bold"><strong>Inherited attribute</strong>:</span></p>
+<p class="mb-2">Inherited attributes are those attributes which are computed using parent and/or sibling nodes. Here, the information flows downward from parent to child or sideways between siblings. These are useful in enforcing contextual constraints (e.g. type compatibility). The dependency is on the attributes of parents or siblings.</p>
+<p class="ml-4 mb-2">For e.g. S → A B</p>
+<p class="ml-4">A.type = S.type</p>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is a type expression? List the properties of LL(1) grammar.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="mb-4">
+<p class="mb-2"><strong>Type expression</strong>:</p>
+<p class="ml-4">A type expression is a symbolic representation of a data type in a programming language, commonly used in type checking and semantic analysis.</p>
+</div>
+<div class="mb-4">
+<p class="mb-2">A type expression can be:</p>
+<ul class="list-disc ml-8">
+<li class="mb-2">A basic type:
+<ul class="list-disc ml-8">
+<li class="mb-2">A primitive data type such as int, real, bool etc.</li>
+</ul>
+</li>
+<li class="mb-2">A type name:
+<ul class="list-disc ml-8">
+<li class="mb-2">A name can be used to denote a type expression.</li>
+</ul>
+</li>
+<li class="mb-2">A type constructor:
+<ul class="list-disc ml-8">
+<li class="mb-2">arrays</li>
+<li class="mb-2">products</li>
+<li class="mb-2">pointers</li>
+<li class="mb-2">functions</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mb-4">
+<p class="mb-2">Properties of LL(1) grammar:</p>
+<ol class="list-decimal ml-8">
+<li class="mb-2">No Left Recursion</li>
+<li class="mb-2">No Ambiguity</li>
+<li class="mb-2">Non-conflicting FIRST and FOLLOW sets</li>
+<li class="mb-2">Deterministic Parsing Table</li>
+<li class="mb-2">Top-down Parsable</li>
+</ol>
+</div>
+</div>
+</body></html>

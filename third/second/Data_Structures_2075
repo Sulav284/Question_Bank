@@ -1,0 +1,403 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>DS Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions:(2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What is S-D cut? For the following network flow find the maximal flow from S to D.</p>
+<p> </p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5692  aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/scut-question-2075-min.jpg?resize=440%2C221&ssl=1" alt="What is S-D cut? For the following network flow find the maximal flow from S to D." width="440" height="221" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/scut-question-2075-min.jpg?w=1000&ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/scut-question-2075-min.jpg?resize=768%2C386&ssl=1 768w" sizes="auto, (max-width: 440px) 100vw, 440px" /></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A S-D cut of transparent network is edge whose removal will divide the network into two halves X and x̅ where</p>
+<ul style="list-style-type: square;">
+<li>Source vertext S ∈ X</li>
+<li>Sink Vertex D ∈ X</li>
+</ul>
+<p>It is denoted by (X, Y)</p>
+<p>Let&#8217;s find maximum flow from S to D using S-D cut method.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 312px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">X</td>
+<td style="width: 25%; height: 24px;">Y</td>
+<td style="width: 25%; height: 24px;">cuts(X, Y)</td>
+<td style="width: 25%; height: 24px;">Capacity K(X, Y)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S}</td>
+<td style="width: 25%; height: 24px;">{a, b, c, d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a), (S, c)}</td>
+<td style="width: 25%; height: 24px;">15 + 15 = 30</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a}</td>
+<td style="width: 25%; height: 24px;">{b, c, d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, c), (a, b), (a, f)}</td>
+<td style="width: 25%; height: 24px;">15 + 7 + 9 = 31</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, c}</td>
+<td style="width: 25%; height: 24px;">{a, b, d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a), (c, b), (c, d)}</td>
+<td style="width: 25%; height: 24px;">37</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b}</td>
+<td style="width: 25%; height: 24px;">{c, d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, c), (a, f), (b, d), (b, f)}</td>
+<td style="width: 25%; height: 24px;">34</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, c}</td>
+<td style="width: 25%; height: 24px;">{a, d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a), (b, d), (b, e), (b, f)}</td>
+<td style="width: 25%; height: 24px;">40</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, c, d}</td>
+<td style="width: 25%; height: 24px;">{a, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a), (b, e), (b, f), (d, D)}</td>
+<td style="width: 25%; height: 24px;">45</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, c}</td>
+<td style="width: 25%; height: 24px;">{d, e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(a, f), (b, f), (b, e), (f, D)}</td>
+<td style="width: 25%; height: 24px;">34</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, f}</td>
+<td style="width: 25%; height: 24px;">{c, d, e, D}</td>
+<td style="width: 25%; height: 24px;">{(S, c), (b, d), (e, d), (f, D)}</td>
+<td style="width: 25%; height: 24px;">45</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, e, f}</td>
+<td style="width: 25%; height: 24px;">{c, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, c), (b, d), (e, d), (e, D), (f, D)}</td>
+<td style="width: 25%; height: 24px;">44</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, c, d, e, f}</td>
+<td style="width: 25%; height: 24px;">{D}</td>
+<td style="width: 25%; height: 24px;">{c, d, D}{(d, D), (c, b), (f, D)}</td>
+<td style="width: 25%; height: 24px;">35</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, c, d}</td>
+<td style="width: 25%; height: 24px;">{e, f, D}</td>
+<td style="width: 25%; height: 24px;">{(a, f), (b, e), (b, f), (d, D)}</td>
+<td style="width: 25%; height: 24px;">39</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, c, d, e}</td>
+<td style="width: 25%; height: 24px;">{a, f, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a), (b, f), (d, D), (e, f), (e, D)}</td>
+<td style="width: 25%; height: 24px;">44</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, the minimum cut  = 30</p>
+<p>So, by minimum cut, Maximum flow is 30</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Consider a set U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. What will be the computer representation for set containing the numbers which are multiple of 3 not exceeding 6? Describe injective, Surjective and bijective function with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given, Set U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
+<p>Here, we know the set containing the numbers which are multiple of 3 not exceeding is {3, 6}</p>
+<p>And its computer representation is its corresponding bit string i.e.</p>
+<p style="text-align: center;">0 0 1 0 0 1 0 0 0 0</p>
+<p>Let A and B be two non-empty sets. A function f from A to B is set of ordered pairs with the property that for each element x ∈ A there is a unique element y ∈ B.</p>
+<p><span style="text-decoration: underline;"><strong>Injective Function:</strong></span></p>
+<p>A function \(f : A \to B\) is said to be is said to be <b class="terminology">injective</b> (or <b class="terminology">one-to-one</b>, or <b class="terminology">1-1</b>) if for any x, y ∈ A, f(x) = f(y) impiles x = y.</p>
+<p>All this means is that for a function to be one-to-one every distinct element in A has a distinct image in B.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5701 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/1200px-Injection.svg_.png?resize=215%2C215&#038;ssl=1" alt="" width="215" height="215" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/1200px-Injection.svg_.png?w=1200&amp;ssl=1 1200w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/1200px-Injection.svg_.png?resize=1024%2C1024&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/1200px-Injection.svg_.png?resize=768%2C768&amp;ssl=1 768w" sizes="auto, (max-width: 215px) 100vw, 215px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Surjective  Function:</strong></span></p>
+<p>If every element b in B has a corresponding element a in A such that f(a) = b. It is not required that a is unique; The function f may map one or more elements of A to the same element of B.</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Bijective Function:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-5700 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/180px-Surjection.svg_.png?resize=180%2C180&#038;ssl=1" alt="Surjective Example" width="180" height="180" /></p>
+<p>A fnction f from A to B is said to be bijective if it is both injective and surjective.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5699" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Bijection.svg_.png?resize=212%2C212&#038;ssl=1" alt="Bijective Function Example" width="212" height="212" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Bijection.svg_.png?w=1200&amp;ssl=1 1200w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Bijection.svg_.png?resize=1024%2C1024&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Bijection.svg_.png?resize=768%2C768&amp;ssl=1 768w" sizes="auto, (max-width: 212px) 100vw, 212px" /></p>
+<p>If function is bijective, its inverse exists.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Compute the following values.</p>
+<p>a. 3 mod 4          b. 7 mod 5           c. -5 mod 3           d. 11 mod 5          e. -8  mod 6</p>
+<p>Write down the recursive algorithm to find the value of b<sup>n</sup> and prove its correctness using induction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>a) 3 mod 4</p>
+<p>= 3 (mod 4)</p>
+<p>= 3</p>
+<p>b) 7 mod 5</p>
+<p>= 7 (mod 5)</p>
+<p>= 2</p>
+<p>c) 11 mod 5</p>
+<p>= 11 (mod 5)</p>
+<p>= 1</p>
+<p>d) -8 mod 6</p>
+<p>= -8 (mod 6)</p>
+<p>= 4</p>
+<p><span style="text-decoration: underline;"><strong>Algorithm Part:</strong></span></p>
+<p>A recursion algorithm for b<sup>n</sup></p>
+<p>Here, the power function can be defined recursively as:-</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Base case: a<sup>0</sup> = 1</li>
+<li>Recursive definition: b<sup>n</sup> = b.b<sup>n-1</sup> for b &gt; 1</li>
+</ol>
+<p>power (b, nb)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. Start
+2. If (n == 0)
+       return 1;
+   else
+       return b*power(b, n-1)
+3. End</pre>
+<p><span style="text-decoration: underline;"><strong>Proof by induction</strong></span></p>
+<p>Base case: If n = 0, b<sup>0</sup> = 1</p>
+<p>Here, power(b, 0) = 1</p>
+<p>Inductive Step:</p>
+<p>Algotithm computes b<sup>k+1</sup></p>
+<p>Suppose, power(b, k) = b<sup>k</sup> ∀ b <b>≠ </b>0 and k is +ve integer</p>
+<p>Now,</p>
+<p>To show power (b, k+1) = b<sup>k+1</sup></p>
+<p>By inductive gypothesis,</p>
+<p>power(b, k+1) = b × b<sup>k</sup> = b<sup>k+1</sup></p>
+</div>
+<h2>Group B: Attempt any eight questions:(8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>Solve the recurrence relation a<sub>n</sub> = 5a<sub>n-1</sub> – 6a<sub>n-2 </sub>with initial conditions a<sub>0 </sub>= 1 and a<sub>1 </sub>= 2.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given recursion relation</p>
+<p>a<sub>n</sub> = 5a<sub>n-1</sub> &#8211; 6a<sub>n-2</sub></p>
+<p>Here, degree  = 2</p>
+<p>Now, the characteristics Equation is</p>
+<p>r<sup>2</sup> = 5r &#8211; 6</p>
+<p>or, r<sup>2</sup> &#8211; 5r + 6 = 0</p>
+<p>or, (r-2)(r-3) = 0</p>
+<p>We get, r = 2,3</p>
+<p>Let say r1 = 2 and r2 = 3</p>
+<p>Noe, the general solution of the homogeneous equations</p>
+<p>a<sub>n</sub> = A<sub>1</sub>r1<sup>n</sup> + A<sub>2</sub> r2<sup>n</sup> Where, A<sub>1</sub> and A<sub>2</sub> are scalar</p>
+<p>or, a<sub>n</sub> = A<sub>1</sub>2<sup>n</sup> + A<sub>2</sub>3<sup>n</sup>   &#8230;&#8230;&#8230;.. (i)</p>
+<p>Given initial contions</p>
+<p>a<sub>0</sub> = 1 🡲 n = 0</p>
+<p>a<sub>0</sub> = A<sub>1</sub>2<sup>0</sup> + A<sub>2</sub>3<sup>0</sup></p>
+<p>or, A<sub>1</sub> + A<sub>2</sub> = 1  &#8212;&#8212;&#8212; (ii)</p>
+<p>Also, a<sub>1</sub> = 2 🡲 n = 1</p>
+<p>a<sub>1</sub> = A<sub>1</sub>2<sup>1</sup> + A<sub>2</sub>3<sup>1</sup></p>
+<p>2A<sub>1</sub> + 3A<sub>2</sub> = 2  &#8212;&#8212;&#8212;-(iii)</p>
+<p>Solving Equation (ii) and (iii)</p>
+<p>A<sub>2</sub> = 0 and A<sub>1</sub> = 1</p>
+<p>From Equation, the general solution is</p>
+<p>a<sub>n</sub> = 2<sup>n</sup> + 0 × 3<sup>n</sup></p>
+<p>a<sub>n</sub> = 2<sup>n</sup></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Find the value of x such that x = 1 (mod 5) and x = 2 (mod 7) using Chinese remainder theorem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here, x = a (mod 5)</p>
+<p>x = 2 (mod 7)</p>
+<p>We know, linear congurency is of form x = a<sub>n</sub> ( mod m<sub>n</sub>) where n is an integer</p>
+<p>So, Let us suppose</p>
+<p>a<sub>1</sub> = 1         m<sub>1</sub> = 5</p>
+<p>a<sub>2</sub> = 2       m<sub>2</sub> = 7</p>
+<p>Now,</p>
+<p>m = m<sub>1</sub> × m<sub>2</sub></p>
+<p>or, m = 5 × 7</p>
+<p>or, m = 35</p>
+<p>Also,</p>
+<p>M<sub>1</sub> = \(\frac{m}{m_1}\) = 35/5 = 7</p>
+<p>M<sub>2</sub> = \(\frac{m}{m_2}\) = 35/7 = 5</p>
+<p>Now, we need to find the inverse of M<sub>1</sub> mod m<sub>1</sub> and M<sub>2</sub> mod m<sub>2</sub></p>
+<p>Here, to find inverse of 7 mod 5</p>
+<p>7 × 0 = 0 (mod 5)</p>
+<p>7 × 1 = 2 (mod 5)</p>
+<p>7 × 2 = 4 (mod 5)</p>
+<p>7 × 3 = 1 (mod 5)</p>
+<p>Therefore, 3 is the inverse of 7 mod 5.</p>
+<p>Let y<sub>1</sub> = 3</p>
+<p>Also, to find inverse of 5 mod 7</p>
+<p>5 × 0 = 0 (mod 7)</p>
+<p>5 × 1 = 5 (mod 7)</p>
+<p>5 × 2 = 3 (mod 7)</p>
+<p>5 × 3 = 1 (mod 7)</p>
+<p>So, inverse is 3</p>
+<p>Let y<sub>2</sub> = 3</p>
+<p>We get,</p>
+<p>a<sub>1</sub> = 1      M<sub>1</sub> = 7    y<sub>1</sub> = 3</p>
+<p>a<sub>2</sub> = 2     M<sub>2</sub> = 5    y<sub>2</sub> = 3</p>
+<p>The solutions to these systems are those x such that</p>
+<p>x = a<sub>1</sub>M<sub>1</sub>y<sub>1</sub> + a<sub>2</sub>M<sub>2</sub>y<sub>2</sub> (mod m)</p>
+<p>x = 1 × 7 × 3 + 2 × 5 × 3 (mod 35)</p>
+<p>x = 51 (mod 35)</p>
+<p>x = 16 (mod 35)</p>
+<p>Hence, we concolude that 16 is the smallest +ve integer that leaves remainder 1 when divided by 5 and 2 when divided by 7.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Prove that 5<sup>n</sup>-1 is divisible by 4 using mathematical induction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let, p(n) = 5<sup>n</sup> &#8211; 1</p>
+<p><span style="text-decoration: underline;"><strong>Basis Step:</strong></span></p>
+<p>We show, p(1) is true</p>
+<p>i.e. p(1) = 5<sup>1</sup> &#8211; 1</p>
+<p>= 4 which is divisible by 4</p>
+<p>so p(1) is true</p>
+<p><span style="text-decoration: underline;"><strong>Inductive Step:</strong></span></p>
+<p>Suppose for any arbitary value k, p(k) is true</p>
+<p>i.e. p(k): 5<sup>k</sup> &#8211; 1 = 4a, where, a is an integer</p>
+<p>or, 5<sup>k</sup> = 4a + 1</p>
+<p>Now, we need to show p(k+1) is divided by 4</p>
+<p>p(k+1) = 5<sup>k+1</sup> &#8211; 1</p>
+<p>= 5<sup>k</sup>.5 &#8211; 1</p>
+<p>= (4a+1).5 -1</p>
+<p>= 20a + 5 &#8211; 1</p>
+<p>= 20a + 4</p>
+<p>= 4(5a + 1)</p>
+<p>Here, it is divisible by 4</p>
+<p>So, by mathematical induction</p>
+<p>5<sup>n-1</sup> is divisible by 4</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Let A = “Aldo is Italian” and B = “Bob is English”. Formalize the following sentences in proposition.</p>
+<ol>
+<li>Aldo isn’t Italian.</li>
+<li>Aldo is Italian while Bob is English.</li>
+<li>If Aldo is Italian then Bob Bob is not English.</li>
+<li>Aldo is Italian or if Aldo isn’t Italian then Bob is English.</li>
+<li>Either Aldo is Italian and Bob is English, or neither Aldo is Italian nor Bob is English.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a)  Aldo isn&#8217;t Italian.</p>
+<p>⟹   ¬ A</p>
+<p>b)  Aldo is Italian while Bob is English.</p>
+<p>⟹   A ∧ B</p>
+<p>c) If Aldo is Italian then Bob Bob is not English.</p>
+<p>⟹   A → ¬ B</p>
+<p>d)  Aldo is Italian or if Aldo isn&#8217;t Italian then Bob is English.</p>
+<p>⟹  A ∨ ( ¬ A → B)</p>
+<p>Logically equivalent to A ∨ B</p>
+<p>e) Either Aldo is Italian and Bob is English, or neither Aldo is Italian nor Bob is English.</p>
+<p>⟹   (A ∧ B) ∨ ( ¬ A ∧ ¬ B )</p>
+<p>Logically equivalent to A ⇿ B</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define Eular path and Hamilton path with examples. Draw the Hasse diagram for the divisible relation on the set { 1, 2, 5, 8, 16, 32} and find the maximal, minimal, greatest and least element if exist.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Eular Path:</strong></span></p>
+<p>A simple path in a graph G that passes through every edge once and only once is called eular path. An euler circuit is an Eular path that returns to its starting vertex.</p>
+<p>A connected multigraph has an Eular path but not an euler circuit if and only if it has at most (max) two vertices of odd degree.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5666" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/eular_path.jpg?resize=244%2C148&#038;ssl=1" alt="Eular Path | HAMROCSIT" width="244" height="148" /></p>
+<p style="text-align: center;">a → c → d → e → b → d → a → b</p>
+<p>Here, it passes throughall edges only once. No edge is repeated</p>
+<p><span style="text-decoration: underline;"><strong>Hamilton Path:</strong></span></p>
+<p>A simple path in a graph G that passes through every vertex exactly once is called a hamilton path.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5724" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/hamilton-path.jpg?resize=222%2C202&#038;ssl=1" alt="Hamilton Graph | HAMROCSIT" width="222" height="202" /></p>
+<p style="text-align: center;">a, b, c d    or    a, b, d, c</p>
+<p>Here, it passes through every vertices and no vertices is repeacted. So, it is hamilton path.</p>
+<p><span style="text-decoration: underline;"><strong>Diagram Part:</strong></span></p>
+<p>Given set, {1, 2, 5, 8, 16, 32}</p>
+<p>According to the given question, we have to find the poset for the divisibility.</p>
+<p>Let, the set is A</p>
+<p>A = {(1, 2), (1, 5), (1, 8), (1, 16), (1, 32), (2, 8), (2, 16), (2, 32), (8, 16), (8, 32), (16, 32)}</p>
+<p>So, now the hasse diagram will be</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5723 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/hasse-graph.jpg?resize=342%2C194&#038;ssl=1" alt="" width="342" height="194"></p>
+<p>Here,</p>
+<p>Maximum = 5, 32</p>
+<p>Greatest = Do not exists</p>
+<p>Minimum = 1</p>
+<p>Least  = 1</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What does primality testing means? Describe how Fermat’s Little Theorem tests for a prime number with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Primality testing is a process of determining whether a given positive integer is a prime number or not. A prime number is a natural number greater than 1 that has no positive integer divisors other than 1 and itself. Primality testing is an important problem in number theory and has practical applications in cryptography and computer science.</p>
+<p>Fermat&#8217;s Little Theorem is a primality test based on the observation that if p is a prime number and a is any integer not divisible by p, then a^(p-1) is congruent to 1 modulo p. In other words, a^(p-1) % p = 1. This theorem provides a necessary but not sufficient condition for a number to be prime. If a number n does not satisfy the theorem, then n is definitely composite, but if it does satisfy the theorem, then n may be prime or composite. Therefore, Fermat&#8217;s Little Theorem is used as a probabilistic primality test, where the probability of a composite number passing the test is low.</p>
+<p>Here is a simple example of using Fermat&#8217;s Little Theorem to test whether 17 is a prime number or not:</p>
+<p>Let a = 2 and p = 17. Then, according to Fermat&#8217;s Little Theorem:</p>
+<p>2^(17-1) % 17 = 1</p>
+<p>2^16 % 17 = 1</p>
+<p>Computing 2^16 % 17, we get:</p>
+<p>2^16 % 17 = 65536 % 17 = 1</p>
+<p>Since 2^(17-1) % 17 = 1, we conclude that 17 may be prime. To increase the confidence that 17 is prime, we can repeat the test with different values of a, such as a = 3, 4, 5, etc. If all values of a satisfy Fermat&#8217;s Little Theorem, then the probability of 17 being composite is very low. However, if any value of a fails the test, then we conclude that 17 is definitely composite.</p>
+<p>In general, Fermat&#8217;s Little Theorem can be used to test for primality of large numbers by randomly choosing values of a and checking if a^(n-1) % n = 1. If n passes the test for several different values of a, then it is likely that n is a prime number.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>List any two applications of conditional probability. You have 9 families you would like to invite to a wedding. Unfortunately, you can only invite 6 families. How many different sets of invitations could you write?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The probability that an event A occurs given that event E has already occured written as p(A|E) and read as the conditional probability of A given E is</p>
+<p>\(p(\frac{A}{E}) = \frac{p(A∩E)}{p(E)}\) , p(E) &gt; 0</p>
+<p>Its two applications are</p>
+<ol style="list-style-type: lower-roman;">
+<li>Diagonosis of medical conditions (Sensitivity | Specificity)</li>
+<li>Data analysis and model comparision</li>
+<li>In Baye&#8217;s theorem and Markob process</li>
+</ol>
+<p>Here, given</p>
+<p>Total families = 9</p>
+<p>Families I can invite = 6</p>
+<p>Total set of invitation I could write = p C 6</p>
+<p>= \(\frac{9!}{(9-6)! \times 6!}\)</p>
+<p>= 84</p>
+<p>So, 84 different set of invitations can be writtenby me.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define spanning tree and minimum spanning tree. Mention the conditions for two graphs for being isomorphic with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let G be a simple graph. A spanning tree of G is a subgroup of G that is a tree containing all vertex of G.</p>
+<p>Spanning tree has n vertices and n-1 edges as compared to graph G.</p>
+<p>A minimum spanning tree is a subgraph of a weighted graph G that includes all vertices of graph G and has minimum weight than all other Spanning trees of the same graph.</p>
+<p>Two graphs are said to be isomorphic if they are perhaps the same graphs just drawn differently with different names. i.e. they have identical behaviour for anu graph theoretic property.</p>
+<p>Some conditions for two graphs to be isomorphic are:-</p>
+<ol style="list-style-type: lower-roman;">
+<li>Both graphics should have same number of vertices<br />
+i.e. |v<sub>1</sub>| = |v<sub>2</sub>|</li>
+<li>No. of edges of both graphs soluld be Equal<br />
+i.e. |E<sub>1</sub>| = |E<sub>2</sub>|</li>
+<li>Both graphs should have same sequences and vertices of both graphics should have same degrees.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5733 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/isomorphic.jpg?resize=517%2C259&#038;ssl=1" alt="Isomorphic graph | Discrete Structure | HAMROCSIT" width="517" height="259" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/isomorphic.jpg?w=1000&amp;ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/isomorphic.jpg?resize=768%2C384&amp;ssl=1 768w" sizes="auto, (max-width: 517px) 100vw, 517px" /></p>
+<ul style="list-style-type: square;">
+<li>Both have same no. of vertices</li>
+<li>Both have same no. of edges</li>
+</ul>
+<p style="text-align: center;">Degree</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">G1</p>
+<p>deg(a) = 3</p>
+<p>deg(b) = 2</p>
+<p>deg(c) = 3</p>
+<p>deg(d) = 3</p>
+<p>deg(e) = 1</td>
+<td style="width: 50%; text-align: center;">G2</p>
+<p>deg(v2) = 3</p>
+<p>deg(v4) = 2</p>
+<p>deg(v5) = 3</p>
+<p>deg(v3) = 3</p>
+<p>deg(v1) = 1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence, they are isomorphic.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Prove that the product xy is odd if and only if both x and y are odd integers .</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let us suppose,</p>
+<p>p = x and y are odd</p>
+<p>q = xy is odd</p>
+<p>i.e. p → q</p>
+<p><span style="text-decoration: underline;"><strong>First Case:</strong></span> p → q (direct proof)</p>
+<p>If x and y are odd then xy is odd. By the definition of odd integers, Ǝ integers a, b.</p>
+<p>x = 2a + 1   and  y = 2b + 1</p>
+<p>xy = (2a + 1) (2b + 1)</p>
+<p>= 4ab + 2a + 2b + 1</p>
+<p>= 2(2ab + a + b) + 1</p>
+<p>= 2c + 1,   for some integer c</p>
+<p>Here, x is also odd by direct proof</p>
+<p><span style="text-decoration: underline;"><strong>Second Case:</strong></span><strong> </strong>¬ q → ¬ p  (indirect proof)</p>
+<p>The product xy is odd if and only if x and y are odd.</p>
+<p>p = product xy is odd</p>
+<p>q = x and y are odd</p>
+<p>Let us suppose, x and y are even</p>
+<p>Now, We prove: ¬ q → ¬ p</p>
+<p>By definition of even integers Ǝ integers a, b</p>
+<p>x = 2a   and   y  = 2b</p>
+<p>xy = 2a × 2b</p>
+<p>= 4ab</p>
+<p>= 2 (2ab)</p>
+<p>= 2c,   for some integers</p>
+<p>So, xy is even</p>
+<p>Hence, by contraposition we can  say xy is odd</p>
+<p>Therefore, By direct proof and contraposition, the product xy is odd if and only if x and y is odd.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

@@ -1,0 +1,185 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DAA Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>DAA Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the divide and conquer strategy for problem solving. Describe the worst-case linear time selection algorithm and analyze its complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="chat-history-scroll-container ng-tns-c2986941623-2 show-bottom-shadow ng-trigger ng-trigger-resetChat">
+<div class="conversation-container ng-tns-c2986941623-2 narrow-container ng-star-inserted">
+<div class="ng-tns-c925632344-16">
+<div class="response-container ng-tns-c2689711473-17 response-container-has-multiple-responses">
+<div class="presented-response-container ng-tns-c2689711473-17">
+<div class="response-container-content ng-tns-c2689711473-17">
+<div class="response-content ng-trigger ng-trigger-responsePopulation ng-tns-c2689711473-17">
+<div class="markdown markdown-main-panel" dir="ltr">
+<p data-sourcepos="1:1-1:161">The divide-and-conquer strategy is a problem-solving approach that breaks down a complex problem into smaller, more manageable subproblems. These subproblems are then solved recursively, and their solutions are combined to solve the original problem. This strategy is often used in computer science to design efficient algorithms.</p>
+<p data-sourcepos="3:1-3:12">Three steps of the divide-and-conquer strategy:</p>
+<ol data-sourcepos="5:1-6:12">
+<li data-sourcepos="5:1-5:58">Divide: Break the problem into smaller subproblems.</li>
+<li data-sourcepos="6:1-6:12">Conquer: Solve the subproblems recursively.</li>
+<li data-sourcepos="7:1-8:0">Combine: Combine the solutions to the subproblems to solve the original problem.</li>
+</ol>
+<p data-sourcepos="9:1-9:15">The divide-and-conquer strategy is an effective way to solve problems that have the following properties:</p>
+<ul data-sourcepos="11:1-14:0">
+<li data-sourcepos="11:1-11:75">The problem can be broken down into smaller subproblems of the same type.</li>
+<li data-sourcepos="12:1-12:60">The subproblems can be solved independently of each other.</li>
+<li data-sourcepos="13:1-14:0">The solutions to the subproblems can be combined to solve the original problem.</li>
+</ul>
+<p data-sourcepos="15:1-15:121">The divide-and-conquer strategy is often used to design algorithms for sorting, searching, and multiplying large numbers.</p>
+<p data-sourcepos="17:1-17:45">Worst-Case Linear Time Selection Algorithm</p>
+<p data-sourcepos="19:1-19:158">The worst-case linear time selection algorithm is a simple algorithm for selecting the kth smallest element in an unsorted array. The algorithm works by first partitioning the array into two subarrays of equal size, such that all elements in the first subarray are less than or equal to all elements in the second subarray. The algorithm then recursively selects the kth smallest element in the subarray that contains the kth smallest element of the original array.</p>
+<p data-sourcepos="21:1-21:237">The worst-case time complexity of the worst-case linear time selection algorithm is O(n), where n is the number of elements in the array. This is because the algorithm always takes n steps to partition the array, regardless of the input.</p>
+<p data-sourcepos="23:1-23:25"><span style="font-size: 12pt;">Analysis of Complexity</span></p>
+<p data-sourcepos="25:1-25:308">The time complexity of an algorithm is a measure of how long it takes the algorithm to run as a function of the size of its input. The time complexity of an algorithm is typically expressed using Big O notation, which describes the upper bound of the algorithm&#8217;s running time as a function of the input size.</p>
+<p data-sourcepos="27:1-27:230">The time complexity of the worst-case linear time selection algorithm is O(n), where n is the number of elements in the array that means that the algorithm will always take at most O(n) steps to complete, regardless of the input.</p>
+<p data-sourcepos="29:1-29:127">The worst-case linear time selection algorithm is an example of an algorithm with a linear time complexity that means that the algorithm&#8217;s running time increases linearly with the size of its input.</p>
+<p data-sourcepos="31:1-31:87">
+</div>
+<div class="response-footer ng-tns-c925632344-16 gap complete">
+<div class="sources-list-container"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write the dynamic programming algorithm for matrix chain multiplication. Find the optimal parenthesization for the matrix chain product ABCD with size of each is given as A<sub>5×10 </sub>, B<sub>10×15</sub> , C<sub>15×20</sub> , D<sub>20×30</sub></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The dynamic programming algorithm for matrix chain multiplication is a method for finding the minimum number of scalar multiplications required to multiply a chain of matrices. The algorithm works by building a table that stores the minimum number of scalar multiplications required to multiply all possible sub chains of the given chain.</p>
+<p>Algorithm for dynamic programming algorithm for matrix chain multiplication.</p>
+<p>1.start</p>
+<p>2.Create a table M of size (n+1) x (n+1), where n is the number of matrices and fill the diagonal of the table with 0s.</p>
+<p>3.For each subproblem (i, j), where 1 ≤ i ≤ j ≤ n, calculate the minimum number of scalar multiplications required to multiply matrices A_i, A_{i+1}, &#8230;, A_j using the following formula:</p>
+<p>M[i , j] = min{M[i , k] + M[k+1, j] + p_i *p_{k+1} *p_j}</p>
+<p>4.Once the table is filled, the optimal parenthesization can be found by tracing back through the table.</p>
+<p>5.stop</p>
+<p>2nd pard</p>
+<p>To find the optimal parenthesization for the matrix chain product ABCD with given sizes, you can use dynamic programming to minimize the number of scalar multiplications. The goal is to find the optimal way to parenthesize the matrices to minimize the overall cost.</p>
+<p>Let&#8217;s denote the matrices as follows:</p>
+<ul style="list-style-type: square;">
+<li>A: 5&#215;10</li>
+<li>B: 10&#215;15</li>
+<li>C: 15&#215;20</li>
+<li>D: 20&#215;30</li>
+</ul>
+<div class="w-full text-token-text-primary" data-testid="conversation-turn-4">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] } group">
+<div class="flex-shrink-0 flex flex-col relative items-end">
+<div>
+<div class="pt-0.5">
+<div class="gizmo-shadow-stroke flex h-6 w-6 items-center justify-center overflow-hidden rounded-full"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28377" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/1f9461dd-a580-45df-a837-2f88d5f67bbf.jpg?resize=919%2C1147&#038;ssl=1" alt="" width="919" height="1147"></div>
+<div><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28380" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/32678020-0627-4c15-a324-40f2fc0a0a65.jpg?resize=916%2C1199&#038;ssl=1" alt="" width="916" height="1199"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you mean by Backtracking? Explain the backtracking algorithm for solving 0-1<br />
+knapsack problem and find the solution for the problem given below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27768" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/Screenshot-2023-11-30-135908.png?resize=495%2C70&ssl=1" alt="" width="495" height="70"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Backtracking is an algorithm design technique that systematically explores a set of potential solutions to a problem, by trying to build a solution step by step, and backtracking (undoing or retracing steps) whenever it finds that a partial solution is not promising.</p>
+<p>2nd part:</p>
+<p>Backtracking algorithm for solving 0-1 knapsack problem:</p>
+<p>1.start</p>
+<p>2.Sort the items by value per weight.</p>
+<p>3.Initialize the current solution to the empty set.</p>
+<p>4.Recursively explore the space of possible solutions.</p>
+<p>a. Add the current item to the current solution.</p>
+<p>b. Check if the current solution is still feasible.</p>
+<p>c. Check if the current solution is better than the best solution found so far.</p>
+<p>d. Recursively explore the rest of the space of possible solutions.</p>
+<p>e. Remove the current item from the current solution.</p>
+<p>5.The best solution found so far is the solution to the 0-1 knapsack problem.</p>
+<p>3rd part:</p>
+<ol data-sourcepos="31:1-31:83">
+<li data-sourcepos="31:1-31:83">Sort the items by value per weight. This gives us the following sorted list:</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-28185" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/011.jpg?resize=453%2C514&#038;ssl=1" alt="" width="453" height="514"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-28186" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/012.jpg?resize=458%2C437&#038;ssl=1" alt="" width="458" height="437"></p>
+</div>
+<h2>Group B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Explain the iterative algorithm to find the GCD of given two numbers and analyze its complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Algorithm to find GCD</p>
+<ol style="list-style-type:decimal;">
+<li>Start</li>
+<li>Read any two number say &#8216;m&#8217; and &#8216;n&#8217;</li>
+<li>If n==0, return the value of m as answer and stop</li>
+<li>If m==0, return the value of n as answer and stop</li>
+<li>Divide m by n and assign the remainder to r</li>
+<li>Assign the value of m to n and n to r</li>
+<li>stop</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-28182" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/Screenshot-2023-12-06-195238.png?resize=334%2C322&#038;ssl=1" alt="" width="334" height="322"></p>
+<p>Analysis:</p>
+<p>Time complexity: O(n)</p>
+<p>Space complexity: O(1)</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Generate the prefix code for the string ” CYBER CRIME” using Huffman algorithm and find the total number of bits required.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28524" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/a9c68f2a-431d-4e02-bc9a-f140c21028bc.jpg?resize=795%2C1096&#038;ssl=1" alt="" width="795" height="1096"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28525" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/11/b9664b9f-83a3-4037-b788-94af5fee8b68.jpg?resize=882%2C791&#038;ssl=1" alt="" width="882" height="791"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define tractable and intractable problem. Illustrate vertex cover problem with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Tractable problem</p>
+<p>Tractable problem is a problem that can be solved efficiently using a known algorithm. The running time of a tractable algorithm is typically polynomial in the size of the input. For example, the shortest path problem is a tractable problem because it can be solved in polynomial time using Dijkstra&#8217;s algorithm.</p>
+<p>Intractable problem</p>
+<p>An intractable problem, also known as an NP-hard problem, is a problem that is believed to not have a polynomial-time algorithm. This means that the running time of the best known algorithm for an intractable problem is exponential in the size of the input. For example, the satisfiability problem (SAT) is an intractable problem because there is no known polynomial-time algorithm for solving it.</p>
+<p data-sourcepos="5:1-5:346">The vertex cover problem is an example of an intractable problem. Given an undirected graph G, a vertex cover of G is a subset of vertices in G such that every edge in G has at least one endpoint in the subset. The vertex cover problem is NP-hard, which means that there is no known polynomial-time algorithm for solving it in general.</p>
+<p data-sourcepos="7:1-7:47">Here is an example of the vertex cover problem:</p>
+<div class="code-block ng-star-inserted">
+<pre><code class="code-container no-decoration-radius" role="text">A---B
+|   |
+C---D
+</code></pre>
+</div>
+<p data-sourcepos="15:1-15:2">In this graph, a vertex cover is {A, C}. This is because every edge in the graph has at least one endpoint in {A, C}.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Find the edit distance between the string ” ARTIFICIAL” and “NATURAL” Using dynamic programming.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-28187" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/ari.jpg?resize=720%2C492&#038;ssl=1" alt="" width="720" height="492"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Write short notes on:<br />
+a) Best, Worst and average case complexity</p>
+<p>b) Greedy Strategy</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a) Best-case complexity :  Best case time complexity refers to the minimum number of operation an algorithm needs to perform for the specific input. It is the most favourable situation for algorithm execution.</p>
+<p>Worst-case complexity : Worst case time complexity refers to the maximum number of operation an algorithm needs to perform for the specific input. It is the least favourable situation for algorithm execution.</p>
+<p data-sourcepos="11:3-11:296">Average-case complexity : The average-case complexity of an algorithm represents the average amount of resources it requires to run over all possible inputs. It takes into account the frequency of different input scenarios to provide a more realistic estimate of the algorithm&#8217;s performance.</p>
+<p data-sourcepos="11:3-11:296">b)Greedy Strategy</p>
+<p data-sourcepos="17:1-17:325">Greedy strategy is a heuristic algorithm design technique that makes a locally optimal choice at each step of the algorithm, hoping that these choices will lead to a globally optimal solution. Greedy algorithms are often simple to implement and can perform well in practice, but they may not always find the optimal solution.</p>
+<p data-sourcepos="19:1-19:312">Greedy algorithms are particularly useful for problems with overlapping subproblems, where the optimal solution for a subproblem can be directly incorporated into the optimal solution for a larger problem. For example, the Huffman algorithm, which is used to create efficient prefix codes, is a greedy algorithm.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Solve the following recurrence relations using masters method</p>
+<p>a. T(n) = 2T(n/4) + kn<sup>2</sup>, n > 1</p>
+<p>=1 ,  n=1</p>
+<p>b. T(n) = 5T(n/4) + kn , n > 1</p>
+<p>=1  ,   n=1</p>
+<p> </p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27924" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/f2.jpg?resize=501%2C553&#038;ssl=1" alt="" width="501" height="553"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27925" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/f1.jpg?resize=500%2C542&#038;ssl=1" alt="" width="500" height="542"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Solve the following linear congrvences using Chinese Remainder Theorem.<br />
+X=l (MOD 2)<br />
+X=3 (MOD 5)<br />
+x=6 (MOD 7)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27927" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/11.jpg?resize=563%2C798&#038;ssl=1" alt="" width="563" height="798"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27928" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/12.jpg?resize=565%2C861&#038;ssl=1" alt="" width="565" height="861"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27929" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/13.jpg?resize=565%2C348&#038;ssl=1" alt="" width="565" height="348"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Find the MST from following graph using Kruskal’s algorithm.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27933" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/Screenshot-2023-12-02-202714.png?resize=239%2C177&ssl=1" alt="" width="239" height="177"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-27934" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/01.jpg?resize=609%2C812&#038;ssl=1" alt="" width="609" height="812"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Trace the quick sort algorithm for sorting the array A[ ]={15,7,6,23, 18,34,25} and write it’s best and worst complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28378" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/51d48070-9e89-4cf9-a3af-dc5effabc7cd.jpg?resize=897%2C1111&#038;ssl=1" alt="" width="897" height="1111"></p>
+<p>The best-case complexity of quicksort is O(n log n). This occurs when the pivot element always divides the array into two roughly equal subarrays. In this case, the algorithm makes only log n recursive calls, and each recursive call performs a constant amount of work.</p>
+<p data-sourcepos="77:1-77:220">The worst-case complexity of quicksort is O(n^2). This occurs when the pivot element is always the smallest or largest element in the subarray. In this case, the algorithm makes n recursive calls, and each recursive call performs O(n) work.</p>
+<p data-sourcepos="79:1-79:126">Therefore, quicksort is an efficient algorithm for sorting arrays in general, but its worst-case performance can be quadratic.</p>
+</div>
+<h2>: </h2></body></html>

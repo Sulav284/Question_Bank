@@ -1,0 +1,300 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SE Question Bank 2077 2077</title>
+    </head>
+    <body>
+        <h1>SE Question Bank 2077 - 2077</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the detail tasks in a software configuration management process with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Software Configuration Management</strong> (SCM) is a process to systematically manage, organize, and control the changes in the documents, codes other entities during the Software Development Life Cycle. The primary goal is to increase productivity with minimal mistakes. SCM is a part of cross-disciplinary field of configuration management and it can accurately determine who made which revision.</p>
+<p><strong>Tasks in SCM process:</strong></p>
+<p>a. <span style="text-decoration: underline;"><strong>Configuration Identification</strong></span>:<br />
+Configuration identification is a method of determining the scope of the software system. With the help of this step, you can manage or control something even if you don&#8217;t know what it is. It is a description that contains the CSCI type (Computer Software Configuration Item), a project identifier and version information.</p>
+<p><strong>Activities during this process:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Identification of configuration Items like source code modules, test case, and requirements<br />
+specification.</li>
+<li>Identification of each CSCI in the SCM repository, by using an object-oriented approach</li>
+<li>The process starts with basic objects which are grouped into aggregate objects. Details of what, why, when and by whom changes in the test are made.</li>
+<li>Every object has its own features that identify its name that is explicit to all other objects.</li>
+<li>List of resources required such as the document, the file, tools, etc.</li>
+</ol>
+<p><strong>Example</strong>: Instead of naming a File login.php it should be named login_v1.2.php where v1.2 stands for the version number of the file. Instead of naming folder &#8220;Code&#8221; it should be named &#8220;Code_D&#8217; where D represents code should be backed up daily.</p>
+<p>b. <span style="text-decoration: underline;"><strong>Baseline</strong></span>:<br />
+A baseline is a formally accepted version of a software configuration item. It is designated and fixed at a specific time while conducting the SCM process. It can only be changed through formal change control procedures.</p>
+<p><strong>Activities during this process</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li>Facilitate construction of various versions of an application</li>
+<li>Defining and determining mechanisms for managing various versions of these work products</li>
+<li>The functional baseline corresponds to the reviewed system requirements</li>
+<li>Widely used baselines include functional, developmental, and product baselines</li>
+<li>In simple words, baseline means ready for release.</li>
+</ol>
+<p>c. <span style="text-decoration: underline;"><strong>Change Control</strong></span>:<br />
+Change control is a procedural method which ensures quality and consistency when changes are made in the configuration object. In this step, the change request is submitted to software configuration manager.</p>
+<p><strong>Activities during this process:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Control ad-hoc change to build stable software development environment. Changes are<br />
+committed to the repository.</li>
+<li>The request will be checked based on the technical merit; possible side effects and overall<br />
+impact on other configuration objects.</li>
+<li>It manages changes and making configuration items availableduring the software lifecycle</li>
+</ol>
+<p>d. <span style="text-decoration: underline;"><strong>Configuration Status Accounting</strong></span>:<br />
+Configuration status accounting tracks each release during the SCM process. This stage involves tracking what each version has and the changes that lead to this version.</p>
+<p><strong>Activities during this process</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li>Keeps a record of all the changes made to the previous baseline to reach a new baseline.</li>
+<li>Identify all items to define the software configuration.</li>
+<li>Monitor status of change requests.</li>
+<li>Complete listing of all changes since the !ast baseline.</li>
+<li>Allows tracking of progress to next baseline.</li>
+<li>Allows to check previous releases/versions to be extracted for testing.</li>
+</ol>
+<p>e. <span style="text-decoration: underline;"><strong>Configuration Audits and Reviews</strong></span>:<br />
+Software Configuration audits verify that the entire software product satisfies the baseline needs. It ensures that what is built is what is delivered.</p>
+<p><strong>Activities during this process</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li>Configuration auditing is conducted by auditors by checking that defined processes are being<br />
+followed and ensuring that SCM goals are satisfied.</li>
+<li>To verify compliance with Configuration control standards auditing and reporting the changes made.</li>
+<li>SCM audits also ensure that traceability is maintained during the process.</li>
+<li>Ensures that changes made to a .baseline comply with the configuration status reports.</li>
+<li>Validation of completeness and consistency.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the agile software development. Compare between agile software development with prototyping software development.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Agile Software Development</strong>:</p>
+<p>Agile development emphasizes breaking down the project into small increments or iterations, each delivering a potentially shippable product. The development team works on short cycles called sprints, typically lasting 1-4 weeks. Agile development promotes close collaboration between the development team and the customer or end-user. Customer feedback is solicited regularly to ensure the project aligns with their requirements and expectations.</p>
+<p><strong>Advantages of Agile Software Development Methodology</strong></p>
+<ul style="list-style-type: square;">
+<li>Decrease the time required to avail some system features.</li>
+<li>Face-to-face communication and continuous inputs from customer representatives leave no<br />
+space for guesswork.</li>
+<li>The end result is high-quality software in the least possible time duration and satisfied customers.</li>
+</ul>
+<p><strong>Disadvantages of Agile Software Development Methodology</strong></p>
+<ul style="list-style-type: square;">
+<li>In the case of some software deliverables, especially the large ones, it is difficult to assess the effort required at the beginning of the software development life cycle.</li>
+<li>There is a lack of emphasis on necessary designing and documentation.</li>
+<li>The project can easily get taken off track if the customer representative is not clear what final<br />
+outcome that they want.</li>
+<li>Only senior programmers are capable of taking the kind of decisions required during the<br />
+development process. Hence it has no place for newbie programmers unless combined with<br />
+experienced resources.</li>
+</ul>
+<p>Agile software development and prototyping software development are two different approaches used in the software development process. While they share some similarities, they also have distinct characteristics. Here’s a breakdown of the key differences between the two:</p>
+<ul style="list-style-type: square;">
+<li><strong>Approach</strong>:<br />
+<span style="text-decoration: underline;">Agile</span> development emphasizes breaking down the project into small increments or iterations, each delivering a potentially shippable product whereas<span style="text-decoration: underline;"> prototyping</span> involves creating a preliminary version of the software to demonstrate its functionality, design, and user experience.</li>
+<li><strong>Goal</strong>:<br />
+The primary goal of <span style="text-decoration: underline;">Agile</span> is to enables early value delivery and frequent validation of the working software at the end of each iteration but <span style="text-decoration: underline;">prototypes</span> are not always intended to be the final product and they serve as a means of validating concepts, gathering requirements, and securing stakeholder buy-in before committing to full development.</li>
+<li><strong>Usage</strong>:<span style="text-decoration: underline;"><br />
+Agile</span> is used throughout the entire development process. In other hand, <span style="text-decoration: underline;">prototyping</span> helps identify potential risks, usability issues, or flaws in the software in the early stages of the development process.</li>
+<li><strong>Working</strong>:<br />
+<span style="text-decoration: underline;">Agile</span> produces working software at the end of each iteration but <span style="text-decoration: underline;">prototypes</span> are not always intended to be the final product and they serve as a means of validating concepts, gathering requirements, and securing stakeholder buy-in before committing to full development.</li>
+</ul>
+<p>In summary, Agile software development is an iterative, customer-focused approach that aims to deliver working software in short cycles. On the other hand, prototyping software development is a rapid, experimental approach that focuses on validating ideas and gathering feedback through the creation of functional models or prototypes.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Compare between verification and validation. why validation is particularly difficult process?<br />
+Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Validation is the process of checking whether the specification captures the customer&#8217;s requirements, while verification is the process of checking that the software meets specifications. The main differences</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Verification</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Validation</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">It includes checking documents, design, codes and programs.</td>
+<td style="width: 50%;">It includes testing and validating the actual product.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Verification is the static testing.</td>
+<td style="width: 50%;">Validation is the dynamic testing.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It does not include the execution of the code.</td>
+<td style="width: 50%;">It includes the execution of the code.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It checks whether the software conforms to specifications or not.</td>
+<td style="width: 50%;">It checks whether the software meets the requirements and expectations of a customer or not.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It can find bugs in the early stage of development.</td>
+<td style="width: 50%;">It can only find the bugs that could not be found by verification.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Its goal is application and software architecture and specification.</td>
+<td style="width: 50%;">Its goal is an actual product.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It comes before validation.</td>
+<td style="width: 50%;">It comes after verification.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Validation in software engineering is particularly difficult due to several factors. Subjectivity<br />
+plays a role as stakeholders may have varying opinions on what constitutes successful validation. Evolving requirements pose a challenge as software needs to adapt to changing specifications. Complex systems with interconnected components require thorough validation of their behavior and interactions. Compatibility across platforms, devices, and software versions needs to be ensured. Limited resources, including time and manpower, can impact the depth of validation activities. Lastly, real-world variability necessitates testing software under diverse conditions. These challenges make validation a complex and intricate process in software engineering.</p>
+<p>&nbsp;</p>
+</div>
+<h2>Group B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What are the good characteristics of software? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Various good Characteristics of software are</strong> :</p>
+<ul style="list-style-type: square;">
+<li><strong>Correctness</strong>: The software which we are making should meet all the specifications stated by the customer.</li>
+<li><strong>Usability/Learnability</strong>: The amount of efforts or time required to learn how to use the software should be less. This makes the software user-friendly even for IT illiterate people.</li>
+<li><strong>Integrity</strong> : Just like medicines have side-effects, in the same way a software may have a side-effect i.e. it may affect the working of another application. But a quality software should not have side effects.</li>
+<li><strong>Reliability</strong> : The software product should not have any defects. Not only this, it shouldn&#8217;t fail while execution.</li>
+<li><strong>Efficiency</strong> : This characteristic relates to the way software uses the available resources. The software should make effective use of the storage space and execute command as per desired timing requirements.</li>
+<li><strong>Security</strong>: With the increase in security threats nowadays, this factor is gaining importance. The software shouldn&#8217;t have ill effects on data / hardware. Proper measures should be taken to keep data secure from external threats.</li>
+<li><strong>Safety</strong> : The software should not be hazardous to the environment/ life.</li>
+<li><strong>Maintainability</strong> : Maintenance of the software should be easy for any kind of user.</li>
+<li><strong>Flexibility</strong>: Changes in the software should be easy to make.</li>
+<li><strong>Extensibility</strong>: It should be easy to increase the functions performed by it.</li>
+<li><strong>Scalability</strong>: It should be very easy to upgrade it for more work(or (or more number of users).</li>
+<li><strong>Interoperability</strong>: Interoperability is the ability of software to exchange information with other<br />
+applications and make use of information transparently.</li>
+<li><strong>Reusability</strong>: If we are able to use the software code with some modifications for different purpose then we call software to be reusable.</li>
+<li><strong>Portability</strong>: The ability of software to perform same functions across all environment and platforms, demonstrate its portability.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the process of requirement engineering.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Requirements engineering</strong> (RE) refers to the process of defining, documenting, and maintaining<br />
+requirements in the engineering design process. Requirement engineering provides the appropriate mechanism to understand what the customer desires, analyzing the need, and assessing feasibility, negotiating a reasonable solution, specifying the solution clearly, validating the specifications and managing the requirements as they are transformed into a working system. It involves following process:</p>
+<p>1. <strong>Feasibility study</strong>: The objective behind the feasibility study is to create the reasons for developing the software that is acceptable to users, flexible to change.</p>
+<p><strong>Types of Feasibility</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><strong>Technical feasibility</strong></span>: Technical feasibility evaluates the current technologies, which are needed to accomplish customer requirements within the time and budget.</li>
+<li><span style="text-decoration: underline;"><strong>Operational feasibility</strong></span>: Operational feasibility assesses the range in which the required software performs a series of levels to solve business problems and customer requirements.</li>
+<li><span style="text-decoration: underline;"><strong>Economic feasibility</strong></span>: Economic feasibility assesses the range in which the required software performs a series of levels to solve business problems and customer requirements.</li>
+</ul>
+<p>2. <strong>Requirement Elicitation and Analysis</strong>: This is also known as the gathering of requirements. Here, requirements are identified with the help of customers and existing system processes, if available:</p>
+<p>Analysis of requirements to identify inconsistencies, defects, omission. We describe requirement in terms of relationships and also resolve conflict if any. Problems of Elicitation and analysis:</p>
+<ul style="list-style-type: square;">
+<li>Getting all, and only, the right people involved.</li>
+<li>Stakeholders often don&#8217;t know what they want.</li>
+<li>Stakeholders express requirements in their terms.</li>
+<li>stakeholders may have conflicting requirements.</li>
+</ul>
+<p>3.<strong> Requirements specification</strong>: this activity is used to produce formal software requirement models. All the requirements including the functional as well as the non-functional requirements and the constraints are specified by these models in totality.</p>
+<p>4. <strong>Requirements verification and validation</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><strong>verification</strong></span>: It refers to the set of tasks that ensures that the software correctly implements a specific function.</li>
+<li><span style="text-decoration: underline;"><strong>validation</strong></span>: It refers to a different set of tasks that ensures that the software that has been built is traceable to customer requirements.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between waterfall model and spiral model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The following are the difference between waterfall model and spiral model:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Waterfall Model</strong></td>
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Spiral Model</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px; text-align: center;">Waterfall model works in sequential method.</td>
+<td style="width: 50%; height: 48px; text-align: center;">While spiral model works in evolutionary method.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">Waterfall model is adopted by customers.</td>
+<td style="width: 50%; height: 24px; text-align: center;">While spiral model is adopted by developers.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">It is applicable for small project.</td>
+<td style="width: 50%; height: 24px; text-align: center;">It is used for large project.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">Flexibility to change in waterfall model is difficult.</td>
+<td style="width: 50%; height: 24px; text-align: center;">Flexibility to change in spiral model is not difficult.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">There is high amount risk in waterfall model.</td>
+<td style="width: 50%; height: 24px; text-align: center;">There is low amount risk in spiral model.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the software quality assurance with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Software Quality Assurance</strong> (SQA) is a systematic and planned approach to ensure that software products and processes meet specified quality standards. It involves a set of activities and processes designed to prevent defects, identify and resolve issues, and enhance the overall quality of software.</p>
+<p>Here&#8217;s an explanation of software quality assurance with an example:</p>
+<p>Software Quality Assurance involves various activities throughout the software development lifecycle. One crucial aspect is the establishment of quality standards and processes. SQA defines guidelines and procedures to be followed by the development team to maintain and enhance the quality of the software. For example, let&#8217;s consider a software development project that aims to build an e-commerce website. In the context of SQA, the quality assurance team would define quality standards for the website, such as performance benchmarks, security requirements, and usability guidelines. These standards would be communicated to the development team.</p>
+<p>During the development phase, SQA activities would include conducting code reviews to ensure adherence to coding standards, performing unit testing to identify and fix defects in individual modules, and conducting integration testing to validate the interaction between different components Furthermore, SQA involves functional testing to verify that the website features work as intended, usability testing to assess user-friendliness, and security testing to identify vulnerabilities and ensure data protection.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Discuss the structure of SRS document.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SRS document comprises the following sections.</p>
+<ul style="list-style-type: square;">
+<li><strong>Introduction</strong>: This provides an overview of the entire information described in SRS. This involves purpose and the scope of SRS, which states the functions to be performed by the system.</li>
+<li><strong>Overall description</strong>: It determines the factors which affect the requirements of the system. It provides a brief description of the requirements to be defined in the next section called &#8216;specification requirement&#8217;. It also defines memory constraints and operations utilized by the user.</li>
+<li><strong>product perspective</strong>: It determines whether the product is an independent product or an integral part of the larger product.</li>
+<li><strong>product functions</strong>: It provides a summary of the functions to be performed by the software.</li>
+<li><strong>User characteristics</strong>: It determines general characteristics of the user.</li>
+<li><strong>Constraints</strong>: It provides general description of the constraints such as regulatory politics, audit functions, reliability requirements, and so on.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain with example how COCOMO can be used for software cost estimation?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>COCOMO</strong> (Constructive Cost Model) is a widely used algorithmic model for estimating the cost, effort, and schedule of software development projects. It provides a framework for predicting these factors based on project characteristics. Here&#8217;s an example of how COCOMO can be used for software cost estimation:</p>
+<p>Let&#8217;s consider a software development project to build a mobile application. The project requires developing a feature-rich app with multiple functionalities, including user authentication, database integration, and a complex user interface.</p>
+<p>To estimate the cost using COCOMO, we would follow these steps:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Size Estimation</strong>: Determine the size of the software project, typically measured in lines of code (LOC) or function points. In this example, let&#8217;s assume the estimated size of the mobile application is 50,000 lines of code.</li>
+<li><strong>Select the COCOMO Model</strong>: COCOMO offers different models based on the development stage and project characteristics. For our example, we&#8217;ll use the Intermediate COCOMO model, which is suitable for medium-scale projects.</li>
+<li><strong>Effort Estimation</strong>: Using the size estimation and COCOMO model, we can calculate the required effort to develop the software. The effort is typically measured in person-months or person-hours. COCOMO uses a set of cost drivers, such as product attributes, hardware constraints, personnel skills, and project characteristics, to calculate effort. By applying these and using the COCOMO formula, the effort estimation can be calculated.</li>
+<li><strong>Schedule and Cost Estimation</strong>: Once the effort estimation is determined, the next step is to estimate the project&#8217;s schedule and cost. COCOMO provides formulas that take into account the effort estimation, historical data, and project attributes to calculate the project&#8217;s duration and cost.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Discuss with example of reuse base software engineering.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Reuse-based software engineering</strong> is an approach that emphasizes the reuse of existing software components or systems to accelerate development, improve productivity, and enhance software quality. It involves identifying, adapting, and integrating reusable components into new projects.</p>
+<p>In the majority of software projects and systems, software reuse is a usual thing. This usually happens when people working on the project know of designs or codes similar to what requires. They modify these codes as needed. Also, they incorporate them into their system. The impact of reuse-based development has increased because of the lower cost of software production and maintenance, faster delivery of systems, and higher software quality. Most companies consider software as a worthy asset to them. They are encouraging the reuse of software by higher investments.</p>
+<p>Here&#8217;s an <strong>example of how reuse-based software engineering can be applied</strong>:</p>
+<p>Imagine a software development company that specializes in making online stores. They have created many successful websites in the past. Now, a new client wants them to build an online store. Instead of starting from scratch, the company can reuse parts of their old websites. They have components like shopping carts, payment systems, and user login systems that they can use again. They make some changes to these components to fit the new client&#8217;s needs. By reusing these parts, they save time and effort. The components have already been tested, so they are reliable. This helps them create a good quality website quickly. Reusing parts also makes it easier to update or improve the components in the future. Overall, reusing parts helps the company work faster, better, and deliver great websites to their clients.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write down the software version control process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The software version control process involves managing changes to software code and files to keep track of different versions and facilitate collaboration among developers. Here are the key steps involved in the software version control process:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Repository Setup</strong>: Create a version control repository, which serves as a centralized location to store and manage the software code and related files. The repository can be set up using version control systems like Git.</li>
+<li><strong>Initialization</strong>: Initialize the repository by importing the initial codebase or creating an empty repository. This step establishes the baseline version from which future changes will be tracked.</li>
+<li><strong>Branching</strong>: Create branches within the repository to allow developers to work on different features or bug fixes simultaneously without interfering with each other&#8217;s code.</li>
+<li><strong>Making Changes</strong>: Developers make changes to the code, add new features, fix bugs, or update existing functionality based on their assigned tasks.</li>
+<li><strong>Committing Changes</strong>: Once developers complete their changes, they commit their modifications back to the version control repository. Commits include a message describing the changes made.</li>
+<li><strong>Merging and Conflict Resolution</strong>: If multiple developers have worked on different branches or made changes to the same code, merging becomes necessary to combine the changes.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Differentiate between Alpha testing and Beta testing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The following are the difference between alpha testing and beta testing:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Alpha Testing</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Beta Testing</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is performed by a team of highly skilled testers who are usually the internal employee of the organization.</td>
+<td style="width: 50%; text-align: center;">It is performed by clients or end-users in a real-time environment, who is not an employee of the organization.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Reliability or security testing not performed in-depth in alpha testing.</td>
+<td style="width: 50%; text-align: center;">Reliability , security and robustness checked during beta testing.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It involves both white box and black-box techniques.</td>
+<td style="width: 50%; text-align: center;">It uses only black-box testing.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Alpha testing performed before the launch of the product into the market.</td>
+<td style="width: 50%; text-align: center;">At the time of software product marketing.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is conducting in the presence of developers and the absence of end-users.</td>
+<td style="width: 50%; text-align: center;">Beta testing reversed of alpha testing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</body></html>

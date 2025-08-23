@@ -1,0 +1,425 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DSA Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>DSA Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Why do we need to balance the binary search tree? Justify with an example. Create an AVL tree from the data 24, 12, 8, 15, 35, 30, 57, 40, 45, 78.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Balancing a binary search tree (BST) is important to ensure efficient search, insertion, and deletion operations. An unbalanced BST can lead to skewed structures where the tree degenerates into a linked list, significantly degrading the performance of these operations from their optimal logarithmic time complexity. Balancing the tree helps maintain a more even distribution of nodes, resulting in better overall performance.</p>
+<p>Let&#8217;s illustrate this with an example. Consider an unbalanced binary search tree:</p>
+<p style="text-align: center;">10<br />
+\<br />
+20<br />
+\<br />
+30<br />
+\<br />
+40<br />
+\<br />
+50</p>
+<p>In this unbalanced tree, each new node has been inserted as the right child of its parent, leading to a linear structure. Searching for a value in this tree would take O(n) time in the worst case, which defeats the purpose of using a binary search tree.</p>
+<p>Now, let&#8217;s compare it with a balanced binary search tree:</p>
+<p style="text-align: center;">   30<br />
+/     \<br />
+20    40<br />
+/          \<br />
+10         50</p>
+<p>In this balanced tree, the distribution of nodes on both sides of each subtree is more even, creating a more efficient structure. Searching for a value in this tree would take O(log n) time in the worst case, which is the ideal behavior of a binary search tree.</p>
+<p><strong>AVL TREE</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23388" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_223946_CamScanner.jpg?resize=927%2C1269&#038;ssl=1" alt="" width="927" height="1269"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23389" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_224050_CamScanner.jpg?resize=931%2C1380&#038;ssl=1" alt="" width="931" height="1380"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How recursive algorithm uses stack to store intermediate results? Illustrate with an example. Convert the infix expression  A+B-(C*D/E+F)-G*H into postfix expression using stack.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A recursive algorithm uses the call stack to store intermediate results and manage the state of recursive calls. The call stack is a data structure that keeps track of function calls and their associated local variables. When a function is called, its local variables and the return address are pushed onto the stack. When the function finishes executing, its information is popped off the stack, allowing the program to resume from where it left off.</p>
+<p>Let&#8217;s illustrate this with a classic example of a recursive algorithm: calculating the factorial of a number.</p>
+<p>def factorial(n):<br />
+if n == 0:<br />
+return 1<br />
+else:<br />
+return n * factorial(n &#8211; 1)</p>
+<p>result = factorial(5)<br />
+print(result)</p>
+<p>In this example, the factorial function is defined to calculate the factorial of a given positive integer n. The base case is when n equals 0, in which case the function returns 1. Otherwise, the function returns n multiplied by the factorial of n &#8211; 1.</p>
+<p>Now, let&#8217;s walk through how the recursive calls and the call stack work when calculating factorial(5):</p>
+<ol style="list-style-type:decimal;">
+<li>factorial(5) is called. The call stack stores the function call factorial(5).</li>
+<li>Inside the function: n is not 0, so the function enters the else block. The function calls factorial(4).</li>
+<li>factorial(4) is called. The call stack stores both factorial(5) and factorial(4).</li>
+<li>Inside the function: n is not 0, so the function enters the else block. The function calls factorial(3).</li>
+<li>This pattern continues until factorial(0) is called. factorial(0) returns 1 (base case). The call stack now contains: factorial(5) factorial(4) factorial(3) factorial(2) factorial(1) factorial(0)</li>
+<li>Now, the results are propagated back: factorial(1) returns 1 * 1 = 1. factorial(2) returns 2 * 1 = 2. factorial(3) returns 3 * 2 = 6. factorial(4) returns 4 * 6 = 24. factorial(5) returns 5 * 24 = 120.</li>
+<li>The call stack is gradually unwound as the results are calculated: factorial(0) is popped off the stack. factorial(1) is popped off the stack&#8230; and so on, until only factorial(5) remains on the stack.</li>
+<li>Finally, the call to factorial(5) completes, and the result, 120, is returned.</li>
+</ol>
+<p>This example demonstrates how the call stack is used to store intermediate results and manage the flow of recursive function calls.</p>
+<p><strong>INFIX TO POSTFIX SOLUTION</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23371" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_051444_CamScanner.jpg?resize=928%2C1080&#038;ssl=1" alt="" width="928" height="1080"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How do you insert and delete a node at k<sup>th</sup> position of the doubly linked list? Describe the process of implementing stack and queue using linked list.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Insertion at kth Position:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Create a new node with the given data.</li>
+<li>Traverse the list to the (k-1)th node.</li>
+<li>Adjust the next and previous pointers of the new node to point to the (k-1)th node and the kth node, respectively.</li>
+<li>Adjust the next pointer of the (k-1)th node to point to the new node.</li>
+<li>Adjust the previous pointer of the kth node to point to the new node.</li>
+</ol>
+<p><strong>Pseudocode:</strong></p>
+<p>insertAtKthPosition(data, k):<br />
+newNode = Node(data)<br />
+if k == 1:<br />
+newNode.next = head<br />
+head.prev = newNode<br />
+head = newNode<br />
+else:<br />
+current = head<br />
+for i from 1 to (k-2):<br />
+current = current.next<br />
+newNode.next = current.next<br />
+newNode.prev = current<br />
+if current.next:<br />
+current.next.prev = newNode<br />
+current.next = newNode</p>
+<p><strong>Deletion at kth Position:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Traverse the list to the (k-1)th node.</li>
+<li>Store the kth node in a variable.</li>
+<li>Adjust the next pointer of the (k-1)th node to skip the kth node.</li>
+<li>Adjust the previous pointer of the (k+1)th node (if exists) to skip the kth node.</li>
+</ol>
+<p><strong>Pseudocode:</strong></p>
+<p>deleteAtKthPosition(k):<br />
+if k == 1:<br />
+temp = head<br />
+head = head.next<br />
+head.prev = None<br />
+temp.next = None<br />
+else:<br />
+current = head<br />
+for i from 1 to (k-2):<br />
+current = current.next<br />
+temp = current.next<br />
+current.next = temp.next<br />
+if temp.next:<br />
+temp.next.prev = current<br />
+temp.next = None<br />
+temp.prev = None</p>
+<p><strong>Stack implementation using linked list</strong></p>
+<p>#include &lt;stdio.h&gt;<br />
+#include &lt;stdlib.h&gt;</p>
+<p>// Structure to create a node with data and the next pointer<br />
+struct node {<br />
+int info;<br />
+struct node *ptr;<br />
+}*top,*top1,*temp;</p>
+<p>int count = 0;<br />
+// Push() operation on a stack<br />
+void push(int data) {<br />
+if (top == NULL)<br />
+{<br />
+top =(struct node *)malloc(1*sizeof(struct node));<br />
+top-&gt;ptr = NULL;<br />
+top-&gt;info = data;<br />
+}<br />
+else<br />
+{<br />
+temp =(struct node *)malloc(1*sizeof(struct node));<br />
+temp-&gt;ptr = top;<br />
+temp-&gt;info = data;<br />
+top = temp;<br />
+}<br />
+count++;<br />
+printf(&#8220;Node is Inserted\n\n&#8221;);<br />
+}</p>
+<p>int pop() {<br />
+top1 = top;</p>
+<p>if (top1 == NULL)<br />
+{<br />
+printf(&#8220;\nStack Underflow\n&#8221;);<br />
+return -1;<br />
+}<br />
+else<br />
+top1 = top1-&gt;ptr;<br />
+int popped = top-&gt;info;<br />
+free(top);<br />
+top = top1;<br />
+count&#8211;;<br />
+return popped;<br />
+}</p>
+<p>void display() {<br />
+// Display the elements of the stack<br />
+top1 = top;</p>
+<p>if (top1 == NULL)<br />
+{<br />
+printf(&#8220;\nStack Underflow\n&#8221;);<br />
+return;<br />
+}</p>
+<p>printf(&#8220;The stack is \n&#8221;);<br />
+while (top1 != NULL)<br />
+{<br />
+printf(&#8220;%d&#8212;&gt;&#8221;, top1-&gt;info);<br />
+top1 = top1-&gt;ptr;<br />
+}<br />
+printf(&#8220;NULL\n\n&#8221;);</p>
+<p>}</p>
+<p>int main() {<br />
+int choice, value;<br />
+printf(&#8220;\nImplementation of Stack using Linked List\n&#8221;);<br />
+while (1) {<br />
+printf(&#8220;\n1. Push\n2. Pop\n3. Display\n4. Exit\n&#8221;);<br />
+printf(&#8220;\nEnter your choice : &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;choice);<br />
+switch (choice) {<br />
+case 1:<br />
+printf(&#8220;\nEnter the value to insert: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;value);<br />
+push(value);<br />
+break;<br />
+case 2:<br />
+printf(&#8220;Popped element is :%d\n&#8221;, pop());<br />
+break;<br />
+case 3:<br />
+display();<br />
+break;<br />
+case 4:<br />
+exit(0);<br />
+break;<br />
+default:<br />
+printf(&#8220;\nWrong Choice\n&#8221;);<br />
+}<br />
+}<br />
+}</p>
+<p><strong>Queue implementation using linked list</strong></p>
+<p>#include &lt; stdio.h &gt;<br />
+#include &lt; stdlib.h &gt;</p>
+<p>// Structure to create a node with data and the next pointer<br />
+struct node {<br />
+int data;<br />
+struct node * next;<br />
+};</p>
+<p>struct node * front = NULL;<br />
+struct node * rear = NULL;</p>
+<p>// Enqueue() operation on a queue<br />
+void enqueue(int value) {<br />
+struct node * ptr;<br />
+ptr = (struct node * ) malloc(sizeof(struct node));<br />
+ptr &#8211; &gt; data = value;<br />
+ptr &#8211; &gt; next = NULL;<br />
+if ((front == NULL) &amp;&amp; (rear == NULL)) {<br />
+front = rear = ptr;<br />
+} else {<br />
+rear &#8211; &gt; next = ptr;<br />
+rear = ptr;<br />
+}<br />
+printf(&#8220;Node is Inserted\n\n&#8221;);<br />
+}</p>
+<p>// Dequeue() operation on a queue<br />
+int dequeue() {<br />
+if (front == NULL) {<br />
+printf(&#8220;\nUnderflow\n&#8221;);<br />
+return -1;<br />
+} else {<br />
+struct node * temp = front;<br />
+int temp_data = front &#8211; &gt; data;<br />
+front = front &#8211; &gt; next;<br />
+free(temp);<br />
+return temp_data;<br />
+}<br />
+}</p>
+<p>// Display all elements of the queue<br />
+void display() {<br />
+struct node * temp;<br />
+if ((front == NULL) &amp;&amp; (rear == NULL)) {<br />
+printf(&#8220;\nQueue is Empty\n&#8221;);<br />
+} else {<br />
+printf(&#8220;The queue is \n&#8221;);<br />
+temp = front;<br />
+while (temp) {<br />
+printf(&#8220;%d&#8212;&gt;&#8221;, temp &#8211; &gt; data);<br />
+temp = temp &#8211; &gt; next;<br />
+}<br />
+printf(&#8220;NULL\n\n&#8221;);<br />
+}<br />
+}</p>
+<p>int main() {<br />
+int choice, value;<br />
+printf(&#8220;\nImplementation of Queue using Linked List\n&#8221;);<br />
+while (choice != 4) {<br />
+printf(&#8220;1.Enqueue\n2.Dequeue\n3.Display\n4.Exit\n&#8221;);<br />
+printf(&#8220;\nEnter your choice : &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp; choice);<br />
+switch (choice) {<br />
+case 1:<br />
+printf(&#8220;\nEnter the value to insert: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp; value);<br />
+enqueue(value);<br />
+break;<br />
+case 2:<br />
+printf(&#8220;Popped element is :%d\n&#8221;, dequeue());<br />
+break;<br />
+case 3:<br />
+display();<br />
+break;<br />
+case 4:<br />
+exit(0);<br />
+break;<br />
+default:<br />
+printf(&#8220;\nWrong Choice\n&#8221;);<br />
+}<br />
+}<br />
+return 0;<br />
+}</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Sort the numbers 82,73,12,39,26,88,2,9,60,41 using shell sort.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given: n=10</p>
+<p>Iteration 1: n/2 = 5</p>
+<p>82 73 12 39 26 88 2 9 60 41<br />
+82 2 12 39 26 88 73 9 60 41<br />
+82 2 9 39 26 88 73 12 60 41<br />
+82 2 9 39 26 88 73 12 60 41<br />
+82 2 9 39 26 88 73 12 60 41</p>
+<p>Iteration 2: (n/2)/2=2</p>
+<p>9 2 82 39 26 88 73 12 60 41<br />
+9 2 82 39 26 88 73 12 60 41<br />
+9 2 26 39 82 88 73 12 60 41<br />
+9 2 26 39 82 88 73 12 60 41<br />
+9 2 26 39 73 88 82 12 60 41<br />
+9 2 26 12 73 39 82 88 60 41<br />
+9 2 26 12 60 39 73 88 82 41<br />
+9 2 26 12 60 39 73 41 82 88</p>
+<p>Iteration 3: ((n/2)/2)/2=1</p>
+<p>2 9 26 12 60 39 73 41 82 88<br />
+2 9 26 12 60 39 73 41 82 88<br />
+2 9 12 26 60 39 73 41 82 88<br />
+2 9 12 26 60 39 73 41 82 88<br />
+2 9 12 26 39 60 73 41 82 88<br />
+2 9 12 26 39 60 73 41 82 88<br />
+2 9 12 26 39 41 60 73 82 88<br />
+2 9 12 26 39 41 60 73 82 88<br />
+2 9 12 26 39 41 60 73 82 88</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Why do we need asymptotic notation? Describe about Big oh notation with its curve.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Asymptotic notations</strong> are the mathematical notations used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.</p>
+<p>For example: In bubble sort, when the input array is already sorted, the time taken by the algorithm is linear i.e. the best case. But, when the input array is in reverse condition, the algorithm takes the maximum time (quadratic) to sort the elements i.e. the worst case. When the input array is neither sorted nor in reverse order, then it takes average time. These durations are denoted using asymptotic notations.</p>
+<p>&nbsp;</p>
+<p><strong>Big-O notation</strong> represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm. It is the most widely used notation for Asymptotic analysis. It specifies the upper bound of a function. It determines the maximum time required by an algorithm or the worst-case time complexity. It returns the highest possible output value(big-O) for a given input. It is defined as the condition that allows an algorithm to complete statement execution in the longest amount of time possible.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23320" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/bigo.png?resize=252%2C261&#038;ssl=1" alt="" width="252" height="261"></p>
+<p>If f(n) describes the running time of an algorithm, f(n) is O(g(n)) if there exist a positive constant C and n0 such that, 0 ≤ f(n) ≤ cg(n) for all n ≥ n0</p>
+<p>It returns the highest possible output value (big-O)for a given input.</p>
+<p>The execution time serves as an upper bound on the algorithm’s time complexity.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define queue. Explain about enqueue and dequeue operation in circular queue.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>Queue</strong> is defined as a linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order.</p>
+<p><strong>Circular Queue</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23322" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/Circular-queue.png?resize=290%2C301&#038;ssl=1" alt="" width="290" height="301"></p>
+<p><strong>Enqueue Operation</strong></p>
+<p>You should follow the following steps to insert (enqueue) a data element into a circular queue &#8211;</p>
+<ul style="list-style-type: square;">
+<li>Step 1: Check if the queue is full (Rear + 1 % Maxsize = Front)</li>
+<li>Step 2: If the queue is full, there will be an Overflow error</li>
+<li>Step 3: Check if the queue is empty, and set both Front and Rear to 0</li>
+<li>Step 4: If Rear = Maxsize &#8211; 1 &amp; Front != 0 (rear pointer is at the end of the queue and front is not at 0th index), then set Rear = 0</li>
+<li>Step 5: Otherwise, set Rear = (Rear + 1) % Maxsize</li>
+<li>Step 6: Insert the element into the queue (Queue[Rear] = x)</li>
+<li>Step 7: Exit</li>
+</ul>
+<p><strong>Dequeue() Operation</strong></p>
+<p>Obtaining data from the queue comprises two subtasks: access the data where the front is pointing and remove the data after access. You should take the following steps to remove data from a circular queue &#8211;</p>
+<ul style="list-style-type: square;">
+<li>Step 1: Check if the queue is empty (Front = -1 &amp; Rear = -1)</li>
+<li>Step 2: If the queue is empty, Underflow error</li>
+<li>Step 3: Set Element = Queue[Front]</li>
+<li>Step 4: If there is only one element in a queue, set both Front and Rear to -1 (IF Front = Rear, set Front = Rear = -1)</li>
+<li>Step 5: And if Front = Maxsize -1 set Front = 0</li>
+<li>Step 6: Otherwise, set Front = Front + 1</li>
+<li>Step 7: Exit</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program to implement binary search.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>int main()<br />
+{<br />
+int c, first, last, middle, n, search, array[100];</p>
+<p>printf(&#8220;Enter number of elements\n&#8221;);<br />
+scanf(&#8220;%d&#8221;, &amp;n);</p>
+<p>printf(&#8220;Enter %d integers\n&#8221;, n);</p>
+<p>for (c = 0; c &lt; n; c++)<br />
+scanf(&#8220;%d&#8221;, &amp;array[c]);</p>
+<p>printf(&#8220;Enter value to find\n&#8221;);<br />
+scanf(&#8220;%d&#8221;, &amp;search);</p>
+<p>first = 0;<br />
+last = n &#8211; 1;<br />
+middle = (first+last)/2;</p>
+<p>while (first &lt;= last) {<br />
+if (array[middle] &lt; search)<br />
+first = middle + 1;<br />
+else if (array[middle] == search) {<br />
+printf(&#8220;%d found at location %d.\n&#8221;, search, middle+1);<br />
+break;<br />
+}<br />
+else<br />
+last = middle &#8211; 1;</p>
+<p>middle = (first + last)/2;<br />
+}<br />
+if (first &gt; last)<br />
+printf(&#8220;Not found! %d isn&#8217;t present in the list.\n&#8221;, search);</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Find the MST of following graph using Prim’s algorithm.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23373" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/a.jpg?resize=321%2C241&ssl=1" alt="" width="321" height="241"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23374" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_052556_CamScanner.jpg?resize=913%2C1310&#038;ssl=1" alt="" width="913" height="1310"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23375" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_052623_CamScanner.jpg?resize=925%2C926&#038;ssl=1" alt="" width="925" height="926"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Assume you have to store the data {0,1,2,4,5,7} into a hash table of size 5, with hash function, h(x)=x%5. Apply linear probing and double hashing as collision resolution techniques.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23391" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_224331_CamScanner.jpg?resize=906%2C1247&#038;ssl=1" alt="" width="906" height="1247"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23394" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_224358_CamScanner-1.jpg?resize=907%2C1219&#038;ssl=1" alt="" width="907" height="1219"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23392" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_224425_CamScanner.jpg?resize=914%2C1353&#038;ssl=1" alt="" width="914" height="1353"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>In which case the position of pivot element in quick sort always either in the last or the first position? Create a max heap from the numbers. {10,12,53,34,23,77,59,66,5,8}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In quick sort, worst case occurs when the pivot element is either greatest or smallest element. Suppose, if the pivot element is always the last element of the array, the worst case would occur when the given array is sorted already in ascending or descending order. The worst-case time complexity of quicksort is <strong>O(n<sup>2</sup>)</strong>.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23376" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_052643_CamScanner.jpg?resize=930%2C1208&#038;ssl=1" alt="" width="930" height="1208"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23377" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_052706_CamScanner.jpg?resize=922%2C1170&#038;ssl=1" alt="" width="922" height="1170"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Evaluate the postfix expression 574-*8/4+ using stack.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23379" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230815_051516_CamScanner.jpg?resize=930%2C740&#038;ssl=1" alt="" width="930" height="740"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short noes on:</p>
+<p>a. Priority Queue</p>
+<p>b. Breadth First traversal of a graph</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Priority Queue </strong></p>
+<p>Priority Queue is an abstract data type that performs operations on data elements per their priority. The hospital emergency queue is an ideal real-life example of a priority queue. In this queue of patients, the patient with the most critical situation is the first in a queue, and the patient who doesn’t need immediate medical attention will be the last. In this queue, the priority depends on the medical condition of the patients.</p>
+<p>Priority queue in a data structure is an extension of a linear queue that possesses the following properties:</p>
+<ul style="list-style-type: square;">
+<li aria-level="1">Every element has a certain priority assigned to it.</li>
+<li aria-level="1">Every element of this queue must be comparable.</li>
+<li aria-level="1">It will delete the element with higher priority before the element with lower priority.</li>
+<li aria-level="1">If multiple elements have the same priority, it does their removal from the queue according to the FCFS principle.</li>
+</ul>
+<p>Consider you have to insert 7, 2, 45, 32, and 12 in a priority queue. The element with the least value has the highest property. Thus, you should maintain the lowest element at the front node.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23324" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/pq.jpg?resize=712%2C556&#038;ssl=1" alt="" width="712" height="556"></p>
+<p><strong>b. Breadth First Traversal of a graph</strong></p>
+<p>Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search, when a dead end occurs in any iteration.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/data_structures_algorithms/images/breadth_first_traversal.jpg?ssl=1" alt="Breadth First Traversal" /></p>
+<p>As in the example given above, BFS algorithm traverses from A to B to E to F first then to C and G lastly to D. It employs the following rules.</p>
+<ul class="list">
+<li><b>Rule 1</b> − Visit the adjacent unvisited vertex. Mark it as visited. Display it. Insert it in a queue.</li>
+<li><b>Rule 2</b> − If no adjacent vertex is found, remove the first vertex from the queue.</li>
+<li><b>Rule 3</b> − Repeat Rule 1 and Rule 2 until the queue is empty.</li>
+</ul>
+<p><strong>Steps:</strong></p>
+<p>1. Initialize the queue.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23325" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/1-2.jpg?resize=300%2C177&#038;ssl=1" alt="" width="300" height="177"><br />
+2 Breadth First Search Step Two We start from visiting S (starting node), and mark it as visited.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23326" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/2-1.jpg?resize=300%2C177&#038;ssl=1" alt="" width="300" height="177"><br />
+3 Breadth First Search Step Three We then see an unvisited adjacent node from S. In this example, we have three nodes but alphabetically we choose A, mark it as visited and enqueue it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23327" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/3-1.jpg?resize=300%2C178&#038;ssl=1" alt="" width="300" height="178"><br />
+4 Breadth First Search Step Four Next, the unvisited adjacent node from S is B. We mark it as visited and enqueue it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23328" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/4.jpg?resize=300%2C178&#038;ssl=1" alt="" width="300" height="178"><br />
+5 Breadth First Search Step Five Next, the unvisited adjacent node from S is C. We mark it as visited and enqueue it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23329" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/5.jpg?resize=300%2C178&#038;ssl=1" alt="" width="300" height="178"><br />
+6 Breadth First Search Step Six Now, S is left with no unvisited adjacent nodes. So, we dequeue and find A.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23330" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/6.jpg?resize=300%2C178&#038;ssl=1" alt="" width="300" height="178"><br />
+7 Breadth First Search Step Seven From A we have D as unvisited adjacent node. We mark it as visited and enqueue it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23331" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/7.jpg?resize=300%2C178&#038;ssl=1" alt="" width="300" height="178"></p>
+</div>
+</body></html>

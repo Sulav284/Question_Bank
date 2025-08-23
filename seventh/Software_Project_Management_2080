@@ -1,0 +1,361 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SPM Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>SPM Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60+20+20</p>
+        <p><strong>Pass Marks:</strong> 24 +8+8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Perform Earned Value Analysi of the given project.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Activity</strong></td>
+<td><strong>Dyration(days)</strong></td>
+<td><strong>Precedence</strong></td>
+<td><strong>Cost/day (Rs.)</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>6</td>
+<td></td>
+<td>100</td>
+</tr>
+<tr>
+<td>B</td>
+<td>6</td>
+<td>A</td>
+<td>100</td>
+</tr>
+<tr>
+<td>C</td>
+<td>8</td>
+<td>B</td>
+<td>200</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+<td>B</td>
+<td>300</td>
+</tr>
+</tbody>
+</table></div>
+<p>The progress after the end of 16th day is as follows:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Activity</strong></td>
+<td><strong>% completation</strong></td>
+<td><strong>Incurred Cost</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>100</td>
+<td>800</td>
+</tr>
+<tr>
+<td>B</td>
+<td>100</td>
+<td>400</td>
+</tr>
+<tr>
+<td>C</td>
+<td>25</td>
+<td>500</td>
+</tr>
+<tr>
+<td>D</td>
+<td>50</td>
+<td>400</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calculate SV, SPI. CV and CPI respectively.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-48245" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-678.png?resize=535%2C721&#038;ssl=1" alt="" width="535" height="721"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Elaborate on the issues and questions to be considered during strategic assessment. List the categories of direct cost and benefits and provide two examples of each.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Strategic assessment ensures alignment between projects and an organization’s long-term goals. The process examines various factors to determine whether a project should be undertaken and how it contributes to organizational success. Below is a detailed explanation of the issues and questions to consider during strategic assessment:</p>
+<p>1. <strong>Alignment with Organizational Objectives</strong></p>
+<p><strong>Key Question</strong>: How does the project contribute to the long-term goals of the organization?</p>
+<ul style="list-style-type: square;">
+<li>Evaluate if the project aligns with the mission, vision, and strategic priorities of the organization.</li>
+<li>Determine whether the project addresses current business challenges or leverages market opportunities.</li>
+<li>Assess whether the outcomes of the project can support the organization&#8217;s growth or be sustained over time.</li>
+</ul>
+<p>2. <strong>Market Impact</strong></p>
+<p><strong>Key Question</strong>: Will the product increase the market share? By how much?</p>
+<ul style="list-style-type: square;">
+<li>Analyze the demand for the product or service in the target market.</li>
+<li>Understand how the project will position the organization against competitors.</li>
+<li>Identify the unique selling points (USPs) and ensure they resonate with market needs.</li>
+</ul>
+<p>3. <strong>Financial Implications</strong></p>
+<p><strong>Key Issue</strong>: Assess the project’s financial viability.</p>
+<ul style="list-style-type: square;">
+<li>Compare the project costs to the expected benefits.</li>
+<li>Calculate ROI to gauge profitability.</li>
+<li>Ensure adequate resources (financial, human, and technological) are available for successful execution.</li>
+</ul>
+<p>4. <strong>Impact on Portfolio (Portfolio Management)</strong></p>
+<p><strong>Key Questions</strong>: Does the project add value to the overall portfolio?</p>
+<ul style="list-style-type: square;">
+<li>Evaluate whether the project introduces new products or services to reduce risk.</li>
+<li>Assess if the project complements or enhances other products in the portfolio.</li>
+<li>Consider whether the project strengthens the company’s brand and market perception.</li>
+</ul>
+<p>5. <strong>Risk Assessment</strong></p>
+<p><strong>Key Issue</strong>: Identify and mitigate risks that could impact strategic goals.</p>
+<ul style="list-style-type: square;">
+<li>Analyze risks associated with technology, resource allocation, or timelines.</li>
+<li>Evaluate potential changes in market conditions that may affect project success.</li>
+<li>Ensure adherence to legal, ethical, and regulatory requirements.</li>
+</ul>
+<p>6. <strong>Program Coordination (Program Management)</strong></p>
+<p><strong>Key Question</strong>: How does managing this project as part of a program maximize benefits?</p>
+<ul style="list-style-type: square;">
+<li>Identify and manage interdependencies between projects within the program.</li>
+<li>Align individual project goals with broader program objectives to maximize collective benefits.</li>
+<li>Allocate resources efficiently across projects to avoid redundancy.</li>
+</ul>
+<p><strong>Categories of Direct Costs and Benefits with Examples</strong></p>
+<p>a. <strong>Direct Costs</strong></p>
+<p>Direct costs are expenses directly attributable to a specific project or system. These are measurable and can be assigned a monetary value.</p>
+<p><strong>Categories of Direct Costs:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Hardware and Equipment Costs</strong>: Expenses related to physical components required for the system.</li>
+<li><strong>Software Development or Licensing Costs</strong>: Costs for developing, purchasing, or licensing software used in the system.</li>
+<li><strong>Personnel Costs</strong>: Wages or salaries paid to individuals directly involved in the project.</li>
+</ul>
+<p><strong>Examples of Direct Costs:</strong></p>
+<ol style="list-style-type: lower-roman;">
+<li>Purchase of a pen drive for NRs. 2,000/- to store project-related data.</li>
+<li>Salary paid to a developer working solely on the project.</li>
+</ol>
+<p>b. <strong>Direct Benefits</strong></p>
+<p>Direct benefits are measurable advantages or outcomes that can be directly attributed to the implementation of a system or project.</p>
+<p><strong>Categories of Direct Benefits:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Operational Efficiency</strong>: Improved capabilities, such as increased transaction handling capacity.</li>
+<li><strong>Cost Savings</strong>: Reduction in expenses due to system implementation.</li>
+<li><strong>Revenue Growth</strong>: Increased income generated from the enhanced system.</li>
+</ul>
+<p><strong>Examples of Direct Benefits</strong>:</p>
+<ol style="list-style-type: lower-roman;">
+<li>A proposed system that can handle 25% more transactions than the current system.</li>
+<li>Saving NRs. 10,000/- monthly on paper and printing costs due to a shift to a digital system.</li>
+</ol>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain about different categories of resources? Highlight on the process of resource histogram equalization. Why do you think it is a crucial activity?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In project management, resources are essential elements that contribute to the successful execution of project activities. They can be broadly classified into several categories based on their nature and role in the project. Below is an explanation of each category:</p>
+<ul style="list-style-type: square;">
+<li><strong>Labor</strong> refers to the human resources involved in executing the project. This includes everyone from managers and technical experts to field workers and administrative staff. Their skills, experience, and availability directly impact the quality and timeline of project completion.</li>
+<li><strong>Equipment</strong> encompasses the tools, machinery, and devices required to carry out project tasks. These resources are often specialized and critical for efficient operations, such as computers for software development or heavy machinery for construction projects.</li>
+<li><strong>Material</strong> includes the physical goods or raw inputs consumed during the project. These resources, such as construction supplies or electronic components, are essential for creating the tangible outputs of a project and need to be managed carefully to avoid shortages or waste.</li>
+<li><strong>Space</strong> refers to the physical area necessary for project operations. It can include offices, workshops, or storage facilities. Adequate and well-planned spaces are crucial to ensuring that tasks can be performed without disruption or inefficiency.</li>
+<li><strong>Services</strong> involve external expertise or utilities brought in to support the project. This can range from consulting and legal advice to<br />
+essential utilities like internet connectivity or third-party maintenance. Services often fill gaps in internal capabilities.</li>
+<li><strong>Time</strong> is the duration allocated for project tasks and overall completion. It is a non-storable resource that must be effectively planned and managed to meet deadlines and avoid delays that could escalate costs or compromise quality.</li>
+<li><strong>Money</strong> is the financial resource needed to fund the project. It covers everything from procurement of materials and equipment to salaries and operational costs. Efficient budget management ensures that monetary constraints do not hinder progress or cause overruns.</li>
+</ul>
+<p>Resource histogram equalization is the process of balancing resource allocation across the timeline of a project. It involves adjusting the distribution of tasks and resources to avoid periods of overuse or underutilization. This ensures that resources, especially labor, are neither overloaded with tasks nor left idle. The process requires careful analysis of the resource histogram, identifying peaks and troughs in resource utilization, and making necessary adjustments to smooth out the workload.</p>
+<p><strong>Process of Resource Histogram Equalization</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Analyze the Resource Histogram</strong>: Examine the plotted histogram to identify periods of high demand (peaks) and underutilization (troughs).</li>
+<li><strong>Redistribute Tasks</strong>: Reschedule less critical tasks to periods with lower resource demand to balance the workload.</li>
+<li><strong>Reallocate Resources</strong>: Assign tasks to alternative available resources to ease the load on overburdened resources.</li>
+<li><strong>Adjust Schedules</strong>: Modify project timelines, if necessary, to prevent resource overload and ensure optimal usage.</li>
+<li><strong>Introduce Additional Resources</strong>: If balancing is not achievable with existing resources, bring in temporary or external resources during peak periods.</li>
+<li><strong>Review and Monitor</strong>: Continuously review the updated histogram to ensure the workload remains balanced throughout the project.</li>
+</ul>
+<p><strong>Importance of Resource Histogram Equalization</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Prevents Resource Overload</strong>: Avoids burnout and ensures the health and efficiency of team members.</li>
+<li><strong>Optimizes Resource Utilization</strong>: Reduces idle time and maximizes the use of available resources.</li>
+<li><strong>Enhances Project Efficiency</strong>: Prevents delays caused by bottlenecks, enabling smoother progress.</li>
+<li><strong>Improves Morale</strong>: Balanced workloads contribute to a more positive and productive work environment.</li>
+<li><strong>Supports Sustainable Practices</strong>: Promotes long-term effectiveness by maintaining consistent resource allocation.</li>
+</ul>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Calculate discounted payback period for the following project.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Year</strong></td>
+<td><strong>Project</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>– 200,000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>100,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100,000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49865" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/PHOTO-2025-01-06-13-05-10.jpg?resize=806%2C921&#038;ssl=1" alt="" width="806" height="921"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are the objectives that activity planning aims to achieve?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In addition to providing project and resource schedules, activity planning aims to achieve a number of other objectives which may be summarized as follows:</p>
+<ul style="list-style-type: square;">
+<li><strong>Feasibility assessment</strong> Is the project possible within required timescales and resource constraints? It is not until we have constructed a detailed plan that we can forecast a completion date with any reasonable knowledge of its achievability. The fact that a project may have been estimated as requiring two work-years effort might not mean that it would be feasible to complete it within, say, three months were eight people to work on it – that will depend upon the availability of staff and the degree to which activities may be undertaken in parallel.</li>
+<li><strong>Resource allocation</strong> What are the most effective ways of allocating resources to the project and when should they be available? The project plan allows us to investigate the relationship between timescales and resource availability (in general, allocating additional resources to a project shortens its duration) and the efficacy of additional spending on resource procurement.</li>
+<li><strong>Detailed costing</strong> How much will the project cost and when is that expenditure likely to take place? After producing an activity plan and allocating specific resources, we can obtain more detailed estimates of costs and their timing.</li>
+<li><strong>Motivation</strong> Providing targets and being seen to monitor achievement against targets is an effective way of motivating staff, particularly where they have been involved in setting those targets in the first place.</li>
+<li><strong>Co-ordination</strong> When do the staff in different departments need to be available to work on a particular project and when do staff need to be transferred between projects? The project plan, particularly with large projects involving more than a single project team, provides an effective vehicle for communication and co-ordination among teams. In situations where staff may need to be transferred between project teams (or work concurrently on more than one project), a set of integrated project schedules should ensure that such staff are available when required and do not suffer periods of enforced idleness.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain SPM framework.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Software Project Management (SPM) framework is a structured approach to managing and controlling software development projects effectively. It encompasses various key areas to ensure the project is delivered successfully, meeting its objectives within time, scope, budget, and quality constraints. Here’s an explanation of the key components of the SPM framework:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Managing Integration</strong>: Integration involves coordinating various activities and aspects of the project to function cohesively. It includes developing the project charter, defining the scope, and creating a detailed plan to direct and manage the project. Integration also ensures smooth handling of changes through monitoring and control mechanisms.</li>
+<li><strong>Managing Scope</strong>: This component ensures that the project&#8217;s goals and boundaries are clearly defined and managed. The project scope is broken down into smaller tasks using a Work Breakdown Structure (WBS). It involves planning, defining, verifying the scope, and controlling scope changes to ensure the project stays aligned with its objectives.</li>
+<li><strong>Managing Time/Schedule</strong>: Since projects have a fixed timeline, managing time involves creating and adhering to a project schedule.<br />
+This includes defining tasks, estimating durations, sequencing activities, allocating resources, and controlling the schedule to meet deadlines efficiently.</li>
+<li><strong>Managing Costs</strong>: Cost management ensures that resources are used efficiently and that project expenses remain within the budget. This involves resource planning, cost estimation, budgeting, and cost control to maximize the value generated by the project while minimizing unnecessary expenditures.</li>
+<li><strong>Managing Quality</strong>: Quality management focuses on ensuring that project deliverables meet the desired standards and objectives. It involves planning quality processes, performing quality assurance to maintain standards, and implementing quality control to identify and resolve issues.</li>
+<li><strong>Managing Human Resources</strong>: This aspect deals with building and managing a capable project team. It includes planning for human resource needs, hiring suitable personnel, and developing the team to enhance productivity. Managing human resources also ensures that team members perform their roles effectively throughout the project lifecycle.</li>
+<li><strong>Managing Communication</strong>: Effective communication is vital for project success as it involves engaging with stakeholders, team members, and other relevant parties. This includes planning communication strategies, distributing information, reporting performance, and managing stakeholder expectations to ensure transparency and alignment.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Highlight on different types of contracts.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Contracts are vital in defining the terms and obligations of business engagements. The type of contract selected depends on the nature of the project, the industry, and the degree of risk involved. Here is an overview of the most commonly used types of contracts:</p>
+<ul style="list-style-type: square;">
+<li><strong>Fixed Price (Lump Sum)</strong>: This straightforward contract involves the service provider agreeing to deliver predefined services within a specific period for a fixed payment. It often includes milestones, KPIs, and acceptance criteria, offering the advantage of knowing the total project cost upfront.</li>
+<li><strong>Unit Price</strong>: In this model, the project is divided into units with a specific charge for each. This approach provides flexibility, as units can be allocated to various service providers based on expertise and bid amounts. It&#8217;s ideal for projects requiring diverse skill sets across different components.</li>
+<li><strong>Cost Plus</strong>: The service provider is reimbursed for all incurred costs (labor, machinery, materials) plus an agreed-upon fee. This contract demands detailed resource schedules and periodic cost reporting, making it transparent but more suitable for projects with uncertain costs.</li>
+<li><strong>Incentive</strong>: This contract addresses cost uncertainties, often in innovative or pilot projects. It establishes target price, profit, and maximum cost thresholds. Any cost overruns are shared between the client and provider, balancing risks and promoting efficiency.</li>
+<li><strong>Retainer (Time and Material &#8211; T&amp;M)</strong>: This flexible, risk-minimized engagement is based on pricing for time and materials. With short delivery cycles, estimates are sent before each phase, ensuring clarity. It’s often used for long-term relationships, allowing adaptive project evolution.</li>
+<li><strong>Percentage of Construction Fee</strong>: Common in engineering projects, this type involves the client paying a percentage of the total construction cost as the service provider&#8217;s fee. It simplifies budgeting while ensuring alignment with the project&#8217;s scale.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Draw precedence network diagram for the following and identify the  critical path.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Activity</strong></td>
+<td><strong>Duration (weeks)</strong></td>
+<td><strong>Precedence</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>4</td>
+<td>A</td>
+</tr>
+<tr>
+<td>D</td>
+<td>2</td>
+<td>B</td>
+</tr>
+<tr>
+<td>E</td>
+<td>4</td>
+<td>B, D</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-48247" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-680.png?resize=529%2C714&#038;ssl=1" alt="" width="529" height="714"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain capability process model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Capability Process Model is a framework used to assess and improve the capabilities of an organization, particularly in the context of process management and enhancement. It provides a structured approach to understanding, analyzing, and enhancing the various processes within an organization to achieve better performance and competitiveness. Here&#8217;s a detailed explanation of the Capability Process Model:</p>
+<p><strong>Components of Capability Process Model:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Capability Maturity Levels</strong>: The model typically includes different levels of maturity that represent the progression of an organization’s process capabilities. These levels often range from initial (ad-hoc or chaotic processes) to optimized (continuously improving processes). Each level builds on the previous one, leading to greater process sophistication and effectiveness.</li>
+<li><strong>Process Assessment</strong>: This involves evaluating current processes against established criteria or standards. The assessment helps identify strengths, weaknesses, and areas for improvement. It often includes the use of metrics and benchmarks to measure process performance and maturity.</li>
+<li><strong>Process Improvement</strong>: Based on the assessment, organizations develop and implement strategies to improve their processes. This can include redesigning workflows, adopting new technologies, training<br />
+personnel, and implementing best practices. The goal is to move processes to higher maturity levels.</li>
+<li><strong>Standardization and Documentation</strong>: Ensuring that processes are standardized and documented is crucial for consistency and quality. Standardized processes are easier to manage, measure, and improve. Documentation provides a reference for current practices and aids in training and compliance.</li>
+<li><strong>Continuous Improvement</strong>: The Capability Process Model emphasizes ongoing improvement rather than one-time changes. This involves regularly reviewing processes, gathering feedback, and making incremental improvements to enhance efficiency, quality, and adaptability.</li>
+</ol>
+<p><strong>Maturity Level Example (CMMI):</strong></p>
+<p>The Capability Maturity Model Integration (CMMI) is a well-known example of a capability process model that includes five maturity levels:</p>
+<ul style="list-style-type: square;">
+<li><strong>Level 1: Initial (Ad Hoc)</strong>: Processes are chaotic and unstructured, with frequent crises and a heavy reliance on individual efforts. Successes are unpredictable and not repeatable due to a lack of standardized practices.</li>
+<li><strong>Level 2: Repeatable</strong>: Basic project management practices, such as tracking, requirements management, and planning, are established. These allow successful practices to be repeated, bringing stability to software delivery.</li>
+<li><strong>Level 3: Defined</strong>: Standardized processes for software development and maintenance are implemented organization-wide. Oversight is provided by a Software Engineering Process Group, and training ensures adherence and understanding.</li>
+<li><strong>Level 4: Managed</strong>: Metrics and data are used to monitor productivity and quality. Project performance becomes predictable, and consistent high-quality outcomes are achieved.</li>
+<li><strong>Level 5: Optimizing</strong>: The organization emphasizes continuous process improvement and innovation. New technologies and processes are effectively integrated, enabling adaptability and sustained quality enhancement.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How can Software Configuration Management aid in change control and version control?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software Configuration Management (SCM) plays a critical role in change control and version control by ensuring that changes to software products and configurations are managed in an organized and systematic manner. Here&#8217;s how SCM aids in both:</p>
+<p><strong>Change Control</strong>:</p>
+<p>SCM facilitates change control by providing a structured procedure to handle changes to the software configuration. The steps involved in this process ensure that only approved changes are implemented, maintaining the stability and integrity of the software. SCM helps by:</p>
+<ul style="list-style-type: square;">
+<li><strong>Evaluating Change Requests</strong>: Change requests are reviewed for their technical merit, potential side effects, and overall impact on other components, ensuring that only necessary and approved changes are implemented.</li>
+<li><strong>Preventing Ad-hoc Changes</strong>: By controlling unsanctioned changes, SCM ensures that modifications are made in a controlled environment, preventing uncoordinated changes that could degrade the software’s quality.</li>
+<li><strong>Impact Analysis</strong>: SCM helps in evaluating the impact of changes on the existing system, ensuring that new updates are consistent with the overall project goals and do not introduce new issues.</li>
+<li><strong>Change Documentation</strong>: SCM ensures that each change made to the software product is properly documented, so stakeholders have an accurate record of what has been modified and why.</li>
+</ul>
+<p><strong>Version Contro</strong>l:</p>
+<p>SCM aids in version control by tracking and managing different versions of software configuration items throughout the development lifecycle. This ensures that the correct version of each software component is used and that changes are accurately recorded. SCM helps with version control by:</p>
+<ul style="list-style-type: square;">
+<li><strong>Maintaining Multiple Versions</strong>: SCM systems keep track of various versions of code, documentation, and configuration items, allowing developers to work on multiple versions concurrently without conflicts.</li>
+<li><strong>Tracking Concurrent Development</strong>: SCM prevents different developers from modifying the same configuration item simultaneously, thus ensuring smooth progress and coordination in the development process.</li>
+<li><strong>Snapshot Management</strong>: SCM creates snapshots of the current state of software at any point in time, helping teams understand the status of modules, identify which version is ready for release, and manage software changes efficiently.</li>
+<li><strong>Consistent Integration</strong>: SCM allows for the controlled integration of new versions into the main codebase, ensuring that all updates align with the software&#8217;s requirements and maintain quality.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the practical implications of Risk Exposure?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Risk exposure refers to the potential loss or damage an organization may face due to certain risks, which is evaluated based on the likelihood and impact of those risks. The practical implications of risk exposure can be seen across several areas of project management and organizational operations:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Resource Allocation</strong>: High risk exposure may require additional resources such as time, personnel, and budget to mitigate potential risks. For example, additional testing or research may be necessary when dealing with unproven technology.</li>
+<li><strong>Project Planning and Scheduling</strong>: Risks with high exposure can cause delays or missed deadlines, affecting the project timeline. For instance, if key team members are at risk of leaving, backup plans and resource adjustments may be needed, potentially delaying the project.</li>
+<li><strong>Cost Estimation</strong>: High risk exposure often leads to increased costs as extra efforts are required to manage or mitigate risks. This can include setting aside contingency budgets to address unforeseen complications or scope changes during the project.</li>
+<li><strong>Impact on Quality</strong>: Unmanaged risks can affect the quality of the product, leading to defects or issues that harm the project&#8217;s success.<br />
+For example, a failure to adequately test the product may result in bugs that affect the user experience.</li>
+<li><strong>Contingency Planning and Risk Management</strong>: High risk exposure emphasizes the need for effective contingency plans to ensure that a project can proceed even if risks materialize. Organizations must develop strategies such as risk avoidance, mitigation, or transfer to handle potential disruptions.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Future worth</li>
+<li>Bubble chart</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a.<strong>Future Worth</strong>: Future worth refers to the value of an investment or cash flow at a future point in time, taking into account the effects of interest, inflation, or other factors influencing the value over time. It is used in finance and accounting to project the expected value of an asset or investment after a certain period, helping organizations and individuals plan and evaluate future financial outcomes.</p>
+<p><strong>Formula</strong>: Future Worth (FW)=PV×(1+r)n<br />
+Where:</p>
+<ul style="list-style-type: square;">
+<li>PV = Present Value</li>
+<li>r = Interest rate or growth rate</li>
+<li>n= Number of periods (years, months, etc.)</li>
+</ul>
+<p>Example: If you invest $1,000 in a savings account with an annual interest rate of 5%, the future worth after 3 years would be:</p>
+<p>FW=1000×(1+0.05)3=1000×1.157625=1157.63</p>
+<p>So, the future worth of your investment will be $1,157.63 after 3 years.</p>
+<p>b. <strong>Bubble chart</strong>: A bubble chart is a type of data visualization that displays three dimensions of data. Each point in the chart represents an item, with the X and Y axes representing two numerical variables, and the size of the bubble representing a third variable. It is useful for identifying patterns and relationships in complex datasets with multiple variables.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48179" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-666.png?resize=1001%2C627&#038;ssl=1" alt="" width="1001" height="627"></p>
+<p>This chart helps the company visualize how sales revenue correlates with customer satisfaction and the volume of products sold, allowing them to identify high-performing regions or outliers. For instance, a region with high sales and a large bubble (indicating high volume) but low customer satisfaction could signal the need for improvement in customer service.</p>
+</div>
+</body></html>

@@ -1,0 +1,210 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NM Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>NM Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>How secant method can approximate the root of a non-linear equation? Explain with necessary derivation. Estimate a real root of following equation using secant method. Assume error precisionn of 0.01.</p>
+<p>x<sup>3</sup> + 2x – cos(x) = 4</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Derivation:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23253" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214458_CamScanner-1.jpg?resize=877%2C1235&#038;ssl=1" alt="" width="877" height="1235"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23254" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214517_CamScanner-1.jpg?resize=883%2C942&#038;ssl=1" alt="" width="883" height="942"></p>
+<p><strong>Numeric:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23255" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213350_CamScanner-1.jpg?resize=905%2C750&#038;ssl=1" alt="" width="905" height="750"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How spline interpolation differs with the Langrage’s interpolation? Estimate the value of f(0) and f(4) using cubic spline interpolation from the following data.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td>-1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>f(x)</strong></td>
+<td>-10</td>
+<td>-2</td>
+<td>14</td>
+<td>86</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Spline interpolation uses all of the available data to construct a cubic between each pair of points that is continuous with first and second derivatives. On the other hand, Lagrange interpolation simply interpolates with a cubic polynomial the two points below the region and the two points above the region.</p>
+<p><strong>Solution of the numeric:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23257" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213424_CamScanner.jpg?resize=930%2C1374&#038;ssl=1" alt="" width="930" height="1374"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23259" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213446_CamScanner.jpg?resize=914%2C1262&#038;ssl=1" alt="" width="914" height="1262"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23258" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213509_CamScanner.jpg?resize=916%2C1049&#038;ssl=1" alt="" width="916" height="1049"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is pivoting? Why is it necessary? Write an algorithm and program to solve the set of n linear equations using Gaussian elimination method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Pivoting and its necessity</strong></p>
+<p>Pivoting is a technique that involves swapping rows or columns of a matrix to avoid dividing by a small or zero pivot element. A pivot element is the diagonal entry of a matrix that is used to eliminate the entries below it. If the pivot element is too small, the elimination process can introduce large errors or even fail. Pivoting can also help to reduce the growth of round-off errors and improve the conditioning of the matrix.</p>
+<p><strong>Gaussian elimination</strong></p>
+<p><strong>Algorithm:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Start</li>
+<li>Declare the variables and read the order of the matrix n.</li>
+<li>Take the coefficients of the linear equation as:<br />
+Do for k=1 to n<br />
+Do for j=1 to n+1<br />
+Read a[k][j]<br />
+End for j<br />
+End for k</li>
+<li>Do for k=1 to n-1<br />
+Do for i=k+1 to n<br />
+Do for j=k+1 to n+1<br />
+a[i][j] = a[i][j] – a[i][k] /a[k][k] * a[k][j]<br />
+End for j<br />
+End for i<br />
+End for k</li>
+<li>Compute x[n] = a[n][n+1]/a[n][n]</li>
+<li>Do for k=n-1 to 1<br />
+sum = 0<br />
+Do for j=k+1 to n<br />
+sum = sum + a[k][j] * x[j]<br />
+End for j<br />
+x[k] = 1/a[k][k] * (a[k][n+1] – sum)<br />
+End for k</li>
+<li>Display the result x[k]</li>
+<li>Stop</li>
+</ol>
+<p><strong>Program:</strong></p>
+<p>#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i,j,k,n;<br />
+float A[20][20],c,x[10],sum=0.0;<br />
+printf(&#8220;\nEnter the order of matrix: &#8220;);<br />
+scanf(&#8220;%d&#8221;,&amp;n);<br />
+printf(&#8220;\nEnter the elements of augmented matrix row-wise:\n\n&#8221;);<br />
+for(i=1; i&lt;=n; i++)<br />
+{<br />
+for(j=1; j&lt;=(n+1); j++)<br />
+{<br />
+printf(&#8220;A[%d][%d] : &#8220;, i,j);<br />
+scanf(&#8220;%f&#8221;,&amp;A[i][j]);<br />
+}<br />
+}<br />
+for(j=1; j&lt;=n; j++) /* loop for the generation of upper triangular matrix*/<br />
+{<br />
+for(i=1; i&lt;=n; i++)<br />
+{<br />
+if(i&gt;j)<br />
+{<br />
+c=A[i][j]/A[j][j];<br />
+for(k=1; k&lt;=n+1; k++)<br />
+{<br />
+A[i][k]=A[i][k]-c*A[j][k];<br />
+}<br />
+}<br />
+}<br />
+}<br />
+x[n]=A[n][n+1]/A[n][n];<br />
+/* this loop is for backward substitution*/<br />
+for(i=n-1; i&gt;=1; i&#8211;)<br />
+{<br />
+sum=0;<br />
+for(j=i+1; j&lt;=n; j++)<br />
+{<br />
+sum=sum+A[i][j]*x[j];<br />
+}<br />
+x[i]=(A[i][n+1]-sum)/A[i][i];<br />
+}<br />
+printf(&#8220;\nThe solution is: \n&#8221;);<br />
+for(i=1; i&lt;=n; i++)<br />
+{<br />
+printf(&#8220;\nx%d=%f\t&#8221;,i,x[i]); /* x1, x2, x3 are the required solutions*/<br />
+}<br />
+return(0);<br />
+}</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Calculate a real root of the following function using bisection method correct upto 3 significant figures.</p>
+<p>x<sup>2</sup> – e<sup>-x</sup> = 3</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23262" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213539_CamScanner.jpg?resize=906%2C1354&#038;ssl=1" alt="" width="906" height="1354"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is fixed point iteration method? How can it converge to the root of a non-linear equation? Also explain the diverging cases with suitable examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23286" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214620_CamScanner-1.jpg?resize=916%2C1192&#038;ssl=1" alt="" width="916" height="1192"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23264" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214642_CamScanner.jpg?resize=928%2C1327&#038;ssl=1" alt="" width="928" height="1327"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23266" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214702_CamScanner.jpg?resize=916%2C1234&#038;ssl=1" alt="" width="916" height="1234"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write down the program for solving ordinary differential equation using Heun’s method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23268" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_222148_CamScanner.jpg?resize=902%2C1085&#038;ssl=1" alt="" width="902" height="1085"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Fit the quadratic function for the data given below using least square method.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td>1.0</td>
+<td>1.5</td>
+<td>2.0</td>
+<td>2.5</td>
+<td>3.0</td>
+<td>3.5</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td><strong>f(x)</strong></td>
+<td>2.7</td>
+<td>4</td>
+<td>5.8</td>
+<td>8.3</td>
+<td>11.2</td>
+<td>15</td>
+<td>19</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23270" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213610_CamScanner.jpg?resize=922%2C1079&#038;ssl=1" alt="" width="922" height="1079"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Estimate the integral value of following function from x =1.2 to 2.4 using Simpson’s 1/3 rule.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td>1.0</td>
+<td>1.2</td>
+<td>1.4</td>
+<td>1.6</td>
+<td>1.8</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.4</td>
+<td>2.6</td>
+</tr>
+<tr>
+<td><strong>f(x)</strong></td>
+<td>1.53</td>
+<td>2.25</td>
+<td>3.18</td>
+<td>4.32</td>
+<td>5.67</td>
+<td>7.23</td>
+<td>8.98</td>
+<td>10.94</td>
+<td>13.08</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23272" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213632_CamScanner.jpg?resize=919%2C1064&#038;ssl=1" alt="" width="919" height="1064"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is Gaussian integration formula? Evaluate the following integration using Gaussian integration three ordinate formula</p>
+<p><sub>0</sub>∫<sup>1</sup> Sinx/x dx</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23274" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_223120_CamScanner.jpg?resize=928%2C1290&#038;ssl=1" alt="" width="928" height="1290"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23276" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213650_CamScanner.jpg?resize=911%2C1292&#038;ssl=1" alt="" width="911" height="1292"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23275" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213710_CamScanner.jpg?resize=928%2C320&#038;ssl=1" alt="" width="928" height="320"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Solve the following set of equations using Gauss Siedal method.</p>
+<p>x + 2y + 3z = 4</p>
+<p>6x + 4y + 5z = 16</p>
+<p>5x + 2y + 3z = 12</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23279" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213741_CamScanner.jpg?resize=926%2C908&#038;ssl=1" alt="" width="926" height="908"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23278" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213802_CamScanner.jpg?resize=928%2C502&#038;ssl=1" alt="" width="928" height="502"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Solve the following differential equation for 0 ≤ x ≤ 1 taking h=0.5 using Runge Kutta 4th order method.</p>
+<p>y'(x) + y = 3x with y(0)=2</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23282" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213822_CamScanner.jpg?resize=914%2C814&#038;ssl=1" alt="" width="914" height="814"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23281" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213839_CamScanner.jpg?resize=930%2C621&#038;ssl=1" alt="" width="930" height="621"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Solve the Poisson’s equation ∇<sup>2</sup>f=3x<sup>2</sup>y over the square domain 0 ≤ x ≤ 3, 0 ≤ y ≤ 3 with f=0 on the boundary and h=1.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23284" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213855_CamScanner.jpg?resize=926%2C1182&#038;ssl=1" alt="" width="926" height="1182"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23285" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213915_CamScanner.jpg?resize=930%2C1295&#038;ssl=1" alt="" width="930" height="1295"></p>
+</div>
+</body></html>

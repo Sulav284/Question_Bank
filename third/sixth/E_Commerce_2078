@@ -1,0 +1,155 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-commerce Question 2078 2078</title>
+    </head>
+    <body>
+        <h1>E-commerce Question 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is e-commerce business model? Describe the key elements of e-commerce business model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The e-commerce business model refers to the structure and strategy that a company uses to conduct its online business activities. It involves selling products or services through electronic channels such as websites, mobile applications, or online marketplaces. The key elements of an e-commerce business model include:</p>
+<p>1. Value Proposition: This refers to the unique value or benefits that a company offers to its customers. It could include factors such as competitive pricing, wide product selection, convenience, personalized shopping experience, or superior customer service.</p>
+<p>2. Target Market: Identifying and understanding the specific market segment or customer group that the e-commerce business aims to serve. This includes demographics, interests, preferences, and behavior patterns of the target audience.</p>
+<p>3. Revenue Model: The strategy for generating revenue in e-commerce can vary. Common revenue models include direct sales of products or services, subscription-based models, advertising revenue, affiliate marketing, or a combination of these approaches.</p>
+<p>4. Product Sourcing and Supply Chain: Determining how products or services will be sourced and delivered to customers. This involves decisions related to inventory management, partnerships with suppliers or manufacturers, logistics, shipping, and fulfillment.</p>
+<p>5. User Experience and Interface: Creating a user-friendly and intuitive interface for customers to browse products, make purchases, and interact with the e-commerce platform. A seamless user experience can lead to higher customer satisfaction and repeat purchases.</p>
+<p>6. Marketing and Customer Acquisition: Developing strategies to attract and acquire customers. This includes various digital marketing techniques such as search engine optimization (SEO), social media marketing, email marketing, content marketing, paid advertising, and customer retention initiatives.</p>
+<p>7. Payment and Security: Establishing secure and convenient payment options for customers, including credit/debit cards, digital wallets, and other online payment gateways. Implementing robust security measures to protect customer data and ensure safe transactions.</p>
+<p>8. Customer Service and Support: Providing effective customer support channels such as live chat, email, or phone to address customer queries, concerns, and complaints. Offering a reliable and efficient after-sales service can enhance customer satisfaction and loyalty.</p>
+<p>9. Analytics and Data-driven Decision Making: Utilizing data analytics to gather insights on customer behavior, preferences, and purchasing patterns. This data can be used to optimize marketing campaigns, improve product offerings, and enhance overall business performance.</p>
+<p>10. Scalability and Growth Strategy: Planning for scalability and growth by identifying opportunities for expansion, diversification, or entering new markets. This involves assessing the potential for future growth and adapting the business model accordingly.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the security threats in e-commerce? How client server and data transactions securities are maintained in e-commerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are several security threats that e-commerce businesses need to be aware of and address to protect their clients and data. Some of the common security threats in e-commerce include:</p>
+<p>1. Unauthorized Access: Hackers or unauthorized individuals gaining access to sensitive customer information or the e-commerce platform itself.</p>
+<p>2. Data Breaches: Theft or exposure of customer data, including personal information, credit card details, and login credentials.</p>
+<p>3. Payment Fraud: Fraudulent activities such as stolen credit card information, identity theft, or unauthorized transactions.</p>
+<p>4. Phishing and Social Engineering: Deceptive tactics used to trick users into revealing sensitive information or clicking on malicious links.</p>
+<p>5. Malware and Viruses: Malicious software designed to infect e-commerce websites or compromise user devices.</p>
+<p>6. Distributed Denial of Service (DDoS) Attacks: Overloading a website&#8217;s server with traffic to disrupt its operations and render it inaccessible to legitimate users.</p>
+<p>To maintain client-server and data transaction security in e-commerce, several measures are implemented:</p>
+<p>1. Secure Sockets Layer (SSL) or Transport Layer Security (TLS): These encryption protocols are used to secure data transmitted between the client&#8217;s browser and the e-commerce server. SSL/TLS certificates ensure that data is encrypted and cannot be intercepted or tampered with during transmission.</p>
+<p>2. Secure Payment Gateways: E-commerce businesses utilize secure payment gateways that comply with Payment Card Industry Data Security Standard (PCI DSS) requirements. These gateways ensure that customer payment information is encrypted, securely transmitted, and processed without exposing sensitive data to the e-commerce platform.</p>
+<p>3. Two-Factor Authentication (2FA): Implementing additional layers of security by requiring users to provide two forms of authentication, such as a password and a unique code sent to their mobile device.</p>
+<p>4. Regular Security Audits and Updates: Conducting routine security audits to identify vulnerabilities and promptly applying security patches and updates to the e-commerce platform, server, and associated software.</p>
+<p>5. Strong Password Policies: Encouraging users to create strong, unique passwords and enforcing password complexity requirements. Additionally, implementing measures like account lockouts and password reset procedures to prevent unauthorized access.</p>
+<p>6. Monitoring and Intrusion Detection Systems: Utilizing systems to monitor network traffic, detect suspicious activities, and mitigate potential security breaches promptly.</p>
+<p>7. Educating Users: Providing guidelines and educating customers about online security best practices, such as avoiding suspicious emails, using secure Wi-Fi networks, and being cautious about sharing personal information online.</p>
+<p>8. Regular Data Backups: Performing regular backups of customer data to ensure its availability in the event of a security incident or data loss.</p>
+<p>By implementing these security measures and staying vigilant, e-commerce businesses can enhance client-server and data transaction security, mitigate risks, and protect the integrity and privacy of their customers&#8217; information.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is e-payment? Discuss how credit card transactions, electronic checks and stored value<br />
+payment system work. Mention their pros and cons</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>E-payment, also known as electronic payment, refers to the process of making financial<br />
+transactions electronically, typically through digital platforms and technologies. It involves the<br />
+transfer of funds from one party to another using electronic means, such as computers,<br />
+smartphones, or other internet-enabled devices.</p>
+<p>Online credit card transaction is a type of electronic payment system. There are five parties involved in ana online credit and purchase: consumer, merchant, clearing house, consumer&#8217;s bank and the merchant&#8217;s bank. The steps for online credit card purchase.</p>
+<p>1.When a consumer wants to make a purchase, he/she adds the item to the merchant&#8217;s shopping cart.</p>
+<p>2. The consumer checks out the purchase through the credit and issued by their bank.</p>
+<p>3. Using encryption, a secure connection using SSL/TLS is established and credit card information is sent to the merchant server.</p>
+<p>4. Once the consumer credit card information is received by the merchant, the merchant software contacts the clearing house.</p>
+<p>5. The clearing house contacts the issuing bank to verify the account and balance of consumer.</p>
+<p>6. Once verified, the consumer&#8217;s issuing bank credits the merchant account.</p>
+<p>7. The debit to the consumer account is transmitted to the consumer in a monthly statement.</p>
+<p>Electronic Cheques</p>
+<p>Electronic cheques, also known as e-cheques or electronic checks, are a digital form of traditional paper cheques. It works as follows:</p>
+<p>Step 1: The sender creates an e-cheque using banking software by filling necessary payment details, such as the recipient&#8217;s name, the payment amount.</p>
+<p>Step 2: The sender authorizes the e-cheque by digitally signing it using their private key or providing other authentication credentials and sends it to the receiver through email or any other channels.</p>
+<p>Step 3: The receiver receives the e-cheque and deposits it into their bank account using electronic means ex. online banking services, mobile banking apps.</p>
+<p>Step 4: The receiver&#8217;s bank receives the electronic cheque and verifies its authenticity and validity and then forwards the e-cheque to the sender&#8217;s bank for clearance and settlement.</p>
+<p>Step 5: The sender&#8217;s bank confirms the validity of the electronic cheque and checks the payer&#8217;s account for sufficient funds. If valid, the sender&#8217;s bank deducts the payment amount from the sender&#8217;s account and transfers it to the receiver&#8217;s bank.</p>
+<p>Step 6. The receiver receives the amount, completing the transaction.</p>
+<p>Stored Value Payment:<br />
+A stored value payment system allows users to store funds electronically on a prepaid account and use those funds for transactions. Here&#8217;s how a stored value payment system typically works:</p>
+<p>Step 1: Users create an account with the provider of the stored value payment system &amp; load funds into their account by transferring money from their bank account or through other accepted methods.</p>
+<p>Step 2: When making a purchase or payment, users initiate the transaction by selecting the stored value payment option and providing the necessary details, such as the transaction amount and recipient information.</p>
+<p>Step 3: The payment system verifies the availability of sufficient funds in the user&#8217;s prepaid account to cover the transaction amount.</p>
+<p>Step 4: If the funds are available, the payment system authorizes the transaction and deducts the necessary amount from the user&#8217;s balance.</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe the factors that make U-commerce different from M-commerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>U-commerce (Ubiquitous Commerce) and M-commerce (Mobile Commerce) are both subsets of electronic commerce (e-commerce), but they have distinct characteristics that differentiate them from each other:</p>
+<p>Devices Supported<br />
+&#8211; U-commerce refers to the ability to conduct transactions using various interconnected devices beyond just mobile phones. It supports a wide range of devices, including smart-phones, tablets, smart TVs, smart-watches, smart appliances, and even wearable devices whereas M-commerce specifically focuses on transactions conducted through mobile devices such as smart-phones and tablets.</p>
+<p>Connectivity<br />
+&#8211; U-commerce emphasizes ubiquitous connectivity, meaning that devices are always connected to networks and capable of accessing the internet anytime and anywhere. It uses technologies like Wi-Fi, Bluetooth, NFC and IoT . M-commerce, while also benefiting from connectivity, is primarily associated with mobile devices and their specific connectivity options.</p>
+<p>Ecosystem<br />
+&#8211; U-commerce often involves integration with broader ecosystems of interconnected devices, services, and platforms. It allows users to move between devices and services while maintaining continuity. For example, a user may start a transaction on a smartphone, continue it on a tablet, and finalize it on a smart TV. M-commerce, while part of the broader e-commerce ecosystem, typically focuses on transactions and interactions specifically within the mobile device domain.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is industry value chain? Mention the generic players in the value chain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The industry value chain refers to a series of activities and processes that are involved in the creation, production, and delivery of a product or service within a specific industry. It represents the flow of value and encompasses all the steps and players involved from the sourcing of raw materials to the final product reaching the end consumer. The generic players in the industry value chain are:</p>
+<p>1. Suppliers: Suppliers are companies or individuals that provide raw materials, components, or services necessary for the production process (such as farmers, miners, or extractors).<br />
+2. Manufacturers: Manufacturers take the raw materials and components provided by suppliers and transform them into finished products. They engage in activities such as assembling, processing, or manufacturing products.<br />
+3. Transporters: Transporters are responsible for the physical movement of goods between various stages of the value chain. They handle logistics and transportation, ensuring the efficient and timely delivery of products from manufacturers to distributors, retailers, or end customers<br />
+4. Distributors: Distributors, also known as wholesalers, are intermediaries that purchase products in bulk from manufacturers and sell them to retailers or other intermediaries. They typically operate large scale distribution networks, warehouses, and logistics operations.<br />
+5. Retailers: Retailers are the entities that sell products directly to end customers. They can operate physical stores, online platforms, or a combination of both. Retailers interact directly with consumers, showcasing and selling the products, providing customer service, and managing inventories.<br />
+6. Customers: Customers are the end users or buyers of the products or services. They represent the final destination in the value chain, as they purchase and utilize the products or services.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is digital wallet? How it works?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A digital wallet is an electronic payment tool that enables users to store funds, typically linked to their bank account, and make digital payments conveniently and securely. Here&#8217;s an explanation of how it works:</p>
+<p>Step 1: Users download a digital wallet application from a trusted provider &amp; create an account in the app providing necessary information.<br />
+Step 2: Users link their preferred payment sources, such as credit cards or bank accounts, to the digital wallet and load funds from their linked account<br />
+Step 3: For online transactions, users select the digital wallet as the payment method during checkout.<br />
+Step 4: The merchant or payment processor authorizes the transaction, verifying payment details and confirming its validity.<br />
+Step 5: Funds are transferred from the user&#8217;s digital wallet to the merchant&#8217;s account, completing the transaction. The digital wallet app maintains a transaction history, enabling users to track and review their payment activities. Users can manage payment sources, add or remove payment methods.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is a catalog in e-commerce application? How can you create catalogs?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In an e-commerce application, a catalog refers to a structured collection or listing of products or services that are available for purchase. It serves as a digital inventory where customers can browse and search for specific items. A catalog typically includes information such as product names, descriptions, images, prices, and any other details.</p>
+<p>Here&#8217;s a general process of creating a catalog:</p>
+<p>1. Define your product hierarchy: Determine the categories and subcategories that will organize your products. For example, if you&#8217;re selling clothing, you may have categories like &#8220;Men&#8217;s,&#8221; &#8220;Women&#8217;s,&#8221; &#8220;Kids,&#8221; and subcategories like &#8220;Shirts,&#8221; &#8220;Pants,&#8221; &#8220;Shoes,&#8221; etc.<br />
+2. Gather product information: Collect all the necessary details for each product you want to include in your catalog. This includes product names, descriptions, images, SKU (Stock Keeping Unit) numbers, prices, variations (e.g., sizes or colors), and any other attributes.<br />
+3. Assign unique identifiers: Assign a unique identifier to each product in your catalog. This identifier can be useful for tracking inventory, managing orders, and linking the catalog to other systems.<br />
+4. Upload product images: Ensure that you have high-quality images for each product. These images should accurately represent the product and attract potential customers.<br />
+5. Populate the catalog: Enter the products information into your e-commerce platform or content management system.<br />
+6. Configure catalog settings: Customize your catalog settings, such as currency, pricing rules, shipping options, and any other relevant configurations.<br />
+7. Review and update: Regularly review your catalog to ensure accuracy and make any necessary updates or additions. This includes adding new products, removing discontinued items, or modifying existing information.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define malicious code. How the potentially unwanted programs like adware and spyware works?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Malicious code refers to any type of code or software that is designed to cause harm, compromise security, or exploit vulnerabilities in computer systems, networks, or applications. Malicious code can take various forms, such as viruses, worms, Trojans, ransomware, and more. Potentially unwanted programs like adware and spyware are types of malicious code that typically aim to generate revenue for their creators by exploiting users&#8217; computers or invading their privacy. Here&#8217;s an overview of how these programs work:</p>
+<p>1. Adware: Adware is software that displays unwanted advertisements to users. It often comes bundled with free or low-cost software and gets installed alongside the desired program without the user&#8217;s explicit consent. Once installed, adware monitors the user&#8217;s browsing behaviour, collects data, and displays targeted advertisements. Adware can also redirect users to advertising websites or inject unwanted ads into web pages.</p>
+<p>2. Spyware: Spyware is designed to collect sensitive information from users without their knowledge or consent. It can track keystrokes, capture screenshots, monitor online activities, and gather personal data such as login credentials, credit card numbers, or browsing habits. Spyware typically operates stealthily in the background, transmitting the collected data to the attacker or a remote server for malicious purposes like identity theft, fraud, or espionage.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Discuss different pricing models for online advertisements</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Online Advertisement:</p>
+<p>It is a form of marketing and advertising which uses the internet to deliver promotional marketing messages to consumers. When the software is used to do the purchasing, it is known as programmatic advertising.</p>
+<p>Pricing Models for online Advertisement:</p>
+<p>1.Pricing: putting value on a product and service.</p>
+<p>2. Low of one price: With complete price transparency in a perfect information marketplace, there will be one world price for every product.</p>
+<p>3. Demand curve: It shows the quality of goods that can be sold at various prices.</p>
+<p>4. Price Discrimination: Selling products to different people and groups based on their willingness to pay.</p>
+<p>5. Free and freemium: Basic service for free and needs payment for upgrade to premium.</p>
+<p>6. Versioning: Creating multiple versions of information goods and selling essentially the same product to different market segments at different prices.</p>
+<p>7. bundling: Offers consumers two or more goods for a reduced price.</p>
+<p>8. Dynamic pricing: The price of product varies, depending on the demand characteristics of the customer and the supply situation of the seller.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How facebook exchanges, reaction buttons and sponsored message are used for social<br />
+marketing and advertisement.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Facebook exchanges, reaction buttons, and sponsored messages are all features used in social<br />
+marketing and advertising on the Facebook platform. Here&#8217;s an overview of how each of these elements is utilized for marketing purposes:</p>
+<p>1. Facebook Exchanges: Facebook exchanges refer to the advertising platforms or networks that allow advertisers to buy and sell ad inventory on Facebook. These exchanges enable advertisers to target specific audiences based on various criteria such as demographics, interests, behavior, and location. Advertisers can bid on ad placements to display their ads to the desired target audience on Facebook.</p>
+<p>2. Reaction Buttons: Facebook reaction buttons are a set of emoji-like icons (like, love, haha, wow, sad, and angry) that users can use to express their sentiments about a post or advertisement. These buttons provide marketers with valuable feedback and engagement metrics. By analyzing the reactions to their content, advertisers can gauge audience sentiment and tailor their future marketing strategies accordingly. For example, if an ad receives predominantly positive reactions, the advertiser may consider it successful and continue to create similar content.</p>
+<p>3. Sponsored Messages: Sponsored messages are a form of direct communication between businesses and their customers on Facebook Messenger. This feature allows advertisers to send targeted, personalized messages to users who have previously interacted with their brand on Messenger. Advertisers can use sponsored messages to deliver promotional offers, product updates, customer support, or other relevant content directly to interested users. Sponsored messages help businesses improve customer relationships, drive engagement, and generate leads or conversions.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is Search Engine Optimization (SEO)? How on page SEO can be done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Search Engine Optimization (SEO) is the practice of optimizing a website and its content to improve its visibility and ranking in search engine results pages such as Google, bing, etc. The goal of SEO is to increase organic (non-paid) traffic to a website by making it more accessible and relevant to search engines and users. SEO involves various techniques and strategies, including on-page SEO and off-page SEO. On-page SEO refers to the optimization efforts made directly on a website&#8217;s pages to improve its search engine ranking. &#8216;s how on page seo can be done:</p>
+<p>1. Keyword Research: Identify relevant keywords or search terms that users are likely to use when searching for information related to your website.</p>
+<p>2. Quality Content: Create high-quality, informative, and engaging content that aligns with the keywords you want to target.</p>
+<p>3. Title Tags: Optimize the title tags of your web pages by including relevant keywords. The title tag appears as the clickable headline in search engine results, so it should accurately describe the page&#8217;s content.</p>
+<p>4. URL Structure: Ensure that your URLs are descriptive, readable, and include keywords when relevant. A clean URL structure helps search engines understand the content hierarchy and improves user experience.</p>
+<p>5. Heading Tags: Use heading tags (H1, H2, H3, etc.) to structure your content and make it more scannable for both users and search engines.</p>
+<p>6. Image Optimization: Optimize images by using descriptive file names and alt tags that include relevant keywords. Compress images to reduce file size and improve page loading speed.</p>
+<p>7. Internal Linking: Establish a logical internal linking structure within your website by linking relevant pages together.</p>
+<p>8. Mobile-Friendliness: Ensure your website is mobile-friendly and responsive to provide a seamless experience for users on various devices. Mobile-friendliness is an important ranking factor, as search engines prioritize mobile-friendly websites.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How content based and collaborative filtering approaches are used for product<br />
+recommendation in e-commerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Content-Based Filtering:</p>
+<p>Content-based filtering is an approach used for product recommendation in e-commerce that focuses on analyzing the content or attributes of products to make personalized recommendations. In this method, each product is described by a set of relevant attributes such as category, brand, price, color, and size. Similarly, user profiles are created based on their preferences, past behavior, and interactions. The recommendation system then compares the attributes of the user&#8217;s profile with the attributes of available products. By identifying products with similar attributes or content to those preferred by the user, the system generates recommendations. For example, if a user has previously shown a preference for athletic shoes, a content-based filtering system may recommend other athletic shoes with similar attributes such as the same brand, size, or color.</p>
+<p>Collaborative Filtering:</p>
+<p>Collaborative filtering is another popular approach for product recommendation that relies on the behavior and patterns of multiple users. This method recognizes that users with similar preferences in the past are likely to have similar preferences in the future. Collaborative filtering involves collecting user behavior data such as purchases, ratings, reviews, and browsing history. By analyzing this data, the system calculates similarities between users based on their behavior and preferences. Once user similarity is determined, the recommendation system suggests items that are popular among similar users but have not been interacted with by the target user. For example, if User A and User B have similar browsing and purchasing patterns, collaborative filtering would recommend products that User B has liked or purchased to User A, assuming they would also find those items interesting.</p>
+</div>
+</body></html>

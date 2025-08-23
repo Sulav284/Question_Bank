@@ -1,0 +1,384 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>CA Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempt any Two Questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>Differentiate between hardwired and microprogrammed control unit. Describe with example of microprogram sequencer used in microprogrammed control unit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;"><strong>Hardwired Control</strong></td>
+<td style="width: 50%; height: 24px;"><strong>Microprogrammed Control</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Technology is circuit-based.</td>
+<td style="width: 50%; height: 24px;">Technology is software-based.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It is implemented through flip-flops, gates, decoders, etc.</td>
+<td style="width: 50%; height: 24px;">Microinstructions generate signals to control the execution of instructions.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Fixed instruction format.</td>
+<td style="width: 50%; height: 24px;">Variable instruction format (16-64 bits per instruction).</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Instructions are register-based.</td>
+<td style="width: 50%; height: 24px;">Instructions are register-based.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">ROM is not used.</td>
+<td style="width: 50%; height: 24px;">ROM is used.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Used in RISC.</td>
+<td style="width: 50%; height: 24px;">Used in CISC.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Faster Decoding.</td>
+<td style="width: 50%; height: 24px;">Slower Decoding.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Difficult to modify.</td>
+<td style="width: 50%; height: 24px;">Easily modified.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Chip area is less.</td>
+<td style="width: 50%; height: 24px;">Chip area is large.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><strong>Microprogram Sequencer:</strong></p>
+<p>A microprogram sequencer uses its address to determine the next microinstruction that needs to be executed. This overall process is known as microprogram sequencing. A sequencer, which is also referred to as a microsequencer, creates the addresses required to step through a control store&#8217;s microprogram.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-17454 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/seq-1.jpg?resize=389%2C265&#038;ssl=1" alt="" width="389" height="265"></p>
+<ul style="list-style-type: disc;">
+<li><strong>Control Address Register(CAR) :</strong><br />
+The control address register receives the address from four different paths. For receiving the addresses from four different paths, Multiplexer is used.</p>
+<div id="google_ads_iframe_/27823234/GFG_InContent_Desktop_728x280_0__container__"></div>
+</li>
+<li><strong>Multiplexer :</strong><br />
+Multiplexer is a combinational circuit that contains many data inputs and single data output depending on control or selects inputs.</li>
+<li><strong>Branching :</strong><br />
+Branching is achieved by specifying the branch address in one of the fields of the microinstruction. Conditional branching is obtained by using part of the micro-instruction to select a specific status bit in order to determine its condition.</li>
+<li><strong>Mapping Logic :</strong><br />
+An external address is transferred into control memory via a mapping logic circuit.</li>
+<li><strong>Incrementer :</strong><br />
+Incrementer increments the content of the control address register by one, to select the next micro-instruction in sequence.</li>
+<li><strong>Subroutine Register (SBR) :</strong><br />
+The return address for a subroutine is stored in a special register called Subroutine Register whose value is then used when the micro-program wishes to return from the subroutine.</li>
+<li><strong>Control Memory :</strong><br />
+Control memory is a type of memory that contains addressable storage registers. Data is temporarily stored in the control memory. Control memory can be accessed quicker than main memory.</li>
+</ul>
+<p><strong>In summary, the microprogrammed sequencing steps in the microprogrammed CU are:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Incrementing of the control address register.</li>
+<li>Unconditional branch or conditional branch, depending on status bit conditions.</li>
+<li>A mapping process from the bits of the instruction to an address for control memory.</li>
+<li>A facility for subroutine call and return.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the various types of addressing modes and compare them algorithm, advantage and disadvantage.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Addressing modes</strong> specifies the way, the effective address of an operand is represented in the instruction.</p>
+<h2>Types of Addressing Modes</h2>
+<ol style="list-style-type:decimal;">
+<li>Register Addressing Mode</li>
+<li>Direct Addressing Mode</li>
+<li>Immediate Addressing Mode</li>
+<li>Register Indirect Addressing Mode</li>
+<li>Index Addressing Mode</li>
+<li>Auto Increment Addressing Mode</li>
+<li>Auto Decrement Addressing Mode</li>
+<li>Relative Addressing Mode</li>
+</ol>
+<h3>1. Register Addressing Mode</h3>
+<p>Every instruction includes operands; the operands can be a memory location, a processor register or an I/O device. The instruction which uses processor <strong>registers</strong> to represent operands is the instruction in <strong>register addressing mode</strong>.</p>
+<p>Here, the effective address is a register where the value of the operand is present.</p>
+<p><strong>EA=R</strong></p>
+<p>Below we have two instructions as our examples for register addressing mode.</p>
+<p><strong>Add R4, R3</strong></p>
+<p><strong>Load R3, R2</strong></p>
+<p>In the examples above, the Add instruction uses registers to represent both of its operands. Similarly, the Load instruction also uses registers to represent both of its operands. So, the instruction above uses register addressing mode to describe the address of the operand. Below, we have a figure showing the Add instruction in the example above.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-364" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Register-Mode.jpg?resize=600%2C253&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Register-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Register-Mode-300x127.jpg 300w" alt="Register Mode" width="600" height="253" /></p>
+<p><strong>Advantage:</strong> In the register addressing mode there are no memory references as the value to be operated is present in the register.<br />
+<strong>Disadvantage:</strong> Registers have limited address space. So, it has a limit on the size of value that can be stored.</p>
+<h3>2. Direct Addressing Mode</h3>
+<p>The direct addressing mode is also known as <strong>Absolute Addressing mode</strong>. Here, the instruction contains the address of the <strong>location in memory</strong> where the value of the operand is stored.</p>
+<p>Here, the effective address is the address of memory location.</p>
+<p><strong>EA = A</strong></p>
+<p>For example, observe the examples below:</p>
+<p><strong>Add R2, A</strong></p>
+<p><strong>Store R2, B</strong></p>
+<p>The Add instruction includes the memory location A which has the value to be added to the content of register R2. Similarly, the Store instruction has the address of memory location B where the content of register R2 will be stored. Below we have a figure showing the direct addressing of the operand A in the Add instruction of the example above.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-365" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Direct-Mode.jpg?resize=600%2C411&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Direct-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Direct-Mode-300x206.jpg 300w" alt="Direct Mode" width="600" height="411" /></p>
+<p><strong>Advantage:</strong> Direct addressing mode is the simplest of all addressing mode.<br />
+<strong>Disadvantage:</strong> Direct addressing mode provides a limited address space.</p>
+<h3>3. Immediate Addressing Mode</h3>
+<p>In immediate addressing mode, the value of the operand is <strong>explicitly mentioned</strong> in the instruction. Here, effective address is not required as the operand is explicitly defined in instruction.</p>
+<p>Let us see the example of immediate addressing mode:</p>
+<p><strong>Add R2, #100</strong></p>
+<p><strong>Store R2, 100H</strong></p>
+<p>The Add instruction, adds 100 to R2’s content . The <strong>#</strong> sign in front of the value indicates the immediate value to be operated. If a value does not have # sign in front of it then it is the address of a memory location.</p>
+<p>The next instruction Store considers the immediate value 100H as address as it does not have # sign in front of it. The Store instruction stores the content of R2 at memory location 100H. In the figure below we have shown the Store instruction of the above examples.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-373" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1.jpg?resize=600%2C414&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1-300x207.jpg 300w" alt="Immediate Addressing Mode 1" width="600" height="414" /></p>
+<p><strong>Advantage:</strong> In the immediate addressing mode the memory reference is not required as the value is explicitly present in the instruction</p>
+<p><strong>Disadvantage:</strong> The instruction format provides a limited size for the operand. So, the immediate addressing mode has limited space for immediate value.</p>
+<h2>4. Register Indirect Addressing mode</h2>
+<p>A <strong>processor register</strong> is used to hold the <strong>address of a memory location</strong> where the operand is placed. This addressing mode allows executing the same set of instructions for the different memory location. This can be done by incrementing the content of register thereby pointing the new location each time.</p>
+<p>In higher-level language, it is referred to as pointers. The indirect mode is denoted by placing the register inside the parenthesis.</p>
+<p>Here the effective address is the content of memory location present in the register.<br />
+<strong>EA=(R)</strong></p>
+<p>Now, for example:</p>
+<p><strong>Load R3, (R2)   // </strong><em>Load R2, A</em></p>
+<p>The Load instruction above will load the value present at the memory location contained by register R2 in the register R3. The figure below shows how the register R3 gets loaded with the value stored in the memory location held by register R2.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-367" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode.jpg?resize=600%2C490&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode-300x245.jpg 300w" alt="Indirect Addressing Mode" width="600" height="490" /></p>
+<p><strong>Advantage:</strong> In the register indirect addressing mode the same set of instructions can be used multiple times.</p>
+<p><strong>Disadvantage:</strong> In the register indirect addressing mode the number of memory reference is more.</p>
+<h3>5. Index Addressing Mode</h3>
+<p>Index addressing mode is helpful when the instructions in the program are accessing the <strong>array or the large range of memory addresses</strong>. In this mode, the effective address is generated by <strong>adding a constant to the register’s content</strong>. The content of the register does not change.</p>
+<p>The symbolic representation of index addressing mode is denoted as:</p>
+<p><strong>X(R)</strong></p>
+<p>And the effective address is denoted by</p>
+<p><strong>EA = X + (R)</strong></p>
+<p>For example, consider the instruction below:</p>
+<p><strong>Load R2, A</strong></p>
+<p><strong>Load R3, (R2)</strong></p>
+<p><strong>Load R4, 4(R2)</strong></p>
+<p><strong>Load R5, 8(R2)</strong></p>
+<p><strong>Load R6, 12(R2)</strong></p>
+<p>The above instructions will load the register R3, R4, R5, R6 with the contents, present at the successive memory addresses from memory location A correspondingly.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-368" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode.jpg?resize=600%2C475&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode-300x238.jpg 300w" alt="Index Addressing Mode" width="600" height="475" /></p>
+<p><strong>Advantage:</strong> The index addressing mode provides flexibility to specify memory locations.</p>
+<p><strong>Disadvantage:</strong> The index addressing mode is complex to implement.</p>
+<h3>6. Auto Increment Addressing Mode</h3>
+<p>In auto-increment addressing mode once the content of the register is <strong>accessed</strong> by the instruction the register’s content is <strong>incremented</strong> to refer the next operand.</p>
+<p>Symbolically it is represented as below:</p>
+<p><strong>(R)+</strong></p>
+<p>Here, the effective address is content of the register as it is enclosed by parenthesis. The content of register which is referring to a memory location is incremented so that it could point the next memory location where the next operand is stored.</p>
+<h3>7. Auto Decrement Addressing Mode</h3>
+<p>It is just opposite of auto-increment mode. In auto decrement mode the content of the register is <strong>decremented initially</strong> and then the decremented content of the register is used as effective address.</p>
+<p>Symbolically it is presented as:</p>
+<p><strong>-(R)</strong></p>
+<p>The auto-increment and decrement mode help to implement the <strong>stack structure</strong>.</p>
+<h3>8. Relative Addressing Mode</h3>
+<p>In the content above we have discussed the <strong>index addressing mode</strong>. There we were adding a constant to the register content to refer the next operand address. In some computer instead of a register, the <strong>program counter</strong> is used.</p>
+<p>The symbolic representation of relative address mode is</p>
+<p><strong>X(PC)</strong></p>
+<p>The effective address for it would be:</p>
+<p><strong>EA = X + (PC)</strong></p>
+<p>As here the operand addresses are found relative to the program counter. That’s why it is referred to as relative address mode.</p>
+<p><strong>Advantage: </strong>Relative addressing mode doesn’t require memory references.</p>
+<p><strong>Disadvantage:</strong> Relative addressing mode doesn’t have any disadvantage as such.</p>
+<p>This is all about addressing modes in computer architecture. It provides us with a flexible method to specify the address of the operands used in instruction.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the non-restoring division algorithm with flow chart, and hardware implementation diagram. Divide 10/3 using restoring division.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18658" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/1.jpg?resize=435%2C335&#038;ssl=1" alt="" width="435" height="335">  <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18661" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/hw.png?resize=758%2C400&#038;ssl=1" alt="" width="758" height="400"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-18660" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/2.jpg?resize=497%2C751&#038;ssl=1" alt="" width="497" height="751"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-18659" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/4.jpg?resize=447%2C541&#038;ssl=1" alt="" width="447" height="541"></p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18662" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/restore.jpg?resize=926%2C1197&#038;ssl=1" alt="" width="926" height="1197"></p>
+</div>
+<h2>Short Answer Questions: Attempt any Eight Questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>Explain the bus interconnection scheme with diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18586" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/SmartSelect_20230606_105017_CamScanner.jpg?resize=922%2C792&#038;ssl=1" alt="" width="922" height="792"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18587" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Screenshot_20230606_105336_CamScanner.jpg?resize=944%2C1181&#038;ssl=1" alt="" width="944" height="1181"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18588" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Screenshot_20230606_105156_CamScanner.jpg?resize=923%2C1089&#038;ssl=1" alt="" width="923" height="1089"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What do you mean by instruction format? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The instruction formats are a sequence of bits (0 and 1). These bits, when grouped, are known as fields. Each field of the machine provides specific information to the CPU related to the operation and location of the data. The instruction format also defines the layout of the bits for an instruction.</p>
+<p>The most common fields found in the instruction format are :</p>
+<p>i. An operation code field that specifies the operation to be performed.</p>
+<p>ii. An address field that designates a memory address.</p>
+<p>iii. A mode field that specifies the way the operand or effective address is determined.</p>
+<p>Example:</p>
+<p>Let us take following expression:</p>
+<p>X=(A+B) * C</p>
+<p>Then,</p>
+<p><span style="text-decoration: underline;"><strong>#Three Address Instruction Format</strong></span></p>
+<p>ADD R1,A,B</p>
+<p>MUL X,R1,C</p>
+<p><span style="text-decoration: underline;"><strong>#Two Addresss Instruction Format</strong></span></p>
+<p>MOV R1,A</p>
+<p>ADD R1,B</p>
+<p>MOV R2,C</p>
+<p>MUL R1,R2</p>
+<p>MOV X,R1</p>
+<p><span style="text-decoration: underline;"><strong>#One Address Instruction Format</strong></span></p>
+<p>LOAD A</p>
+<p>ADD B</p>
+<p>STORE T</p>
+<p>LOAD C</p>
+<p>MUL T</p>
+<p>STORE X</p>
+<p><span style="text-decoration: underline;"><strong>#Zero Address Instruction Format</strong></span></p>
+<p>PUSH A</p>
+<p>PUSH B</p>
+<p>ADD</p>
+<p>PUSH C</p>
+<p>MUL</p>
+<p>POP X</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the data transfer instructions with example</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-4113" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751861.jpg?resize=1700%2C855&#038;ssl=1" alt="" width="1700" height="855" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751861.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751861.jpg?resize=1024%2C515&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751861.jpg?resize=768%2C386&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751861.jpg?resize=1536%2C773&amp;ssl=1 1536w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-4114" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?resize=1700%2C2143&#038;ssl=1" alt="" width="1700" height="2143" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?resize=812%2C1024&amp;ssl=1 812w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?resize=768%2C968&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?resize=1218%2C1536&amp;ssl=1 1218w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751848.jpg?resize=1625%2C2048&amp;ssl=1 1625w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the symbolic microinstruction with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The microinstructions can be determined by symbols. It is interpreted to its binary format with an assembler. The symbols should be represented for each field in the microinstruction. The users should be enabled to represent their symbolic addresses. Each line in an assembly language represents symbolic instruction. These instructions are divided into five fields such as label, micro-operations, CD, BR, and AD.</p>
+<p>The fields that specify the following information are as follows −</p>
+<ul class="list">
+<li>The label field may be empty or it may specify a symbolic address. A label is terminated with a colon (:).</li>
+<li>The micro-operations field consists of one, two, or three symbols, separated by commas. But each F field includes only a single symbol.</li>
+<li>The CD field has one of the letters U, I, S, or Z.</li>
+<li>The BR field contains one of the four symbols defined.</li>
+<li>The AD field specifies a value for the address field of the microinstruction in one of three possible ways −
+<ul class="list">
+<li>With a symbolic address, which must also appear as a label.</li>
+<li>With the symbol NEXT to designate the next address in sequence.</li>
+<li>When the BR field includes a RET or MAP symbol, the AD field is left null and is transformed to seven zeros by the assembler.</li>
+</ul>
+</li>
+</ul>
+<h2>Fetch Routine</h2>
+<p>The control unit includes 128 words, each including 20 bits. The value of each bit should be specified to microprogram the control memory. Between the 128 words, the first 64 are composed for the routines of 16 instructions. The remaining 64 can be used for different goals. The best opening location for the fetch routine to start is the 64th address.</p>
+<p>The microinstructions necessary for fetch routine are −</p>
+<p>AR ← PC</p>
+<p>DR ← M[AR], PC ← PC + 1</p>
+<p>AR ← DR(0 − 10), CAR(2 − 5) ← DR(11 − 14), CAR(0,1,6) ← 0</p>
+<p>The address of the instruction is transferred from PC to AR and the instruction is then read from memory into DR. Since no instruction register is available, the instruction code remains in DR. The address part is transferred to AR and then control is transferred to one of 16 routines by mapping the operation code part of the instruction from DR into CAR.</p>
+<p>Microinstructions that are situated in addresses 64, 65, and 66 are important for the fetch routine. There are various symbolic language is as follows −</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td></td>
+<td>ORG 64</td>
+</tr>
+<tr>
+<td>FETCH:</td>
+<td>PCTAR U JMP NEXT</td>
+</tr>
+<tr>
+<td></td>
+<td>READ, INCPC U JMP NEXT</td>
+</tr>
+<tr>
+<td></td>
+<td>DRTAR U MAP</td>
+</tr>
+</tbody>
+</table></div>
+<p>The table shows the results of binary translation for the assembly language.</p>
+<h3>Binary Translation for Assembly Language</h3>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Binary Address</th>
+<th>F1</th>
+<th>F2</th>
+<th>F3</th>
+<th>CD</th>
+<th>BR</th>
+<th>AD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000000</td>
+<td>110</td>
+<td>000</td>
+<td>000</td>
+<td>00</td>
+<td>00</td>
+<td>1000001</td>
+</tr>
+<tr>
+<td>1000001</td>
+<td>000</td>
+<td>100</td>
+<td>101</td>
+<td>00</td>
+<td>00</td>
+<td>1000010</td>
+</tr>
+<tr>
+<td>1000010</td>
+<td>101</td>
+<td>101</td>
+<td>000</td>
+<td>00</td>
+<td>11</td>
+<td>0000000</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each microinstruction executes the internal register transfer operation displayed by the register transfer representation. The representation in symbols is important while writing microprograms in an assembly language format. The actual internal content which is saved in the control memory is in binary representation.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain an instrction pipeline with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An instruction pipeline is a technique used in computer architecture to improve the performance of a CPU by allowing multiple instructions to be in different stages of execution at the same time. This is accomplished by dividing the CPU’s execution units into a series of stages, each of which performs a specific task in the instruction execution process.</p>
+<p>Here is an example of a five-stage instruction pipeline:</p>
+<p>&gt; Fetch: The instruction is fetched from memory and loaded into the instruction register.</p>
+<p>&gt; Decode: The instruction is decoded to determine its operation and any necessary operands.</p>
+<p>&gt; Execute: The instruction is executed, performing the operation specified by the instruction.</p>
+<p>&gt; Memory: If the instruction requires access to memory, it is performed in this stage.</p>
+<p>Writeback: The result of the instruction is written back to a register or memory location.</p>
+<p>For example, consider the following sequence of instructions:</p>
+<p>ADD R1, R2, R3</p>
+<p>SUB R4, R5, R6</p>
+<p>MUL R7, R8, R9</p>
+<p>Without a pipeline, these instructions would be executed one after the other, with the CPU spending some time on each step of the instruction execution process for each instruction. With a pipeline, however, the instructions can be overlapped in their execution, allowing the CPU to complete each instruction faster.</p>
+<p>For example, while the ADD instruction is being executed in the execute stage, the SUB instruction can be fetched from memory and decoded, and the MUL instruction can be in the memory stage. This allows the CPU to keep all of its execution units busy and improve its overall performance.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain the Booth Multiplication algorithm with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18655" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/SmartSelect_20230606_112858_CamScanner.jpg?resize=1071%2C1565&#038;ssl=1" alt="" width="1071" height="1565"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18654" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/SmartSelect_20230606_112931_CamScanner.jpg?resize=957%2C1506&#038;ssl=1" alt="" width="957" height="1506">  <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18656" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/SmartSelect_20230606_112953_CamScanner.jpg?resize=926%2C394&#038;ssl=1" alt="" width="926" height="394"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the advantage and disadvantage of direct mapping and associative mapping between cache and main memory?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-size: 14pt;"><strong>Direct Mapping:</strong></span><br />
+Each word in cache consists of the data word and its associated tag. When a new word is first brought into the cache, the tag bits are stored alongside the data bits. When the CPU generates memory request, the index field is used for the address to access the cache. The tag field of the CPU address is compared with the tag in the<br />
+word read from the cache. If the two tags match, there is a hit and the desired data word is in cache. If there is no match, there is a miss and the required word is read from<br />
+main memory. It is then stored in the cache together with the new tag, replacing the<br />
+previous value. The disadvantage of direct mapping is that the hit ratio can drop<br />
+considerably if two or more words whose addresses have the same<br />
+index but different tags are accessed repeatedly.<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18666" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/dr.jpg?resize=612%2C290&#038;ssl=1" alt="" width="612" height="290"></p>
+<p><strong>Advantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>Simplest type of mapping</li>
+<li>Fast as only tag field matching is required while searching for a word.</li>
+<li>It is comparatively less expensive than associative mapping.</li>
+</ul>
+<p><strong>Disadvantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>It gives low performance because of the replacement for data-tag value.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Associative Mapping:</strong></span><br />
+The fastest and most flexible cache organization uses an associative memory. The associative memory stores both the address and content (data) of the memory word. This permits any location in cache to store any word from main memory.  A CPU address is placed in the argument register and the associative memory is searched for a matching address If the address is found, the corresponding data is read and sent to the CPU. If no match occurs, the main memory is accessed for the word. The address data pair is then transferred to the associative cache memory.<br />
+If the cache is full, an address data pair must be displaced to make room for a pair that is needed and not presently in the cache. The decision as to what pair is replaced is determined from the<br />
+replacement algorithm that the designer chooses for the cache. A simple procedure is to replace cells of the cache in round robin order whenever a new word is requested from main memory. This constitutes a first-in first-out (FIFO) replacement policy.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18667" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/assc-1.jpg?resize=497%2C440&#038;ssl=1" alt="" width="497" height="440"></p>
+<p><strong>Advantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>It is fast.</li>
+<li>Easy to implement.</li>
+</ul>
+<p><strong>Disadvantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>Expensive because it needs to store address along with the data.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the major differentiate between Input-output processor (IOP) and direct memory Access (DMA)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-4110" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751867.jpg?resize=1700%2C1106&#038;ssl=1" alt="" width="1700" height="1106" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751867.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751867.jpg?resize=1024%2C666&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751867.jpg?resize=768%2C500&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751867.jpg?resize=1536%2C999&amp;ssl=1 1536w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-4111" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?resize=1685%2C2200&#038;ssl=1" alt="" width="1685" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?w=1685&amp;ssl=1 1685w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?resize=784%2C1024&amp;ssl=1 784w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?resize=768%2C1003&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?resize=1176%2C1536&amp;ssl=1 1176w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/1640779751854.jpg?resize=1569%2C2048&amp;ssl=1 1569w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Draw a three dimensonal hypercube and explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Hypercube (or Binary n-cube multiprocessor)</b> structure represents a loosely coupled system made up of N=2n processors interconnected in an n-dimensional binary cube. Each processor makes a made of the cube. Each processor makes a node of the cube. Therefore, it is customary to refer to each node as containing a processor, in effect it has not only a CPU but also local memory and I/O interface. Each processor has direct communication paths to n other neighbor processors. These paths correspond to the cube edges.</p>
+<p>Each node is assigned a binary address in such a manner, that the addresses of two neighbors differ in exactly one bit position. For example, the three neighbors of the node with address 100 are 000, 110, and 101 in a three-cube structure. Each of these binary numbers differs from address 100 by one bit value.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-18800 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/hypercube-3s.jpg?resize=468%2C381&#038;ssl=1" alt="" width="468" height="381"></p>
+<div id="_GFG_ABP_Incontent_728x90"></div>
+<div id="GFG_AD_InContent_Desktop_728x280" data-google-query-id="CLqjwsOvsf8CFaygZgIdUEcDuw">
+<div id="google_ads_iframe_/27823234/GFG_InContent_Desktop_728x280_0__container__"></div>
+</div>
+<p>Routing messages through an n-cube structure may take from one to n links from a source node to a destination node.</p>
+<p><b>Example:</b><br />
+In a three-cube structure, node 000 may communicate with 011 (from 000 to 010 to 011 or from 000 to 001 to 011). It should cross at least three links to communicate from node 000 to node 111. A routing procedure is designed by determining the exclusive-OR of the source node address with the destination node address. The resulting binary value will have 1 bits corresponding to the axes on which the two nodes differ. Then, message is transmitted along any one of the exes.</p>
+<p>For example, a message at node 010 going to node 001 produces an exclusive-OR of the two addresses equal to 011 in a three-cube structure. The message can be transmitted along the second axis to node 000 and then through the third axis to node 001.</p>
+</div>
+</body></html>

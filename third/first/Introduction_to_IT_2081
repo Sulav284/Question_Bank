@@ -1,0 +1,338 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IIT- 2081 2081</title>
+    </head>
+    <body>
+        <h1>IIT- 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Compare primary memory with secondary memory. Why do we need primary memory in computers? Explain different types of secondary memories used in computer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between primary memory and secondary memory are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100.21%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>primary memory </strong></td>
+<td style="width: 50.2101%; text-align: center;"><strong>secondary memory</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Primary memory is temporary.Primary memory is also known as Main memory or Internal memory.</td>
+<td style="width: 50.2101%; text-align: center;">Secondary memory is permanent.<br />
+Secondary memory is also known as External memory or Auxiliary memory.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Primary memory is directly accessible by Processor/CPU.</td>
+<td style="width: 50.2101%; text-align: center;">Secondary memory is not directly accessible by the CPU.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Nature of Parts of Primary memory varies, RAM- volatile in nature. ROM- Non-volatile.</td>
+<td style="width: 50.2101%; text-align: center;">It’s always Non-volatile in nature.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper"></div>
+<div><span style="text-decoration: underline;">Primary memory</span> is a main memory and it is directly accessible by processor. It is placed between secondary memory an CPU where it holds data , programs and instructions that are currently in use. Seconday memory is slower than the CPU so accessing the data from the secondary memory hamper or reduce the performance of CPU. So, we use primary memory for achieving efficiency of CPU.</div>
+<div></div>
+<div><span style="text-decoration: underline;">Secondary memory</span> is type of computer memory that is used to store the data permanently. Secondary memory is slower than the primary memory. Common secondary storage devices are the hard disk and floppy disks.</div>
+<div></div>
+<div><span style="text-decoration: underline;"><strong>a. Magnetic tape:</strong></span></div>
+<div>Magnetic tape is the most popular storage medium for large data, which are sequentially accessed and processed. Like audio or videotape, the magnetic tape used in computer system which can also erased and reused indefinitely, old data on a tape are automatically erased ,as new data are recorded in the same area.</div>
+<div></div>
+<div><span style="text-decoration: underline;"><strong>b. Magnetic Disk:</strong></span></div>
+<div>Magnetic disk is a circular disk which is coated with magnetic material. The disk rotates with very high speed inside the computer drive. Data is stored on both the surface of the disk. magnetic disks are most popular for direct access storage device.A good example of magnetic disks is hard disk .</div>
+<div></div>
+<div><span style="text-decoration: underline;">Hard Disk</span> is direct-access storage medium with a rigid magnetic disk.The disk is divided into number of tracks and each tracks are divided into sectors.A hard disk uses round, flat disks called platters, coated on both sides with a special media material designed to store information in the form of magnetic patterns</div>
+<div>Hence, it is the required type of secondary memory.</div>
+<div></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain application software with example. Why do we need system software in computer?What are different type of operating system?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Application software are specialized software which is designed to perform specific tasks for end-users. It relies on system software for its operation. It is created to meet the needs of users, ranging from productivity tools and creativity software to entertainment applications. It interacts directly with users and is designed to fulfill specific user needs.</p>
+<p>Some example of application software are word processors, games, and web browsers.</p>
+<p>System software consists of low-level programs that interact with the computer at very basic level. As we know that:</p>
+<ul style="list-style-type: square;">
+<li> System software can control and work with computer hardware and also supervises the operations of computer hardware.</li>
+<li>It act as an interface between the device and end-user.</li>
+<li>It also provide platform for running other software.</li>
+</ul>
+<p>so, we need system software in our computer.</p>
+<p>Operating system is a software that act as an interface between user and hardware providing a platform to execute the programs. They can be divided into different types and some of its type are:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Batch Operating System:</span> Those operating system that accepts the input in batch where the batches contain collection of similar type of job.It also provide the output in batch form.</li>
+<li><span style="text-decoration: underline;">Real time:</span> These operating systems are system that responds to input immediately. It allows a computer to control or monitor tasks performed by other machines and people by responding to the input data in the required amount of time.</li>
+<li><span style="text-decoration: underline;">Multithreading:</span>  Multithreading allows different parts of a single program to run concurrently. Multithreading is the ability of an OS to execute different parts of a program, called threads, simultaneously.</li>
+<li><span style="text-decoration: underline;">Multitasking:</span>  This system allows a single CPU to execute what appears to be more than one program at the same time when, in fact, only one program is being executed. In multitasking, only one CPU is involved, but it switches from one program to another so quickly that it gives the appearance of executing all of the programs at the same time.</li>
+<li><span style="text-decoration: underline;">Multiprocessing:</span> It refers to a computer system‟s ability to support more than one process (program) at the same time. This system allows the simultaneous execution of programs on a computer that has several CPUs. Mainframe, Supercomputers have more than one CPU.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define network topology. Explain different types of network topologies along with their merit and demerit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Network topology is the physical and logical arrangement of the nodes in a network. It defines the way of connecting different nodes for achieving the communication, connectivity, resource sharing etc. or we can say that the arrangement of a network that comprises nodes and connecting lines via sender and receiver is referred to as <strong>Network Topology</strong>.  There are many ways of arranging the nodes in the network and most commonly known are:</p>
+<p><span style="font-size: 14pt;"><strong>a. <span style="text-decoration: underline;">Bus Topology:</span></strong></span></p>
+<p>In Bus topology all the nodes are connected to a single physical medium. We can say that different nodes share same communication line or cable. Co-axial cables are used as communication line or as backbone of the network. Terminator are used at each end for preventing the flow or leak of the data.</p>
+<p style="text-align: center;">             <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-34768" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/Untitled-Diagram.drawio.png?resize=396%2C153&#038;ssl=1" alt="" width="396" height="153"></p>
+<p style="text-align: center;"><strong>fig : Bus topology</strong></p>
+<p><strong>Merit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Their structure is simple and easy to understand.</li>
+<li>Installation cost is comperatively cheap.</li>
+</ul>
+<p><strong>Demerit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Collision of data and congestion is high in this topology.</li>
+<li>Adding and removing node is quite complex as it disturb complete network.</li>
+<li>If the backbone cable is damaged then complete systems connected to the network stop working.</li>
+</ul>
+<p><span style="font-size: 14pt;"><strong>b.</strong> <span style="text-decoration: underline;"><strong>Star Topology:</strong></span></span></p>
+<p>Star topology is the physical arrangement of the nodes in such a way that all the host are connected to the central hub/switch. Here hub/switch work as contralized server but they aren&#8217;t highly configured.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-34773" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/star-.drawio.png?resize=247%2C154&#038;ssl=1" alt="" width="247" height="154"></p>
+<p style="text-align: center;"><strong>fig : Star topology</strong></p>
+<p><strong>Merit:</strong></p>
+<ul style="list-style-type: square;">
+<li>It has fast performance due to comperatively less traffic.</li>
+<li>Troubleshoot is easy and also sdding and removing any node doesn&#8217;t affect other nodes.</li>
+</ul>
+<p><strong>Demerit:</strong></p>
+<ul style="list-style-type: square;">
+<li>If  central hub / switch switch fail then complete network stops as all the nodes depends on single node.</li>
+<li>Performance of the network is based on the hub / switch capacity.</li>
+</ul>
+<p><strong><span style="font-size: 14pt;">c. <span style="text-decoration: underline;">Ring topology:</span></span></strong></p>
+<p>Ring topology is the arrangement of the nodes making a circular ring like structure where all nodes are connected to two nodes one proceeding it and other suceeding.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-34776" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/ring.png?resize=241%2C194&#038;ssl=1" alt="" width="241" height="194"></p>
+<p style="text-align: center;"><strong>fig: Ring topology</strong></p>
+<p><strong>Merit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Token system can be used here for transferring files with reduced data traffic.</li>
+<li>Here each nodes can get equal authority.</li>
+</ul>
+<p><strong>Demerit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Troubleshoot is difficult and adding removing host disturb the network.</li>
+<li>Failure of one system disturb other nodes.</li>
+</ul>
+<p><span style="font-size: 14pt;"><strong>d.</strong> <strong><span style="text-decoration: underline;">Mesh Topology:</span></strong></span></p>
+<p>In this topology all the nodes or system of that network are connected to each other with a seperate point-to-point connection. Here the system don&#8217;t need to go through any other hub or they don&#8217;t share to any common communicational link and can send their data to any other system by their own.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-34777" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/mesh.drawio.png?resize=319%2C249&#038;ssl=1" alt="" width="319" height="249"></p>
+<p style="text-align: center;"><strong>fig: Mesh topology</strong></p>
+<p><strong>Merit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Each connection can carry their own data load.</li>
+<li>Troubleshoot is easy and ensure the privacy and security.</li>
+</ul>
+<p><strong>Demerit:</strong></p>
+<ul style="list-style-type: square;">
+<li>Installation and configuration is quite difficult.</li>
+<li>Bulky wiring anf complex structure with high cost.</li>
+</ul>
+<p><strong><span style="font-size: 14pt;">e. <span style="text-decoration: underline;">Hybrid Topology:</span></span></strong></p>
+<p>It is a network which contain more than one topology. It inherit props and cons of the network with which it is incoperating.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-34778" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/hybrid.drawio.png?resize=460%2C176&#038;ssl=1" alt="" width="460" height="176"></p>
+<p style="text-align: center;"><strong>fig: Hybrid topology</strong></p>
+<p><strong>Merit:</strong></p>
+<ul style="list-style-type: square;">
+<li>They can incoperate with those network which are not in use now like bus topology .</li>
+</ul>
+<p><strong>Demerit:</strong></p>
+<ul style="list-style-type: square;">
+<li>The structure becomes complex.</li>
+<li>troubleshooting becomes difficult.</li>
+</ul>
+<p>Hence these are the topologies in used or type of topologies.</p>
+</div>
+<h2>SECTION B : Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain different characteristics of computers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The characteristics of the computer system are as follows:</p>
+<p><img decoding="async" class="aligncenter" src="data:image/jpeg;base64,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" alt="User Loaded Image | CSIT Guide" /></p>
+<p><strong>1. <span style="text-decoration: underline;"><span style="font-size: 14pt;">Speed</span></span></strong></p>
+<p>A computer works with much higher speed and accuracy compared to humans while performing mathematical calculations.</p>
+<p><strong>2.<span style="text-decoration: underline;"><span style="font-size: 14pt;"> Accuracy</span></span></strong></p>
+<p>Computers perform calculations with 100% accuracy. Errors may occur due to data inconsistency or inaccuracy.</p>
+<p><strong>3. </strong><span style="text-decoration: underline;"><span style="font-size: 14pt;"><b>Diligence</b></span></span></p>
+<p>A computer can perform millions of tasks or calculations with the same consistency and accuracy. It doesn’t feel any fatigue or lack of concentration.</p>
+<p><strong>4. <span style="text-decoration: underline;"><span style="font-size: 14pt;">Versatility</span></span></strong></p>
+<p>Versatility refers to the capability of a computer to perform different kinds of works with same accuracy and efficiency.</p>
+<p><strong>5. <span style="text-decoration: underline;"><span style="font-size: 14pt;">Reliability</span></span></strong></p>
+<p>A computer is reliable as it gives consistent result for similar set of data i.e., if we give same set of input any number of times, we will get the same result.</p>
+<p><strong>6. <span style="text-decoration: underline;"><span style="font-size: 14pt;">Automation</span></span></strong></p>
+<p>Computer performs all the tasks automatically i.e. it performs tasks without manual intervention.</p>
+<p><strong>7.<span style="text-decoration: underline;"><span style="font-size: 14pt;"> Memory</span></span></strong></p>
+<p>A computer has built-in memory called primary memory where it stores data. Secondary storage are removable devices such as CDs, pen drives, etc., which are also used to store data.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain instruction format with example. What is instruction set?</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The instruction formats are a sequence of bits (0 and 1). These bits, when grouped, are known as fields. Each field of the machine provides specific information to the CPU related to the operation and location of the data. The instruction format also defines the layout of the bits for an instruction.</p>
+<p>The most common fields found in the instruction format are :</p>
+<p>i. An operation code field that specifies the operation to be performed.</p>
+<p>ii. An address field that designates a memory address.</p>
+<p>iii. A mode field that specifies the way the operand or effective address is determined.</p>
+<p>Example:</p>
+<p>Let us take following expression:</p>
+<p>X=(A+B) * C</p>
+<p>then,</p>
+<p><span style="text-decoration: underline;"><span style="font-size: 14pt;"><strong>Two Addresss Instruction Format</strong></span></span></p>
+<p>MOV R1,A</p>
+<p>ADD R1,B</p>
+<p>MOV R2,C</p>
+<p>MUL R1,R2</p>
+<p>MOV X,R1</p>
+<p>An instruction set is a group of commands for a central processing unit(CPU) in machine language. The term can refer to all possible instructions for a CPU or a subset of instructions to enhance its performance in certain situations.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is I/O port? Explain working of I/O system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Computer can&#8217;t understand the  hardware singnals so it need an interface to understand the signals from the hardware and for it, I/O ports are used.<strong> I/O ports</strong> are the external interfaces that are used for connecting the input and output devices to computer. The I/O devices are connected to the computer via serial port and parallel ports.</p>
+<p>The working of I/O system incorporate I/O software and I/O hardware. I/O hardware includes ports, buses and device controllors for different devices, and I/O devices. I/O Software is the device driver software that may be embedded with operating system or comes with each device. The working of I/O is described as:</p>
+<ul style="list-style-type: square;">
+<li>I/O devices are connected to the computer via ports of computer which could be serial or parallel.</li>
+<li>Device controllor operates on bus, ports or devices. It controls the signals on the wires of port or bus.</li>
+<li>Device driver is software via which the operating system communicates with the device controllor. Each device has their own driver and controllor i.e each device have their specific controllor and driver.</li>
+</ul>
+<p>The above steps simply tells that I/O system for their working need a port to connect the I/O device. Connected devices have their own conteollor which helps them in the service i.e either to facilate with input or output. For each controllor a driver is there which show them the direction or path.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is Unicode? Convert 0.865 from Base 10 to Base 16.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="vmod">
+<div class="thODed">
+<div class="wHYlTd sY7ric" data-topic="">
+<div class="wHYlTd sY7ric">
+<div class="PZPZlf" data-attrid="SenseDefinition" data-psd="sense_definition~:&amp;an international encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value that applies across different platforms and programs.">
+<div data-dobid="dfn">Unicode is an international encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value that applies across different platforms and programs. It is a universal character encoding standard that provides a unique number for every character. It has been developed to incorporate all the characters of every written language of the world. Commonly used Unicode are UTF-8, UTF-16 and UTF-32.</div>
+<div data-dobid="dfn"><span style="text-decoration: underline; font-size: 14pt;"><strong>Numerical part:</strong></span></div>
+<div data-dobid="dfn">According to question,</div>
+<div data-dobid="dfn">(0.865 )<sub>10</sub> = (?)<sub>16</sub></div>
+<div data-dobid="dfn"></div>
+<div data-dobid="dfn"><span style="text-decoration: underline;">for integer part,</span></div>
+<div data-dobid="dfn">(0)<sub>10</sub>= (0)<sub>16</sub></div>
+</div>
+<div data-dobid="dfn"></div>
+<div class="PZPZlf" data-attrid="SenseDefinition" data-psd="sense_definition~:&amp;an international encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value that applies across different platforms and programs.">
+<div data-dobid="dfn"><span style="text-decoration: underline;">for fraction part,</span></div>
+<div data-dobid="dfn"></div>
+<div data-dobid="dfn">
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 38.4199%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;"></td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">Integer</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">Fraction</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">0.865×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">13 (D)</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.84</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">.84×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">13 (D)</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.44</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">.44×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">7</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.04</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">.04×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">0</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.64</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">.64×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">10 (A)</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.24</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 21.645%; text-align: center; height: 24px;">.24×16</td>
+<td style="width: 28.2828%; text-align: center; height: 24px;">3</td>
+<td style="width: 24.5119%; text-align: center; height: 24px;">.84</td>
+</tr>
+</tbody>
+</table></div>
+<p>then,</p>
+<p>(.865)<sub>10</sub> = (.DD70A3)<sub>16</sub></p>
+<p>so,</p>
+<p>(0.865)<sub>10</sub> = (0.DD70A3)<sub>16</sub> is the required conversion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain cloud computing in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud computing is the general term for anything that involves delivering hosted services over the internet. It is the use of the computing resouces i.e hardware and software that are delivered as a service over a network typically over internet. Its the on-demand availability ofcomputer system resource especially data storage and computing power, without direct active management by the user.</p>
+<p>Characteristics of cloud computing are:</p>
+<ul style="list-style-type: square;">
+<li>On-demand self-service :Cloud computing can help us to achieve server time and network storage as per demand without human interaction with each service provider.</li>
+<li>Resource pooling : The provider&#8217;s computing resource is pooled to provide service to multiple user using different model  with different physical and virtual resource dynamically as per the user need.</li>
+<li>Rapid elasticity: To the consumer, the capabilities avilable for provisining often appear to be unlimited.</li>
+<li>Broad network access: Capabilities are available over the network and they can be accessed using different mechanism.</li>
+</ul>
+<p>&nbsp;</p>
+<p>The benefits of cloud computing are:</p>
+<ul style="list-style-type: square;">
+<li>Flexibility: Users can access cloud services from anywhere with an internet connection as needed.</li>
+<li>Efficiency :  New applications can rapidly get into production.</li>
+<li>Enhanced strategic value: Cloud computing enables organizations to use various technologies and the most up-to-date innovations to gain a competitive edge.</li>
+<li>Cost effective: Cloud computing lets you offload some or all of the expense and effort of purchasing, installing, configuring and managing.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is data warehouse? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data Warehouse emphasize on the means to retrieve ans analyse data, to extracct, transform and load data. It is a process of centralization of the data management and retrieval. Centralization is needed to maximize the useraccess and analysis.It is integrated generally at the organization level, by combining data from different databases. A Data Warehouseis considered as separate from DBMS, it stores a huge amount of data, which is typically collected from multiple heterogeneous sources like files, DBMS, etc. It may contain multiple databases, within each database, data is organized into tables and columns. An ordinary Database can store MBs to GBs of data and that too for a specific purpose. For storing data of TB size, the storage shifted to the Data Warehouse.</p>
+<p>The primary goals of the data warehouse are the following:</p>
+<ul style="list-style-type: square;">
+<li>Provide access to the data of management;</li>
+<li>Data consistncy;</li>
+<li>Capacity to seperate and combine data;</li>
+<li>Drive business re-engineering;</li>
+<li>Publish used data.</li>
+</ul>
+<p>Benefits of a data warehouse include the following:</p>
+<ul style="list-style-type: square;">
+<li>Informed decision making;</li>
+<li>Consolidated data from many sources;</li>
+<li>Historical data analysis;</li>
+<li>Data quality, consistency, and accuracy;</li>
+<li>Separation of analytics processing from transactional databases, which improves performance of both systems.</li>
+</ul>
+<p><strong>Data Warehouse</strong> is subject oriented, integrated, time varient and non-volatile collection of data in support of management&#8217;s decision making process. Data from data warehouse are never updated or deleted hence it is called non-volatile. Data from different sources are incorporated in the data warehouse so it is called integrated.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are different element of multimedia?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multimedia is a combination of different media such as text, audio, video, graphics, and animation.</p>
+<p><strong>Text:</strong> The text is the most basic one and is used in delivering information itself. It is used to describe or explain things briefly.</p>
+<p><strong>Audio:</strong> Sound, music, and voice constitute the element of audio. It is used for delivering instructions, background music, or commentaries so as to make things more interesting</p>
+<p><strong>Video:</strong> Video is a powerful multimedia element that couples sound and pictures to deliver motion. It is helpful in demonstration, tutorial, or voice-over.</p>
+<p><strong>Graphics:</strong> Graphics are photos or drawings supporting the content. They are made up of snapshots, diagrams, and graphs, which render the presentation interesting.</p>
+<p><strong>Animation:</strong> Animation is moving figures or objects. Animation helps demonstrate things that can hardly be recreated in actual form, e.g., scientific experiments.</p>
+<p>All these elements come together to create interactive and engaging multimedia products like games, presentations, and learning applications.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain security awareness and security policy in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Security awareness is the knowledge and attitude of an individual or an organization regarding the protection of their assets from security threats, risks, and vulnerabilities. It is the knowledge and attitudes of members of a group that is tasked with the protection of the physical, and more important, informational assets of a specific organization. It refers to the understanding that there exists the potential for both deliberate and accidental action that could steal, damage, or misuse the data stored within a computer system. It includes programs to educate employees about common threats.</p>
+<p>A security policy also known as an information security policy or IT security policy specifies the rules, expectations, and overall approach that an organization adopts to safeguard the confidentiality, integrity, and availability of its data. It is a written document in an organization outlining how to protect the organization from threats, including computer security threats, and how to handle situations when they do occur. Security policies are aimed at protecting a company&#8217;s physical assets, such as buildings and equipment, including computers and other IT equipment. They protect intellectual property from costly events, like data breaches and data leaks. They provides benifits like guard reputation, dictate the role of employees, identify the third parties vulnerabilities and protect valuable assets.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Cache memory</li>
+<li>IoT</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h1><strong><span style="font-size: 14pt;">a.</span><span style="text-decoration: underline;"><span style="font-size: 14pt;"> Cache memory</span></span></strong></h1>
+<p>The speed of CPU  is extremely high compared to the access time of main memory. Therefore the performance of CPU decreases due to the slow speed of main memory so to decreases mismatch in operating speed a small memory chip is attached between CPU and main memory which is called cache memory. Cache is used by the CPU for memory which is being accessed over and over again. Instead of pulling it every time from the main memory, it is put in cache for fast access. It is also a smaller memory, however, larger than internal register. It is a small amount of high-speed memory that lies between the CPU’s and the main memory which is used to improves the processing speed of CPU’s by storing frequently used data and instruction. As the microprocessor processes data, it looks first in the cache memory and if it finds the data there (from a previous reading of data), it does not have to do the more time-consuming reading of data from larger memory. These memories are very expensive as have bigger size of cache memory hence its size is normally kept small.</p>
+<h1><strong><span style="font-size: 14pt;">b. <span style="text-decoration: underline;">IoT</span></span></strong></h1>
+<p>IOT stands for Internet of Things. It is system of interrelated computing devices, mechanical and digital machines, objects, animals or people that provided with unique identifiers and ability to transfer data over a network.</p>
+<p>Over a past few years, IOT has become most popular technology. With the help of these, we can connect with every objects such as kitchen appliances, car, thermostat, baby monitors and many more.</p>
+<p>The major advantage of IOT are</p>
+<ol style="list-style-type:decimal;">
+<li>Monitor</li>
+<li>Accessibility</li>
+<li>Speed</li>
+<li>Better Time management</li>
+</ol>
+<p>The disadvantage of IOT are</p>
+<ol style="list-style-type:decimal;">
+<li>Data Breach</li>
+<li>Dependence</li>
+<li>Complexity</li>
+<li>Privacy Issue</li>
+</ol>
+</div>
+</body></html>

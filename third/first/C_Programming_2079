@@ -1,0 +1,755 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>C Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>C Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempts any two questions:</h2><h3>Question 1</h3>
+<div><p><p>What is the difference between exit(0) and exit(1)? Discuss the need of nested structue with an example. Write a program to find the value of x<sup>y</sup> without using POW code.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between exit(0) and exit(1) are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>exit(0)</th>
+<th>exit(1)</th>
+</tr>
+<tr>
+<td>Reports the successful termination/completion of the program.</td>
+<td>Reports the abnormal termination of the program.</td>
+</tr>
+<tr>
+<td>Reports the termination when the program gets executed without any error.</td>
+<td>Reports the termination when some error or interruption occurs during the execution of the program.</td>
+</tr>
+<tr>
+<td>The syntax is <strong>exit(0);</strong></td>
+<td>The syntax is <strong>exit(1);</strong></td>
+</tr>
+<tr>
+<td>The use of exit(0) is fully portable.</td>
+<td>The use of exit(1) is not portable.</td>
+</tr>
+<tr>
+<td>The macro used for return code 0 is <strong>EXIT_SUCCESS</strong></td>
+<td>The macro used for return code 1 is <strong>EXIT_FAILURE</strong></td>
+</tr>
+<tr>
+<td><strong>EXIT_SUCCESS</strong> is defined by the standard to be zero.</td>
+<td><strong>EXIT_FAILURE</strong> is not restricted by the standard to be one, but many systems do implement it as one.</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Nested Structure in c:</strong></span></p>
+<p>C provides us the feature of nesting one structure within another structure by using which, complex data types are created. For example, we may need to store the address of an entity employee in a structure. The attribute address may also have the subparts as street number, city, state, and pin code. Hence, to store the address of the employee, we need to store the address of the employee in a separate structure and nest the structure address into the structure employee. Consider the following program.</p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;  
+struct address   
+{  
+    char city[20];  
+    int pin;  
+    char phone[14];  
+};  
+struct employee  
+{  
+    char name[20];  
+    struct address add;  
+};  
+void main ()  
+{  
+    struct employee emp;  
+    printf("Enter employee information?\n");  
+    scanf("%s %s %d %s",emp.name,emp.add.city, &amp;emp.add.pin, emp.add.phone);  
+    printf("Printing the employee information....\n");  
+    printf("name: %s\nCity: %s\nPincode: %d\nPhone: %s",emp.name,emp.add.city,emp.add.pin,emp.add.phone);  
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter employee information?
+
+Arun            
+
+Delhi           
+
+110001       
+
+1234567890    
+
+Printing the employee information....   
+
+name: Arun      
+
+City: Delhi  
+
+Pincode: 110001
+
+Phone: 1234567890</pre>
+<p><span style="text-decoration: underline;"><strong>Program to find the value of x<sup>y</sup> without using the POW function.</strong></span></p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int Pow(int X, int Y) {
+
+    int power = 1, i;
+
+    for (i = 1; i &lt;= Y; ++i) {
+        power = power * X;
+    }
+
+    return power;
+
+}
+
+int main() {
+
+    long long int base, exponent;
+
+    printf("Enter Base: ");
+    scanf("%d", &amp;base);
+
+    printf("Enter Power: ");
+    scanf("%d", &amp;exponent);
+
+    printf("%d ^ %d = %d", base, exponent, Pow(base, exponent));
+        return 0;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter Base: 5
+Enter Power: 3
+5 ^ 3 = 125</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why do we need a break and continue statement? Define formal argument and actual argument in function with examples. Identify and list the errors in the following code.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int main(){
+    int a,b,c
+    scanf("%d%d%d, &a, &b, &c);
+    sum(a, b, c);
+    return -1;
+}
+void sum(int x, int y, int z){
+    int sum;
+    sum = a + b + c;
+    return sum;
+}</pre</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Break statements are used to stop the loop immediately when it is encountered whereas the continue statement skips the current iteration of the loop and continues with the next iteration.</p>
+<p>Syntax:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">break;
+
+continue;</pre>
+<p><span style="text-decoration: underline;"><strong>Example of break statement:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">for (int j = 0; j &lt; 10; j++) {
+    if(j &gt; 5) break;
+    printf("%d", j);
+}</pre>
+<p>Here, when j values reach 6 then the loop stop.</p>
+<p><span style="text-decoration: underline;"><strong>Example of continue statement:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">for (int j = 0; j &lt; 10; j++) { 
+    if(j == 5) continue; 
+    printf("%d", j); 
+}</pre>
+<p>Here, when j value reaches 5 then it skips. It means it prints from 0 to 10 except 5.</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Formal and Actual Argument:</strong></span></p>
+<p>Arguments that are mentioned in the function call are known as the actual argument. For example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">func1(12, 23);</pre>
+<p>here <code>12</code> and <code>23</code> are actual arguments.</p>
+<p>Actual arguments can be constant, variables, expressions, etc.</p>
+<p>Arguments that are mentioned in the definition of the function are called <strong>formal arguments</strong>. Formal arguments are very similar to local variables inside the function. Just like local variables, formal arguments are destroyed when the function ends.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int factorial(int n)
+{
+    // write logic here
+}</pre>
+<p>Here <code>n</code> is the formal argument.</p>
+<p><span style="text-decoration: underline;"><strong>Program Error Identification Part:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 600px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;"><strong>Part</strong></td>
+<td style="width: 50%; height: 24px;"><strong>Remark</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">Missing Header Files</td>
+<td style="width: 50%; height: 96px;">The given program doesn&#8217;t have any header files</p>
+<p>#include&lt;stdio.h&gt;</td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 50%; height: 120px;">Missing Function Prototype</td>
+<td style="width: 50%; height: 120px;">Since, the sum function is defined in bottom but prototype is not defined above</p>
+<p>int sum(int, int, int)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">int a, b, c</td>
+<td style="width: 50%; height: 24px;">Semicolumn is missing</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">scanf(&#8220;%d%d%d, &amp;a, &amp;b, &amp;c);</td>
+<td style="width: 50%; height: 96px;">Double quote is missing</p>
+<p>scanf(&#8220;%d%d%d&#8221;, &amp;a, &amp;b, &amp;c);</td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 50%; height: 120px;">return -1</td>
+<td style="width: 50%; height: 120px;">It means function has error but there is not any error so</p>
+<p>return 0;</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">Function (sum) return type</td>
+<td style="width: 50%; height: 96px;">sum function must have integer return type</p>
+<p>int sum()</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Undefined variable</td>
+<td style="width: 50%; height: 24px;">Since, sum function is adding a, b, and c which is undefind. Here,</p>
+<p>sum = x + y + z;</td>
+</tr>
+</tbody>
+</table></div>
+<p>The correct program is</p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+int sum(int, int, int);
+
+int main(){
+    int a,b,c;
+    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+    sum(a, b, c);
+    return 0;
+}
+
+int sum(int x, int y, int z){
+    int sum;
+    sum = x + y + z;
+    return sum;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Write a program to demonstrate the following menu-driven program. The user will provide an integer and alphabet for making choice and the corresponding task has to be performed according as follow:</p>
+<ol>
+<li>Find Odd or Even</li>
+<li>Find Positive or Negative</li>
+<li>Find the Factorial value</li>
+<li>Exit</li>
+</ol>
+<p>The choice will be displayed until the user will give “D” as a choice.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+void oddeven(int num);
+void posneg(int num);
+void fact(int num);
+
+int main(){
+
+    int number;
+    char choice;
+
+    do{
+        printf("A. Find Odd or Even\nB. Find Positive or Negative\nC. Find the Factorial value\nD.Exit");
+        printf("\n\nEnter your choice: ");
+        scanf(" %c", &amp;choice);
+
+        if( choice != 'D' ){
+            printf("Enter a number: ");
+            scanf(" %d", &amp;number);
+        }
+
+        switch(choice){
+            case 'A':
+                oddeven(number);
+                break;
+
+            case 'B':
+                posneg(number);
+                break;
+
+            case 'C':
+                fact(number);
+                break;
+
+            case 'D':
+                printf("\nExiting program\n");
+                break;
+        }
+
+
+    }while( choice != 'D' );
+
+    return 0;
+}
+
+void oddeven(int num){
+    if( num % 2 == 0 ){
+        printf("\n\n================\n%d is even number\n================\n\n", num);
+    }else{
+        printf("\n\n================\n%d is odd number\n================\n\n", num);
+    }
+}
+
+void posneg(int num){
+    if( num &gt;= 0 ){
+        printf("\n\n================\n%d is positive number\n================\n\n", num);
+    }else{
+        printf("\n\n================\n%d is negative number\n================\n\n", num);
+    }
+}
+
+void fact(int num){
+    int i = 0, factorial = 1;
+    for( i = 1; i &lt;= num; i++){
+        factorial *= i;
+    }
+    printf("\n\n================\nFactorial of %d = %d\n================\n\n", num, factorial);
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">A. Find Odd or Even
+B. Find Positive or Negative
+C. Find the Factorial value
+D.Exit
+
+Enter your choice: A
+Enter a number: 5
+
+
+================
+5 is odd number
+================
+
+A. Find Odd or Even
+B. Find Positive or Negative
+C. Find the Factorial value
+D.Exit
+
+Enter your choice: B
+Enter a number: 5
+
+
+================
+5 is positive number
+================
+
+A. Find Odd or Even
+B. Find Positive or Negative
+C. Find the Factorial value
+D.Exit
+
+Enter your choice: C
+Enter a number: 5
+
+
+================
+Factorial of 5 = 120
+================
+
+A. Find Odd or Even
+B. Find Positive or Negative
+C. Find the Factorial value
+D.Exit
+
+Enter your choice: D
+
+Exiting program</pre>
+</div>
+<h2>Section B: Attempts any eight questions:</h2><h3>Question 4</h3>
+<div><p><p>How do you swap the values of two integers without using the third temporary variable? Justify with the example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We can swap two variables without using a third temporary variable using the following methods.</p>
+<ol class="points">
+<li>By using + and &#8211;</li>
+<li>By using * and /</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>By using + and -:</strong></span></p>
+<p>Let&#8217;s see a simple c example to swap two numbers without using a third variable.</p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 10, b = 20;
+    printf("Before swap a=%d b=%d", a, b);
+    a = a + b; // a=30 (10+20)
+    b = a - b; // b=10 (30-20)
+    a = a - b; // a=20 (30-10)
+    printf("\nAfter swap a=%d b=%d", a, b);
+    return 0;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p><span style="text-decoration: underline;"><strong>By using * and /:</strong></span></p>
+<p>Let&#8217;s see another example to swap two numbers using * and /.</p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 10, b = 20;
+    printf("Before swap a=%d b=%d", a, b);
+    a = a * b; // a=200 (10*20)
+    b = a / b; // b=10 (200/20)
+    a = a / b; // a=20 (200/10)
+    printf("\nAfter swap a=%d b=%d", a, b);
+    return 0;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program remains the same.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Before swap a=10 b=20
+After swap a=20 b=10</pre>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Write a program to find the sum of digits of a given integer using recursion.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+ 
+int sum (int a);
+ 
+int main()
+{
+    int num, result;
+ 
+    printf("Enter the number: ");
+    scanf("%d", &amp;num);
+    result = sum(num);
+    printf("Sum of digits in %d is %d\n", num, result);
+    return 0;
+}
+ 
+int sum (int num)
+{
+    if (num != 0){
+        return (num % 10 + sum (num / 10));
+    }else{
+       return 0;
+    }
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter the number: 123456
+Sum of digits in 123456 is 21</pre>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between constant and literals. Why do we need to define the type of data?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <b>literal</b> is a value that is expressed as itself. For example, the number 25 or the string &#8220;Hello World&#8221; are both literal.</p>
+<p>A <b>constant</b> is a data type that substitutes a literal. Constants are useful in situations where</p>
+<ul style="list-style-type: square;">
+<li>a specific, unchanging value is to be used at various times during the software program</li>
+<li>you want to more easily understand the software code</li>
+</ul>
+<p>A variable in a program can change its value during the course of execution of the program. A constant retains the same value throughout the program.</p>
+<p>For example, if you have a constant named PI that you&#8217;ll be using at various places in your program to find the area, circumference, etc of a circle, this is a constant as you&#8217;ll be reusing its value. But when you&#8217;ll be declaring it as:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">const float PI = 3.141;</pre>
+<p>The 3.141 is a literal that you&#8217;re using. It doesn&#8217;t have any memory address of its own and just sits in the source code whereas PI is a constant of decimal type. It has a memory address also.</p>
+<p><span style="text-decoration: underline;"><strong>Requirement of Data type in c:</strong></span></p>
+<p>Data types used in C language refer to an extensive system that we use to declare various types of functions or variables in a program. Here, on the basis of the type of variable present in a program, we determine the space that it occupies in storage, along with the way in which the stored bit pattern will be interpreted.</p>
+<p>A data type specifies the type of data that a variable can store such as integer, floating, character, etc.</p>
+<p>Whenever we utilize a data type in a C program, we define the variables or functions used in it. We do so because we must specify the type of data that is in use so that the compiler knows exactly what type of data it must expect from the given program.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program to find the second largest number in the given array of numbers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+void main()
+{
+    int i, j, a, n, counter, ave, number[30];
+
+    printf("Enter the value of N: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter the numbers:\n");
+    for (i = 0; i &lt; n; ++i)
+        scanf("%d", &amp;number[i]);
+        
+    for (i = 0; i &lt; n; ++i)
+    {
+        for (j = i + 1; j &lt; n; ++j)
+        {
+            if (number[i] &lt; number[j])
+            {
+                a = number[i];
+                number[i] = number[j];
+                number[j] = a;
+            }
+        }
+    }
+    
+    printf("The 2nd largest number is = %d\n", number[1]);
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter the value of N: 5
+Enter the numbers:
+1
+3
+10
+8
+9
+The 2nd largest number is = 9</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Create a structure “Employee” having Name, Address, Salary, and Age as member functions. Display the name of the employee having aged between 40 and 50 are living in Kathmandu.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Employee{
+    char Name[100];
+    char Address[500];
+    int Salary;
+    int Age;
+};
+
+int main(){
+
+    int size, i, compare = 0;
+    printf("Enter number of Employee: ");
+    scanf("%d", &amp;size);
+
+    struct Employee emp[size];
+
+    printf("\nEnter Employee Details:\n");
+    for(i=0; i &lt; size; i++){
+        printf("\n\nEnter %d employee record:\n", i);
+        printf("Enter Name: ");
+        scanf(" %s", emp[i].Name);
+
+        printf("Enter Address: ");
+        scanf(" %s", emp[i].Address);
+
+        printf("Enter Age: ");
+        scanf(" %d", &amp;emp[i].Age);
+
+        printf("Enter Salary: ");
+        scanf(" %d", &amp;emp[i].Salary);
+    }
+
+    /** Print Employee with condition*/
+    printf("\n\nAll the employee of Kathmandu between age 40 and 50 are: \n");
+    for( i = 0; i &lt; size; i++ ){
+        compare = strcmp(emp[i].Address, "Kathmandu");
+        if( compare == 0 ){
+            if( emp[i].Age &gt;= 40 &amp;&amp; emp[i].Age &lt;= 50 ){
+                printf("%s\n", emp[i].Name);
+            }
+        }
+    }
+
+    return 0;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter number of Employee: 4
+
+Enter Employee Details:
+
+
+Enter 0 employee record:
+Enter Name: Suresh 
+Enter Address: Kathmandu
+Enter Age: 45
+Enter Salary: 450
+
+
+Enter 1 employee record:
+Enter Name: Julian
+Enter Address: Dang
+Enter Age: 46
+Enter Salary: 230
+
+
+Enter 2 employee record:
+Enter Name: Lalit 
+Enter Address: Kathmandu
+Enter Age: 56
+Enter Salary: 560
+
+
+Enter 3 employee record:
+Enter Name: Rajesh
+Enter Address: Nepal
+Enter Age: 34
+Enter Salary: 120
+
+All the employee of Kathmandu between age 40 and 50 are: 
+Suresh</pre>
+</div>
+<h3>Question 9</h3>
+<div><p><p>List any one advantage and disadvantage of the pointer. How do you pass pointers as function arguments?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>One advantage and disadvantage of the pointer is</p>
+<p><strong><em>Note: We have added many pointer advantages and disadvantages but you have to answer according to the question.</em></strong></p>
+<p><span style="text-decoration: underline;"><strong>Advantage:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Pointers provide direct access to memory</li>
+<li>Pointers provide a way to return more than one value to the functions</li>
+<li>Reduces the storage space and complexity of the program</li>
+<li>Reduces the execution time of the program</li>
+<li>Provides an alternate way to access array elements</li>
+<li>Pointers can be used to pass information back and forth between the calling function and called function.</li>
+<li>Pointers allow us to perform dynamic memory allocation and deallocation.</li>
+<li>Pointers help us to build complex data structures like a linked list, stack, queues, trees, graphs, etc.</li>
+<li>Pointers allow us to resize the dynamically allocated memory block.</li>
+<li>Addresses of objects can be extracted using pointers</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Disadvantage:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Uninitialized pointers might cause segmentation faults.</li>
+<li>A dynamically allocated block needs to be freed explicitly.  Otherwise, it would lead to a memory leak.</li>
+<li>Pointers are slower than normal variables.</li>
+<li>If pointers are updated with incorrect values, it might lead to memory corruption.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Pass pointer as function argument:</strong></span></p>
+<p>Just like any other argument, pointers can also be passed to a function as an argument. Let&#8217;s take an example to understand how this is done.</p>
+<p>In this example, we are passing a pointer to a function. When we pass a pointer as an argument instead of a variable then the address of the variable is passed instead of the value. So any change made by the function using the pointer is permanently made at the address of a passed variable. This technique is known as call by reference in C.</p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>This is one of the most popular examples that show how to swap numbers using call-by-reference.</p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+void swapnum(int *num1, int *num2)
+{
+   int tempnum;
+
+   tempnum = *num1;
+   *num1 = *num2;
+   *num2 = tempnum;
+}
+int main( )
+{
+   int v1 = 11, v2 = 77 ;
+   printf("Before swapping:");
+   printf("\nValue of v1 is: %d", v1);
+   printf("\nValue of v2 is: %d", v2);
+
+   /*calling swap function*/
+   swapnum( &amp;v1, &amp;v2 );
+
+   printf("\nAfter swapping:");
+   printf("\nValue of v1 is: %d", v1);
+   printf("\nValue of v2 is: %d", v2);
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Before swapping:
+Value of v1 is: 11
+Value of v2 is: 77
+After swapping:
+Value of v1 is: 77
+Value of v2 is: 11</pre>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Suppose a file named “Num.txt” contains a list of integers. Write a program to extract the prime numbers only from that file and write them on “Prime.txt” file.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Program to read prime numbers from file &#8220;Num.txt&#8221; and write it to &#8220;Prime.txt&#8221; file is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int is_prime(int);
+
+int main(){
+
+    FILE* ptr;
+    ptr = fopen("Num.txt", "r");
+
+    FILE* fp;
+    fp = fopen("Prime.txt", "a+");
+
+    if (NULL == ptr) {
+        printf("File can't be opened \n");
+        return 0;
+    }
+
+    int num;
+    printf("\nPrime number in files are:\n");
+    while (fscanf(ptr, "%d", &amp;num) != EOF){
+        if( is_prime( num ) ){
+            printf("%d\n", num);
+            fprintf(fp, "%d ", num);
+        }
+    }
+
+    return 0;
+}
+
+int is_prime( int n ){
+
+    if( n == 1 ){
+        return 0;
+    }
+
+    int j, flag = 1;
+
+    for (j = 2; j &lt;= n / 2; ++j) {
+        if (n % j == 0) {
+            flag = 0;
+            break;
+        }
+    }
+
+    return flag;
+}</pre>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is the advantage of the union over structure? List any four-string library functions with the prototype.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The advantage of the union over the structure are</p>
+<ul style="list-style-type: square;">
+<li>It occupies less memory compared to the structure.</li>
+<li>When you use union, only the last variable can be directly accessed.</li>
+<li>Union is used when you have to use the same memory location for two or more data members.</li>
+<li>It enables you to hold data of only one data member.</li>
+<li>Its allocated space is equal to the maximum size of the data member.</li>
+</ul>
+<p>Any four string library functions are:</p>
+<p><span style="text-decoration: underline;"><strong>1. strlen():</strong></span></p>
+<p>The strlen() function returns the length of the given string. It doesn&#8217;t count null character &#8216;\0&#8217;.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">strlen(string_name)</pre>
+<p><span style="text-decoration: underline;"><strong>2. strcpy():</strong></span></p>
+<p>The strcpy(destination, source) function copies the source string in destination.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">strcpy(destination, source)</pre>
+<p><span style="text-decoration: underline;"><strong>3. strcmp():</strong></span></p>
+<p>The strcmp(first_string, second_string) function compares two string and returns 0 if both strings are equal.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">strcmp(first_string, second_string)</pre>
+<p><span style="text-decoration: underline;"><strong>4. strrev():</strong></span></p>
+<p>The strrev(string) function returns reverse of the given string.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">strrev(string)</pre>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on</p>
+<ol>
+<li>Local, Global, and Static variables</li>
+<li>Conditional Operator</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) Local, Global and Static variable:</strong></span></p>
+<p>The variables which are declared inside the function, compound statement (or block) are called Local variables.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void function_1()
+{
+    int a, b; // you can use a and b within braces only
+}
+
+void function_2()
+{
+    printf("%d\n", a); // ERROR, function_2() doesn't know any variable a
+}</pre>
+<p>The variables declared outside any function are called global variables. They are not limited to any function. Any function can access and modify global variables. Global variables are automatically initialized to <code>0</code> at the time of declaration. Global variables are generally written before <code>main()</code> function.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int a, b;
+
+int main(){
+    a=5;
+    b=6;
+    sum();
+}
+
+int sum(){
+    printf("%d", a + b);
+}</pre>
+<p>Here a and b are global variables that can be accessed by the sum function also.</p>
+<p>A Static variable is able to retain its value between different function calls. The static variable is only initialized once, if it is not initialized, then it is automatically initialized to <code>0</code>. Here is how to declare a static variable.</p>
+<p><span style="text-decoration: underline;"><strong>b) Conditional Operator:</strong></span></p>
+<p>The conditional operator is also known as a <strong>ternary operator</strong>. The conditional statements are the decision-making statements that depend upon the output of the expression. It is represented by two symbols, i.e., &#8216;?&#8217; and &#8216;:&#8217;.</p>
+<p>As a conditional operator works on three operands, so it is also known as the ternary operator.</p>
+<p>The behavior of the conditional operator is similar to the &#8216;if-else&#8217; statement as the &#8216;if-else&#8217; statement is also a decision-making statement.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Expression1 ? expression2 : expression3;</pre>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<div class="compilecode compilecode-c">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;  
+int main()  
+{  
+    int age;  // variable declaration  
+    printf("Enter your age");  
+    scanf("%d",&amp;age);   // taking user input for age variable  
+    (age&gt;=18)? (printf("eligible for voting")) : (printf("not eligible for voting"));  // conditional operator  
+    return 0;  
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>In the above code, we are taking input as the &#8216;age&#8217; of the user. After taking input, we have applied the condition by using a conditional operator. In this condition, we are checking the age of the user. If the age of the user is greater than or equal to 18, then the statement1 will execute, i.e., (printf(&#8220;eligible for voting&#8221;)) otherwise, statement2 will execute, i.e., (printf(&#8220;not eligible for voting&#8221;)).</p>
+</div>
+</body></html>

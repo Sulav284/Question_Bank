@@ -1,0 +1,520 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Physics Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>Physics Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Distinguish rigid and non rigid body. Derive an experssion for rotational kinetic energy and discuss the condition for conservation of energy. A wheel of radius 0.4 m and moment of inertia 1.2 kg-m<sup>2 </sup> pivoted at rthe center, is free to rotate without friction. A rope is wound around it and a 2-kg weight is attached to the rope. When the weight has descended 1.5 m from its starting position, find the rotational velocity of the wheel.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Difference :</strong></p>
+<p>The main difference between ridid bodies and non rigid bodies is that, rigid bodies maintain their shape and size when subjected to external forces, while non-rigid bodies undergo deformation in response to applied forces.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 14.8797%; height: 24px;"><strong>Basis </strong></td>
+<td style="width: 44.9828%; height: 24px;"><strong>Rigid body</strong></td>
+<td style="width: 40.4467%; height: 24px;"><strong>Non rigid body</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.8797%; height: 24px;"><strong>Defination </strong></td>
+<td style="width: 44.9828%; height: 24px;">Those bodies that maintain their shape and size under applied force or they deforms  negligibly as compared to the motion that it experiences are rigid bodies.</td>
+<td style="width: 40.4467%; height: 24px;">Non rigid bodies are those bodies that changes their shape and size under applied force or they deforms as compared to the motion that it experiences.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.8797%; height: 24px;"><strong>Effect of force applied</strong></td>
+<td style="width: 44.9828%; height: 24px;">Any force applied to them results only in translational or rotational motion.</td>
+<td style="width: 40.4467%; height: 24px;">Any force applied to them results in deformation in elastic i.e reversible  or plastic i.e non reversible in nature</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.8797%; height: 24px;"><strong>Stress </strong></td>
+<td style="width: 44.9828%; height: 24px;">No any internal stress is experienced as there is no any derformation.</td>
+<td style="width: 40.4467%; height: 24px;">Internal stress is experienced as there is derformation in the size and shape.</td>
+</tr>
+<tr>
+<td style="width: 14.8797%;"><strong>Example</strong></td>
+<td style="width: 44.9828%;">Concrete blocks , metal rods, wooden planks etc.</td>
+<td style="width: 40.4467%;">Rubber balls, Baloon filled with air, clay etc</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p style="padding-left: 40px;"><strong>Derivation part:</strong></p>
+<p>In linear motion, the work done dW by a force F in moving an object through displacement dx is given by:</p>
+<p style="text-align: center;">dW = Fdx</p>
+<p>similarly in rotational motion F is replaced by τ and dx is replaced by dθ . so,</p>
+<p style="text-align: center;">dW = τdθ</p>
+<p style="text-align: center;">dW = I dω ⁄dt  dθ &#8212;&#8211; 1</p>
+<p>we know that angular velocity is defined as the rate of change of angular displacement</p>
+<p style="text-align: center;">ω = dθ ⁄dt</p>
+<p style="text-align: center;">dθ = ω dt&#8212;&#8211;2</p>
+<p>&nbsp;</p>
+<p>from equation 1 and 2 we can write that ,</p>
+<p style="text-align: center;">dW = I ·dω ⁄dt ω· dt</p>
+<p style="text-align: center;">dW = I ω dω</p>
+<p>on integrating both side we get,</p>
+<p style="text-align: center;">∫dW = ∫ I ω dω</p>
+<p style="text-align: center;">W = <sup>ω1</sup>∫<sub>ω2 </sub>  I ω dω</p>
+<p style="text-align: center;">W = ½ [I ω<sup>2</sup> ]<sub>ω1</sub><sup>ω2</sup></p>
+<p style="text-align: center;">W = ½ [Iω<sub>2</sub><sup>2</sup>  &#8211; Iω<sub>1</sub><sup>2</sup> ]</p>
+<p>The equation obtained above is similar to ½ mv<sup>2 </sup>as m is represented be I and v by ω above. Hence, the rotational kinetic energy can be given as :</p>
+<p style="text-align: center;">W = ½ Iω<sup>2</sup></p>
+<p>&nbsp;</p>
+<p>The conservation of energy principle states that energy cannot be created or destroyed, only transformed from one form to another. In the context of rotational kinetic energy, conservation of energy occurs under the conditions:</p>
+<ol style="list-style-type:decimal;">
+<li>There are no external torque on the system.</li>
+<li>There are no external work done on the system.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Numerical part:</strong></p>
+<p>given ,</p>
+<p>radius (r) =0.4 m</p>
+<p>moment of inertia (I) = 1.2 kg-m<sup>2</sup></p>
+<p>mass (m) = 2 kg</p>
+<p>height (h) = 1.5 m</p>
+<p>Rotational velocity (ω) = ?</p>
+<p>now,<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33407 alignright" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/fig.jpg?resize=193%2C351&#038;ssl=1" alt="" width="193" height="351"></p>
+<p>&nbsp;</p>
+<p>From conservation of energy we know that, potential energy of the body is equal to the sum of the rotational kinetic energy and kinetic energy of the body. so,</p>
+<p>for the given weight,</p>
+<p style="text-align: center;">P.E = K.E + Rotational K.E</p>
+<p style="text-align: center;">mgh = ½mv<sup>2 </sup>+ ½ Iω<sup>2</sup></p>
+<p style="text-align: center;">2mgh = mv<sup>2 </sup>+  Iω<sup>2</sup></p>
+<p style="text-align: center;">2mgh = mv<sup>2 </sup>+  I · v<sup>2</sup>⁄ r<sup>2</sup></p>
+<p style="text-align: center;">2mgh = v<sup>2 </sup>(m + I ⁄ r<sup>2</sup>)</p>
+<p style="text-align: center;">v<sup>2 </sup>= 2mgh ⁄ (m + I ⁄ r<sup>2</sup>)</p>
+<p style="text-align: center;">v = √2mgh ⁄ (m + I ⁄ r<sup>2</sup>)</p>
+<p>placing respective values we get,</p>
+<p style="text-align: center;">v = √2· 2· 9.8 · 1.5  ⁄ (2+ 1.2 ⁄ 0.4<sup>2</sup>)</p>
+<p style="text-align: center;">v = 2.5 m/s</p>
+<p>As we calculated the velocity of wheel as 2.5 m/s we can now calculate the rotational velocity as :</p>
+<p style="text-align: center;">v = rω</p>
+<p style="text-align: center;">ω = v ⁄ r</p>
+<p style="text-align: center;">ω = 2.5 ⁄ 0.4</p>
+<p style="text-align: center;">ω = 6.25 rad/sec</p>
+<p>Hence, the required rotational velocity is 6.25 rad/sec.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Setup Schrodinger equation for Hydrogen atom using spherical polar coordinate. Separate radial and angular part of this equation using appropriate seperation constant. Discuss the separation constant and hence the quantum numbers associated with these two equations.What information can be drawn from the angular part of Schrodinger equation ? Explain .</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>As we know, the hydrogen atom is a system of two particle i.e a proton and a single electron bounded by electrostatic force of attraction.</p>
+<p>The potential energy of the electron in the electric field of nucleus is given by:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33769 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.36_1.jpg?resize=298%2C151&#038;ssl=1" alt="" width="298" height="151"></p>
+<p>The electron is represented by the wave function or system bounded by the potential well of columb field so the time independent Schrodinger wave equation is given by :</p>
+<p>$$ ∇^{{2}}ψ = \frac{{2m}}{{h^2}}(E -V(r))ψ  = 0 &#8212;2 $$</p>
+<p>Where,</p>
+<p>$$ ∇^{{2}} = \frac{{∂}}{{∂x^{{2}}}} + \frac{{∂}}{{∂y^{{2}}}} + \frac{{∂}}{{∂z^{{2}}}}$$</p>
+<p>is laplacian of ψ (x,y,z).</p>
+<p>As the gemotrical symmetry of the problem suggest that it is more convinent to use the spherical polar coordinate syayem i.e r, θ, φ.</p>
+<p>The rectangular coordinate are related to the spherical polar coordinate as</p>
+<p>$$ x = r sinθ cosφ $$</p>
+<p>$$ y = r sinθ sinφ $$</p>
+<p>$$ z = r cosθ $$</p>
+<p>Now,</p>
+<p>The Schrodinger equation in the equation spherical polar coorinate system can be written from eq 1 and 2</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33770" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.38_1.jpg?resize=2024%2C416&#038;ssl=1" alt="" width="2024" height="416"></p>
+<p>In the equation the wave function ψ  is a function of r, θ and φ i.e ψ(r, θ, φ). Now, for further calculation the equation in polar coordinate can be easily seprated into three equation each involving a single variable.</p>
+<p>$$ ψ(r, θ, φ) = R(r) Φ(φ) Θ(θ) $$</p>
+<p>Where,</p>
+<p>R(r) is the function of r alone.</p>
+<p>Φ(φ) is the function of φ alone.</p>
+<p>Θ(θ) is the function of θ alone.</p>
+<p>Substuting this value in equation 3 we get,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33771" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.39_1.jpg?resize=2436%2C452&#038;ssl=1" alt="" width="2436" height="452"></p>
+<p>In the given above equation only ordinary defination is used because each variable depends on only one variable.</p>
+<p>$$ Multiplying   eq   4   with   \frac {{r^{{2}}sin^{{2}}θ}}{{RΦΘ}}   we   get, $$</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33772" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.39-1_1.jpg?resize=2388%2C848&#038;ssl=1" alt="" width="2388" height="848"></p>
+<p>The LHS of the above equation is a function of r and θ where RHS is a function of Φ alone. Their equality implies that each side must be a equal constant called magnetic orbital.</p>
+<p>quantum no i.e m<sub>l</sub><sup>2 </sup></p>
+<p>The RHS of the equation is an ordinary differenciation for Φ. So, this gives the azimuthal equation as</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33773" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.40_1.jpg?resize=262%2C135&#038;ssl=1" alt="" width="262" height="135"></p>
+<p>If we substitute the value of m<sub>l</sub><sup>2  </sup>for LHS in equation equation 5 and divide the whole equation by sin<sup>2</sup>θ and rearranging the equation we get,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33774" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.41_1-scaled.jpg?resize=2560%2C417&#038;ssl=1" alt="" width="2560" height="417"></p>
+<p>Again, in this equation different variables appear on each side requiring the both side to be equal to same constant i.e l(l+1).</p>
+<p>This equation is called polar equtaion and one on LHS is called radial equation.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33775 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.42_1.jpg?resize=376%2C83&#038;ssl=1" alt="" width="376" height="83"></p>
+<p>The Schrodinger wave equation for hydrogen atom has now been seperated into three equation and their solution is well known in mathematics.</p>
+<p>From this we can conclude that</p>
+<ol style="list-style-type:decimal;">
+<li>When the azimuthal equation is solved for Φ then the solution is   Φ(φ) = A<sup>im<sub>l</sub>φ    </sup>where <span style="font-size: 13.3333px;"><span style="font-size: 12pt;">m<sub>l</sub> = &#8230;..-3,-2,-1,0,1,2,3&#8230;..   and</span> <span style="font-size: 12pt;">m<sub>l </sub>is magnetic quantum number.</span></span></li>
+<li>When we solve the polar equation the solution for the Θ that are finite everywhere for which l = 0,1,2,3&#8230;.</li>
+<li>When we solve the radial equation the solution for R remains finite for the value</li>
+</ol>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33776" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/New-Doc-04-19-2024-14.42-1_1.jpg?resize=222%2C69&#038;ssl=1" alt="" width="222" height="69"></p>
+<p>This equation is the same equation as that of the bohr&#8217;s theory we have arrived at a system of three quantum number for simple model of hydrogen which are releted to different quantumn like total quantum no, orbital quantum no etc.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What are RTL and TTL  gates. How memory and clock circuits can be made by using these gates? Show it. Explain the working scheme. Is it true that the TTL logic gates are typically fabricated onto a single integrated circuit(IC).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Register Transistor Logic(RTL):</b></p>
+<p>RTL is a class of digital circuits built using resistors as the input network and bipolar junction transistors (BJTs) as switching devices.</p>
+<p class="has-text-align-justify">The RTL circuit consists of resistors at inputs and transistors at the output side. Transistors are used as the switching device. The emitter of the transistor is connected to the ground. The collector terminals are tied together and given to the supply through the resistor R<sub>C</sub>. The collector resistor is known as a passive pull-up resistor.</p>
+<p><b>Transistor Transistor Logic(TTL):</b></p>
+<p>Transistor-transistor logic (TTL) is a digital logic design in which bipolar transistor s act on direct-current pulses. Many TTL logic gate s are typically fabricated onto a single integrated circuit (IC). TTL ICs usually have four-digit numbers beginning with 74 or 54.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">There are two types of RTL logic now, one is antique, Resistor Transistor Logic, the other is widely used now for design, Register Transfer Level.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">The old RTL used a combination of resistors and bipolar transistors to construct inverters, OR, NOR and other basic logic gates. Register Transfer Level is used to take code and transfer it into hardware logic. A single line of RTL script can result in hundreds of logic components.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">TTL is Transistor Transistor Logic, similar to RTL but replacing most of the resistors with transistors.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">TTL is the more modern logic family and was used until about the 1990s when everything converted to CMOS (Complementary Metal Oxide Semiconductor ) logic. CMOS has the advantage of much lower current and more robust noise rejection than TTL.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">All of these families are used to make digital circuits. Any logic function can be implemented with a single type of gate, such as a NOR or NAND gate.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">A group of four or more NOR gates can make a flip-flop, or simple memory. A series of flip-flops can take the 60Hz line frequency, divide by 60 and make a clock which increments every second. A series of more dividers make the minute and hour indicators.</p>
+<p>Yes, it&#8217;s  true that the TTL(Transistor &#8211; Transistor  Logic)  gates are typically fabricated onto a single integrated circuit(IC). This fabrication in single IC (Intrigated Circuit) done typically to reduce the room of complexity in IC and make it more reliable and cost effective.</p>
+</div>
+<h2>Section B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Describe classical free electron model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The classical electron free model is a theoritical model which was introduced by P. Drude in 1900 and developed by Lorentz in 1909. The main motive of this model was to explain the electrical conduction in metals or conductors. This model prefers some assumptions for describing the behaviour of the electrons in metal or conductors and they are as follow :</p>
+<ol style="list-style-type:decimal;">
+<li>The valance electron contained in an atom are free to move in the spaces from one place to another between the ions within the metallic specimens. These electrons also participate in electrical conduction , so they are also reffered as conduction electrons.</li>
+<li>These free electrons behave like gas molecules in a container obeying the laws of kinetic theory of gases.</li>
+<li>Free electrons obeys the Maxwell-Boltzmann distribution of velocities. In abscence of of electric field whole e<sup>&#8211; </sup> move with their random thermal velocity as ½ mv<sup>2</sup> = ³⁄2 kT. where , v<sup>2</sup> is the average of thermal speed ,T is the temperature and k is boltzmann conatant</li>
+<li>There is no interaction between the conduction electrons.</li>
+<li>The mutual repulsion between the negatively charged electron is neglected and the free electron moves with constant potential field making the potential energy of  the electrons constant.</li>
+<li>When an electric field is applied to a metal, free electrons are accelerated in the direction opposite to the direction of applied electric field with a velocity called drift velocity represented as v<sub>d </sub>.</li>
+</ol>
+<p>Despite many simplified assumptions this classical free electron model was able to explain manyproperties of metal like ohm&#8217;s law , emperical formula relating the electrical and thermal conductivities in metal.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How electric and magnetif fields are incorporated in electromagnetic wave? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Electric field is the region which is created when there is attraction and repulsion of electrical charges in the surrounding so, electric field is considered as the invisible force field surrounded by the charges upto which its effect can be observed.</p>
+<p>Magnetic field can be considered as the region around the magnet where we can experience the attraction and repulsion i.e the effect of magnetism. Magnetic field can be experienced by the flow of electric charges or due to the change in the electric field.</p>
+<p>As described by the Maxwell&#8217;s equation , when there is change in the electric field magnetic field is produced and similarly when there is change in the magnetic field we experience the electric field. Continuing the process of creation of electric and magnetic field simultaneously in perpendicular manner lead to the formation of a wave and this wave is called electromagnetic wave.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33444" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/electromagnetic-waves.drawio.png?resize=760%2C306&#038;ssl=1" alt="" width="760" height="306"></p>
+<p>&nbsp;</p>
+<p>Electromagnetic waves are created as a outcome of vibrations between an electric and a magnetic field. These fields oscillate in phase and are always perpendiculat to each other. The contineous energy transmission between these fields promote wave propagation.</p>
+<p>Hence, we can conclude or determine that the electric field and magnetic field incorporate the electromagnetic wave.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Describe the following process of IC production: (a) Oxidation and (b) Doping. Explain photolithography in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An integrated circuit (IC) is an assembly of electronic components in which hundreds to millions of transistors, resistors, and capacitors are interconnected and built up on a thin substrate of semiconductor material (usually silicon) to form a small chip or wafer.</p>
+<p>As per the questions we need to deal with the following:</p>
+<p><strong>a. Oxidation :</strong></p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33460" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/oxidation.drawio.png?resize=581%2C111&#038;ssl=1" alt="" width="581" height="111"></p>
+<p>This is the process of adding the oxygen to the silicon (Si) of the wafers in order to convert it to silicon dioxide (SiO<sub>2</sub>). This is done by heating the wafer to the high temperature of about 1000°c to 1200°c in presence of oxygen or vapor. This process introduce the layer of silicon dioxide (SiO2) which protect the silicon wafer from the impurities. Oxidation is done by two ways either dry oxidation or wet oxidation.</p>
+<p>When the silicon of the wafers are reacted with the vapour to get the layer of silicon dioxide (SiO2) then this is considered as wet oxidation.</p>
+<p>Similarly when the silicon of the wafers are reacted with the oxygen leading to the formation of layer of silicon dioxide (SiO2) then this is considered as dry oxidation.</p>
+<p><strong>b.Doping :</strong></p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33463" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/dopping.png?resize=416%2C192&#038;ssl=1" alt="" width="416" height="192"></p>
+<p>The formation of circuit components in chip i.e integrated circuit (IC) is acomplished by introducing the donor and acceptor impurities to the fabricated semiconductor i.e silicon wafer to create localized n-type and p-type regions is renowned as doping. The impurity atoms used for this as donor or acceptor are known as dopant. Dopants can be either trivalent or pentavalent. Two most common ways to acieve doping are diffusion and ion implantation.</p>
+<p>This technique can vary the number of electrons and holes in semiconductors leading to increase the electrical conductivity of the semiconductor so that it can be further be utilized as replacement in the integrated circuit (IC).</p>
+<p>&nbsp;</p>
+<p><strong>photolithography :</strong></p>
+<p>Photolithography is a technique to get some pattern on the smooth surface of the silicon wafer by exposure of it to the UV rays. Through the use of photolithography, complicated patterns may be transferred onto semiconductor substrates in a precise and controlled manner. This is acomplished by exposing parts of wafer to UV rays or light while other parts are protected. This process can be determined by some steps:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33464" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/photoresist.drawio.png?resize=217%2C223&#038;ssl=1" alt="" width="217" height="223"></p>
+<ol style="list-style-type: lower-roman;">
+<li>Developing a photoresist flim on silicon wafer.</li>
+<li>Exposure of the silicon wafer with phoresist to the UV ray.</li>
+<li>Removing the selected photoresist as requirement.</li>
+<li>This patterned substrate is treated with HF to form a window in the SiO<sub>2 </sub>layer.</li>
+<li>Finally the substrate is ready to be dopped after washing the photoresist.</li>
+</ol>
+<p>&nbsp;</p>
+<p>The diagram above shows the photolithography explained by the steps above.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>An oscillating block of mass 250 g takes 0.2 sec to move between the endpoints of the motion, which are 50 cm apart. Find the frequency and amplitude of the motion. what is the force constant of the spring?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-60741" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/CamScanner-08-05-2025-12.11_1-scaled.jpg?resize=1645%2C2560&#038;ssl=1" alt="" width="1645" height="2560"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><div class="qnbank_number">A potential difference of 100 V is established between the two plates one being the high potential plate. An alpha particle of charge q = 3.2 × 10<sup>-19</sup> C is released from one plate to another plate. What will be the velocity of the alpha particle when it reaches plate? The mass of the proton is 6.70-x 10<sup>-19</sup> kg.</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Potential difference (V) = 100V</p>
+<p>Charge of alpha particle (q) = 3.2 × 10<sup>-19</sup> C</p>
+<p>Mass of alpha particle (m) = 6.70×10<sup>-19</sup> kg</p>
+<p>velocity of alpha particle (ν) = ?</p>
+<p>now,</p>
+<p>we know that,</p>
+<p>$$ \frac{{1}}{{2}} m ν^2 = qV$$</p>
+<p>$$ or, ν^2 = \frac {{2qV}}{{m}}$$</p>
+<p>$$ or, ν^2 = \frac {{2×3.2 × 10^{{-19}}×100}}{{6.70-x 10^{{-19}}}}$$</p>
+<p>$$ or, ν^2 = \frac {{6.4×10^{{-17}}}}{{6.70×10^{{-19}} }}$$</p>
+<p>$$ ν = 90.522$$</p>
+<p>Hence, the velocity of the alpha particle is 90.522 m/s.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Calculate uncertainty in the momentum of electron if uncertainty in its position is 1Å  (10<sup>-10</sup>).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Uncertainty in position (Δx) = 1Å  (10<sup>-10</sup>)</p>
+<p>Uncertainty in momentum of electron (Δp) = ?</p>
+<p>we know that,</p>
+<p>plank&#8217;s constant (h) = 6.626×10<sup>-34</sup></p>
+<p>from Heisenberg&#8217;s Principle we have,</p>
+<p>$$ Δx Δp ≥ \frac{{h}}{{2π}}$$</p>
+<p>$$ Δp = \frac{{h}}{{2π}} ×\frac{{1}}{{ Δx}}$$</p>
+<p>$$ Δp = \frac{{6.626×10^{{-34}}}}{{2×3.14}} ×\frac{{1}}{{10^{{-10}}}}$$</p>
+<p>$$ Δp = 5.28×10^{{-25}} kg m/ sec $$</p>
+<p>&nbsp;</p>
+<p>Hence, the uncertainty in momentum of electron i.e Δp = 5.28×10<sup>-25</sup> kg m/ sec.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p><code></code>A current of 50A is supplied in a slab of copper 0.5cm thick and 2 cm wide is placed in a magnetic field B of 1.5 T. The magnetic field is perpendicular to the plane of the slab and to the current .The free electron concentration in copper is 8.4 × 10<sup>28 </sup>electrons/m<sup>3</sup>? . What will be the magnitude of the Hall voltage across the width of the slab?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Current (I) = 50A</p>
+<p>Thickness of copper slab (X) = 0.5cm</p>
+<p>Width of copper slab (b) = 2cm</p>
+<p>Magnetic field (B) = 1.5T</p>
+<p>Free electron concentration (N) = 8.4×10<sup>28</sup> electrons/m3</p>
+<p>Magnitude of Hall Voltage (V) = ?</p>
+<p>Now,</p>
+<p>We know that,</p>
+<p>$$V = \frac{{IBb}}{{NqA}}$$</p>
+<p style="text-align: left;">$$V = \frac{{50×1.5×2×10^{{-2}} }}{{8.4×10^{{28}}×1.6×10^{{-19}}×10^{{-4}}}}$$</p>
+<p>$$V = 1.12×10^{{-6}}V$$</p>
+<p style="text-align: left;">Hence, required hall voltage of the slab is 1.12×10<sup>-6 </sup>V.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Sodium has a body–centered cubic structure with a one–atom basis .The density and atomic weight of sodium are 0.971g/cm<sup>3</sup> and 23 g/mole. What is the length of the unit cube of the structure?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Density (ρ) = 0.971 g/cm<sup>3</sup></p>
+<p>No. of atoms per unit cell (N) = 2</p>
+<p>Atomic weight of sodium (m) = 23 g/mole</p>
+<p>Length (a) = ?</p>
+<p>Now,</p>
+<p>We can use the formula,</p>
+<p>$$\frac{{N}}{{v}} = \frac{{ρNa}}{{m}} $$   where, v is the volume.</p>
+<p>$$\frac{{N}}{{a^{{3}}}} = \frac{{ρNa}}{{m}} $$</p>
+<p>$$ a^{{3}} = \frac{{Nm}}{{ρNa}} $$</p>
+<p>$$ a^{{3}} = \frac{{2×23}}{{0.971×6.023×10^{{23}}}} $$</p>
+<p>$$ a^{{3}} = 1.573×10^{{-22}}$$</p>
+<p>$$ a = 5.3×10^{{8}}cm$$</p>
+<p>&nbsp;</p>
+<p>Hence, the required length of the unit cube of the structure is 5.3×10<sup>8</sup>cm.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>The output of a digital circuit (y) is given by this expression:</p>
+<p>y = (C+ B’A) (A + B + D)’</p>
+<p>Where A, B, C and D represent inputs. Draw a circuit of above equation using OR, AND and NOT gate and hence find its truth table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>From given question we have</p>
+<p>inputs : A, B, C and D</p>
+<p>given expression :  y = (C+ B&#8217;A) (A + B + D)&#8217;</p>
+<p>then, the logical diagram using AND ,OR and NOT gates will be as :</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-33502" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/digital-circuit-i.drawio.png?resize=880%2C291&#038;ssl=1" alt="" width="880" height="291"></p>
+<p>the truth table for the following diagram will be as:</p>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.442%; height: 26px;">
+<tbody>
+<tr>
+<td style="width: 40.0123%; text-align: center;">INPUT</td>
+<td style="width: 49.6599%; text-align: center;">INTERMEDIATE OPERATIONS</td>
+<td style="width: 9.86439%; text-align: center;">OUTPUT</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.6289%; height: 320px;">
+<tbody>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">A</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">B</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">C</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">D</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">B&#8217;</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">B&#8217;A</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">C+B&#8217;A</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">A+B+D</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">(A+B+D)&#8217;</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">y</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">1</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+<td style="width: 9.96276%; text-align: center; height: 32px;">0</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.5361%; height: 211px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">1</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+<td style="width: 10%; text-align: center; height: 24px;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence, it is the required logical circuit and truth table wuth respect to given equation.</p>
+</div>
+</body></html>

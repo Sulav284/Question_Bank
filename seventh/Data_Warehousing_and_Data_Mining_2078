@@ -1,0 +1,905 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Data Warehousing and Data Mining 2078 2078</title>
+    </head>
+    <body>
+        <h1>Data Warehousing and Data Mining 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Write down any one advantage and disadvantage of MOLAP over ROLAP. Define signed network and how do you check whether it is balanced or not? How beam search reduces the space complexity? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Advantage of MOLAP over ROLAP</strong>:</p>
+<p><span style="text-decoration: underline;">Performance</span>: MOLAP (Multidimensional Online Analytical Processing) typically offers faster query performance than ROLAP (Relational Online Analytical Processing). This is because MOLAP systems store data in an optimized, multidimensional array format, allowing for quicker data retrieval and efficient computation, especially for complex and multi-dimensional queries. The pre computation and storage of summarized data in MOLAP can significantly speed up query response times.</p>
+<p><strong>Disadvantage of MOLAP over ROLAP</strong>:</p>
+<p><span style="text-decoration: underline;">Scalability and Storage</span>: MOLAP systems can face challenges in scalability and storage when dealing with very large datasets. Since MOLAP stores aggregated data in a multidimensional cube format, the size of the data cube can grow exponentially with the addition of more dimensions, leading to increased storage requirements. ROLAP, on the other hand, stores data in a relational database, which is generally more scalable and efficient in handling large volumes of data.</p>
+<p>Signed Network Signed network refers to a type of network where relationships between entities (nodes) carry a &#8220;sign&#8221; indicating the nature of the relationship. These signs are typically positive (+) or negative (-), representing favorable or unfavorable relationships, respectively. A signed network distinguishes between positive links (like friendship, trust, or collaboration) and negative links (like animosity, distrust, or competition). We can check it is balanced or not using Structural balanced theory:</p>
+<ol style="list-style-type:decimal;">
+<li>Structural balance considers the possible ways in which triangles on three individuals can be signed.</li>
+<li>This theory suggests that triangles with three positive signs and those with one positive sign are more plausible and hence should be more prevalent in real networks. Such triangles are called balanced.</li>
+<li>Triangles with two positive signs or none are not plausible. such triangles are called unbalanced.</li>
+<li>Balanced triangles with three positive edges exemplify the principle that &#8221; the friend of my friend is my friend&#8221;.</li>
+<li>Whereas those with one positive and two negative edges captures the notions that &#8220;the friend of my enemy is my enemy&#8221;.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29210 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-183754.png?resize=354%2C147&#038;ssl=1" alt="" width="354" height="147"></p>
+<p><strong><span style="text-decoration: underline;">Beam Search</span></strong>: Beam search reduces space complexity by excluding less promising paths at each level, limiting the growth of the search tree. This allows it to handle problems with large branching factors and depths. Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29211 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-183918.png?resize=495%2C305&#038;ssl=1" alt="" width="495" height="305"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29212 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-184003.png?resize=549%2C415&#038;ssl=1" alt="" width="549" height="415"></p>
+<p>Here, at each step we explored only most promising nodes instead of all nodes. So, we don&#8217;t have to store all the nodes in the memory. So it reduces the space complexity.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How concept hierarchy is used in extracting information? Generate the frequent pattern from the following data set using FP growth, where minimum support=3.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Concept hierarchies reduce the data by collecting and replacing low level concepts (such as numeric values for the attribute age) by higher level concepts (such as young, middle-aged, or senior). At lower levels, data might be too detailed for analysis. It allows for stepping up to more abstract levels. This can be used to deal with missing data by climbing up the hierarchy. For example, if the city is missing in an address, analysis can be done at the state or country level.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>T_ID</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Items</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">1</td>
+<td style="width: 50%; text-align: center;">A, B, C, D, F, H</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">2</td>
+<td style="width: 50%; text-align: center;">A, D, E, F</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">3</td>
+<td style="width: 50%; text-align: center;">C, D, F</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">4</td>
+<td style="width: 50%; text-align: center;">B, H</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">5</td>
+<td style="width: 50%; text-align: center;">A, C, F, G, H</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">6</td>
+<td style="width: 50%; text-align: center;">C, D, E, G</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">7</td>
+<td style="width: 50%; text-align: center;">A, C, D, I</td>
+</tr>
+</tbody>
+</table></div>
+<p>List out all the items with cardinality 1 with their support count.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Items</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Support</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Count</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">A</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">B</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">×</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">C</td>
+<td style="width: 33.3333%; text-align: center;">5</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">D</td>
+<td style="width: 33.3333%; text-align: center;">5</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">E</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">×</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">F</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">G</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">×</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">H</td>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">I</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">×</td>
+</tr>
+</tbody>
+</table></div>
+<p>Discarding all the infrequent item</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Items</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Support-count</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">A</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">C</td>
+<td style="width: 50%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">D</td>
+<td style="width: 50%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">F</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">H</td>
+<td style="width: 50%; text-align: center;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, sort the item sets in descending order of their support-count.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Items</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Support-count</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">C</td>
+<td style="width: 50%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">D</td>
+<td style="width: 50%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">A</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">F</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">H</td>
+<td style="width: 50%; text-align: center;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, ordering each item sets based on the above priority</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>T_ID</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Items</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Ordered Items</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">A, C, D, F, H</td>
+<td style="width: 33.3333%; text-align: center;">C, D, A, F, H</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">A, D, F</td>
+<td style="width: 33.3333%; text-align: center;">D, A, F</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;">C, D, F</td>
+<td style="width: 33.3333%; text-align: center;">C, D, F</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">H</td>
+<td style="width: 33.3333%; text-align: center;">H</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">5</td>
+<td style="width: 33.3333%; text-align: center;">A, C, F, H</td>
+<td style="width: 33.3333%; text-align: center;">C, A, F, H</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">C, D</td>
+<td style="width: 33.3333%; text-align: center;">C, D</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">7</td>
+<td style="width: 33.3333%; text-align: center;">A, C, D</td>
+<td style="width: 33.3333%; text-align: center;">C, D, A</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, draw FP tree based on these ordered item sets:</p>
+<p>1.  For transaction id 1: C, D, A, F, H</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29215 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-185500.png?resize=430%2C326&#038;ssl=1" alt="" width="430" height="326"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29216 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-185549.png?resize=489%2C319&#038;ssl=1" alt="" width="489" height="319"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29217 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-185556.png?resize=525%2C411&#038;ssl=1" alt="" width="525" height="411"></p>
+<p>Now, we need to find conditional pattern base and conditional FP tree to each item then generate frequent patterns.</p>
+<p>We start with last item in sorted order i.e</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>Item</strong></td>
+<td style="width: 26.1583%; text-align: center;"><strong>Conditional pattern base</strong></td>
+<td style="width: 23.8417%; text-align: center;"><strong>Conditional FP tree</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Frequent pattern</strong></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">H</td>
+<td style="width: 26.1583%; text-align: center;">{C,D,A,F:1}, {C,A,F:1}</td>
+<td style="width: 23.8417%; text-align: center;">&#8211;</td>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">F</td>
+<td style="width: 26.1583%; text-align: center;">{C, D, A:1}, {C, D:1}, {C,A:1}, {D,A:1}</td>
+<td style="width: 23.8417%; text-align: center;">{C:3}, {D:3}, {A:3}</td>
+<td style="width: 25%; text-align: center;">{C, A:3}, {D,F:3}, {A,F:3}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 26.1583%; text-align: center;">{C, D:2}, {C:1}, {D:1}</td>
+<td style="width: 23.8417%; text-align: center;">{C:3}, {D:3}</td>
+<td style="width: 25%; text-align: center;">{C,A:3}, {D,A:3}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">D</td>
+<td style="width: 26.1583%; text-align: center;">{C:4}</td>
+<td style="width: 23.8417%; text-align: center;">{c:4}</td>
+<td style="width: 25%; text-align: center;">{C, D:4}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">C</td>
+<td style="width: 26.1583%; text-align: center;">&#8211;</td>
+<td style="width: 23.8417%; text-align: center;"></td>
+<td style="width: 25%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How do you compare two classifiers? Given the points A(3,7), B(4,6), C(5,5), D(6,4), E(7,3), F(6,2), G(7,2) and H(8,4), find the core points, border points and outliers using DBSCAN. Take Eps 2.5 and MinPts = 3.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We can compare two classifiers by using McNemar’s Test.</p>
+<ul style="list-style-type: square;">
+<li>In terms of comparing two binary classification algorithms, McNemar’s test is the test commenting on whether the two models disagree in the same way(or not).</li>
+<li>It is not commenting on whether one model is more or less accurate or error prone than another.</li>
+<li>In McNemar’s test, we begin by creating a contingency table like the one below to compare the performance of model 1 and model 2.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29219 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-191000.png?resize=188%2C125&#038;ssl=1" alt="" width="188" height="125"></p>
+<ul style="list-style-type: square;">
+<li>In this table, the regions are:</li>
+<li>a-both models are correct.</li>
+<li>b-model 1 is correct, and model 2 is wrong.</li>
+<li>c-model 2 is correct, and model 1 is wrong.</li>
+<li>d-both models are wrong</li>
+</ul>
+<p>Given, Epsilon (ε) = 2.5 and Minpts = 3</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Data Point</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>X</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Y</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">A</td>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;">7</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">B</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">6</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">C</td>
+<td style="width: 33.3333%; text-align: center;">5</td>
+<td style="width: 33.3333%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">D</td>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">E</td>
+<td style="width: 33.3333%; text-align: center;">7</td>
+<td style="width: 33.3333%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">F</td>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">G</td>
+<td style="width: 33.3333%; text-align: center;">7</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">H</td>
+<td style="width: 33.3333%; text-align: center;">8</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>We first calculate the distance between each points using euclidian distance = √(x2-x1)^2 + (y2 &#8211; y1)^2. Also, we find all the ε-neighborhoods of a point i.e point whose distance ≤2.5</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 264px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">Distance</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">A</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">B</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">C</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">D</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">E</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">F</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">G</td>
+<td style="width: 11.1111%; height: 24px;">H</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">A</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.24</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.66</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">6.40</td>
+<td style="width: 11.1111%; height: 24px;">5.83</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">B</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.24</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.47</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.00</td>
+<td style="width: 11.1111%; height: 24px;">4.47</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">C</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">3.16</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">3.61</td>
+<td style="width: 11.1111%; height: 24px;">3.16</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">D</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.24</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.24</td>
+<td style="width: 11.1111%; height: 24px;">2.00</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">E</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.66</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.24</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.00</td>
+<td style="width: 11.1111%; height: 24px;">1.41</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">F</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.47</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">3.16</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.00</td>
+<td style="width: 11.1111%; height: 24px;">2.83</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">G</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">6.40</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">3.61</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.24</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">0</td>
+<td style="width: 11.1111%; height: 24px;">2.24</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 11.1111%; height: 24px; text-align: center;">H</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">5.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">4.47</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">3.16</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.00</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.83</td>
+<td style="width: 11.1111%; height: 24px; text-align: center;">2.24</td>
+<td style="width: 11.1111%; height: 24px;">0</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 11.1111%; height: 48px; text-align: center;">ε-neighbour</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">A,B</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">A,B,C</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">B,C,D</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">C,D,E,F,G,H</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">D,E,F,G,H</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">D,E,F,G</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">D,E,F,G,H</td>
+<td style="width: 11.1111%; height: 48px; text-align: center;">D,E,G,H</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">Remarks</td>
+<td style="width: 11.1111%; text-align: center;">Outlier</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+<td style="width: 11.1111%; text-align: center;">Core</td>
+</tr>
+</tbody>
+</table></div>
+<p>Note : Outlier = noise.</p>
+<p>∴Core points = B, C, D, E, F, G, H</p>
+<p>Outlier = A</p>
+<p>Now t0 check border point.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Point</td>
+<td style="width: 33.3333%; text-align: center;">Status</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">A</td>
+<td style="width: 33.3333%; text-align: center;">Noise/outlier</td>
+<td style="width: 33.3333%; text-align: center;">Border</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">B</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">C</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">D</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">E</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">F</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">G</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">H</td>
+<td style="width: 33.3333%; text-align: center;">Core</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>If a noise point is a part of any other core data point, then it is a border. If a point is a core point, it is not a boundary. so, A = border point (boundry)</p>
+<p><strong><span style="text-decoration: underline;">Note</span></strong>: If we calculate distance, we need to select min distance( i.e ≤). If similarity index is given, then we select highest similarity value (i.e ≥).</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>When a pattern is said to be interesting? List the issues of data mining.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A pattern is considered interesting if it is useful, valid, and potentially actionable. The pattern should be relevant to the business objectives or scientific goals of the data mining project. It should hold true across different data sets or subsets of the data and it should be easy to understand.</p>
+<p><strong>Mining Methodology</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Mining various and new kinds of knowledge</span>: AAS there are diverse applications, new mining tasks continue to emerge. These tasks can use the same database in different ways and require the development of new data mining technique.</li>
+<li><span style="text-decoration: underline;">Mining knowledge in multidimensional space</span>: While searching foe knowledge in large datasets, we need to explore multidimensional space. To find interesting patterns, various combinations of dimensions need to be applied.</li>
+</ul>
+<p><strong>User Interaction</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Ad hoc data mining and data mining query languages</span> : High-level data mining query languages will give users the freedom to define ad hoc data mining tasks. Optimization of the processing of such flexible mining requests is another promising area of study.</li>
+<li><span style="text-decoration: underline;">Presentation and visualization of data mining results</span> : The knowledge discovered by mining the data should be usable for humans. The system should adopt an expressive representation of knowledge, user-friendly visualization techniques, etc.</li>
+</ul>
+<p><strong>Diversity of Data Types</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Handling of relational and complex types of data</span> : There are many kinds of data stored in databases and data warehouses. It us not possible for one system to mine all these kind of data. So different data mining system should be construed for different kinds data.</li>
+<li><span style="text-decoration: underline;">Mining information from heterogeneous database and global information system</span> : Since data is fetched from different data sources on Local Area Network (LAN) and Wide Area Network (WAN). The discovery of knowledge from different sources of structured is a great challenge to data mining.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define data discretization. Describe the tasks for data preprocessing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Discretization</strong> is done to reduce the number of values for a given continuous attribute by dividing the range of the attribute into intervals. Interval labels can then be used to replace actual data values.</p>
+<p>Data preprocessing is one of the critical step of data mining. Data preprocessing methods can be divided into following:</p>
+<ul style="list-style-type: square;">
+<li>Data Cleaning</li>
+<li>Data Integration</li>
+<li>Data Transformation</li>
+<li>Data Reduction</li>
+<li>Data Discretization</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Data Cleaning</strong>: This involves handling missing data, noisy data, and correcting inconsistencies in the dataset. Techniques like filling in missing values, smoothing noisy data, identifying outliers, and resolving inconsistencies are employed to<br />
+clean the data.</li>
+<li><strong>Data Integration</strong>: This process combines data from multiple sources into a coherent data store, such as a data warehouse. During integration, issues such as data redundancy and inconsistencies must be resolved.</li>
+<li><strong>Data Transformation</strong>: In this step, data is transformed into forms appropriate for mining. Transformation operations might include normalization (scaling data to fall within a small, specified range), aggregation (summarizing data), or generalization (replacing low-level data with high-level concepts through concept hierarchies).</li>
+<li><strong>Data Reduction</strong>: The goal here is to reduce the volume but produce the same or similar analytical results. This can be done by selecting relevant features, reducing the number of dimensions (via methods like Principal Component Analysis), or decreasing the volume of data via binning, histograms, clustering, or sampling.</li>
+<li><strong>Data Discretization</strong>: The process of transforming continuous numerical data into distinct intervals or categories is known as data discretization. This makes the process of analyzing data easier and is frequently used in data mining to get data ready for association rule mining or categorization.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define spatial data mining. What are the challenged of multimedia mining? Describe with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Spatial data mining</strong> refers to the extraction of knowledge, spatial relationships, or other interesting patterns not explicitly stored in spatial databases. such mining demands an integration of data mining with spatial database technologies.</p>
+<p><strong>Multimedia data mining</strong> is an interdisciplinary field that integrates image processing and understanding, computer vision, data mining, and pattern recognition. Here are some of the key challenges in multimedia mining:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>High Dimensionality</strong> : Multimedia data like images and videos have very high dimensionality, which makes processing and analysis computationally intensive.</li>
+<li><strong>Heterogeneous Data</strong>: Multimedia datasets often comprise various types of data, including text, images, video, and audio, each with its own set of features and requiring different processing techniques.</li>
+<li><strong>Unstructured Data</strong>: Unlike structured data, multimedia content is unstructured or semi-structured and lacks a clear schema, making it difficult to apply traditional data mining techniques directly.</li>
+<li><strong>Data Volume</strong>: The sheer volume of multimedia data can be overwhelming, as it encompasses large files and streams of data, which poses storage and processing challenges.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Consider the following data set.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Confident</strong></td>
+<td><strong>Studied</strong></td>
+<td><strong>Sick</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Fail</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Fail</td>
+</tr>
+<tr>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table></div>
+<p>Find out whether the object with attribute Confident = Yes, Sick = No will Fail or Pass using Bayesian classification.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>First We need to calculate the prior probabilities of pass and fail.</p>
+<p>∴ P(Result = pass) = 3/5 = 0.6</p>
+<p>Here, Total pass = 3</p>
+<p>∴ P(Result = Fail ) = 2/5 = 0.4</p>
+<p>Here, Total fail = 2</p>
+<p>Now, we need to calculate the current or conditional probabilities of each attributes.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Confident</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Pass</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Fail</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Yes</td>
+<td style="width: 33.3333%; text-align: center;">2/3 = 0.66</td>
+<td style="width: 33.3333%; text-align: center;">1/2 = 0.5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">No</td>
+<td style="width: 33.3333%; text-align: center;">1/3 = 0.33</td>
+<td style="width: 33.3333%; text-align: center;">1/2 = 0.5</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100.299%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Studied</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Pass</strong></td>
+<td style="width: 33.6341%; text-align: center;"><strong>Fail</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Yes</td>
+<td style="width: 33.3333%; text-align: center;">2/3 = 0.66</td>
+<td style="width: 33.6341%; text-align: center;">1/2 = 0.5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">No</td>
+<td style="width: 33.3333%; text-align: center;">1/3 = 0.33</td>
+<td style="width: 33.6341%; text-align: center;">1/2 = 0.5</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100.299%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Sick</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Pass</strong></td>
+<td style="width: 33.6341%; text-align: center;"><strong>Fail</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Yes</td>
+<td style="width: 33.3333%; text-align: center;">2/3 = 0.66</td>
+<td style="width: 33.6341%; text-align: center;">1/2 = 0.5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">No</td>
+<td style="width: 33.3333%; text-align: center;">1/3 = 0.33</td>
+<td style="width: 33.6341%; text-align: center;">1/2 = 0.5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>P(Result = Fail/Confident = Yes, Studied = Yes, Sick = No)</p>
+<p>P(Result = Fail) × P(Confident = Yes / Result = Fail) × P( Studied = Yes/ Result = Fail) × P( Sick = No / Result = Fail)</p>
+<p>=0.4 × 0.5 × 0.5 × 0.5</p>
+<p>=0.05</p>
+<p>P(Result = pass / confident = yes, studied = yes , sick = no)</p>
+<p>P(Result = pass ) × P(confident = yes / result =pass) × P(studied=yes/result=pass) × P(sick=no/result= pass)<br />
+=0.6 × 0.66 × 0.66 × 0.33<br />
+=0.086</p>
+<p>Now, we need to normalize these probabilities:</p>
+<p>P(Result = Fail ) = 0.05 / (0.05 + 0.086) = 0.368</p>
+<p>P(Result = pass ) = 0.086 / (0.05 + 0.086) = 0.632</p>
+<p>Since, the probability of pass is more than that of fail. So, when confident = yes, studied = yes, sick = no then object will pass.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What are the choices for data cube materialization? Explain the strategies for cube computation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Data cube materialization</strong> is a process in data warehousing where summary data, in the form of a multidimensional cube, is precomputed and stored for fast query performance. There are several strategies for materializing data cubes, each with its own advantages and trade-offs. Here are some common choices:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Full Cube Materialization</strong>:
+<ul style="list-style-type: square;">
+<li>In this strategy, the entire data cube is precomputed and stored.</li>
+<li>All possible combinations of dimensions are considered, resulting in a complete summary of the data.</li>
+<li>This approach provides the fastest query response times but requires significant storage space.</li>
+</ul>
+</li>
+<li><strong>Partial Cube Materialization</strong>:
+<ul style="list-style-type: square;">
+<li>Instead of generating the entire cube, only a subset of the cube is precomputed.</li>
+<li>This subset is determined based on a predefined set of frequently queried dimensions and measures.</li>
+<li>This reduces storage requirements compared to the full cube while still improving query performance.</li>
+</ul>
+</li>
+<li><strong>Iceberg Cube</strong>:
+<ul style="list-style-type: square;">
+<li>An iceberg cube materialization involves storing only the most significant or &#8220;interesting&#8221; portions of the cube.</li>
+<li>Cells with values below a certain threshold (e.g., low-frequency data points) are excluded from the materialized cube.</li>
+<li>This helps in reducing storage requirements and focuses on relevant data.</li>
+</ul>
+</li>
+<li><strong>Star and Snowflake Schema</strong>:
+<ul style="list-style-type: square;">
+<li>These are traditional database design schemas that optimize for specific types of queries common in OLAP (Online Analytical Processing) systems.</li>
+<li>The star schema has a central fact table surrounded by dimension tables, making it efficient for certain types of queries.</li>
+<li>The snowflake schema is an extension of the star schema, where dimension tables are normalized, leading to further storage efficiency.</li>
+</ul>
+</li>
+<li><strong>Aggregation</strong>:
+<ul style="list-style-type: square;">
+<li>Aggregation involves precomputing only certain aggregates or summaries of data.</li>
+<li>Instead of storing all possible combinations, aggregates are calculated for selected subsets of data, reducing storage needs.</li>
+<li>Aggregation can be done at various levels of granularity based on the business requirements.</li>
+</ul>
+</li>
+<li><strong>Dynamic Aggregation</strong>:
+<ul style="list-style-type: square;">
+<li>This strategy involves aggregating data dynamically at query time.</li>
+<li>Rather than precomputing all possible aggregations, the system aggregates data on-the-fly based on user queries.</li>
+<li>While this approach saves storage space, it can result in longer query response times.</li>
+</ul>
+</li>
+</ol>
+<p>The choice of materialization strategy depends on factors such as query patterns, available storage resources, and the balance between query performance and storage efficiency. Different businesses and applications may find different strategies more suitable based on their specific requirements and constraints.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Show the conflict between theory of balance and status. How do you improve Apriori?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Theory of balance &amp; status come under the signed network in data mining. In a social network analysis, a positive or a negative friendship can be established between two nodes in a network; it results in a signed network. Structural balance considers the possible ways in which triangles on 3 individuals can be signed.</p>
+<ul style="list-style-type: square;">
+<li>To give a sense for how the differences between status and balance arise, consider the situation in which a user A links positively to a user B, and B in turn links positively to a user C.</li>
+<li>If C then forms a link to A, what sign should we expect this link to have? Balance theory predicts that since C is a friend of A&#8217;s friend, we should see a positive link from C to A.</li>
+<li>Status theory, on the other hand, predicts that A regards B as having higher status, and B regards C as having higher status- so C should regard A as having low status and hence be included to link negatively to A.</li>
+<li>In other words, the two theories suggest opposite conclusions in this case.</li>
+</ul>
+<p><span style="text-decoration: underline;">Improving efficiency of Apriori Algorithm</span></p>
+<p><strong>Hash Based Technique</strong></p>
+<ul style="list-style-type: square;">
+<li>A hash-based technique can be used to reduce the size of the candidate k-items sets, for k&gt;1.</li>
+<li>For example, when scanning each transaction in the database to generate the frequent 1- item sets, we can generate all the 2- item sets for each transaction, hash them into the different buckets of hash table.</li>
+</ul>
+<p><strong>Transaction reduction</strong></p>
+<ul style="list-style-type: square;">
+<li>A transaction that does not contain any frequent k- item sets cannot contain any frequent (k+1) &#8211; item sets. Therefore, such a transaction can be marked or removed from further consideration.</li>
+</ul>
+<p><strong>Sampling</strong></p>
+<ul style="list-style-type: square;">
+<li>The basic idea of the sampling approach is to pick a random samples S of the given data D, and then search for frequent item sets in S instead of D. In this way, we trade off some degree of accuracy against efficiency.</li>
+<li>Partitioning: This method requires only two database scans to mine the frequent item sets.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between star schema and snow flake schema. List any two methods for data normalization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Star Schema</strong></td>
+<td style="width: 50%; text-align: center;"><strong> Snowflake Schema</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In star schema, fact tables and the dimension tables are present.</td>
+<td style="width: 50%; text-align: center;">In snowflake schema, fact tables, dimension tables, as well as sub-dimension tables are present.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">This is top-down model.</td>
+<td style="width: 50%; text-align: center;"> It is bottom-up model. It is bottom-up model.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Star Schema requires more space.</td>
+<td style="width: 50%; text-align: center;">The space requirement is lesser.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It takes less time for execution of queries.</td>
+<td style="width: 50%; text-align: center;">It takes more time than star schema for the execution of queries.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In star schema, normalization data is not used.</td>
+<td style="width: 50%; text-align: center;">Both normalized and denormalized data are used</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">The complexity of the queries is low.</td>
+<td style="width: 50%; text-align: center;">The complexity of queries is greater.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Any two methods of data normalization are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Z-score Normalization</strong>: This technique creates data with a mean of 0 and a standard deviation of 1 by removing the mean and dividing by the standard deviation.</li>
+<li><strong>Min-Max Normalization</strong>: By removing the minimum value and dividing by the range (max &#8211; min), this technique adjusts the data to a predetermined range, often between 0 and 1.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How do you evaluate the accuracy of a classifier? Discuss the advantages of using K- fold cross validation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We can measure the accuracy of classifier by using following formula:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Accuracy</span> : It is the percentage of correct predictions made by the model and is given as below:</li>
+</ul>
+<p style="text-align: center;">Accuracy = (TP + TN)/( TP + TN + FP + FN)<br />
+= ( TP + TN)/ Total Number of Instances</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">True Negative ( TN )</span> : It represents correctly classified Negative classes. Both actual and predicted class are negative here.</li>
+<li><span style="text-decoration: underline;">False Negative ( FN )</span> : It represents incorrectly classified negative classes. These are the negative classes predicted by the model that were actually positive. This is called Type II error.</li>
+</ul>
+<p>The advantages of using K-fold cross validation are as follows:</p>
+<ul style="list-style-type: square;">
+<li>K-fold cross-validation works well on small and large data sets.</li>
+<li>All of our data is used in testing our model, thus giving a fair, well-rounded evaluation metric.</li>
+<li>K-fold cross-validation may lead to more accurate models since we are eventually utilizing our data to build our model.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Apply K(=2)- Means algorithm over the data (185, 72), (170, 56), (168, 60), (179, 68), (182, 72), (188, 77) up to two iterations and show the clusters. Initially choose first two objects as initial centroids.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 173px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Instance</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>X</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Y</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">p1</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">185</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">72</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">p2</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">170</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">56</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">p3</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">168</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">60</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">p4</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">179</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">68</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">p5</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">182</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">72</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3333%; height: 29px; text-align: center;">p6</td>
+<td style="width: 33.3333%; height: 29px; text-align: center;">188</td>
+<td style="width: 33.3333%; height: 29px; text-align: center;">77</td>
+</tr>
+</tbody>
+</table></div>
+<p>No. of clusters to be created (k) = 2</p>
+<p>Centroid for first cluster (c1) = p1 = (185, 72)</p>
+<p>Centroid for second cluster (c2) = p2 = (170, 56)</p>
+<p>Note: Euclidean distance = √(x<sub>0</sub> &#8211; xc)<sup>2 </sup> + ( y<sub>0 </sub>&#8211; yc )<sup>2</sup></p>
+<p>(x<sub>0, </sub>y<sub>0 </sub>) = observed value of instances</p>
+<p>(xc , yc) = Centroid values</p>
+<p><strong>Iteration 1:</strong></p>
+<p>Calculating similarity by using euclidean distance.</p>
+<p>d( c<sub>1</sub>, p<sub>3</sub>) = d({185, 72}, {168, 60}) = 20.809</p>
+<p>d(c<sub>2</sub>, p<sub>3</sub>) = 4.472</p>
+<p>Here, d( c<sub>2</sub>, p<sub>3</sub>) &lt; d( c<sub>1</sub>, p<sub>3</sub>)</p>
+<p>So, p<sub>3</sub> belongs to c<sub>2</sub>.</p>
+<p>Since, p<sub>3</sub> belongs to c<sub>2</sub>, we calculate further on.</p>
+<p>d( c<sub>1</sub>, p<sub>4</sub>) = 7.211 , d( c<sub>2</sub>, p<sub>4</sub> ) =15</p>
+<p>So, p<sub>4</sub> belongs to c<sub>1</sub>.</p>
+<p>d( c<sub>1</sub>, p<sub>5</sub>) =3, d( c<sub>2</sub>, p<sub>5</sub>) = 20</p>
+<p>So, p<sub>5</sub> belongs to c<sub>1</sub></p>
+<p>d( c<sub>1</sub>, p<sub>6</sub>) = 5.831, d( c<sub>2</sub>, p<sub>6</sub>) = 27.659</p>
+<p>So, p<sub>6</sub> belongs to c<sub>1</sub>.</p>
+<p>The clusters after 1st iteration:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29240 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-203519.png?resize=288%2C85&#038;ssl=1" alt="" width="288" height="85"></p>
+<p><strong>Iteration 2</strong></p>
+<p>Now, Calculating new centroid for each cluster.</p>
+<p>Centroid c<sub>1</sub> = ( (185 + 179 + 182 + 188) / 4 , (72 + 68 + 72 + 77 ) / 4 )</p>
+<p>=( 183.5 , 72.25 )</p>
+<p>centroid c<sub>2</sub> = (169, 58)</p>
+<p>Now, again calculating similarity:</p>
+<p>d(c<sub>1</sub>, p<sub>1</sub> ) = 1.521 , d( c<sub>2</sub>, p<sub>1</sub>) = 21.620 ∴p<sub>1</sub> ε c<sub>1</sub></p>
+<p>d(c<sub>1</sub>, p<sub>2</sub> ) = 21.126 , d( c<sub>2</sub>, p<sub>2</sub>) = 2.236  ∴p<sub>2</sub> ε c<sub>2</sub></p>
+<p>d(c<sub>1</sub>, p<sub>3</sub> ) = 19.75 , d( c<sub>2</sub>, p<sub>3</sub>) = 2.236  ∴p<sub>3</sub> ε c<sub>2</sub></p>
+<p>d(c<sub>1</sub>, p<sub>4</sub> ) = 6.190 , d( c<sub>2</sub>, p<sub>4</sub>) = 14.142  ∴p<sub>4</sub> ε c<sub>1</sub></p>
+<p>d(c<sub>1</sub>, p<sub>5</sub> ) = 1.521 , d( c<sub>2</sub>, p<sub>5</sub>) = 19.105  ∴p<sub>5</sub> ε c<sub>1</sub></p>
+<p>d(c<sub>1</sub>, p<sub>6</sub> ) = 6.543 , d( c<sub>2</sub>, p<sub>6</sub>) = 26.870  ∴p<sub>6</sub> ε c<sub>1</sub></p>
+<p>The result cluster after 2nd iterations:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29241 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-204326.png?resize=322%2C76&#038;ssl=1" alt="" width="322" height="76"></p>
+<p>&nbsp;</p>
+</div>
+</body></html>

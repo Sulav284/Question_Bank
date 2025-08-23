@@ -1,0 +1,570 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NM Model Question I 0</title>
+    </head>
+    <body>
+        <h1>NM Model Question I - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any two questions</h2><h3>Question 1</h3>
+<div><p><p>Derive the formula for Newton Raphson method. Solve the equation x<sup>4</sup> – x – 10 = 0 using Newton Raphson method assuming error precision is 0.01. Discuss drawback for this method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The formula for Newton-Rapson method is</p>
+<p>\(x_{n + 1} = x_n &#8211; \frac{f(x_n)}{f'(x_n)}\)</p>
+<p>We have to derive this formula</p>
+<p><strong>Derivation:</strong></p>
+<p>Let h is an small increment in x<sub>n</sub> to get next estimate of root</p>
+<p>\(x_{n+1} &#8211; x_0 = h\)</p>
+<p>\(x_{n+1} = x_n + h\)</p>
+<p>We know that Taylors series can be written as</p>
+<p>\(f(x+h) = f(x) + \frac{f'(x)h}{1!} + \frac{f&#8221;(x)h^2}{2!} + &#8230;&#8230;\)</p>
+<p>Since h is very small, We can neglet the terms containing second and higher order terms. Then above equation can be written as:</p>
+<p>\(f(x+h) = f(x) + \frac{f'(x)h}{1!}\)</p>
+<p>\(f(x_n+h) = f(x_n) + \frac{f'(x_n)h}{1!}\)</p>
+<p>\(f(x_{n+1}) = f(x_n) + \frac{f'(x_n)(x_{n+1} &#8211; x_n)}{1!}\)</p>
+<p>If x<sub>n+1</sub> is root of the given polynomail</p>
+<p>f(x<sub>n+1</sub>) = 0</p>
+<p>\(f(x_n) + \frac{f'(x_n)(x_{n+1} &#8211; x_n)}{1!} = 0\)</p>
+<p>Solving above equation to get the value of x<sub>n+1</sub> we get</p>
+<p>\(x_{n + 1} = x_n &#8211; \frac{f(x_n)}{f'(x_n)}\)</p>
+<p>This is the equation of Newton Raphson formula.</p>
+<p>&nbsp;</p>
+<p><strong>Problem Part:</strong></p>
+<p>Solution:</p>
+<p>Let f(x) = x<sup>4</sup> &#8211; x &#8211; 10</p>
+<p>f'(x) = 4x<sup>3</sup> &#8211; 1</p>
+<p>Let us assume initial guess is 1.5</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%;">x</td>
+<td style="width: 25%;">f(x)</td>
+<td style="width: 25%;">f'(x)</td>
+<td style="width: 25%;">Error</td>
+</tr>
+<tr>
+<td style="width: 25%;">1.5</td>
+<td style="width: 25%;">-6.4375</td>
+<td style="width: 25%;">12.5</td>
+<td style="width: 25%;">0.2556</td>
+</tr>
+<tr>
+<td style="width: 25%;">2.015</td>
+<td style="width: 25%;">4.47</td>
+<td style="width: 25%;">31.73</td>
+<td style="width: 25%;">0.0896</td>
+</tr>
+<tr>
+<td style="width: 25%;">1.874</td>
+<td style="width: 25%;">0.4593</td>
+<td style="width: 25%;">25.325</td>
+<td style="width: 25%;">0.0896</td>
+</tr>
+<tr>
+<td style="width: 25%;">1.855</td>
+<td style="width: 25%;">-0.01435</td>
+<td style="width: 25%;">24.532</td>
+<td style="width: 25%;">0.01024</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since error is less than specific limit</p>
+<p>Root = 1.855</p>
+<p>Therefore, Root of the equation is 1.855</p>
+<p>&nbsp;</p>
+<p><strong>Drawback of Newton-Rapson Method:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>It&#8217;s convergence is not guaranteed. So, sometimes, for given equation and for given guess we may not get solution.</li>
+<li>Division by zero problem can occur.</li>
+<li>Root jumping might take place thereby not getting intended solution.</li>
+<li>Inflection point issue might occur.</li>
+<li>Symbolic derivative is required.</li>
+<li>In case of multiple roots, this method converges slowly.</li>
+<li>Near local maxima and local minima, due to oscillation, its convergence is slow.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How interpolation differs from regression? Write down algorithm and program for Lagrange interpolation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Difference between regression and interpolation:</strong></p>
+<p>In interpolation, We are given with some data points, and we are supposed to find a curve which fits the input/output relationship perfectly. In case of interpolation, We don&#8217;t have to worry about variance of the fitted curve.</p>
+<p>When we do regression, We look for a function that minimizes some cost, usually sum of squares of errors. We don&#8217;t require the function to have the exact values at given points. We just a good approximation.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-4660 size-full aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/interpolation-vs-regression.jpg?resize=1500%2C500&#038;ssl=1" alt="Difference between regression and interpolation" width="1500" height="500" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/interpolation-vs-regression.jpg?w=1500&amp;ssl=1 1500w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/interpolation-vs-regression.jpg?resize=1024%2C341&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/interpolation-vs-regression.jpg?resize=768%2C256&amp;ssl=1 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+<p><strong>Algorithm for Lagrange Interpolation</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. Start
+2. Read number of points, say n
+3. Read the value at which value is needed, say x
+4. Read given data points
+5. calculate values of Li as below
+    for i = 1 to n
+        for j = 1 to n
+            if(j != i)
+                L[i] = L[i] * ((x - x[j]) / (x[i]-x[j]))
+            End if
+        End for
+     End for
+6. Calculae interpolated value at x as below
+    For i = 1 to n
+        v = v + fx[i] * Lx[i]
+    End for
+7. Print the interpolated value of v at x
+8. End</pre>
+<p><strong>Program:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+int main(){
+    int n,i,j;
+    float x, l, v=0, ax[10], fx[10], L[10];
+    printf("Enter the number of points\n");
+    scanf("%d", &amp;n);
+
+    printf("Enter the value of x \n");
+    scanf("%f", &amp;x);
+
+    for(i = 0; i&lt;n; i++){
+        printf("Enter the value of x and fx at i = %d\n", i);
+        scanf("%f%f", &amp;ax[i], &amp;fx[i]);
+    }
+
+    for(i = 0; i &lt; n; i++){
+        l = 1.0;
+        for(j = 0; j &lt; n; j++){
+            if( j != i ){
+                l = l * ((x - ax[j]) / (ax[i] - ax[j]));
+            }
+        }
+        L[i] = l;
+    }
+
+    for(i = 0; i&lt;n; i++){
+        v = v + fx[i] * L[i];
+    }
+
+    printf("Interpolated value = %f", v);
+    return 0;
+}</pre>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why partial pivoting is used with Naive Gauss Elimination method? Solve the following system of equations using Gauss Elimination method with partial pivoting? How Gauss Jordan method differs from Gauss elimination method?</p>
+<p>2x + 2y – z = 6</p>
+<p>4x + 2y + 3z = 4</p>
+<p>x + y + z = 0</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Round off errors were large in case of Native Gauss Elimination method. We need partial pivoting in Native Gauss Elimination method because of the following reasons:</p>
+<ol style="list-style-type:decimal;">
+<li>To avoid division by zero problem</li>
+<li>To reduce round-off errors</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Problem Part:</strong></p>
+<p>Solution:</p>
+<p>Given equations are</p>
+<p>2x + 2y – z = 6</p>
+<p>4x + 2y + 3z = 4</p>
+<p>x + y + z = 0</p>
+<p>Representing above equations in matrix form, we get</p>
+<p>\(\begin{bmatrix}2 &amp; 2 &amp; -1\\ 4 &amp; 2 &amp; 3\\ 1 &amp; 1 &amp; 1 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix}6\\ 4\\ 0\end{bmatrix}\)</p>
+<p><strong>Forward Elimination of Unknown</strong></p>
+<p><strong><u>Step 1</u></strong></p>
+<p>Since, largest absolute value among a<sub>11</sub>, a<sub>12</sub>, and a<sub>13</sub> is 4, switch Row 1 and Row 2. The matrix is</p>
+<p>\(\begin{bmatrix}4 &amp; 2 &amp; 3\\ 2 &amp; 2 &amp; -1\\ 1 &amp; 1 &amp; 1 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix}4\\ 6\\ 0\end{bmatrix}\)</p>
+<p>Now, Perform \(R_2 \rightarrow 2R_2 &#8211; R_1\) and \(R_3 \rightarrow 4R_3 &#8211; R_1\)</p>
+<p>\(\begin{bmatrix}4 &amp; 2 &amp; 3\\ 0 &amp; 2 &amp; -5\\ 0 &amp; 2 &amp; 1 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix}4\\ 8\\ -4\end{bmatrix}\)</p>
+<p><strong><u>Step 2:</u></strong></p>
+<p>Since, largest absolute value among a<sub>22</sub>, a<sub>23</sub> is 2, so we do not need to switch rows.</p>
+<p>\(\begin{bmatrix}4 &amp; 2 &amp; 3\\ 0 &amp; 2 &amp; -5\\ 0 &amp; 0 &amp; -6 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix}4\\ 8\\ 12\end{bmatrix}\)</p>
+<p>This is the end of the forward elimination steps.</p>
+<p><strong>Back substitution:</strong></p>
+<p>We can now solve the above equations by back substitution. From the third row,</p>
+<p class="ql-align-center">z = -2</p>
+<p>Substituting the value of z in second row,</p>
+<p class="ql-align-center">2y &#8211; 5z = 8</p>
+<p class="ql-align-center">2y + 10 = 8</p>
+<p class="ql-align-center">2y = -2</p>
+<p class="ql-align-center">y = -1</p>
+<p>Substituting the value of y and z in first row,</p>
+<p class="ql-align-center">4x + 2y + 3z = 4</p>
+<p class="ql-align-center">4x = 12</p>
+<p class="ql-align-center">x = 3</p>
+<p>Hence, the solution is</p>
+<p>[x] = \(\begin{bmatrix} x\\ y\\ z\end{bmatrix}\) = \(\begin{bmatrix} 3\\ -1\\ -2\end{bmatrix}\)</p>
+<p>&nbsp;</p>
+<p>The difference between Gauss-Jordan and Gauss Elimination are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>SN</th>
+<th>Gauss Elimination Method</th>
+<th>Gauss Jordan Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>In this method, the unknowns are eliminated successively and the system is reduced to an upper triangular system from which the unknowns are found by back substitution.</td>
+<td>In this method, elimination of unknowns is performed  by all equations not only from equations to follow. Thus the system ultimately reduces to a diagonal matrix form i.e. each equation involving only one unknowns.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Finding the solution of n simultaneous linear equation, the number of multiplications and divisions are of the order. n3/3.</p>
+<p><strong>For Example:</strong></p>
+<p>if n=5, the number of multiplications and divisions ISI elimination is approximately 42.</td>
+<td>Finding the solution of n simultaneous linear equation, the number of multiplications and divisions are of the order. n3/2.</p>
+<p><strong>For Example:</strong></p>
+<p>if n=5, the number of multiplications and divisions are approximately 62.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>It does not seem to be easier but requires about 50 percent fewer operations than Gauss Jordan Method.</td>
+<td>It seems to be easier but requires about 50 percent fewer operations than Gauss elimination  Method.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>For large systems, Gauss Elimination Method is not preferred.</td>
+<td>For large systems, Gauss Jordan Method is preferred to Gauss Elimination Method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h2>Group B: Attempts any eight questions</h2><h3>Question 4</h3>
+<div><p><p>Construct Newton’s forward difference table for the given data points and approximate the value of f(x) at x = 12.</p>
+<div class="scisco-question-title">
+<div class="table_wrapper">
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>x</td>
+<td>10</td>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+</tr>
+<tr>
+<td>F(x)</td>
+<td>0.173</td>
+<td>0.342</td>
+<td>0.5</td>
+<td>0.643</td>
+<td>0.766</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>here,</p>
+<p>h= x<sub>i+1 </sub>-x<sub>i</sub> = 10</p>
+<p>since,</p>
+<p>$$ s = x = x0 + sh$$</p>
+<p>$$ s = \frac{{(x-x0)}}{{h}}$$</p>
+<p>$$ s = \frac{{(12-10)}}{{10}}$$</p>
+<p>$$ s = 0.2$$</p>
+<p>now,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: center;">x<sub>i</sub></td>
+<td style="width: 16.6667%; text-align: center;">f(x<sub>i</sub>)</td>
+<td style="width: 16.6667%; text-align: center;">∇f(x<sub>0</sub>)</td>
+<td style="width: 16.6667%; text-align: center;">∇<sup>2</sup> f(x<sub>0</sub>)</td>
+<td style="width: 16.6667%; text-align: center;">∇<sup>3</sup> f(x<sub>0</sub>)</td>
+<td style="width: 16.6667%; text-align: center;">∇<sup>4</sup> f(x<sub>0</sub>)</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">10</td>
+<td style="width: 16.6667%; text-align: center;">0.173</td>
+<td style="width: 16.6667%; text-align: center;">0.169</td>
+<td style="width: 16.6667%; text-align: center;">-0.011</td>
+<td style="width: 16.6667%; text-align: center;">-0.004</td>
+<td style="width: 16.6667%; text-align: center;">-0.001</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">20</td>
+<td style="width: 16.6667%; text-align: center;">0.342</td>
+<td style="width: 16.6667%; text-align: center;">0.158</td>
+<td style="width: 16.6667%; text-align: center;">-0.015</td>
+<td style="width: 16.6667%; text-align: center;">-0.005</td>
+<td style="width: 16.6667%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">30</td>
+<td style="width: 16.6667%; text-align: center;">0.5</td>
+<td style="width: 16.6667%; text-align: center;">0.143</td>
+<td style="width: 16.6667%; text-align: center;">-0.020</td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">40</td>
+<td style="width: 16.6667%; text-align: center;">0.643</td>
+<td style="width: 16.6667%; text-align: center;">0.123</td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">50</td>
+<td style="width: 16.6667%; text-align: center;">0.766</td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>above is the Newton&#8217;s  forward table.</p>
+<p>Now,</p>
+<p>p = f[x<sub>0</sub>] +  \(\begin{bmatrix}s \\ 1\end{bmatrix}\) ∇f(x<sub>0</sub>) +  \(\begin{bmatrix}s \\ 2\end{bmatrix}\) ∇<sup>2</sup> f(x<sub>0</sub>) + \(\begin{bmatrix}s \\ 3\end{bmatrix}\) ∇<sup>3</sup> f(x<sub>0</sub>) +\(\begin{bmatrix}s \\ 4\end{bmatrix}\) ∇<sup>4</sup> f(x<sub>0</sub>).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35860" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/WhatsApp-Image-2024-05-13-at-3.56.34-PM-scaled.jpeg?resize=2560%2C612&#038;ssl=1" alt="" width="2560" height="612"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How Simpson’s 1/3 rule differs from Trapezoidal rule? Drive the formula for Simson’s 1/3 rule.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Difference Between Trapezoidal and Simpson Rule:</strong></span></p>
+<p>The trapezoidal rule is based on the Newton-Cotes formula. The trapezoidal rule works by approximating the region under the graph of the function f(x) as a trapezoidal and calculate its area. The trapezoidal rule assumes n = 1. That is, it approximates the integral by a linear polynomial (straight line).</p>
+<div class="mathjax_wrap" style="text-align: center;">\(\int_{x_0}^{x_1}f(x) dx = (x_1 &#8211; x_0)\left [ \frac{f(x_1) + f(x_0)}{2} \right ]\)</div>
+<p>This is called trapezoidal rule and it is the area of the trapezoid whose width is (x<sub>1</sub> &#8211; x<sub>0</sub>) and height is the average of f(x<sub>0</sub>) and f(x<sub>1</sub>)</p>
+<p>Simpson&#8217;s 1/3 is an extension of trapezoidal rule where the integrand is approximated by a second order polynomial. The Simpson&#8217;s 1/3 rule assumes n = 2.</p>
+<div class="mathjax_wrap" style="text-align: center;">\(I = \int_{x_0}^{x_2}f(x) dx = \frac{h}{3} [f(x_0) + 4f(x_1) + f(x_2)]\)</div>
+<p>This is called Simpson&#8217;s 1/3 rule.</p>
+<p><span style="text-decoration: underline;"><strong>Derivation of Simpson&#8217;s 1/3:</strong></span></p>
+<p>General quadrature formula for integration is given by</p>
+<div class="mathjax_wrap">\(\int_{a}^{b}f(x)dx = \int_{x_0}^{x_0+nh}f(x)dx = nh\left [ f(x_0) + \frac{n}{2} Δf(x_0) + \frac{1}{12}(2n^2-3n)Δ^2f(x_0) + \frac{1}{24}(n^3-4n^2+4n)Δ^3f(x_0) + &#8230;&#8230; \right ]\)</div>
+<p>Here, \(h = \frac{b-a}{n}\)</p>
+<p>By putting n = 2 in the above relation and neglecting higher order forward difference written as</p>
+<div class="mathjax_wrap">\(\int_{x_0}^{x_0 + nh}f(x)dx = \int_{x_0}^{x_2}f(x)dx = 2h\left [ f(x_0) + Δf(x_0) + \frac{1}{6}Δ^2f(x_0) \right ]\)</div>
+<div class="mathjax_wrap">\(= 2h\left [ f(x_0) + (f(x_1) &#8211; f(x_0)) + \frac{1}{6}(f(x_0) &#8211; 2f(x_1) + f(x_2)) \right ]\)</div>
+<div class="mathjax_wrap">\(= h\left [ 2f(x_0) + 2(f(x_1) &#8211; f(x_0)) + \frac{1}{3}(f(x_0) &#8211; 2f(x_1) + f(x_2)) \right ]\)</div>
+<div class="mathjax_wrap" style="text-align: left;">\(I = \int_{x_0}^{x_2}f(x) dx = \frac{h}{3} [f(x_0) + 4f(x_1) + f(x_2)]\)</div>
+<p>This is called Simpson&#8217;s 1/3 rule.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Solve \(\frac{dy}{dx} = 3xy\); y(0) = 1 for y(0.3) taking h = 0.1 by Euler’s method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>A plate of dimension 18cm x 18cm is subjected to temperatures as follows: left side at \(100^{0}c\), right side at \(200^{0}c\). Upper part at \(50^{0}c\), and lower at \(150^{0}c\). If square grid length of 6cm x 6cm is assumed, what will be the temperature at the interior nodes?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Since height and weight of gird is same</p>
+<p>h = k = 0.8m</p>
+<p>The nodes are shown in Figure below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-4748 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/main_img.jpg?resize=309%2C309&#038;ssl=1" alt="" width="309" height="309"></p>
+<p>Now to get the temperature at the interior nodes we have to write Equation for all the combinations of i and j, i = 1, &#8230;&#8230;., m; j = 1, &#8230;&#8230;., n-1</p>
+<p><span style="text-decoration: underline;">For u<sub>1</sub>:</span></p>
+<p>u<sub>3</sub> + u<sub>2</sub> + 75 + 50 &#8211; 4u<sub>1</sub> = 0    &#8212;&#8212;&#8212;-(1)</p>
+<p>-4u<sub>1</sub> + u<sub>2</sub> + u<sub>3</sub> = -125</p>
+<p><span style="text-decoration: underline;">For u<sub>2</sub>:</span></p>
+<p>u<sub>4</sub> + u<sub>3</sub> + 100 + 50 &#8211; 4u<sub>2</sub> = 0   &#8212;&#8212;&#8212;-(2)</p>
+<p>u<sub>1</sub> &#8211; 5u<sub>2</sub> + u<sub>4</sub> = -150</p>
+<p><span style="text-decoration: underline;">for u<sub>3</sub>:</span></p>
+<p>u<sub>4</sub> + u<sub>1</sub> + 300 + 75 &#8211; 4u<sub>3</sub> = 0   &#8212;&#8212;&#8212;-(3)</p>
+<p>u<sub>1</sub> + u<sub>4</sub> &#8211; 4u<sub>3</sub> = -375</p>
+<p><span style="text-decoration: underline;">For u<sub>4</sub>:</span></p>
+<p>u<sub>2</sub> + u<sub>3</sub> + 300 + 100 &#8211; 4u<sub>4</sub> = 0   &#8212;&#8212;&#8212;-(4)</p>
+<p>u<sub>2</sub> + u<sub>3</sub> &#8211; 4u<sub>4</sub> = -400</p>
+<p>Equations (1) to (4) represent a set of four simultaneously linear equations, which is given below:</p>
+<p>-4u<sub>1 </sub> + u<sub>2</sub> + u<sub>3</sub> = -125</p>
+<p>u<sub>1</sub> &#8211; 4u<sub>2</sub> + u<sub>4</sub> = -150</p>
+<p>u<sub>1</sub> + u<sub>4</sub> &#8211; 4u<sub>3</sub> = -375</p>
+<p>u<sub>2</sub> + u<sub>3</sub> &#8211; 4u<sub>4</sub> = -400</p>
+<p>Now,</p>
+<p>\(u_1 = \frac{u_2 + u_3 + 125}{4}\)</p>
+<p>\(u_2 = \frac{u_1 + u_4 + 150}{4}\)</p>
+<p>\(u_3 = \frac{u_1 + u_4 + 375}{4}\)</p>
+<p>\(u_4 = \frac{u_2 + u_3 + 400}{4}\)</p>
+<p>Solving above equations by using Gauss-Seidel method with initial guess u<sub>2</sub> = 0, u<sub>3</sub> = 0, u<sub>4</sub> = 0, we get</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>Values →</strong><br />
+<strong>Iteration ↓</strong></td>
+<td style="width: 20%; text-align: center;"><strong>u<sub>1</sub></strong></td>
+<td style="width: 20%; text-align: center;"><strong>u<sub>2</sub></strong></td>
+<td style="width: 20%; text-align: center;"><strong>u<sub>3</sub></strong></td>
+<td style="width: 20%; text-align: center;"><strong>u<sub>4</sub></strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>1</strong></td>
+<td style="width: 20%; text-align: center;">31.25</td>
+<td style="width: 20%; text-align: center;">45.313</td>
+<td style="width: 20%; text-align: center;">101.563</td>
+<td style="width: 20%; text-align: center;">136.719</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>2</strong></td>
+<td style="width: 20%; text-align: center;">67.969</td>
+<td style="width: 20%; text-align: center;">88.672</td>
+<td style="width: 20%; text-align: center;">144.922</td>
+<td style="width: 20%; text-align: center;">158.398</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>3</strong></td>
+<td style="width: 20%; text-align: center;">89.648</td>
+<td style="width: 20%; text-align: center;">99.512</td>
+<td style="width: 20%; text-align: center;">155.762</td>
+<td style="width: 20%; text-align: center;">163.818</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>4</strong></td>
+<td style="width: 20%; text-align: center;">95.068</td>
+<td style="width: 20%; text-align: center;">102.222</td>
+<td style="width: 20%; text-align: center;">158.472</td>
+<td style="width: 20%; text-align: center;">165.173</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>5</strong></td>
+<td style="width: 20%; text-align: center;">96.423</td>
+<td style="width: 20%; text-align: center;">102.899</td>
+<td style="width: 20%; text-align: center;">159.149</td>
+<td style="width: 20%; text-align: center;">165.512</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>6</strong></td>
+<td style="width: 20%; text-align: center;">96.762</td>
+<td style="width: 20%; text-align: center;">103.069</td>
+<td style="width: 20%; text-align: center;">159.319</td>
+<td style="width: 20%; text-align: center;">165.597</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>7</strong></td>
+<td style="width: 20%; text-align: center;">96.847</td>
+<td style="width: 20%; text-align: center;">103.111</td>
+<td style="width: 20%; text-align: center;">159.361</td>
+<td style="width: 20%; text-align: center;">165.618</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>8</strong></td>
+<td style="width: 20%; text-align: center;">96.868</td>
+<td style="width: 20%; text-align: center;">103.121</td>
+<td style="width: 20%; text-align: center;">159.371</td>
+<td style="width: 20%; text-align: center;">165.623</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>9</strong></td>
+<td style="width: 20%; text-align: center;">96.873</td>
+<td style="width: 20%; text-align: center;">103.124</td>
+<td style="width: 20%; text-align: center;">159.374</td>
+<td style="width: 20%; text-align: center;">165.625</td>
+</tr>
+</tbody>
+</table></div>
+<p>Thus,</p>
+<p>u<sub>1</sub> = 96.873</p>
+<p>u<sub>2</sub> = 103.124</p>
+<p>u<sub>3</sub> = 159.374</p>
+<p>u<sub>4</sub> = 165.625</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Fit the curve \(y = ae^{bx}\) through the following data points.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>x</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>y</td>
+<td>1.0</td>
+<td>0.891</td>
+<td>0.708</td>
+<td>0.563</td>
+<td>0.447</td>
+<td>0.355</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>We know that exponential model is given by</p>
+<p class="ql-align-center">y = ae<sup>bx</sup></p>
+<p>Taking log on both side, We get</p>
+<p class="ql-align-center">log y = log a + bx</p>
+<p>This equation is similar in form to the linear equation y = a + bx. Thus we evaluate parameters a and b by using the equation of linear regression model as below:</p>
+<p>\(b = \frac{n\sum_{i=1}^{n} x_i log y_i &#8211; \sum_{i=1}^{n}x_i \sum_{i=1}^{n} log y_i}{n\sum_{i=1}^{n}x_i^2 &#8211; (\sum_{i=1}^{n}x_i)^2}\)</p>
+<p>And</p>
+<p>\(loga = \frac{\sum_{i=1}^n log y_i}{n}-b\frac{\sum_{i=1}^n x_i}{n}\)</p>
+<p>Now we calculate required summations as below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 218px;">
+<tbody>
+<tr style="height: 26px;">
+<td style="width: 16.6667%; height: 26px;">i</td>
+<td style="width: 16.6667%; height: 26px;">x<sub>i</sub></td>
+<td style="width: 16.6667%; height: 26px;">y<sub>i</sub></td>
+<td style="width: 16.6667%; height: 26px;">log y<sub>i</sub></td>
+<td style="width: 16.6667%; height: 26px;">x<sub>i </sub>log y<sub>i</sub></td>
+<td style="width: 16.6667%; height: 26px;">x<sub>i</sub><sup>2</sup></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">1</td>
+<td style="width: 16.6667%; height: 24px;">0</td>
+<td style="width: 16.6667%; height: 24px;">1</td>
+<td style="width: 16.6667%; height: 24px;">0.0000</td>
+<td style="width: 16.6667%; height: 24px;">0.0000</td>
+<td style="width: 16.6667%; height: 24px;">0.00</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">2</td>
+<td style="width: 16.6667%; height: 24px;">1</td>
+<td style="width: 16.6667%; height: 24px;">0.891</td>
+<td style="width: 16.6667%; height: 24px;">-0.11541</td>
+<td style="width: 16.6667%; height: 24px;">-0.1154</td>
+<td style="width: 16.6667%; height: 24px;">1.00</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">3</td>
+<td style="width: 16.6667%; height: 24px;">3</td>
+<td style="width: 16.6667%; height: 24px;">0.708</td>
+<td style="width: 16.6667%; height: 24px;">-0.34531</td>
+<td style="width: 16.6667%; height: 24px;">-1.0359</td>
+<td style="width: 16.6667%; height: 24px;">9.00</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">4</td>
+<td style="width: 16.6667%; height: 24px;">5</td>
+<td style="width: 16.6667%; height: 24px;">0.562</td>
+<td style="width: 16.6667%; height: 24px;">-0.57625</td>
+<td style="width: 16.6667%; height: 24px;">-2.8813</td>
+<td style="width: 16.6667%; height: 24px;">25.0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">5</td>
+<td style="width: 16.6667%; height: 24px;">7</td>
+<td style="width: 16.6667%; height: 24px;">0.447</td>
+<td style="width: 16.6667%; height: 24px;">-0.80520</td>
+<td style="width: 16.6667%; height: 24px;">-5.6364</td>
+<td style="width: 16.6667%; height: 24px;">49.0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">6</td>
+<td style="width: 16.6667%; height: 24px;">9</td>
+<td style="width: 16.6667%; height: 24px;">0.355</td>
+<td style="width: 16.6667%; height: 24px;">-1.0356</td>
+<td style="width: 16.6667%; height: 24px;">-9.3207</td>
+<td style="width: 16.6667%; height: 24px;">81.0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">n =6</td>
+<td style="width: 16.6667%; height: 24px;">\(\sum x_i = 25\)</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">\(\sum log y_i = -2.878\)</td>
+<td style="width: 16.6667%; height: 24px;">\(\sum x_i \enspace logy_i = -18.99\)</td>
+<td style="width: 16.6667%; height: 24px;">\(\sum x_i^2 = 165\)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>\(b = \frac{6 \times (-18.99) &#8211; 25 \times (-2.878)}{6 \times 165 &#8211; 25^2}\)</p>
+<p>b = -0.115</p>
+<p>\(log a = \frac{-2.878}{6} &#8211; (-0.115)\frac{25}{6}\)</p>
+<p>log a = -0.0005</p>
+<p>a = e<sup>-0.0005</sup> = 0.999</p>
+<p>Thus regression formula is</p>
+<p>y = 0.999 x e<sup>-0.115x</sup></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How Doolittle LU decomposition differs from Crout’s Decomposition? Factorize \(\begin{bmatrix}3 & 2 & 1\\ 2 & 3 & 2\\ 1 & 2 & 3\end{bmatrix}\) by Crout’s method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 10</h3>
+<div><p><p>Solve a boundary value problem by using shooting method \(\frac{d^2y}{dx^2} = 6x\), y(1) = 2, y(2) = 9</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 11</h3>
+<div><p><p>Evaluate the following integration using Romberg integration.</p>
+<p>\(\int_{0}^{1} \frac{sinx}{x} dx\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-4666" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-21.jpg?resize=1700%2C1144&#038;ssl=1" alt="" width="1700" height="1144" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-21.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-21.jpg?resize=1024%2C689&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-21.jpg?resize=768%2C517&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-21.jpg?resize=1536%2C1034&amp;ssl=1 1536w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Solve the non linear equation logx – cosx = 0 by using false position method correct to four decimal places.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+</body></html>

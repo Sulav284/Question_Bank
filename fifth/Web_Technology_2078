@@ -1,0 +1,514 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technology Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>Web Technology Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60+20+20</p>
+        <p><strong>Pass Marks:</strong> 24+8+8 </p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Any Two Question</h2><h3>Question 1</h3>
+<div><p><p>How do you define an Array in PHP? write a PHP script to create a multidimensional array name Product that will contain pcode, pname. and price. Initialize the array with at least three instances. Also, Write an HTML script to display the initialized values of the array in an HTML Table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An array is a data structure that stores one or more similar types of values in a single value. For example, if you want to store 100 numbers then instead of defining 100 variables it&#8217;s easy to define an array of 100 lengths.</p>
+<p>In PHP, the <code class="w3-codespan">array()</code> the function is used to create an array:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">array();</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">$developers = array("Suresh", "Bipin", "Prince");</pre>
+<p>In a multi-dimensional array each element in the main array can also be an array. And each element in the sub-array can be an array, and so on. Values in the multi-dimensional array are accessed using multiple indexes.</p>
+<p>PHP script to create a multidimensional array name Product that will contain pcode, pname. and price is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">//initialize multidimensional array with pcode, pname and price
+$product = array(
+   "pcode" =&gt; array(),
+   "pname" =&gt; array(),
+   "price" =&gt; array(),
+);
+
+//initialize array with three values
+$product["pcode"] = array("CHP12", "CHP13", "CHP14");
+$product["pname"] = array("Adblock Detector", "Subscription Plan", "All Smart Tools");
+$product["price"] = array(2500, 300, 50000);</pre>
+<p>Now, We will render this array in HTML code. Below is the full code:</p>
+<div class="compilecode compilecode-php">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Render PHP Array to HTML Table&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Product Code&lt;/th&gt;
+                &lt;th&gt;Product Name&lt;/th&gt;
+                &lt;th&gt;Price&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;?php
+            //initialize multidimensional array with pcode, pname and price
+            $product = array(
+                "pcode" =&gt; array(),
+                "pname" =&gt; array(),
+                "price" =&gt; array()
+            );
+        
+            //initialize array with three values
+            $product["pcode"] = array("CHP12", "CHP13", "CHP14");
+            $product["pname"] = array("Adblock Detector", "Subscription Plan", "All Smart Tools");
+            $product["price"] = array(2500, 300, 50000);
+
+            $totalvalues = count( $product['pcode'] );
+            $arrayvaluesonly = array_values( $product );
+            for( $i = 0; $i &lt; $totalvalues; $i++ ){
+                echo sprintf('&lt;tr&gt;
+                    &lt;td&gt;%s&lt;/td&gt;
+                    &lt;td&gt;%s&lt;/td&gt;
+                    &lt;td&gt;%d&lt;/td&gt;
+                &lt;/tr&gt;', $arrayvaluesonly[0][$i], $arrayvaluesonly[1][$i], $arrayvaluesonly[2][$i]);
+            }
+        ?&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above code is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Product Code</th>
+<th>Product Name</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHP12</td>
+<td>Adblock Detector</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>CHP13</td>
+<td>Subscription Plan</td>
+<td>300</td>
+</tr>
+<tr>
+<td>CHP14</td>
+<td>All Smart Tools</td>
+<td>50000</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Create an HTML signup form with fields Name, Email, Password, and Age, Validate the form using JavaScript. Write functions for validating each of the elements. All of the fields should not be empty. The Email address should be a valid email, the password should be of length at least 6 and should start with the alphabet and end with a digit. The age should be between 8 and 60.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here, We have to create a signup form with the fields Name, Email, Password, and Age. And also, We will validate the form using javascript.</p>
+<p><span style="text-decoration: underline;"><strong>Condition For Validation:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>All Fields should not be empty</li>
+<li>The email address should be a valid email address</li>
+<li>The password should be of a length of at least 6 and should start with the alphabet and end with a digit.</li>
+<li>The age should be between 8 and 60</li>
+</ul>
+<p>The code for a given condition is</p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Form Validation&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;form is="validateform" method="get"&gt;
+        &lt;div class="field"&gt;
+            &lt;label for="name"&gt;Name&lt;/label&gt;
+            &lt;input type="text" id="name" name="name"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="field"&gt;
+            &lt;label for="email"&gt;Email&lt;/label&gt;
+            &lt;input type="email" id="email" name="email"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="field"&gt;
+            &lt;label for="password"&gt;Password&lt;/label&gt;
+            &lt;input type="password" id="password" name="password"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="field"&gt;
+            &lt;label for="age"&gt;Age&lt;/label&gt;
+            &lt;input type="number" id="age" name="age"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="field"&gt;
+            &lt;input type="submit" id="submitbtn" value="Submit and Validate" onclick="return validateForm()"&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        function validatePassword(password) {
+            if (password.length &lt; 6) {
+                alert("Password should be at least of 6 character.")
+                return false;
+            }
+
+            if (!password.charAt(0).match(/[a-z]/i)) {
+                alert("Password should be start with alphabet.");
+                return false;
+            }
+
+            if (!password.charAt(password.length - 1).match(/[0-9]/i)) {
+                alert("Password should be end with digits.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateForm() {
+
+            /** Validating Name */
+            const name = document.getElementById("name").value;
+            if (name.length &lt;= 0) {
+                alert("Full Name is Required!!");
+                return false;
+            }
+
+            /**
+             * Validating Email and Regex explanation
+             * 
+             * [a-z0-9_\-\.]  --- Include Any character. number, dot, dash and underscore
+             * \@             --- After that include @
+             * ([a-z]+){2,4}  --- Include 2 to 4 any character for domain extension
+            */
+            const email = document.getElementById("email").value;
+            if (!email.match(/^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]+){2,4}$/i)) {
+                alert("Valid Email Address is Required.");
+                return false;
+            }
+
+            /** Validating Age */
+            const password = document.getElementById("password").value;
+            if (!validatePassword(password)) {
+                return false;
+            }
+
+            /** Validate Age */
+            const age = document.getElementById("age").value;
+            if (!isNaN(age)) {
+                if (!(parseInt(age) &gt;= 8 &amp;&amp; parseInt(age) &lt;= 60)) {
+                    alert("Age should be in between 8 and 60.");
+                    return false;
+                }
+            } else {
+                alert("Please enter the age between 8 and 60.");
+                return false;
+            }
+
+            /** Success Form Validation */
+            alert("Form Submitted Successfully!!!");
+            return true;
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output for the above code is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-8627 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/screenshot-127.0.0.1_5500-2022.11.12-01_46_54.png?resize=501%2C180&#038;ssl=1" alt="" width="501" height="180"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How external CSS is inserted in an HTML page? Create an HTML page with two paragraph tags With id pl and p2, and one div tag with id dv1. Write an external CSS file as per the description. the margin of the paragraphs should be 100px from the top and 80px from the left. Both of paragraphs should have the display set to block. The dv1 should have padding left and right set to 30px and 25px respectively, its background color should be blue and the font color should be red with the font type Verdana. Set the display of dv1 to none.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An external style sheet is used to define the style for many HTML pages.</p>
+<p>To use an external stylesheet, add a link to it in the <code class="w3-codespan">&lt;head&gt;</code> section of each HTML page as given below</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;link rel="stylesheet" href="CSS_FILE_URL"&gt;</pre>
+<p>The full code is given below</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Part 2:</strong></span></p>
+<p>Here have to use external css code. so, We need two file.</p>
+<ul style="list-style-type: square;">
+<li>style.css</li>
+<li>index.html</li>
+</ul>
+<p>In style.css file, We will write css code according to the question. Below is the css code.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#p1,
+#p2{
+    display: block;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+#dv1{
+    padding-left: 30px;
+    padding-right: 25px;
+    background-color: blue;
+    color: red;
+    font-family: Verdana;
+    display: none;
+}</pre>
+<p>In Index.html File, All the HTML code will be included. Make sure both files are in the same folder.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id="p1"&gt;Paragraph 1&lt;/p&gt;
+    &lt;p id="p2"&gt;Paragraph 2&lt;/p&gt;
+    &lt;div id="dv1"&gt;Div 1&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<h2>Section B: Attempt Any Eight Questions</h2><h3>Question 4</h3>
+<div><p><p>What are the services provided under web2.0?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Web 2.0 refers to websites that emphasize user-generated content, ease of use, participatory culture and interoperability (i.e., compatibility with other products, systems, and devices) for end users.</p>
+<p>Some of the services provided under web 2.0 are</p>
+<ul style="list-style-type: square;">
+<li>Available at any time, any place.</li>
+<li>Variety of media.</li>
+<li>Ease of usage.</li>
+<li>Learners can actively be involved in knowledge building.</li>
+<li>Can create dynamic learning communities.</li>
+<li>Everybody is the author and the editor, every edit that has been made can be tracked.</li>
+<li>User-friendly.</li>
+<li>Updates in the wiki are immediate and it offers more sources for researchers.</li>
+<li>It provides real-time discussion.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Create an HTML page with its body containing a div. The div should contain an image within<br />
+it. Create a link on the image to redirect to the url http://www.tuiost.edu.np. Set the title of the<br />
+page to “iost”. Add Meta tag on the page.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The code of the above question is</p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;iost&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;a href="http://www.tuiost.edu.np" target="_blank"&gt;
+            &lt;img src="https://www.tuiost.edu.np/images/tu-logo.png" alt="iost"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How jQuery id selector can be used to select specific element? Write an example with jQuery<br />
+that will hide a paragraph on clicking a button.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For id selectors, jQuery uses the JavaScript function <code>document.getElementById()</code>, which is extremely efficient. When another selector is attached to the id selector, such as <code>h2#pageTitle</code>, jQuery performs an additional check before identifying the element as a match.</p>
+<p>Calling <code>jQuery()</code> (or <code>$()</code>) with an id selector as its argument will return a jQuery object containing a collection of either zero or one DOM element.</p>
+<p>Each <code>id</code> value must be used only once within a document. If more than one element has been assigned the same ID, queries that use that ID will only select the first matched element in the DOM. This behavior should not be relied on, however; a document with more than one element using the same ID is invalid.</p>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">$('#ID')
+OR
+jQuery('#ID');</pre>
+<p><span style="text-decoration: underline;"><strong>Example to hide using jQuery:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;jQuery Hide on click example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="container"&gt;
+        &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, libero sapiente. Ad, quam? Inventore impedit magni dolores? Vero expedita hic delectus maiores nisi voluptate, voluptatibus quaerat consequatur, quibusdam dolor id, ea recusandae ducimus ipsum odit dignissimos harum exercitationem doloremque itaque vitae. Excepturi reprehenderit eaque quod voluptatibus magni, deserunt similique veritatis. Labore voluptas voluptatibus enim ut totam non quae cumque obcaecati, omnis fuga nesciunt, esse ab saepe consequuntur doloribus qui. Totam sapiente, voluptate porro, quam optio ratione aliquam doloribus ullam iusto assumenda ipsa distinctio, eum deleniti non reprehenderit consequuntur velit. Dicta eius minima, libero voluptates molestiae ullam nulla autem porro ex!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;button type="button" id="hidecontainer"&gt;Hide Container&lt;/button&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        jQuery(document).ready(function(){
+            jQuery("#hidecontainer").on("click", function(){
+                jQuery("#container").hide();
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Create a HTML page containing ordered and unordered lists. Set the value of ordered list type<br />
+to “A”. The list should start at “D”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>HTML Code for order and unorder lists and order list start with &#8216;D&#8217;.</p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;body&gt;
+
+    &lt;h2&gt;An Unordered HTML List&lt;/h2&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt;An Ordered HTML List&lt;/h2&gt;
+
+    &lt;ol type="A" start="4"&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ol&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above code is</p>
+<ul style="list-style-type: square;">
+<li>Coffee</li>
+<li>Tea</li>
+<li>Milk</li>
+</ul>
+<h2>An Ordered HTML List</h2>
+<ol start="4" type="A">
+<li>Coffee</li>
+<li>Tea</li>
+<li>Milk</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Discuss about different JSON data types.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JSON (JavaScript Object Notation) is the most widely used data format for data interchange on the web. JSON is a lightweight text-based, data-interchange format and it is completely language-independent. It is based on a subset of the JavaScript programming language and it is easy to understand and generate.</p>
+<p>JSON supports mainly 6 data types:</p>
+<ol style="list-style-type:decimal;">
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>object</li>
+<li>array</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1. String:</strong></span></p>
+<p>Strings in JSON must be written in double quotes.</p>
+<p><code>{<span class="jsstringcolor">"name"</span>:<span class="jsstringcolor">"John"</span>}</code></p>
+<p><span style="text-decoration: underline;"><strong>2. Number:</strong></span></p>
+<p>Numbers in JSON must be an integer or a floating point.</p>
+<p><code>{<span class="jsstringcolor">"age"</span>:<span class="jsnumbercolor">30</span>}</code></p>
+<p><span style="text-decoration: underline;"><strong>3. Boolean:</strong></span></p>
+<p>Values in JSON can be true/false.</p>
+<p><code>{<span class="jsstringcolor">"sale"</span>:<span class="jskeywordcolor">true</span>}</code></p>
+<p><span style="text-decoration: underline;"><strong>4. null:</strong></span></p>
+<p>Values in JSON can be null.</p>
+<p><code>{<span class="jsstringcolor">"middlename"</span>:<span class="jskeywordcolor">null</span>}</code></p>
+<p><span style="text-decoration: underline;"><strong>5. Objects:</strong></span></p>
+<p>Values in JSON can be objects.</p>
+<p><code>{<br />
+<span class="jsstringcolor">    "employee"</span>:{<span class="jsstringcolor">"name"</span>:<span class="jsstringcolor">"John"</span>, <span class="jsstringcolor">"age"</span>:<span class="jsnumbercolor">30</span>, <span class="jsstringcolor">"city"</span>:<span class="jsstringcolor">"New York"</span>}<br />
+}</code></p>
+<p><span style="text-decoration: underline;"><strong>6. Array:</strong></span></p>
+<p>Values in JSON can be arrays.</p>
+<p><code>{<br />
+<span class="jsstringcolor">    "employees"</span>:[<span class="jsstringcolor">"John"</span>, <span class="jsstringcolor">"Anna"</span>, <span class="jsstringcolor">"Peter"</span>]<br />
+}</code></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is DTD? Create a XML file and write its equivalent DTD.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>DTD stands for Document Type Definition. It&#8217;s a way to describe the structure and properties of an XML document. It defines the elements, attributes, and the order in which they appear in an XML document.</p>
+<p>&nbsp;</p>
+<p>Here&#8217;s an example of an XML file and its equivalent DTD:</p>
+<p>XML File:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0"?&gt;
+&lt;library&gt;
+&lt;book ISBN="123456789"&gt;
+&lt;title&gt;Sample Book&lt;/title&gt;
+&lt;author&gt;John Doe&lt;/author&gt;
+&lt;genre&gt;Fiction&lt;/genre&gt;
+&lt;price&gt;19.99&lt;/price&gt;
+&lt;/book&gt;
+&lt;book ISBN="987654321"&gt;
+&lt;title&gt;Another Book&lt;/title&gt;
+&lt;author&gt;Jane Smith&lt;/author&gt;
+&lt;genre&gt;Non-Fiction&lt;/genre&gt;
+&lt;price&gt;24.99&lt;/price&gt;
+&lt;/book&gt;
+&lt;/library&gt;</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Equivalent DTD:<code><br />
+</code></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE library [
+    &lt;!ELEMENT library (book+)&gt;
+    &lt;!ELEMENT book (title, author, genre, price)&gt;
+    &lt;!ATTLIST book ISBN CDATA #REQUIRED&gt;
+    &lt;!ELEMENT title (#PCDATA)&gt;
+    &lt;!ELEMENT author (#PCDATA)&gt;
+    &lt;!ELEMENT genre (#PCDATA)&gt;
+    &lt;!ELEMENT price (#PCDATA)&gt;
+]&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How can you define function in PHP? Create a function that will take two integers as argument and will return product of them.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Besides the built-in PHP functions, it is possible to create our own functions.</p>
+<ul style="list-style-type: square;">
+<li>A function is a block of statements that can be used repeatedly in a program.</li>
+<li>A function will not execute automatically when a page loads.</li>
+<li>A function will be executed by a call to the function.</li>
+</ul>
+<p>To create function in PHP, We have start with function keyword followed by the function name.</p>
+<p>The syntax for Function Define:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">function function_name( $parameters ){
+    //custom code
+}
+
+
+/* While calling */
+function_name(  $parameters  );</pre>
+<p>Now, We make a function that will take two integers as arguments and will return the product of them.</p>
+<div class="compilecode compilecode-php">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?php
+
+function multiplytwonumber( int $num1, int $num2 ){
+    return $num1 * $num2;
+}
+
+echo multiplytwonumber(5, 6);</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>The output of the above code is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">30</pre>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Describe CSS Box model with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>CSS box model</strong> is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10922 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/1_gq1B7v2_gDEi3jkAwAvZNQ.png?resize=1400%2C754&#038;ssl=1" alt="CSS Box Model" width="1400" height="754" /></p>
+<p>Box-Model has multiple properties in CSS. Some of them are given below:</p>
+<ul class="points">
+<li><b>Content</b> &#8211; The content of the box, where text and images appear</li>
+<li><b>Padding</b> &#8211; Clears an area around the content. The padding is transparent</li>
+<li><b>Border</b> &#8211; A border that goes around the padding and content</li>
+<li><b>Margin</b> &#8211; Clears an area outside the border. The margin is transparent</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>&nbsp;</p>
+</div>
+</body></html>

@@ -1,0 +1,276 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MC question bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>MC question bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>what are the different stages of multimedia application development life cycle? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Those applications that are developed of built including the multiple medias that make the application interactive, easy to understand etc. are condidered as the multimedia application. The different stages of multimedia application development life cycle are:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><span style="font-size: 14pt;"><strong>Media Preperation</strong></span></span> : It is the process of creating, formatting, organizing various types of media like sound, video, audio, animation etc. This is the initial stage where raw media assets are collected, edited, and optimized for use. It includes tasks like encoding, compression, filtering, and other forms of media preparation.<strong>i. Video support</strong> : This represents the devices that can be used for the collection of videos either by recording or by other mean.<br />
+<strong>ii. Motion-detection support</strong> : This can be used to detect or identify the moments of the object, based on the acceleration and can be used in simulation.<br />
+<strong>iii. Tracking support</strong> : This helps to track the object or person by location, position, acceleration, pressure etc.<br />
+<strong>iv. Scanning support</strong> : This tools are espically for image as it is used for scanning and allow image information to the computer.<br />
+<strong>v. Recognization support</strong> : This support help to identify the media and its input.</li>
+<li><span style="text-decoration: underline;"><span style="font-size: 14pt;"><strong>Motion composition</strong></span></span> : In this stage, processed media elements are assembled into a cohesive multimedia experience. This could involve creating layouts, designing interactions, and arranging media in a way that conveys the desired message or functionality.<strong>i. Text/Graphics editor</strong> : Tools which help or allow to generate the text and the content. It can also be used for facilating to compose text in a document.<br />
+<strong>ii. Image editor </strong>: Tools which help or allow to generate the images releted to the application content and can also be used for facilating to compose image in a document.<br />
+<strong>iii. Animation editor</strong> : Tools which help or allow to generate the animation releted to the content and can also be used for facilating to compose animation in a document.<br />
+<strong>iv. Audio editor</strong> : Tools which help or allow to generate the audio releted to the content and can also be used for facilating to compose audio in a document.<br />
+<strong>v. Video editor </strong>: Tools which help or allow to generate the video releted to the content and can also be used for facilating to compose video in a document.</li>
+<li><span style="font-size: 14pt;"><strong><span style="text-decoration: underline;">Media Integration</span> </strong></span>: This phase brings together different media elements into the actual application or system. It involves combining media with software code, interaction elements such as buttons or navigation, and backend systems to create a functioning multimedia application.<strong>i. Multimedia editor</strong> : To edit multimedia components in one platform multimedia editord can be used.<br />
+<strong>ii. Hypermedia / hypertext editor</strong> : These tools are used for linking the medias to each other or different pages to each other of the multimedia application.<br />
+<strong>iii. Authoring tools</strong> : Authoring tools are software programs or platforms that enable the creation and development of multimedia content, often without requiring extensive programming skills.</li>
+<li><span style="text-decoration: underline;"><span style="font-size: 14pt;"><strong>Media Communication</strong></span></span>: This is the delivery or presentation stage, where the integrated multimedia is made available to users through various platforms like web, mobile, broadcast. It ensures that the media is delivered efficiently and effectively, often involving considerations for streaming, user interface design, and network performance.<br />
+<strong>i. Tele-service</strong> : Tele-service are services provoded by communication systems which arebased on make use of audio and video data.<br />
+<strong>ii. Interactive services</strong> : These services include an exchange of control data between remote sites to influence the presentation of contineous media data.<br />
+<strong>iii. Distributed services</strong> : These are services for the distribution of information to different remote sites. They are one-way communication from the broadcasting source to the remote destination.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Discuss the different types of color models and compare between them with applications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Color models are mathematical representations of colors used in various digital devices, software, and multimedia applications. Different color models suit different purposes depending on how colors are generated, displayed, or processed.</p>
+<p><strong>RGB:<br />
+</strong>The RGB colour model is the most common colour model used in Digital image processing and openCV. The colour image consists of 3 channels. One channel each for one colour. Red, Green and Blue are the main colour components of this model.</p>
+<p><strong>CMYK</strong>:<br />
+CMYK colour model is widely used in printers. It stands for Cyan, Magenta, Yellow and Black (key). It is a subtractive colour model. 0 represents the primary colour and 1 represents the lightest colour.</p>
+<p><strong>HSV:</strong><br />
+The image consists of three channels. Hue, Saturation and Value are three channels. This colour model does not use primary colours directly. It uses colour in the way humans perceive them. HSV colour when is represented by a cone.</p>
+<p><strong>YIQ:</strong><br />
+YIQ is the most widely colour model used in Television broadcasting. Y stands for luminance part and IQ stands for chrominance part. In the black and white television, only the luminance part (Y) was broadcast. The y value is similar to the grayscale part.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the abstraction levels of programming use in multimedia system with diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-38983 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/abstraction-level.drawio.png?resize=393%2C467&#038;ssl=1" alt="- Hamro CSIT" width="393" height="467" /></p>
+<p><strong>fig: abstraction levels of programming of multimedia</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Abstraction level in programming defines different approaches with a varying degree of details for representing, accessing and manipulating data.</li>
+<li>A device is not part of the operating system but is directly accessible to every component and application.</li>
+<li>A library, the simplest abstraction level includes the necessary function for controlling the corresponding hardware with specific device access operation.</li>
+<li>Device driver are simply the implementation of device access and scheduling.</li>
+<li>Higher programming language contain abstraction of multimedia data.</li>
+<li>An object oriented environment provides most flexibility for programmers.</li>
+<li>A multimedia application may access each level.</li>
+</ol>
+<p><strong>Higher programming languages</strong> :<br />
+In higher programming language, the processing of contineous data is influenced by a group of similar constructed function. Its alternative used are media as types, media as files, media as process.</p>
+<p><strong>Object oriented programming languages</strong> :<br />
+It uses the concept of class, object, inheritence, polymorphism etc. In this the medias are represented as the class and object. When the media needs to be used then the objects of the class are extrcted and used when required.</p>
+<p><strong>Toolkits</strong> :<br />
+A simpler approach in a programming environment than the system software interface for control of the audio and video data processing can be taken by using toolkits. These toolkits are used for:</p>
+<ul style="list-style-type: square;">
+<li>Abstract from the actual physical layer.</li>
+<li>Allow a uniform interface for communication with all different devices of contineous media.</li>
+</ul>
+<p><strong>System software</strong> :</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Data as Time Capsules</span> :<br />
+Each logical Data Unit (LDU) carries its time capsule along with data type, actual value, and valid life span.This concept is more useful for video than audio, where each frame has a valid span of 40 ms.</li>
+<li><span style="text-decoration: underline;">Data as Streams</span> :<br />
+A well-known, used, and implemented abstraction at the system level is the stream. A stream denotes the continuous flow of data (audio and video). The stream is established between two processes: one (src) and one (sink). This is equivalent to the setup of a connection in a networked environment.</li>
+</ul>
+<p><strong>Libraries</strong> :<br />
+The processing of contineous media is based on function or set of functions embedded into libraries. They are very useful at the operating system level, but there is no agreement over which functions are best for different drives. There will always be a variety of interfaces and hence, a set of different libraries.</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Describe the challanges for multimedia system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>Data Synchronization</strong>:<br />
+Synchronizing different types of media (e.g., audio, video, text) in real-time is complex. This requires precise timing mechanisms and synchronization protocols to prevent mismatches or delays in rendering the media.</li>
+<li><strong>Bandwidth and Storage</strong>:<br />
+Multimedia content, especially high-quality video and audio, requires large amounts of bandwidth and storage. Transmitting this content over networks with limited capacity can lead to latency, buffering, or quality degradation.</li>
+<li><strong>Equipment Failure</strong>:<br />
+Multimedia often requires more equipment to deliver a message than more traditional mediums. Whenever equipment is invoked, there is always the chance of equipment failure</li>
+<li><strong>Technical Barriers</strong>:<br />
+Organizations using multimedia applications must be aware of the up-gradation of the hardware and software tools.In business houses, sometimes it is required to transmit the voluminous amount of multimedia data in the form of continuous streams over the local and wide area networks.</li>
+<li><strong>Cost</strong>:<br />
+Although the cost of technology is falling, the cost of development is increasing daily. The cost reflects the technology&#8217;s complexity and the need to acquire the rights to use a large volume of material, followed by others. Production of multimedia is more expensive than others because it is made up of more than one medium. It requires an electronic device, which may be relatively expensive. It also requires electricity to run, which adds to the cost of its use.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How can you generate the speech in multimedia system? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Speech generation is the process of generating the speech or sound either form scratch or from the past stored output. This can be done using the algorithm or program controlled by the computer. This technology plays a critical role in multimedia applications, accessibility tools, virtual assistants, and various interactive systems.</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline; font-size: 14pt;"><strong>Basic notation</strong></span> : It is the way to generate sound using some notations. These cab be of two type:<strong>i. Text notation</strong> : Using the text to generate sound is considered as text notation. For eg: Any text like &#8220;hello&#8221; is used as input and based on this the sound output is generated.<br />
+<strong>ii. Phonem notation</strong> : This is the method used for speech generation in which the part of sound or small sound or symbol are used as notation for generating speech. Here the piece of sound or say basic or smallest unit of sound are stringed togrther to produce sound.</li>
+<li><span style="text-decoration: underline; font-size: 14pt;"><strong>Reproduced speech output</strong></span> : Sometimes the generated output are stored or the speech inputs provided by the user are stored and they are used for generating the sound:<strong>i. Naturally generated</strong> : These are the speech which are recorded human sound and are stored when user gave input to the system.<br />
+<strong>ii. Predefined</strong> : These speech are generated by the concatenation of the already spoken sounds in a sequence to generate natural sound.</li>
+<li><span style="text-decoration: underline; font-size: 14pt;"><strong>Time dependent string concatination</strong> </span>: This concatenation mean to generate the speech with the help of perfect timing sequencing. It has two basic requiremnent:<strong>i. Phoneme / syllable</strong> : They are the smallest unit of sound or we say they are the basic sounds represented by some symbols. These sounds are concatenated over the time to produce sound.<br />
+<strong>ii. Timing</strong> : When the sound are concatenated the timing are sequenced in such a way that the speech seems to be real.</li>
+<li><span style="text-decoration: underline; font-size: 14pt;"><strong>Frequency dependent dtring concatination</strong></span> : This concatenation mean to generate the speech with the help of proper sequencing of the voice based on the pitch and tone. It has two basic requiremnent:<strong>i. Pitch and tones</strong> : In this the pitch and tones of the words are sequenced to produce a natural sounding speech. According to the requirement loud, bold etc. sounded speech can be generated.<br />
+<strong>ii. Voice arrangement</strong> : To produce the naturally sounded speech the sequencing of sound should consider the smoothness of sound while changing tones. It must consider the emphesizing of the text and endings of the speech should also consider the breaking of sound at full stop and commas.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the image and graphics format with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Image and graphics formats refer to the various ways digital images are encoded, stored, and displayed. Some of the image and graphics format are:</p>
+<p><strong>JPEG (Joint Photographic Experts Group) :<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>It is a compressed format it uses a small file size.</li>
+<li>It is commonly used for photos and web images.</li>
+<li>In this the quality of the image is lost i.e it is a lossy compression.</li>
+</ul>
+<p><strong>PNG (Portable Network Graphics) :<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>Its file size is larger than that of jpeg.</li>
+<li>It supports the transparency.</li>
+<li>In this the quality of the image is not lost i.e it is a lossless compression.</li>
+</ul>
+<p><strong>GIF (Graphics Interchangable Format) :<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>It supports the animation.</li>
+<li>Color pallet that it uses is limited to 256.</li>
+<li>It is used for simple graphics and animation on websites.</li>
+</ul>
+<p><strong>TIFF (Tagged Image File Format) :<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>It is used for high quality image and file size used for storing it is large.</li>
+<li>It is used by the professional photography.</li>
+<li>In this the quality of the image is not lost i.e it is a lossless compression.</li>
+</ul>
+<p><strong>BMP (Bitmap) :<br />
+</strong></p>
+<ul style="list-style-type: square;">
+<li>It is a uncompressed file format so file size used is larger.</li>
+<li>It is not commonly used.</li>
+<li>In this the quality of the image is high.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Discuss the method of controlling animation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Animation is the process of turning two-dimensional (2D) and three-dimensional (3D) still images into moving images. It can be done by using computers. The movement or the animations produced can be controlled:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Full explicit control</strong>: It is the simplest type of control. In this, the animator provides the entire information of entire events that could occur in the animation. The animator may specify changes such as translation, scaling, and rotation.</li>
+<li><strong>Procedural control</strong>: It is based on communication between various objects to determine their properties. In a physically based system, the position of one object may influence the motion of another object. In actor-based systems, actors pass their positions to other actors to affect their behavior.</li>
+<li><strong>Constraint-based systems</strong>: Moving objects with which they are in contact. Such motion is known as compound motion. Compound motion may not be linear at all; such motion can be modeled by constraints.</li>
+<li><strong>Tracking live action</strong>: Live action can be tracked to generate trajectories of objects in the course of an animation.</li>
+<li><strong>Kinematics and Dynamics</strong>:
+<ul style="list-style-type: square;">
+<li><strong>Kinematics</strong> refers to the position and velocity of points. Kinematics describes the scene.</li>
+<li><strong>Dynamics</strong> takes into account physical laws of movement that govern the kinematics.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What do you mean by color dithering technique? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Color dithering is a technique used to simulate a larger color palette by combining different colored dots or pixels within an image. This technique is used in digital graphics to create the illusion of more colors or shades in an image than are actually available. Dithering is used in many different codecs to improve efficiency and storage of image and video. This technique is not limited to video &#8211; it&#8217;s also used on the audio portion of video codecs and it can be applied to images as well.</p>
+<p>Sometimes a limited color palette is ideal because the image will take less space. For bit depth, each pixel enough space has to be available for whatever choice we might make. So in 8-bit color, a space that can handle up to 256 values is stored per pixel. In 10-bit color, a space that can handle up to 1024 values is stored per pixel. Sometimes it&#8217;s not efficient to store the higher quality option, and this is where dithering is useful.</p>
+<ol class="q-box">
+<li class="q-relative">Purpose: Dithering is primarily used to reduce the visual artifacts that occur when an image is displayed using a limited number of colors. It creates a perception of smooth gradients and richer colors.</li>
+<li class="q-relative">How It Works: Dithering works by distributing the quantization error of colors across neighboring pixels. Instead of simply replacing a color with the closest available color, dithering mixes pixels of different colors to create the desired effect.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Differentiate between JPEG and MPEG.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="width: 50.0867%; text-align: center;"><strong>JPEG </strong></th>
+<th style="width: 49.74%; text-align: center;"><strong>MPEG</strong></th>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">JPEG stands for Joint Photographic Experts Group.</td>
+<td style="width: 49.74%; text-align: center;">MPEG stands for Moving Picture Experts Group.</td>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">JPEG is primarily used for Web images, digital cameras, other devices that capture still images.</td>
+<td style="width: 49.74%; text-align: center;">MPEG is primarily used for Movies, TV shows, video clips on the web.</td>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">JPEG is mainly used for image compression.</td>
+<td style="width: 49.74%; text-align: center;">MPEG has various standards for audio and video compression.</td>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">Compression ratio of JPEG files is typically 10:1.</td>
+<td style="width: 49.74%; text-align: center;">Compression ratio of MPEG files can vary from 20:1 or higher depending on the video content.</td>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">Compressed as a single JPEG File.</td>
+<td style="width: 49.74%; text-align: center;">Compressed as a series of frames using inter frame compression.</td>
+</tr>
+<tr>
+<td style="width: 50.0867%; text-align: center;">The extensions used are .jpg and .jpeg.</td>
+<td style="width: 49.74%; text-align: center;">The extensions used are .mp3 and .mp4.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Compare between lossless compression with loosy compression.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="width: 50%; text-align: center;">Lossy Compression</th>
+<th style="width: 50%; text-align: center;">Lossless Compression</th>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Lossy compression is the method which eliminate the data which is not noticeable.</td>
+<td style="width: 50%; text-align: center;">While Lossless Compression does not eliminate the data which is not noticeable.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In Lossy compression, A file does not restore or rebuilt in its original form.</td>
+<td style="width: 50%; text-align: center;">While in Lossless Compression, A file can be restored in its original form.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In Lossy compression, Data’s quality is compromised.</td>
+<td style="width: 50%; text-align: center;">But Lossless Compression does not compromise the data’s quality.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Lossy compression reduces the size of data.</td>
+<td style="width: 50%; text-align: center;">But Lossless Compression does not reduce the size of data.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Lossy compression is used in Images, audio, video.</td>
+<td style="width: 50%; text-align: center;">Lossless Compression is used in Text, images, sound.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Lossy compression has more data-holding capacity.</td>
+<td style="width: 50%; text-align: center;">Lossless Compression has less data-holding capacity than Lossy compression technique.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the designing issues of audio user interface? Explain</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-shrink-0 flex flex-col relative items-end">
+<div class="pt-0">
+<div class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+<div class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8">Designing audio for user interfaces (UIs) presents various challenges that must be addressed to create an effective and user-friendly experience.</div>
+<ul style="list-style-type: square;">
+<li><strong>Autoplay</strong> :<br />
+Autoplaying audio can annoy users, especially in quiet environments. Sometimie user may not need the navigation but audios autoplay and it might be quite irritating foe the users.</li>
+<li><strong>Synchronization of media&#8217;s</strong> :<br />
+While using text to speech the audion may not sync with the text and it might be difficult for user to interact. As audio may not always relate to the visual content, causing distraction or confusion for user.</li>
+<li><strong>Bandwidth and Performance</strong> :<br />
+Audios may need high bandwidth for proper performance and at the time when there is lack of required bandwidth then the performance may degrade. Degraded performance are not usually prefered by the user.</li>
+<li><strong>Accessibility Considerations</strong> :<br />
+Some user may not be that good to catch the speech and understand them at the same time and find difficult to interact. Also some user with hearing impairments may miss audio content, while others may have difficulty with certain audio qualities</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Discuss the application of multimedia in video conferencing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-shrink-0 flex flex-col relative items-end">
+<div>
+<div class="pt-0">
+<div class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+<div class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8">Multimedia plays a crucial role in video conferencing, enabling real-time communication by integrating various forms of media such as audio, video, text, and graphics. It involves the integration of various technologies, such as communication networks, hardware and software applications, databases, and bulletin boards, to facilitate efficient and effective communication and collaboration.</div>
+<ul style="list-style-type: square;">
+<li><strong>Audio and Video Integration</strong> :<br />
+Audio and videos can be used to communicate with anyone all over thw world. In a business meeting, participants from different locations can communicate as if they are in the same room, using live video feeds and high-quality audio.</li>
+<li><strong>Screen Sharing and Presentations</strong> :<br />
+A screen presentation is a graphic support and accompaniment to a spoken presentation. It can be used in video conferencing to discuss the important plans in the meeting.</li>
+<li><strong>Text Chat and Annotations</strong> :<br />
+Annotating is any action that deliberately interacts with a text to enhance the reader&#8217;s understanding of, recall of, and reaction to the text. video conferencing can use this feature for discussion in groups or discussion one on one person.</li>
+<li><strong>File sharing</strong> :<br />
+File sharing is the public or private sharing of files or folders on a computer connected to a network. Video conferinceing uses thes feature to send important files to the destination over the network so that real time communication could be more interactive.</li>
+<li><strong> Interactive Whiteboards </strong>:<br />
+Whiteboards have always been used as a way for people to share messages, present information and engage in collaborative brainstorming and idea development. Interactive whiteboards facilitate dynamic presentations, collaboration and educational demonstrations by combining the simplicity of a whiteboard with advanced technology.<strong><br />
+</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

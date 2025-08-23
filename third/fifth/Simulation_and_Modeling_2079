@@ -1,0 +1,423 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAM Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>SAM Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Answer any Two Questions</h2><h3>Question 1</h3>
+<div><p><p>What is transaction in GPSS? Explain about facility in GPSS. Customers arrive at Joey Barbershop one every 15±3 minutes and it takes Joey 18±2 minutes to cut hair of a customer. Create a GPSS model with block diagram for the Barbershop using the concept of facility and run the simulation for 9 hours.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="font-weight: 400;"><strong>Transaction Definition:</strong></p>
+<p style="font-weight: 400;">A transaction in GPSS represents a discrete unit of work or an entity that moves through the simulation model.Transactions are typically used to model the flow of entities, such as customers, products, or orders, through a system.Transactions move through the system by interacting with various GPSS blocks and processes.The simulation model defines how transactions move, wait, and interact with other entities or resources.</p>
+<p style="font-weight: 400;"><strong>Facility in GPSS</strong></p>
+<p style="font-weight: 400;">A facility in GPSS refers to a resource or a processing station where transactions can be processed or delayed.Facilities are represented in the simulation model by the &#8220;FACILITY&#8221; block in GPSS.Examples of facilities include machines, servers, or any resource that can process transactions.</p>
+<p style="font-weight: 400;">When a transaction needs to use a facility, it requests the facility using the &#8220;SEIZE&#8221; block.</p>
+<p style="font-weight: 400;">If the facility is available, the transaction seizes it and begins processing. If the facility is busy, the transaction may have to wait in a queue until the facility becomes available.</p>
+<p style="font-weight: 400;"><strong>Numerical</strong></p>
+<p style="font-weight: 400;">SIMULATE</p>
+<p style="font-weight: 400;">GENERATE 15,3            ; Generate customers every 15±3 minutes</p>
+<p style="font-weight: 400;">QUEUE 2                  ; Allow up to 2 customers to queue up if necessary</p>
+<p style="font-weight: 400;">SEIZE 3                  ; Seize the barber facility when available</p>
+<p style="font-weight: 400;">DEPART 2                ; Customer leaves the queue</p>
+<p style="font-weight: 400;">ADVANCE 18,2             ; Customer gets a haircut (18±2 minutes)</p>
+<p style="font-weight: 400;">RELEASE 3               ; Release the barber facility</p>
+<p style="font-weight: 400;">TERMINATE 0             ; End the simulation for each customer</p>
+<p style="font-weight: 400;">GENERATE 540            ; Generate a timer after 9 hours of simulated time</p>
+<p style="font-weight: 400;">TERMINATE 1             ; Shut off the simulation run</p>
+<p style="font-weight: 400;">START 1                 ; Start carrying out the simulation</p>
+<p style="font-weight: 400;">END</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28139" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_2843.jpg?resize=1657%2C1715&#038;ssl=1" alt="" width="1657" height="1715"></p>
+<p><img /></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why accuracy of analog computer is low? Explain analog computer with suitable example. Differentiate between analog and digital computer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="font-weight: 400;">The accuracy of analog computers is generally considered lower compared to digital computers for several reasons:</p>
+<ul style="list-style-type: square;">
+<li><strong>Noise and Interference: </strong>Analog signals are susceptible to noise and interference from external sources.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>Component Variability: </strong>Analog components, such as resistors, capacitors, and transistors, can exhibit variations in their characteristics due to manufacturing tolerances and aging.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>Limited Precision: </strong>Analog signals are continuous and theoretically have an infinite number of possible values within a given range.</li>
+</ul>
+<p style="font-weight: 400;">Analog Computers:<br />
+An analog computer is a type of computing device that represents data using continuous signals. These signals can be electrical, mechanical, or hydraulic in nature. Analog computers are designed to process and manipulate continuous data, making them well-suited for tasks that involve physical quantities and measurements.</p>
+<p style="font-weight: 400;">
+<strong>Characteristics of Analog Computers:</strong></p>
+<p style="font-weight: 400;">
+<strong>• Continuous Signals:</strong> Analog computers use continuous signals to represent data, allowing for a smooth representation of quantities.</p>
+<p style="font-weight: 400;">
+<strong>• Precision in Measurement:</strong> Well-suited for tasks involving physical measurements and real-world phenomena.<strong>• Speed:</strong> Analog computers can be faster in processing certain types of tasks compared to digital computers for specific applications.</p>
+<p style="font-weight: 400;">
+<strong>Example of Analog Computer:</strong><br />
+One example of an analog computer is an analog electronic thermometer. In this device, the position of a mercury column in a glass tube provides a continuous analog representation of temperature.</p>
+<p>&nbsp;</p>
+<p><strong>Difference between Analog and Digital Computers</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table id="table0">
+<tbody>
+<tr id="row0">
+<td id="cell0"><span class="s1">F</span><span class="s1">e</span><span class="s1">a</span><span class="s1">t</span><span class="s1">u</span><span class="s1">r</span><span class="s2">e</span></td>
+<td id="cell1"><span class="s1">A</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s1">o</span><span class="s2">g</span> <span class="s1">C</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">e</span><span class="s2">r</span></td>
+<td id="cell2"><span class="s1">D</span><span class="s1">i</span><span class="s1">g</span><span class="s1">i</span><span class="s1">t</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">C</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">e</span><span class="s2">r</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0"><span class="s1">R</span><span class="s1">e</span><span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span><span class="s1">o</span><span class="s2">f</span> <span class="s1">D</span><span class="s1">a</span><span class="s1">t</span><span class="s2">a</span></td>
+<td id="cell1"><span class="s1">C</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">(</span><span class="s1">e</span><span class="s1">.</span><span class="s1">g</span><span class="s1">.</span><span class="s2">,</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">s</span><span class="s1">u</span><span class="s1">r</span><span class="s1">e</span><span class="s1">)</span><span class="s2">.</span></p>
+<p><span class="s1">s</span><span class="s1">i</span><span class="s1">g</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s2">s</span> <span class="s1">v</span><span class="s1">o</span><span class="s1">l</span><span class="s1">t</span><span class="s1">a</span><span class="s1">g</span><span class="s1">e</span><span class="s2">,</span></td>
+<td id="cell2"><span class="s1">D</span><span class="s1">i</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s2">e</span> <span class="s1">b</span><span class="s1">i</span><span class="s1">n</span><span class="s1">a</span><span class="s1">r</span><span class="s2">y</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">g</span><span class="s1">i</span><span class="s1">t</span><span class="s2">s</span> <span class="s1">(</span><span class="s1">0</span><span class="s2">s</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">1</span><span class="s1">s</span><span class="s1">)</span><span class="s2">.</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0"><span class="s1">A</span><span class="s1">c</span><span class="s1">c</span><span class="s1">u</span><span class="s1">r</span><span class="s1">a</span><span class="s1">c</span><span class="s2">y</span></td>
+<td id="cell1"><span class="s1">L</span><span class="s1">o</span><span class="s1">w</span><span class="s1">e</span><span class="s2">r</span> <span class="s1">a</span><span class="s1">c</span><span class="s1">c</span><span class="s1">u</span><span class="s1">r</span><span class="s1">a</span><span class="s1">c</span><span class="s2">y</span> <span class="s1">d</span><span class="s1">u</span><span class="s2">e</span> <span class="s1">t</span><span class="s2">o</span> <span class="s1">n</span><span class="s1">o</span><span class="s1">i</span><span class="s1">s</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span><span class="s1">c</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">o</span><span class="s1">n</span><span class="s1">e</span><span class="s1">n</span><span class="s2">t</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">r</span><span class="s1">i</span><span class="s1">a</span><span class="s1">b</span><span class="s1">i</span><span class="s1">l</span><span class="s1">i</span><span class="s1">t</span><span class="s1">y</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">H</span><span class="s1">i</span><span class="s1">g</span><span class="s1">h</span><span class="s1">e</span><span class="s2">r</span> <span class="s1">a</span><span class="s1">c</span><span class="s1">c</span><span class="s1">u</span><span class="s1">r</span><span class="s1">a</span><span class="s1">c</span><span class="s2">y</span> <span class="s1">i</span><span class="s2">n</span> <span class="s1">c</span><span class="s1">a</span><span class="s1">l</span><span class="s1">c</span><span class="s1">u</span><span class="s1">l</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s2">s</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">d</span><span class="s1">a</span><span class="s1">t</span><span class="s2">a</span><span class="s1">r</span><span class="s1">e</span><span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s2">.</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0"><span class="s1">P</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span></td>
+<td id="cell1"><span class="s1">L</span><span class="s1">i</span><span class="s1">m</span><span class="s1">i</span><span class="s1">t</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span> <span class="s1">d</span><span class="s1">u</span><span class="s2">e</span> <span class="s1">t</span><span class="s2">o</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">s</span><span class="s1">i</span><span class="s1">g</span><span class="s1">n</span><span class="s1">a</span><span class="s2">l</span><span class="s1">r</span><span class="s1">e</span><span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">H</span><span class="s1">i</span><span class="s1">g</span><span class="s2">h</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span> <span class="s1">i</span><span class="s2">n</span> <span class="s1">c</span><span class="s1">a</span><span class="s1">l</span><span class="s1">c</span><span class="s1">u</span><span class="s1">l</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s2">s</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">d</span><span class="s1">a</span><span class="s1">t</span><span class="s2">a</span><span class="s1">s</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">a</span><span class="s1">g</span><span class="s1">e</span><span class="s2">.</span></td>
+</tr>
+<tr id="row4">
+<td id="cell0"><span class="s1">F</span><span class="s1">l</span><span class="s1">e</span><span class="s1">x</span><span class="s1">i</span><span class="s1">b</span><span class="s1">i</span><span class="s1">l</span><span class="s1">i</span><span class="s1">t</span><span class="s2">y</span></td>
+<td id="cell1"><span class="s1">W</span><span class="s1">e</span><span class="s1">l</span><span class="s1">l</span><span class="s1">&#8211;</span><span class="s1">s</span><span class="s1">u</span><span class="s1">i</span><span class="s1">t</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">f</span><span class="s1">o</span><span class="s2">r</span> <span class="s1">t</span><span class="s1">a</span><span class="s1">s</span><span class="s1">k</span><span class="s2">s</span> <span class="s1">i</span><span class="s1">n</span><span class="s1">v</span><span class="s1">o</span><span class="s1">l</span><span class="s1">v</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">p</span><span class="s1">h</span><span class="s1">y</span><span class="s1">s</span><span class="s1">i</span><span class="s1">c</span><span class="s1">a</span><span class="s2">l</span><span class="s1">m</span><span class="s1">e</span><span class="s1">a</span><span class="s1">s</span><span class="s1">u</span><span class="s1">r</span><span class="s1">e</span><span class="s1">m</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s2">s</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">r</span><span class="s1">e</span><span class="s1">a</span><span class="s1">l</span><span class="s1">&#8211;</span><span class="s1">w</span><span class="s1">o</span><span class="s1">r</span><span class="s1">l</span><span class="s2">d</span> <span class="s1">p</span><span class="s1">h</span><span class="s1">e</span><span class="s1">n</span><span class="s1">o</span><span class="s1">m</span><span class="s1">e</span><span class="s1">n</span><span class="s1">a</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">V</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">l</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">c</span><span class="s1">a</span><span class="s2">n</span> <span class="s1">p</span><span class="s1">e</span><span class="s1">r</span><span class="s1">f</span><span class="s1">o</span><span class="s1">r</span><span class="s2">m</span> <span class="s2">a</span> <span class="s1">w</span><span class="s1">i</span><span class="s1">d</span><span class="s2">e</span> <span class="s1">r</span><span class="s1">a</span><span class="s1">n</span><span class="s1">g</span><span class="s2">e</span> <span class="s1">o</span><span class="s2">f</span><span class="s1">t</span><span class="s1">a</span><span class="s1">s</span><span class="s1">k</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">i</span><span class="s1">n</span><span class="s1">c</span><span class="s1">l</span><span class="s1">u</span><span class="s1">d</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">s</span><span class="s1">y</span><span class="s1">m</span><span class="s1">b</span><span class="s1">o</span><span class="s1">l</span><span class="s1">i</span><span class="s2">c</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s1">s</span><span class="s2">.</span></td>
+</tr>
+<tr id="row5">
+<td id="cell0"><span class="s1">S</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">a</span><span class="s1">g</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span><span class="s1">R</span><span class="s1">e</span><span class="s1">t</span><span class="s1">r</span><span class="s1">i</span><span class="s1">e</span><span class="s1">v</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">o</span><span class="s2">f</span><span class="s1">D</span><span class="s1">a</span><span class="s1">t</span><span class="s2">a</span></td>
+<td id="cell1"><span class="s1">N</span><span class="s1">o</span><span class="s2">t</span> <span class="s1">a</span><span class="s2">s</span> <span class="s1">e</span><span class="s1">f</span><span class="s1">f</span><span class="s1">i</span><span class="s1">c</span><span class="s1">i</span><span class="s1">e</span><span class="s1">n</span><span class="s2">t</span> <span class="s1">f</span><span class="s1">o</span><span class="s2">r</span> <span class="s1">s</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s1">r</span><span class="s1">i</span><span class="s1">e</span><span class="s1">v</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span><span class="s1">l</span><span class="s1">a</span><span class="s1">r</span><span class="s1">g</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">m</span><span class="s1">o</span><span class="s1">u</span><span class="s1">n</span><span class="s1">t</span><span class="s2">s</span> <span class="s1">o</span><span class="s2">f</span> <span class="s1">d</span><span class="s1">a</span><span class="s1">t</span><span class="s1">a</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">E</span><span class="s1">f</span><span class="s1">f</span><span class="s1">i</span><span class="s1">c</span><span class="s1">i</span><span class="s1">e</span><span class="s1">n</span><span class="s2">t</span> <span class="s1">i</span><span class="s2">n</span> <span class="s1">s</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span> <span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s1">r</span><span class="s1">i</span><span class="s1">e</span><span class="s1">v</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">g</span><span class="s1">i</span><span class="s1">t</span><span class="s1">a</span><span class="s2">l</span><span class="s1">d</span><span class="s1">a</span><span class="s1">t</span><span class="s2">a</span> <span class="s1">u</span><span class="s1">s</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">m</span><span class="s1">e</span><span class="s1">m</span><span class="s1">o</span><span class="s1">r</span><span class="s1">y</span><span class="s2">.</span></td>
+</tr>
+<tr id="row6">
+<td id="cell0"><span class="s1">P</span><span class="s1">r</span><span class="s1">o</span><span class="s1">g</span><span class="s1">r</span><span class="s1">a</span><span class="s1">m</span><span class="s1">m</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span><span class="s1">C</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">l</span><span class="s1">e</span><span class="s1">x</span><span class="s1">i</span><span class="s1">t</span><span class="s2">y</span></td>
+<td id="cell1"><span class="s1">M</span><span class="s1">a</span><span class="s2">y</span> <span class="s1">b</span><span class="s2">e</span> <span class="s1">s</span><span class="s1">i</span><span class="s1">m</span><span class="s1">p</span><span class="s1">l</span><span class="s1">e</span><span class="s2">r</span> <span class="s1">f</span><span class="s1">o</span><span class="s2">r</span> <span class="s1">c</span><span class="s1">e</span><span class="s1">r</span><span class="s1">t</span><span class="s1">a</span><span class="s1">i</span><span class="s2">n</span> <span class="s1">t</span><span class="s1">y</span><span class="s1">p</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">o</span><span class="s2">f</span> <span class="s1">t</span><span class="s1">a</span><span class="s1">s</span><span class="s1">k</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">R</span><span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">i</span><span class="s1">r</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">e</span><span class="s1">x</span><span class="s1">p</span><span class="s1">l</span><span class="s1">i</span><span class="s1">c</span><span class="s1">i</span><span class="s2">t</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">o</span><span class="s1">g</span><span class="s1">r</span><span class="s1">a</span><span class="s1">m</span><span class="s1">m</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">f</span><span class="s1">o</span><span class="s2">r</span><span class="s1">a</span><span class="s1">l</span><span class="s1">g</span><span class="s1">o</span><span class="s1">r</span><span class="s1">i</span><span class="s1">t</span><span class="s1">h</span><span class="s2">m</span> <span class="s1">e</span><span class="s1">x</span><span class="s1">e</span><span class="s1">c</span><span class="s1">u</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s2">.</span></td>
+</tr>
+<tr id="row7">
+<td id="cell0"><span class="s1">E</span><span class="s1">x</span><span class="s1">a</span><span class="s1">m</span><span class="s1">p</span><span class="s1">l</span><span class="s1">e</span><span class="s2">s</span></td>
+<td id="cell1"><span class="s1">A</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s1">o</span><span class="s2">g</span> <span class="s1">e</span><span class="s1">l</span><span class="s1">e</span><span class="s1">c</span><span class="s1">t</span><span class="s1">r</span><span class="s1">o</span><span class="s1">n</span><span class="s1">i</span><span class="s2">c</span> <span class="s1">t</span><span class="s1">h</span><span class="s1">e</span><span class="s1">r</span><span class="s1">m</span><span class="s1">o</span><span class="s1">m</span><span class="s1">e</span><span class="s1">t</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">v</span><span class="s1">o</span><span class="s1">l</span><span class="s1">t</span><span class="s1">a</span><span class="s1">g</span><span class="s2">e</span><span class="s1">m</span><span class="s1">e</span><span class="s1">t</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">P</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s1">o</span><span class="s1">n</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">s</span><span class="s1">m</span><span class="s1">a</span><span class="s1">r</span><span class="s1">t</span><span class="s1">p</span><span class="s1">h</span><span class="s1">o</span><span class="s1">n</span><span class="s1">e</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">s</span><span class="s1">e</span><span class="s1">r</span><span class="s1">v</span><span class="s1">e</span><span class="s1">r</span><span class="s1">s</span><span class="s2">.</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>In summary, analog computers are suitable for specific applications where continuous signal representation is advantageous, but their lower accuracy and precision make them less suitable for tasks requiring high precision and reliability.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define and develop a Poker test for four-digit random numbers. A sequence of 1,000 random numbers,each of four digits has been generated. The analysis of the numbers reveals that in 525 numbers all four digits are different, 419 contain exactly one pair of like digits, 47 contain two pairs, 9 have three digits of a kind and 7 contain all like digits. Use Poker test to determine whether these numbers are independent.(Critical value of chi-square for a = 0.05 and N = 4 is 9.49).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Poker Test is the test for independence based on the frequency with which certain digits are repeated with in a series of numbers. This test not only tests for the randomness of the sequence of numbers, but also the digits comprising of each of the numbers. The expected value of each of the combination of digits in a number is compared with the observed value by means of the chi-square test for independence.</p>
+<p>The acceptance is done if the observed value of chi-square sums for all the possible combinations of digits is less than the acceptable value for the given degree of freedom at the specified confidence interval.</p>
+<p><strong>Poker test for four digit numbers</strong></p>
+<p>In four digit number, there are five different possibilities</p>
+<ul style="list-style-type: square;">
+<li>All individual digits can be different</li>
+<li>There can be one pair of like digit</li>
+<li>There can be two pair of like digits</li>
+<li>There can be three digits of a kind</li>
+<li>There can be four digits of a kind</li>
+</ul>
+<p>The probabilities associated with each of the possibilities is given by</p>
+<p>P (four different digits) = 4 C 4 * (10/10) * (9/10) * (8/10) * (7/10) = 0.504</p>
+<p>P (one pair) = 4 C 2 * (10/10) * (1/10) * (9/10) * (8/10) = 0.432</p>
+<p>P (two pair) = (4 C2 /2)*(10/10) * (1/10) * (9/10) * (1/10) = 0.027</p>
+<p>P (three digits of a kind) = 4 C 3 * (10/10) * (1/10) * (1/10) * (9/10) =0.036</p>
+<p>P (four digits of a kind) = 4 C 4 * (10/10) * (1/10) * (1/10) * (1/10) = 0.001</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table id="table0">
+<tbody>
+<tr id="row0">
+<td id="cell0"><span class="s1">C</span><span class="s2">o</span><span class="s2">m</span><span class="s2">b</span><span class="s1">i</span><span class="s2">n</span><span class="s1">atio</span><span class="s2">n</span><span class="s1">(i)</span></td>
+<td id="cell1"><span class="s1">O</span><span class="s2">b</span><span class="s1">s</span><span class="s2">e</span><span class="s2">r</span><span class="s1">v</span><span class="s2">e</span><span class="s1">d</span> <span class="s2">F</span><span class="s2">r</span><span class="s2">e</span><span class="s2">qu</span><span class="s2">e</span><span class="s2">n</span><span class="s2">c</span><span class="s1">y(O</span><span class="s4">i</span><span class="s1">)</span></td>
+<td id="cell2"><span class="s2">E</span><span class="s1">x</span><span class="s2">p</span><span class="s2">ec</span><span class="s1">t</span><span class="s2">e</span><span class="s1">d</span> <span class="s2">F</span><span class="s2">r</span><span class="s2">e</span><span class="s2">qu</span><span class="s2">e</span><span class="s2">n</span><span class="s2">c</span><span class="s1">y(E</span><span class="s4">i</span><span class="s1">)</span></td>
+<td id="cell3"><span class="s2">(</span><span class="s1">O</span><span class="s4">i</span><span class="s2">&#8211;</span><span class="s1">E</span><span class="s4">i</span><span class="s1">)</span></td>
+<td id="cell4"><span class="s2">(</span><span class="s1">O</span><span class="s4">i</span><span class="s2">&#8211;</span><span class="s1">E</span><span class="s4">i</span><span class="s1">)</span><span class="s4">2</span><span class="s2">/</span><span class="s1">E</span><span class="s4">i</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0"><span class="s5">F</span><span class="s6">our</span> <span class="s5">d</span><span class="s6">if</span><span class="s5">f</span><span class="s5">e</span><span class="s6">r</span><span class="s5">e</span><span class="s6">nt</span> <span class="s6">d</span><span class="s5">i</span><span class="s5">g</span><span class="s6">i</span><span class="s5">t</span><span class="s6">s</span></td>
+<td id="cell1"><span class="s6">525</span></td>
+<td id="cell2"><span class="s6">0.504*1000</span> <span class="s6">=</span> <span class="s6">504</span></td>
+<td id="cell3"><span class="s6">21</span></td>
+<td id="cell4"><span class="s6">0.875</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0"><span class="s6">One</span> <span class="s6">p</span><span class="s5">a</span><span class="s6">ir</span></td>
+<td id="cell1"><span class="s6">419</span></td>
+<td id="cell2"><span class="s6">0.432*1000</span> <span class="s6">=</span> <span class="s6">432</span></td>
+<td id="cell3"><span class="s5">&#8211;</span><span class="s6">13</span></td>
+<td id="cell4"><span class="s6">0.391</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0"><span class="s6">T</span><span class="s5">w</span><span class="s6">o</span> <span class="s6">p</span><span class="s5">a</span><span class="s6">ir</span></td>
+<td id="cell1"><span class="s6">47</span></td>
+<td id="cell2"><span class="s6">0.027*1000</span> <span class="s6">=</span> <span class="s6">27</span></td>
+<td id="cell3"><span class="s6">20</span></td>
+<td id="cell4"><span class="s6">14.81</span></td>
+</tr>
+<tr id="row4">
+<td id="cell0" colspan="2"><span class="s6">Th</span><span class="s5">re</span><span class="s6">e</span> <span class="s6">d</span><span class="s5">i</span><span class="s5">g</span><span class="s6">i</span><span class="s5">t</span><span class="s6">s</span> <span class="s6">of</span> <span class="s6">a</span> <span class="s6">kind</span></td>
+<td id="cell1"><span class="s6">0.036*1000</span> <span class="s6">=</span> <span class="s6">36</span></td>
+<td id="cell2"><span class="s5">&#8211;</span><span class="s6">27</span></td>
+<td id="cell3"><span class="s6">20.25</span></td>
+</tr>
+<tr id="row5">
+<td id="cell0"><span class="s5">F</span><span class="s6">our</span> <span class="s5">d</span><span class="s5">i</span><span class="s5">g</span><span class="s6">i</span><span class="s5">t</span><span class="s6">s</span> <span class="s6">of</span> <span class="s6">a</span> <span class="s6">kind</span></td>
+<td id="cell1"><span class="s6">7</span></td>
+<td id="cell2"><span class="s6">0.001*1000</span> <span class="s6">=</span> <span class="s6">1</span></td>
+<td id="cell3"><span class="s6">6</span></td>
+<td id="cell4"><span class="s6">36</span></td>
+</tr>
+<tr id="row6">
+<td id="cell0"></td>
+<td id="cell1"><span class="s6">1000</span></td>
+<td id="cell2"><span class="s6">1000</span></td>
+<td id="cell3"></td>
+<td id="cell4"><span class="s8">Σ</span><span class="s2">(</span><span class="s1">O</span><span class="s4">i</span><span class="s2">&#8211;</span><span class="s1">E</span><span class="s4">i</span><span class="s1">)</span><span class="s4">2</span><span class="s2">/</span><span class="s1">E</span> <span class="s4">i</span><span class="s6">=</span> <span class="s6">72.326</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><img decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAA1CAYAAACeG3PEAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAiqADAAQAAAABAAAANQAAAACihVxKAAAF9ElEQVR4Ae2bgVXlIBBFs9uBLWgJtmALtmALtqAlaAm2oCVoCVqCLWS5WSZO+OEnEPJDvrPneAgEhsfjzTDEtWnsnzFgDBgDxoAxYAwYA8aAMWAMGAPGQEUMfH9/t5eXl+3t7W379PTUXlxctDc3N21FEA1KDQy8vLy0iMVhad/f30UgUtYAcdcYXl9f2+vr645fSvje7YIQCBFFLUA/q+b0x/v7+/bz87OYvXQE6494eHiIro9oLQgQCRGb+l9p3FP59vbWOLV3kL0HNEQZFWGylgOBjqjm6urqT2gA+4jIE9kReHd3t5moOG4Fi8PKZh78xATvcDesJVwj9a+vr37tcCE8j/Wtvo1ookUBYUGESV4DpPqQezAWz2JjdBhGOORIzO2PwoNxazcgbPF4PdextUg/sONkUg9L+MURtlpbiKeaOh425mUQioBihEH22LhTLAznYDPH5pqDKeZciGTO+LF5z76NyKAjBgvGM/HYWAgXUra6dYENIQsOjV9HXHkflohBj+E943Sbth+O/631wXEGCXhrzGOFJES0hVC8EHoRE/FSowDRUEcVbPijDPF1PyYU2emfsvfMn6Zm4F2qvX+EyNQN6gcvePA3l35DnalkHAiDSLoAxq8cOiDMJ3rR3EQYIpropBAPPXb9lHFLS+bRkQwMGoe2P4FpsG49bi/PA29xoLPrM8PngDARyjGyOMv1Zh3rK+/8zeroWuZ4OUeEFqTOo8Cu6zJ3pBysO9JnXjMTywIpdbIzz0J6Lx/OZyWToXVCKhh9fiHYw25hfYywqJeSIyAS5hJD1D1P0rRKKfmJLw/m0EfhFKaieLXC2QCf8BwALN3gvXUR+XgWZMTCsmAeIwzCWWvoGEQowrkWCX18XUoxXbyMfT9BOOCSCDqFCU60qIoCFU8qajRiDOIlC1+yIOxMjUeUY2KCdC+i7rjQGxHClo0K20vVvQA6HN55u2dnvy+1UzPvMUwIjvel8PV2MEo4157Uv1zpwXtzR0To2SlTThGCkMQTU+zqvnADxiU4tb0Sz8cwTTlP1vwQvYrhGWj8vFn5ygzzXZcS30OIPGNH1VwMa/SLYSJ6jkXQRRgQifaSpZ6XA0bCvy9zTEyOIRQXJ29y1tN3mHMUJ6PSeYIb3B0BWwgFjy+Rr0wRQPRKuFpOmavyvb5WJwGUayQJHdGDDSFpSzJygs46mdMR7gRT2xR4jySnCEWufWH2nMKUeL4b00WgWJlzjIiomePcPT+F89X7ikiYiI2r/YwGr1wNc4Q2QuhRMbv+9v4/B/+p84Kp7rgZ2dju2wAbSFTRQh/ra22FGeDM919CDyyrd503T4X8NY8ewElUmfo2crAQa8hnwG9qQ24i30nYCC0Gnxd0kyCaLRNdsHHkbHHzymf5DEYSRTjzEYCc/SIYWZ6IiboP9ZsdUYg2+3onC7JyNQZCYYT11SbWhhGwjm763R6fxUkddvgc/dGRvfo16tsFwJdcnXMXy1GjceTaqW0c0VFHbMEHzzWtd9bf9ThhCP6Gv6lxOUpfP8UDV/bHx8fGldnT1ZrTfHx8jPLJ3xa5iJO93k0GQjKq54fw7/OUk2DhZkMEW3LDYWyYd50E/IxJ4FSLmFxRhi1Zs9j4FSWCRCRLPgJKaK/xrPdC6G+YrLdWQVcrOEjLuQYjKrwSwn0uFf0+tPXi/e1tkMSaUBJ3RX6n44YNiMyp69CeCGPV7nyP0h85EXksetLXPgusuh31Gic/0Zuvj0cEo+v1rsKQrcqA5CexhFUfQUSdmq7KqxJjxocMSJI9bP35z9ByXJJv+VumlOEQqy9lwBO81EzR8V4AXd4lybabYJCH+fZ+XqLOlr9f64HU/JCTxKkxbMDu/5HYE1n0N5bdL6qyBZyFUMhPSHxNKBF1jSRxgxDthvX1MFx7k2chlAg91gwDhZI4E8pvkFOBJM6EUkgos357XGiuZDPPz8/db1bV2dwfNc7Y4Dly9CTPaQN2yEBuEkduo6+esc/iO6TEIBsDxoAxYAwYA8aAMWAMKAb+ASlSNZmwDZ1+AAAAAElFTkSuQmCC" alt="Attachment.png" /></p>
+<p>and Given chi-square α, N = chi-square 0.05, 4= 9.49 Here the calculated value of chi-square is 72.326 which is greater than the given tabulated value of chi- square so we reject the null hypothesis of independence between given numbers.</p>
+</div>
+<h2>Group B: Answer any Eight Questions</h2><h3>Question 4</h3>
+<div><p><p>Why Confidence interval is needed in the analysis of simulation output. How can we establish a confidence interval?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The confidence interval is the range of possible values for the parameter based on a set of data (e.g. the simulation results.). Confidence interval is needed because:</p>
+<ul style="list-style-type: square;">
+<li> A confidence interval displays the probability that a parameter will fall between a pair of values around the mean.</li>
+<li> Confidence intervals measure the degree of uncertainty or certainty in a sampling method.</li>
+</ul>
+<p>Confidence intervals are based on the premise that the data being produced by the simulation is represented well by a probability model. Suppose the model is the normally distributed with mean , Variance and we have a sample of n size then the confidence interval is given by:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28140" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_2844.jpg?resize=1597%2C1455&#038;ssl=1" alt="" width="1597" height="1455"></p>
+<p>Hence, the estimates between can be accepted for 95% confidence interval.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the Monte Carlo simulation method. with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Monte Carlo simulation is a computational technique that uses random sampling to model and analyze complex systems or processes. It relies on the generation of random inputs to explore the behavior of a system, allowing for the estimation of outcomes and the assessment of associated uncertainties. The method is named after the Monte Carlo Casino in Monaco, known for its games of chance and randomness.</p>
+<p>&nbsp;</p>
+<p>Following are the three important characteristics of Monte-Carlo method:</p>
+<ul style="list-style-type: square;">
+<li>Its output must generate random samples.</li>
+<li> Its input distribution must be known.</li>
+<li>Its result must be known while performing an experiment.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28141" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_2845.jpg?resize=2048%2C1749&#038;ssl=1" alt="" width="2048" height="1749"></p>
+<p>We use random number generation method to determine the sample points that lie inside or outside the curve.</p>
+<p>Let (x0, y0) be an initial guess for the sample point than from a linear congruential method of random number generation:</p>
+<p><strong> Xi+1 = (axi+c) mod m </strong></p>
+<p><strong>Yi+1 = (ayi+c) mod m </strong></p>
+<p>Where a &amp; c are constants, m is the upper limit of generated random number.</p>
+<p>If y&lt;=yi then increment n.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Generate ten 3 digit random integers and corresponding randomn variables using Multiplicative Congruential method where a =7, and X0= 22.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>X0 = 22,</p>
+<p>a= 7</p>
+<p>For three-digit random integers m=1000 We have, For multiplicative congruential method ( c =0) so</p>
+<p>Xi+1 = (a Xi ) mod m</p>
+<p><strong>The sequence of random integers are calculated as follows:</strong></p>
+<p>X0 = 22</p>
+<p>R0 = 22/1000 = 0.022</p>
+<p>X1 = (a X0) mod m = (7*22) mod 1000 = 15 mod 1000 = 154</p>
+<p>R1 = 154/1000 = 0.154</p>
+<p>X2 = (a X1) mod m = (7*154) mod 1000 = 1078 mod 1000 = 78</p>
+<p>R2 = 78/1000 = 0.078</p>
+<p>X3 = (a X2) mod m = (7*78) mod 1000 = 546 mod 1000 = 546</p>
+<p>R3 = 546/1000 = 0.546</p>
+<p>X4= (a X3 ) mod m = (7*546) mod 1000 = 3822 mod 1000 = 822</p>
+<p>R4 = 822/1000 = 0.822</p>
+<p>X5= (a X4 ) mod m = (7*822) mod 1000 = 5754 mod 1000 = 754</p>
+<p>R5= 754/1000 = 0.754</p>
+<p>X6= (a X5) mod m = (7*754) mod 1000 = 5278 mod 1000 = 278</p>
+<p>R6 = 278/1000 = 0.278</p>
+<p>X7= (a X6) mod m = (7*278) mod 1000 = 1946 mod 1000 = 946</p>
+<p>R7 = 946/1000 = 0.946</p>
+<p>X8= (a X7) mod m = (7*946) mod 1000 = 6622 mod 1000 = 622</p>
+<p>R8 = 622/1000 = 0.622</p>
+<p>X9= (a X8) mod m = (7*622) mod 1000 = 4354 mod 1000 = 354</p>
+<p>R9 = 354/1000 = 0.354</p>
+<p>X10 = (a X9) mod m = (7*354) mod 1000 = 2478 mod 1000 = 478</p>
+<p>R10 = 478/1000 = 0.478</p>
+<p>Therefore,</p>
+<p>The sequence of three digit random integers are 022, 154, 078, 546, 822, 754, 278, 946, 622, 354, 478 The sequence of random numbers are 0.022, 0.154, 0.078, 0. 546, 0.822, 0.754, 0.278, 0.946, 0.622, 0.354, 0.478</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>“Building a model right” and “Building a right model”. Are both statements same?Discuss the importance of V&V</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="font-weight: 400;">The statements &#8220;Building a model right&#8221; and &#8220;Building a right model&#8221; may sound similar, but they convey slightly different meanings.</p>
+<ul style="list-style-type: square;">
+<li><strong>&#8220;Building a model right&#8221;:</strong> This statement suggests the emphasis on the process of constructing a model correctly, adhering to best practices, following appropriate methodologies, and ensuring that the implementation aligns with the intended design. It focuses on the correctness of the development process rather than specifically referring to the characteristics or quality of the model itself.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>&#8220;Building a right model&#8221;: </strong>This statement puts more emphasis on the outcome – the model itself. It suggests the importance of constructing a model that is appropriate for the problem at hand, effectively addresses the objectives, and produces reliable and meaningful results. It highlights the need for selecting the right algorithms, features, and parameters to achieve the desired performance.</li>
+</ul>
+<p style="font-weight: 400;"><strong>The importance of Verification and Validation (V&amp;V) in the context of building models:</strong></p>
+<p style="font-weight: 400;">Verification and validation are crucial processes in the development lifecycle of models, especially in fields like software engineering and machine learning. These processes help ensure that the model is not only built correctly but also that it is the right model for the intended purpose. Here&#8217;s a breakdown of their importance:</p>
+<p style="font-weight: 400;"><strong>Verification:</strong></p>
+<ul style="list-style-type: square;">
+<li>Ensuring correctness: Verification involves checking that the model is implemented correctly according to its design specifications..</li>
+<li>Detecting errors early: Early identification of errors or issues in the development process can save time and resources by preventing the propagation of defects throughout the model&#8217;s lifecycle.</li>
+</ul>
+<p style="font-weight: 400;"><strong>Validation:</strong></p>
+<ul style="list-style-type: square;">
+<li>Ensuring effectiveness: Validation is concerned with determining whether the model fulfills its intended purpose and whether it produces accurate and reliable results.</li>
+<li>Mitigating risks: Validation helps identify and address potential risks and uncertainties associated with the model.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between discrete and continuous system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table id="table0">
+<tbody>
+<tr id="row0">
+<td id="cell0"><span class="s1">C</span><span class="s1">h</span><span class="s1">a</span><span class="s1">r</span><span class="s1">a</span><span class="s1">c</span><span class="s1">t</span><span class="s1">e</span><span class="s1">r</span><span class="s1">i</span><span class="s1">s</span><span class="s1">t</span><span class="s1">i</span><span class="s2">c</span></td>
+<td id="cell1"><span class="s1">D</span><span class="s1">i</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s2">e</span> <span class="s1">S</span><span class="s1">y</span><span class="s1">s</span><span class="s1">t</span><span class="s1">e</span><span class="s2">m</span></td>
+<td id="cell2"><span class="s1">C</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">S</span><span class="s1">y</span><span class="s1">s</span><span class="s1">t</span><span class="s1">e</span><span class="s2">m</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0"><span class="s1">R</span><span class="s1">e</span><span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span></td>
+<td id="cell1"><span class="s1">D</span><span class="s1">e</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">i</span><span class="s1">b</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">s</span><span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">e</span><span class="s1">n</span><span class="s1">c</span><span class="s2">e</span> <span class="s1">s</span><span class="s1">e</span><span class="s1">p</span><span class="s1">a</span><span class="s1">r</span><span class="s1">a</span><span class="s1">t</span><span class="s2">e</span> <span class="s1">e</span><span class="s1">v</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">s</span><span class="s2">.</span></p>
+<p><span class="s1">b</span><span class="s2">y</span> <span class="s2">a</span> <span class="s1">o</span><span class="s2">f</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">s</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">c</span><span class="s1">t</span><span class="s2">,</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">o</span><span class="s2">r</span></td>
+<td id="cell2"><span class="s1">D</span><span class="s1">e</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">i</span><span class="s1">b</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">b</span><span class="s2">y</span> <span class="s2">a</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">s</span><span class="s1">e</span><span class="s2">t</span> <span class="s1">o</span><span class="s2">f</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">o</span><span class="s1">v</span><span class="s1">e</span><span class="s2">r</span> <span class="s2">a</span><span class="s1">s</span><span class="s1">p</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">f</span><span class="s1">i</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">r</span><span class="s1">a</span><span class="s1">n</span><span class="s1">g</span><span class="s1">e</span><span class="s2">.</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0"><span class="s1">V</span><span class="s1">a</span><span class="s1">r</span><span class="s1">i</span><span class="s1">a</span><span class="s1">b</span><span class="s1">l</span><span class="s2">e</span> <span class="s1">T</span><span class="s1">y</span><span class="s1">p</span><span class="s2">e</span></td>
+<td id="cell1"><span class="s1">V</span><span class="s1">a</span><span class="s1">r</span><span class="s1">i</span><span class="s1">a</span><span class="s1">b</span><span class="s1">l</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">i</span><span class="s1">n</span><span class="s1">d</span><span class="s1">i</span><span class="s1">v</span><span class="s1">i</span><span class="s1">d</span><span class="s1">u</span><span class="s1">a</span><span class="s1">l</span><span class="s2">,</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></p>
+<p><span class="s1">t</span><span class="s1">a</span><span class="s1">k</span><span class="s2">e</span> <span class="s1">o</span><span class="s2">n</span> <span class="s1">i</span><span class="s1">s</span><span class="s1">o</span><span class="s1">l</span><span class="s1">a</span><span class="s1">t</span><span class="s1">e</span><span class="s2">d</span></td>
+<td id="cell2"><span class="s1">V</span><span class="s1">a</span><span class="s1">r</span><span class="s1">i</span><span class="s1">a</span><span class="s1">b</span><span class="s1">l</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">c</span><span class="s1">a</span><span class="s2">n</span> <span class="s1">t</span><span class="s1">a</span><span class="s1">k</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">y</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s2">e</span> <span class="s1">w</span><span class="s1">i</span><span class="s1">t</span><span class="s1">h</span><span class="s1">i</span><span class="s2">n</span> <span class="s2">a</span> <span class="s1">s</span><span class="s1">p</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">f</span><span class="s1">i</span><span class="s1">e</span><span class="s2">d</span><span class="s1">r</span><span class="s1">a</span><span class="s1">n</span><span class="s1">g</span><span class="s1">e</span><span class="s2">.</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0"><span class="s1">T</span><span class="s1">i</span><span class="s1">m</span><span class="s2">e</span> <span class="s1">D</span><span class="s1">o</span><span class="s1">m</span><span class="s1">a</span><span class="s1">i</span><span class="s2">n</span></td>
+<td id="cell1"><span class="s1">O</span><span class="s1">p</span><span class="s1">e</span><span class="s1">r</span><span class="s1">a</span><span class="s1">t</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">i</span><span class="s2">n</span> <span class="s1">t</span><span class="s1">i</span><span class="s1">m</span><span class="s2">e</span> <span class="s1">i</span><span class="s1">n</span><span class="s1">t</span><span class="s1">e</span><span class="s1">r</span><span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">s</span><span class="s2">.</span></p>
+<p><span class="s1">d</span><span class="s1">i</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s2">e</span></td>
+<td id="cell2"><span class="s1">O</span><span class="s1">p</span><span class="s1">e</span><span class="s1">r</span><span class="s1">a</span><span class="s1">t</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s1">s</span><span class="s1">l</span><span class="s2">y</span> <span class="s1">o</span><span class="s1">v</span><span class="s1">e</span><span class="s2">r</span> <span class="s1">t</span><span class="s1">i</span><span class="s1">m</span><span class="s1">e</span><span class="s2">.</span></td>
+</tr>
+<tr id="row4">
+<td id="cell0"><span class="s1">S</span><span class="s1">i</span><span class="s1">g</span><span class="s1">n</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">T</span><span class="s1">y</span><span class="s1">p</span><span class="s2">e</span></td>
+<td id="cell1"><span class="s1">S</span><span class="s1">i</span><span class="s1">g</span><span class="s1">n</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">e</span><span class="s1">x</span><span class="s1">i</span><span class="s1">s</span><span class="s2">t</span> <span class="s1">a</span><span class="s2">t</span> <span class="s1">s</span><span class="s1">p</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">f</span><span class="s1">i</span><span class="s2">c</span> <span class="s1">t</span><span class="s1">i</span><span class="s1">m</span><span class="s2">e</span><span class="s1">i</span><span class="s1">n</span><span class="s1">s</span><span class="s1">t</span><span class="s1">a</span><span class="s1">n</span><span class="s1">c</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2"><span class="s1">S</span><span class="s1">i</span><span class="s1">g</span><span class="s1">n</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">e</span><span class="s1">x</span><span class="s1">i</span><span class="s1">s</span><span class="s2">t</span> <span class="s1">a</span><span class="s2">t</span> <span class="s1">a</span><span class="s1">l</span><span class="s2">l</span> <span class="s1">p</span><span class="s1">o</span><span class="s1">i</span><span class="s1">n</span><span class="s1">t</span><span class="s2">s</span> <span class="s1">i</span><span class="s2">n</span> <span class="s1">t</span><span class="s1">i</span><span class="s1">m</span><span class="s1">e</span><span class="s2">.</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table id="table0" style="width: 104.166667%; height: 364px;">
+<tbody>
+<tr id="row0">
+<td id="cell0" style="width: 8.198925%;"><span class="s1">M</span><span class="s1">a</span><span class="s1">t</span><span class="s1">h</span><span class="s1">e</span><span class="s1">m</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">c</span><span class="s1">a</span><span class="s2">l</span><span class="s1">M</span><span class="s1">o</span><span class="s1">d</span><span class="s1">e</span><span class="s2">l</span></td>
+<td id="cell1" style="width: 35.483871%;"><span class="s1">M</span><span class="s1">o</span><span class="s1">d</span><span class="s1">e</span><span class="s1">l</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">u</span><span class="s1">s</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">f</span><span class="s1">f</span><span class="s1">e</span><span class="s1">r</span><span class="s1">e</span><span class="s1">n</span><span class="s1">c</span><span class="s2">e</span> <span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2" style="width: 55.107527%;"><span class="s1">M</span><span class="s1">o</span><span class="s1">d</span><span class="s1">e</span><span class="s1">l</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">u</span><span class="s1">s</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">f</span><span class="s1">f</span><span class="s1">e</span><span class="s1">r</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s1">s</span><span class="s2">.</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0" style="width: 8.198925%;"><span class="s1">E</span><span class="s1">x</span><span class="s1">a</span><span class="s1">m</span><span class="s1">p</span><span class="s1">l</span><span class="s1">e</span><span class="s2">s</span></td>
+<td id="cell1" style="width: 35.483871%;"><span class="s1">D</span><span class="s1">i</span><span class="s1">g</span><span class="s1">i</span><span class="s1">t</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">s</span><span class="s1">y</span><span class="s1">s</span><span class="s1">t</span><span class="s1">e</span><span class="s1">m</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">e</span><span class="s2">r</span> <span class="s1">s</span><span class="s1">y</span><span class="s1">s</span><span class="s1">t</span><span class="s1">e</span><span class="s1">m</span><span class="s1">s</span><span class="s2">,</span><span class="s1">c</span><span class="s1">o</span><span class="s1">u</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">o</span><span class="s1">c</span><span class="s1">e</span><span class="s1">s</span><span class="s1">s</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2" style="width: 55.107527%;"><span class="s1">A</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s1">o</span><span class="s2">g</span> <span class="s1">s</span><span class="s1">y</span><span class="s1">s</span><span class="s1">t</span><span class="s1">e</span><span class="s1">m</span><span class="s1">s</span><span class="s2">,</span> <span class="s1">e</span><span class="s1">l</span><span class="s1">e</span><span class="s1">c</span><span class="s1">t</span><span class="s1">r</span><span class="s1">i</span><span class="s1">c</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">c</span><span class="s1">i</span><span class="s1">r</span><span class="s1">c</span><span class="s1">u</span><span class="s1">i</span><span class="s1">t</span><span class="s1">s</span><span class="s2">,</span><span class="s1">t</span><span class="s1">e</span><span class="s1">m</span><span class="s1">p</span><span class="s1">e</span><span class="s1">r</span><span class="s1">a</span><span class="s1">t</span><span class="s1">u</span><span class="s1">r</span><span class="s2">e</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">r</span><span class="s1">i</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s1">n</span><span class="s1">s</span><span class="s2">.</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0" style="width: 8.198925%;"><span class="s1">S</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">a</span><span class="s1">g</span><span class="s2">e</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span><span class="s1">P</span><span class="s1">r</span><span class="s1">o</span><span class="s1">c</span><span class="s1">e</span><span class="s1">s</span><span class="s1">s</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span></td>
+<td id="cell1" style="width: 35.483871%;"><span class="s1">R</span><span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">i</span><span class="s1">r</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">m</span><span class="s1">e</span><span class="s1">m</span><span class="s1">o</span><span class="s1">r</span><span class="s2">y</span> <span class="s1">f</span><span class="s1">o</span><span class="s2">r</span> <span class="s1">s</span><span class="s1">t</span><span class="s1">o</span><span class="s1">r</span><span class="s1">i</span><span class="s1">n</span><span class="s2">g</span> <span class="s1">i</span><span class="s1">n</span><span class="s1">d</span><span class="s1">i</span><span class="s1">v</span><span class="s1">i</span><span class="s1">d</span><span class="s1">u</span><span class="s1">a</span><span class="s2">l</span><span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2" style="width: 55.107527%;"><span class="s1">R</span><span class="s1">e</span><span class="s1">q</span><span class="s1">u</span><span class="s1">i</span><span class="s1">r</span><span class="s1">e</span><span class="s2">s</span> <span class="s1">r</span><span class="s1">e</span><span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">e</span><span class="s1">n</span><span class="s1">t</span><span class="s1">a</span><span class="s1">t</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">o</span><span class="s1">c</span><span class="s1">e</span><span class="s1">s</span><span class="s1">s</span><span class="s1">i</span><span class="s1">n</span><span class="s1">g</span><span class="s2">.</span></p>
+<p><span class="s1">a</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s1">o</span><span class="s2">g</span> <span class="s1">a</span><span class="s1">n</span><span class="s2">d</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0" style="width: 8.198925%;"><span class="s1">P</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span></td>
+<td id="cell1" style="width: 35.483871%;"><span class="s1">L</span><span class="s1">i</span><span class="s1">m</span><span class="s1">i</span><span class="s1">t</span><span class="s1">e</span><span class="s2">d</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span> <span class="s1">d</span><span class="s1">u</span><span class="s2">e</span> <span class="s1">t</span><span class="s2">o</span> <span class="s1">d</span><span class="s1">i</span><span class="s1">s</span><span class="s1">c</span><span class="s1">r</span><span class="s1">e</span><span class="s1">t</span><span class="s2">e</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></td>
+<td id="cell2" style="width: 55.107527%;"><span class="s1">I</span><span class="s1">n</span><span class="s1">f</span><span class="s1">i</span><span class="s1">n</span><span class="s1">i</span><span class="s1">t</span><span class="s2">e</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">c</span><span class="s1">i</span><span class="s1">s</span><span class="s1">i</span><span class="s1">o</span><span class="s2">n</span> <span class="s1">d</span><span class="s1">u</span><span class="s2">e</span> <span class="s1">t</span><span class="s2">o</span> <span class="s1">c</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">v</span><span class="s1">a</span><span class="s1">l</span><span class="s1">u</span><span class="s1">e</span><span class="s1">s</span><span class="s2">.</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is markov chain? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the future states of a process are independent of the past and depend only on the present, the process is called a Markov process. A discrete state Markov process is called a Markov chain. A Markov Chain is a random process with the property that the next state depends only on the current state.</p>
+<p>Markov chains are used to analyze trends and predict the future. (Weather, stock market, genetics, product success, etc.</p>
+<p><strong>Formally,</strong></p>
+<p>A Markov chain is a sequence of random variables X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, &#8230; with the Markov property, namely that, given the present state, the future and past states are independent.</p>
+<p>\(P(X_{n+1} = j|X_n = i_n, x_{n-1} = i_{n-1}, . . ., x_0 = i_0) = P(X_{n+1} = j|X_n = i_n)\)</p>
+<p>The conditional probability above gives us the probability that a process in state i<sub>n</sub> at time n moves to i<sub>n+1</sub> at time n + 1. We call this the transition probability for the Markov chain. If the transition probability does not depend on the time n, we have a stationary Markov chain, with transition probabilities</p>
+<p>\(P_{ij} = P(X_{n+1} = j|X_n = i)\)</p>
+<p>Now we can write down the whole Markov chain as a matrix P:</p>
+<p>\(P = \begin{bmatrix}<br />
+P_11 &amp; P_12 &amp; &#8230;. &amp; P_1n\\<br />
+P_21 &amp; P_22 &amp; &#8230;. &amp; P_2n\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+P_n1 &amp; P_n2 &amp; &#8230;. &amp; P_nn\\<br />
+\end{bmatrix}\)</p>
+<p>Example:</p>
+<p>Weather Problem:</p>
+<ul style="list-style-type: square;">
+<li>raining today  ⇒ 40 % rain tomorrow</li>
+</ul>
+<p>⇒ 60 % no rain tomorrow</p>
+<ul style="list-style-type: square;">
+<li>not raining today  ⇒ 20 % rain tomorrow</li>
+</ul>
+<p>⇒ 80 % no rain tomorrow</p>
+<p>What will be the probability if today is not raining then not rain the day after tomorrow?</p>
+<p><i>Markov chain diagram:</i></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10953 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-2.png?resize=334%2C145&#038;ssl=1" alt="" width="334" height="145"></p>
+<p>\(P^2 = \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix} \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.16 + 0.12 &amp; 0.24 + 0.48 \\ 0.08 + 0.16 &amp; 0.12 + 0.64\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.28 &amp; 0.72 \\ 0.24 &amp; 0.76\end{pmatrix}\)</p>
+<p>Thus, the probability of not being rainy the day after tomorrow is 0.76.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain basic characteristics of Queueing System</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A queuing system is a mathematical model that represents the waiting lines or queues in various real-world scenarios where entities (such as customers, tasks, or requests) arrive, wait for service, and then depart. Queuing theory is a branch of applied probability that helps analyze and optimize such systems. Here are the basic characteristics of a queuing system:</p>
+<p><strong>Arrival Process:</strong></p>
+<p>• Arrival Rate (λ): Represents the average number of entities arriving at the queue per unit time.</p>
+<p>• Inter-Arrival Time Distribution: Describes the time intervals between consecutive arrivals.</p>
+<p><strong>Service Process:</strong></p>
+<p>• Service Rate (μ): Indicates the average number of entities served by the system per unit time.</p>
+<p>• Service Time Distribution: Describes the time it takes to serve a single entity.</p>
+<p>&nbsp;</p>
+<p><strong>Queue Discipline:</strong></p>
+<p>• FIFO (First-In-First-Out): The entity that arrives first is the first to be served.</p>
+<p>• LIFO (Last-In-First-Out): The entity that arrives last is the first to be served.</p>
+<p>• Priority Queues: Entities are served based on assigned priorities.</p>
+<p>&nbsp;</p>
+<p><strong>Queue Length:</strong></p>
+<p>• Number of Servers: The number of servers determines how many entities can be served simultaneously.</p>
+<p>• Queue Capacity: Represents the maximum number of entities the queue can hold.</p>
+<p>&nbsp;</p>
+<p><strong>Service Discipline:</strong></p>
+<p>• Single Server: Only one entity is served at a time.</p>
+<p>• Multiple Servers: Multiple entities can be served simultaneously.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Describe dynamic physical model in detail with the help of suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p>A dynamic physical model is a representation of a system that evolves over time, capturing the changes and interactions among its components. This type of model is used to simulate and analyze the dynamic behavior of a system as it progresses through time. It often involves differential equations or difference equations to describe the rate of change of variables over time.</p>
+<p>Example: A pendulum</p>
+<p>A pendulum is a simple example of a dynamic physical system. It consists of a mass attached to a pivot point by a string. The pendulum swings back and forth under the influence of gravity.</p>
+<p>The motion of the pendulum can also be modeled by the following differential equation:</p>
+<p>θ̈ + (g/L) * sin(θ) = 0</p>
+<p>where:</p>
+<ul style="list-style-type: square;">
+<li>θ̈ is the second derivative of θ with respect to time</li>
+<li>L is the length of the pendulum</li>
+</ul>
+<p>This equation states that the second derivative of the angle of the pendulum is proportional to the negative of the sine of the angle and the acceleration due to gravity divided by the length of the pendulum.</p>
+<p><strong>Advantages:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>They can be used to predict the behavior of systems before they are built or tested.</li>
+<li> They can be used to understand the behavior of systems that are too complex to be studied experimentally.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes:</p>
+<p>a.Hypothesis testing</p>
+<p>b.Stationary poission process</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a.Hypothesis testing </strong></p>
+<p>Hypothesis testing is a statistical method used to make inferences about a population based on a sample of data. It involves formulating two competing hypotheses, the null hypothesis (H0) and the alternative hypothesis (H1), and then using sample data to assess the evidence against the null hypothesis.</p>
+<p>Here are the key steps in hypothesis testing:</p>
+<p>Formulate Hypotheses:</p>
+<p><strong>• Null Hypothesis (H0):</strong> Represents a default or status quo assumption.</p>
+<p>It often states that there is no effect or no difference.</p>
+<p><strong>• Alternative Hypothesis (H1):</strong> Represents the opposite of the null hypothesis, suggesting an effect or a difference.</p>
+<p><strong>Select Significance Level (α):</strong> The significance level, often denoted by α (alpha), represents the probability of rejecting the null hypothesis</p>
+<p>After that test the calculated value with significance and decide accept or reject the hypothesis.</p>
+<p>&nbsp;</p>
+<p><strong>b.Stationary poisson process</strong></p>
+<p>A stationary Poisson process is a type of stochastic process that models the occurrence of rare events over time, where events happen randomly and independently. The term &#8220;stationary&#8221; in this context refers to the fact that the statistical properties of the process do not change over time. The Poisson process is named after the French mathematician Siméon Denis Poisson, who introduced it.</p>
+<p><strong>Characteristics of a Stationary Poisson Process:</strong></p>
+<p><strong>• Event Occurrence:</strong> The process models the occurrence of events in continuous time, such as the arrival of customers at a service point, the decay of radioactive particles, or the arrival of messages in a communication system.</p>
+<p><strong>• Independence:</strong> Events occur independently of each other. The occurrence of an event in one time interval does not affect the probability of an event occurring in another interval.</p>
+<p><strong>• Constant Rate:</strong>  The events occur at a constant average rate, denoted by λ. The rate represents the average number of events per unit of time.</p>
+<p><strong>• Stationarity:</strong> The process is stationary, which means that its statistical properties, such as the average rate of events and the distribution of inter-arrival times, do not change over time.</p>
+<p><strong>• Inter-Arrival Times:</strong> The time between consecutive events, known as inter-arrival times, follows an exponential distribution with a mean of 1/λ.</p>
+</div>
+</body></html>

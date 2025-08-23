@@ -1,0 +1,84 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CG Model Question I 0</title>
+    </head>
+    <body>
+        <h1>CG Model Question I - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any two questions</h2><h3>Question 1</h3>
+<div><p><p>Why normal equation of circle is not used to compute circle? Write algorithm for bersenham’s line drawing technique. derive mid-point circle algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 2</h3>
+<div><p><p>Describe the architecture of raster and random scan display. How scaling method is used in hidden surface removal.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 3</h3>
+<div><p><p>Find viewport coordinates of quadrilateral (1,1),(1,2),(2,2)and(3,4) in a window with diagonal  endpoints (1,1),and (4,4) to view port with diagonal end points (3,2),and (6,6).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Explain software standards in computer graphics.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Software Standards helps to make portability of software, and rewriting code is not required. It can be used in different implementations and applications. Following are some software standards.</p>
+<h4>a) Graphics Kernel System(GKS):</h4>
+<p>GKS is the first graphics software standard adopted by the international standards organization(ISO). It was originally designed as a 2D graphics package. It incudes various types of methods, reserved words.</p>
+<p><span style="text-decoration: underline;"><strong>Advantage:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>It provides improved algorithm</li>
+<li>It makes system portable</li>
+<li>Rewriting of code is not required</li>
+</ol>
+<h4>b) PHIGS (Programmer&#8217;s Hierarchical Interactive Graphics Standard)</h4>
+<p>It is the extension of GKS which provides 3D graphics package. It includes additional functions for object modeling, Color specification, Surface rendering and picture manipulation.</p>
+<h4>c) PHIGS+:</h4>
+<p>It is the extension of earlier PHIGS. 3D surface shading capability are added to PHIGS+.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>explain scanline polygonal filling technique .</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Scanline polygon fill algorithm is a popular technique used to fill the interior of a polygon. This algorithm is based on the idea of moving a horizontal line, called the &#8220;scanline,&#8221; across the polygon from top to bottom and filling in the pixels intersected by the scanline.</p>
+<p>The algorithm works by dividing the polygon into a series of trapezoids, each of which is bounded by two horizontal scanlines and two edges of the polygon. The algorithm then fills in each trapezoid by scanning the pixels intersected by the scanline, and setting their color to the fill color of the polygon.</p>
+<p>To implement the scanline polygon fill algorithm, the following steps are  followed:</p>
+<ol style="list-style-type:decimal;">
+<li>Sort the vertices of the polygon in y-coordinate order, from top to bottom.</li>
+<li>For each scanline from the top of the polygon to the bottom, determine the set of edges that intersect the scanline.</li>
+<li>Sort the edges in x-coordinate order, from left to right.</li>
+<li>Pair adjacent edges to form trapezoids, and fill in the pixels intersected by the scanline within each trapezoid.</li>
+<li>Repeat steps 2-4 for each scanline until the entire polygon is filled.</li>
+</ol>
+<p>The scanline polygon fill algorithm is relatively fast and efficient, and it can handle concave polygons and polygons with holes. However, it does have some limitations, such as difficulty handling self-intersecting polygons and the need to sort the vertices and edges, which can be computationally expensive for large polygons.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What are the advantage of a homogeneous coordinate system? Explain and derive 2D shear about a base line y=y<sub>ref</sub></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The advantage of homogeneous coordinate system are</p>
+<ol style="list-style-type:decimal;">
+<li>It provides  uniform frame-work for handling different geometric transformations, simply as multiplication of matrices.</li>
+<li>To express any two dimensional transformation as matrix multiplication.</li>
+<li>To represent all the transformation equations as matrix multiplications</li>
+<li>To perform more than one transformation at a time</li>
+<li>To reduce unwanted calculations of intermediate steps, to save time and memory and produce a sequence of transformations.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is a window to viewport transformation, Deduce window to viewport transformation with appropriate mathematical expression .</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 8</h3>
+<div><p><p>Clip a line using cohen sutherland algorithm with end points (10,10) and (60,30) in a window (15,15) and (25,25).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 9</h3>
+<div><p><p>Reflect a traingle (2,4),(4,6),(2,6) about a line y=1/2(x +4)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 10</h3>
+<div><p><p>Derive oblique projection matrix. what is the difference between cabiliar and cabinet projection?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 11</h3>
+<div><p><p>What is specular reflection model of phong? Explain shadows and intensity attenuation in illumination modelling?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 12</h3>
+<div><p><p>What is VR? What are the advantages and disadvantages?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Virtual reality is a system for providing an interactive exploration of a three dimensional virtual environment.</p>
+<p>Virtual reality is an environment that is simulated by a computer, trying to imitate the real thing.</p>
+<p>Virtual reality refers to a high-end user interface that involves real-time simulation and interactions through multiple sensorial channels.</p>
+<p><span style="text-decoration: underline;"><strong>Advantage:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>Virtuality Reality creates a realistic world</li>
+<li>It helps user to experiment with an  artificial environment.</li>
+<li>VR is more personal than electronic mail or instant messaging.</li>
+<li>VR helps to get the knowledge of different things move easily and with comfort</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Disadvantage:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>It consists of complex technology</li>
+<li>Equipment&#8217;s used in VR are very expensive</li>
+<li>In VR environment, We can  move by our own, like in the real world.</li>
+</ol>
+</div>
+</body></html>

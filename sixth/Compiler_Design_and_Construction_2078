@@ -1,0 +1,539 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CDC Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>CDC Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt all questions.</h2><h3>Question 1</h3>
+<div><p><p>What are the task performed in lexical analysis. Define DFA. Given regular expression:</p>
+<p>(a+b)*a(a+b)</p>
+<p> </p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The task performed by lexical analysis are:</p>
+<p>1.Tokenization: Lexical analysis takes the source code as input and identifies the individual components or tokens that make up the code. Tokens can be keywords, identifiers, literals, operators, or punctuation marks.</p>
+<p>2. Filtering: It removes all white spaces and comments and other irrelevant characters that do not contribute to the meaning of program.</p>
+<p>3. It identifies and fills tokens into the symbol table.</p>
+<p>DFA is defined as a finite automata consisting of 5 tuples. It stands for Deterministic Finite Automata.</p>
+<p>Given regular expression:</p>
+<p>(a+b)*a(a+b)</p>
+<p>step 1: Augment the given expression with #</p>
+<p>(a+b)*.a.(a+b).#</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20324" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-09-160658.png?resize=560%2C437&#038;ssl=1" alt="" width="560" height="437"></p>
+<p>Followpos(1)={1,2,3}</p>
+<p>Followpos(2)={1,2,3}</p>
+<p>Followpos(3)={4,5}</p>
+<p>Followpos(4)={6}</p>
+<p>Followpos(5)={6}</p>
+<p>Followpos(6)={Φ}</p>
+<p>step 3: Let&#8217;s start constructing DFA</p>
+<p>start state of DFA= firstpos (root)={1,2,3}=s1</p>
+<p>Mark s1:</p>
+<p>for a: followpos(1) U followpos(3) ={1,2,3,4,5}=s2</p>
+<p>for b: followpos(2) ={1,2,3}=s1</p>
+<p>Mark s2:</p>
+<p>for a: followpos(1) U followpos(3) U followpos(4) ={1,2,3,4,5,6}=s3</p>
+<p>for b: followpos(2) U followpos(5) ={1,2,3,6}=s4</p>
+<p>Mark s3:</p>
+<p>for a: followpos(1) U followps(3) U followpos(4)=s3</p>
+<p>for b: followpos(2) U followpos(5) =s4</p>
+<p>Mark s4:</p>
+<p>for a: followpos(1) U followps(3) =s2</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20325" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-09-161718.png?resize=487%2C238&#038;ssl=1" alt="" width="487" height="238"></p>
+<p>Fig: DFA</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Difference between LR(0) and LR(1) algorithm. Construct LR(1) parse table for s->AA ,A->aA/b</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">LR(0) Algorithm</td>
+<td style="width: 50%;">LR(1) Algorithm</td>
+</tr>
+<tr>
+<td style="width: 50%;">It does not consider any lookahead symbols.</td>
+<td style="width: 50%;">It is consider one lookahead symbol.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It uses LR(0) items (production rules with a dot).</td>
+<td style="width: 50%;">It uses LR(1) items(production rules with dot and a lookahead symbol).</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is more likely to have shift-reduce conflicts.</td>
+<td style="width: 50%;">Fewer shift reduce and reduce-reduce conflict.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Parsing table has fewer entries.</td>
+<td style="width: 50%;">Parsing table has more entries.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Given grammar</p>
+<p>s-&gt;AA</p>
+<p>A-&gt;aA/b</p>
+<p>The augmented grammar is</p>
+<p>s<sup>&#8216;</sup>-&gt;s</p>
+<p>s-&gt;AA</p>
+<p>A-&gt;aA/b</p>
+<p>Now the canonical collection of LR(1) items is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-20322" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-09-155541.png?resize=639%2C385&#038;ssl=1" alt="" width="639" height="385"></p>
+<p>Now, let&#8217;s construct LR(1) parse table</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 17.9949%;"></td>
+<td style="width: 48.6717%;">Action</td>
+<td style="width: 33.3333%;">Go to</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 24px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 18.0201%; height: 24px;">states</td>
+<td style="width: 15.3133%; height: 24px;">a</td>
+<td style="width: 16.6667%; height: 24px;">b</td>
+<td style="width: 16.6667%; height: 24px;">$</td>
+<td style="width: 16.6667%; height: 24px;">S</td>
+<td style="width: 16.6667%; height: 24px;">A</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">0</td>
+<td style="width: 16.6667%; height: 24px;">s3</td>
+<td style="width: 16.6667%; height: 24px;">s4</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">1</td>
+<td style="width: 16.6667%; height: 24px;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">1</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">Accept</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">2</td>
+<td style="width: 16.6667%; height: 24px;">s6</td>
+<td style="width: 16.6667%; height: 24px;">s7</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">5</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">3</td>
+<td style="width: 16.6667%; height: 24px;">s3</td>
+<td style="width: 16.6667%; height: 24px;">s4</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">8</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">4</td>
+<td style="width: 16.6667%; height: 24px;">r3</td>
+<td style="width: 16.6667%; height: 24px;">r3</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">5</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">r1</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">6</td>
+<td style="width: 16.6667%; height: 24px;">s6</td>
+<td style="width: 16.6667%; height: 24px;">s7</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">7</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">r3</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">8</td>
+<td style="width: 16.6667%; height: 24px;">r2</td>
+<td style="width: 16.6667%; height: 24px;">r2</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px;">9</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;">r2</td>
+<td style="width: 16.6667%; height: 24px;"></td>
+<td style="width: 16.6667%; height: 24px;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Since, there are no conflicts, so it is LR(1) parsable.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Type checking is the process of verifying that the types of expressions and variables used in a program are consistent and adhere to languages type system rules. The primary goal of type checking is to identify and prevent type-related errors before the program is executed.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 336px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Type casting</td>
+<td style="width: 50%; height: 24px;">Type conversion(coercion)</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">In type casting, a data type is converted into another data type by a programmer using casting operator.</td>
+<td style="width: 50%; height: 72px;">In type conversion, a data type is converted into another data type by a compiler.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Type casting can be applied to compatible data types as well as incompatible data types.</td>
+<td style="width: 50%; height: 48px;">Type conversion can only be applies to compatible data types.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">In type casting, casting operator is needed in order to cast the data type to another  data type.</td>
+<td style="width: 50%; height: 72px;">In type conversion there is no need for a casting operator.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">In type casting, the destination data type may be smaller than the source data type, when converting the data type to another data type.</td>
+<td style="width: 50%; height: 72px;">In type conversion, the destination data type can&#8217;t be smaller than source data type.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Type casting takes place during the program design by programmer.</td>
+<td style="width: 50%; height: 48px;">Type conversion is done at the compile time.</td>
+</tr>
+</tbody>
+</table></div>
+<p>SDD to carry out type checking:</p>
+<p>E-&gt;n/E*E/E==E/E[E]?E↑</p>
+<p>E-&gt;n {E.type=lookup(n.entry)}</p>
+<p>E-&gt;E<sub>1</sub>*E<sub>2</sub> {E.type=(E1.type==E2.type)?E<sub>1</sub>.type:type error}</p>
+<p>E-&gt;E<sub>1</sub>==E<sub>2</sub>{E.type=(E<sub>1</sub>.type==E<sub>2</sub>.type)? boolean : type error}</p>
+<p>E-&gt;E<sub>1</sub>[E<sub>2</sub>] {E.type=(E<sub>1</sub>.type==&#8221;array&#8221; and E<sub>2</sub>.type==&#8221;integer&#8221; )? integer: type_error}</p>
+<p>E-&gt;E<sub>1</sub>↑ {E.type=(E<sub>1</sub>.type==pointer(t))? t: type_error}</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>Difference between compiler and interpreter.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;"></td>
+<td style="width: 33.3333%;">compiler</td>
+<td style="width: 33.3333%;">Interpreter</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">Definition</td>
+<td style="width: 33.3333%;">It is a program that translates the entire source code of a program into machine code.</td>
+<td style="width: 33.3333%;">It directly executes the source code of a program line by line.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">Execution</td>
+<td style="width: 33.3333%;">compilation is done before the program is executed.</td>
+<td style="width: 33.3333%;">Interpretation is done during the execution of the program.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">Speed</td>
+<td style="width: 33.3333%;">The compiled code is generally faster as it is optimized for the specific target platform.</td>
+<td style="width: 33.3333%;">The interpreted code is generally slower as the interpretor has to execute the source code line by line.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">Error</td>
+<td style="width: 33.3333%;">Compiler reports all the error.</td>
+<td style="width: 33.3333%;">Reports error one at a time.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">Memory space</td>
+<td style="width: 33.3333%;">Requires more memory to store generated machine code.</td>
+<td style="width: 33.3333%;">Requires less memory as they don&#8217;t generate machine code.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are the typical entries made in symbol table? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The following are the typical entries made in symbol table:</p>
+<p>1. Name:</p>
+<p>-&gt;Name of identifier</p>
+<p>-&gt;May be stored directly or as a pointer to another character string.</p>
+<p>2.Type</p>
+<p>-&gt;Type of identifier: variable, label, procedure name</p>
+<p>-&gt;For variables its type: basic types, derived types</p>
+<p>3.Location:</p>
+<p>-&gt;Offset within the program where the current definition is valid.</p>
+<p>4.other attributes:</p>
+<p>-&gt;array limits, fields of records, parameters, return values.</p>
+<p>5.scope:</p>
+<p>-&gt;Region of the program where the current definition is valid.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define Left recursive grammar. Remove left recursion from the following grammar.<br />
+S→SB | Ca<br />
+B→Bb | c<br />
+C→aB | a</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>What are the disadvantages of shift reduce parsin perform shift reduce parsing of string</p>
+<p>w=(x-x)-(x/x) for grammar</p>
+<p>E=E-E/ E/E / (E) / x</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SR parsing is a bottom-up parsing technique. It&#8217;s disadvantages are:</p>
+<p>-&gt; They have a limited lookaheads.</p>
+<p>-&gt;They need to perform backtracking.</p>
+<p>Given string:</p>
+<p>(x-x)-(x/x)</p>
+<p>Grammar:</p>
+<p>E=E-E/ E/E / (E) / x</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">stack</td>
+<td style="width: 33.3333%; height: 24px;">Input</td>
+<td style="width: 33.3333%; height: 24px;">Production</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$</td>
+<td style="width: 33.3333%; height: 24px;">(x-x)<sup>&#8211;</sup> (x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift(</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(</td>
+<td style="width: 33.3333%; height: 24px;">x-x)<sup>&#8211;</sup> (x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift x</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(x</td>
+<td style="width: 33.3333%; height: 24px;">-x)<sup>&#8211;</sup> (x/x)</td>
+<td style="width: 33.3333%; height: 24px;">Reduce E-&gt;x</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E</td>
+<td style="width: 33.3333%; height: 24px;">-x)<sup>&#8211;</sup> (x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift<sup>&#8211;</sup></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E<sup>&#8211;</sup></td>
+<td style="width: 33.3333%; height: 24px;">x)<sup>&#8211;</sup> (x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift x</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E<sup>&#8211;</sup> X</td>
+<td style="width: 33.3333%; height: 24px;">)<sup>&#8211;</sup>(x/x)</td>
+<td style="width: 33.3333%; height: 24px;">Reduce E-&gt;x</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E<sup>&#8211;</sup> E</td>
+<td style="width: 33.3333%; height: 24px;">)<sup>&#8211;</sup>(x/x)</td>
+<td style="width: 33.3333%; height: 24px;"> Reduce E-&gt;E <sup>&#8211;</sup> E</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E</td>
+<td style="width: 33.3333%; height: 24px;">)<sup>&#8211;</sup>(x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift )</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$(E)</td>
+<td style="width: 33.3333%; height: 24px;"><sup>&#8211;</sup>(x/x)</td>
+<td style="width: 33.3333%; height: 24px;">Reduce e-&gt;(E)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 258px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">$E</td>
+<td style="width: 33.3333%; height: 24px;"><sup>&#8211;</sup>(x/x)</td>
+<td style="width: 33.3333%; height: 24px;">shift <sup>&#8211;</sup></td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup></td>
+<td style="width: 33.3333%; height: 26px;">(x/x)</td>
+<td style="width: 33.3333%; height: 26px;">shift (</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(</td>
+<td style="width: 33.3333%; height: 26px;">x/x)</td>
+<td style="width: 33.3333%; height: 26px;">shift x</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(x</td>
+<td style="width: 33.3333%; height: 26px;">/x)</td>
+<td style="width: 33.3333%; height: 26px;">Reduce E-&gt;x</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E</td>
+<td style="width: 33.3333%; height: 26px;">/x)</td>
+<td style="width: 33.3333%; height: 26px;">shift )</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E/</td>
+<td style="width: 33.3333%; height: 26px;">x)</td>
+<td style="width: 33.3333%; height: 26px;">shift x</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E/x</td>
+<td style="width: 33.3333%; height: 26px;">)</td>
+<td style="width: 33.3333%; height: 26px;">Reduce E-&gt;x</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E/E</td>
+<td style="width: 33.3333%; height: 26px;">)</td>
+<td style="width: 33.3333%; height: 26px;">Reduce E-&gt;E/E</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E</td>
+<td style="width: 33.3333%; height: 26px;">)</td>
+<td style="width: 33.3333%; height: 26px;">shift )</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;">$E<sup>&#8211;</sup>(E)</td>
+<td style="width: 33.3333%; height: 26px;">$</td>
+<td style="width: 33.3333%; height: 26px;">Reduce E-&gt;(E)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;">$E<sup>&#8211;</sup>E</td>
+<td style="width: 33.3333%;">$</td>
+<td style="width: 33.3333%;">Reduce E-&gt;E <sup>&#8211; </sup>E</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">$E</td>
+<td style="width: 33.3333%;">$</td>
+<td style="width: 33.3333%;">Accept</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define attribute grammar with example of inherited and synthesized attributes</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Attribute grammar is a special form of context free grammar where some additional information (attribute) are append to one or more of its non terminals in order to provide context sensitive information. Each attribute has a well defined domain of values , such as integer, float, character, string and expressions.</p>
+<p>Ex:</p>
+<p>E-&gt;E+T {E.valve= E.valve + T.valve}</p>
+<p>If the valve of attribute depends only upon it&#8217;s children then it is synthesized attribute.</p>
+<p>Ex:</p>
+<p>here, S-&gt;ABC, if S is taking valves from its child nodes (A,B,C) then it is said to be a synthesized attribute.</p>
+<p>If the valve of attribute depends on the parent or siblings then  it is called inherited attribute.</p>
+<p>Ex:</p>
+<p>S-&gt; ABC, if A gets valve from S, B, C or if B gets valve from S, A, C, likewise C gets valve from S, A, B then it is called inherited attribute.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define three address code. Write down Quadruples for a=-b*(c+d)/e</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The address code that uses at most three addresses for operands and one for result is called three address code. Each instruction in 3AC can be described as 4-tuples coperator, operand 1, operand 2, result). Ex: x=y+z.</p>
+<p>Given :</p>
+<p>a=-b*(c+d)/e</p>
+<p>Let&#8217;s write three address code</p>
+<p>t1=-b</p>
+<p>t2=c+d</p>
+<p>t3=t1*t2</p>
+<p>t4=t3/e</p>
+<p>a=t4</p>
+<p>-&gt; Quadruples</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">index</td>
+<td style="width: 20%; height: 24px;">operator</td>
+<td style="width: 20%; height: 24px;">arg 1</td>
+<td style="width: 20%; height: 24px;">arg 2</td>
+<td style="width: 20%; height: 24px;">result</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">(0)</td>
+<td style="width: 20%; height: 24px;">&#8211;</td>
+<td style="width: 20%; height: 24px;">b</td>
+<td style="width: 20%; height: 24px;"></td>
+<td style="width: 20%; height: 24px;">t1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">(1)</td>
+<td style="width: 20%; height: 24px;">+</td>
+<td style="width: 20%; height: 24px;">c</td>
+<td style="width: 20%; height: 24px;">d</td>
+<td style="width: 20%; height: 24px;">t2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">(2)</td>
+<td style="width: 20%; height: 24px;">*</td>
+<td style="width: 20%; height: 24px;">t1</td>
+<td style="width: 20%; height: 24px;">t2</td>
+<td style="width: 20%; height: 24px;">t3</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">(3)</td>
+<td style="width: 20%; height: 24px;">/</td>
+<td style="width: 20%; height: 24px;">t3</td>
+<td style="width: 20%; height: 24px;">e</td>
+<td style="width: 20%; height: 24px;">t4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">(4)</td>
+<td style="width: 20%; height: 24px;">=</td>
+<td style="width: 20%; height: 24px;">t4</td>
+<td style="width: 20%; height: 24px;"></td>
+<td style="width: 20%; height: 24px;">a</td>
+</tr>
+</tbody>
+</table></div>
+<p>fig: Quadruples for given grammar</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>List out the different types of runtime storage management techniques.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Runtime  storage management or dynamic memory management deals with the allocation, deallocation and organization of memory during program execution.</p>
+<p>Tow of the most commonly used runtime storage management techniques are:</p>
+<p>i) stack allocation</p>
+<p>ii) Heap allocation</p>
+<p>Stack storage allocation</p>
+<p>The allocation of memory during run time using stack is called stack storage allocation. Stack is a Last In First Out(LIFO) storage structure where new storage is allocated and deallocated at only one &#8220;end&#8221; called the top of the stack.</p>
+<p>-&gt;Storage is organized as stack and activation records are pushed and popped as activation begin and end, respectively.</p>
+<p>-&gt;At runtime, activation record can be allocated and deallocated by incrementing and decrementing top of the stack.</p>
+<p>Advantages:</p>
+<p>-&gt;Supports recursion as memory is always allocated on block entry.</p>
+<p>-&gt;allows creating data structure dynamically.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the advantages of code optimization. Define Dead-code elimination.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The advantages of code optimization are:</p>
+<ol style="list-style-type:decimal;">
+<li>Faster Execution: Optimized code runs faster and performs computations more efficiently, resulting in reduced execution time.</li>
+<li>Reduced Resource Usage: Optimized code consumes fewer system resources, such as CPU cycles, memory, and disk space. By utilizing system resources efficiently, you can optimize the overall performance of your software and improve the scalability of your application.</li>
+<li>Improved User Experience: Optimized code leads to a smoother and more responsive user experience.</li>
+<li>Lower Costs: Optimized code can reduce hardware requirements and save on infrastructure costs.</li>
+<li>Extended Battery Life: For software running on battery-powered devices, code optimization can help conserve energy.</li>
+<li>Easier Maintenance: Well-optimized code tends to be more modular, readable, and organized. This makes it easier for developers to understand, maintain, and modify the codebase over time.</li>
+</ol>
+<p>Dead-code elimination:</p>
+<p>Dead code elimination is a process in software development where unused or unreachable code is identified and removed from the program. This optimization technique improves the efficiency and readability of the codebase.</p>
+<p>Ex:</p>
+<p>unoptimized code:</p>
+<p>i=0;</p>
+<p>if(i==1)</p>
+<p>{</p>
+<p>a=x+i;</p>
+<p>}</p>
+<p>Optimized code:</p>
+<p>i=0;here, i is already initialized as 0. so there is no need of the part i==1.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Factors affecting (target code generator) code generator/code generator design issues</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>1. Input to the code generator-&gt; The input to the code generator is the intermediate representation together with the information in the symbol table.</p>
+<p>2. the target program-&gt; The output of the code generator is the target code. The target code comes in three forms: absolute machine language, relocatable machine language and assembly machine language.</p>
+<p>3. The target machine-&gt; Implementing code generation requires  understand of the target machine architecture and its instruction set.</p>
+<p>4. Instruction selection-&gt; Instruction selection is important to obtain efficient code, suppose we translate 3AC as:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-20321" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-09-155210.png?resize=294%2C111&#038;ssl=1" alt="" width="294" height="111"></p>
+<p>5. Register allocation: Since registers are the fastest memory in the computer, the ideal solution is to store valves in register we must choose which valves are in the register at any given time.</p>
+</div>
+</body></html>

@@ -1,0 +1,603 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DSA Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>DSA Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions:: Attempt any TWO Questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>Define Queue. Write are different applications of queue? Explain queue operations with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A queue is an ordered collection of items from which items may be deleted at one end (called the front of the queue) and into which items may be inserted at the other end (the rear of the queue).</p>
+<p>A stack works as LIFO (Last-in-First-out) technique but the queue work as FIFO technique (First-in-First-out).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-5650 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/queue.png?resize=860%2C267&#038;ssl=1" alt="Queue | FIFO Technique | HAMROCSIT" width="860" height="267" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/queue.png?w=860&amp;ssl=1 860w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/queue.png?resize=768%2C238&amp;ssl=1 768w" sizes="auto, (max-width: 860px) 100vw, 860px" /></p>
+<h4><span style="text-decoration: underline;"><strong>Application of Queue:</strong></span></h4>
+<ol style="list-style-type:decimal;">
+<li>Task Waiting for the printing</li>
+<li>Time sharing system for use of CPU</li>
+<li>For access to disk storage</li>
+<li>Task scheduling in operating system</li>
+</ol>
+<h4><span style="text-decoration: underline;">Operations on Queue:</span></h4>
+<ol style="list-style-type: lower-roman;">
+<li>MakeEmpty(q): To make q as an empty queue</li>
+<li>Enqueue(q, x): To insert an item x at the reat of the queue</li>
+<li>Dequeue(q): To delete an item from the first of the queue</li>
+<li>isFull(q): To check whether the queue is full</li>
+<li>isEmpty(q): To  check whether the queue q is empty</li>
+<li>traverse(q): To read entire queue that is to display the conrtext of the queue</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Program to implement Queue Operations:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+#define MAX_SIZE 100
+int arr_queue[MAX_SIZE];
+int rear = 0;
+int front = 0;
+
+int isFull(){
+    return (rear == MAX_SIZE);
+}
+
+int isEmpty(){
+    return (front == rear);
+}
+
+void dequeue(){
+    if( isEmpty() ){
+        printf("Queue is Empty.\n");
+    }else{
+        printf("Dequeued element = %d\n", arr_queue[front]);
+        front++;
+    }
+}
+
+void enqueue(int val){
+    if( isFull() ){
+        printf("Queue is Full.\n");
+    }else{
+        arr_queue[rear] = val;
+        rear++;
+    }
+}
+
+void traverse(){
+    if( isEmpty() ){
+        printf("Queue is Empty.\n");
+    }else{
+        int i;
+        printf("\n\nQueue Data are:\n");
+        for (i = front; i &lt; rear; i++)
+            printf("Position : %d, Value  : %d\n", i, arr_queue[i]);
+    }
+}
+
+
+int main(){
+
+    int item, choice, i;
+    int exit = 1;
+
+    printf("Queue Main Menu");
+    printf("\n1.Insert \n2.Remove \n3.Display \nOthers to exit");
+    do{
+        printf("\nEnter Your Choice : ");
+        scanf("%d", &amp;choice);
+
+        switch (choice){
+            case 1:
+                printf("Enter Element an item to insert: ");
+                scanf("%d", &amp;item);
+                enqueue(item);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                traverse();
+                break;
+            default:
+                exit = 0;
+                break;
+        }
+    } while (exit);
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Queue Main Menu
+1.Insert 
+2.Remove 
+3.Display 
+Others to exit
+Enter Your Choice : 1
+Enter Element an item to insert: 12
+
+Enter Your Choice : 1
+Enter Element an item to insert: 15
+
+Enter Your Choice : 1
+Enter Element an item to insert: 17
+
+Enter Your Choice : 3
+
+
+Queue Data are:
+Position : 0, Value  : 12
+Position : 1, Value  : 15
+Position : 2, Value  : 17
+
+Enter Your Choice : 2
+Dequeued element = 12
+
+Enter Your Choice : 2
+Dequeued element = 15
+
+Enter Your Choice : 2
+Dequeued element = 17
+
+Enter Your Choice : 2
+Queue is Empty.
+
+Enter Your Choice : 12</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain circular linked list with example. How do you implement linked list operation in singly linked list? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Singly linked list, each node contains two fields one is info which is used to store data items and another is link field that is used to  point next the next node in the list. The last node has NULL pointer.The following example a singly linked list that contains three elements</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5648 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/singly-linked-list-min.jpg?resize=545%2C101&#038;ssl=1" alt="Singly linked list | HAMROCSIT" width="545" height="101" /></p>
+<p><span style="text-decoration: underline;"><strong>Operations on linked list:</strong></span></p>
+<ol style="list-style-type: lower-alpha;">
+<li>Creation</li>
+<li>Insertion</li>
+<li>Deletion</li>
+<li>Traversing</li>
+<li>Searching</li>
+</ol>
+<h4><span style="text-decoration: underline;"><strong>a) Creating a Node:</strong></span></h4>
+<ul style="list-style-type: square;">
+<li>To create new node, We use the malloc function to dynamically allocate the memory for new node.</li>
+<li>After creating the node, We can store the new item in the node using pointer.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Steps to create a new node and store an item:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">NodeType *p;
+p = (NodeType *)malloc(sizeof(NodeType));
+p-&gt;info = 50;
+p-&gt;next = NULL;</pre>
+<h4>b) Insert Node</h4>
+<p>To insert an element or a node in a linked list, the following three things to be done:</p>
+<ol style="list-style-type:decimal;">
+<li>Allocating a node</li>
+<li>Assigning a data to info field of the node</li>
+<li>Adjusting a pointer and a new node may be inserted</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Algorithm to insert a node:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. Create a node using malloc
+     NewNode = (NodeType *) malloc(sizeof(NodeType));
+2. Assign data to info field of new Node:
+     NewNode-&gt;info = newItem;
+3. Entering the position of node at which you wantt o insert a new node
+4. set temp = head;
+5. if(head == NULL) then
+      printf("Void insertion") and exit
+6. for(i=1; i &lt; pos - 1; i++)
+      temp = temp-&gt;next;
+7. Set NewNode-&gt;next = temp-&gt;next;
+   Set temp-&gt;next = NewNode;
+8. End</pre>
+<h4>c) Deleting Node</h4>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. IF head  == NULL
+     print "Void Deletion" and exit
+2. Enter position of node at which you want to delete a new node. Let this position is pos.
+3. set temp = head and declare a pointer of structure be *p;
+4. for(i=1; i&lt; pos-1; i++)
+     temp = temp-&gt;next;
+5. Print deleted item is temp-&gt;next-&gt;info;
+6. Set p = temp-&gt;index;
+7. Set temp-&gt;next = temp-&gt;next-&gt;next;
+8. free(p);</pre>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is binary search tree? Write a program to implement insertion and deletion algorithms in binary search tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Binary Search Tree is a binary tree that is either empty or in which every node contains a key and satisfy the following conditions:</p>
+<ol style="list-style-type:decimal;">
+<li>All keys in the left sub-tree of the root are smaller than the key in the root node.</li>
+<li>All the keys in the right sub tree are greater than the key in the root node.</li>
+<li>The left and right sub-trees of the root are again binary search trees.</li>
+</ol>
+<p>Example: BST tree of numbers: 50, 70, 60, 20, 90, 10, 40, 100</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5645 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Binary-Search-Tree-Construction-Step-08-1.png?resize=364%2C208&#038;ssl=1" alt="Binary Search Tree | HAMROCSIT" width="364" height="208" /></p>
+<p><span style="text-decoration: underline;"><strong>Program:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct node{
+    int key;
+    struct node *left, *right;
+};
+
+
+struct node *newNode(int item){
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp-&gt;key = item;
+    temp-&gt;left = temp-&gt;right = NULL;
+    return temp;
+}
+
+
+void inorder(struct node *root){
+    if (root != NULL){
+        inorder(root-&gt;left);
+        printf("%d -&gt; ", root-&gt;key);
+        inorder(root-&gt;right);
+    }
+}
+
+struct node *insert(struct node *node, int key){
+    if (node == NULL)
+        return newNode(key);
+    if (key &lt; node-&gt;key)
+        node-&gt;left = insert(node-&gt;left, key);
+    else
+        node-&gt;right = insert(node-&gt;right, key);
+    return node;
+}
+
+
+struct node *minValueNode(struct node *node){
+    struct node *current = node;
+    while (current &amp;&amp; current-&gt;left != NULL)
+        current = current-&gt;left;
+    return current;
+}
+
+
+struct node *deleteNode(struct node *root, int key){
+    if (root == NULL)
+        return root;
+
+    if (key &lt; root-&gt;key)
+        root-&gt;left = deleteNode(root-&gt;left, key);
+    else if (key &gt; root-&gt;key)
+        root-&gt;right = deleteNode(root-&gt;right, key);
+    else{
+        if (root-&gt;left == NULL){
+            struct node *temp = root-&gt;right;
+            free(root);
+            return temp;
+        }else if (root-&gt;right == NULL){
+            struct node *temp = root-&gt;left;
+            free(root);
+            return temp;
+        }
+
+        struct node *temp = minValueNode(root-&gt;right);
+        root-&gt;key = temp-&gt;key;
+        root-&gt;right = deleteNode(root-&gt;right, temp-&gt;key);
+    }
+    return root;
+}
+
+int main(){
+    struct node *root = NULL;
+    root = insert(root, 6);
+    root = insert(root, 7);
+    root = insert(root, 3);
+    root = insert(root, 2);
+    root = insert(root, 4);
+    root = insert(root, 19);
+    root = insert(root, 17);
+    root = insert(root, 8);
+
+    printf("Inorder traversal:");
+    inorder(root);
+
+    printf("\nAfter deleting 10\n");
+    root = deleteNode(root, 10);
+    printf("Inorder traversal: ");
+    inorder(root);
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Inorder traversal:2 -&gt; 3 -&gt; 4 -&gt; 6 -&gt; 7 -&gt; 8 -&gt; 17 -&gt; 19 -&gt; 
+After deleting 10
+Inorder traversal: 2 -&gt; 3 -&gt; 4 -&gt; 6 -&gt; 7 -&gt; 8 -&gt; 17 -&gt; 19 -&gt;</pre>
+</div>
+<h2>Short Answer Questions:: Attempt any EIGHT Questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>How do you find complexity of algorithms? Explain</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Time complexity of an algorithm signifies the total time required by the program to run till its completion.</p>
+<p>The time complexity of algorithms is most commonly expressed using the <b>big O notation</b>. It&#8217;s an asymptotic notation to represent the time complexity.</p>
+<p><span style="text-decoration: underline;"><strong>Calculating Time Complexity:</strong></span></p>
+<p>Now the most common metric for calculating time complexity is Big O notation. This removes all constant factors so that the running time can be estimated in relation to <b>N</b>, as N approaches infinity.</p>
+<p>Let take and example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int sum(int A[], int n){
+   int sum = 0, i;
+   for(i = 0; i &lt; n; i++)
+      sum = sum + A[i];
+   return sum;
+}</pre>
+<p>For the above code, time complexity can be calculated as follows&#8230;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-5643 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/time_complexity.png?resize=1300%2C500&#038;ssl=1" alt="Time Complexity  | HAMROCSIT" width="1300" height="500" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/time_complexity.png?w=1300&amp;ssl=1 1300w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/time_complexity.png?resize=1024%2C394&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/time_complexity.png?resize=768%2C295&amp;ssl=1 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+<p>The time complexity of above program is 4n + 4</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Evaluate the expression ABCD-x+ using stack where A=5, B=4, C=3 and D=7</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given Expresion is</p>
+<p style="text-align: center;">ABCD-x+,    where A = 5, B = 4, C = 3, D = 7</p>
+<p>Final expression will be</p>
+<p style="text-align: center;">5437-x+</p>
+<p>Now we will calculate expression using stack</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.2882%; text-align: center;"><strong>Scanned Character</strong></td>
+<td style="width: 33.2882%; text-align: center;"><strong>Stack</strong></td>
+<td style="width: 33.2882%; text-align: center;"><strong>Evaluation</strong></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">5</td>
+<td style="width: 33.2882%; text-align: center;">5</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">4</td>
+<td style="width: 33.2882%; text-align: center;">5,4</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">3</td>
+<td style="width: 33.2882%; text-align: center;">5,4,3</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">7</td>
+<td style="width: 33.2882%; text-align: center;">5,4,3,7</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">&#8211;</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+<td style="width: 33.2882%; text-align: center;">3-7=-4</td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;"></td>
+<td style="width: 33.2882%; text-align: center;">5,4,-4</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">x</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+<td style="width: 33.2882%; text-align: center;">4 x (-4) = -16</td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;"></td>
+<td style="width: 33.2882%; text-align: center;">5, -16</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 33.2882%; text-align: center;">+</td>
+<td style="width: 33.2882%; text-align: center;"></td>
+<td style="width: 33.2882%; text-align: center;">5 + (-16) = -11</td>
+</tr>
+</tbody>
+</table></div>
+<p>So the final answer will be -11</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is priority queue? Why do you need this type of queue?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A prority queue is a collection of elements such that each element has been assigned a prority and the order in which elements are deleted and processed comes in following rules:</p>
+<ol style="list-style-type: lower-roman;">
+<li>An element of higher priority is processed before any element of lower priority.</li>
+<li>If two elements has same priority then they are processed according to the order in which they were added to the queue.</li>
+</ol>
+<p>The best aplication of prority queue is observed in CPU scheduling.</p>
+<p>There are two types of priority queue:</p>
+<ol style="list-style-type:decimal;">
+<li>Ascending Priority Queue</li>
+<li>Descending Priority Queue</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Importance of Priority Queue:</strong></span></p>
+<p>Priority queues are very important to systems that juggle multiple programs and their execution (programs are chosen to run based on their priority). They are also very important to networking systems, like the internet, because they can help prioritize important data to make sure it gets through faster.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a recursive program to find nth fibonacci number.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Recursive program to find nth fibonacci number:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int fibonacci(int);
+
+int main(){
+    int numbers, i;
+
+    printf("How many numbers? ");
+    scanf("%d", &amp;numbers);
+
+    printf("Fibonacci series:\n");
+
+    for (i = 0; i &lt; numbers; i++){
+        printf("%d\t", fibonacci(i));
+    }
+
+    return 0;
+}
+
+int fibonacci(int n){
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return (fibonacci(n - 1) + fibonacci(n - 2));
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">How many numbers? 10
+Fibonacci series:
+0       1       1       2       3       5       8       13      21      34</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain array implementation of list.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To implement a list, We need to define large array to hold al the items of the list. The first item of the list is placed 0<sup>th</sup> position of array and successive items in successive positions of the array. The operation of insertion and deletion of the items can be done to/from anywhere wwithin the list.</p>
+<p><span style="text-decoration: underline;"><strong>Implementation:</strong></span></p>
+<p>For array implementation, let first we make assumptions for some user-defined jeywords that we are going to use further.</p>
+<ul style="list-style-type: square;">
+<li><em><strong>N</strong></em> be the maximum number of elements/items in  an array.</li>
+<li><em><strong>array[N]</strong></em> be an array to hold the items of lists.</li>
+<li><em><strong>last_index</strong> </em>is deined to indicate index of the last element.</li>
+<li>Initially, <em><strong>last_index</strong> </em>= -1</li>
+</ul>
+<p>Now, we perform array implemenattion for operations insertion and deletion as follow:</p>
+<p><span style="text-decoration: underline;"><strong>1. Insertion:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>Read the position <em><strong>pos</strong> </em>to insert</li>
+<li>If <em><strong>pos</strong></em> &gt; <em><strong>last_index</strong></em> + 1, declare invalid and return.</li>
+<li>let <em><strong>i</strong></em> = <em><strong>last_index</strong></em></li>
+<li>while (i &gt; pos)<br />
+array[i+1] = array[i];</li>
+<li>array[pos] = x;</li>
+<li>Incement <em><strong>last_index</strong></em></li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>2. Deletion:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>Read position <strong><em>pos</em></strong> to delete</li>
+<li>If <em><strong>pos</strong></em> &gt; <em><strong>last_index</strong></em>, declare invald and return</li>
+<li>x = array[pos]</li>
+<li>i = pos;</li>
+<li>while( i &lt; last_index)<br />
+array[i]=array[i+1];<br />
+i = i+1;</li>
+<li>Decrement <em><strong>last_index</strong></em></li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Hand test selection sort with array of numbers 4, 71, 32, 19, 61, 2, -5 in descending order.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given data are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%; text-align: center;">4</td>
+<td style="width: 14.2857%; text-align: center;">71</td>
+<td style="width: 14.2857%; text-align: center;">32</td>
+<td style="width: 14.2857%; text-align: center;">19</td>
+<td style="width: 14.2857%; text-align: center;">61</td>
+<td style="width: 14.2857%; text-align: center;">2</td>
+<td style="width: 14.2857%; text-align: center;">-5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, for the first position in the sorted array, the entire array is to be scanned sequentially.</p>
+<p>At present, <strong>4</strong> is stored at the first position, after searching the entire array, it is found that <strong>71</strong> is the largest value.</p>
+<p>So, swap 4 with 71. After the first iteration, 71 will appear at the first position in the sorted array.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%; text-align: center;">71</td>
+<td style="width: 14.2857%; text-align: center;">4</td>
+<td style="width: 14.2857%; text-align: center;">32</td>
+<td style="width: 14.2857%; text-align: center;">19</td>
+<td style="width: 14.2857%; text-align: center;">61</td>
+<td style="width: 14.2857%; text-align: center;">2</td>
+<td style="width: 14.2857%; text-align: center;">-5</td>
+</tr>
+</tbody>
+</table></div>
+<p>The same process is applied to the rest of the array elements.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%;">71</td>
+<td style="width: 14.2857%;">4</td>
+<td style="width: 14.2857%;">32</td>
+<td style="width: 14.2857%;">19</td>
+<td style="width: 14.2857%;">61</td>
+<td style="width: 14.2857%;">2</td>
+<td style="width: 14.2857%;">-5</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">71</td>
+<td style="width: 14.2857%;">61</td>
+<td style="width: 14.2857%;">32</td>
+<td style="width: 14.2857%;">19</td>
+<td style="width: 14.2857%;">4</td>
+<td style="width: 14.2857%;">2</td>
+<td style="width: 14.2857%;">-5</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Write a program to implement sequential search algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Program to implement sequential search:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main(){
+    int size, i, search, found=0;
+    printf("Enter size of Array: ");
+    scanf("%d", &amp;size);
+
+    int data[size];
+    printf("Enter %d numbers in Array: ", size);
+    for(i=0; i &lt; size; i++){
+        scanf("%d", &amp;data[i]);
+    }
+
+    printf("Enter the number to be search:");
+    scanf("%d", &amp;search);
+    
+    for (i = 0; i &lt; size; i++){
+        if( data[i] == search ){
+            printf("%d found in Array in index %d", search, i);
+            found = 1;
+            break;
+        }
+    }
+
+    if( ! found ){
+        printf("The number is not in Array.\n");
+    }
+    return 0;
+}</pre>
+<p>The output of above program is:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter size of Array: 5
+Enter 5 numbers in Array: 10
+12
+13
+14
+15
+Enter the number to be search:12
+12 found in Array in index 1</pre>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is graph traversal? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Graph traversal is a technique to visit the each nodes of a graph G. It is also use to calculate the order of vertices in traverse process. We visit all the nodes starting from one node which is connected to each other without going into loop.</p>
+<p>Basically in graph it may happen some time visiters can visit one node more than once. So, this may cause the going the visiters into infinite loop. So, to protect from this infinite loop condition we keep record of each vertices. Like if visiters visited vertex then the value will be zero if not, then one.</p>
+<p><span style="text-decoration: underline;"><strong>Types of Graph Traversal:</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li>Breadth First search</li>
+<li>Depth First search</li>
+</ol>
+<h3>1. Breadth First Search</h3>
+<p>Breadth-first search graph traversal techniques use a queue data structure as an auxiliary data structure to store nodes for further processing. The size of the queue will be the maximum total number of vertices in the graph.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5631 " src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/BFS-traversal-in-data-structure.jpg?resize=335%2C359&#038;ssl=1" alt="Breadth First Search | HAMROCSIT" width="335" height="359" /></p>
+<h3>2. Depth First Search</h3>
+<p>DFS stands for Depth First Search, is one of the graph traversal algorithms that use Stack data structure. In DFS Traversal go as deep as possible of the graph and then backtrack once reached a vertex that has all its adjacent vertices already visited.</p>
+<p>Depth First Search (DFS) algorithm traverses a graph in a depthward motion and uses a stack data structure to remember to get the next vertex to start a search when a dead end occurs in any iteration.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5632 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/DFS-graph-traversal.jpg?resize=302%2C356&#038;ssl=1" alt="Depth First Search | HAMROCSIT" width="302" height="356" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Divide and Conquer sorting</li>
+<li>AVL Tree</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>a) Divide and Conquer Sorting:</h3>
+<p>Divide and Conquer is an  important problem-solving technique that makes use of recursion. It is an effective recursive algorithm that consists of two parts:</p>
+<ol style="list-style-type: lower-roman;">
+<li><span style="text-decoration: underline;"><strong>Divide:-</strong></span> In which smaller problems are solved recursively.</li>
+<li><span style="text-decoration: underline;"><strong>Conquer:-</strong></span> In which the solution to the original problem is then formed from the solutions to the sub-problems.</li>
+</ol>
+<p>Traditionally, routines in which the algoritm contains at least two recursive calls are called divide-and-conquer algoritms whereas the recursives routines presented so far in this section are not divide-and-conquer algorithms. Also, the sub-problems usually must be disjoint (i.e. essentially no overlapping), so as to avoid the excessive oosts seen in the sample recursive computation of the Fibonacci numbers.</p>
+<p>Following are the divide-and-conquer algorithms:</p>
+<ol style="list-style-type:decimal;">
+<li>Quick Sort</li>
+<li>Merge Sort</li>
+<li>Heap Sort</li>
+</ol>
+<h3>b) AVL Tree</h3>
+<p>The first balanced binary tree is the AVL tree. AVL tree checks the height of the left and right sub-trees and assures that the difference is not more than 1. The difference is called the balance factor. An AVL tree is a binary search tree where the balance number at each node is -1, 0, or 1. For an AVL tree of height H, we find that it must contain at least F<sub>H+3</sub> &#8211; 1 nodes.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5627" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/AVL-Tree1.jpg?resize=263%2C223&#038;ssl=1" alt="AVL Tree example | Hamro CSIT" width="263" height="223" /></p>
+<p>The above tree is AVL because differences between heights of left and right subtrees for every node is less than or equal to 1.</p>
+</div>
+</body></html>

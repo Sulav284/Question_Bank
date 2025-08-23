@@ -1,0 +1,215 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CG Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>CG Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the working details of Mid-point circle algorithm? Trace the points along the line path having two end points (6,9) and (2,3) using Bresenham’s line drawing algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22910" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/circle1-2.jpg?resize=714%2C539&#038;ssl=1" alt="" width="714" height="539"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22911" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/circle2-2.jpg?resize=705%2C600&#038;ssl=1" alt="" width="705" height="600"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22913" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/circle2-3.jpg?resize=769%2C474&#038;ssl=1" alt="" width="769" height="474"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22912" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/circle3-1.jpg?resize=784%2C189&#038;ssl=1" alt="" width="784" height="189"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22916" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230806_225607_CamScanner.jpg?resize=914%2C1248&#038;ssl=1" alt="" width="914" height="1248"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22919" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230806_225632_CamScanner-1.jpg?resize=909%2C1033&#038;ssl=1" alt="" width="909" height="1033"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Differentiate between object space and image space methods of hidden surface removal. Describe the Z-buffer hidden surface removal algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Object-space vs Image Space</strong></p>
+<p>An object-space method compares objects and parts of objects to each other within the scene definition to determine which surfaces, as a whole, we should label as visible. E.g. Back-face detection method.</p>
+<p>In an image-space algorithm, visibility is decided point by point at each pixel position on the projection plane. Most visible-surface algorithms use image-space methods. E.g. Depth-buffer method, Scan-line method, Area-subdivision method</p>
+<p><strong>Z-Buffer</strong></p>
+<p>This method is developed by Edwin Catmull and is an image-space approach. The basic idea is to test the Z-depth of each surface to determine the closest (visible) surface.</p>
+<p>In this method, each surface is processed separately one pixel position at a time across the surface. The depth values for a pixel are compared and the closest (smallest z) surface determines the color to be displayed in the frame buffer.</p>
+<p>It is applied very efficiently on surfaces of polygon. Surfaces can be processed in any order. To override the closer polygons from the far ones, two buffers named frame buffer and depth buffer, are used.</p>
+<ul style="list-style-type: square;">
+<li>Depth buffer is used to store depth values for (x, y) position, as surfaces are processed (0 ≤</li>
+</ul>
+<p>depth ≤ 1).</p>
+<ul style="list-style-type: square;">
+<li>The frame buffer is used to store the intensity value of color value at each position (x, y).</li>
+</ul>
+<p>The z-coordinates are usually normalized to the range [0, 1]. The 0 value for the z-coordinate indicates back clipping pane and the 1 value for the z-coordinates indicates the front clipping pane.</p>
+<p><strong>Algorithm</strong></p>
+<p>Step-1 − Set the buffer values −</p>
+<ul style="list-style-type: square;">
+<li>Depthbuffer (x, y) = 0</li>
+<li>Framebuffer (x, y) = background color Step-2 − Process each polygon (One at a time)</li>
+<li>For each projected (x, y) pixel position of a polygon, calculate depth z.</li>
+</ul>
+<ul style="list-style-type: square;">
+<li>If Z &gt; depthbuffer (x, y)
+<ul style="list-style-type: square;">
+<li>Compute surface color,</li>
+<li>set depthbuffer (x, y) = z,</li>
+<li>framebuffer (x, y) = surfacecolor (x, y)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul style="list-style-type: square;">
+<li>It is easy to implement.</li>
+<li>It reduces the speed problem if implemented in hardware.</li>
+<li>It processes one object at a time.</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul style="list-style-type: square;">
+<li>It requires large memory.</li>
+<li>It is time-consuming process.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Write the algorithm for Cohen-Sutherland Line clipping. Clip the polygon A(100,150), B(200,250) and C(300,200) with the clipping window defined by the coordinates (100,300), (300,300) and (200,100) using Sutherland Hodgeman Polygon Clipping algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Cohen-Sutherland Algorithm</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22922" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/cohen.jpg?resize=578%2C594&#038;ssl=1" alt="" width="578" height="594"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22923" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/suth.jpg?resize=578%2C514&#038;ssl=1" alt="" width="578" height="514"></p>
+<p><strong>Sutherland-Hodgeman Numeric</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22929" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230806_233549_CamScanner-1.jpg?resize=912%2C722&#038;ssl=1" alt="" width="912" height="722"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22931" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230806_233611_CamScanner-1.jpg?resize=894%2C1254&#038;ssl=1" alt="" width="894" height="1254"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22930" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230806_233628_CamScanner-1.jpg?resize=895%2C463&#038;ssl=1" alt="" width="895" height="463"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Reflect a line segment having endpoints (9,3) and (12,10) about a line Y=7. Draw initial and final result graph as well.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22978" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230807_235203_CamScanner.jpg?resize=915%2C1192&#038;ssl=1" alt="" width="915" height="1192"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22979" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/Screenshot_20230807_235240_CamScanner-1.jpg?resize=889%2C726&#038;ssl=1" alt="" width="889" height="726"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Differentiate between raster and vector graphics method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 237px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px; text-align: center;"><strong>Raster graphics method</strong></td>
+<td style="width: 50%; height: 21px; text-align: center;"><strong>Vector graphics method</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Composed of pixels.</td>
+<td style="width: 50%; height: 24px;">Composed of paths.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Used to draw mathematical curves, polygons, etc.</td>
+<td style="width: 50%; height: 24px;">Used to draw continuous and smooth lines.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Costs less.</td>
+<td style="width: 50%; height: 24px;">Costs more.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Occupies more space depending on the image quality.</td>
+<td style="width: 50%; height: 24px;">Occupies less space.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Saved by using file extensions such as JPEG, GIF, etc.</td>
+<td style="width: 50%; height: 24px;">Saved by using file extensions such as EPS, SVG, etc.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Scan conversion is required.</td>
+<td style="width: 50%; height: 24px;">Scan conversion is not required.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Raster graphics refresh process is independent of the complexity of the image.</td>
+<td style="width: 50%; height: 24px;">Vector displays flicker when the number of primitives in the image becomes too large.</td>
+</tr>
+<tr>
+<td style="width: 50%;">When enlarged the pictures show rectangular layers of grids.</td>
+<td style="width: 50%;">When enlarged the accuracy of the picture won&#8217;t change.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain about parametric curve. Describe the properties of Bezier curve.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Parametric curve</strong></p>
+<p>Curves having parametric form are called parametric curves. A two-dimensional parametric curve has the following form:</p>
+<p>P(t)=f(t),g(t)</p>
+<p>The functions f and g becomes the (x,y) co-ordintates of any point on the curve and the points are obtained when the parameter t is varied over a certain interval [a,b] ,normally [0,1].</p>
+<p><span style="text-decoration: underline;"><strong>Algebraic representation of parametric curves</strong></span></p>
+<p><strong>Parametric linear curve: </strong></p>
+<p>p(u)=au+b</p>
+<p>x=a<sub>x</sub>u + b<sub>x</sub></p>
+<p>y=a<sub>y</sub>u + b<sub>y</sub></p>
+<p>z=a<sub>z</sub>u + b<sub>z</sub></p>
+<p><strong>Parametric cubic curve:</strong></p>
+<p>p(u)=au³+bu²+cu+d</p>
+<p>x=a<sub>x</sub>u³+b<sub>x</sub>u²+c<sub>x</sub>u+d<sub>x</sub></p>
+<p>y=a<sub>y</sub>u³+b<sub>y</sub>u²+c<sub>y</sub>u+d<sub>y</sub></p>
+<p>z=a<sub>z</sub>u³+b<sub>z</sub>u²+c<sub>z</sub>u+d<sub>z</sub></p>
+<p><strong>Properties of Bezier curve</strong></p>
+<p>1. Bezier curve lies in the convex hull of the control points which ensures that the curve smoothly follows the control points.<br />
+2. Four Bezier polynomials are used in the construction of a curve to fit four control points.<br />
+3. It always passes through the endpoints.<br />
+4. Closed curves can be generated by specifying the first and last control points at the same position.<br />
+5. Specifying multiple control points at a single position gives more weight to that position.<br />
+6. Complicated curves are formed by piecing several sections of lower degrees together.<br />
+7. The tangent to the curve at an endpoint is along the line joining the endpoint to the adjacent control point.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are blobby objects? How it is represented? Explain the wireframe representation of 3D objects.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Blobby objects and their representation</strong></p>
+<p>By a blobby object, we mean a nonrigid object. That is things, like cloth, rubber, liquids, water<br />
+droplets, etc. These objects tend to exhibit a degree of fluidity.<br />
+For example, in a chemical compound electron density clouds tend to be distorted by the presence of other atoms/molecules</p>
+<p>Several models have been developed to handle these kinds of objects.</p>
+<p>One technique is to use a combination of Gaussian density functions (Gaussian bumps).</p>
+<p>A surface function could then be defined by:</p>
+<p>D(r)=ae<sup>-br²</sup></p>
+<p>Another technique called the meta-ball technique is to describe the object as being made of density functions much like balls. The advantage here is that the density function falls off in a finite interval.</p>
+<p>D(r) is given by:</p>
+<p>a ( 1 &#8211; (3r² / b²) ) ; o ≤ r ≤ b/3</p>
+<p>3a / 2 (1- r/b) ² ; b/3 ≤  r ≤  b</p>
+<p>0 ; b ≤ r</p>
+<p>&nbsp;</p>
+<p><strong>Wireframe representation</strong></p>
+<p>A wireframe is a three-dimensional model that only includes vertices and lines. It does not contain surfaces, textures, or lighting like a 3D mesh. Instead, a wireframe model is a 3D image comprised of only &#8220;wires&#8221; that represent three-dimensional shapes. A wire-frame model is a visual presentation of a 3-dimensional (3D) or physical object used in 3D computer graphics. Wireframes provide the most basic representation of a three-dimensional scene or object. They are often used as the starting point in 3D modeling since they create a &#8220;frame&#8221; for 3D structures. For example, a 3D graphic designer can create a model from scratch by simply defining points (vertices) and connecting them with lines (paths). Once the shape is created, surfaces or textures can be added to make the model appear more realistic.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22962" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/wireframe.png?resize=419%2C308&#038;ssl=1" alt="" width="419" height="308"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Calculate the total memory required to store a 8 minute video in a SVGA system with 24 bit true color and 25 fps.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-22982" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230808_000631_CamScanner.jpg?resize=901%2C942&#038;ssl=1" alt="" width="901" height="942"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Find the composite transformation matrix for reflection about a line y=mx+c.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22965" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/1.jpg?resize=824%2C459&#038;ssl=1" alt="" width="824" height="459"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-22966" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/2.jpg?resize=848%2C613&#038;ssl=1" alt="" width="848" height="613">                  <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22964" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/3.jpg?resize=677%2C158&#038;ssl=1" alt="" width="677" height="158"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is polygon table? Explain the use of this method in 3D object representation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Polygon tables can be used to specify polygon surfaces. We specify a polygon surface with a set of vertex coordinates and associated attribute parameters. As information for each polygon is input, the data are placed into tables that are to be used in the subsequent processing, display, and manipulation of the objects in a scene.</p>
+<p>Polygon tables can be organized into two groups:</p>
+<p><strong>1. Geometric data tables:</strong> Contains vertex coordinates and parameters to identify the spatial orientation of the polygon surfaces. Geometric data consists of three tables: a vertex table, an edge table, and a surface table.</p>
+<ul style="list-style-type: square;">
+<li>Vertex table: It stores coordinate values for each vertex of the object.</li>
+<li>Edge Table: The edge table contains pointers back into the vertex table to identify the vertices for each polygon edge.</li>
+<li>Surface table: The polygon table contains pointers back into the edge table to identify the edges for each polygon surface.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22970" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/polygon.jpg?resize=497%2C452&#038;ssl=1" alt="" width="497" height="452"></p>
+<p><strong>2. Attribute tables:</strong> Provides information for an object and includes parameters specifying the degree of transparency of the object and its surface reflectivity and texture characteristics. Attribute information for an object includes parameters specifying the degree of transparency of the object and its surface reflectivity and texture characteristics. The above three tables also include the polygon attribute according to their pointer information.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define the term ‘rendering’ in computer graphics. Explain Phong Shading Method with its advantage and disadvantage.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Rendering is the process of calculating intensity and color considerations for a polygon surface.</p>
+<p><strong>Phong Shading:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>A more accurate interpolation-based approach for rendering a polygon was developed by Phong Bui Tuong.</li>
+<li>Basically, the Phong surface rendering model is also called normal-vector interpolation rendering.</li>
+<li>It interpolates normal vectors instead of intensity values.</li>
+<li>To render a polygon, Phong surface rendering proceeds as follows:</li>
+<li>Determine the average unit normal vector at each vertex of the polygon.</li>
+<li>Linearly interpolate the vertex normal over the projected area of the polygon.</li>
+<li>Apply an illumination model at positions along scan lines to calculate pixel intensities using the interpolated normal vectors as shown in figure below:</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22973" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/phong-1.jpg?resize=519%2C174&#038;ssl=1" alt="" width="519" height="174"></p>
+<p><strong>Advantages:</strong></p>
+<p>i. It displays more realistic highlights on a surface.</p>
+<p>ii. It greatly reduces the Mach band effect.</p>
+<p>iii. It gives more accurate results.</p>
+<p><strong>Disadvantages:</strong></p>
+<p>It requires more calculations and greatly increases the cost of shading steeply.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two)</p>
+<p>a. BSP Tree</p>
+<p>b. Virtual Reality</p>
+<p>c. Intensity Attenuation</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. BSP Tree </strong></p>
+<p>Binary space partitioning is a 3-D graphics programming technique of dividing a scene into two recursively using hyperplanes. In other words, a 3-D scene is split in two using a 2-D plane, then that scene is divided in two using a 2-D plane, and so on. The resulting data structure is a binary tree or a tree where every node has two branches. The technique is widely used to speed up the rendering of 3-D scenes, especially in games.  Binary space partitioning (BSP) is a method for recursively subdividing a space into convex sets by hyperplanes. This subdivision gives rise to a representation of objects within the space by means of a tree data structure known as a BSP tree.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-22975" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/Binary_space_partition.png?resize=562%2C238&#038;ssl=1" alt="" width="562" height="238"></p>
+<p>&nbsp;</p>
+<p><strong>b. Virtual Reality</strong></p>
+<p>Virtual reality or virtual reality (VR), also known as immersive multimedia or computer-simulated reality, is a computer technology that replicates an environment, real or imagined and simulates a user&#8217;s physical presence and environment to allow for user interaction. Virtual realities artificially create sensory experiences, which can include sight, touch, hearing, and smell. Most up-to-date virtual realities are displayed either on a computer monitor or with a virtual reality headset (also called head-mounted display) Some simulations include additional sensory information and focus on real sound through speakers or headphones targeted towards VR users. VR is able to immerse you in a computer-generated world of your own making: a room, a city, the interior of the human body. With VR, you can explore any uncharted territory of the human imagination.</p>
+<p><strong>c. Intensity Attenuation</strong></p>
+<p>As radiant energy from a point light source travels through space, its amplitude is attenuated by the factor l/d², where d is the distance that the light has traveled. This means that a surface close to the light source (small d) receives higher incident intensity from the source than a distant surface (large d). Therefore to produce realistic lighting effects, the illumination model should take intensity attenuation into account. Otherwise, we are likely to illuminate all surfaces with the same intensity.</p>
+<p>For a point light source attenuation factor is 1/d².</p>
+<p>And for a distributed light source attenuation factor is given by inverse quadratic attenuation function,</p>
+<p>f(d) = 1 / (a<sub>0</sub>+a<sub>1</sub>d+a<sub>2</sub>d<sup>2</sup>)</p>
+</div>
+</body></html>

@@ -1,0 +1,253 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>SAD Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Any Two Question .</h2><h3>Question 1</h3>
+<div><p><p>What is system development life cycle (SDLC)? Explain each phase of SDLC in detail</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System analysis and design are the complex, challenging, and simulating organization processes that a team of business and system professionals uses to develop and maintain computer-based information systems. It is an organizational improvement process. Information systems are built and rebuilt for their benefit.</p>
+<p><span style="text-decoration: underline;"><strong>Phases of SDLC:</strong></span></p>
+<p>When developing the information system, most organizations use a standard set of steps called the system development life cycle (SDLC).</p>
+<p>It includes Five phases: Planning, Analysis, Design, Implementation, and Maintenance.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11543 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/image__3_-removebg-preview.jpg?resize=302%2C305&#038;ssl=1" alt="SDLC Phases" width="302" height="305" /></p>
+<p><span style="text-decoration: underline;"><b>1. </b><b>Planning :</b></span></p>
+<p>This phase begins after the project has been defined and appropriate resources have been committed. The first part of this phase involves collecting, defining, and validating functional, support, and training requirements. The second portion is developing initial life cycle management plans, including project planning, project management, Configuration Management (CM), support, operations, and training management. We cannot just go and build the system.</p>
+<p><span style="text-decoration: underline;"><b>2.  </b><b>Analysis:</b></span></p>
+<p>System requirements are studied and structured in this phase. System analysts collect facts from existing system users in order to develop limitations and details. They will also define new system objectives. They use different data-gathering techniques such as interviews, observations and surveys. This is an attempt to understand all aspects of the current system and eventually indicate how things may be improved by a new system.</p>
+<p><span style="text-decoration: underline;"><b>3. D</b><b>esign:</b></span></p>
+<p>Describes how the system will fulfill the user requirements. To achieve this, the logical and physical design must be created. The <b>logical design</b> produced during the analysis is turned into a <b>physical design</b> – a detailed description of what is needed to solve original problem. Input, output, databases, forms, codification schemes, and processing specifications are drawn up in detail. In the design stage, the programming language and the hardware and software platform in which the new system will run are also decided. The data structure, control process, equipment source, workload and limitation of the system, Interface, documentation, training, procedures of using the system, taking backups, and staffing requirements are decided at this stage.</p>
+<p><span style="text-decoration: underline;"><b>4. </b><b>Implementation:</b></span></p>
+<p>This is followed by testing and then implementation. During this phase, the new or enhanced system is installed in the production environment, users are trained, data is converted, the system is turned over to the sponsor, and business processes are evaluated. This stage includes efforts required to implement, resolve system problems identified during the implementation process, and plan for sustainment. <b>Coding </b>– the physical design specifications are turned into working computer code. <b>Integration and Testing</b>– a testing environment is created where all components are brought together. <b>Installation </b>– here the new system is rolled out.</p>
+<p><span style="text-decoration: underline;"><b>5. </b><b>Maintenance:</b></span></p>
+<p>After the user acceptance of the new system is developed, the implementation phase arises. Implementation is the stage of a project during which theory is turned into practice.</p>
+<p>The major steps involved in this phase are:</p>
+<ul style="list-style-type: square;">
+<li>Acquisition and Installation of Hardware and Software</li>
+<li>Conversion</li>
+<li>User Training</li>
+<li>Documentation</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Assume monetary benefits of an information system of $70,000 the first year and increasing benefits of $10,000 a year for the next four years, one-time development costs of $90,000, and recurring costs of $40,000 per year over the duration of the system’s life. The discount rate for the company was 1! percent. Using a five-year time horizon, calculate the net present value of these costs and benefits. Also, calculate the overall return on investment and then present a breakeven analysis. At what point does breakeven occur?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Now let&#8217;s calculate the present value of the costs:</p>
+<p>Year 1: ($90,000 + $40,000) / (1 + 0.01)<sup>1</sup> = $129,300</p>
+<p>Year 2: $40,000 / (1 + 0.01)<sup>2</sup> = $39,560</p>
+<p>Year 3: $40,000 / (1 + 0.01)<sup>3</sup> = $38,765</p>
+<p>Year 4: $40,000 / (1 + 0.01)<sup>4</sup> = $37,928</p>
+<p>Year 5: $40,000 / (1 + 0.01)<sup>5</sup> = $37,141</p>
+<p>The present value of the costs is $243,694</p>
+<p>To calculate the NPV, we subtract the present value of the costs from the present value of the benefits:</p>
+<p>NPV = $423,294 &#8211; $243,694 = $179,600</p>
+<p>To calculate the return on investment (ROI), we divide the NPV by the development costs and multiply by 100%.</p>
+<p>ROI = ($179,600 / $90,000) * 100% = 199.55%</p>
+<p>To perform a breakeven analysis, we need to determine how long it takes for the benefits to equal the costs. We can do this by setting up the following equation:</p>
+<p>$70,000 + $10,000<em>x = $90,000 + $40,000</em>x</p>
+<p>Where x is the number of years.</p>
+<p>Solving for x, we get:</p>
+<p>x = $90,000 / $30,000 = 3 years</p>
+<p>This means that it will take 3 years for the benefits to equal the costs, so the breakeven point occurs at the end of the 3rd year.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is conceptual data model? How do you gather information for conceptual data modeling?<br />
+Draw ab ER diagram for a retail store in a mall which sells different items to its customers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>Conceptual Data Model</strong> is an organized view of database concepts and their relationships. The purpose of creating a conceptual data model is to establish entities, their attributes, and their relationships. At this data modeling level, there is hardly any detail available on the actual database structure. Business stakeholders and data architects typically create a conceptual data model.</p>
+<p>The 3 basic tenants of the Conceptual Data Model are</p>
+<ul style="list-style-type: square;">
+<li><strong>Entity</strong>: A real-world thing</li>
+<li><strong>Attribute</strong>: Characteristics or properties of an entity</li>
+<li><strong>Relationship</strong>: Dependency or association between two entities</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Characteristics of a conceptual data model:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Offers Organisation-wide coverage of the business concepts.</li>
+<li>This type of Data Model is designed and developed for a business audience.</li>
+<li>The conceptual model is developed independently of hardware specifications like data storage capacity, and location, or software specifications like DBMS vendor and technology. The focus is to represent data as a user will see it in the “real world.”</li>
+</ul>
+<p>The ER diagram for a retail store in a mall that sell different items to its customer is</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11308 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/image-2.png?resize=3874%2C3537&#038;ssl=1" alt="ER Diagram for Retail store" width="3874" height="3537" /></p>
+</div>
+<h2>Section B: Attempt Eight Question.</h2><h3>Question 4</h3>
+<div><p><p>What is system analysis and design? Why is it important for developing information systems?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2><strong><span style="font-size: 14pt;">Systems Analysis</span></strong></h2>
+<p>It is a process of collecting and interpreting facts, identifying the problems, and decomposition of a system into its components. System analysis is conducted for the purpose of studying a system or its parts in order to identify its objectives. It is a problem solving technique that improves the system and ensures that all the components of the system work efficiently to accomplish their purpose. Analysis specifies <b>what the system should do</b>.</p>
+<h2><span style="font-size: 14pt;">Systems Design</span></h2>
+<p>It is a process of planning a new business system or replacing an existing system by defining its components or modules to satisfy the specific requirements. Before planning, you need to understand the old system thoroughly and determine how computers can best be used in order to operate efficiently. System Design focuses on <b>how to accomplish the objective of the system</b>.</p>
+<p>It is important for developing information system because:</p>
+<ul class="rich-text-component css-1nwdjkt eu4oa1w0">
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Enabling comprehension of complicated structures</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Allowing for better management of any business changes</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Aligning the organization with its environment and strategic priorities</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Minimizing IT issues and reducing the workload of IT employees</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Reducing costs in certain areas, saving the organization money and resources for use in other departments</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Identifying potential risks and threats to the processes before they arise</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Improving the overall quality of the system</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Improving the usability of the system by employees</p>
+</li>
+<li class="rich-text-component css-1ojwiuw eu4oa1w0">
+<p class="rich-text-component css-1g5t2dl e1wnkr790">Increasing productivity and customer satisfaction</p>
+</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Why do we need CASE tool during system development? What are different components of<br />
+CASE tool?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>we need CASE tool during system development because:</p>
+<ul style="list-style-type: square;">
+<li>As the special emphasis is placed on the redesign as well as testing, the servicing cost of a product over its expected lifetime is considerably reduced.</li>
+<li>The overall quality of the product is improved as an organized approach is undertaken during the process of development.</li>
+<li>Chances to meet real-world requirements are more likely and easier with a computer-aided software engineering approach.</li>
+<li>CASE indirectly provides an organization with a competitive advantage by helping ensure the development of high-quality products.</li>
+</ul>
+<h3><strong>Types of CASE Tools:</strong></h3>
+<ol style="list-style-type:decimal;">
+<li><strong>Diagramming Tools:</strong><br />
+It helps in diagrammatic and graphical representations of the data and system processes. It represents system elements, control flow and data flow among different software components and system structures in a pictorial form. For example, Flow Chart Maker tool for making state-of-the-art flowcharts.</li>
+<li><strong>Computer Display and Report Generators:</strong> These help in understanding the data requirements and the relationships involved.</li>
+<li><strong>Analysis Tools:</strong> It focuses on inconsistent, incorrect specifications involved in the diagram and data flow. It helps in collecting requirements, automatically check for any irregularity, imprecision in the diagrams, data redundancies, or erroneous omissions.<br />
+For example:</p>
+<ul style="list-style-type: square;">
+<li>(i) Accept 360, Accompa, CaseComplete for requirement analysis.</li>
+<li>(ii) Visible Analyst for total analysis.</li>
+</ul>
+</li>
+<li><strong>Central Repository:</strong> It provides a single point of storage for data diagrams, reports, and documents related to project management.</li>
+<li><strong>Documentation Generators:</strong> It helps in generating user and technical documentation as per standards. It creates documents for technical users and end users.<br />
+For example, Doxygen, DrExplain, Adobe RoboHelp for documentation.</li>
+<li><strong>Code Generators:</strong> It aids in the auto-generation of code, including definitions, with the help of designs, documents, and diagrams.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is project management? Explain some activities and skills of a project manager.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Project management is the process of scoping, planning, staffing, organizing, directing, and controlling the development of an acceptable system at the minimum cost and within a specified time.</p>
+<p>Project managers require a variety of skills to be able to effectively do their jobs and ultimately benefit both their respective organizations and project stakeholders. These capabilities can be gleaned from experience and take years to master. However, they offer great benefits that could significantly contribute to managers’ career development. The following are some of the best project management skills that project managers should possess:</p>
+<p id="leadership"><strong><span style="text-decoration: underline;">1. Leadership:</span></strong></p>
+<p>The issue of project leadership has always been and always will be a focal point among businesses. This is why it is undoubtedly at the top of a project manager’s most important skills. This skill enables project managers to come up with corporate visions and lead teams effectively. Boosting this skill will greatly improve the project managers’ career advancement.</p>
+<p id="communication"><span style="text-decoration: underline;"><strong>2. Communication:</strong></span></p>
+<p>Communication goes hand-in-hand with leadership skills. To be an effective leader, one has to be able to make clear what project teams must do. However, communication is not limited to the project team, it also applies to all stakeholders, including vendors, contractors, and customers. Such can be done through the use of technologies such as reporting tools, chat or file sharing. Such tools facilitate person-to-person and group communication alike.</p>
+<p id="scheduling"><span style="text-decoration: underline;"><strong>3. Scheduling Capability:</strong></span></p>
+<p>Another one of the project manager’s most important skills is the ability to create project schedules that cannot be undermined. However, it has been established that many project managers are lacking in this skill, an area where improvements are greatly needed.</p>
+<p id="risk"><span style="text-decoration: underline;"><strong>4. Risk Management:</strong></span></p>
+<p>The proliferation of unique projects has resulted in project managers becoming more adept at risk management. Unlike common projects, which are often outsourced or assigned to less seasoned project managers, these unique undertakings entail more complicated efforts that only mature project managers are capable of handling. Having this skill is a sign of having control over your project. Besides, it’s an effective way of assuring project sponsors that their investments are in good hands.</p>
+<p id="negotiating"><span style="text-decoration: underline;"><strong>5. Negotiating:</strong></span></p>
+<p>Project managers who have excellent negotiating skills are likely to resolve conflicts that may arise among project stakeholders. This could lead to the formulation of ideal scenarios that could prove to be amicable to all concerned.</p>
+<p id="contract"><span style="text-decoration: underline;"><strong>6. Contract Management:</strong></span></p>
+<p>The ability to manage contracts is very useful in maintaining relationships with suppliers. As every project involves material supply, such skill really comes in handy for project managers. Managing purchases is basically the cream of contract management. As such functions have previously been handled by finance departments, relegating it to project managers makes the process much simpler.</p>
+<p id="team"><span style="text-decoration: underline;"><strong>7. Team Management:</strong></span></p>
+<p>Needless to say, most members of project teams need guidance from project managers and the most effective way to do this is by coaching. Having this skill will enable you to make up for employee shortcomings such as inadequate project experience and therefore, need coaching. And besides, coaching has been proven to help students to significantly boost their performance.</p>
+<p id="cost"><span style="text-decoration: underline;"><strong>8. Cost Management:</strong></span></p>
+<p>An essential project management skill, cost management is of critical importance to most businesses. Failure to comply with this need could hurt organizations that run on tight budgets. Project managers who are knowledgeable in this area can deliver projects not only on time but within the budget as well.</p>
+<p id="critical"><span style="text-decoration: underline;"><strong>9. Critical Thinking:</strong></span></p>
+<p>It is a fact that critical thinking is the basis of all sound decisions and corporate decisions are no exception to this rule. Project managers who consider the pros and cons of potential answers to specific problems, practice critical thinking. This skill separates those who are adept at managing issues from those who are not. The development of critical thinking skills require practice and tools that can help you logically structure arguments before coming up with a decision.</p>
+<p id="task"><span style="text-decoration: underline;"><strong>10. Task Management:</strong></span></p>
+<p>An effective project manager should also be adept at task management. This skill involves the ability to come up with task lists and delegate them while keeping absolute control over the project. To be able to harness this skill, one must learn the process of making lists. Strategies for ensuring that one is constantly on top of such a list should also be developed. This is known to ensure that project completion time is always on time.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the process initialing and planning information system development project in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Many activities performed during initiation and planning could also be completed during the next phase of the SDLC—systems analysis. Proper and insightful project initiation and planning, including determining project scope and identifying project activities, can reduce the time needed to complete later project phases, including systems analysis. For example, a careful feasibility analysis conducted during initiation and planning could lead to rejecting a project and saving a considerable expenditure of resources. The actual amount of time expended will be affected by the size and complexity of the project as well as by the experience of your organization in building similar systems. A rule of thumb is that between 10 and 20 percent of the entire development effort should be expended on initiation and planning. In other words, you should not be reluctant to spend considerable time and energy early in the project’s life in order to fully understand the motivation for the requested system.</p>
+<p>Most organizations assign an experienced systems analyst, or team of analysts for large projects, to perform project initiation and planning. The analyst will work with the proposed customers—managers and users in a business unit—of the system and other technical development staff in preparing the final plan. Experienced analysts working with customers who well understand their information services needs should be able to perform a detailed analysis with relatively little effort. Less experienced analysts with customers who only vaguely understand their needs will likely expend more effort in order to be certain that the project scope and work plan are feasible. The objective of project initiation and planning is to transform a vague system request document into a tangible project description. Effective communication among the systems analysts, users, and management is crucial to the creation of a meaningful project plan. Getting all parties to agree on the direction of a project may be difficult for cross-department projects when different parties have different business objectives. Projects at large, complex organizations require systems analysts to take more time to analyze both the current and proposed systems.</p>
+<p>As its name implies, two major activities occur during project initiation and project planning. Project initiation focuses on activities that will help organize a team to conduct project planning. During initiation, one or more analysts are assigned to work with a customer to establish work standards and communication procedures. The second activity, project planning, focuses on defining clear, discrete tasks and the work needed to complete each task. The objective of the project planning process is to produce two documents: a baseline project plan (BPP) and the project scope statement (PSS). The BPP becomes the foundation for the remainder of the development project. It is an internal document used by the development team but not shared with customers. The PSS, produced by the project team, clearly outlines the objectives of the project for the customer. As with the project initiation process, the size, scope, and complexity of a project dictate the comprehensiveness of the project planning process and the resulting documents. Further, numerous assumptions about resource availability and potential problems will have to be made. Analysis of these assumptions and system costs and benefits forms a<strong> business case</strong>.</p>
+<p><strong>Deliverables and Outcomes</strong></p>
+<p>The major outcomes and deliverables from project initiation and planning are the baseline project plan and the project scope statement. The<strong> baseline project plan (BPP) contains</strong> all information collected and analyzed during the project initiation and planning activity. The plan contains the best estimate of the project’s  cope, benefits, costs, risks, and resource requirements given the current understanding of the project. The BPP specifies detailed project activities for the next life cycle phase—systems analysis—and provides less detail for subsequent project phases (because these depend on the results of the analysis phase). Similarly, benefits, costs, risks, and resource requirements will become more specific and quantifiable as the project progresses. The project selection committee uses the BPP to help decide whether to continue, redirect, or cancel a project. If selected, the BPP becomes the foundation document for all subsequent SDLC activities; however, it is updated as new information is learned during subsequent SDLC activities.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How can you use prototyping for determining system prototyping requirements? Compare throwaway with evolutionary prototyping.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Prototyping can be used during requirements determination to collect user requirements and present them in the form of a working system prototype. 1) <b>Users can look at, play with, and compare the prototype to their system requirements</b>. 2) Analysts can then adjust the prototype to better fit what the users have in mind.</p>
+<h4 id="4c29" class="ir is gw bd it iu iv iw ix iy iz ja jb ie jc jd je ii jf jg jh im ji jj jk jl bi">Throwaway Prototyping:</h4>
+<p id="6c24" class="pw-post-body-paragraph ht hu gw hv b hw jm hy hz ia jn ic id ie jo ig ih ii jp ik il im jq io ip iq gp bi" data-selectable-paragraph="">Throwaway prototypes are developed from the initial requirements but they have not been used for the final product and are not an alternative to the written specification of the requirements. It enables quick prototyping and commits to throwing the prototype away. If the users can get quick feedback on their requirements, they may be able to refine the requirements early in the development of the software. Then changes can be done early in the development life cycle. The throwaway prototype has a short project timeline and easier and faster to develop the interface. This type of prototyping can be used at any time in a project by any of the project’s personnel. Throwaway prototypes actually do nothing, it’s just presentations only for a limited purpose. Soon it will be starting to become a thing of the past. This type of prototyping is not getting used as much now.</p>
+<h4 id="9171" class="ir is gw bd it iu iv iw ix iy iz ja jb ie jc jd je ii jf jg jh im ji jj jk jl bi">Evolutionary Prototyping:</h4>
+<p id="23c5" class="pw-post-body-paragraph ht hu gw hv b hw jm hy hz ia jn ic id ie jo ig ih ii jp ik il im jq io ip iq gp bi" data-selectable-paragraph="">Evolutionary Prototyping is considered to be the most fundamental form of prototyping and this prototyping type is also known as <strong class="hv gx">breadboard</strong> <strong class="hv gx">prototyping. </strong>The main concept of this prototyping type is to build a robust prototype and constantly improve it. These prototypes are built only with well-understood requirements instead of acknowledging all the requirements. It allows developers to add features or make changes that couldn’t be devised during the requirements analysis and design. Developers are helped to develop the part by part of the system considering the usability aspects and this type of prototype is delivered as a working system to the end user.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is the purpose of database design? Compare logical design with physical design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div>
+<p><strong>Database Design</strong> is a collection of processes that facilitate the designing, development, implementation and maintenance of enterprise data management systems. Properly designed database are easy to maintain, improves data consistency and are cost effective in terms of disk storage space. The database designer decides how the data elements correlate and what data must be stored. The main objectives of database design in DBMS are to produce logical and physical designs models of the proposed database system. It helps produce database systems</p>
+<ol style="list-style-type:decimal;">
+<li>That meet the requirements of the users</li>
+<li>Have high performance.</li>
+</ol>
+<p>Database design process in DBMS is crucial for <strong>high performance</strong> database system.</p>
+<p>Difference between physical design and logical design given below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table width="100%">
+<tbody>
+<tr>
+<td>Physical Design</td>
+<td>Logical Design</td>
+</tr>
+<tr>
+<td>Physical design is highly detailed.</td>
+<td>Logical design is a high-level design and doesn’t provide any detail.</td>
+</tr>
+<tr>
+<td>Physical design is more graphical than textual; however, it can comprise both.</td>
+<td>Logical design can be textual, graphic, or both.</td>
+</tr>
+<tr>
+<td>A physical design focuses on specific solutions explaining how they are assembled or configured.</td>
+<td>A logical design focuses on satisfying the design factors, including risks, requirements, constraints, and assumptions.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is testing? Explain any four different testing techniques.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>System Testing</strong> is a level of testing that validates the complete and fully integrated software product. The purpose of a system test is to evaluate the end-to-end system specifications. Usually, the software is only one element of a larger computer-based system. Ultimately, the software is interfaced with other software/hardware systems. System Testing is defined as a series of different tests whose sole purpose is to exercise the full computer-based system.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Usability Testing –</strong> mainly focuses on the user’s ease to use the application, flexibility in handling controls and ability of the system to meet its objectives</li>
+<li><strong>Load Testing –</strong> is necessary to know that a software solution will perform under real-life loads.</li>
+<li><strong>Regression Testing –</strong> involves testing done to make sure none of the changes made over the course of the development process have caused new bugs. It also makes sure no old bugs appear from the addition of new software modules over time.</li>
+<li><strong>Recovery Testing –</strong> is done to demonstrate a software solution is reliable, trustworthy and can successfully recoup from possible crashes.</li>
+<li><strong>Migration Testing –</strong> is done to ensure that the software can be moved from older system infrastructures to current system infrastructures without any issues.</li>
+<li><strong>Functional Testing –</strong> Also known as functional completeness testing, Functional Testing involves trying to think of any possible missing functions. Testers might make a list of additional functionalities that a product could have to improve it during functional testing.</li>
+<li><strong>Hardware/Software Testing –</strong> IBM refers to Hardware/Software testing as “HW/SW Testing”. This is when the tester focuses his/her attention on the interactions between the hardware and software during system testing.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is class diagram? Explain class diagram with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Class diagram is a static diagram. It represents the static view of an application. Class diagram is not only used for visualizing, describing, and documenting different aspects of a system but also for constructing executable code of the software application. Class diagram describes the attributes and operations of a class and also the constraints imposed on the system. The class diagrams are widely used in the modeling of object oriented systems because they are the only UML diagrams, which can be mapped directly with object-oriented languages. Class diagram shows a collection of classes, interfaces, associations, collaborations, and constraints. It is also known as a structural diagram.</p>
+<p>The following diagram is an example of an Order System of an application. It describes a particular aspect of the entire application.</p>
+<ul class="list">
+<li>First of all, Order and Customer are identified as the two elements of the system. They have a one-to-many relationship because a customer can have multiple orders.</li>
+<li>Order class is an abstract class and it has two concrete classes (inheritance relationship) SpecialOrder and NormalOrder.</li>
+<li>The two inherited classes have all the properties as the Order class. In addition, they have additional functions like dispatch () and receive ().</li>
+</ul>
+<p>The following class diagram has been drawn considering all the points mentioned above.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/uml/images/uml_class_diagram.jpg?ssl=1" alt="UML Class Diagram" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:<br />
+a. Agile development<br />
+b. Decision tree</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a) Agile Development</p>
+<p>Agile SDLC model is a combination of iterative and incremental process models with focus on process adaptability and customer satisfaction by rapid delivery of working software product. Agile Methods break the product into small incremental builds. These builds are provided in iterations. Each iteration typically lasts from about one to three weeks. Every iteration involves cross functional teams working simultaneously on various areas like −</p>
+<ul class="list">
+<li>Planning</li>
+<li>Requirements Analysis</li>
+<li>Design</li>
+<li>Coding</li>
+<li>Unit Testing and</li>
+<li>Acceptance Testing.</li>
+</ul>
+<p>At the end of the iteration, a working product is displayed to the customer and important stakeholders.</p>
+<p>Here is a graphical illustration of the Agile Model −</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/sdlc/images/sdlc_agile_model.jpg?ssl=1" alt="SDLC Agile Model" /></p>
+<p>b) Decision Tree</p>
+<p>Decision trees are a method for defining complex relationships by describing decisions and avoiding the problems in communication. A decision tree is a diagram that shows alternative actions and conditions within horizontal tree framework. Thus, it depicts which conditions to consider first, second, and so on.</p>
+<p>Decision trees depict the relationship of each condition and their permissible actions. A square node indicates an action and a circle indicates a condition. It forces analysts to consider the sequence of decisions and identifies the actual decision that must be made.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/system_analysis_and_design/images/decision_tree.jpg?ssl=1" alt="Decision Tree" /></p>
+<p>The major limitation of a decision tree is that it lacks information in its format to describe what other combinations of conditions you can take for testing. It is a single representation of the relationships between conditions and actions.</p>
+<p>For example, refer the following decision tree −</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/system_analysis_and_design/images/decision_example.jpg?ssl=1" alt="Decision Example" /></p>
+</div>
+</body></html>

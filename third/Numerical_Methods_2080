@@ -1,0 +1,261 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NM Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>NM Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>How secant methods differs from Newton Rhapson method? Derive the formula for Secant Method. Solve the equation Cosx + 2Sinx – x² = 0 using Secant method. Assume error precision as 0.01. Discuss the drawbacks of the Newton Rhapson method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Secant vs NR:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Derivative Requirement</strong>: Newton-Raphson requires the derivative of the function, while Secant does not.</li>
+<li><strong>Convergence Rate</strong>: Newton-Raphson generally converges faster when it works, whereas the Secant method has a somewhat slower convergence rate but may be more reliable for certain functions and initial guesses.</li>
+<li><strong>Initial Guess Sensitivity</strong>: Newton-Raphson is highly sensitive to the initial guess, while the Secant method is somewhat less sensitive.</li>
+</ol>
+<p><strong>Derivation of Secant:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23253" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214458_CamScanner-1.jpg?resize=877%2C1235&#038;ssl=1" alt="" width="877" height="1235"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23254" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_214517_CamScanner-1.jpg?resize=883%2C942&#038;ssl=1" alt="" width="883" height="942"></p>
+<p><strong>Solution of the numeric:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25972" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_171458_CamScanner.jpg?resize=910%2C873&#038;ssl=1" alt="" width="910" height="873"></p>
+<p><strong>Drawbacks of NR:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Sensitivity to Initial Guess</strong>: One of the major drawbacks of the Newton-Raphson method is its sensitivity to the choice of the initial guess. If the initial guess is too far from the actual root or falls on a point where the derivative is close to zero, the method may fail to converge or converge to a different root.</li>
+<li><strong>Need for Derivative</strong>: The Newton-Raphson method requires the computation of the derivative of the function, which may not always be readily available or easy to compute. In some cases, finding the derivative analytically can be challenging or even impossible.</li>
+<li><strong>Multiple Roots</strong>: If a function has multiple roots within the vicinity of the initial guess, the Newton-Raphson method may converge to one of these roots depending on the choice of the initial guess.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define the terms interpolation and extrapolation. Write down the algorithm and program for Newton’s divided difference interpolation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Interpolation</strong> and <strong>extrapolation</strong> are mathematical techniques used to estimate or predict values between or beyond known data points.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Interpolation</strong>:
+<ul style="list-style-type: square;">
+<li>Interpolation is the process of estimating values within a range of known data points.</li>
+<li>It involves finding a function or polynomial that fits the data points and can be used to approximate values at points between those data points.</li>
+<li>The goal is to find a smooth curve or function that passes through the given data points.</li>
+<li>Interpolation is typically used when you want to estimate values within the range of your data.</li>
+</ul>
+</li>
+<li><strong>Extrapolation</strong>:
+<ul style="list-style-type: square;">
+<li>Extrapolation, on the other hand, is the process of estimating values outside the range of known data points.</li>
+<li>It involves extending the known data trend or function to make predictions about values beyond the existing data.</li>
+<li>Extrapolation is riskier than interpolation because it assumes that the trend observed in the existing data will continue outside the observed range.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Algorithm for Newton&#8217;s Divided Difference Interpolation</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li>Input the data points (x_i, y_i) where x_i are the independent variable values and y_i are the corresponding dependent variable values.</li>
+<li>Calculate the divided difference table for the given data.</li>
+<li>Construct the interpolating polynomial using the divided differences.</li>
+<li>Evaluate the interpolating polynomial for the desired value of x to obtain the interpolated y-value.</li>
+</ol>
+<p><strong>Program for Newton&#8217;s Divided Difference Interpolation:</strong></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function to calculate the divided difference table<br />
+void dividedDifferenceTable(double x[], double y[], int n, double table[][n]) {<br />
+for (int i = 0; i &lt; n; i++) {<br />
+table[i][0] = y[i];<br />
+}</p>
+<p>for (int j = 1; j &lt; n; j++) {<br />
+for (int i = 0; i &lt; n &#8211; j; i++) {<br />
+table[i][j] = (table[i + 1][j &#8211; 1] &#8211; table[i][j &#8211; 1]) / (x[i + j] &#8211; x[i]);<br />
+}<br />
+}<br />
+}</p>
+<p>// Function to perform Newton&#8217;s divided difference interpolation<br />
+double newtonInterpolation(double x[], double y[], int n, double x_interp) {<br />
+double table[n][n];<br />
+dividedDifferenceTable(x, y, n, table);</p>
+<p>double result = 0.0;<br />
+double term = 1.0;</p>
+<p>for (int j = 0; j &lt; n; j++) {<br />
+result += table[0][j] * term;<br />
+term *= (x_interp &#8211; x[j]);<br />
+}</p>
+<p>return result;<br />
+}</p>
+<p>int main() {<br />
+int n;<br />
+printf(&#8220;Enter the number of data points: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;n);</p>
+<p>double x[n], y[n];</p>
+<p>printf(&#8220;Enter the data points (x, y):\n&#8221;);<br />
+for (int i = 0; i &lt; n; i++) {<br />
+scanf(&#8220;%lf %lf&#8221;, &amp;x[i], &amp;y[i]);<br />
+}</p>
+<p>double x_interp;<br />
+printf(&#8220;Enter the value of x for interpolation: &#8220;);<br />
+scanf(&#8220;%lf&#8221;, &amp;x_interp);</p>
+<p>double interpolated_y = newtonInterpolation(x, y, n, x_interp);<br />
+printf(&#8220;Interpolated value at x = %.2lf: %.6lf\n&#8221;, x_interp, interpolated_y);</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How Gauss Jordan method differs from Gauss Elimination method? Solve the following system of equations using Gauss Jordan method. How can we use Gauss Jordan method to find the inverse of a matrix? Discuss.</p>
+<p>2x – y + 4z = 15</p>
+<p>2x + 3y – 2z = 4</p>
+<p>3x + 2y – 4z = -4</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Gauss Jordan vs Gauss Elimination:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Gauss Jordan</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Gauss Elimination</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">The primary purpose of the Gauss-Jordan method is to find the inverse of a square matrix.</td>
+<td style="width: 50%;">The primary purpose of the Gauss elimination method is to solve a system of linear equations for a unique solution (or determine if there is no solution or infinitely many solutions).</td>
+</tr>
+<tr>
+<td style="width: 50%;">In the Gauss-Jordan method, you also start with an augmented matrix (the square matrix to be inverted augmented with the identity matrix of the same size), and you perform row operations to transform this augmented matrix into the form where the original matrix becomes the identity matrix, and the inverse of the original matrix appears on the other side.</td>
+<td style="width: 50%;">In the Gauss elimination method, you start with a system of linear equations and perform row operations (addition, subtraction, and multiplication) to transform the augmented matrix (the coefficient matrix with the constants on the right-hand side) into row-echelon form and then into reduced row-echelon form (also known as row-reduced form).</td>
+</tr>
+<tr>
+<td style="width: 50%;">The Gauss-Jordan method yields the inverse of the original matrix if it exists. If the original matrix is singular (non-invertible), the Gauss-Jordan method will not produce an inverse.</td>
+<td style="width: 50%;">The Gauss elimination method produces the solution to the system of equations directly or indicates that there is no solution (inconsistent system) or infinitely many solutions (dependent equations).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Solution of the numeric:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25976" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_171518_CamScanner.jpg?resize=891%2C1454&#038;ssl=1" alt="" width="891" height="1454"></p>
+<p><strong>Inverse of a matrix by Gauss Jordan:</strong></p>
+<p>To find the inverse of a square matrix A using the Gauss-Jordan method, follow these steps:</p>
+<ol style="list-style-type:decimal;">
+<li>Create an augmented matrix [A|I], where A is the matrix you want to invert, and I is the identity matrix of the same size.</li>
+<li>Perform row operations on the augmented matrix to transform the left side (matrix A) into the identity matrix. Keep track of the transformations applied to the right side (matrix I).</li>
+<li>Once the left side becomes the identity matrix, the right side will contain the inverse of matrix A.</li>
+<li>If at any point during the process, the left side cannot be transformed into the identity matrix (indicating that A is singular and non-invertible), then the method will not produce an inverse.</li>
+</ol>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25977" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_171542_CamScanner.jpg?resize=897%2C1345&#038;ssl=1" alt="" width="897" height="1345"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Define the terms approximate errot and relative approximate error? Discuss the working of Half Interval method for finding the roots of non-linear equation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Approximate Error</strong>:</p>
+<p>An approximate error, also known as an approximation error, is the difference between an approximate or numerical value and the true or exact value of a quantity. It quantifies how far off or inaccurate an approximation is compared to the actual value. In mathematical and numerical contexts, approximate errors are often expressed as absolute values (to remove the sign) to emphasize the magnitude of the error.</p>
+<p>Mathematically, the approximate error (AE) for an approximation <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span></span></span></span></span> to the true value <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">T</span></span></span></span></span> is given by:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span><span class="mord mathnormal">E</span><span class="mrel">=</span></span><span class="base"><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mbin">−</span></span><span class="base"><span class="mord mathnormal">T</span><span class="mord">∣</span></span></span></span></span></p>
+<p><strong>Relative Approximate Error</strong>:</p>
+<p>The relative approximate error, often denoted as RE or relative error (RE), is a way to express the approximate error as a percentage or a fraction of the true value. It provides a relative measure of the accuracy of the approximation, taking into account the scale of the true value. The relative approximate error is typically expressed as a percentage or fraction.</p>
+<p>Mathematically, the relative approximate error (RE) is calculated as follows:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">RE</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∣<span class="mord mathnormal mtight">T</span>∣/</span></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∣<span class="mord mathnormal mtight">A</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">T</span>∣</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">×</span></span><span class="base"><span class="mord">100%</span></span></span></span></span></p>
+<p>The relative error measures the error relative to the magnitude of the true value, making it a useful metric for comparing the accuracy of approximations for different quantities.</p>
+<p><strong>Half Interval Method (Bisection Method) for Finding Roots of Non-Linear Equations</strong>:</p>
+<p>The Half Interval Method, also known as the Bisection Method, is an iterative numerical technique used to find approximate solutions (roots) of a non-linear equation within a specified interval. It is particularly useful when the equation&#8217;s continuous function changes sign over the interval, indicating the presence of a root.</p>
+<p>Here&#8217;s how the Half Interval Method works:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Initial Interval</strong>: Start with an initial interval [a, b] that contains the root. Ensure that the function has opposite signs at the endpoints, i.e. <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mbin">⋅</span></span><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mrel">&lt;</span></span><span class="base"><span class="mord">0</span></span></span></span></span>, which guarantees the existence of a root within the interval.</li>
+<li><strong>Iterative Process</strong>:
+<ul style="list-style-type: square;">
+<li>Calculate the midpoint <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">c</span></span></span></span></span> of the interval: <span class="math math-inline"><span class="katex"><span class="katex-mathml">2</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">c</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span>.</li>
+<li>Evaluate the function <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></span>.</li>
+<li>If <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></span> is sufficiently close to zero (within a specified tolerance or desired precision), then <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">c</span></span></span></span></span> is an approximate root, and the algorithm terminates.</li>
+<li>Otherwise, determine which subinterval [a, c] or [c, b] contains the root by checking the signs of <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></span> (or <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></span>).</li>
+<li>Update the interval to the subinterval containing the root: If <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mbin">⋅</span></span><span class="base"><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mrel">&lt;</span></span><span class="base"><span class="mord">0</span></span></span></span></span>, set <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">b</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">c</span></span></span></span></span>; otherwise, set <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">c</span></span></span></span></span>.</li>
+<li>Repeat the process by returning to the &#8220;Iterative Process&#8221; step until the desired accuracy is achieved.</li>
+</ul>
+</li>
+<li><strong>Termination</strong>: The method terminates when the interval becomes sufficiently small (typically, when <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mbin">−</span></span><span class="base"><span class="mord mathnormal">a</span><span class="mord">∣</span></span></span></span></span> is less than a specified tolerance) or when the function value at the midpoint is sufficiently close to zero.</li>
+</ol>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23262" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_213539_CamScanner.jpg?resize=355%2C531&#038;ssl=1" alt="" width="355" height="531"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Construct Newton’s backward difference table for given data points and approximate the value of f(x) at x=45.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td>10</td>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>f(x)</strong></td>
+<td>0.985</td>
+<td>0.934</td>
+<td>0.866</td>
+<td>0.766</td>
+<td>0.643</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25980" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172312_CamScanner.jpg?resize=913%2C1010&#038;ssl=1" alt="" width="913" height="1010"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Fit the quadratic curve through the following data points and estimate the value of f(x) at x=2.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>y</strong></td>
+<td>2</td>
+<td>7</td>
+<td>8</td>
+<td>7</td>
+<td>5</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25982" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172336_CamScanner.jpg?resize=904%2C1439&#038;ssl=1" alt="" width="904" height="1439"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Factorise the following matrix using Cholesky method.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25984" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/mat.jpg?resize=95%2C68&ssl=1" alt="" width="95" height="68"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25985" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172518_CamScanner.jpg?resize=907%2C1480&#038;ssl=1" alt="" width="907" height="1480"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How can we calculate derivatives of discrete (tabulated) functions? Write down its algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Calculating derivatives of discrete (tabulated) functions can be done using numerical differentiation techniques. One common approach is to use finite difference methods. Below is an algorithm for calculating the first derivative of a discrete function using the central difference method:</p>
+<p><strong>Algorithm for Calculating First Derivative of a Discrete Function using Central Difference Method:</strong></p>
+<p><strong>Input:</strong></p>
+<ul style="list-style-type: square;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> values: Array or list of input data points.</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">y</span></span></span></span></span> values: Array or list of corresponding function values.</li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul style="list-style-type: square;">
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span>: Array or list of approximated first derivative values.</li>
+</ul>
+<p><strong>Procedure:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Initialize an empty array or list to store the calculated derivative values, <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span>.</li>
+<li>Determine the step size, <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">h</span></span></span></span></span>, which is typically the difference between adjacent <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> values. Calculate <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">h</span></span></span></span></span> as <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">h</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mclose">]</span><span class="mbin">−</span></span><span class="base"><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span></span>, where <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span></span></span></span></span> is any index in the input data.</li>
+<li>Loop through the data points <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span></span></span></span></span> from 1 to <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">N</span><span class="mbin">−</span></span><span class="base"><span class="mord">2</span></span></span></span></span>, where <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">N</span></span></span></span></span> is the number of data points in the input.</li>
+<li>For each <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i<sup>th</sup></span></span></span></span></span> data point, calculate the central difference approximation of the derivative <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> using the formula:
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x = (</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight">i</span><span class="mbin mtight">+</span>1<span class="mclose mtight">]</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight">i</span><span class="mbin mtight">−</span>1<span class="mclose mtight">])/2h</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p>Here, <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">y</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mclose">]</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">y</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mbin">−</span></span><span class="base"><span class="mord">1</span><span class="mclose">]</span></span></span></span></span> are the function values at the adjacent data points.</li>
+<li>Append the calculated <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> value to the <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> array or list.</li>
+<li>For the first and last data points (<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span><span class="mrel">=</span></span><span class="base"><span class="mord">0</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">N</span><span class="mbin">−</span></span><span class="base"><span class="mord">1</span></span></span></span></span>), use one-sided difference formulas to calculate the derivative:
+<ul style="list-style-type: square;">
+<li>For the first point (<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span><span class="mrel">=</span></span><span class="base"><span class="mord">0</span></span></span></span></span>): <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x=(</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span>1<span class="mclose mtight">]</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span>0<span class="mclose mtight">])/h</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></li>
+<li>For the last point (<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">i</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">N</span><span class="mbin">−</span></span><span class="base"><span class="mord">1</span></span></span></span></span>): <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x=</span><span class="mrel">(</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight">N</span><span class="mbin mtight">−</span>1<span class="mclose mtight">]</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">y</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight">N</span><span class="mbin mtight">−</span>2<span class="mclose mtight">])/h</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Append the derivatives for the first and last points to the <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> array or list.</li>
+<li>The <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> array or list now contains the approximated first derivative values for each corresponding <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> value.</li>
+<li>Return the <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">d</span><span class="mord mathnormal">y</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span> array or list as the result.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Find the following integral using composite trapezoidal rule for using 2 segments (k=2) and 4 segments (k=4).</p>
+<p><sub>2</sub>∫<sup>4</sup> (x³+2) dx</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25992" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172545_CamScanner-1.jpg?resize=908%2C1161&#038;ssl=1" alt="" width="908" height="1161"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Approximate the solution of y’=3x², y(1)=1 using Taylor’s series method using first four terms. Approximate the value of y(2).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25994" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172608_CamScanner-1.jpg?resize=910%2C1283&#038;ssl=1" alt="" width="910" height="1283"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Solve the Poisson’s equation ∇²f = xy and f=2 on boundary by assuming square domain 0 ≤ x ≤ 3 and 0 ≤ y ≤ 3 and h=1.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-25997" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/Screenshot_20231003_172905_CamScanner.jpg?resize=903%2C1497&#038;ssl=1" alt="" width="903" height="1497"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25996" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231003_172931_CamScanner.jpg?resize=854%2C903&#038;ssl=1" alt="" width="854" height="903"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write down the program for solving ordinary differential equation using Heun’s method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23268" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230813_222148_CamScanner.jpg?resize=902%2C1085&#038;ssl=1" alt="" width="902" height="1085"></p>
+</div>
+</body></html>

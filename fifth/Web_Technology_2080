@@ -1,0 +1,416 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>WT Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>WT Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Write HTML script to create HTML form as below and perform form validation using JavaScript.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29648" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/form.jpg?resize=275%2C170&ssl=1" alt="" width="275" height="170"></p>
+<p>The validation should be as; the username should be of length at least 4 and is required. The password should start with a character and end with # and is required. The country and gender should be checked.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;User Registration Form&lt;/title&gt;<br />
+&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;form&gt;<br />
+&lt;fieldset&gt;<br />
+&lt;label for=&#8221;username&#8221;&gt;Username&lt;/label&gt;<br />
+&lt;input type=&#8221;text&#8221; id=&#8221;username&#8221; name=&#8221;username&#8221;&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;label for=&#8221;password&#8221;&gt;Password&lt;/label&gt;<br />
+&lt;input type=&#8221;password&#8221; id=&#8221;password&#8221; name=&#8221;password&#8221;&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;label for=&#8221;country&#8221;&gt;Country&lt;/label&gt;<br />
+&lt;select id=&#8221;country&#8221; name=&#8221;country&#8221;&gt;<br />
+&lt;option value=&#8221;Nepal&#8221;&gt;Nepal&lt;/option&gt;<br />
+&lt;option value=&#8221;India&#8221;&gt;India&lt;/option&gt;<br />
+&lt;option value=&#8221;Others&#8221;&gt;Others&lt;/option&gt;<br />
+&lt;/select&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;label for=&#8221;gender&#8221;&gt;Gender&lt;/label&gt;<br />
+&lt;input type=&#8221;radio&#8221; id=&#8221;male&#8221; name=&#8221;gender&#8221;&gt;M<br />
+&lt;input type=&#8221;radio&#8221; id=&#8221;female&#8221; name=&#8221;gender&#8221;&gt;F&lt;br&gt;&lt;br&gt;<br />
+&lt;input type=&#8221;submit&#8221; value=&#8221;Submit&#8221; onclick=&#8221;validateForm();&#8221;&gt;<br />
+&lt;/fieldset&gt;<br />
+&lt;/form&gt;</p>
+<p>&lt;script&gt;<br />
+function validateForm() {<br />
+var username = document.getElementById(&#8220;username&#8221;).value;<br />
+var password = document.getElementById(&#8220;password&#8221;).value;<br />
+var country = document.getElementById(&#8220;country&#8221;).value;<br />
+var male = document.getElementById(&#8220;male&#8221;).checked;<br />
+var female = document.getElementById(&#8220;female&#8221;).checked;<br />
+var gender = male || female;</p>
+<p>// Validate username<br />
+if (username.length &lt; 4 || username == &#8220;&#8221;) {<br />
+alert(&#8220;Username is required and should be at least 4 characters long.&#8221;);<br />
+return false;<br />
+}</p>
+<p>// Validate password<br />
+if (!password.match(/^[a-zA-Z].*#$/)) {<br />
+alert(&#8220;Password should start with a character and end with #.&#8221;);<br />
+return false;<br />
+}</p>
+<p>// Validate country<br />
+if (country == &#8220;&#8221;) {<br />
+alert(&#8220;Please select a country.&#8221;);<br />
+return false;<br />
+}</p>
+<p>// Validate gender<br />
+if (!gender) {<br />
+alert(&#8220;Please select a gender.&#8221;);<br />
+return false;<br />
+}</p>
+<p>return true;<br />
+}<br />
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How XML is different from HTML? Write XML script to create XML document containing element Person having sub elements Age, Name and Pincode. Write equivalent XSD for validating restrictions on the elements as the Age should be between 10 and 20, the Name should be only accepting either Ram or Shyam and the pincode should be 3 digit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>XML (eXtensible Markup Language) and HTML (HyperText Markup Language) are both markup languages, but they serve different purposes and have different syntax conventions.</p>
+<ul style="list-style-type: square;">
+<li>XML is designed to transport and store data. It focuses on describing the data&#8217;s structure whereas HTML is used for creating the structure of web pages and displaying content in browsers.</li>
+<li>XML requires users to define their own tags and structure whereas HTML uses predefined tags to create the structure of a web page.</li>
+<li>XML has strict syntax rules. Tags must be properly nested, and attributes must have values enclosed in quotes. HTML has a forgiving syntax. Browsers can render pages even with syntax errors.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>XML Document (person.xml):</strong></p>
+<p>&lt;?xml version=&#8221;1.0&#8243; encoding=&#8221;UTF-8&#8243;?&gt;<br />
+&lt;Person&gt;<br />
+&lt;Age&gt;15&lt;/Age&gt;<br />
+&lt;Name&gt;Ram&lt;/Name&gt;<br />
+&lt;Pincode&gt;123&lt;/Pincode&gt;<br />
+&lt;/Person&gt;</p>
+<p><strong>XSD Schema (person.xsd):</strong></p>
+<p>&lt;?xml version=&#8221;1.0&#8243; encoding=&#8221;UTF-8&#8243;?&gt;<br />
+&lt;xs:schema xmlns:xs=&#8221;http://www.w3.org/2001/XMLSchema&#8221;&gt;</p>
+<p>&lt;xs:element name=&#8221;Person&#8221;&gt;<br />
+&lt;xs:complexType&gt;<br />
+&lt;xs:sequence&gt;<br />
+&lt;xs:element name=&#8221;Age&#8221; type=&#8221;xs:integer&#8221;&gt;<br />
+&lt;xs:simpleType&gt;<br />
+&lt;xs:restriction base=&#8221;xs:integer&#8221;&gt;<br />
+&lt;xs:minInclusive value=&#8221;10&#8243;/&gt;<br />
+&lt;xs:maxInclusive value=&#8221;20&#8243;/&gt;<br />
+&lt;/xs:restriction&gt;<br />
+&lt;/xs:simpleType&gt;<br />
+&lt;/xs:element&gt;<br />
+&lt;xs:element name=&#8221;Name&#8221;&gt;<br />
+&lt;xs:simpleType&gt;<br />
+&lt;xs:restriction base=&#8221;xs:string&#8221;&gt;<br />
+&lt;xs:enumeration value=&#8221;Ram&#8221;/&gt;<br />
+&lt;xs:enumeration value=&#8221;Shyam&#8221;/&gt;<br />
+&lt;/xs:restriction&gt;<br />
+&lt;/xs:simpleType&gt;<br />
+&lt;/xs:element&gt;<br />
+&lt;xs:element name=&#8221;Pincode&#8221; type=&#8221;xs:string&#8221;&gt;<br />
+&lt;xs:simpleType&gt;<br />
+&lt;xs:restriction base=&#8221;xs:string&#8221;&gt;<br />
+&lt;xs:pattern value=&#8221;[0-9]{3}&#8221;/&gt;<br />
+&lt;/xs:restriction&gt;<br />
+&lt;/xs:simpleType&gt;<br />
+&lt;/xs:element&gt;<br />
+&lt;/xs:sequence&gt;<br />
+&lt;/xs:complexType&gt;<br />
+&lt;/xs:element&gt;</p>
+<p>&lt;/xs:schema&gt;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Write a server side script in PHP to illustrate inserting and selecting values to and from database table. Create required connection using your own assumptions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&lt;?php</p>
+<p>// Database connection details<br />
+$servername = &#8220;localhost&#8221;;<br />
+$username = &#8220;root&#8221;;<br />
+$password = &#8220;&#8221;;<br />
+$dbname = &#8220;webTech&#8221;;</p>
+<p>// Create connection<br />
+$conn = new mysqli($servername, $username, $password, $dbname);</p>
+<p>// Check connection<br />
+if ($conn-&gt;connect_error) {<br />
+die(&#8220;Connection failed: &#8221; . $conn-&gt;connect_error);<br />
+}</p>
+<p>// Insert values into the database<br />
+$usernameToInsert = &#8220;JohnDoe&#8221;;<br />
+$emailToInsert = &#8220;john@example.com&#8221;;</p>
+<p>$sqlInsert = &#8220;INSERT INTO users (username, email) VALUES (&#8216;$usernameToInsert&#8217;, &#8216;$emailToInsert&#8217;)&#8221;;</p>
+<p>if ($conn-&gt;query($sqlInsert) === TRUE) {<br />
+echo &#8220;Record inserted successfully.&lt;br&gt;&#8221;;<br />
+} else {<br />
+echo &#8220;Error inserting record: &#8221; . $conn-&gt;error . &#8220;&lt;br&gt;&#8221;;<br />
+}</p>
+<p>// Select values from the database<br />
+$sqlSelect = &#8220;SELECT id, username, email FROM users&#8221;;<br />
+$result = $conn-&gt;query($sqlSelect);</p>
+<p>if ($result-&gt;num_rows &gt; 0) {<br />
+// Output data of each row<br />
+while ($row = $result-&gt;fetch_assoc()) {<br />
+echo &#8220;ID: &#8221; . $row[&#8220;id&#8221;] . &#8221; &#8211; Username: &#8221; . $row[&#8220;username&#8221;] . &#8221; &#8211; Email: &#8221; . $row[&#8220;email&#8221;] . &#8220;&lt;br&gt;&#8221;;<br />
+}<br />
+} else {<br />
+echo &#8220;0 results&lt;br&gt;&#8221;;<br />
+}</p>
+<p>// Close the database connection<br />
+$conn-&gt;close();</p>
+<p>?&gt;</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe the WWW, web client and web server.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>World Wide Web (WWW):</strong></p>
+<p>The World Wide Web (WWW or Web) is an information space on the internet where documents and other web resources are identified by Uniform Resource Locators (URLs) and can be accessed via the internet using web browsers. It is a system of interlinked hypertext documents and multimedia content, which are typically identified by hyperlinks and URLs. The WWW is an integral part of the internet, allowing users to access and share information globally.</p>
+<p>Key components of the World Wide Web include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Web Pages:</strong> Documents written in HTML (Hypertext Markup Language) that can include text, images, links, and multimedia elements.</li>
+<li><strong>Hyperlinks:</strong> Elements within web pages that allow users to navigate between different pages and resources.</li>
+<li><strong>Web Browsers:</strong> Software applications (e.g., Chrome, Firefox, Safari) that enable users to access and view web pages.</li>
+<li><strong>Web Servers:</strong> Computers that host and serve web content to users. Web servers respond to requests from web clients by delivering the requested content.</li>
+<li><strong>URL (Uniform Resource Locator):</strong> A web address that uniquely identifies a resource on the internet. It includes the protocol (e.g., http, https), domain name, and the specific path to the resource.</li>
+</ol>
+<p><strong>Web Client:</strong></p>
+<p>A web client refers to the user&#8217;s device or software application that interacts with the World Wide Web to access and display web content. Web clients are commonly web browsers, but they can also include other applications that consume web services or retrieve information from web servers. Key characteristics of web clients include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Web Browsers:</strong> The most common type of web client, responsible for rendering and displaying web pages. Examples include Chrome, Firefox, Safari, and Edge.</li>
+<li><strong>Mobile Browsers:</strong> Web clients designed for mobile devices to access and display web content on smartphones and tablets.</li>
+<li><strong>Web Applications:</strong> Software applications that run in a web browser and interact with web servers to provide dynamic and interactive user experiences.</li>
+<li><strong>Web APIs (Application Programming Interfaces):</strong> Interfaces that allow software applications to communicate and exchange data with web servers, enabling the development of web-based applications.</li>
+</ol>
+<p><strong>Web Server:</strong></p>
+<p>A web server is a software application or hardware device that stores, processes, and delivers web content to clients over the internet. When a web client (typically a web browser) requests a web page or resource, the web server responds by sending the requested data. Key features of web servers include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>HTTP (Hypertext Transfer Protocol):</strong> The protocol used for communication between web clients and servers. It defines how messages are formatted and transmitted.</li>
+<li><strong>Hosting:</strong> Web servers host websites and web applications, making them accessible to users on the internet.</li>
+<li><strong>File Handling:</strong> Web servers handle requests for specific files (HTML, images, CSS, JavaScript) and execute server-side scripts if needed.</li>
+<li><strong>Security:</strong> Web servers implement security measures, such as SSL/TLS encryption, to protect data during transmission.</li>
+<li><strong>Examples:</strong> Common web server software includes Apache, Nginx, Microsoft Internet Information Services (IIS), and others.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are HTML keyboard events? Write a script to display a message “Hello world” on keypress event.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>HTML keyboard events are events triggered by the keyboard when interacting with an HTML document. Some common keyboard events include:</p>
+<ul style="list-style-type: square;">
+<li><strong>keydown:</strong> Fired when a key is pressed down.</li>
+<li><strong>keyup:</strong> Fired when a key is released.</li>
+<li><strong>keypress:</strong> Deprecated in modern browsers, replaced by <code>keydown</code> and <code>keyup</code>. Fired when a key is pressed down and then released.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Keyboard Event Example&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;input type=&#8221;text&#8221; onkeypress=&#8221;displayMessage()&#8221;&gt;</p>
+<p>&lt;script&gt;<br />
+function displayMessage() {<br />
+alert(&#8220;Hello world!&#8221;);<br />
+}<br />
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How HTML elements are accessed using getElementById and getElementByTagName, illustrate using HTML script.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;meta charset=&#8221;UTF-8&#8243;&gt;<br />
+&lt;meta name=&#8221;viewport&#8221; content=&#8221;width=device-width, initial-scale=1.0&#8243;&gt;<br />
+&lt;title&gt;Accessing HTML Elements&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;!&#8211; Example HTML Content &#8211;&gt;<br />
+&lt;h1 id=&#8221;heading&#8221;&gt;Hello World&lt;/h1&gt;<br />
+&lt;ul&gt;<br />
+&lt;li&gt;List item 1&lt;/li&gt;<br />
+&lt;li&gt;List item 2&lt;/li&gt;<br />
+&lt;li&gt;List item 3&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<p>&lt;!&#8211; JavaScript Section &#8211;&gt;<br />
+&lt;script&gt;<br />
+// Accessing an element by ID using getElementById<br />
+var headingElement = document.getElementById(&#8220;heading&#8221;);<br />
+if (headingElement) {<br />
+headingElement.innerHTML = &#8220;Updated Heading&#8221;; // Modify content<br />
+} else {<br />
+alert(&#8220;Element with ID &#8216;heading&#8217; not found.&#8221;);<br />
+}</p>
+<p>// Accessing elements by tag name using getElementByTagName<br />
+var listItems = document.getElementsByTagName(&#8220;li&#8221;);</p>
+<p>// Modify content of individual elements without a for loop<br />
+listItems[0].textContent = &#8220;New Item 1&#8221;;<br />
+listItems[1].textContent = &#8220;New Item 2&#8221;;<br />
+listItems[2].textContent = &#8220;New Item 3&#8221;;<br />
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How can you define position property for specifying specific positioning of an HTML element? Write internal CSS to illustrate position of an HTML div.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The position property in CSS is used to specify the positioning method of an element on a webpage. It can be set to one of the following values:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>static:</strong> The default value. The element is positioned according to the normal flow of the document.</li>
+<li><strong>relative:</strong> The element is positioned relative to its normal position, without changing the layout. Other content will not be adjusted to fit into any gap left by the element.</li>
+<li><strong>absolute:</strong> The element is positioned relative to its nearest positioned ancestor. If there is no positioned ancestor, it is positioned relative to the initial containing block (usually the &lt;html&gt; element).</li>
+<li><strong>fixed:</strong> The element is positioned relative to the browser window. It will not move even if the page is scrolled.</li>
+</ol>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;meta charset=&#8221;UTF-8&#8243;&gt;<br />
+&lt;meta name=&#8221;viewport&#8221; content=&#8221;width=device-width, initial-scale=1.0&#8243;&gt;<br />
+&lt;title&gt;Positioning Example&lt;/title&gt;<br />
+&lt;style&gt;<br />
+/* Internal CSS for styling */<br />
+.positioned-div {<br />
+width: 200px;<br />
+height: 100px;<br />
+background-color: lightblue;<br />
+border: 1px solid blue;<br />
+}</p>
+<p>/* Different position values */<br />
+.static {<br />
+position: static;<br />
+}</p>
+<p>.relative {<br />
+position: relative;<br />
+left: 30px;<br />
+top: 20px;<br />
+}</p>
+<p>.absolute {<br />
+position: absolute;<br />
+right: 50px;<br />
+bottom: 30px;<br />
+}</p>
+<p>.fixed {<br />
+position: fixed;<br />
+top: 10px;<br />
+left: 10px;<br />
+}</p>
+<p>&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;!&#8211; HTML content with different positioned divs &#8211;&gt;<br />
+&lt;div class=&#8221;positioned-div static&#8221;&gt;Static Position&lt;/div&gt;<br />
+&lt;div class=&#8221;positioned-div relative&#8221;&gt;Relative Position&lt;/div&gt;<br />
+&lt;div class=&#8221;positioned-div absolute&#8221;&gt;Absolute Position&lt;/div&gt;<br />
+&lt;div class=&#8221;positioned-div fixed&#8221;&gt;Fixed Position&lt;/div&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is chaining in jQuery? Write a script to illustrate concept of chaining using slideUp and slideDown method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In jQuery, <strong>chaining</strong> refers to the practice of linking multiple method calls together in a single statement. This is possible because most jQuery methods return the jQuery object itself, allowing you to call another method on the same set of elements. Chaining is a concise and readable way to perform multiple actions on the same element(s) without repeatedly selecting them.</p>
+<p>&nbsp;</p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Chaining in jQuery&lt;/title&gt;<br />
+&lt;script src=&#8221;https://code.jquery.com/jquery-3.6.0.min.js&#8221;&gt;&lt;/script&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;div class=&#8221;box&#8221;&gt;Click me to slide up and down&lt;/div&gt;</p>
+<p>&lt;script&gt;<br />
+$(document).ready(function() {<br />
+$(&#8220;.box&#8221;) .slideUp(1500).slideDown(1500);<br />
+});<br />
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is XML? Why is it called extensible? Mention the use of XML.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>XML</strong>, or Extensible Markup Language, is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.</p>
+<p><strong>Why is it called extensible?</strong></p>
+<p>XML is called &#8220;extensible&#8221; because it allows users to define their own markup tags (elements) to represent data in a way that is meaningful for their specific applications or industries. Unlike HTML, which has a predefined set of tags for describing document structure, XML lets users create their own tags based on the specific needs of their data. The extensibility of XML is facilitated by its open structure and lack of predefined tags. Users can define their own document structure using elements and attributes, making XML adaptable to a wide range of applications.</p>
+<p><strong>Use of XML:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data Interchange:</strong> XML is widely used for data interchange between systems, as it provides a common format that can be understood by different platforms and programming languages. It serves as a protocol-neutral way to exchange structured data.</li>
+<li><strong>Configuration Files:</strong> Many software applications use XML for configuration files. These files store settings and preferences in a structured format that can be easily modified and read by both humans and machines.</li>
+<li><strong>Web Services:</strong> XML is a common choice for representing data in web services. It is often used as the data format for communication between servers and clients in a platform-independent manner.</li>
+<li><strong>Document Storage:</strong> XML is suitable for storing structured documents. It allows the creation of custom document types with specific elements and attributes, making it versatile for various document management applications.</li>
+<li><strong>RDF (Resource Description Framework):</strong> XML is used in conjunction with RDF to describe resources on the web, forming the basis for the Semantic Web.</li>
+<li><strong>Configuration of User Interfaces:</strong> XML is sometimes used to describe the layout and configuration of user interfaces in applications.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is XMLHttpRequest object? Write HTML script with AJAX showing the use of XMLHttpRequest object.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The XMLHttpRequest object is a fundamental part of the AJAX (Asynchronous JavaScript and XML) technology. It allows JavaScript code to make HTTP requests to the server without needing to reload the entire web page. This enables dynamic content loading, making web pages more responsive and interactive.</p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&#8221;en&#8221;&gt;<br />
+&lt;head&gt;<br />
+&lt;meta charset=&#8221;UTF-8&#8243;&gt;<br />
+&lt;meta name=&#8221;viewport&#8221; content=&#8221;width=device-width, initial-scale=1.0&#8243;&gt;<br />
+&lt;title&gt;AJAX with XMLHttpRequest&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;h2&gt;Fetch Data Using AJAX&lt;/h2&gt;</p>
+<p>&lt;button onclick=&#8221;loadData()&#8221;&gt;Load Data&lt;/button&gt;</p>
+<p>&lt;div id=&#8221;result&#8221;&gt;&lt;/div&gt;</p>
+<p>&lt;script&gt;<br />
+function loadData() {<br />
+// Create a new XMLHttpRequest object<br />
+var xhr = new XMLHttpRequest();</p>
+<p>// Define the request method, URL, and set it to be asynchronous<br />
+xhr.open(&#8220;GET&#8221;, &#8220;https://jsonplaceholder.typicode.com/todos/1&#8221;, true);</p>
+<p>// Set up a callback function to handle the response<br />
+xhr.onreadystatechange = function() {<br />
+if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {<br />
+// The request was successful, and the data is available in xhr.responseText<br />
+var data = JSON.parse(xhr.responseText);</p>
+<p>// Display the data in the result div<br />
+document.getElementById(&#8220;result&#8221;).innerHTML = &#8220;User ID: &#8221; + data.userId + &#8220;&lt;br&gt;Title: &#8221; + data.title;<br />
+} else if (xhr.readyState === 4 &amp;&amp; xhr.status !== 200) {<br />
+// Handle errors<br />
+document.getElementById(&#8220;result&#8221;).innerHTML = &#8220;Error: Unable to fetch data.&#8221;;<br />
+}<br />
+};</p>
+<p>// Send the request<br />
+xhr.send();<br />
+}<br />
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write a PHP program that includes a function that will take two strings as input argument and print concatenation of two strings.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&lt;?php</p>
+<p>function concatenateStrings($string1, $string2) {<br />
+$result = $string1 . $string2;<br />
+return $result;<br />
+}<br />
+$string1 = &#8220;Hello, &#8220;;<br />
+$string2 = &#8220;World!&#8221;;<br />
+$concatenatedString = concatenateStrings($string1, $string2);echo &#8220;Concatenated String: &#8221; . $concatenatedString;</p>
+<p>?&gt;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How can you handle session in PHP?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In PHP, <strong>sessions</strong> are used to store and retrieve data on a per-user basis, allowing you to maintain state across multiple pages or requests from the same user. PHP sessions work by creating a unique identifier (session ID) for each user, and associating data with that ID on the server.</p>
+<p><strong>Starting a Session:</strong></p>
+<p>&lt;?php<br />
+session_start();<br />
+// rest of your PHP code<br />
+?&gt;</p>
+<p><strong>Setting Session Variables:</strong></p>
+<p>&lt;?php<br />
+session_start();</p>
+<p>// Set session variables<br />
+$_SESSION[&#8216;username&#8217;] = &#8216;john_doe&#8217;;<br />
+$_SESSION[&#8216;user_id&#8217;] = 123;</p>
+<p>// rest of your PHP code<br />
+?&gt;</p>
+<p><strong>Retrieving Session Variables:</strong></p>
+<p>&lt;?php<br />
+session_start();</p>
+<p>// Retrieve session variables<br />
+$username = $_SESSION[&#8216;username&#8217;];<br />
+$userId = $_SESSION[&#8216;user_id&#8217;];</p>
+<p>// rest of your PHP code<br />
+?&gt;</p>
+<p><strong>Destroying a Session:</strong></p>
+<p>&lt;?php<br />
+session_start();</p>
+<p>// Clear all session variables<br />
+session_unset();</p>
+<p>// Destroy the session<br />
+session_destroy();</p>
+<p>// rest of your PHP code<br />
+?&gt;</p>
+</div>
+</body></html>

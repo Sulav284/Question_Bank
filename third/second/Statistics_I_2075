@@ -1,0 +1,1266 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Distinguish between absolute and relative measure of dispersion. Two computer manufacturers A and B compete for profitable and prestigious contract. In their rivalry, each claim that their computer a consistent. For this it was decided to start execution of the same program simultaneously on 50 computers of each company and recorded the time as given below.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td colspan="2">Time (in seconds)</td>
+<td>0-2</td>
+<td>2-4</td>
+<td>4-6</td>
+<td>6-8</td>
+<td>8-10</td>
+<td>10-12</td>
+</tr>
+<tr>
+<td rowspan="2">Nature of computers manufactured by</td>
+<td>A</td>
+<td>5</td>
+<td>16</td>
+<td>13</td>
+<td>7</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>7</td>
+<td>12</td>
+<td>19</td>
+<td>9</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Which company’s computer is more consistent?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Measure of dispersion is descriptive statistical measure used to measure the variation or spread or scatteriess in the data set.</p>
+<p>There are two types of measures of dispersion i.e absolute and relative measure of dispersion. The difference between them are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 96px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Absolute Measure</strong></td>
+<td style="width: 50%; height: 24px; text-align: center;"><strong>Relative Measure</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">A measure of dispersion is saied to be an absolute if it is expressed interms of original units of data.</td>
+<td style="width: 50%; height: 24px;">A measure of dispersion is saied to be relative if it is independent of original units of data and it is simply a cofficient.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Some absolute measures:</p>
+<ol style="list-style-type: lower-roman;">
+<li>Range</li>
+<li>Quartile deviation</li>
+<li>Mean deviation</li>
+<li>Standard deviation</li>
+</ol>
+</td>
+<td style="width: 50%; height: 24px;">Some relative measures are:</p>
+<ol style="list-style-type: lower-roman;">
+<li>Cofficient of range</li>
+<li>Cofficient of Quartile deviation</li>
+<li>Cofficient of Mean deviation</li>
+<li>Cofficient of variation</li>
+</ol>
+</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Absolute measures are in fixed value</td>
+<td style="width: 50%; height: 24px;">Relative measures may be in ratio or percentage</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>For Company A</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%;">Time(x)</td>
+<td style="width: 20%;">No of Comp.(f)</td>
+<td style="width: 20%;">m</td>
+<td style="width: 20%;">fm</td>
+<td style="width: 20%;">fm<sup>2</sup></td>
+</tr>
+<tr>
+<td style="width: 20%;">0-2</td>
+<td style="width: 20%;">5</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">5</td>
+<td style="width: 20%;">5</td>
+</tr>
+<tr>
+<td style="width: 20%;">2-4</td>
+<td style="width: 20%;">16</td>
+<td style="width: 20%;">3</td>
+<td style="width: 20%;">48</td>
+<td style="width: 20%;">144</td>
+</tr>
+<tr>
+<td style="width: 20%;">4-6</td>
+<td style="width: 20%;">13</td>
+<td style="width: 20%;">5</td>
+<td style="width: 20%;">65</td>
+<td style="width: 20%;">325</td>
+</tr>
+<tr>
+<td style="width: 20%;">6-8</td>
+<td style="width: 20%;">7</td>
+<td style="width: 20%;">7</td>
+<td style="width: 20%;">49</td>
+<td style="width: 20%;">343</td>
+</tr>
+<tr>
+<td style="width: 20%;">8-10</td>
+<td style="width: 20%;">5</td>
+<td style="width: 20%;">9</td>
+<td style="width: 20%;">45</td>
+<td style="width: 20%;">405</td>
+</tr>
+<tr>
+<td style="width: 20%;">10-12</td>
+<td style="width: 20%;">4</td>
+<td style="width: 20%;">11</td>
+<td style="width: 20%;">44</td>
+<td style="width: 20%;">484</td>
+</tr>
+<tr>
+<td style="width: 20%;"></td>
+<td style="width: 20%;">N = 50</td>
+<td style="width: 20%;"></td>
+<td style="width: 20%;">Σfm = 256</td>
+<td style="width: 20%;">Σfm<sup>2</sup> = 1706</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>\(\bar{X} = \frac{\sum fm}{N} = \frac{256}{50} = 5.12\)</p>
+<p>Also, Standard deviation(σ) is</p>
+<p>\(σ = \sqrt{\frac{\sum fm^2}{N} &#8211; (\frac{\sum fm}{N})^2}\)</p>
+<p>\(= \sqrt{\frac{1706}{50} &#8211; (5.12)^2}\)</p>
+<p>= 2.812</p>
+<p>Also, Covariance (C.V) = \(\frac{σ}{\bar{X}} \times 100%\)</p>
+<p>\(= \frac{2.812}{5.12} \times 100%\)</p>
+<p>= 54.92%</p>
+<p>For Company B</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 198px;">
+<tbody>
+<tr style="height: 27px;">
+<td style="width: 20%; height: 27px;">Time(x)</td>
+<td style="width: 20%; height: 27px;">No of Comp.(f)</td>
+<td style="width: 20%; height: 27px;">m</td>
+<td style="width: 20%; height: 27px;">fm</td>
+<td style="width: 20%; height: 27px;">fm<sup>2</sup></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">0-2</td>
+<td style="width: 20%; height: 24px;">2</td>
+<td style="width: 20%; height: 24px;">1</td>
+<td style="width: 20%; height: 24px;">2</td>
+<td style="width: 20%; height: 24px;">2</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">2-4</td>
+<td style="width: 20%; height: 24px;">7</td>
+<td style="width: 20%; height: 24px;">3</td>
+<td style="width: 20%; height: 24px;">21</td>
+<td style="width: 20%; height: 24px;">63</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">4-6</td>
+<td style="width: 20%; height: 24px;">12</td>
+<td style="width: 20%; height: 24px;">5</td>
+<td style="width: 20%; height: 24px;">60</td>
+<td style="width: 20%; height: 24px;">300</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">6-8</td>
+<td style="width: 20%; height: 24px;">19</td>
+<td style="width: 20%; height: 24px;">7</td>
+<td style="width: 20%; height: 24px;">133</td>
+<td style="width: 20%; height: 24px;">931</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">8-10</td>
+<td style="width: 20%; height: 24px;">9</td>
+<td style="width: 20%; height: 24px;">9</td>
+<td style="width: 20%; height: 24px;">81</td>
+<td style="width: 20%; height: 24px;">729</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">10-12</td>
+<td style="width: 20%; height: 24px;">1</td>
+<td style="width: 20%; height: 24px;">11</td>
+<td style="width: 20%; height: 24px;">11</td>
+<td style="width: 20%; height: 24px;">121</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 20%; height: 27px;"></td>
+<td style="width: 20%; height: 27px;">N = 50</td>
+<td style="width: 20%; height: 27px;"></td>
+<td style="width: 20%; height: 27px;">Σfm = 308</td>
+<td style="width: 20%; height: 27px;">Σfm<sup>2</sup> = 2146</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>\(\bar{X} = \frac{\sum fm}{N} = \frac{308}{50} = 6.16\)</p>
+<p>Also, Standard deviation(σ) is</p>
+<p>\(σ = \sqrt{\frac{\sum fm^2}{N} &#8211; (\frac{\sum fm}{N})^2}\)</p>
+<p>\(= \sqrt{\frac{2146}{50} &#8211; (6.16)^2}\)</p>
+<p>= 1.725</p>
+<p>Also, Covariance (C.V) = \(\frac{σ}{\bar{X}} \times 100%\)</p>
+<p>\(= \frac{1.725}{6.16} \times 100%\)</p>
+<p>= 28%</p>
+<p>Since, the standard deviation and covarience of company B is less than that of A. So, Company B is considered more consistent.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>In a certain type of metal test specimen. the effect of normal stress on a specimen is known to be functionally related to shear resistance. The following table gives the data on the two variables.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Normal stress</td>
+<td>26</td>
+<td>25</td>
+<td>28</td>
+<td>23</td>
+<td>27</td>
+<td>23</td>
+<td>24</td>
+<td>28</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Shear Stress</td>
+<td>22</td>
+<td>27</td>
+<td>24</td>
+<td>27</td>
+<td>23</td>
+<td>25</td>
+<td>26</td>
+<td>22</td>
+<td>21</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Identify which one is response variable, and fit a simple regression line, assuming that the relationship between them is linear.</li>
+<li>Interpret the regression coefficient with reference to your problem.</li>
+<li>Obtain the coefficient of determination, and interpret this.</li>
+<li>Based on the fitted model in (a), predict the shear resistance for normal stress of 30 kilogram per square centimeter .</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 257px;">
+<tbody>
+<tr style="height: 26px;">
+<td style="width: 20%; height: 26px; text-align: center;"><strong>Normal Stress(x)</strong></td>
+<td style="width: 20%; height: 26px; text-align: center;"><strong>Shear(y)</strong></td>
+<td style="width: 20.4431%; height: 26px; text-align: center;"><strong>x<sup>2</sup></strong></td>
+<td style="width: 19.5569%; height: 26px; text-align: center;"><strong>y<sup>2</sup></strong></td>
+<td style="width: 20%; height: 26px; text-align: center;"><strong>xy</strong></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">26</td>
+<td style="width: 20%; height: 23px; text-align: center;">22</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">676</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">484</td>
+<td style="width: 20%; height: 23px; text-align: center;">572</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">25</td>
+<td style="width: 20%; height: 23px; text-align: center;">27</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">625</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">729</td>
+<td style="width: 20%; height: 23px; text-align: center;">675</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">28</td>
+<td style="width: 20%; height: 23px; text-align: center;">24</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">784</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">576</td>
+<td style="width: 20%; height: 23px; text-align: center;">672</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">23</td>
+<td style="width: 20%; height: 23px; text-align: center;">27</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">529</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">729</td>
+<td style="width: 20%; height: 23px; text-align: center;">621</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">27</td>
+<td style="width: 20%; height: 23px; text-align: center;">23</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">729</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">529</td>
+<td style="width: 20%; height: 23px; text-align: center;">621</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;">23</td>
+<td style="width: 20%; height: 24px; text-align: center;">25</td>
+<td style="width: 20.4431%; height: 24px; text-align: center;">529</td>
+<td style="width: 19.5569%; height: 24px; text-align: center;">625</td>
+<td style="width: 20%; height: 24px; text-align: center;">575</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">24</td>
+<td style="width: 20%; height: 23px; text-align: center;">26</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">576</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">676</td>
+<td style="width: 20%; height: 23px; text-align: center;">624</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">28</td>
+<td style="width: 20%; height: 23px; text-align: center;">22</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">784</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">484</td>
+<td style="width: 20%; height: 23px; text-align: center;">616</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">26</td>
+<td style="width: 20%; height: 23px; text-align: center;">21</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">676</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">441</td>
+<td style="width: 20%; height: 23px; text-align: center;">546</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 20%; height: 23px; text-align: center;">Σx = 230</td>
+<td style="width: 20%; height: 23px; text-align: center;">Σy = 217</td>
+<td style="width: 20.4431%; height: 23px; text-align: center;">Σx<sup>2</sup> = 5908</td>
+<td style="width: 19.5569%; height: 23px; text-align: center;">Σy<sup>2</sup> = 5273</td>
+<td style="width: 20%; height: 23px; text-align: center;">Σxy = 5522</td>
+</tr>
+</tbody>
+</table></div>
+<p>n = 9</p>
+<p><span style="text-decoration: underline;"><strong>Solution i)</strong></span></p>
+<p>We already assumed that the relationship between Normal stress(x) and shear resistance (y) is linear.</p>
+<p>The response variable (dependent) is shear resistance(y).</p>
+<p>Now,</p>
+<p>The regression Equation of Y on x is</p>
+<p>y = a + bx &#8212;&#8211; (i)</p>
+<p>The normal equation of Equatin(i) are</p>
+<p>Σy = na + bΣx</p>
+<p>217 = 9a + 230b   &#8212;&#8212;- (ii)</p>
+<p>Σxy = a Σx + bΣx<sup>2</sup></p>
+<p>5522 = 230a + 5908b   &#8212;&#8212;&#8211; (iii)</p>
+<p>Solving Eqn(ii) and (iii), We get</p>
+<p>b = -0.85</p>
+<p>and a = 45.84</p>
+<p>Therefore, The fitted regrssion line is</p>
+<p>y = a + bx</p>
+<p>y = 45.84 + (-0.85)x</p>
+<p><span style="text-decoration: underline;"><strong>Solution ii)</strong></span></p>
+<p>Here, the regresion cofficient are</p>
+<p>a = 45.84, means it is the value of shear resistance(y) when Normal stress (x) is 0. b = -0.85 means shear resistance 9y) changes by 0.85 per unit change in Normal Stress (x).</p>
+<p><span style="text-decoration: underline;"><strong>Solution iii)</strong></span></p>
+<p>First, We know</p>
+<p>Correlation cofficient is given by</p>
+<p>= \(\frac{n\sum xy &#8211; \sum x \sum y}{\sqrt{n\sum x^2 &#8211; (\sum x)^2} . \sqrt{n\sum y^2 &#8211; (\sum y)^2}}\)</p>
+<p>= \(\frac{9 \times 5522 &#8211; 230 \times 217}{\sqrt{9 \times 5908 &#8211; (230)^2} . \sqrt{9 \times 5273 &#8211; (217)^2}}\)</p>
+<p>= -0.67</p>
+<p>Therefore, Cofficient determination = γ<sup>2</sup> = (-0.67)<sup>2</sup> = 0.4489</p>
+<p>It means 44.89% of variation on shear resistance (γ) is explained by normal stress(x).</p>
+<p><span style="text-decoration: underline;"><strong>Solution iv)</strong></span></p>
+<p>Here, we know, Y = 45.84 &#8211; 0.85x</p>
+<p>From Question,</p>
+<p>x = 30</p>
+<p>y = 45.84 &#8211; 0.85 x 30</p>
+<p>= 20.34 ≈ 20</p>
+<p>Therefore, The shear resistance for normal stress of 30kg per square is 20.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><ol>
+<li>What do you understand by binomial distribution? What are its main features?</li>
+<li>What do you mean by marginal probability distribution? Write down its properties.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Question a):</strong></p>
+<p>A discrete random variable &#8216;x&#8217; is said to follow the binomial distribution if its probability mass function (p.m.t) is given by (pX=x) = n(xp<sup>x</sup>q<sup>n-x</sup>)</p>
+<p>This can be written as x ~ β(n,p) and read as x follows the binomial distribution with paramater n and p. Here, no. of trials should be small, finite and independent.</p>
+<p>Its main feature are:</p>
+<ol style="list-style-type: lower-roman;">
+<li>It is a discrete probability distribution as random variable x takes values 0,1,2,3 . . &#8230;. . . n.</li>
+<li>Binomial distribution is also known as biparametric distribution because it has two parameters n and p.</li>
+<li>The mean of binomial distribution is np and variance is npq. where, p = success, q = failure</li>
+<li>Mean  &gt; variance</li>
+<li>Additive property: Let x and y be two indenpent variables such that X ~ β(n,p), Y ~ β(n,p) then (X + Y) ~ β(n1 + n2, p)</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Question b):</strong></span></p>
+<p>Let (X, Y) be two dimensional random variable with joint distribution F(x, y). The distribution function of X or Y alone calculated from joint distribution p(X, Y) is called marginal probability distribution.</p>
+<p>The marginal probability distribution function if random variable x is denoted by F(x) and is given by F(x) = p(x <b>≤</b> x, y <b>≤</b>  ∞) Σxp(xi) for discrete random variable x and</p>
+<p>F(x) = \(\int_{-∞}^x{f(x)} dx\) for continuous random variables</p>
+<p>Similar for F(y)</p>
+<p>Properties:</p>
+<ol style="list-style-type: lower-roman;">
+<li>The distribution function is defined for even real number.</li>
+<li>0 <b>≤</b> F(x) ≤ 1,   0 ≤ F(y) ≤ 1</li>
+<li>F(-∞) = 0</li>
+<li>F(+∞) = 1</li>
+<li>F(a) ≤ F(b) for real number a ≤ b</li>
+</ol>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Measurement of computer chip’s thickness (in monometers) is recorded below.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Thickness of chips (in nanometers)</td>
+<td>34-39</td>
+<td>39-44</td>
+<td>44-49</td>
+<td>49-54</td>
+<td>54-59</td>
+<td>Total</td>
+</tr>
+<tr>
+<td>Number of computers</td>
+<td>3</td>
+<td>11</td>
+<td>16</td>
+<td>25</td>
+<td>5</td>
+<td>60</td>
+</tr>
+</tbody>
+</table></div>
+<div class="col-7">
+<p>Find the mode of thickness of computer chips and interpret the result.</p>
+</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Here,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 161px;">
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;"><strong>Thickness</strong></td>
+<td style="width: 50%; text-align: center; height: 23px;"><strong>No. of computer(f)</strong></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">34-39</td>
+<td style="width: 50%; text-align: center; height: 23px;">3</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">39-44</td>
+<td style="width: 50%; text-align: center; height: 23px;">11</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">44-49</td>
+<td style="width: 50%; text-align: center; height: 23px;">16</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">49-54</td>
+<td style="width: 50%; text-align: center; height: 23px;">25</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;">54-59</td>
+<td style="width: 50%; text-align: center; height: 23px;">5</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 50%; text-align: center; height: 23px;"></td>
+<td style="width: 50%; text-align: center; height: 23px;">N = 60</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, 49-54 class has highest frequence</p>
+<p>Therefore, modal class = 49-54</p>
+<p>Now, mode = \(L + \frac{f_1 &#8211; f_0}{2f_1 &#8211; f_0 &#8211; f_2}\)</p>
+<p>= \(49 + \frac{25 &#8211; 16}{2 \times 25 &#8211; 16 &#8211; 5}\)</p>
+<p>= 49.31</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Calculate Q<sub>3</sub>, D<sub>6</sub>, and P<sub>80</sub> from the following data and interpret the results.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Respiratory rate</td>
+<td>10</td>
+<td>15</td>
+<td>20</td>
+<td>25</td>
+<td>30</td>
+<td>35</td>
+<td>40</td>
+<td>45</td>
+<td>50</td>
+</tr>
+<tr>
+<td>No. of Person</td>
+<td>8</td>
+<td>12</td>
+<td>36</td>
+<td>25</td>
+<td>28</td>
+<td>18</td>
+<td>9</td>
+<td>12</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>x</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>f</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>cf</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">10</td>
+<td style="width: 33.3333%; text-align: center;">8</td>
+<td style="width: 33.3333%; text-align: center;">8</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">15</td>
+<td style="width: 33.3333%; text-align: center;">12</td>
+<td style="width: 33.3333%; text-align: center;">20</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">20</td>
+<td style="width: 33.3333%; text-align: center;">36</td>
+<td style="width: 33.3333%; text-align: center;">56</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">25</td>
+<td style="width: 33.3333%; text-align: center;">25</td>
+<td style="width: 33.3333%; text-align: center;">81</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">30</td>
+<td style="width: 33.3333%; text-align: center;">28</td>
+<td style="width: 33.3333%; text-align: center;">109</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">35</td>
+<td style="width: 33.3333%; text-align: center;">18</td>
+<td style="width: 33.3333%; text-align: center;">127</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">40</td>
+<td style="width: 33.3333%; text-align: center;">9</td>
+<td style="width: 33.3333%; text-align: center;">136</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">45</td>
+<td style="width: 33.3333%; text-align: center;">12</td>
+<td style="width: 33.3333%; text-align: center;">148</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">50</td>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">154</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">N = 154</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>Q<sub>3</sub> = \(3\left ( \frac{N + 1}{4} \right )^{th}\) item</p>
+<p>= \(3 \times \frac{155}{4}\) = 116.25</p>
+<p>In c,f column, the value just greater than 116.25 is 127. ∴ Q<sub>3</sub> = 35</p>
+<p>Also,</p>
+<p>D<sub>6</sub> = \(6\left ( \frac{N + 1}{10} \right )^{th}\) item</p>
+<p>= \(6 \times \frac{155}{10}\) = 93<sup>th</sup></p>
+<p>In c,f column, the value just greater than 93 is 109. ∴ D<sub>6</sub> = 30</p>
+<p>Also,</p>
+<p>P<sub>80</sub> = \(80\left ( \frac{N + 1}{100} \right )^{th}\) item</p>
+<p>= \(80 \times \frac{155}{100}\) = 124<sup>th</sup></p>
+<p>In c,f column, the value just greater than 124 is 127. ∴ P<sub>80</sub> = 35</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define a random variable. For the following bi-variants probability distribution of X and Y , find</p>
+<ol>
+<li>marginal probability mass function of X and Y ,</li>
+<li>P(x≤1, Y=2),</li>
+<li>P(X≤1)</li>
+</ol>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>X/Y</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1/32</td>
+<td>2/32</td>
+<td>2/32</td>
+<td>3/32</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1/16</td>
+<td>1/16</td>
+<td>1/8</td>
+<td>1/8</td>
+<td>1/8</td>
+<td>1/8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1/32</td>
+<td>1/32</td>
+<td>1/64</td>
+<td>1/64</td>
+<td>1/64</td>
+<td>1/64</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A variable whose value id determined by the outcome of a random experiment is called a random variable.</p>
+<p>Given,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 12.5%; text-align: center;">xy</td>
+<td style="width: 12.5%; text-align: center;">1</td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;">3</td>
+<td style="width: 12.5%; text-align: center;">4</td>
+<td style="width: 12.5%; text-align: center;">5</td>
+<td style="width: 12.5%; text-align: center;">6</td>
+<td style="width: 12.5%; text-align: center;">P(X=x)</td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">0</td>
+<td style="width: 12.5%; text-align: center;">0</td>
+<td style="width: 12.5%; text-align: center;">0</td>
+<td style="width: 12.5%; text-align: center;">1/32</td>
+<td style="width: 12.5%; text-align: center;">2/32</td>
+<td style="width: 12.5%; text-align: center;">2/32</td>
+<td style="width: 12.5%; text-align: center;">3/32</td>
+<td style="width: 12.5%; text-align: center;">8/32</td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">1</td>
+<td style="width: 12.5%; text-align: center;">1/16</td>
+<td style="width: 12.5%; text-align: center;">1/16</td>
+<td style="width: 12.5%; text-align: center;">1/8</td>
+<td style="width: 12.5%; text-align: center;">1/8</td>
+<td style="width: 12.5%; text-align: center;">1/8</td>
+<td style="width: 12.5%; text-align: center;">1/8</td>
+<td style="width: 12.5%; text-align: center;">5/8</td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;">1/32</td>
+<td style="width: 12.5%; text-align: center;">1/32</td>
+<td style="width: 12.5%; text-align: center;">1/64</td>
+<td style="width: 12.5%; text-align: center;">1/64</td>
+<td style="width: 12.5%; text-align: center;">1/64</td>
+<td style="width: 12.5%; text-align: center;">1/64</td>
+<td style="width: 12.5%; text-align: center;">1/8</td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">P(Y=y)</td>
+<td style="width: 12.5%; text-align: center;">3/32</td>
+<td style="width: 12.5%; text-align: center;">3/32</td>
+<td style="width: 12.5%; text-align: center;">1/64</td>
+<td style="width: 12.5%; text-align: center;">13/64</td>
+<td style="width: 12.5%; text-align: center;">13/64</td>
+<td style="width: 12.5%; text-align: center;">13/64</td>
+<td style="width: 12.5%; text-align: center;">sum = 1</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Solution i):</strong></span></p>
+<p>Marginal pmf of x = p(X = xi) = \(\sum_{j=1}^n p(x_i y_i)\)</p>
+<p>∴P(X = 0) = P(X=0, Y=1) + P(X = 0, Y = 2) + P(X = 0, Y = 3) + P(X = 0, Y = 4) + P(X = 0, Y = 5) + P(X = 0, Y = 6)</p>
+<p>= 8/32</p>
+<p>∴P(X = 1) = P(X=1, Y=1) + P(X = 1, Y = 2) + P(X = 1, Y = 3) + P(X = 1, Y = 4) + P(X = 1, Y = 5) + P(X = 1, Y = 6)</p>
+<p>= 5/8</p>
+<p>∴P(X = 2) = P(X=2, Y=1) + P(X = 2, Y = 2) + P(X = 2, Y = 3) + P(X = 2, Y = 4) + P(X = 2, Y = 5) + P(X = 2, Y = 6)</p>
+<p>= 1/8</p>
+<p>Also, Marginal pmf of Y = P(Y=yi) = \(\sum_{i=1}^n p(x_i  y_i)\)</p>
+<p>∴P(Y = 1) = P(X=0, Y=1) + P(X = 1, Y = 1) + P(X = 1, Y = 2)</p>
+<p>= 3/32</p>
+<p>Similarly,</p>
+<p>P(Y = 2) = 3/32</p>
+<p>P(Y = 3) = 11/64</p>
+<p>P(Y = 4) = 13/64</p>
+<p>P(Y = 5) = 13/64</p>
+<p>P(Y = 6) = 15/64</p>
+<p><span style="text-decoration: underline;"><strong>Solution ii):</strong></span></p>
+<p>P(X ≤ 1, Y = 2)</p>
+<p>= P(X = 0, Y= 2) + P(X = 1, Y = 2)</p>
+<p>= 0 + 1/16</p>
+<p>= 1/16</p>
+<p><span style="text-decoration: underline;"><strong>Solution ii)</strong></span></p>
+<p>P(X ≤ 1)</p>
+<p>= P(X = 0) + P(X = 1)</p>
+<p>= 8/32 + 5/8</p>
+<p>= 7/8</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>If two random variables have the joint probability density function</p>
+<p>\(f(x, y) = \left\{\begin{matrix}Ke^{-(x+y)}, \enspace 0 < x < ∞, \enspace 0 < y < ∞\\ 0, otherwise\end{matrix}\right.\)</p>
+<p>Find (i) constant k (ii) Conditional probability density function of X and given Y (iii) Var(3X + 2Y)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Given,</p>
+<p>Joint probablity density function</p>
+<p>f(x, y) = \(\left\{\begin{matrix}ke^{-(x+y)}, 0 &lt; x &lt; ∞, o &lt; y &lt; ∞\\ 0, otherwise\end{matrix}\right.\)</p>
+<p><span style="text-decoration: underline;">Solution i):</span></p>
+<p>We know,</p>
+<p>\(\int_0^∞ \int_0^∞ ke^{-(x+y)} dx dy = 1\)</p>
+<p>\(\int_0^∞ \int_0^∞ ke^{-x} . e^{-y} dx dy = 1\)</p>
+<p>\(\int_0^∞ k . e^{-y} \left \{ \int_0^∞ e^{-x} dx \right \} dy = 1\)</p>
+<p>\(\int_0^∞ k . e^{-y} \left [ -e^{-x} \right ]_0^{∞} dy = 1\)</p>
+<p>\(\int_0^∞ k . e^{-y} \left [ -\frac{1}{e^∞} + 1 \right ] dy = 1\)</p>
+<p>\(\int_0^∞ k . e^{-y} dy = 1\)</p>
+<p>\(k . [-e^{-y}]_0^∞ = 1\)</p>
+<p>k = 1</p>
+<p><span style="text-decoration: underline;">Solution ii):</span></p>
+<p>we know,</p>
+<p>\(f\left ( \frac{x}{y} \right ) = \frac{f(x, y)}{f(y)}\)</p>
+<p>\(= \int_0^∞ e^{-(x+y)} dx\)</p>
+<p>\(= \int_0^∞ e^{-x} . e^{-y} dx\)</p>
+<p>\(= e^{-y} \int_0^∞ e^{-x} dx\)</p>
+<p>\(= e^{-y} \left [ -e^{-x} \right ]_0^∞ dx\)</p>
+<p>= e<sup>-y</sup></p>
+<p>∴ \(f\left ( \frac{x}{y} \right ) = \frac{e^{-(x+y)}}{r^{-y}}\)</p>
+<p>= \(\frac{e^{-x} . e^{-y}}{e^{-x}}\)</p>
+<p>= e<sup>-x</sup></p>
+<p><span style="text-decoration: underline;">Solution iii):</span></p>
+<p>\(f(x) = \int_0^∞ e^{-(x+y)} dx\)</p>
+<p>= \(e^{-x} \int_0^∞ e^{-y} dy\)</p>
+<p>= \(e^{-x} \left [ -e^{-y} \right ]_0^∞\)</p>
+<p>= e<sup>-y</sup></p>
+<p>Now,</p>
+<p>E(x) = \(\int_0^∞ x f(x) dx\)</p>
+<p>= \(\int_0^∞ x e^{-x} dx\)</p>
+<p>= 1</p>
+<p>E(x<sup>2</sup>) = \(\int_0^∞ x^2 f(x) dx\)</p>
+<p>= \(\int_0^∞ x^2 e^{-x} dx\)</p>
+<p>= 2</p>
+<p>Also,</p>
+<p>E(y) = 1</p>
+<p>E(y<sup>2</sup>) = 2</p>
+<p>We know,</p>
+<p>var(3x + 2y) = \(3^2 \times var(x) + 2^2 \times var(y)\)</p>
+<p>= \(9\left [ E(x^2) &#8211; \{E(x)\}^2 \right ] + 4 \times \left [ E(y^2) &#8211; \{E(y)\}^2 \right ]\)</p>
+<p>= 9[2 &#8211; 1] + 4[2 &#8211; 1]</p>
+<p>= 9 + 4</p>
+<p>= 13</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>A certain machine makes electrical resistors having mean resistance of 40 ohms and standard deviations of 2 ohms. Assuming that the resistance follows a normal distribution.</p>
+<ol>
+<li>What percentage of resistors will have a resistance exceeding 43 ohms?</li>
+<li>What percentage of registers will have a resistance between 30 ohms to 45 ohms?</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>X = resistance of resistors such that X ~ (μ, σ<sup>2</sup>)</p>
+<p>Given,</p>
+<p>μ = 40</p>
+<p>σ = 2</p>
+<p>σ<sup>2</sup> = 4</p>
+<p>x ~ (40, 4)</p>
+<p>Let z = \(\frac{x &#8211; μ}{σ}\) be the standard normal variate.</p>
+<p><span style="text-decoration: underline;"><strong>Solution i):</strong></span></p>
+<p>p(x &gt; 43)</p>
+<p>= \(p(z &gt; \frac{x &#8211; μ}{σ})\)</p>
+<p>= \(p(z &gt; \frac{43 &#8211; 40}{2}\)</p>
+<p>= p(z &gt; 1.5)</p>
+<p>= 0.5 &#8211; p(0 &lt; z &lt; 1.5)</p>
+<p>= 0.5 &#8211; 0.4332</p>
+<p>= 0.0668</p>
+<p><span style="text-decoration: underline;"><strong>Solution ii):</strong></span></p>
+<p>p(30 ≤ x ≤ 45)</p>
+<p>= \(p\left ( \frac{30-40}{2} \leq z \leq \frac{45 &#8211; 40}{2} \right )\)</p>
+<p>= p(-5 ≤ z ≤ 2.5)</p>
+<p>= p(-5 ≤ z ≤ 0) + p(0 ≤ z ≤ 2.5)</p>
+<p>= p(0 ≤ z ≤ 5) + p(0 ≤ z ≤ 2.5)</p>
+<p>= 0.5 + 0.4938</p>
+<p>= 0.9938</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>As part of the study of the psychobiological correlates of success in athletes, the following measurements are obtained from members of Nepal national football team.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Anger</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+<td>21</td>
+<td>13</td>
+<td>5</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Vigor</td>
+<td>30</td>
+<td>23</td>
+<td>29</td>
+<td>22</td>
+<td>19</td>
+<td>19</td>
+<td>28</td>
+<td>19</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calculate Spearman’s rank correlation coefficient.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: center;"><strong>Anger(x)</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>Vigor(y)</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>Rank of x(R<sub>1</sub>)</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>Rank of x(R<sub>2</sub>)</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>d = R<sub>1</sub> + R<sub>2</sub></strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>d<sup>2</sup></strong></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">6</td>
+<td style="width: 16.6667%; text-align: center;">30</td>
+<td style="width: 16.6667%; text-align: center;">3</td>
+<td style="width: 16.6667%; text-align: center;">8</td>
+<td style="width: 16.6667%; text-align: center;">-5</td>
+<td style="width: 16.6667%; text-align: center;">25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">7</td>
+<td style="width: 16.6667%; text-align: center;">23</td>
+<td style="width: 16.6667%; text-align: center;">4</td>
+<td style="width: 16.6667%; text-align: center;">5</td>
+<td style="width: 16.6667%; text-align: center;">-1</td>
+<td style="width: 16.6667%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">5</td>
+<td style="width: 16.6667%; text-align: center;">29</td>
+<td style="width: 16.6667%; text-align: center;">1.5</td>
+<td style="width: 16.6667%; text-align: center;">7</td>
+<td style="width: 16.6667%; text-align: center;">-5.5</td>
+<td style="width: 16.6667%; text-align: center;">30.25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">21</td>
+<td style="width: 16.6667%; text-align: center;">22</td>
+<td style="width: 16.6667%; text-align: center;">8</td>
+<td style="width: 16.6667%; text-align: center;">4</td>
+<td style="width: 16.6667%; text-align: center;">4</td>
+<td style="width: 16.6667%; text-align: center;">16</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">13</td>
+<td style="width: 16.6667%; text-align: center;">19</td>
+<td style="width: 16.6667%; text-align: center;">5.5</td>
+<td style="width: 16.6667%; text-align: center;">2</td>
+<td style="width: 16.6667%; text-align: center;">3.5</td>
+<td style="width: 16.6667%; text-align: center;">12.25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">5</td>
+<td style="width: 16.6667%; text-align: center;">19</td>
+<td style="width: 16.6667%; text-align: center;">1.5</td>
+<td style="width: 16.6667%; text-align: center;">2</td>
+<td style="width: 16.6667%; text-align: center;">-0.5</td>
+<td style="width: 16.6667%; text-align: center;">0.25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">13</td>
+<td style="width: 16.6667%; text-align: center;">28</td>
+<td style="width: 16.6667%; text-align: center;">5.5</td>
+<td style="width: 16.6667%; text-align: center;">6</td>
+<td style="width: 16.6667%; text-align: center;">-0.5</td>
+<td style="width: 16.6667%; text-align: center;">0.25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">14</td>
+<td style="width: 16.6667%; text-align: center;">19</td>
+<td style="width: 16.6667%; text-align: center;">7</td>
+<td style="width: 16.6667%; text-align: center;">2</td>
+<td style="width: 16.6667%; text-align: center;">5</td>
+<td style="width: 16.6667%; text-align: center;">25</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">Σd = 0</td>
+<td style="width: 16.6667%; text-align: center;">Σd<sup>2</sup> = 110</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>\(R = 1-\frac{6\left \{ \sum d^2 + \frac{m_1(m_1^2 &#8211; 1)}{12} + \frac{m_2(m_2^2 &#8211; 1)}{12} + \frac{m_3(m_3^2 &#8211; 1)}{12} \right \}}{n(n^2 &#8211; 1)}\)</p>
+<p>Here,</p>
+<p>m<sub>1</sub> = 2 (5 is repeated 2 times)</p>
+<p>m<sub>2</sub> = 2 (13 is repeated 2 times)</p>
+<p>m<sub>3</sub> = 3 (19 is repeated 3 times)</p>
+<p>\(= 1-\frac{6\left \{ 110 + \frac{2(2^2 &#8211; 1)}{12} + \frac{2(2^2 &#8211; 1)}{12} + \frac{3(3^2 &#8211; 1)}{12} \right \}}{8(8^2 &#8211; 1)}\)</p>
+<p>\(= 1-\frac{6\left \{ 110 + 0.5 + 0.5 + 23 \right \}}{504}\)</p>
+<p>= -0.35</p>
+<p>Hence, Sperman&#8217;s rank correlation cofficient is -0.35</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Compute percentile coefficient of kurtosis from the following data and interpret the result.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Hourly wages (Rs)</td>
+<td>23-27</td>
+<td>28-32</td>
+<td>33-37</td>
+<td>38-42</td>
+<td>43-47</td>
+<td>48-52</td>
+</tr>
+<tr>
+<td>Number of workers</td>
+<td>22</td>
+<td>16</td>
+<td>9</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>x</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>f</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>cf</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">23-27</td>
+<td style="width: 33.3333%; text-align: center;">22</td>
+<td style="width: 33.3333%; text-align: center;">22</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">28-32</td>
+<td style="width: 33.3333%; text-align: center;">16</td>
+<td style="width: 33.3333%; text-align: center;">38</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">33-37</td>
+<td style="width: 33.3333%; text-align: center;">9</td>
+<td style="width: 33.3333%; text-align: center;">47</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">38-42</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">51</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">43-47</td>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;">54</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">48-52</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">55</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">N = 55</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p><strong>Calculating P<sub>75</sub>:</strong></p>
+<p>P<sub>75</sub> = \(75 \left ( \frac{N}{100} \right )^{th} item\) = \(75 \left ( \frac{55}{100} \right )^{th}\) = 41.25<sup>th</sup></p>
+<p>In cf, the value just greater than 41.25 is 4. so, class  = 33 &#8211; 37</p>
+<p>Now,</p>
+<p>P<sub>75</sub> = \(L + \frac{\frac{75 N}{100} &#8211; cf}{f} \times i\)</p>
+<p>= \(33 + \frac{41.25 &#8211; 38}{9} \times 4\)</p>
+<p>= 34.45</p>
+<p><strong>Calculating P<sub>25</sub>:</strong></p>
+<p>P<sub>25</sub> = \(25 \left ( \frac{N}{100} \right )^{th} item\) = \(25 \left ( \frac{55}{100} \right )^{th}\) = 13.75<sup>th</sup></p>
+<p>In cf, the value just greater than 13.755 is 22. so, class  = 23 &#8211; 27</p>
+<p>Now,</p>
+<p>P<sub>25</sub> = \(L + \frac{\frac{25 N}{100} &#8211; cf}{f} \times i\)</p>
+<p>= \(23 + \frac{13.75 &#8211; 0}{22} \times 4\)</p>
+<p>= 23.625</p>
+<p><strong>Calculating P<sub>90</sub>:</strong></p>
+<p>P<sub>90</sub> = \(90 \left ( \frac{N}{100} \right )^{th} item\) = \(90 \left ( \frac{55}{100} \right )^{th}\) = 49.5<sup>th</sup></p>
+<p>In cf, the value just greater than 49.5 is 51. so, class  = 38 &#8211; 42</p>
+<p>Now,</p>
+<p>P<sub>90</sub> = \(L + \frac{\frac{90 N}{100} &#8211; cf}{f} \times i\)</p>
+<p>= \(23 + \frac{49.5 &#8211; 47}{4} \times 4\)</p>
+<p>= 40.5</p>
+<p><strong>Calculating P<sub>10</sub>:</strong></p>
+<p>P<sub>10</sub> = \(10 \left ( \frac{N}{100} \right )^{th} item\) = \(10 \left ( \frac{55}{100} \right )^{th}\) = 5.5<sup>th</sup></p>
+<p>In cf, the value just greater than 5.5 is 21. so, class  = 23-27</p>
+<p>Now,</p>
+<p>P<sub>10</sub> = \(L + \frac{\frac{10 N}{100} &#8211; cf}{f} \times i\)</p>
+<p>= \(23 + \frac{5.5 &#8211; 0}{22} \times 4\)</p>
+<p>= 24</p>
+<p>Now,</p>
+<p>Percentile cofficient of Kurtosis</p>
+<p>= \(\frac{P_{75} &#8211; P_{25}}{2(P_{90} &#8211; P_{10})}\)</p>
+<p>= \(\frac{34.45 &#8211; 23.625}{2(40.5 &#8211; 24)}\)</p>
+<p>= \(\frac{10.825}{33}\)</p>
+<p>= 0.33</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write the properties of Poisson distribution. Fit a poison distribution and find the expected frequencies.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>X</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>71</td>
+<td>112</td>
+<td>117</td>
+<td>57</td>
+<td>27</td>
+<td>11</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A descrete random variable &#8216;x&#8217; is said to follow possion distribution if its probability mass function is given by \(P(X=x) = \frac{e^{-λ} λ^{x}}{x!}\)</p>
+<p>This can be written as X ~ P(X) and read as X follows possion distribution with parameter x.</p>
+<p><span style="text-decoration: underline;">Properties:</span></p>
+<ol style="list-style-type: lower-roman;">
+<li>It is a descrite probability distribution because the random variable x takes values 0,1,2,3,4,5 &#8230;&#8230;. ∞</li>
+<li>The mean and varience of possion distribution is λ</li>
+</ol>
+<p><strong>Problem Part:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">x</td>
+<td style="width: 33.3333%; text-align: center;">f</td>
+<td style="width: 33.3333%; text-align: center;">fx</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">71</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">112</td>
+<td style="width: 33.3333%; text-align: center;">112</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">117</td>
+<td style="width: 33.3333%; text-align: center;">234</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;">57</td>
+<td style="width: 33.3333%; text-align: center;">171</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">27</td>
+<td style="width: 33.3333%; text-align: center;">108</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">5</td>
+<td style="width: 33.3333%; text-align: center;">11</td>
+<td style="width: 33.3333%; text-align: center;">55</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">3</td>
+<td style="width: 33.3333%; text-align: center;">18</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">7</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">7</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">N = 399</td>
+<td style="width: 33.3333%; text-align: center;">Σfx = 705</td>
+</tr>
+</tbody>
+</table></div>
+<p>n = 7 (becase n takes values upto 7)</p>
+<p>Now,</p>
+<p>\(\bar{x} = \frac{\sum fx}{N}\) = \(\frac{705}{399}\) = 1.77</p>
+<p>∴ λ = 1.77</p>
+<p>Calculation of Expected frequency:</p>
+<p>we know, P(X=x) = P(x) = \(\frac{e^{-λ} λ^{x}}{x!}\)</p>
+<p>Also, Expected frequency (fe) = N . P(x)</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 254px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="height: 24px;">X</td>
+<td style="height: 24px;">\(P(X=x) = \frac{e^{-λ} λ^{x}}{x!}\)</td>
+<td style="height: 24px;">fe = P(X=x) . N</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">0</td>
+<td style="height: 23px;">P(X=0) = \(\frac{e^{-1.77} 1.77^{0}}{0!}\) = 0.17</td>
+<td style="height: 23px;">0.17 × 399 = 67.83 ~ 67</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">1</td>
+<td style="height: 23px;">P(X=1) = 0.302</td>
+<td style="height: 23px;">0.302 × 399 = 120.498 ~ 120</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">2</td>
+<td style="height: 23px;">P(X=2) = 0.267</td>
+<td style="height: 23px;">0.267 × 399 = 106.533 ~ 106</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">3</td>
+<td style="height: 23px;">P(X=3) = 0.157</td>
+<td style="height: 23px;">0.157 × 399 = 62.643 ~ 63</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">4</td>
+<td style="height: 23px;">P(X=4) = 0.07</td>
+<td style="height: 23px;">0.07 × 399 = 27.93 ~ 28</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">5</td>
+<td style="height: 23px;">P(X = 5) = 0.025</td>
+<td style="height: 23px;">0.025 × 399 = 9.975 ~ 10</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">6</td>
+<td style="height: 23px;">P(X = 6) = 0.07</td>
+<td style="height: 23px;">0.007 × 399 = 2.793 ~ 3</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;">7</td>
+<td style="height: 23px;">P(X = 7) = 0.002</td>
+<td style="height: 23px;">0.002 × 399 = 0.798 ~ 1</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;"></td>
+<td style="height: 23px;"></td>
+<td style="height: 23px;"></td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px;"></td>
+<td style="height: 23px;">ΣP(X=x) = 1</td>
+<td style="height: 23px;">Σfe = 399</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, We see the possion distribution is fitted and fitted posion distribution is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">x</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">fe</td>
+<td style="width: 11.1111%; text-align: center;">68</td>
+<td style="width: 11.1111%; text-align: center;">120</td>
+<td style="width: 11.1111%; text-align: center;">106</td>
+<td style="width: 11.1111%; text-align: center;">63</td>
+<td style="width: 11.1111%; text-align: center;">28</td>
+<td style="width: 11.1111%; text-align: center;">10</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Define primary data and secondary data and explain the difference between them.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Primary data is the data that is collected for the first time through personal experiences or evidence, particularly for research. It is also described as raw data or first-hand information. The mode of assembling the information is costly, as the analysis is done by an agency or an external organisation, and needs human resources and investment. The investigator supervises and controls the data collection process directly.</p>
+<p>Secondary data is a second-hand data that is already collected and recorded by some researchers for their purpose, and not for the current research problem. It is accessible in the form of data collected from different sources such as government publications, censuses, internal records of the organisation, books, journal articles, websites and reports, etc.</p>
+<p><span style="text-decoration: underline;"><strong>Difference Between Primary Data and Seconday Data:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 336px;">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Basis</strong></td>
+<td style="text-align: center;"><strong>Primary Data</strong></td>
+<td style="text-align: center;"><strong>Secondary Data</strong></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Primary data are those that are collected for the first time.</td>
+<td>Secondary data refer to those data that have already been collected by some other person.</td>
+</tr>
+<tr>
+<td>Originality</td>
+<td>These are original because these are collected by the investigator for the first time.</td>
+<td>These are not original because someone else has collected these for his own purpose.</td>
+</tr>
+<tr>
+<td>Nature of Data</td>
+<td>These are in the form of raw materials.</td>
+<td>These are in the finished form.</td>
+</tr>
+<tr>
+<td>Reliability and Suitability</td>
+<td>These are more reliable and suitable for the enquiry because these are collected for a particular purpose.</td>
+<td>These are less reliable and less suitable as someone else has collected the data which may not perfectly match our purpose.</td>
+</tr>
+<tr>
+<td>Time and Money</td>
+<td>Collecting primary data is quite expensive both in the terms of time and money.</td>
+<td>Secondary data requires less time and money; hence it is economical.</td>
+</tr>
+<tr>
+<td>Precaution and Editing</td>
+<td>No particular precaution or editing is required while using the primary data as these were collected with a definite purpose.</td>
+<td>Both precaution and editing are essential as secondary data were collected by someone else for his own purpose.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 13</h3>
+<div><p><p>What do you mean by sampling? Explain non probability sampling with merits and demerits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When one by one study of all units of a population is not possible due to some factors like time, cost, manpower, resources and destructive nature of study, we take a small representative part from the population for the study. This small represenatative part selected for the study from the population is called sample.</p>
+<p>The process of selecteding a sample from a population is called sampling.</p>
+<p><span style="text-decoration: underline;">For Example:</span> A pathologist takes a syringe of blood as a sample to find out a disease.</p>
+<p><span style="text-decoration: underline;"><strong>Non-Probability Sampling Technique:</strong></span></p>
+<p>It is defined as the method of sampling technique in which each unit in a sample is selected on the basis of personal judgement. These are several non-random sampling methods for selecting samples from a population as:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;">Judgement Sampling:</span> sample unit are selected according to researchers or investigators personal judgement</li>
+<li><span style="text-decoration: underline;">Convenience Sampling:</span> sample unit are selected neither by probability nor by presonal judgement but by convenience</li>
+<li><span style="text-decoration: underline;">Quota Sampling:</span> in which any investigator is told to examine or enumerate a fixed number of units called quotas from each stratum</li>
+<li><span style="text-decoration: underline;">Snowball Sampling:</span> used in the case where it is different to reach into exact population. In this method, survey subjects are selected on referal from other survey respomdents.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Advantage of Non-Probability Sampling:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>It is a more practical and conducive method for researchers that deploy surveys into the real world. Also, non-probability sampling can produce or interpret data in the form of numbers if properly done.</li>
+<li>Responses are faster and cheaper because the sample is familiar to the researcher. So it saves time and resources.</li>
+<li>With non-probability sampling, you can easily connect with your target population especially in an online community.</li>
+<li>Non-probability sampling is also easy to use and you can also use it when you cannot conduct probability sampling perhaps because of a small population.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Disadvantage of Non-Probability Sampling:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>A major disadvantage of non-probability sampling is that the researcher may be unable to evaluate if the population is well represented.</li>
+<li>The researcher may be unable to calculate the intervals and the margin of error. This is why most researchers opt for probability sampling first.</li>
+<li>You may also have an unclear sample size because there is no way to measure the boundaries of the relevant population to your research.</li>
+</ul>
+</div>
+</body></html>

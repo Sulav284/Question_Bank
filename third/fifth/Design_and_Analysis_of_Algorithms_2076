@@ -1,0 +1,330 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DAA Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>DAA Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>What do you mean by the complexity of an algorithm? Explain the asymptotic notations used to describe the time/space complexity of any algorithm with their geometrical interpretation and example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The complexity of an algorithm defines the performance of the algorithm in terms of the input size. We consider the complexities of every algorithm and compare them while choosing the most efficient algorithm to solve our problem.</p>
+<p id="there-are-2-types-of-complexity-to-consider-for-an-algorithm">There are 2 types of complexity to consider for an algorithm</p>
+<ol type="1">
+<li>Time Complexity</li>
+<li>Space Complexity</li>
+</ol>
+<p><strong>Time Complexity: </strong>The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. Note that the time to run is a function of the length of the input and not the actual execution time of the machine on which the algorithm is running.</p>
+<p><strong>Space Complexity: </strong>The space complexity of an algorithm quantifies the amount of space taken by an algorithm to run as a function of the length of the input.</p>
+<p><strong><span style="text-decoration: underline;">Asymptotic notation is used to describe the time/space complexity of an algorithm:</span></strong></p>
+<p>Whenever we want to perform an analysis of an algorithm, we need to calculate the complexity of that algorithm. It does not provide the exact amount of resources required. so instead of taking the exact amount of resources, we represent that complexity in a general form which produces the basic nature of that algorithm. We use that general form for the analysis process.</p>
+<p>Complexity analysis of an algorithm is very hard if we try to analyze it exactly. We know that the complexity (worst, best, or average) of an algorithm is the mathematical function of the size of the input. So if we analyze the algorithm in terms of bound  (upper and lower) then it would be easier. For this purpose, we need the concept of asymptotic notations. Asymptotic notation is a way of comparing functions that ignores constant factors and small input sizes. These notations are used to calculate the running time complexity of the algorithm.</p>
+<h4>Big Oh Notation (O):</h4>
+<p>Big-Oh notation is used to define the <strong>upper bound</strong> of an algorithm in terms of Time Complexity. It always indicates the maximum time required by an algorithm for all input values. It describes the worst case of an algorithm time complexity.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-11074 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Big_O_Notation.png?resize=335%2C253&#038;ssl=1" alt="Big-O Notation" width="335" height="253" /></p>
+<p>In the above graph after a particular input value n<sub>0</sub>, always C g(n) is greater than f(n) which indicates the algorithm&#8217;s upper bound.</p>
+<p><strong>Example:</strong> Find Big oh of the given function f(n) = 3n<sup>2</sup> + 4n + 7</p>
+<p><strong>solution:</strong> We have f(n) = 3n<sup>2</sup> + 4n + 7 &lt;= 3n<sup>2</sup> + 4n<sup>2</sup>+7n<sup>2</sup> &lt;= 14n<sup>2</sup></p>
+<p>f(n) &lt;= 14n<sup>2</sup></p>
+<p>where c = 14 and g(n) = n<sup>2</sup>, thus f(n) = O(g(n)) = O(n<sup>2</sup>)</p>
+<h4 class="bsc-question">Big &#8211; Omege Notation (Ω):</h4>
+<p>Big-Omega notation is used to define the <strong>lower bound</strong> of an algorithm in terms of Time Complexity. It always indicates the minimum time required by an algorithm for all input values. It describes the best case of an algorithm time complexity.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-11076 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Big_Omega_Notation.png?resize=335%2C253&#038;ssl=1" alt="Big Omega" width="335" height="253" /></p>
+<p>In the above graph after a particular input value n<sub>0</sub>, always C g(n) is less than f(n) which indicates the algorithm&#8217;s lower bound.</p>
+<p><strong>Example:</strong> Find Big oh of the given function f(n) = 3n<sup>2</sup> + 4n + 7</p>
+<p><strong>Solution: </strong>we have f(n) = 3n<sup>2</sup> + 4n + 7 &gt;= 3n<sup>2</sup></p>
+<p>f(n) = 3n<sup>2</sup></p>
+<p>where c = 14 and g(n) = n<sup>2</sup>, thus f(n) = Ω(g(n)) = Ω(n<sup>2</sup>)</p>
+<h4 class="bsc-question">Big-Theta Notation (Θ):</h4>
+<p>Big-Theta notation is used to define the <strong>average bound</strong> of an algorithm in terms of Time Complexity. It indicates the average time required by an algorithm for all input values. It describes the average case of an algorithm time complexity.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-11077 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Big_Theta_Notation.png?resize=335%2C253&#038;ssl=1" alt="Big theta" width="335" height="253" /></p>
+<p>In the above graph after a particular input value n<sub>0</sub>, always C<sub>1</sub> g(n) is less than f(n) and C<sub>2</sub> g(n) is greater than f(n) which indicates the algorithm&#8217;s average bound.</p>
+<p><strong>Example:</strong> If f(n) = 3n<sup>2</sup> + 4n + 7 g(n) = n<sup>2</sup>, then prove that f(n) = Θ(g(n))</p>
+<p><strong>proof: </strong>Let us consider c<sub>1</sub>, c<sub>2,</sub> and n<sub>0</sub> values as 14, 1, and 1 respectively then we can have,</p>
+<p>f(n) &lt;= c<sub>1</sub> * g(n), n &gt;= n<sub>0</sub> as 3n<sup>2</sup> + 4n + 7  &lt;= 14n<sup>2</sup>, and</p>
+<p>f(n) &lt;= c<sub>2</sub> * g(n), n &gt;= n<sub>0</sub> as 3n<sup>2</sup> + 4n + 7  &lt;= 1n<sup>2</sup>, and</p>
+<p>For all n &gt;= 1 (in both cases)</p>
+<p>so, c<sub>2</sub> *g(n) &lt;= f(n) &lt;= c<sub>1</sub> * g(n) is trival</p>
+<p>Hence, f(n) = Θ(g(n))</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the divide and conquer paradigm from algorithm design with a suitable example. Write the Quick sort algorithm using a randomized approach and explain its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the <b>divide and conquer approach</b>, a problem is divided into smaller problems, then the smaller problems are solved independently, and finally, the solutions of smaller problems are combined into a solution for the large problem.</p>
+<p>Generally, divide-and-conquer algorithms have three parts −</p>
+<ul class="list">
+<li><b>Divide the problem</b> into a number of sub-problems that are smaller instances of the same problem.</li>
+<li><b>Conquer the sub-problems</b> by solving them recursively. If they are small enough, solve the sub-problems as base cases.</li>
+<li><b>Combine the solutions</b> to the sub-problems into the solution for the original problem.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-11083 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/divide-and-conquer-introduction.png?resize=375%2C291&#038;ssl=1" alt="Divide and Conquer" width="375" height="291" /></p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>A classic example of Divide and Conquer is Merge Sort. In Merge Sort, we divide the array into two halves, sort the two halves recursively, and then merge the sorted halves.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11084 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Merge-Sort-Tutorial.png?resize=618%2C595&#038;ssl=1" alt="" width="618" height="595"></p>
+<p><span style="text-decoration: underline;"><strong>Randomized Quick Sort:</strong></span></p>
+<p>Randomized quick sort is called randomized if its behavior depends on input as well as the random value generated by the random number generator. The beauty of the randomized algorithm is that no particular input can produce worst-case behavior.</p>
+<p><span style="text-decoration: underline;">Algorithm:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">RandQuickSort(A, l, r){
+    if( l &lt; r ){
+        m = RandPartition(A, l, r);
+        RandQuickSort(A, l, m-1);
+        RandQuickSort(A, m+1, r);
+    }
+}
+
+RandPartition(A, l, r){
+    k = random(l, r);
+    swap(A[l], A[k]);
+    return Partition(A, l, r);
+}
+
+Partition(A, l, r){
+    x = l;
+    y = r;
+    p = A[l];
+
+    while(x &lt; y){
+        do{
+            x++;
+        }while(A[x] &lt;= p);
+
+        do{
+            y--;
+        }while(A[y] &gt;= p);
+
+        if( x &lt; y ){
+            swap(A[x], A[y]);
+        }
+    }
+
+    A[l] = A[y];
+    A[y] = p;
+
+    return y;
+}</pre>
+<p><span style="text-decoration: underline;">Time Complexity:</span></p>
+<ul style="list-style-type: square;">
+<li>For the Wrost case, Time complexity is O(n<sup>2</sup>)</li>
+<li>For Best case, Time complexity is O(n log n)</li>
+<li>For Average case, Time complexity is O(n log n)</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain in brief the Backtracking approach for algorithm design. How it differs with recursion? Explain the N-Queen problem and algorithm using backtracking and analyze its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Backtracing is an algorithmic method to solve a problem in an additional way. Backtracking is an algorithmic technique to solve a problem in an incremental way. It uses a recursive approach to solve the problems. We can say that backtracking is used to find all possible combinations to solve an optimization problem.</p>
+<p><strong>Backtracking</strong> is a general algorithm for finding solutions to some computational problem. We have a set of several choices. If one choice from the set of choices proves incorrect, computation backtracks or restarts at the point of choice and tries another choice. In backtracking, you use recursion in order to explore all the possibilities until you get the best result for the problem.</p>
+<p>The difference between backtracking and recursion are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Sl.N</th>
+<th>Recursion</th>
+<th>Backtracking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Recursion does not always need backtracking</td>
+<td>Backtracking always uses recursion to solve problems</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A recursive function solves a particular problem by calling a copy of itself and solving smaller subproblems of the original problems.</td>
+<td>Backtracking at every step eliminates those choices that cannot give us the solution and proceeds to those choices that have the potential of taking us to the solution.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Recursion is a part of backtracking itself and it is simpler to write.</td>
+<td>Backtracking is comparatively complex to implement.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Applications of recursion are Tree and Graph Traversal, Towers of Hanoi, Divide and Conquer Algorithms, Merge Sort, Quick Sort, and Binary Search.</td>
+<td>Application of Backtracking is N Queen problem, Rat in a Maze problem, Knight’s Tour Problem, Sudoku solver, and Graph coloring problems.</td>
+</tr>
+</tbody>
+</table></div>
+<h4>N-queen Problem:</h4>
+<p>This problem is to find an arrangement of N queens on a chess board, such that no queen can attack any other queens on the board.</p>
+<p>The chess queens can attack in any direction in a horizontal, vertical, or diagonal way.</p>
+<p>A binary matrix is used to display the positions of N Queens, where no queens can attack other queens.</p>
+<p><strong><span style="text-decoration: underline;">Algorithm:</span></strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Step 1: Start in the leftmost column
+Step 2: If all queens are placed
+            return true
+Step 3: Try all rows in the current column. 
+         Do following for every tried row.
+             Step 3.1 If the queen can be placed safely in this row  then mark this [row, column] as part of the  solution and recursively check if placing
+       queen here leads to a solution.
+             Step 3.2 If placing the queen in [row, column] leads to a solution then return true.
+             Step 3.3 If placing queen doesn't lead to a solution then unmark this [row, column] (Backtrack) and go to  step 3.1 to try other rows.
+Step 4: If all rows have been tried and nothing worked, 
+        return false to trigger backtracking.
+Step 5: End</pre>
+<p><span style="text-decoration: underline;"><strong>Analysis:</strong></span></p>
+<p>Solution of N Queen problem backtracking checks for all possible arrangements of N queens on the chessboard. And check for the validity of the solution. Now a number of possible arrangements of N queens on N x N chessboard in N!. So average and worst case complexity of the solution is O(N!). The best case occurs if we find our solution before exploiting all possible solutions, the best, average and worst case complexity remains O(N!)</p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>Given a 4 x 4 chessboard, arrange four queens in a way, such that no two queens attack each other. That is, no two queens are placed in the same row, column, or diagonal.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11179 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/backtracking-sequence-for-4-queen.webp?resize=1272%2C1674&#038;ssl=1" alt="" width="1272" height="1674"></p>
+<p>The solution of the 4-queen problem can be seen as four tuples (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>), where x<sub>i</sub> represents the column number of queen Q<sub>i</sub>. Two possible solutions for the 4-queen problem are (2, 4, 1, 3) and (3, 1, 4, 2).</p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Write the algorithm for selection sort and explain its time and space complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.</p>
+<p>The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.</p>
+<p>This algorithm is not suitable for large data sets as its average and worst-case complexities are of Ο(n<sup>2</sup>), where <b>n</b> is the number of items.</p>
+<p><span style="text-decoration: underline;"><strong>Algorithm:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Step 1: Start
+Step 2: Select the first element of the list (i.e., Element at first position in the list).
+Step 3: Compare the selected element with all the other elements in the list.
+Step 4: In every comparision, if any element is found smaller than the selected element (for Ascending order), then both are swapped.
+Step 5: Repeat the same procedure with element in the next position in the list till the entire list is sorted.
+Step 6: End</pre>
+<p><span style="text-decoration: underline;"><strong>Time Complexity:</strong></span></p>
+<p>The inner loop executes for (n-1) times when i = 0, (n-2) times when i = 1, and so on.</p>
+<p>Time complexity = (n-1) + (n-2) + (n-3) + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;. + 2 + 1</p>
+<p>= O(n<sup>2</sup>)</p>
+<p>There is no best-case linear time complexity for this algorithm, but the number of swap operations is reduced greatly.</p>
+<p><span style="text-decoration: underline;"><strong>Space Complexity:</strong></span></p>
+<p>The space complexity of the Selection sort is O(1).</p>
+<p>This is because we use only constant extra space such as:</p>
+<ul style="list-style-type: square;">
+<li>2 variables to enable swapping of elements.</li>
+<li>One variable to keep track of the smallest element in an unsorted array.</li>
+</ul>
+<p>Hence, in terms of space complexity, the Selection sort is optimal as the memory requirements remain the same for every input.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Solve the following recurrence relation using the master method.</p>
+<ol>
+<li>T(n) = 7 T(n/2) + n<sup>2</sup></li>
+<li>T(n) = 4 T(n/4) + kn</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a) T(n) = 7 T(n) + n<sup>2</sup></p>
+<p>Solution:</p>
+<p>Here we have a = 7, b = 2 and f(n) = n<sup>2</sup></p>
+<p>Now, n<sup>log</sup><sub>b</sub><sup>a</sup> = n<sup>log</sup>2<sup>7</sup> = n<sup>(log 7 / log 2)</sup> = n<sup>2.8</sup></p>
+<p>Also, f(n) = n<sup>2</sup></p>
+<p>Since f(n) ≤ n<sup>log</sup>b<sup>a-c</sup> where choose ε = 0.1</p>
+<p>Thus it satisfies the first case of Master&#8217;s method.</p>
+<p>Thus it&#8217;s complexity,</p>
+<p>T(n) = Θ( n<sup>log</sup><sub>b</sub><sup>a</sup> ) = Θ( n<sup>log</sup><sub>2</sub><sup>7</sup> ) = Θ(2<sup>2.8</sup>)</p>
+<p>Thus, T(n) = Θ(n<sup>2</sup>)</p>
+<p>&nbsp;</p>
+<p>b) T(n) = 4 T(n/4) + kn</p>
+<p>Solution:</p>
+<p>Here, we have a = 4, b = 4 and f(n) = kn</p>
+<p>Now, n<sup>log</sup><sub>b</sub><sup>a</sup> = n<sup>log</sup>4<sup>4</sup> = n<sup>(log 4 / log 4)</sup> = n<sup>1</sup></p>
+<p>Also, f(n) = kn<sup>1</sup></p>
+<p>Since f(n) = n<sup>log</sup>b<sup>a</sup></p>
+<p>Thus it satisfies the third case of Master&#8217;s method.</p>
+<p>Thus it&#8217;s complexity,</p>
+<p>T(n) = Θ( f(n) log n) = Θ (kn log n)</p>
+<p>Thus T(n) = Θ (n log n)</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the greedy algorithm for the fractional knapsack problem with its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/2078-06-DAA_1.jpg?resize=1558%2C2200&#038;ssl=1" alt="" width="1558" height="2200" class="alignnone size-full wp-image-11467"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/2078-06-DAA_2.jpg?resize=1700%2C1165&#038;ssl=1" alt="" width="1700" height="1165" class="alignnone size-medium wp-image-11468"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Trace heap sort algorithm for the following data:</p>
+<p>{2, 9, 3, 12, 15, 8, 11}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/DAA-07-2076_1-1.jpg?resize=1700%2C1597&#038;ssl=1" alt="" width="1700" height="1597" class="alignnone size-full wp-image-11473"><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/DAA-07-2076_2.jpg?resize=1529%2C2200&#038;ssl=1" alt="" width="1529" height="2200" class="alignnone size-full wp-image-11471"><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/DAA-07-2076_3.jpg?resize=1485%2C2200&#038;ssl=1" alt="" width="1485" height="2200" class="alignnone size-full wp-image-11472"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What do you mean by Dynamic programming strategy? Explain the element of DP.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The dynamic programming approach is similar to divide and conquer in breaking down the problem into smaller and yet smaller possible sub-problems. But unlike, divide and conquer, these sub-problems are not solved independently. Rather, the results of these smaller sub-problems are remembered and used for similar or overlapping sub-problems.</p>
+<p>Dynamic programming is used where we have problems, which can be divided into similar sub-problems so that their results can be re-used. Mostly, these algorithms are used for optimization. Before solving the in-hand sub-problem, the dynamic algorithm will try to examine the results of the previously solved sub-problems. The solutions of sub-problems are combined in order to achieve the best solution.</p>
+<p>So we can say that −</p>
+<ul class="list">
+<li>The problem should be able to be divided into smaller overlapping sub-problem.</li>
+<li>An optimum solution can be achieved by using an optimum solution of smaller sub-problems.</li>
+<li>Dynamic algorithms use Memoization.</li>
+</ul>
+<p>If the problem has an optimal substructure, then we can recursively define an optimal solution. If a problem has overlapping sub-problems, then we can improve on implementation by computing each sub-problem only once.</p>
+<p><span style="text-decoration: underline;"><strong>Element of Dynamic Programming:</strong></span></p>
+<p>There are basically three elements that categorize a dynamic programming algorithm:</p>
+<p><span style="text-decoration: underline;">1. Substructure:</span></p>
+<p>Decompose the given program into smaller sub-problems. Express the solution of the original problem in terms of the solution for smaller problems.</p>
+<p><span style="text-decoration: underline;">2. Table Structure:</span></p>
+<p>After solving the sub-problems, store the results of the sub-problems in a table. This is done because sub-problem solutions are reused many times, and we do not want to repeatedly solve the same problem over and over again.</p>
+<p><span style="text-decoration: underline;">3. Bottom-up Computation:</span></p>
+<p>Using the table, combine the solution of smaller sub-problems to solve larger sub-problems and eventually arrives at a solution to complete the problem.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain the approximation for solving vertex cover with a suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><iframe loading="lazy" allowfullscreen webkitallowfullscreen width="100%" height="800px" src="https://hamrocsit.com/wp-content/plugins/pdfjs-viewer-hamrocsit/pdfjs/web/viewer.php?file=https://hamrocsit.com/wp-content/uploads/2023/01/9.pdf&#038;attachment_id=11475&#038;dButton=false&#038;pButton=false&#038;oButton=false&#038;sButton=false#zoom=auto&#038;pagemode=none&#038;_wpnonce=cd9fbd3433" title="Embedded PDF | Hamro CSIT" class="pdfjs-iframe"></iframe>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain Prism’s algorithm for MST problem and analyze its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/10_1.jpg?resize=1443%2C2200&#038;ssl=1" alt="" width="1443" height="2200" class="alignnone size-full wp-image-11476"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/10_2.jpg?resize=1700%2C1211&#038;ssl=1" alt="" width="1700" height="1211" class="alignnone size-medium wp-image-11477"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain in brief about the classes P, NP, and NP complete with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><u>P Class</u></strong></p>
+<p>The P in the P class stands for <strong>Polynomial Time.</strong> It is the collection of decision problems(problems with a “yes” or “no” answer) that can be solved by a deterministic machine in polynomial time.</p>
+<p><strong>eatures:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solution to P problems is easy to find.</li>
+<li>P is often a class of computational problems that are solvable and tractable. Tractable means that the problems can be solved in theory as well as in practice. But the problems that can be solved in theory but not in practice are known as intractable.</li>
+</ol>
+<p>This class contains many natural problems like:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Calculating the greatest common divisor.</strong></li>
+<li><strong>Finding a maximum matching.</strong></li>
+<li><strong>Decision versions of linear programming.</strong></li>
+</ol>
+<p><strong><u>NP Class</u></strong></p>
+<p>The NP in NP class stands for <strong>Non-deterministic Polynomial Time</strong>. It is the collection of decision problems that can be solved by a non-deterministic machine in polynomial time.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solutions of the NP class are hard to find since they are being solved by a non-deterministic machine but the solutions are easy to verify.</li>
+<li>Problems of NP can be verified by a Turing machine in polynomial time.</li>
+</ol>
+<p>This class contains many problems that one would like to be able to solve effectively:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Boolean Satisfiability Problem (SAT).</strong></li>
+<li><strong>Hamiltonian Path Problem.</strong></li>
+<li><strong>Graph coloring.</strong></li>
+</ol>
+<p><strong><u>NP-complete class</u></strong></p>
+<p>A problem is NP-complete if it is both NP and NP-hard. NP-complete problems are the hard problems in NP.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>NP-complete problems are special as any problem in NP class can be transformed or reduced into NP-complete problems in polynomial time.</li>
+<li>If one could solve an NP-complete problem in polynomial time, then one could also solve any NP problem in polynomial time.</li>
+</ol>
+<p>Some example problems include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Decision version of 0/1 Knapsack.</strong></li>
+<li><strong>Hamiltonian Cycle.</strong></li>
+<li><strong>Satisfiability.</strong></li>
+<li><strong>Vertex cover.</strong></li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on</p>
+<ol>
+<li>Backtracking strategy</li>
+<li>Tractable and Intractable Problem</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Backtracking</strong> is a technique based on algorithm to solve problem. It uses recursive calling to find the solution by building a solution step by step increasing values with time. It removes the solutions that doesn’t give rise to the solution of the problem based on the constraints given to solve the problem.</p>
+<p>Backtracking algorithm is applied to some specific types of problems,</p>
+<ul class="list">
+<li>Decision problem used to find a feasible solution of the problem.</li>
+<li>Optimisation problem used to find the best solution that can be applied.</li>
+<li>Enumeration problem used to find the set of all feasible solutions of the problem.</li>
+</ul>
+<p>In backtracking problem, the algorithm tries to find a sequence path to the solution which has some small checkpoints from where the problem can backtrack if no feasible solution is found for the problem.</p>
+<p>b)Tractable and Intractable Problem</p>
+<p class="answer">
+<b>Tractable Problem: </b>A problem that is solvable by a polynomial-time algorithm.<br />
+The upper bound is polynomial.<br />
+Here are <b>examples</b> of tractable problems (ones with known polynomial-time algorithms):<br />
+– Searching an unordered list<br />
+– Searching an ordered list<br />
+– Sorting a list<br />
+– Multiplication of integers (even though there’s a gap)<br />
+– Finding a minimum spanning tree in a graph (even though there’s a gap)</p>
+<p><b>Intractable Problem: </b>a problem that cannot be solved by a polynomial-time algorithm. The lower bound is exponential.<br />
+From a computational complexity stance, intractable problems are problems for which there exist no efficient algorithms to solve them.<br />
+Most intractable problems have an algorithm that provides a solution, and that algorithm is the brute-force search.<br />
+This algorithm, however, does not provide an efficient solution and is, therefore, not feasible for computation with anything more than the smallest input.</p>
+<p class="answer"><b>Examples</b><br />
+Towers of Hanoi: we can prove that any algorithm that solves this problem must have a worst-case running time that is at least 2<sup>n</sup> − 1.<br />
+* List all permutations (all possible orderings) of n numbers.</p>
+</div>
+</body></html>

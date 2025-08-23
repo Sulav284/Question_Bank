@@ -1,0 +1,350 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA model question 0</title>
+    </head>
+    <body>
+        <h1>CA model question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Compare non-restoring division algorith with restoring algorithm. Divide 10/3 using restoring division.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Restoring and non- restoring are algorithms used for division of two numbers. The following are the differences between restoring division and non-restoring division:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Restoring division</strong></td>
+<td style="text-align: center;"><strong>Non-restoring division</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">1.In restoring division, the divisor is repeatedly subtracted from the dividend, and the remainder is updated until the remainder becomes less than the divisor.</td>
+<td style="text-align: center;">1.In non-restoring division, the divisor is repeatedly added to or subtracted from the remainder until the remainder becomes less than the divisor.</td>
+</tr>
+<tr>
+<td style="text-align: center;">2. In restoring division, a borrow bit is used to determine whether a borrow operation is required during the subtraction step.</td>
+<td style="text-align: center;">2. In non-restoring division, a borrow bit is not used, and the remainder is simply updated based on the addition or subtraction operation performed.</td>
+</tr>
+<tr>
+<td style="text-align: center;">3. Restoring division generally requires more iterations than non-restoring division to compute the quotient and remainder.</td>
+<td style="text-align: center;">3. Non-restoring division may add or subtract the divisor from the remainder depending on its value.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4. It is more complex than non-restoring division due to the use of the borrow bit and the need to handle cases where the dividend is negative.</td>
+<td style="text-align: center;">4. It is simpler and faster than restoring division but may require more hardware resources.</td>
+</tr>
+<tr>
+<td style="text-align: center;">5.  It can handle division with signed numbers but requires additional steps to handle negative dividends and divisors.</td>
+<td style="text-align: center;">5. It is not well-suited for division with signed numbers and may require additional steps to handle negative dividends and divisors.</td>
+</tr>
+</tbody>
+</table></div>
+<p>now,</p>
+<p><span style="text-decoration: underline;"><strong>NUMERICAL PART:</strong></span></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18662" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/restore.jpg?resize=926%2C1197&amp;ssl=1" alt="- Hamro CSIT" width="926" height="1197" data-recalc-dims="1" /></p>
+</div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain instruction format in brief with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Instruction are group of bits or collection of bits which instruct the computer to perform any operation.There is a format in which instructions are written which is called as instruction format. <strong>Instruction format </strong>consist a sequence of bits (0 and 1). These bits, when grouped, are known as fields. Each field of the machine provides specific information to the CPU related to the operation and location of the data. The instruction format also defines the layout of the bits for an instruction.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-35564" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/instruction-format-.drawio.png?resize=487%2C83&#038;ssl=1" alt="" width="487" height="83"></p>
+<p>The most common fields found in the instruction format are :</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><em> An operation code</em></span>: The 3 bit instruction which tells or specifies the operation to be performed. As it is of 3 bit on decoding it we get 8 combination where each combination specifies a task</li>
+<li> <span style="text-decoration: underline;"><em>An address field</em></span> : It is 12 bit field where the address of memory or the the register where the effective address or operands designates.</li>
+<li><span style="text-decoration: underline;"><em> A mode field</em></span>  : It is a filed of 1 bitthat specifies the way the operand or effective address is determined.</li>
+</ol>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>Let us take following expression:</p>
+<p><strong>                                                                           X=(A+B) * C</strong></p>
+<p>then,</p>
+<p><strong>a.</strong><span style="text-decoration: underline;"><strong> Three Address Instruction Format:</strong></span></p>
+<p>Computers with three-address instruction format can use each address field to specify either a processor register or a memory operand. It give us result in small program when evaluating arithmetic expression but binary-coded instruction require too many bits to specify three addresses.</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>Let us take following expression:</p>
+<p><strong>                                                                           X=(A+B) * C</strong></p>
+<p>then,</p>
+<p><em>ADD  R1,A,B</em></p>
+<p><em>MUL  X,R1,C</em></p>
+<p><strong>b. </strong><span style="text-decoration: underline;"><strong>Two Addresss Instruction Format:</strong></span></p>
+<p>Two addresss instruction format are the most common commercial computers. Here again, each address field can specify either a processor register or a memory word.</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>Let us take following expression:</p>
+<p><strong>                                                                           X=(A+B) * C</strong></p>
+<p>then,</p>
+<p><em>MOV R1,A</em></p>
+<p><em>ADD R1,B</em></p>
+<p><em>MOV R2,C</em></p>
+<p><em>MUL R1,R2</em></p>
+<p><em>MOV X,R1</em></p>
+<p><strong>c. </strong><span style="text-decoration: underline;"><strong>One Address Instruction Format:</strong></span></p>
+<p>One address instruction format are use an accmulator (AC) register for all data manipulation. For multiplication and division there is a need for a second register. Here all operations are done between the AC and a memory operand.</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>Let us take following expression:</p>
+<p><strong>                                                                           X=(A+B) * C</strong></p>
+<p>then,</p>
+<p><em>LOAD A</em></p>
+<p><em>ADD B</em></p>
+<p><em>STORE T</em></p>
+<p><em>LOAD C</em></p>
+<p><em>MUL T</em></p>
+<p><em>STORE X</em></p>
+<p><strong>d. </strong><span style="text-decoration: underline;"><strong>Zero Address Instruction Format:</strong></span></p>
+<p>A stack- organized computer does&#8217;t use an address field forthe instructions. To evaluate the arithmetic expression into reverse polish notation. It is named as zero address bacause of absebce of an addredd field in the computational instruction.</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>Let us take following expression:</p>
+<p><strong>                                                                           X=(A+B) * C</strong></p>
+<p>then,</p>
+<p><em>PUSH A</em></p>
+<p><em>PUSH B</em></p>
+<p><em>ADD</em></p>
+<p><em>PUSH C</em></p>
+<p><em>MUL</em></p>
+<p><em>POP X</em></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Draw the basic computer flowchart and explain how it works.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The basic computer consost of two parts instruction and interrupt while the selection will depend on the bit R.</p>
+<p><strong><span style="text-decoration: underline;">Instruction Cycle</span>:</strong></p>
+<p>Instruction cycle is basically related with the execution of the instruction. A program residing in the memory unit of a computer consists of sequence of instructions. In the basic computer, each instruction cycle consists of following phases:</p>
+<ol style="list-style-type:decimal;">
+<li>Fetch an instruction from memory</li>
+<li>Decode the instruction</li>
+<li>Read the effective address for memory if the instruction has an indirect addresses.</li>
+<li>Execute the instruction</li>
+</ol>
+<p><strong><span style="text-decoration: underline;">Interrupt Cycle</span>:</strong></p>
+<p>It is a hardware implementation of branch and save and return address operation. This cycle occour during input/output process. I/O operations are asynchronous i.e they don&#8217;t occour at any fixed time and are going to occour anytime. As computer don&#8217;t know that when will interrupt occour so we consider I/O operation as interrupt as CPU need to change the control of program at the middle of execution of any instruction.</p>
+<p><span style="text-decoration: underline;"><strong>Flowchart of Basic Computer</strong></span><strong> :</strong></p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35521" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/basic-computer.drawio.png?resize=788%2C620&#038;ssl=1" alt="" width="788" height="620"></p>
+<p><span style="text-decoration: underline;"><strong>Working:</strong></span></p>
+<p>For this, we have one flip-flop R. This flip flop R will decide whether it is interrupt or it is normal execution of our program.</p>
+<p><em><span style="text-decoration: underline;">When R = 0</span></em> :</p>
+<ul style="list-style-type: square;">
+<li>If R is set to 0 then it is our normal execution cycle, in which we will do fetching and decoding of instructions and executing the instructions which include:
+<ul style="list-style-type: square;">
+<li>AR ← PC.</li>
+<li>IR ← M[AR], PC = PC+1.</li>
+<li>Decode D<sub>0</sub>,D<sub>1</sub>,D<sub>2</sub>,&#8230;. D<sub>7</sub> ← IR(12-14),  I← IR(15), AR ← IR(0-11).</li>
+</ul>
+</li>
+<li>But during fetch and decode, if we encounter IEN flag then, following condition occur:
+<ul style="list-style-type: square;">
+<li>If IEN is set to 1 then we check FGI</li>
+<li>If IEN is 1 then interrupt is occurred. At that time, We have to set flip flop R to 1.</li>
+<li>If IEN is 0 then we go to FGO. If FGO is 1 then interrupt is occurred we need to set flip-flop R to 1.</li>
+</ul>
+</li>
+</ul>
+<p><em><span style="text-decoration: underline;">When R = 1</span></em> :</p>
+<p>If R is set to 1 then the interrupt is occurred. Now in this case, we store return address in the location O (free location) i.e. return address always in PC. so it is stored from PC to memory location pointed by zero. After that we jump branch to location 1. Finally we set IEN to 0 and R to 0</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Give the brief concept of Flynn’s classification.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Flynn&#8217;s Classification :</strong></p>
+<p>Flynn&#8217;s classification  considers that computers can be divided into different types on the basis of instruction stream and datastream . According to this classification , it can be divided into four types .</p>
+<ol style="list-style-type:decimal;">
+<li>(SISD)Single Instruction Stream and Single Data Stream</li>
+<li>(SIMD)Single Instruction Stream and Multiple Data Stream</li>
+<li>(MISD)Multiple Instruction Stream and Single Data Stream</li>
+<li>(MIMD)Multiple Instruction Stream and Multiple Data Stream</li>
+</ol>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong><span style="text-decoration: underline;">SISD</span> : </strong></li>
+</ul>
+<p>Single Instruction Stream and Single Data Stream is a computer architecture which consists of a single processor , single control unit and single memory for performing task . It is most basic type of computer architecture .</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35589" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/SISD.drawio.png?resize=312%2C196&#038;ssl=1" alt="" width="312" height="196"></p>
+<ul style="list-style-type: square;">
+<li><strong><span style="text-decoration: underline;"> SIMD</span> :</strong></li>
+</ul>
+<p>Single Instruction Stream and Multiple Data Stream is a computer architecture which consists of multiple processor under the control of  single control unit . Here , multiple task are performed by the single signal generated by CU .</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35590" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/SIMD.drawio.png?resize=308%2C268&#038;ssl=1" alt="" width="308" height="268"></p>
+<ul style="list-style-type: square;">
+<li><strong> <span style="text-decoration: underline;">MISD</span> :</strong></li>
+</ul>
+<p>Multiple Instruction Stream and Single Data Stream is only a theoretical concept and no any computer is based on this architecture . According to this multiple instruction stream will work on single data stream .</p>
+<ul style="list-style-type: square;">
+<li><strong><span style="text-decoration: underline;"> MIMD</span> : </strong></li>
+</ul>
+<p>Here , in this architecture each processor is given a seperate CU for different control signal for different task . Many microprocessor and microcontroller are based on this architecture .</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35591" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/MIMD.drawio.png?resize=209%2C202&#038;ssl=1" alt="" width="209" height="202"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Compare hardwired control with microprogrammed control unit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between the hardwired and microprogrammed control is given as below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Hardwired Control</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Microprogrammed Control</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">1. It is a control unit which generate signal by using hardware combinations.</td>
+<td style="width: 50%; text-align: center;">1. It is a control unit which generate control signals by using the microinstruction.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">2. It uses RISC (Reduced Instruction Set Computer) processor.</td>
+<td style="width: 50%; text-align: center;">2. It uses CISC (Complex Instruction Set Computer) processor.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">3. There is hardly any room for modification and need to be replaced by new unit.</td>
+<td style="width: 50%; text-align: center;">3. As they uses microinstruction they can be esily modified as per the requirement.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">4. It uses decoder, multiplexer and flipflops which make combinational circuit and produce control signals.</td>
+<td style="width: 50%; text-align: center;">4.It doesn&#8217;t need decoder, multiplexer and flipflops for generating control signals.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">5. Fixed instruction format.</td>
+<td style="width: 50%; text-align: center;">5. Variable instruction format (16-64 bits per instruction).</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Multiply 50 and (-13) using the Booth’s algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let us consider,</p>
+<p>QR = -13 = 1110011</p>
+<p>BR = 50 = 0110010</p>
+<p>then, BR&#8217; = BR +1 =1001110</p>
+<p>Now,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35577" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/booths-algo.drawio.png?resize=716%2C538&#038;ssl=1" alt="" width="716" height="538"></p>
+<p>Result will be as:</p>
+<p>AC QR = 1111010 1110110</p>
+<p>= -00001010001010 i.e (MSB+1)</p>
+<p>= -650.</p>
+<p>Hence, the product of 50 and -13 is -650.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between memory mapped i/o and isolated i/o.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The microprocessor cannot do anything by itself therefore, It needs to be linked with memory, extra peripherals, or IO devices. This linking is called Interfacing. The interfacing of the I/O devices in 8085 can be done in two ways:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Memory Mapped I/O</li>
+<li>Isolated I/O</li>
+</ol>
+<p>The difference between Isolated and Memory mapped I/O are</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Isolated I/O</th>
+<th>Memory Mapped I/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1. Memory and I/O have separate address space</td>
+<td style="text-align: center;">1. Both have same address space</td>
+</tr>
+<tr>
+<td style="text-align: center;">2. All address can be used by the memory</td>
+<td style="text-align: center;">2. Due to addition of I/O addressable memory become less for memory</td>
+</tr>
+<tr>
+<td style="text-align: center;">3. Separate instruction control read and write operation in I/O and Memory</td>
+<td style="text-align: center;">3. Same instructions can control both I/O and Memory</td>
+</tr>
+<tr>
+<td style="text-align: center;">4. In this I/O address are called ports.</td>
+<td style="text-align: center;">4. Normal memory address are for both</td>
+</tr>
+<tr>
+<td style="text-align: center;">5. More efficient due to separate buses</td>
+<td style="text-align: center;">5. Lesser efficient</td>
+</tr>
+<tr>
+<td style="text-align: center;">6. Larger in size due to more buses</td>
+<td style="text-align: center;">6. Smaller in size</td>
+</tr>
+<tr>
+<td style="text-align: center;">7. It is complex due to separate separate logic is used to control both.</td>
+<td style="text-align: center;">7. Simpler logic is used as I/O is also treated as memory only.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Design a 4 bit binary Adder-Substractor circuit. Explain it.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The substraction of binary number can be done most conveniently by means of compliment. The substraction A-B can be done by taking the 2&#8217;s compliment of B and adding it to A.</p>
+<p>The addition and substraction operation can be combined into one common circuit by including an exclusive  OR gate with each full adder.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35510" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/adder-substractor.drawio.png?resize=621%2C287&#038;ssl=1" alt="" width="621" height="287"></p>
+<p>The mode input M controls operation, when M=0 the circuit is an adder and when M=1 the circuit acts as an substractor. Each exclusive OR gate receives input M and one of the inputs of B. When M=0, we have B ⊕ 0 = B. The full adders receives the value of B, the input carry is 0, and the circuit performs A plus B. When M=1, we have B⊕1 = B&#8217; and C<sub>0</sub>=1. The B input are all complemented and 1 is added througj the input carry. The circuit performs the operation A plus the 2&#8217;s complement of B.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain data transfer instruction with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data transfer instruction are those instruction which movethe data content from one place to other without any change in the content of the data. It usually transfer data from memory to processor, register to processor, from any I/O port to processor or from processor to I/O port. Some of the instructions used for data transfer are :</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Name</td>
+<td style="width: 33.3333%; text-align: center;">Mnemonics</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">LOAD</td>
+<td style="width: 33.3333%; text-align: center;">LD</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">MOVE</td>
+<td style="width: 33.3333%; text-align: center;">MOV</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">STORE</td>
+<td style="width: 33.3333%; text-align: center;">STR</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">INPUT</td>
+<td style="width: 33.3333%; text-align: center;">IN</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">OUTPUT</td>
+<td style="width: 33.3333%; text-align: center;">OUT</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">PUSH</td>
+<td style="width: 33.3333%; text-align: center;">PUSH</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">POP</td>
+<td style="width: 33.3333%; text-align: center;">POP</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">EXCHANGE</td>
+<td style="width: 33.3333%; text-align: center;">XCHG</td>
+</tr>
+</tbody>
+</table></div>
+<p>Above instruction has some functionalities like<em> LOAD</em> has been used mostly to designate a transfer from memory to processor register usually an accmulator. <em>MOVE</em> has been used in computers with multiple CPU registers to designate a transfer from register to another. <em>PUSH</em> and <em>POP</em> are used for data transfer between processor register and a memory.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is cache memory any why do we need it?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cache memory is a fast and small memory between processor and main memory which holds the data which is repeatedly accessed by processor. The basic operation of cache is to examine the word that CPU needs and provide it as fast as possible. When the need of the processor is present in the cache then it is called as cache hit and if there is no match of the word required by the CPU then it is called cache miss.</p>
+<p>Cache memory is needed to boost up the efficiency of the proce When the processor needs the data at the time of processing then it tries to access from secondary memory .The speed of CPU or processor is very high as compeared to secondary memory which has very slow speed. Slow accessing speed of the secondary memory lead to overall dropdown of performance so to reduce this problem a new memory is introoduced called primary memory. This was also not able to boost the performance. Primary memory was faster than secondary memory but was still slower than processor and it was when a very high speed semiconductor memory cache memory  was introduced which can speed up processor and act as buffer between the primary memory and and processor.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>DMA</li>
+<li>Computer instruction.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Direct Memory Access:</strong></p>
+<p>This technique of I/O operation has a separate module called DMA module. The DMA module takes control over the system Bus and transfer data between memory and I/O device directly.</p>
+<p><strong><u>Steps in DMA</u></strong></p>
+<ol style="list-style-type:decimal;">
+<li>DMA sends bus request(BR) to CPU.</li>
+<li>CPU disables all its address bus, data bus, read control, and write control.</li>
+<li>CPU gives control to DMA by enabling the Bus Grant (BG)</li>
+<li>Until the BG is enabled CPU remains idle and the data transfer between memory and I/O device takes place.</li>
+<li>When the transfer is over the DMA disables the Bus Grant, and CPU again takes the control over system bus.</li>
+</ol>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-23100 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/dma.jpg?resize=1123%2C160&amp;ssl=1" alt="- Hamro CSIT" width="1123" height="160" data-recalc-dims="1" /></p>
+<p>&nbsp;</p>
+<p><strong>b. Computer instruction:</strong></p>
+<p>Computer instruction are set of machine language instruction that a particular processor understand and executes. A computer performs tasks on the basis of the instruction provided.</p>
+<p>Each format has 16 bits. It is divided into two parts : Opcode and Operand. Opcode part of instruction contain 3 bits and the meaning of remaning 13 bits depend on the operation code encountered. The basic computer structure has three instruction code format as shown in fig below.</p>
+<p><span style="text-decoration: underline;">Memory Refrence Instruction </span></p>
+<p>OP-code = 000 ~ 110</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35463" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/memory-ref.drawio.png?resize=449%2C92&#038;ssl=1" alt="" width="449" height="92"></p>
+<p><span style="text-decoration: underline;">Register Refrence Instruction </span></p>
+<p>OP-code = 111 when I = 0</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35464" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/register-ref.drawio.png?resize=449%2C90&#038;ssl=1" alt="" width="449" height="90"></p>
+<p><span style="text-decoration: underline;">Input-Output Refrence Instruction </span></p>
+<p>OP-code = 111 when I = 1</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35465" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/inputout.drawio.png?resize=449%2C90&#038;ssl=1" alt="" width="449" height="90"></p>
+</div>
+</body></html>

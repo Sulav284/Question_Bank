@@ -1,0 +1,130 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CG Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>CG Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO Questions</h2><h3>Question 1</h3>
+<div><p><p>Define orthographic, parallel, and perspective projections. Consider a region defined by the position vector P = \(\begin{bmatrix}1 & 1 & 2 & 1\\ 2 & 1 & 2 & 1\\ 2 & 2 & 2 & 1\\ 1 & 2 & 2 & 1\end{bmatrix}\), relative to global XYZ axis system. It is rotated by +30<sup>0</sup> about X-axis and passes through points (1.5, 1.5, 1.5).find the final position of the region.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When projection is perpendicular to view plane then, it is called orthographic projection.<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18940" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/ortho.jpg?resize=742%2C381&#038;ssl=1" alt="" width="742" height="381"></p>
+<p>Parallel projection is the type of projection where coordinate positions are transformed to view plane along parallel lines (projection lines).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18942" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/paralle.jpg?resize=595%2C458&#038;ssl=1" alt="" width="595" height="458"></p>
+<p>Perspective projection is the type of projection where coordinate positions are transformed to view plane along lines (projection lines) that converges to a point called projection reference point (center of projection).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18943" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/persp.jpg?resize=838%2C252&#038;ssl=1" alt="" width="838" height="252"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Solution of the numeric:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18949" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/solution.jpg?resize=594%2C531&#038;ssl=1" alt="" width="594" height="531"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is the method to recognize boundary point and interior point in solid modeling? Describe how BSP recursively subdivided a space into convex sets.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solid modeling is the complete geometric representation of an object that enables points in space to be classified relative to the object.</p>
+<p>Here, the boundary points are the points where distance to the objects and objects complement is zero.</p>
+<p>Similarly, interior points are the points other than boundary points.</p>
+<p><strong>BSP</strong></p>
+<p>Binary space partitioning (BSP) is a method for recursively subdividing a space into convex sets by hyperplanes. This subdivision gives rise to a representation of objects within the space by means of a tree data structure known as a BSP tree.  Binary space partitioning is a 3-D graphics programming technique of dividing a scene into two recursively using hyperplanes. In other words, a 3-D scene is split in two using a 2-D plane, then that scene is divided in two using a 2-D plane, and so on. The resulting data structure is a binary tree, or a tree where every node has two branches. The technique is widely used to speed up rendering of 3-D scenes, especially in games.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19044" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/bsp.jpg?resize=738%2C496&#038;ssl=1" alt="" width="738" height="496"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>List some significance of vitual reality. Differntitate between virtual reality and augmented reality with example. Demonstrate how a polygon can be created using OpenGL.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Significance of VR:</strong></p>
+<p>VR is able to immerse you in a computer-generated world of your own making.</p>
+<p>With VR, you can explore any uncharted territory of the human imagination.</p>
+<p>VR can provide a realistic approach to learning new things.</p>
+<p>VR aids in observing the environment and making careful decisions.</p>
+<p>&nbsp;</p>
+<p><strong>Difference between VR &amp; AR:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19018" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/vr-v-ar-1.jpg?resize=654%2C568&#038;ssl=1" alt="" width="654" height="568"></p>
+<p>Examples of AR: Pokemon Go, Filters during video call etc.</p>
+<p>Examples of VR: Using headset to play videogames, 9DVR experience etc.</p>
+<p><strong>Polygon using OpenGL:</strong></p>
+<p class="tcy tab"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19065" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/polg.jpg?resize=353%2C612&#038;ssl=1" alt="" width="353" height="612"></p>
+<p class="tcy tab"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19066" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/polg2.jpg?resize=268%2C276&#038;ssl=1" alt="" width="268" height="276"></p>
+</div>
+<h2>Section B: Attempt any EIGHT Questions</h2><h3>Question 4</h3>
+<div><p><p>Discuss the strength and weakness of the human visual system. Describe Spline representation for the curve.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>The Strengths of Human Visual:</strong></p>
+<ul style="list-style-type: square;">
+<li>Save money &#8211; If there is an obvious flaw that can be seen by the naked eye, there is no need to take the time and resources to continue the inspection process.</li>
+<li>The human element &#8211; Dimensional inspection evaluates just that: <em>the dimensions</em>. But what if the object produced is a mirror image of the intended result? This could be overlooked in an open setup or a non-model-based CMM inspection because the dimensions might exactly match the specifications. However, a visual inspection to compare the final product with the engineering drawings would quickly show the mistake.</li>
+<li>Evaluate workmanship -Visually inspecting parts can help ensure that <em>all</em> of the specifications are met, not just the ones the equipment can see.</li>
+<li>High-resolution perception: The human eye has a high resolution, allowing us to perceive fine details and distinguish between objects with precision.</li>
+<li>Color perception: We have the ability to perceive a wide range of colors, enabling us to appreciate the richness and diversity of the visual world.</li>
+<li>Depth perception: Our visual system can perceive depth and three-dimensional space, allowing us to accurately judge distances and perceive the relative positions of objects.</li>
+<li>Motion detection: We are highly sensitive to motion, which helps us identify moving objects and track their trajectories.</li>
+<li>Pattern recognition: The human brain excels at recognizing and interpreting patterns, allowing us to quickly identify familiar objects and understand complex visual scenes.</li>
+</ul>
+<p><strong>The Weaknesses of Human Visual:</strong></p>
+<ul style="list-style-type: square;">
+<li>Unreliability &#8211; This does not mean that visual inspections are always unreliable, but that they shouldn&#8217;t be your <em>only</em> method of inspection.</li>
+<li>Imprecision &#8211; The human eye is not capable of making precise measurements, especially on a very small scale. Even when comparing two similar objects, the eye might not notice that one is slightly smaller or larger than the other. This concept also applies to characteristics such as surface roughness, size, and any other factor that needs to be measured.</li>
+<li>Limited field of view: Although our eyes can move and scan the environment, our visual field is limited, and we cannot perceive everything in our surroundings simultaneously.</li>
+<li>Sensitivity to light: Our visual system is sensitive to changes in light conditions, and extreme brightness or darkness can impair our vision temporarily.</li>
+<li>Optical illusions: Our visual system is susceptible to various optical illusions, where our perception can be easily deceived, leading to incorrect interpretations of visual stimuli.</li>
+<li>Inaccurate memory: Human memory is prone to distortions and inaccuracies, and our recollection of visual information can be influenced by external factors or subjective biases.</li>
+<li>Blind spots: Each eye has a small region in the retina with no photoreceptor cells, resulting in blind spots where we cannot perceive visual information.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19036" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/spline.jpg?resize=457%2C613&#038;ssl=1" alt="" width="457" height="613"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Plot the 1<sup>st</sup> octant of a circle centered at origin, having the radius 10 units.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19020" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1.jpg?resize=686%2C169&#038;ssl=1" alt="" width="686" height="169"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19019" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/2.jpg?resize=722%2C539&#038;ssl=1" alt="" width="722" height="539"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define fractal. Explain the Bezier curve and B-Spine curve.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19022" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/fractal.jpg?resize=664%2C605&#038;ssl=1" alt="" width="664" height="605"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19024" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/bezier.jpg?resize=519%2C591&#038;ssl=1" alt="" width="519" height="591"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19023" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/bezier2.jpg?resize=520%2C284&#038;ssl=1" alt="" width="520" height="284"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19028" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/bsp1.jpg?resize=521%2C379&#038;ssl=1" alt="" width="521" height="379"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-19027" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/bsp2.jpg?resize=522%2C238&#038;ssl=1" alt="" width="522" height="238"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Find the new c-ordinate of the triangle ABC, with co-ordinates A(0, 0), B(1, 1) and C(5, 2) after it has been magnified to twice of its size.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/users/2363/1672750713-IMG_20230103_184322.jpg?ssl=1" alt=""></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is the task of a polygon table? Why do we have to remove hidden surfaces? Explain with any one methodology.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19032" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/polt.jpg?resize=658%2C349&#038;ssl=1" alt="" width="658" height="349"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19033" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/need.jpg?resize=451%2C141&#038;ssl=1" alt="" width="451" height="141"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19034" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/onemethof.jpg?resize=509%2C623&#038;ssl=1" alt="" width="509" height="623"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define intensity attenuation. Distinguish between Gouraud shading and Phong shading model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19025" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/intesnity.jpg?resize=812%2C293&#038;ssl=1" alt="" width="812" height="293"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19026" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/diff.jpg?resize=821%2C604&#038;ssl=1" alt="" width="821" height="604"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the advantage of real time rendering over offline rendering? Discuss the limitation of Z-Buffer algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Real Time Rendering</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Offline Rendering</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Takes short period of time.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Takes longer time.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">More performance-critical.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Much less performance-critical.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Less expensive.</td>
+<td style="width: 50%; text-align: center; height: 24px;">You have to use very expensive rendering techniques.</td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 50%; text-align: center; height: 120px;"> Is calculated at the instant you ask for your whatever solution to generate the images</td>
+<td style="width: 50%; text-align: center; height: 120px;"> Is not submitted to the time constraint. Basically a scene is prepared and then a series of pictures is generated (&#8220;pre-calculated&#8221;) and ultimately assembled into a sort of a video clip that then is viewed (&#8220;off line&#8221;).</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">A realtime rendering situation needs to get everything done in a fraction of a second so it can keep up with user input.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Offline rendering can take as long as you like per frame (limited only by your patience), as it doesn&#8217;t need to keep up with any inputs.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Limitations of Z Buffer:</strong></p>
+<p>Requires an additional buffer.</p>
+<p>Requires large memory.</p>
+<p>Time consuming process.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Describe the requirement for line clipping. Explain the scan line polygon filling algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Requirement for line clipping:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-19046" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/req.jpg?resize=856%2C390&#038;ssl=1" alt="" width="856" height="390"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19045" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/scan.jpg?resize=710%2C272&#038;ssl=1" alt="" width="710" height="272"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is quadric surface? Compare between diffuse reflection and specular reflection.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A frequently used class of objects are the quadric surfaces which are described with second degree equations(quadratics). They include sphere, ellipsoids etc.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-19049" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/specul.png?resize=590%2C504&#038;ssl=1" alt="" width="590" height="504"></p>
+</div>
+</body></html>

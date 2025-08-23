@@ -1,0 +1,581 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Net Centric Question 2081 2081</title>
+    </head>
+    <body>
+        <h1>Net Centric Question 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Distinguish between collection and generics. What are named and positional attribute parameters? Write a program to create your own exception when the user gives subject name than “C#”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Generic Collection</strong></td>
+<td style="text-align: center;"><strong>Non-generic collection</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Generic collections in C# are type-safe collections that allow you to store and manipulate elements of a specific data type.</td>
+<td style="text-align: center;">Non-generic collections in C# are collections that store elements of type object, allowing you to store objects of any type.</td>
+</tr>
+<tr>
+<td style="text-align: center;">They are defined using generic types, which enable you to specify the type of elements that the collection can contain at compile time.</td>
+<td style="text-align: center;">They are not type-safe, meaning that you can store any type of object in the collection without type checking at compile time.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Generic collections offer compile-time type safety and better performance by avoiding the need for boxing and unboxing operations.</td>
+<td style="text-align: center;">Non-generic collections require explicit casting when retrieving elements, which can lead to runtime errors if the wrong type is cast.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Examples of generic collections include List&lt;T&gt;, Dictionary&lt;TKey, TValue&gt;, Queue&lt;T&gt;, Stack&lt;T&gt;, etc.</td>
+<td style="text-align: center;">Examples of non-generic collections include ArrayList, Hashtable, Queue, Stack, etc.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The arguments that are provided to a function in the order that they are declared are known as <strong>positional parameters</strong>. Each argument&#8217;s location matches the parameter&#8217;s location in the function declaration.l</p>
+<p>for eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp">using System;
+
+class Program
+{
+static void Main()
+{
+// Calling the function with positional arguments
+Console.WriteLine(Greet("John", "Doe")); // Output: Hello, John Doe!
+}
+
+static string Greet(string firstName, string lastName)
+{
+return $"Hello, {firstName} {lastName}!";
+}
+}</pre>
+<p><strong>Named parameters</strong>, often referred to as keyword parameters, let you define the parameter&#8217;s name when a function is called. This implies that as long as you indicate which parameter each argument relates to, you can pass arguments in whichever sequence.</p>
+<p>for eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp">using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Calling the function with named arguments
+        Console.WriteLine(Greet(lastName: "Doe", firstName: "John"));  // Output: Hello, John Doe!
+    }
+
+    static string Greet(string firstName, string lastName)
+    {
+        return $"Hello, {firstName} {lastName}!";
+    }
+}</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using System;
+
+public class InvalidSubjectException : Exception
+{
+ public InvalidSubjectException(string message) : base(message)
+ {
+ }
+}
+class Program
+{
+static void Main()
+{
+  Console.WriteLine("Enter the subject name:");
+  string subject = Console.ReadLine();
+
+  try
+   {
+     ValidateSubject(subject);
+     Console.WriteLine($"You have entered a valid subject:{subject}");
+    }
+
+   catch (InvalidSubjectException ex)
+    {
+       Console.WriteLine($"Error: {ex.Message}");
+    }
+}
+
+static void ValidateSubject(string subject)
+ {
+   if (subject != "C#")
+   {
+     throw new InvalidSubjectException("The subject must be 'C#'.");
+    }
+  }
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How do you create controller? Illustrate with an example. Describe the procedure of rendering HTML with Razor with scenario.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>Creating/Adding a Controller:</h3>
+<p>Controllers can be created by selecting Controllers folder and right-click and select the controller option. There are two main options:</p>
+<ul style="list-style-type: square;">
+<li><strong>MVC Controller</strong></li>
+<li><strong>API Controller</strong></li>
+</ul>
+<p>Both the MVC and API Controller inherits from the same Controller class and there is not much difference between them, except that API Controller is expected to return the data in serialized format to the client.</p>
+<p>Further, we have three options under both types of controllers.</p>
+<ul style="list-style-type: square;">
+<li>Empty</li>
+<li>With Read/Write Actions</li>
+<li>With Views, using entity framework.</li>
+</ul>
+<p>The controller class must satisfy at least one of the following conditions:</p>
+<ul style="list-style-type: square;">
+<li>The class name is suffixed with &#8220;Controller&#8221;</li>
+<li>The class inherits from a class whose name is suffixed with &#8220;Controller&#8221;,</li>
+<li>The class is decorated with the [Controller] attribute.</li>
+</ul>
+<p><strong>for eg:</strong></p>
+<p>Let&#8217;s build a basic user management API controller.</p>
+<ul style="list-style-type: square;">
+<li><strong>Create a new class file: </strong>Make a fresh class file. Inside the Controllers folder, create a new class file called UserController.cs.</li>
+<li><strong>Inherit from Controller:</strong>To inherit the UserController class, you must inherit it from the Controller base class.</li>
+<li><strong>Include Actions:</strong> Define the controller class&#8217;s actions. A GetUserById operation.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using Microsoft.AspNetCore.Mvc;
+
+namespace YourProjectName.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
+    {
+        [HttpGet("{id}")]
+        public IActionResult GetUserById(int id)
+        {
+            // Logic to retrieve user information based on the ID
+            // ... 
+
+            // Return the user data
+            return Ok(user);
+        }
+    }
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Rendering HTML with Razor</strong></span></p>
+<p>Razor in ASP.NET Core works by combining C# logic and HTML to dynamically generate web pages. The process follows these steps:</p>
+<p><strong>Step 1: Define a Controller Action</strong></p>
+<ul style="list-style-type: square;">
+<li>In ASP.NET Core MVC, a Controller handles incoming requests.</li>
+<li>The ActionResult method (e.g., Welcome()) processes the request and returns a View.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">public class HomeController : Controller
+{
+public IActionResult Welcome()
+{
+ViewBag.Message = "Hello, welcome to our website!"; // Passing data to the View
+return View(); // Returning the "Welcome" View
+}
+}</pre>
+<p><strong>Step 2: Razor View Renders HTML</strong></p>
+<ul style="list-style-type: square;">
+<li>The Razor View (.cshtml) retrieves the data and renders HTML.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">s@{
+ViewData["Title"] = "Welcome Page";
+}
+
+&lt;h2&gt;@ViewData["Title"]&lt;/h2&gt;
+&lt;p&gt;@ViewBag.Message&lt;/p&gt;</pre>
+<p><strong>Step 3: The View is Sent to the Browser</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;h2&gt;Welcome Page&lt;/h2&gt;
+&lt;p&gt;Hello, welcome to our website!&lt;/p&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>List some advantages of Entity Framework over ADO.NET. Assume a database named “IOST” with a table FACULTY(Course_Name, CourseID, No_of_Semester, fee). Insert some records using ADO.NET and retrive the fee of records having name CSIT.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A higher-level abstraction over ADO.NET is offered by the Entity Framework (EF), an Object-Relational Mapping (ORM) framework for.NET. The following are some benefits of utilizing Entity Framework instead of ADO.NET.</p>
+<ul style="list-style-type: square;">
+<li>Less Code: Compared to ADO.NET, there is less boilerplate code and SQL queries.</li>
+<li>Improved Maintainability: By utilizing models and relationships, the code is simpler to update and manage.</li>
+<li>Database Independence: Multiple database providers (SQL Server, MySQL, PostgreSQL, etc.) are supported by Database Independence.</li>
+<li>Change monitoring: This feature minimizes human monitoring work by automatically tracking entity state.</li>
+<li>Built-in Transactions: Automatic transaction management is made possible by built-in transactions.</li>
+<li>Security: Using parameterized queries lowers the danger of SQL injection.</li>
+</ul>
+<p><strong>Insert Records into the FACULTY Table</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp">using System;
+using System.Data.SqlClient;
+
+class Program
+{
+    static void Main()
+    {
+        string connectionString = "Server=.;Database=IOST;Integrated Security=True;";
+
+using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+string insertQuery = "INSERT INTO FACULTY (Course_Name, CourseID, No_of_Semester, fee) VALUES (@CourseName, @CourseID, @NoOfSemester, @Fee)";
+
+using (SqlCommand command = new SqlCommand(insertQuery,connection))
+            {
+                command.Parameters.AddWithValue("@CourseName","CSIT");
+                command.Parameters.AddWithValue("@CourseID", 101);
+                command.Parameters.AddWithValue("@NoOfSemester", 8);
+                command.Parameters.AddWithValue("@Fee", 5000);
+                command.ExecuteNonQuery();
+
+                command.Parameters.Clear(); 
+
+                command.Parameters.AddWithValue("@CourseName","CSIT");
+                command.Parameters.AddWithValue("@CourseID", 102);
+                command.Parameters.AddWithValue("@NoOfSemester", 6);
+                command.Parameters.AddWithValue("@Fee", 4500);
+                command.ExecuteNonQuery();
+
+            }
+        }
+    }
+}</pre>
+<p><strong>Retrieve the Fee for Records with Course_Name &#8220;CSIT&#8221;</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp">using System;
+using System.Data.SqlClient;
+
+class Program
+{
+    static void Main()
+    {
+     string connectionString = "Server=.;Database=IOST;Integrated Security=True;";
+
+     using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string selectQuery = "SELECT fee FROM FACULTY WHERE Course_Name = @CourseName";
+
+            using (SqlCommand command = new SqlCommand(selectQuery, connection))
+            {
+                command.Parameters.AddWithValue("@CourseName", "CSIT");
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        decimal fee = reader.GetDecimal(0);
+                        Console.WriteLine("Fee: " + fee);
+                    }
+                }
+            }
+        }
+    }
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe the procedure of deploying .NET core application.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The procedure of deploying .NET core application are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Step 1 &#8211; Publish your .NET Core application</strong>:<br />
+First, create a .Net core application on VS; you can make an MVC project or Web API project and if you already have an existing project, then open it.</li>
+<li><strong>Step 2 &#8211; Install required .Net Module</strong>:<br />
+Generally, these procedures must be followed in order to install the necessary.NET modules, depending on the operating system and the particular.NET version we wish to install.<br />
+&#8211; Download the Installer<br />
+&#8211; Run the Installer<br />
+&#8211; Verify Installation</li>
+<li><strong>Step 3 &#8211; Install and configure Apache Server</strong>:<br />
+Depending on our operating system, there may be some differences in how to install and configure an Apache HTTP Server. Here are the instructions for setting up Apache Windows.<br />
+&#8211; Download Apache<br />
+&#8211; Install Apache<br />
+&#8211; Configure Apache<br />
+&#8211; Install Apache as a Service<br />
+&#8211; Start Apache<br />
+&#8211; Test Apache Installation<br />
+&#8211; Configure Firewall</li>
+<li><strong>Step 4 &#8211; Configure and Start Service</strong>:<br />
+The procedures to set up and launch the Apache HTTP Server service may differ significantly based on your operating system. The comprehensive setup and startup instructions for the Apache service on windows are provided below:<br />
+&#8211; Edit the Apache Configuration File<br />
+&#8211; Install Apache as a Service if not already done<br />
+&#8211; Start the Apache Service<br />
+&#8211; Check Apache Status</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How does ASP.NET core MVC provides patterns-based way to build dynamic website? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Model-View-Controller (MVC) design pattern, which encourages a distinct division of responsibilities, is used by ASP.NET Core MVC. By dividing the code into discrete parts, this structure helps developers control the complexity of applications and makes it easier to maintain and scale dynamic websites.</p>
+<p>It has some key feature that provides patterns-based way to build dynamic website. They are as:</p>
+<ul style="list-style-type: square;">
+<li><strong>Separation of Concerns</strong>: Three primary components make up the application according to the MVC pattern:<br />
+<span style="text-decoration: underline;">Model</span>: Shows the data and business logic of the application.<br />
+<span style="text-decoration: underline;">View</span>: Manages the presentation layer and shows the user the data.<br />
+<span style="text-decoration: underline;">Controller</span>: Coordinates between the Model and View and controls user input and interactions.</li>
+<li><strong>Model Binding</strong>: To make data handling in controllers easier, ASP.NET Core MVC automatically transforms incoming request data—such as form values and query strings—into model objects.</li>
+<li><strong>Routing</strong>: A robust routing mechanism included into ASP.NET Core MVC connects incoming requests to the relevant controller operations. Clean, user-friendly URLs that improve SEO are made possible by this.</li>
+<li><strong>Dependency Injection</strong>: The framework supports dependency injection by default, which facilitates improved dependency management and encourages a loosely connected design. Testability and maintainability are improved as a result.</li>
+<li><strong>Model Validation</strong>: To guarantee data integrity prior to processing, the framework facilitates client-side and server-side validation using data annotations.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define state management. Explain the parts of state management on the client side.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In online applications, where the stateless nature of HTTP can make it difficult to save user-specific data over many requests, state management refers to the managing of an application&#8217;s state. Keeping track of user behaviors, preferences, and data while they move through an application is the essence of state management.</p>
+<p>State in web applications may be divided into two primary categories:</p>
+<ul style="list-style-type: square;">
+<li>Keeping state data on the user&#8217;s device (browser) is known as client-side state management.</li>
+<li>State information is stored on the server as part of server-side state management.</li>
+</ul>
+<p>Client-side state management is essential for improving user experience because it enables apps to retain session data, user preferences, and other pertinent information without requiring continuous server communication. The following are the main elements of state management on the client side:</p>
+<ul style="list-style-type: square;">
+<li><strong>Cookies</strong>:<br />
+Cookies store data in the user&#8217;s browser. Browsers send cookies with every request and hence their size should be kept to a minimum. We often use cookies to personalize the content for a known user, especially when we just identify a user without authentication. We can use the cookie to store some basic information like the user&#8217;s name.</li>
+<li><strong>Query strings</strong>:<br />
+We can pass a limited amount of data from one request to another by adding it to the query string of the new request. This is useful for capturing the state in a persistent manner and allows the sharing of links with the embedded state.</li>
+<li><b>Hidden fields:<br />
+</b>We can save data in hidden form fields and send back in the next request. Sometimes we require same data to be stored on the client side without displaying it on the page. Later when the user takes some action, we&#8217;ll need that data to be passed on to the server side.</li>
+</ul>
+<p>Example of client side state management using cookies:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">//Controller
+ public class StudentController : Controller
+ {
+     public IActionResult Index()
+     {
+         //retrive cookies with cookies Name(uername)
+         string? userName = Request.Cookies["UserName"];
+         return View("Index", userName);
+     }
+     [HttpPost]
+     public IActionResult Index(IFormCollection form)
+     {
+
+         string userName = form["userName"].ToString();
+         //set key value in cookies
+         CookieOptions option = new CookieOptions();
+         option.Expires = DateTime.Now.AddMinutes(10);
+         Response.Cookies.Append("UserName", userName, option);
+         return RedirectToAction(nameof(Index));
+     }
+     public IActionResult RemoveCookies()
+     {
+         //delete the  cookie
+         Response.Cookies.Delete("UserName");
+         return View("Index");
+     }
+
+ }
+
+//Razor view
+@if (!string.IsNullOrWhiteSpace(Model))
+{
+    &lt;div&gt;Welcome back,@Model&lt;/div&gt;
+    @Html.ActionLink("Forget me", "RemoveCookies")
+}
+else
+{
+    &lt;form asp-action="Index"&gt;
+        &lt;label&gt;Please provide your name&lt;/label&gt;
+        &lt;input type="text" id="username" name="userName" /&gt;
+        &lt;div class="form-group"&gt;
+            &lt;input type="submit" value="Update" class=" btn btn-primary" /&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program to validate the form that takes input user name, password and phone number using JQuery. All fields must be non-empty and phone number must contain exactly 10 digits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Form Validation&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("#myForm").submit(function(event){
+    var username = $("#username").val();
+    var password = $("#password").val();
+    var phone = $("#phone").val();
+
+    if(username == "" || password == "" || phone == ""){
+      alert("Please fill all the fields");
+      event.preventDefault();
+    } else if(phone.length != 10){
+      alert("Phone number must contain exactly 10 digits");
+      event.preventDefault();
+    }
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Form Validation&lt;/h2&gt;
+
+&lt;form id="myForm"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;
+
+  &lt;label for="password"&gt;Password:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;
+
+  &lt;label for="phone"&gt;Phone:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="phone" name="phone"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Distinguish between roles and policies. Explain about Kestrel web server in ASP.NET core.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Policy</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Role</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">A comprehensive strategy that establishes the parameters for the use of discretion in decision-making.</td>
+<td style="width: 50%; text-align: center;">It is a detailed strategy outlining what should or shouldn&#8217;t be done in a certain circumstance.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Its purpose is to guide decision-making.</td>
+<td style="width: 50%; text-align: center;">Its purpose is to guide behaviour and ensure discipline.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is flexible as it provides scope for discretion and judgement.</td>
+<td style="width: 50%; text-align: center;">It is inflexible as it eliminates all room for judgment and discretion.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">There is no mention of the penalty for the infraction.</td>
+<td style="width: 50%; text-align: center;">Generally, there are set penalties for violations.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is based on objectives.</td>
+<td style="width: 50%; text-align: center;">It is based on policies and procedures.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Kestrel responds to client requests after processing them via the ASP.NET Core pipeline. This cross-platform, lightweight web server is included into ASP.NET Core. It offers an effective and high-performance method of hosting ASP.NET Core applications. Many characteristics, including the listening port, SSL certificates, and request limitations, may be customized because to its high degree of adjustable nature.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe the life cycle of Dependency Injection container.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="86" data-end="256">In ASP.NET Core, Dependency Injection (DI) is a built-in feature that helps manage object lifetimes. <strong>Dependency Injection</strong> is a technique in which an object receives other objects that it depends on. These other objects are called dependencies. Generally, the receiving object is called a client and the passed or injected object is called a service. There are three main lifetimes for registered services:</p>
+<ol data-start="258" data-end="413">
+<li data-start="258" data-end="303">Transient – New instance every time.</li>
+<li data-start="304" data-end="347">Scoped – One instance per request.</li>
+<li data-start="348" data-end="413">Singleton – One instance for the application&#8217;s lifetime.</li>
+</ol>
+<p>In <strong>transient</strong>, a new instance is created every time it is requested from the dependency injection container.</p>
+<p>Use Case: For lightweight, stateless services (e.g., logging, utility services).</p>
+<p>Example:</p>
+<p>services.AddTransient&lt;IMyService, MyService&gt;();</p>
+<p>&nbsp;</p>
+<p>In <strong>scoped</strong>, a new instance is created once per HTTP request and shared within that request.</p>
+<p>Use Case: For services that require request-level consistency, like database operations (EF Core DbContext).</p>
+<p>Example:</p>
+<p>services.AddScoped&lt;IMyService, MyService&gt;();</p>
+<p>&nbsp;</p>
+<p>In <strong>singleton</strong>, a single instance is created once and shared across the entire application.</p>
+<p>Use Case: For services that need to be reused globally, such as caching, configuration, logging.</p>
+<p>Example:</p>
+<p>services.AddSingleton&lt;IMyService, MyService&gt;();</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Create a class named EMPLOYEE as super class and ENGINEER and DOCTOR as sub class. Make your own assumptions as properties and methods.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="csharp">using System;
+
+public class EMPLOYEE
+{
+    // Properties
+    public string EmployeeId { get; set; }
+    public string EmployeeName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string Department { get; set; }
+
+    // Methods
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee ID: {EmployeeId}");
+        Console.WriteLine($"Employee Name: {EmployeeName}");
+        Console.WriteLine($"Date of Birth: {DateOfBirth.ToShortDateString()}");
+        Console.WriteLine($"Department: {Department}");
+    }
+}
+
+public class ENGINEER : EMPLOYEE
+{
+    // Properties specific to engineer
+    public string Specialization { get; set; }
+    public int YearsOfExperience { get; set; }
+
+    // Methods specific to engineer
+    public void DisplayEngineerDetails()
+    {
+        base.DisplayEmployeeDetails();
+        Console.WriteLine($"Specialization: {Specialization}");
+        Console.WriteLine($"Years of Experience: {YearsOfExperience}");
+    }
+}
+
+public class DOCTOR : EMPLOYEE
+{
+    public string MedicalSpecialty { get; set; }
+    public string HospitalAffiliation { get; set; }
+
+    public void DisplayDoctorDetails()
+    {
+        base.DisplayEmployeeDetails();
+        Console.WriteLine($"Medical Specialty: {MedicalSpecialty}");
+        Console.WriteLine($"Hospital Affiliation: {HospitalAffiliation}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ENGINEER engineer = new ENGINEER
+        {
+            EmployeeId = "E001",
+            EmployeeName = "John Doe",
+            DateOfBirth = new DateTime(1985, 10, 25),
+            Department = "Engineering",
+            Specialization = "Software Engineering",
+            YearsOfExperience = 5
+        };
+
+        DOCTOR doctor = new DOCTOR
+        {
+            EmployeeId = "D001",
+            EmployeeName = "Jane Smith",
+            DateOfBirth = new DateTime(1988, 05, 12),
+            Department = "Medical",
+            MedicalSpecialty = "Cardiology",
+            HospitalAffiliation</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is the task of ORM? Discuss about open redirect attacks.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A programming method called object-relational mapping (ORM) is used in object-oriented programming languages to translate data across incompatible type systems. Among ORM&#8217;s main responsibilities are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Data Abstraction</strong>: Database records may be worked with by developers as though they were standard objects in their programming language thanks to ORM&#8217;s high-level abstraction over database operations.</li>
+<li><strong>CRUD activities</strong>: To enable developers to operate with database records without writing raw SQL queries, ORM frameworks usually include methods for Create, Read, Update, and Delete (CRUD) activities.</li>
+<li><strong>Database transactions</strong>: Database transactions may be managed using ORM, which guarantees that a sequence of activities either finish successfully or roll back in the event of an error.</li>
+</ul>
+<p><strong>Open Redirected Attacks</strong>:<br />
+An Open Redirection is when a web application or server uses a user-submitted link to redirect the user to a given website or page. The redirection typically includes a returnUrl querystring parameter, so that the user can be returned to the originally requested URL after they have successfully logged in.</p>
+<p><strong>To Prevent Open Redirected Attacks:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>LocalRedirect in Asp.Net Core</strong>: Rather than using Redirect, use LocalRedirect so when the user tries to add another domain URL it will prevent it and give an error.</li>
+<li><strong>Exception Message</strong>: The supplied URL is not local. A URL with an absolute path is considered local if it does not have a host/authority part. URIs using virtual paths (&#8220;~/&#8221;) are also local.</li>
+<li><strong>Url.IsLocalUrl In Asp.Net Core</strong>: If we want to use Redirects only then we can check the URL first and then perform a redirection. The code for checking the URL is shown below:
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Url.IsLocalUrl(returnUrl)</pre>
+<p>&nbsp;</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Polymorphism</li>
+<li>Hidden Field</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Polymorphism</strong>:<br />
+In object-oriented programming, polymorphism is a fundamental idea that permits objects of various classes to be regarded as belonging to the same superclass. It allows several underlying forms (data types) to be represented using a single interface.</p>
+<p><span style="text-decoration: underline;">Types of Polymorphism:</span></p>
+<ul style="list-style-type: square;">
+<li>Compile-time Polymorphism</li>
+<li>Run-time Polymorphism</li>
+</ul>
+<p><span style="text-decoration: underline;">Benefits</span></p>
+<ul style="list-style-type: square;">
+<li>Flexibility and reusability of code.</li>
+<li>Code is easier to maintain and expand.</li>
+<li>makes it possible to implement abstract classes and interfaces.</li>
+</ul>
+<p><strong>b. Hidden Field</strong>:<br />
+When the name of a field in a derived class is the same as a field in its base class, this is known as a hidden field (or shadowed field). Since the derived class&#8217;s field &#8220;hides&#8221; the base class&#8217;s field, you will access the derived class&#8217;s field rather than the base class&#8217;s field when you access it from an instance of the derived class.</p>
+<p>Hiding fields can lead to confusion and bugs if not managed carefully. It is generally recommended to avoid hiding fields and instead use properties or methods to achieve the desired behavior.</p>
+</div>
+</body></html>

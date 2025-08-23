@@ -1,0 +1,848 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Advanced Java Programming Model Set 0</title>
+    </head>
+    <body>
+        <h1>Advanced Java Programming Model Set - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>What are the uses of final modifier? Explain each use of the modifier with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The final modifier is for finalizing the implementations of classes, methods, and variables.</p>
+<p>The main purpose of using a class being declared as final is to prevent the class from being subclassed. If a class is marked as final then no class can inherit any feature from the final class. If you make any variable as final, you cannot change the value of final variable(It will be constant). If you make any method as final, you cannot override it.</p>
+<p>There are two types of modifiers in java: access modifiers and non-access modifiers. The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class.</p>
+<p>There are four types of Java access modifiers:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Private</strong>: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.</li>
+<li><strong>Default</strong>: The access level of a default modifier is only within the package. It cannot be accessed fromoutside the package. If you do not specify any access level, it will be the default.</li>
+<li><strong>Protected</strong>: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.</li>
+<li><strong>Public</strong>: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.</li>
+</ol>
+<p>There are also many non-access modifiers such as static, abstract, synichronized, native, volatile, transient etc.</p>
+<p>The use of each modifiers with ceratin examples are coded below:</p>
+<p>1. <strong>Private</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Person {
+// Private variable
+private String name;
+private int age;
+
+// Constructor
+public Person(String name, int age) {
+this.name = name;
+this.age = age;
+}
+
+public void displayInfo() {
+System.out.println("Name: " + name + ", Age: " + age);
+}
+
+public static void main(String[] args) {
+Person person = new Person("Alice", 30);
+person.displayInfo(); // Accessing private variables via public method
+}
+
+}</pre>
+<p>&nbsp;</p>
+<p>2. <strong>Default</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Person {
+// Default (package-private) variables
+String name;
+int age;
+
+// Constructor
+public Person(String name, int age) {
+this.name = name;
+this.age = age;
+}
+
+// Method to display person info
+void displayInfo() {
+System.out.println("Name: " + name + ", Age: " + age);
+}
+}
+
+// Another class in the same package
+class Main {
+public static void main(String[] args) {
+Person person = new Person("Bob", 25);
+person.displayInfo(); // Accessing default variables and method
+}
+}</pre>
+<p>&nbsp;</p>
+<p>3.<strong> Protected</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Person {
+// Protected variables
+protected String name;
+protected int age;
+
+// Constructor
+public Person(String name, int age) {
+this.name = name;
+this.age = age;
+}
+
+// Protected method to display person info
+protected void displayInfo() {
+System.out.println("Name: " + name + ", Age: " + age);
+}
+}
+
+// Subclass in a different package
+package anotherPackage;
+
+import Person; // Assuming both classes are properly imported
+
+public class Student extends Person {
+private String studentId;
+
+public Student(String name, int age, String studentId) {
+super(name, age); // Call to the superclass constructor
+this.studentId = studentId;
+}
+
+public void showStudentInfo() {
+displayInfo(); // Accessing protected method from the superclass
+System.out.println("Student ID: " + studentId);
+}
+
+public static void main(String[] args) {
+Student student = new Student("Sid", 20, "S12345");
+student.showStudentInfo();
+}
+}</pre>
+<p>&nbsp;</p>
+<p>4. <strong>Public</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Person {
+public String name;
+public int age;
+
+public Person(String name, int age) {
+this.name = name;
+this.age = age;
+}
+
+public void displayInfo() {
+System.out.println("Name: " + name + ", Age: " + age);
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Person person = new Person("Sid", 22);
+person.displayInfo();
+}
+}</pre>
+<p>&nbsp;</p>
+<p>Understanding all java access modifiers. Let&#8217;s understand the access modifiers by a simple table.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Access Modifier</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>within class</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>within package</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>outside package by sub class only</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>outside package</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Private </strong></td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Default</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Protected</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">N</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Public</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+<td style="width: 20%; height: 24px; text-align: center;">Y</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write a java program to create login form with user id, password, ok button, and cancel button. Handle key events such that pressing ‘l’ performs login and pressing ‘c’ clears text boxes and puts focus on user id text box. Assume user table having fields Uid and Password in the database named account.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="java">import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class Practice1 {
+private JFrame frame;
+private JTextField userIdField;
+private JPasswordField passwordField;
+private JButton okButton;
+private JButton cancelButton;
+
+public Practice1() {
+frame = new JFrame("Login Form");
+userIdField = new JTextField(15);
+passwordField = new JPasswordField(15);
+okButton = new JButton("OK");
+cancelButton = new JButton("Cancel");
+
+frame.setLayout(new GridLayout(3, 2));
+
+frame.add(new JLabel("User ID:"));
+frame.add(userIdField);
+frame.add(new JLabel("Password:"));
+frame.add(passwordField);
+frame.add(okButton);
+frame.add(cancelButton);
+
+frame.setSize(300, 150);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setVisible(true);
+
+okButton.addActionListener(e -&gt; login());
+cancelButton.addActionListener(e -&gt; clearFields());
+
+frame.addKeyListener(new KeyAdapter() {
+@Override
+public void keyPressed(KeyEvent e) {
+if (e.getKeyChar() == 'l') {
+login();
+} else if (e.getKeyChar() == 'c') {
+clearFields();
+}
+}
+});
+
+userIdField.addKeyListener(new KeyAdapter() {
+@Override
+public void keyPressed(KeyEvent e) {
+if (e.getKeyChar() == 'c') {
+clearFields();
+}
+}
+});
+
+passwordField.addKeyListener(new KeyAdapter() {
+@Override
+public void keyPressed(KeyEvent e) {
+if (e.getKeyChar() == 'c') {
+clearFields();
+}
+}
+});
+}
+
+private void login() {
+String userId = userIdField.getText();
+String password = new String(passwordField.getPassword());
+
+// Connect to the database and verify user credentials
+try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/account", "username", "password");
+PreparedStatement ps = conn.prepareStatement("SELECT * FROM user WHERE Uid = ? AND Password = ?")) {
+ps.setString(1, userId);
+ps.setString(2, password);
+ResultSet rs = ps.executeQuery();
+
+if (rs.next()) {
+JOptionPane.showMessageDialog(frame, "Login successful!");
+} else {
+JOptionPane.showMessageDialog(frame, "Invalid credentials.");
+}
+} catch (SQLException e) {
+e.printStackTrace();
+JOptionPane.showMessageDialog(frame, "Database error: " + e.getMessage());
+}
+}
+
+private void clearFields() {
+userIdField.setText("");
+passwordField.setText("");
+userIdField.requestFocus();
+}
+
+public static void main(String[] args) {
+new Practice1();
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Discuss various scopes of JSP objects briefly. Create a HTML file with principal, time and rate. Then create a JSP file that reads values from the HTML form, calculates simple interest and displays it</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Every object created in a JSP page will have a scope. JSP scope is segregated into four parts and they are page, request, session and application.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Page Scope</strong>: JSP object can be accessed only from same page where it was created. Such as JSP implicit objects: out, exception, response, pageContext, config and page have page scope.<br />
+E.g.&lt;jsp:useBean id= ”employee” class = EemployeeBean” scope = “page” /&gt;.</li>
+<li><strong>Request Scope</strong>: A JSP object created using the request scope can be accessed from any pages that serves that requests. More than one page can serve a single request Implicit object request has the request scope.<br />
+&lt;jsp:useBean id = “employee” class = “EmployeeBean” scope =”request” /&gt;</li>
+<li><strong>Session Scope</strong>: The JSP object is accessible from pages that belong to the same session from where it was created. Implicit object session has the session scope.<br />
+&lt;jsp:useBean id = “employee” class = “EmployeeBean” scope =”session” /&gt;</li>
+<li><strong>Application Scop</strong>: A JSP is created using the application scope can be accessed from any pages across the application. The implicit object application has application scope.<br />
+&lt;jsp:useBean id = “employee” class = “EmployeeBean” scope =”application” /&gt;</li>
+</ol>
+<p><span style="text-decoration: underline;">Second Part:</span></p>
+<p>Create a file named interestForm.html with the following content:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Simple Interest Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Simple Interest Calculator&lt;/h2&gt;
+&lt;form action="calculateInterest.jsp" method="post"&gt;
+&lt;label for="principal"&gt;Principal:&lt;/label&gt;
+&lt;input type="number" id="principal" name="principal" required&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;label for="time"&gt;Time (in years):&lt;/label&gt;
+&lt;input type="number" id="time" name="time" required&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;label for="rate"&gt;Rate of Interest (in %):&lt;/label&gt;
+&lt;input type="number" id="rate" name="rate" required&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;input type="submit" value="Calculate"&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+<p>Now, create a file named <code>calculateInterest.jsp</code> with the following content:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Simple Interest Calculation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Simple Interest Result&lt;/h2&gt;
+
+&lt;%
+    // Retrieving form parameters
+    String principalStr = request.getParameter("principal");
+    String timeStr = request.getParameter("time");
+    String rateStr = request.getParameter("rate");
+
+    // Checking if parameters are not null and not empty
+    if (principalStr != null &amp;&amp; timeStr != null &amp;&amp; rateStr != null 
+        &amp;&amp; !principalStr.isEmpty() &amp;&amp; !timeStr.isEmpty() &amp;&amp; !rateStr.isEmpty()) {
+        
+        try {
+            // Parsing the input values
+            double principal = Double.parseDouble(principalStr);
+            double time = Double.parseDouble(timeStr);
+            double rate = Double.parseDouble(rateStr);
+
+            // Simple Interest formula: SI = (P × T × R) / 100
+            double simpleInterest = (principal * time * rate) / 100;
+
+            // Displaying the result
+%&gt;
+            &lt;p&gt;&lt;strong&gt;Principal Amount:&lt;/strong&gt; &lt;%= principal %&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Time (in years):&lt;/strong&gt; &lt;%= time %&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Rate of Interest:&lt;/strong&gt; &lt;%= rate %&gt;%&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Simple Interest:&lt;/strong&gt; &lt;%= simpleInterest %&gt;&lt;/p&gt;
+&lt;%
+        } catch (NumberFormatException e) {
+%&gt;
+            &lt;p style="color: red;"&gt;Invalid input. Please enter numeric values.&lt;/p&gt;
+&lt;%
+        }
+    } else {
+%&gt;
+        &lt;p style="color: red;"&gt;All fields are required.&lt;/p&gt;
+&lt;%
+    }
+%&gt;
+
+&lt;br&gt;
+&lt;a href="interestForm.html"&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h2>Group B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Write a java program that writes objects of Employee class in the file named emp.doc. Create Employee class as of your interest.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Create a employee class:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Employee {
+private int id;
+private String name;
+private double salary;
+
+public Employee(int id, String name, double salary) {
+this.id = id;
+this.name = name;
+this.salary = salary;
+}
+
+public String toFileFormat() {
+return id + "," + name + "," + salary;
+}
+}</pre>
+<p>Now, Create the Main Program that Write Employee To File:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteEmployeeToFile {
+public static void main(String[] args) {
+Employee emp1 = new Employee(1, "Alice", 50000);
+Employee emp2 = new Employee(2, "Bob", 60000);
+Employee emp3 = new Employee(3, "Charlie", 55000);
+
+try (BufferedWriter writer = new BufferedWriter(new FileWriter("emp.doc"))) {
+writer.write(emp1.toFileFormat());
+writer.newLine();
+writer.write(emp2.toFileFormat());
+writer.newLine();
+writer.write(emp3.toFileFormat());
+System.out.println("Employee objects have been written to emp.doc");
+} catch (IOException e) {
+e.printStackTrace();
+}
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are layout managers? Explain Gridbag layout with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Layout Managers arrange the GUI component in a container for presentation purposes. All layout managers implement the interface LayoutManager(in package java.awt). Class Container’s set Layout method takes an object that implements the LayoutManager interface as an argument.There are the following classes that represent the layout managers:</p>
+<ol style="list-style-type:decimal;">
+<li>java.awt.BorderLayout</li>
+<li>java.awt.FlowLayout</li>
+<li>java.awt.GridLayout</li>
+<li>java.awt.CardLayout</li>
+<li>java.awt.GridBagLayout</li>
+</ol>
+<p><strong>GridBagLayout</strong>: This is a Layout manager similar to GridLayout manager but the components can vary in size(i.e they can occupy multiple rows and columns) and can be added in any order.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javax.swing.*;
+import java.awt.*;
+public class gridbaglayotdemo extends JPanel {
+JButton b1, b2, b3, b4, b5;
+GridBagConstraints gbc = new GridBagConstraints();
+public gridbaglayotdemo() {
+b1 = new JButton("First Button");
+setLayout(new GridBagLayout());
+gbc.insets = new Insets(5, 5, 5, 5);// top.left,bottom,right spacing among buttons
+// 0,0 positioning in JPanel
+// remember gridx iscolumn and gridy is a row
+gbc.gridx = 0;
+gbc.gridy = 0;
+gbc.gridheight = 5;// 5 wide spaces for button 1
+gbc.fill = GridBagConstraints.VERTICAL;// fills all spaces specified by gridheight vertically
+add(b1, gbc);// added to jpanel
+b2 = new JButton("Second Button");
+// 1,1 positioning in JPanel
+gbc.gridx = 1;
+gbc.gridy = 1;
+gbc.gridheight = 1;//fixed height of Second Button
+add(b2, gbc);// added to jpanel
+b3 = new JButton("Third Button");
+// 2,2 positioning in JPanel
+gbc.gridx = 2;
+gbc.gridy = 2;
+gbc.gridheight = 1;
+add(b3, gbc);// added to jpanel
+
+b4 = new JButton("Fourth Button");
+// 3,3 positioning in JPanel
+gbc.gridx = 3;
+gbc.gridy = 3;
+gbc.gridheight = 1;
+add(b4, gbc);// added to jpanel
+b5 = new JButton("Fifth Button");
+// 4,4 positioning in JPanel
+gbc.gridx = 1;
+gbc.gridy = 4;
+gbc.gridheight = 1;
+gbc.gridwidth = 3;// 3 wide spaces for button 5
+gbc.fill = GridBagConstraints.HORIZONTAL;// fills all spaces specified by gridwidth horizontally
+add(b5, gbc);// added to jpanel
+}
+public static void main(String[] args) {
+gridbaglayotdemo panel = new gridbaglayotdemo();
+JFrame frame = new JFrame();
+frame.setVisible(true);
+frame.setSize(600, 300);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.add(panel);//jpanel addedto JFrame
+}
+}</pre>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-43650" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/Screenshot-2024-10-25-at-15.23.48.png?resize=1468%2C600&#038;ssl=1" alt="" width="1468" height="600"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the use of action command in event handling? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Action Commands:</strong></span></p>
+<p>We can change the default command by using setActionCommand() and we can get command for buttons and menu items by using the method getActionCommand(). Benefit of using action commands is that we canassociate multiple components to perform same action with same command.</p>
+<p><span style="text-decoration: underline;"><strong>Implementation</strong>:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+public class ActionCommandsDemo extends JFrame implements ActionListener{
+JLabel lb;
+ActionCommandsDemo(){
+lb= new JLabel();
+setLayout(new FlowLayout());
+JButton btn1=new JButton("Continue");
+JButton btn2=new JButton("OK");
+add(lb);
+add(btn1);
+add(btn2);
+btn1.addActionListener(this);
+btn2.addActionListener(this);
+btn1.setActionCommand("Proceed"); // set action commands
+btn2.setActionCommand("Proceed"); // set action commands
+setSize(200,300);
+setVisible(true);
+}
+public void actionPerformed(ActionEvent e) {
+if(e.getActionCommand()=="Proceed");// get action commands
+lb.setText("Do you want to Proceed??");
+}
+public static void main(String[] args) {
+new ActionCommandsDemo();
+}
+}</pre>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-43652" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/Screenshot-2024-10-25-at-16.07.15.png?resize=1370%2C442&#038;ssl=1" alt="" width="1370" height="442"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What causes SQL exception? How it can be handled? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>SQL Exception:</strong></span></p>
+<p>SQL exception occurs both in driver and database and handled by throwing in the catch block. Below is an example of a SQLException when a program could not find the port i.e. 1433 and the solution is;<br />
+Exception Description is &#8220;The TCP/IP connection to the host DESKTOP-L7LVCJU, port 1433 has failed. Error: &#8220;Socket closed. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.&#8221;.</p>
+<p><strong>Solution is:</strong> Restarting Sql Services in Sql Service Configuration manager.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class SQLExceptionExample {
+public static void main(String[] args) {
+String url = "jdbc:mysql://localhost:1433/your_database"; // Update with your DB
+String user = "your_username"; // Update with your username
+String password = "your_password"; // Update with your password
+
+String sql = "INSERT INTO employees (id, name, salary) VALUES (?, ?, ?)";
+
+try (Connection conn = DriverManager.getConnection(url, user, password);
+PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+// Example of incorrect data type for id (should be an integer)
+pstmt.setString(1, "one"); // Causes a SQL exception
+pstmt.setString(2, "Alice");
+pstmt.setDouble(3, 50000);
+pstmt.executeUpdate();
+System.out.println("Employee inserted successfully.");
+
+} catch (SQLException e) {
+// Handle SQL exceptions
+System.err.println("SQL State: " + e.getSQLState());
+System.err.println("Error Code: " + e.getErrorCode());
+System.err.println("Message: " + e.getMessage());
+}
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Write a java program using TCP such that client sends number to server and displays its factorial. The server computes factorial of the number received from client.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The client sends a number to the server, and the server computes the factorial of that number and sends the result back to the client.</p>
+<p><strong>Step 1: Create the Server Program</strong></p>
+<p>import java.io.*;<br />
+import java.net.*;</p>
+<p>public class FactorialServer {<br />
+public static void main(String[] args) {<br />
+try (ServerSocket serverSocket = new ServerSocket(1234)) {<br />
+System.out.println(&#8220;Server is listening on port 1234&#8221;);</p>
+<p>while (true) {<br />
+try (Socket socket = serverSocket.accept();<br />
+BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));<br />
+PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {</p>
+<p>String input = in.readLine();<br />
+int number = Integer.parseInt(input);<br />
+long factorial = computeFactorial(number);<br />
+out.println(&#8220;Factorial of &#8221; + number + &#8221; is &#8221; + factorial);<br />
+} catch (IOException | NumberFormatException e) {<br />
+e.printStackTrace();<br />
+}<br />
+}<br />
+} catch (IOException e) {<br />
+e.printStackTrace();<br />
+}<br />
+}</p>
+<p>private static long computeFactorial(int number) {<br />
+long result = 1;<br />
+for (int i = 2; i &lt;= number; i++) {<br />
+result *= i;<br />
+}<br />
+return result;<br />
+}</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.*;
+import java.net.*;
+
+public class FactorialServer {
+public static void main(String[] args) {
+try (ServerSocket serverSocket = new ServerSocket(1234)) {
+System.out.println("Server is listening on port 1234");
+
+while (true) {
+try (Socket socket = serverSocket.accept();
+BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+
+String input = in.readLine();
+int number = Integer.parseInt(input);
+long factorial = computeFactorial(number);
+out.println("Factorial of " + number + " is " + factorial);
+} catch (IOException | NumberFormatException e) {
+e.printStackTrace();
+}
+}
+} catch (IOException e) {
+e.printStackTrace();
+}
+}
+
+private static long computeFactorial(int number) {
+long result = 1;
+for (int i = 2; i &lt;= number; i++) {
+result *= i;
+}
+return result;
+}
+}
+}</pre>
+<p><strong>Step 2: Create the Client Program</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.*;
+import java.net.*;
+
+public class FactorialClient {
+public static void main(String[] args) {
+try (Socket socket = new Socket("localhost", 1234);
+PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in))) {
+
+System.out.print("Enter a number: ");
+String input = userInput.readLine();
+out.println(input);
+
+String response = in.readLine();
+System.out.println("Server response: " + response);
+} catch (IOException e) {
+e.printStackTrace();
+}
+}
+}</pre>
+<p>&nbsp;</p>
+<p>The FactorialServer listens on port 1234, computes the factorial of a number received from the client, and sends the result back. The FactorialClient connects to the server, prompts the user for a number, sends it, and displays the server&#8217;s factorial response.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How JavaFx differs from Swing? Explain steps of creating GUI using javaFx.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100.269%; height: 264px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 18.2306%; height: 24px;"><strong>Aspect</strong></td>
+<td style="width: 48.2574%; height: 24px;"><strong>JavaFX</strong></td>
+<td style="width: 33.244%; height: 24px;"><strong>Swing</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 18.2306%; height: 96px;"><strong>Toolkit &amp; Platform Support</strong></td>
+<td style="width: 48.2574%; height: 96px;">JavaFX provides platform support for building modern desktop applications and has more active development.</td>
+<td style="width: 33.244%; height: 96px;">Swing <span class="hljs-built_in">is</span> the standard toolkit <span class="hljs-keyword">for</span> Java (<span class="hljs-keyword">from</span> Java <span class="hljs-number">1</span>), but it<span class="hljs-comment">&#8216;s considered legacy and hasn&#8217;t been actively updated.</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 18.2306%; height: 24px;"><strong>GUI Components</strong></td>
+<td style="width: 48.2574%; height: 24px;">JavaFX has fewer UI components than Swing but offers more modern aesthetics <span class="hljs-built_in">and</span> flexibility.</td>
+<td style="width: 33.244%; height: 24px;">Swing has a larger, more sophisticated <span class="hljs-keyword">set</span> <span class="hljs-keyword">of</span> GUI components, offering a comprehensive range <span class="hljs-keyword">of</span> widgets.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 18.2306%; height: 24px;"><strong>UI Design &amp; Look-<span class="hljs-built_in">and</span>-Feel</strong></td>
+<td style="width: 48.2574%; height: 24px;">JavaFX UI components evolve <span class="hljs-keyword">with</span> a modern, advanced look <span class="hljs-built_in">and</span> feel, making it easier <span class="hljs-keyword">to</span> create visually appealing applications.</td>
+<td style="width: 33.244%; height: 24px;">Swing has pluggable UI components but generally offers a more outdated <span class="hljs-built_in">and</span> less visually appealing <span class="hljs-keyword">default</span> look.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 18.2306%; height: 24px;"><strong>Component Architecture</strong></td>
+<td style="width: 48.2574%; height: 24px;">JavaFX uses a scene graph architecture, offering a more flexible <span class="hljs-built_in">and</span> powerful way <span class="hljs-keyword">to</span> build UIs, allowing more complex layouts.</td>
+<td style="width: 33.244%; height: 24px;">Swing components are standalone <span class="hljs-built_in">and</span> have a hierarchical <span class="hljs-keyword">structure</span>, <span class="hljs-keyword">with</span> customization requiring manual handling.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 18.2306%; height: 24px; text-align: center;"><strong>Customization</strong></td>
+<td style="width: 48.2574%; height: 24px; text-align: center;">JavaFX supports styling <span class="hljs-keyword">with</span> CSS <span class="hljs-built_in">and</span> XML-based configurations, making it much easier <span class="hljs-keyword">to</span> customize the appearance of components.</td>
+<td style="width: 33.244%; height: 24px; text-align: center;">Swing does <span class="hljs-built_in">not</span> have native support <span class="hljs-keyword">for</span> CSS-based styling <span class="hljs-built_in">or</span> modern theming. Customization <span class="hljs-built_in">is</span> possible but often requires manual work <span class="hljs-keyword">with</span> Java code.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The steps of creating GUI using JavaFx are:</p>
+<p>Here, we are creating a simple JavaFX application which prints hello world on the console on clicking the button shown on the stage.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Extend the Application Class</strong>:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javafx.application.Application;
+import javafx.stage.Stage;public class HelloWorldApp extends Application {
+
+@Override
+public void start(Stage primaryStage) {
+// Application logic here
+}
+
+public static void main(String[] args) {
+launch(args); // Launches the application
+}
+}</pre>
+<p>&nbsp;</li>
+<li><strong>Create a Button</strong>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javafx.scene.control.Button;Button btn = new Button("Click Me");</pre>
+</li>
+<li>Create a Layout and Add the Button:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javafx.scene.layout.StackPane;StackPane layout = new StackPane();
+layout.getChildren().add(btn); // Adding button to the layout</pre>
+</li>
+<li><strong>Create a Scene</strong>:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javafx.scene.Scene;Scene scene = new Scene(layout, 300, 200); // width and height of the window</pre>
+</li>
+<li><strong>Prepare the Stage</strong>:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">primaryStage.setTitle("Hello JavaFX"):
+primaryStage.setScene(scene); // Setting the scene on the stage
+primaryStage.show(); // Display the stage (window)</pre>
+</li>
+<li><strong>Create an Event Handler for the Button</strong>:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">btn.setOnAction(e -&gt; {
+System.out.println("Hello, World!"); // This action prints "Hello, World!" to the console
+});</pre>
+</li>
+<li><strong>Create the main() Method</strong>:
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public static void main(String[] args) {
+launch(args); // Launches the JavaFX application
+}</pre>
+<p>&nbsp;</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are different ways of writing servlet programs? Write a sample Servlet program using any one way.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Servlets are Java programs that run on a web server, handling client requests and generating responses. There are two main ways to write a servlet program in Java:</p>
+<p>Ways to Write Servlet Programs</p>
+<ol style="list-style-type:decimal;">
+<li><strong>GenericServlet Class (Abstract Class)</strong>:<br />
+GenericServlet is an abstract class provided by Java&#8217;s javax.servlet package. It implements the Servlet interface and provides default implementations for many methods, so the developer only needs to override the service() method.</li>
+<li><strong>HttpServlet Class (Subclass of GenericServlet)</strong>:<br />
+HttpServlet is a subclass of GenericServlet, specifically designed for handling HTTP requests. It simplifies handling HTTP methods like GET, POST, PUT, DELETE, etc. You override specific methods such as doGet(), doPost(), etc.</li>
+</ol>
+<p>Sample Servlet Program (Using HttpServlet)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class MyFirstServlet extends HttpServlet {
+@Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+response.setContentType("text/html");
+
+PrintWriter out = response.getWriter();
+
+out.println("&lt;html&gt;&lt;body&gt;");
+out.println("&lt;h1&gt;Hello, World!&lt;/h1&gt;");
+out.println("&lt;/body&gt;&lt;/html&gt;");
+
+out.close();
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How CORBA differs from RMI? Discuss the concepts of IDL briefly.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 548px;">
+<tbody>
+<tr style="height: 28px;">
+<td style="width: 50%; height: 28px; text-align: center;"><strong>RMI</strong></td>
+<td style="width: 50%; height: 28px; text-align: center;"><strong>CORBA</strong></td>
+</tr>
+<tr style="height: 84px;">
+<td style="width: 50%; height: 84px; text-align: center;">Stands for Remote Method Invocation.</td>
+<td style="width: 50%; height: 84px; text-align: center;">Stands for Common Object Request Broker Architecture.</td>
+</tr>
+<tr style="height: 89px;">
+<td style="width: 50%; height: 89px; text-align: center;">Uses Java interfaces for implementation, which restricts its usage to Java environments.</td>
+<td style="width: 50%; height: 89px; text-align: center;">Uses Interface Definition Language (IDL) to separate interface from implementation, allowing for multi-language support.</td>
+</tr>
+<tr style="height: 111px;">
+<td style="width: 50%; height: 111px; text-align: center;">Passes objects by value, creating a copy in the memory of the receiving Java Virtual Machine.</td>
+<td style="width: 50%; height: 111px; text-align: center;">Passes objects by reference, allowing efficient and direct manipulation of objects across different platforms.</td>
+</tr>
+<tr style="height: 97px;">
+<td style="width: 50%; height: 97px; text-align: center;">Operates in a server-centric model, where the server is the main computational resource and clients directly connect to the server.</td>
+<td style="width: 50%; height: 97px; text-align: center;">Operates as a peer-to-peer system, enabling decentralized and distributed computing where each node can serve both roles.</td>
+</tr>
+<tr style="height: 139px;">
+<td style="width: 50%; height: 139px; text-align: center;">Generally slower in execution than CORBA, due to the overhead of Java-specific serialization and other Java-based limitations.</td>
+<td style="width: 50%; height: 139px; text-align: center;">Typically faster in execution than RMI, benefiting from efficient communication mechanisms and the ability to handle various data types more fluidly across platforms.</td>
+</tr>
+</tbody>
+</table></div>
+<p>IDL (Interface Definition Language) is a key concept in CORBA (Common Object Request Broker Architecture) that is used to define the interfaces exposed by distributed objects. It plays a crucial role in enabling communication between different programming languages by providing a **language-independent** mechanism for defining object interfaces. The same IDL definition can be used to generate code in multiple languages, ensuring that objects, regardless of the language in which they are implemented, can communicate seamlessly. This allows CORBA to support heterogeneous systems, where clients and servers may be written in different programming languages.</p>
+<p>IDL is primarily used to **define the methods** that objects expose to the outside world. These methods can then be invoked by clients, regardless of the language in which the client or server is written. The IDL specification not only defines the methods but also the **data types** used in those methods, ensuring that data passed between objects remains consistent and compatible across different languages. The use of IDL helps maintain a common understanding of the structure of the objects and their methods, irrespective of the implementation details or the programming language.</p>
+<p>After defining the interfaces in IDL, tools such as the CORBA ORB (Object Request Broker) generate **stubs** and **skeletons** to facilitate communication. The stubs are used by the client to call remote methods, while the skeletons are used by the server to handle incoming requests. These generated files handle the low-level details of remote communication, such as marshalling and unmarshalling of data, making the remote method invocation process transparent to the developer.</p>
+<p>An example of an IDL definition might look like this:// IDL definition for a simple service<br />
+interface Calculator {<br />
+float add(in float a, in float b);<br />
+float subtract(in float a, in float b);<br />
+};</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>When thread synchronization is necessary? Explain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Thread synchronization in Java is necessary when multiple threads access shared resources or variables concurrently. Without synchronization, there can be data inconsistencies or race conditions, where the outcome depends on the unpredictable order of thread execution. This can lead to incorrect results, especially in situations where threads are modifying shared data simultaneously.</p>
+<p>Synchronization ensures that only one thread can access a critical section of code at a time, preventing conflicts. It is typically used with shared variables, collections, or resources like files and databases. Java provides synchronization mechanisms, such as the synchronized keyword and Lock interface, to control access to these resources.</p>
+<p>In summary, synchronization is crucial when:</p>
+<ol style="list-style-type:decimal;">
+<li>Multiple threads access shared data.</li>
+<li>The consistency of shared data must be maintained.</li>
+<li>You want to prevent race conditions and ensure thread safety.</li>
+</ol>
+<p><strong>Using Synchronized Method:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">package synchronizationPackage;
+
+class CSITBook1 {
+int totalSeats = 48;
+public synchronized void book(int reqseats) {
+if(reqseats&lt;=totalSeats) {
+System.out.println("Seats booked = " + reqseats);
+totalSeats = totalSeats - reqseats;
+System.out.println("Seats available = " + totalSeats);
+}
+else {
+System.out.println(reqseats + " seats not available");
+System.out.println("Seats available = "+ totalSeats);
+}
+}
+}
+
+public class UsingSynchronizedMethod extends Thread {
+static CSITBook1 csit;
+int seats;
+@Override
+public void run() {
+csit.book(seats);
+}
+
+public static void main(String[] args) {
+csit = new CSITBook1();
+UsingSynchronizedMethod sid = new UsingSynchronizedMethod();
+sid.seats = 24;
+sid.start();
+UsingSynchronizedMethod sid1 = new UsingSynchronizedMethod();
+sid1.seats = 25;
+sid1.start();
+}
+}</pre>
+<p>&nbsp;</p>
+<p><strong>Output:</strong></p>
+<p>Seats booked = 24<br />
+Seats available = 24<br />
+25 seats not available<br />
+Seats available = 24</p>
+</div>
+</body></html>

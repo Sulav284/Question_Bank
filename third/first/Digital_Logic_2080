@@ -1,0 +1,281 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DL Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>DL Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20 </p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is combinational circuit? Design a combinational circuit with four inputs that represent a decimal digit in BCD and four output lines that generate the 1’s complement of the input binary patterns.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A combinational circuit is a digital circuit whose output is solely determined by the current input values, without any consideration of previous inputs or outputs. In other words, the output is a function of the present input values, and there is no memory or feedback in the circuit.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31292" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_120738_CamScanner.jpg?resize=334%2C531&#038;ssl=1" alt="" width="334" height="531"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is asynchronous counter? Design asynchronous counter that counts the sequence of 0-1-4-6-7 using T flip-flop.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An asynchronous counter, also known as ripple counter or cascaded counter, is a type of digital counter circuit where the flip-flops within the counter do not change their states simultaneously. Each flip-flop in the counter triggers the next flip-flop in a cascading fashion, resulting in a sequence of state transitions. The term &#8220;asynchronous&#8221; refers to the lack of a common clock signal for all the flip-flops.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31293" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_122332_CamScanner.jpg?resize=332%2C588&#038;ssl=1" alt="" width="332" height="588"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31294" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_122646_CamScanner.jpg?resize=331%2C268&#038;ssl=1" alt="" width="331" height="268"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Implement the Boolean function F(P,Q,R,S) = ∑ (3,4,6,8,9,14) using:</p>
+<p>a. 8 to 1 multiplexer</p>
+<p>b. PLA</p>
+<p>c. Decoder</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31296" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_125459_CamScanner.jpg?resize=352%2C502&#038;ssl=1" alt="" width="352" height="502"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31297" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_125521_CamScanner.jpg?resize=352%2C339&#038;ssl=1" alt="" width="352" height="339"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Perform the following operations:</p>
+<p>a. (011101)<sub>2</sub> – (110011)<sub>2</sub> using 2’s  complement</p>
+<p>b. (89344)<sub>10</sub>– – (98654)<sub>10</sub> using 9’s complement.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. 011101 &#8211; 110011</p>
+<p>= 011101 + (2&#8217;s of 110011)</p>
+<p>= 011101 + 001101</p>
+<p>= 101010</p>
+<p>= &#8211; (010110) (Since MSB is 1)</p>
+<p>b. 89344 &#8211; 98654</p>
+<p>= 89344 + (9&#8217;s of 98654)</p>
+<p>= 89344 + 01345</p>
+<p>=90689</p>
+<p>= -(09310) (Since MSB is 9)</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>If f(P,Q,R,S) = ∑(3,4,7,8,14) and d(P,Q,R,S) = ∑(1,6,9,13). Simplify using K-map and design the circuit using minimum number of NAND gates.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31301" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240310_134512_CamScanner.jpg?resize=348%2C564&#038;ssl=1" alt="" width="348" height="564"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the drawback of RS Flipflop? Explain D Flip Flop in detail with a logic diagram, characteristics table, and characteristics equation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>One significant drawback of RS flip-flops is the susceptibility to a metastable state. The metastable state occurs when both the Set (S) and Reset (R) inputs are asserted simultaneously or very close in time, leading to unpredictable behavior and potential data loss. This issue can be critical in applications where reliable and stable state transitions are essential. To address metastability concerns, additional circuitry or alternative flip-flop designs with synchronous inputs are often employed in practical digital systems.</p>
+<p>&nbsp;</p>
+<p><strong>D Flip flops</strong> or data flip flops or delay flip flops can be designed using SR flip flops by connecting a not gate in between S and R inputs and tying them together. D flip flops can be used in place of SR flip flops where you need only SET and RESET state.</p>
+<p><strong>Logic Diagram</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31396" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/logi.png?resize=335%2C153&#038;ssl=1" alt="" width="335" height="153"></p>
+<p>Case 1: D = 0</p>
+<p>Gate 1 = 1, Gate 2 = 0, Gate 4 / Q(n+1)’ = 1, Gate 3 / Q(n+1) = 0</p>
+<p>Since one input of Gate4 is 0 and Gate4 is a NAND gate. Irrespective of the other input, the output of Gate 4 will be 1 as per the property of NAND gates.</p>
+<p>Case 2: D = 1</p>
+<p>Gate 1 = 0, Gate 2 = 1, Gate 3 / Q(n+1) = 1, Gate 4 / Q(n+1)’ = 0</p>
+<p>Since one input of Gate3 is 0 and Gate3 is a NAND gate. Irrespective of the other input, the output of Gate 3 will be 1 as per the property of NAND gates.</p>
+<p><strong>Truth Table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>CLK</strong></td>
+<td style="width: 25%; text-align: center;"><strong>D</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Q(n+1)</strong></td>
+<td style="width: 25%; text-align: center;"><strong>State</strong></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;">RESET</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+<td style="width: 25%; text-align: center;">1</td>
+<td style="width: 25%; text-align: center;">1</td>
+<td style="width: 25%; text-align: center;">SET</td>
+</tr>
+</tbody>
+</table></div>
+<p>We will use this truth table to write the characteristics table for the D flip-flop. In the truth table, you can see there is only one input D and one output Q(n+1). But in the characteristics table, you will see there are two inputs D and Qn, and one output Q(n+1).</p>
+<p>From the logic diagram above it is clear that Qn and Qn’ are two complementary outputs that also act as inputs for Gate3 and Gate4 hence we will consider Qn i.e the present state of Flip flop as input and Q(n+1) i.e. the next state as output.</p>
+<p>After writing the characteristic table we will draw a 2-variable K-map to derive the characteristic equation.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>D</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Qn</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Q(n+1)</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31397" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/kmap.jpg?resize=201%2C136&#038;ssl=1" alt="" width="201" height="136"></p>
+<p>Q(n+1) = D</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Design a full subtractor with necessary tables and logic diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>full subtractor</strong> is a combinational circuit that performs subtraction of two bits, one is minuend and other is subtrahend, taking into account borrow of the previous adjacent lower minuend bit. This circuit has three inputs and two outputs. The three inputs A, B and Bin, denote the minuend, subtrahend, and previous borrow, respectively. The two outputs, D and Bout represent the difference and output borrow, respectively.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31399" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/full-subtractor.jpg?resize=252%2C154&#038;ssl=1" alt="" width="252" height="154"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31400" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/full-subtractor-truth-table.jpg?resize=254%2C180&#038;ssl=1" alt="" width="254" height="180"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31401" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/full-subtractor-Kmap.jpg?resize=200%2C158&#038;ssl=1" alt="" width="200" height="158"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31402" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/full-subtractor-Kmap2.jpg?resize=200%2C156&#038;ssl=1" alt="" width="200" height="156"></p>
+<p>D = A’B’Bin + A’BBin’ + AB’Bin’ + ABBin<br />
+= Bin(A’B’ + AB) + Bin’(AB’ + A’B)<br />
+= Bin( A XNOR B) + Bin’(A XOR B)<br />
+= Bin (A XOR B)’ + Bin’(A XOR B)<br />
+= Bin XOR (A XOR B)<br />
+= (A XOR B) XOR Bin</p>
+<p>Bout = A’B’Bin + A’BBin’ + A’BBin + ABBin<br />
+= Bin(AB + A’B’) + A’B(Bin + Bin’)<br />
+= Bin( A XNOR B) + A’B<br />
+= Bin (A XOR B)’ + A’B</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-31403" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/full-subtractor-logic-gate.jpg?resize=300%2C129&#038;ssl=1" alt="" width="300" height="129"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is shift register? Explain 4 bit SISO and PIPO with timing diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The term “SISO” stands for “Serial-In Serial-Out”.  The SISO shift register circuit accepts serial data on its input pin and shifts it out serially on its output pin. The number of bits that can be shifted out before the next bit arrives depends on the speed of the clock signal that controls the operation of the shift register.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31407" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SISO-Shift-Register-Circuit-Diagram.jpg?resize=409%2C113&#038;ssl=1" alt="" width="409" height="113"></p>
+<p>This shift register includes simply three connections the SI (serial input), SO (serial output), and CLK (clock signal). Here, the SI determines the input enters into the left-hand side flip-flop, the SO is the output taken from the right-hand side flip-flop &amp; the sequencing CLK signal. In this type of shift register, the bits can be transmitted serially from the serial input of the flip flop. For each clock signal in the FFs, the data can be transmitted from one phase to the next phase. As a result, we can get the bits in sequence from the D-FFs output which is known as serial output.</p>
+<p>Let us take an example of the 1011 binary number. Before that, the circuit must be set to reset mode so the output of every register will be ‘0’, so the output provided by all the registers will be “0000”.</p>
+<p>In this 4-bit shift register example like “1111”, the LSB bit is ‘1’ and the MSB bit is ‘1’. First, the high signal (LSB bit) is used as an input to the first D3 flip flop, then D3=1. But primarily all the D FFs outputs will be 0. So, D2=D1=D0=0. When D3 input is high signal (1) then D3 will cause ‘Q3’ to be ‘1’. Therefore the overall o/p for 1st falling edge will become 1000.</p>
+<p>Similarly, when the next data i/p bit in the above 4-bit like high signal (1) is given at flip flop D3, again this ‘D3’ will cause ‘Q3’ to be 1, however, ‘Q3’ is given as input to FF ‘D2’. So, this ‘D2’will cause ‘Q2’ to be 1 when all the remaining outputs will become 0.</p>
+<p>As a result, we will obtain ‘11’ for a 2nd falling edge; so will obtain ‘11’ at the stored bit in the shift register, thus the overall o/p for the 2nd falling edge will get o/p as“1100”.</p>
+<p>When the third input bit like high signal (1) is applied at the ‘D3’ FF then earlier ‘Q2’ o/p will cause the ‘D1’ i/p to be ‘0’. This will give the output Q3, Q2 &amp; Q1 as ‘1’ whereas ‘Q0’ will be ‘0’. So the overall o/p for the 3rd falling edge will get o/p as “1110”.</p>
+<p>In addition, an MSB bit like high signal (1) is given as input, after that ‘1’ at ‘Q1’ will cause input ‘D0’ to be ‘1’, thus, this will make ‘Q0’ be ‘1’. Therefore, finally, SISO shift register store 1111 bit &amp; shows in the o/p.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>CLK</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q3</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q2</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q1</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q0</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">RESET</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">1st Falling Edge</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">2nd Falling Edge</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">3rd Falling Edge</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">4th Failing Edge</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p>By considering the above truth table, the SISO shift register waveform representation will be like the following.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31410" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/Waveform-Representation-1.jpg?resize=248%2C236&#038;ssl=1" alt="" width="248" height="236"></p>
+<p>&nbsp;</p>
+<p>The shift register which uses parallel input and generates parallel output is known as the parallel input parallel output shift register. This shift register includes three connections only the PI (parallel i/p), PO (parallel o/p) &amp; the CLK signal. This kind of shift register also works like a time delay device or temporary storage device like a SISO shift register with the time delay being changed through the CLK signals frequency.</p>
+<p>In this type of register, the data is available in parallel format with respect to  the parallel i/p pins like PA to PD &amp; after that, it is transferred directly together to their respective o/p pins from QA to QDby the similar CLK signal. After that single CLK signal will load &amp; unload the shift register.</p>
+<p>The circuit diagram of the PIPO shift register is shown below. The input allowed by this type of shift register is parallel &amp; gives a parallel output. This logic circuit is designed with 4 D-FFs which is shown in the diagram. In this circuit, both the CLR and CLK signals are connected to 4 D FFs.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31411" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/PIPO-Shift-Register-Circuit-Diagram.jpg?resize=374%2C162&#038;ssl=1" alt="" width="374" height="162"></p>
+<p>The design of this shift register is shown above which includes four inputs represented with DA, DB, DC &amp; DD whereas corresponding FFs outputs are represented with QA, QB, QC &amp; QD. Here, all the D FFs are connected in the same CLK pulse.</p>
+<p>Now if we take the data input is 1101 which is loaded in each flip flop, initially, the output will become 0000. If we apply the first CLK pulse ‘1’ then the input data will be shifted from input DA to QA, so the output will become 1101.</p>
+<p>The truth table of the PIPO shift register is shown below.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>CLK Pulse</strong></td>
+<td style="width: 20%; text-align: center;"><strong>QA</strong></td>
+<td style="width: 20%; text-align: center;"><strong>QB</strong></td>
+<td style="width: 20%; text-align: center;"><strong>QC</strong></td>
+<td style="width: 20%; text-align: center;"><strong>QD</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31412" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/Timing-Diagram-1-203x300-1.jpg?resize=155%2C218&#038;ssl=1" alt="" width="155" height="218"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Design an asynchronous mod 11 up counter using T flip flop.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31414" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240312_132619_CamScanner.jpg?resize=425%2C624&#038;ssl=1" alt="" width="425" height="624"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How race condition in JK flipflop can be resolved? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For J-K flip-flop, if J=K=1, and if clk=1 for a long period of time, then Q output will toggle as long as CLK is high, which makes the output of the flip-flop unstable or uncertain. This problem is called race around condition in J-K flip-flop. This problem (Race Around Condition) can be avoided by ensuring that the clock input is at logic “1” only for a very short time. This introduced the concept of Master Slave JK flip flop. Master Slave JK flip flop – The Master-Slave Flip-Flop is basically a combination of two JK flip-flops connected together in a series configuration. Out of these, one acts as the “master” and the other as a “slave”. The output from the master flip flop is connected to the two inputs of the slave flip flop whose output is fed back to inputs of the master flip flop. In addition to these two flip-flops, the circuit also includes an inverter. The inverter is connected to clock pulse in such a way that the inverted clock pulse is given to the slave flip-flop. In other words if CP=0 for a master flip-flop, then CP=1 for a slave flip-flop and if CP=1 for master flip flop then it becomes 0 for slave flip flop.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31415" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/flipflop-1.jpg?resize=386%2C238&#038;ssl=1" alt="" width="386" height="238"></p>
+<ol style="list-style-type:decimal;">
+<li>When the clock pulse goes to 1, the slave is isolated; J and K inputs may affect the state of the system. The slave flip-flop is isolated until the CP goes to 0. When the CP goes back to 0, information is passed from the master flip-flop to the slave and output is obtained.</li>
+<li>Firstly the master flip flop is positive level triggered and the slave flip flop is negative level triggered, so the master responds before the slave.</li>
+<li>If J=0 and K=1, the high Q’ output of the master goes to the K input of the slave and the clock forces the slave to reset, thus the slave copies the master.</li>
+<li>If J=1 and K=0, the high Q output of the master goes to the J input of the slave and the Negative transition of the clock sets the slave, copying the master.</li>
+<li>If J=1 and K=1, it toggles on the positive transition of the clock and thus the slave toggles on the negative transition of the clock.</li>
+<li>If J=0 and K=0, the flip flop is disabled and Q remains unchanged.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is decoder circuit? Design 3 to 8 decoder circuit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>decoder</strong> is a combinational logic circuit that is used to change the code into a set of signals. It is the reverse process of an encoder. A decoder circuit takes multiple inputs and gives multiple outputs. A decoder circuit takes binary data of ‘n’ inputs into ‘2^n’ unique output.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31418" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/decoder.png?resize=291%2C117&#038;ssl=1" alt="" width="291" height="117"></p>
+<p>The 3 to 8 decoder is also known as Binary to Octal Decoder. In a 3 to 8 line decoder, there is a total of eight outputs, i.e., Y0, Y1, Y2, Y3, Y4, Y5, Y6, and Y7 and three outputs, i.e., A0, A1, and A2. This circuit has an enable input &#8216;E&#8217;. Just like 2 to 4 line decoder, when enable &#8216;E&#8217; is set to 1, one of these four outputs will be 1.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31419" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/decoder5.png?resize=236%2C155&#038;ssl=1" alt="" width="236" height="155"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31420" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/decoder6.png?resize=403%2C282&#038;ssl=1" alt="" width="403" height="282"></p>
+<p>The logical expression of the term Y<sub>0</sub>, Y<sub>1</sub>, Y<sub>2</sub>, Y<sub>3</sub>, Y<sub>4</sub>, Y<sub>5</sub>, Y<sub>6</sub>, and Y<sub>7</sub> is as follows:</p>
+<p>Y<sub>0</sub>=A<sub>0</sub>&#8216;.A<sub>1</sub>&#8216;.A<sub>2</sub>&#8216;<br />
+Y<sub>1</sub>=A<sub>0</sub>.A<sub>1</sub>&#8216;.A<sub>2</sub>&#8216;<br />
+Y<sub>2</sub>=A<sub>0</sub>&#8216;.A<sub>1</sub>.A<sub>2</sub>&#8216;<br />
+Y<sub>3</sub>=A<sub>0</sub>.A<sub>1</sub>.A<sub>2</sub>&#8216;<br />
+Y<sub>4</sub>=A<sub>0</sub>&#8216;.A<sub>1</sub>&#8216;.A<sub>2</sub><br />
+Y<sub>5</sub>=A<sub>0</sub>.A<sub>1</sub>&#8216;.A<sub>2</sub><br />
+Y<sub>6</sub>=A<sub>0</sub>&#8216;.A<sub>1</sub>.A<sub>2</sub><br />
+Y<sub>7</sub>=A<sub>0</sub>.A<sub>1</sub>.A<sub>2</sub></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31421" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/decoder7.png?resize=281%2C347&#038;ssl=1" alt="" width="281" height="347"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>State Diagram</li>
+<li>Encoder</li>
+<li>Parallel Adder</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>State Diagram:</strong><br />
+A state diagram is a graphical representation of the states, transitions, and inputs/outputs of a finite state machine (FSM). Finite state machines are mathematical models used to describe dynamic systems with a finite number of states, transitions between states, and associated behaviors. In a state diagram:</p>
+<p>States: Represent distinct conditions or modes that the system can be in.<br />
+Transitions: Arrows connecting states indicate how the system transitions from one state to another based on certain conditions or events.<br />
+Inputs/Outputs: Additional information about the inputs and outputs associated with each state or transition.<br />
+State diagrams are valuable tools for designing and analyzing complex systems, helping engineers and designers visualize the behavior and control logic of a system over time.</p>
+<p><strong>Encoder:</strong><br />
+An encoder is a digital circuit that converts information from one format to another. In the context of digital electronics, an encoder is often used to convert a set of inputs into a binary code. There are different types of encoders, but a common example is the binary encoder. It takes multiple input lines and produces a binary code representing the active input line. For example, in a 4-to-2 binary encoder:</p>
+<p>Inputs (A, B, C, D): Four input lines representing a binary-coded value.<br />
+Outputs (Y1, Y2): Two output lines representing the binary encoding of the active input.<br />
+Encoders are essential components in digital systems for tasks such as data compression, data transmission, and interface with various devices.</p>
+<p><strong>Parallel Adder:</strong><br />
+A parallel adder is a digital circuit that performs the addition of multiple binary numbers simultaneously. One common type of parallel adder is the Ripple Carry Adder. In a 4-bit parallel adder:</p>
+<p>Inputs (A, B): Two sets of 4-bit binary numbers to be added.<br />
+Outputs (S): A 4-bit sum output representing the result of the addition.<br />
+Carry (Cout): An additional output representing the carry-out from the most significant bit (MSB).<br />
+The parallel adder operates by adding corresponding bits from the input numbers and propagating any carry to the next bit. It allows for faster addition of multiple-bit numbers compared to serial addition. Carry-lookahead adders are more advanced designs that reduce the propagation delay associated with ripple carry adders, improving overall performance. Parallel adders are fundamental components in arithmetic logic units (ALUs) within digital processors.</p>
+</div>
+</body></html>

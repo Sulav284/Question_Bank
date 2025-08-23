@@ -1,0 +1,668 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technology Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>Web Technology Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60+20+20</p>
+        <p><strong>Pass Marks:</strong> 24+8+8 </p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Any Two Question</h2><h3>Question 1</h3>
+<div><p><p>Create web form for book search catalog. The form should contain a dropdown defining search type, a text box for search keyword, a radio button for download type true or false, now write PHP script to store data from the form into database table and also retrive the results from stored table in a new page.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;">index.html File:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Form Registration&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h2&gt;Book Search Catalog&lt;/h2&gt;
+
+    &lt;form method="POST" action="submit.php"&gt;
+
+        &lt;div&gt;
+            &lt;label for="country"&gt;Choose Search Type: &lt;/label&gt;
+            &lt;select name="searchtype"&gt;
+                &lt;option value="history"&gt;History&lt;/option&gt;
+                &lt;option value="politics"&gt;Politics&lt;/option&gt;
+                &lt;option value="childrenbook"&gt;Children's Book&lt;/option&gt;
+                &lt;option value="drama"&gt;Drama&lt;/option&gt;
+                &lt;option value="science"&gt;Science&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;label for="name"&gt;Please enter name of book: &lt;/label&gt;
+            &lt;input type="text" name="name" id="name"&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;label for="download"&gt;Download: &lt;/label&gt;
+            &lt;input type="radio" name="download" value="true"&gt;True
+            &lt;input type="radio" name="download" value="false"&gt;False
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;input type="submit" name="submit" value="Submit"&gt;
+        &lt;/div&gt;
+
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span style="text-decoration: underline;">submit.php File:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "webtech";
+$tablename = "books";
+
+if(
+    $_SERVER["REQUEST_METHOD"] == "POST"
+    &amp;&amp; isset($_POST['searchtype'])
+){
+
+    $searchtype = $_POST['searchtype'];
+    $name = $_POST['name'];
+    $download = $_POST['download'];
+
+    //connect to database
+    $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Cannot connect to database");
+
+    // Insert the values into database
+    mysqli_query($conn, "INSERT INTO ".$tablename."(searchtype, name, download) VALUES ('$searchtype', '$name', '$download')");    
+    echo '&lt;script&gt;alert("Congrats! Your Submission is Successfull!");&lt;/script&gt;'; 
+    echo '&lt;script&gt;window.location.assign("display.php");&lt;/script&gt;'; 
+}
+
+?&gt;</pre>
+<p><span style="text-decoration: underline;">display.php File:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "webtech";
+    $tablename = "books";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Cannot connect to database");
+    $query = mysqli_query($conn, "Select * from  $tablename"); 
+?&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Displaying Data&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;table class="table"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Search Type&lt;/th&gt;
+            &lt;th&gt;Book Name&lt;/th&gt;
+            &lt;th&gt;Download Type&lt;/th&gt;
+        &lt;/tr&gt;
+
+        &lt;?php 
+            while($row = mysqli_fetch_array($query)) {
+        ?&gt;
+            &lt;tr&gt;
+                &lt;th&gt;&lt;?php echo $row['searchtype']; ?&gt;&lt;/th&gt;
+                &lt;th&gt;&lt;?php echo $row['name']; ?&gt;&lt;/th&gt;
+                &lt;th&gt;&lt;?php echo $row['download']; ?&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;?php } ?&gt;
+    &lt;/table&gt;
+    &lt;a href="index.html"&gt;Go back to Search New Book&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How can you create objects in Javascript? Create a HTML page containing a division with image and its description in paragraph. Write a javascript function to change the value of description in the paragraph during onmouseover and mouseout event on the image.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A javaScript object is an entity having state and behavior (properties and method). For example: car, pen, bike, chair, glass, keyboard, monitor etc.</p>
+<p>There are different ways to create new objects:</p>
+<p><span style="text-decoration: underline;">a) Creating object with a constructor:</span></p>
+<p>Here, we need to create function with arguments. Each argument value can be assigned in the current object by using this keyword.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">//simple function
+function vehicle(name, maker){
+    this.name = name;
+    this.maker = maker;
+}
+
+//new keyword to create an object
+let car  = new vehicle('GT', 'BMW');
+
+//property accessors
+console.log(car.name);
+console.log(car.maker);</pre>
+<p><span style="text-decoration: underline;">b) Using object literals:</span></p>
+<p>The syntax of creating object using object literal is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">let car  = {
+    name : "GT",
+    maker : "BMW"
+};
+
+//property accessors
+console.log(car.name);
+console.log(car.maker);</pre>
+<p><span style="text-decoration: underline;">c) By creating instance of Object directly (using new keyword):</span></p>
+<p>The syntax of creating object directly is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">const person = new Object({ 
+    name: 'Suresh', 
+    age: 22, 
+    hobbies: ['HTML', 'Javascript', 'PHP'] 
+});</pre>
+<p><span style="text-decoration: underline;"><strong>Program Part:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;TU&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div&gt;
+        &lt;img src="images/tu.jpg" onmouseover="changeText()" onmouseout="defaultText()"&gt;
+
+        &lt;div id="description"&gt;
+            &lt;p&gt;Department of CSIT, Tribhuvan University&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        function changeText() {
+            let display = document.getElementById('description');
+            display.innerHTML = "";
+            display.innerHTML = "Department of Computer Science and Informtion Technology, TU!! (Changed Text)";
+        }
+
+        function defaultText() {
+            let display = document.getElementById('description');
+            display.innerHTML = "";
+            display.innerHTML = "Department of CSIT, Tribhuvan University";
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How positioning of HTML elements can be done using CSS? Create a HTML page with a div with some content and two paragraph with some contents having id p1 and p2. Write external CSS for the div tag having fixed position with border style solid and width 2px. the p1 should have relative position. The font type of p1 should be Arial and color should be red. The p2 have absolute position with top 0px and left 200px.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The position property specifies the type of positioning method used for an element.</p>
+<p>There are five different position values:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Static:</strong> Static positioning is the default that every element gets. Static positioned elements are not affected by the top, bottom, left, and right properties.</li>
+<li><strong>Relative:</strong> Relative positioning changes the position of the HTML element relative to where it normally appears.  Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</li>
+<li><strong>Fixed:</strong> An element with <code class="w3-codespan">position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</li>
+<li><strong>Absolute:</strong> An element with <i><b>position: absolute</b></i> is positioned at the specified coordinates relative to our screen top-left corner.</li>
+<li><strong>Sticky:</strong>An element with <code class="w3-codespan">position: sticky;</code> is positioned based on the user&#8217;s scroll position.A sticky element toggles between <code class="w3-codespan">relative</code> and <code class="w3-codespan">fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport &#8211; then it &#8220;sticks&#8221; in place (like position:fixed).</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Second Part:</strong></span></p>
+<p><span style="text-decoration: underline;">index.html File:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Hamro CSIT Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="content"&gt;
+        Hamro CSIT is a Web and Mobile application that provides a complete set of reference materials like notes, syllabus, question banks, solutions, and many more for B. Sc. CSIT students.
+    &lt;/div&gt;
+
+    &lt;p id="p1"&gt;
+        HAMROCSIT is the one of the most popular website for csit notes.
+    &lt;/p&gt;
+
+    &lt;p id="p2"&gt;
+        Students of B.Sc. CSIT can get updated notes, old questions and solutions for the easy learning.
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span style="text-decoration: underline;">style.css File:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">.content {
+    position: fixed;
+    border: 2px solid black;
+}
+
+#p1 {
+    position: relative;
+    font-family: Arial;
+    color: red;
+}
+
+#p2 {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}</pre>
+</div>
+<h2>Section B: Attempt Any Eight Questions</h2><h3>Question 4</h3>
+<div><p><p>What is HTTP protocol? Define HTTP Request and Response.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>HTTP is a TCP/IP based communication protocol, that is used to deliver data (HTML files, image files, query results, etc.) on the World Wide Web. The default port is TCP 80, but other ports can be used as well. It provides a standardized way for computers to communicate with each other. HTTP specification specifies how clients&#8217; request data will be constructed and sent to the server, and how the servers respond to these requests.</p>
+<p>HTTP works as a request-response protocol between a client and server. For example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10935 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/ImageOfHTTPRequestResponse-660x374-1.png?resize=660%2C374&#038;ssl=1" alt="HTTP Request and Server" width="660" height="374" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10936" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/ImageOfHTTPRequestResponse-660x374-2.png?resize=660%2C374&#038;ssl=1" alt="" width="660" height="374"></p>
+<ol style="list-style-type:decimal;">
+<li><b>HTTP Request:</b> HTTP client sends an HTTP Request to the HTTP Server according to the HTTP standard, specifying the information the client like to retrieve from the Hypertext Transfer Protocol (HTTP) Server.</li>
+<li><b>HTTP Response:</b>Once the HTTP Request arrived at the HTTP server, it will process the request and creates an HTTP Response message. The HTTP response message may contain the resource the HTTP Client requested or information why the HTTP request failed.The HTTP response includes:
+<ul style="list-style-type: square;">
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li>Status Line</li>
+<li>Response Header</li>
+<li>Response Body</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Create a HTML page with tags header, article and footer. Insert alink containing mail to info@iost.edu.np in the footer tag. Set the keywords “iost”, “csit” using Meta tag in the page.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="keywords" content="iost, csit"&gt;
+    &lt;title&gt;IOST&lt;/title&gt;
+    &lt;style&gt;
+        *{
+            margin:0;
+        }
+        
+        header,
+        footer{
+            padding:15px;
+            background:#009688;
+        }
+        
+        header a,
+        footer a{
+            text-decoration:none;
+        }
+        
+        article{
+            padding:20px 10px;
+            background:#484848;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt;
+            &lt;a href="#"&gt;About&lt;/a&gt;
+            &lt;a href="#"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;article&gt;
+        &lt;p&gt;Institute of Science and Technology (IoST) is one of the oldest and the largest technical institutes in TU.&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;footer&gt;
+        &lt;a href="info@iost.edu.np"&gt;Send Email&lt;/a&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How jQuery animate can be used to create custom animation? Write syntax with sample script.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <b><i>animate()</i></b> method performs a custom animation of a set of CSS properties.</p>
+<p>This method changes an element from one state to another with CSS styles. The CSS property value is changed gradually, to create an animated effect.</p>
+<p>Only numeric values can be animated (like &#8220;margin:30px&#8221;). String values cannot be animated (like &#8220;background-color:red&#8221;), except for the strings &#8220;show&#8221;, &#8220;hide&#8221; and &#8220;toggle&#8221;. These values allow hiding and showing the animated element.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">$(selector).animate({ properties }, duration, callback);</pre>
+<ul style="list-style-type: square;">
+<li><i>properties</i><i> </i>parameter defines the CSS properties to be animated.</li>
+<li><span style="font-family: inter-bold, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;"><b><i>duration</i></b></span> parameter is optional and specifies the duration of the effect. It can be set as &#8220;slow&#8221; , &#8220;fast&#8221; or milliseconds.</li>
+<li><i>callback</i> parameter is also optional and it is a function which is executed after the animation completes.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#box").animate({ height: "300px" });
+            });
+            $("#btn2").click(function () {
+                $("#box").animate({ height: "100px" });
+            });
+        });
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;button id="btn1"&gt;Animate&lt;/button&gt;
+    &lt;button id="btn2"&gt;Reset&lt;/button&gt;
+
+    &lt;div id="box" style="background:#009688;height:100px;width:100px;margin:6px;"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is the use of JSON? How can you parse a JSON, illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">{
+    "name" : "Suresh Chand",
+    "role" : "Developer",
+    "website" : "https://sureshchand.com.np"
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Parsing JSON:</strong></span></p>
+<p>The <code>JSON.parse()</code> method parses a JSON string, constructing the JavaScript value or object described by the string.</p>
+<p><span style="text-decoration: underline;">Syntax:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">JSON.parse(text);</pre>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">const json = '{"name":"Suresh Chand","role":"Developer","website":"https://sureshchand.com.np"}';
+
+// Parsing JSON string to object
+const obj = JSON.parse(json);
+
+console.log(obj.name);
+console.log(obj.role);
+console.log(obj.website);</pre>
+<p>The output of the above code is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Suresh Chand
+Developer
+https://sureshchand.com.np</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is XML? Create an XML file containing records of employee having elements of simple and complex types.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>XML stands for Extensible Markup Language. It is a text-based markup language derived from Standard Generalized Markup Language (SGML).</p>
+<p>XML tags identify the data and are used to store and organize the data, rather than specifying how to display it like HTML tags, which are used to display the data. XML is not going to replace HTML in the near future, but it introduces new possibilities by adopting many successful features of HTML.</p>
+<p><span style="text-decoration: underline;">XML file containing records of employee having elements of simple and complex types:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0"?&gt;
+&lt;employees&gt;
+    &lt;employee role="developer"&gt;
+        &lt;title&gt;Salman Khan&lt;/title&gt;
+        &lt;salary&gt;60000&lt;/salary&gt;
+        &lt;skills&gt;
+            &lt;skill&gt;HTML AND CSS&lt;/skill&gt;
+            &lt;skill&gt;PHP&lt;/skill&gt;
+            &lt;skill&gt;Javascript (jQuery, React and React Native)&lt;/skill&gt;
+        &lt;/skills&gt;
+    &lt;/employee&gt;
+
+    &lt;employee role="seo"&gt;
+        &lt;title&gt;Rajesh Hamal&lt;/title&gt;
+        &lt;salary&gt;30000&lt;/salary&gt;
+        &lt;skills&gt;
+            &lt;skill&gt;On Page SEO&lt;/skill&gt;
+            &lt;skill&gt;Off Page SEO&lt;/skill&gt;
+        &lt;/skills&gt;
+    &lt;/employee&gt;
+&lt;/employees&gt;</pre>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How XSD of a XML file is created? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>XSD is a description of a type of XML document, expressed in terms of constraints on the structure and content of documents of that type, above and beyond the basic syntactical constraints imposed by the XML itself.</p>
+<p>Let take and simple XML</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;shiporder
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd"&gt;
+  &lt;orderperson&gt;Suresh Chand&lt;/orderperson&gt;
+  &lt;shipto&gt;
+    &lt;name&gt;Hamro CSIT&lt;/name&gt;
+    &lt;address&gt;Kathmandu&lt;/address&gt;
+    &lt;city&gt;44600 Kalanki&lt;/city&gt;
+    &lt;country&gt;Nepal&lt;/country&gt;
+  &lt;/shipto&gt;
+  &lt;item&gt;
+    &lt;title&gt;Hamro CSIT T-shirt&lt;/title&gt;
+    &lt;note&gt;Special Edition&lt;/note&gt;
+    &lt;quantity&gt;1&lt;/quantity&gt;
+    &lt;price&gt;10.90&lt;/price&gt;
+  &lt;/item&gt;
+&lt;/shiporder&gt;</pre>
+<p><span style="text-decoration: underline;">Now, We will add XSD to above XML code.</span></p>
+<p>We start by opening a new file that we will call &#8220;shiporder.xsd&#8221;. To create the schema we could simply follow the structure in the XML document and define each element as we find it. We will start with the standard XML declaration followed by the xs:schema element that defines a schema:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+...
+&lt;/xs:schema&gt;</pre>
+<p>Next, we have to define the &#8220;shiporder&#8221; element. This element has an attribute and it contains other elements, therefore we consider it as a complex type. The child elements of the &#8220;shiporder&#8221; element is surrounded by a xs:sequence element that defines an ordered sequence of sub elements:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;xs:element name="shiporder"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      ...
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</pre>
+<p>Then we have to define the &#8220;orderperson&#8221; element as a simple type.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;xs:element name="orderperson" type="xs:string"/&gt;</pre>
+<p>Next, we have to define two elements that are of the complex type: &#8220;shipto&#8221; and &#8220;item&#8221;.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;xs:element name="shipto"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="address" type="xs:string"/&gt;
+      &lt;xs:element name="city" type="xs:string"/&gt;
+      &lt;xs:element name="country" type="xs:string"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;xs:element name="item" maxOccurs="unbounded"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="title" type="xs:string"/&gt;
+      &lt;xs:element name="note" type="xs:string" minOccurs="0"/&gt;
+      &lt;xs:element name="quantity" type="xs:positiveInteger"/&gt;
+      &lt;xs:element name="price" type="xs:decimal"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</pre>
+<p>The final XSD code for above XML document is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+
+&lt;xs:element name="shiporder"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="orderperson" type="xs:string"/&gt;
+      &lt;xs:element name="shipto"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element name="name" type="xs:string"/&gt;
+            &lt;xs:element name="address" type="xs:string"/&gt;
+            &lt;xs:element name="city" type="xs:string"/&gt;
+            &lt;xs:element name="country" type="xs:string"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+      &lt;xs:element name="item" maxOccurs="unbounded"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element name="title" type="xs:string"/&gt;
+            &lt;xs:element name="note" type="xs:string" minOccurs="0"/&gt;
+            &lt;xs:element name="quantity" type="xs:positiveInteger"/&gt;
+            &lt;xs:element name="price" type="xs:decimal"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+
+&lt;/xs:schema&gt;</pre>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How can you define variables in PHP? Define any two variable of string types and display their results after concatenation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In PHP, a variable is declared using a <strong>$ sign</strong> followed by the variable name. Here, some important points to know about variables:</p>
+<ul class="points">
+<li>As PHP is a loosely typed language, so we do not need to declare the data types of the variables. It automatically analyzes the values and makes conversions to its correct datatype.</li>
+<li>After declaring a variable, it can be reused throughout the code.</li>
+<li>Assignment Operator (=) is used to assign the value to a variable.</li>
+</ul>
+<p>Syntax of declaring a variable in PHP is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">$variablename = $value;</pre>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?php  
+    $str="hello string";  
+    $x=200;  
+    $y=44.6;  
+    echo "string is: $str &lt;br/&gt;";  
+    echo "integer is: $x &lt;br/&gt;";  
+    echo "float is: $y &lt;br/&gt;";  
+?&gt;</pre>
+<p>The output of above code is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">string is: hello string
+integer is: 200
+float is: 44.6</pre>
+<p><span style="text-decoration: underline;"><strong>Second Part:</strong></span></p>
+<div class="compilecode compilecode-php">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?php
+    // First String
+    $fname = "Suresh";
+       
+    // Second String
+    $lname = "Chand";
+       
+    // Concatenation Of String
+    $fullname = $fname." ".$lname;
+
+    // print Concatenate String
+    echo $fullname;
+
+?&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How web pages can be made responsive using media queries ? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>CSS Media Queries allow us to create responsive websites that look good on all screen sizes, from desktop to mobile. It uses the @media rule to include a block of CSS properties only if a certain condition is true. A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">@media not|only mediatype and (expressions) {
+    CSS-Code;
+}</pre>
+<p>The result of the query is true if the specified media type matches the type of device the document is being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.</p>
+<p><span style="text-decoration: underline;"><strong>Code Part:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style&gt;
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .column {
+                width: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h2&gt;Responsive Column Layout using Media Query&lt;/h2&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="column" style="background-color:#aaa;"&gt;
+            &lt;h2&gt;Column 1&lt;/h2&gt;
+            &lt;p&gt;Some text..&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column" style="background-color:#bbb;"&gt;
+            &lt;h2&gt;Column 2&lt;/h2&gt;
+            &lt;p&gt;Some text..&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column" style="background-color:#ccc;"&gt;
+            &lt;h2&gt;Column 3&lt;/h2&gt;
+            &lt;p&gt;Some text..&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column" style="background-color:#ddd;"&gt;
+            &lt;h2&gt;Column 4&lt;/h2&gt;
+            &lt;p&gt;Some text..&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+<p><span style="text-decoration: underline;"><strong>Preview:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10926 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/responsive-media-query.gif?resize=600%2C338&#038;ssl=1" alt="Media Query Example" width="600" height="338" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Why inline frames are used? Create a HTML page containing iframe within a paragraph. The iframe have source to http://www.tuiost.edu.np and its height and width are 200px and 400px respectively.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An inline frame is used to embed another document within the current HTML document. The HTML <code class="w3-codespan">&lt;iframe&gt;</code> tag specifies an inline frame.</p>
+<p>Iframes are often used to embed videos, maps, and other media on a web page. You can also use them to embed another web page into a web page. Here are a few examples of code using <code>iframe</code> to embed an external resource:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;iframe src="https://hamrocsit.com/"&gt;
+&lt;iframe src="https://hamrocsit.com/" width="400" height="300"&gt;
+&lt;iframe src="https://hamrocsit.com/" style="border: 0;"&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Code Part:</strong></span></p>
+<div class="compilecode compilecode-html">
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;TU&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt;The Institute of Science and Technology is one of the five technical institutes under Tribhuvan University,
+        Nepal's largest academic institution. With 13 central departments, 25 constituent campuses, and 103 affiliated
+        colleges, the IoST is one of the oldest and largest technical institutes of TU. For more details visit our
+        website:
+        &lt;iframe src="http://www.tuiost.edu.np" width="400px" height="200px" title="tuiost website"&gt;
+            Sorry your browser does not support inline frames.
+        &lt;/iframe&gt;
+    &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<div class="compilecode-wrapper"><button type="button" class="compilecode-play">Run Code  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></button></div></div>
+</div>
+</body></html>

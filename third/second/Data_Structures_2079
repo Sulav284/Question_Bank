@@ -1,0 +1,529 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>DS Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attemps any TWO questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>How do you plot the function on graph? Determine whether the function f(x) = x<sup>2</sup> is injective, surjective or bijective with reasons. Solve the recurrence relation a<sub>n</sub> = 6a<sub>n-1</sub> – 9a<sub>n-2</sub> with initial conditions a<sub>0</sub> = 1 and a<sub>1</sub> = 6.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-mxclb-79elbk h-full dark:bg-gray-800">
+<div class="react-scroll-to-bottom--css-mxclb-1n7m0yu">
+<div class="flex flex-col items-center text-sm dark:bg-gray-800">
+<div class="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
+<div class="text-base gap-4 md:gap-6 md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0 m-auto">
+<div class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]">
+<div class="flex flex-grow flex-col gap-3">
+<div class="min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap">
+<div class="markdown prose w-full break-words dark:prose-invert light">To plot a function on a graph, we will follow following steps:</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-32 md:h-48 flex-shrink-0">
+<ol style="list-style-type:decimal;">
+<li>Determine the domain and range of the function. The domain is the set of all possible input values (x-values) for the function, and the range is the set of all possible output values (y-values) for the function.</li>
+<li>Choose a suitable scale for the x and y axes based on the domain and range of the function.</li>
+<li>Plot a few key points on the graph by selecting values of x and evaluating the function to get the corresponding y-value. These points should be representative of the function&#8217;s behavior.</li>
+<li>Connect the points with a smooth curve that accurately represents the function&#8217;s behavior. If the function has sharp corners or vertical asymptotes, indicate them on the graph.</li>
+<li>Label the axes and give the graph a title that indicates the function being plotted.</li>
+<li>Check the graph to make sure it accurately represents the function and that all important features are clearly visible.</li>
+</ol>
+<p>Now, let&#8217;s examine f(x) = x^2, where function is injective, surjective or bijective:</p>
+<ul style="list-style-type: square;">
+<li>f(x) is not injective because, for example, f(-2) = f(2) = 4. So, distinct elements of the domain (-2 and 2) are mapped to the same element in the range (4).</li>
+<li>f(x) is not surjective because, for example, there is no real number x such that f(x) = -1. This is because the square of any real number is non-negative.</li>
+<li>Since f(x) is neither injective nor surjective, it is not bijective.</li>
+</ul>
+<p>Therefore, the function f(x) = x^2 is neither injective, surjective, nor bijective over the set of real numbers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/users/684/1677325413-CamScanner%2002-25-2023%2017.27_1.jpg?ssl=1" alt=""> <img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/users/684/1677325388-CamScanner%2002-25-2023%2017.27_2.jpg?ssl=1" alt=""></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>A group of 8 scientist is composed of 5 chemist and 3 biologist. In how many ways can a committe of 5 be formed that has 3 chemist and 2 biologist? Using mathematical induction prove that 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ……………….. + n<sup>3</sup> = n<sup>2</sup>(n + 1)<sup>2</sup> / 4) for n ≥ 1.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To find the number of ways to form a committee of 5 scientists with 3 chemists and 2 biologists, we can use the combination formula:</p>
+<p>C(5,3) * C(3,2)</p>
+<p>where C(n,r) represents the number of combinations of r objects that can be chosen from a set of n objects.</p>
+<p>C(5,3) represents the number of ways to choose 3 chemists from a group of 5 chemists, and C(3,2) represents the number of ways to choose 2 biologists from a group of 3 biologists.</p>
+<p>Evaluating these expressions, we get:</p>
+<p>C(5,3) * C(3,2) = (5!)/(3!<em>(5-3)!) * (3!)/(2!</em>(3-2)!)</p>
+<p>= (10) * (3)</p>
+<p>= 30</p>
+<p>Therefore, there are 30 ways to form a committee of 5 scientists with 3 chemists and 2 biologists from a group of 5 chemists and 3 biologists.</p>
+<p><span style="text-decoration: underline;"><strong>Numberical Part:</strong></span></p>
+<p>Solution:</p>
+<p>Let P(n): 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + n<sup>3</sup> = n<sup>2</sup>(n + 1)<sup>2</sup> / 4)</p>
+<p><strong>For n = 1,</strong></p>
+<p>LHS = 1<sup>3</sup> = 1</p>
+<p>RHS = 1<sup>2</sup> ( 1 + 1)<sup>2</sup> / 4 = 1</p>
+<p>Hence, LHS = RHS</p>
+<p>Therefore, P(n) is true for n = 1</p>
+<p><strong>Assume that P(k) is true</strong></p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> = k<sup>2</sup>(k + 1)<sup>2</sup> / 4)   &#8212;&#8212;- (i)</p>
+<p>We will prove that P(k+1) is true</p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> + (k+1)<sup>3</sup> = \(\left ( \frac{(k+1)^2((k+1) + 1)^2}{4} \right )\)</p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> + (k+1)<sup>3</sup> = \(\left ( \frac{(k+1)^2(k+2)^2}{4} \right )\)      &#8212;&#8212;&#8211; (2)</p>
+<p>We have to prove P(k+1) from P(k) i.e. (2) from (1)</p>
+<p>From Equation (1):</p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> = k<sup>2</sup>(k + 1)<sup>2</sup> / 4)</p>
+<p>After adding (k+1)<sup>3</sup> both sides,</p>
+<p>1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> + (k+1)<sup>3</sup> = \(\frac{k^2(k+1)^2}{4}\) + (k + 1)<sup>3</sup></p>
+<p>= \(\frac{k^2(k+1)^2 + 4(k + 1)^3}{4}\)</p>
+<p>= \(\frac{(k+1)^2(k^2 + 4k + 4)}{4}\)</p>
+<p>= \(\frac{(k+1)^2(k^2 + 2k + 2k + 4)}{4}\)</p>
+<p>= \(\frac{(k+1)^2((k+1)(k+2))}{4}\)</p>
+<p>= \(\frac{(k+1)^2 (k+2)^2}{4}\)</p>
+<p>Thus, 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.. + k<sup>3</sup> + (k+1)<sup>3</sup> = \(\left ( \frac{(k+1)^2(k+2)^2}{4} \right )\)</p>
+<p>i.e. P(k+1) is true whenever P(k) is true</p>
+<p>Therefore, By the principle of mathematical induction, P(n) is true for n, where n is natural number.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Show that the relation R = {(a, b): |a – b| is even} is an equivalence relation in the set of integers. Given the following transport network with the edges labeled with their capacities, find all S-D and their capacities and What is the minimum capacity?</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6461 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?resize=369%2C215&ssl=1" alt="" width="369" height="215" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?w=860&ssl=1 860w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?resize=768%2C447&ssl=1 768w" sizes="auto, (max-width: 369px) 100vw, 369px" /></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A relation R on a set A is an equivalence relation it is reflexive, symmetric, and transitive.</p>
+<p>Let A = {1, 2, 3, 4} be a set of integers.</p>
+<p>A x A = {1, 2, 3, 4} x {1, 2, 3, 4}</p>
+<p>= {(1, 1) (1, 2) (1, 3) (1, 4) (2, 1) (2, 2) (2, 3) (2, 4) (3, 1) (3, 2) (3, 3) (3, 4) (4, 1) (4, 2) (4, 3) (4, 4)}</p>
+<p>We have conditions,</p>
+<p>R = {(a, b) : |a -b| is even|</p>
+<p>So,</p>
+<p>R = {(1, 1) (1, 3) (2, 2) (2, 4) (3, 1) (3, 3) (4, 2) (4, 4)}</p>
+<p><span style="text-decoration: underline;"><strong>For reflexive,</strong></span></p>
+<p>∀ a ∈ A, (a, a) ∈ R</p>
+<p>(1, 1) ∈ R</p>
+<p>(1, 3) ∉ R</p>
+<p>(2, 2) ∈ R</p>
+<p>(2, 4) ∉ R</p>
+<p>(3, 1) ∉ R</p>
+<p>(3, 3) ∈ R</p>
+<p>(4, 2) ∉ R</p>
+<p>(4, 4) ∈ R</p>
+<p>The relation is reflexive</p>
+<p><span style="text-decoration: underline;"><strong>For symmetric:</strong></span></p>
+<p>if  (a, b) ∈ A then (b, a) ∈ R</p>
+<p>(1, 1) ∈ R</p>
+<p>(2, 2) ∈ R</p>
+<p>(3, 3) ∈ R</p>
+<p>(4, 4) ∈ R</p>
+<p>(1, 3) ∈ R then (3, 1) ∈ R</p>
+<p>(2, 4) ∈ R then (4, 2) ∈ R</p>
+<p>The relation is symmetric</p>
+<p><span style="text-decoration: underline;"><strong>For Transitive:</strong></span></p>
+<p>If (a, b) ∈ R, (b, c) ∈ R then (a, c) ∈ R</p>
+<p>(1, 1) ∈ R</p>
+<p>(2, 2) ∈ R</p>
+<p>(3, 3) ∈ R</p>
+<p>(4, 4) ∈ R</p>
+<p>(1, 3) ∈ R,  (3, 1) ∈ R then (1, 1) ∈ R</p>
+<p>(2, 4) ∈ R,  (4, 2) ∈ R then (2, 2) ∈ R</p>
+<p>Hence, the given relation is an equivalence relation.</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Given,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6461 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?resize=369%2C215&#038;ssl=1" alt="" width="369" height="215" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?w=860&amp;ssl=1 860w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-sd-ct.jpg?resize=768%2C447&amp;ssl=1 768w" sizes="auto, (max-width: 369px) 100vw, 369px" /></p>
+<p>Lets find maximum flow from S to D using S-D cut method:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">x</td>
+<td style="width: 25%; height: 24px;">x̄</td>
+<td style="width: 25%; height: 24px;">cuts(x, x̄)</td>
+<td style="width: 25%; height: 24px;">capacity(x, x̄)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S}</td>
+<td style="width: 25%; height: 24px;">{a, b, c, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (S, b)}</td>
+<td style="width: 25%; height: 24px;">3 + 5 = 8</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a}</td>
+<td style="width: 25%; height: 24px;">{b, c, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, b) (a, c)}</td>
+<td style="width: 25%; height: 24px;">5 + 4 = 9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b}</td>
+<td style="width: 25%; height: 24px;">{a, c, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (b, a) (b, d)}</td>
+<td style="width: 25%; height: 24px;">3 + 3 + 5 = 11</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, c}</td>
+<td style="width: 25%; height: 24px;">{a, b, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (S, b) (c, b) (c, d) (c, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 5 + 5 + 2 + 4 = 15</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, d}</td>
+<td style="width: 25%; height: 24px;">{a, b, c, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (S, b) (d, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 5 + 4 = 9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b}</td>
+<td style="width: 25%; height: 24px;">{c, d, D}</td>
+<td style="width: 25%; height: 24px;">{(a, c) (b, d)}</td>
+<td style="width: 25%; height: 24px;">4 + 5 = 9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, c}</td>
+<td style="width: 25%; height: 24px;">{b, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, b) (c, b) (c, d) (c, D)}</td>
+<td style="width: 25%; height: 24px;">5 + 5 + 2 + 4 = 16</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, d}</td>
+<td style="width: 25%; height: 24px;">{b, c, D}</td>
+<td style="width: 25%; height: 24px;">{(S, b) (a, c) (d, D)}</td>
+<td style="width: 25%; height: 24px;">5 + 4 + 4 = 13</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, c}</td>
+<td style="width: 25%; height: 24px;">{a, d, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (b, a) (b, d) (c, d) (c, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 3 + 5 + 2 + 4 = 17</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, d}</td>
+<td style="width: 25%; height: 24px;">{a, c, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (b, a) (d, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 3 + 4 = 10</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, c, d}</td>
+<td style="width: 25%; height: 24px;">{a, b, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (S, b) (c, b) (c, D) (d, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 5 + 5 + 4 + 4 = 21</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, c}</td>
+<td style="width: 25%; height: 24px;">{d, D}</td>
+<td style="width: 25%; height: 24px;">{(b, d) (c, d) (c, D)}</td>
+<td style="width: 25%; height: 24px;">5 + 2 + 4 = 11</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, b, c, d}</td>
+<td style="width: 25%; height: 24px;">{a, D}</td>
+<td style="width: 25%; height: 24px;">{(S, a) (b, a) (c, D) (d, D)}</td>
+<td style="width: 25%; height: 24px;">3 + 3 + 2 + 4 = 12</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, c, d}</td>
+<td style="width: 25%; height: 24px;">{b, D}</td>
+<td style="width: 25%; height: 24px;">{(S, b) (c, b) (c, D) (d, D)}</td>
+<td style="width: 25%; height: 24px;">5 + 5 + 4 + 4 = 18</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, d}</td>
+<td style="width: 25%; height: 24px;">{c, D}</td>
+<td style="width: 25%; height: 24px;">{(a, c) (d, D)}</td>
+<td style="width: 25%; height: 24px;">4 + 4 = 8</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; height: 24px;">{S, a, b, c, d}</td>
+<td style="width: 25%; height: 24px;">{D}</td>
+<td style="width: 25%; height: 24px;">{(c, D) (d, D)}</td>
+<td style="width: 25%; height: 24px;">4 + 4 = 8</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence, the maximum flow or minimum capacity is 8.</p>
+</div>
+<h2>Group B: Attemps any EIGHT questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>List any one example of tautology. Represent the following sentences into predicate logic.</p>
+<ol>
+<li>Not all employees are loyal</li>
+<li>All students having good attitude are lovable.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>One example of a tautology is &#8220;Either it will rain tomorrow, or it will not rain tomorrow.&#8221; This statement is a tautology because it is always true, regardless of whether it actually rains tomorrow or not.</p>
+<p>To represent the given sentences in predicate logic:</p>
+<ol style="list-style-type:decimal;">
+<li>Not all employees are loyal</li>
+</ol>
+<p>Let E(x) represent &#8220;x is an employee&#8221; and L(x) represent &#8220;x is loyal&#8221;. Then the given sentence can be represented in predicate logic as:</p>
+<p>¬(∀x E(x) → L(x))</p>
+<p>This can be read as &#8220;It is not true that for all x, if x is an employee, then x is loyal.&#8221;</p>
+<ol style="list-style-type:decimal;">
+<li>All students having good attitude are lovable</li>
+</ol>
+<p>Let S(x) represent &#8220;x is a student&#8221;, G(x) represent &#8220;x has a good attitude&#8221;, and L(x) represent &#8220;x is lovable&#8221;. Then the given sentence can be represented in predicate logic as:</p>
+<p>∀x (S(x) ∧ G(x)) → L(x)</p>
+<p>This can be read as &#8220;For all x, if x is a student and x has a good attitude, then x is lovable.&#8221;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Prove that “If the product of two integers a and b are even then either a is even or b is even”, using the contradiction method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We will prove the statement by contradiction.</p>
+<p>Suppose that the product of two integers a and b is even, but neither a nor b is even. This means that both a and b are odd.</p>
+<p>Let a = 2k + 1 and b = 2m + 1, where k and m are integers. Then, their product is:</p>
+<p>ab = (2k + 1)(2m + 1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1</p>
+<p>Since 2km + k + m is an integer, ab is odd, which contradicts the assumption that ab is even.</p>
+<p>Therefore, we can conclude that if the product of two integers a and b is even, then either a is even or b is even.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Use Chinese Remainder Theorem to find the value of x such that x = 0 ( MOD 2) , x = 2 (MOD 3) and x = 3 (MOD 5).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given :</p>
+<p><strong>a</strong><sub><strong>1</strong> </sub>= 0 <strong>m</strong><sub><strong>1</strong></sub> = 2</p>
+<p><strong>a</strong><sub><strong>2</strong></sub> = 2 <strong>m</strong><sub><strong>2</strong></sub> = 3</p>
+<p><strong>a</strong><sub><strong>3</strong></sub> = 3 <strong>m</strong><sub><strong>3</strong></sub> = 5</p>
+<p>To find the value of x : we will use the solution,</p>
+<p><strong>x = a</strong><sub><strong>1</strong></sub><strong> M</strong><sub><strong>1</strong></sub><strong> Y</strong><sub><strong>1</strong></sub><strong> + a</strong><sub><strong>2</strong></sub><strong> M</strong><sub><strong>2</strong></sub><strong> Y</strong><sub><strong>2</strong></sub><strong> + a</strong><sub><strong>3</strong></sub><strong> M</strong><sub><strong>3</strong></sub><strong> Y</strong><sub><strong>3</strong></sub><strong> _ _ _ _ _ a</strong><sub><strong>k</strong></sub><strong> M</strong><sub><strong>k</strong></sub><strong> Y</strong><sub><strong>k</strong></sub><strong> ( MOD M)</strong></p>
+<p><strong>M = m</strong><sub><strong>1</strong></sub><strong> x m</strong><sub><strong>2 </strong></sub><strong>x m</strong><sub><strong>3</strong></sub></p>
+<p>= 2 x 3 x 5</p>
+<p>= 30</p>
+<p><strong>M</strong><sub><strong>1 </strong></sub><strong>= M / m</strong><sub><strong>1</strong></sub><strong> M</strong><sub><strong>2 </strong></sub><strong>= M / m</strong><sub><strong>2</strong></sub><strong> M</strong><sub><strong>3 </strong></sub><strong>= M / m</strong><sub><strong>3</strong></sub></p>
+<p>= 30 / 2 = 30 / 3 = 30 / 5</p>
+<p>= 15 = 10 = 6</p>
+<p>now, finding the value of Y<sub>1</sub> , Y<sub>2</sub> and Y<sub>3</sub></p>
+<p><strong>M</strong><sub><strong>1</strong></sub><strong> Y</strong><sub><strong>1</strong></sub><strong> = 1 MOD m</strong><sub><strong>1</strong></sub><strong> M</strong><sub><strong>2</strong></sub><strong> Y</strong><sub><strong>2</strong></sub><strong> = 1 MOD m</strong><sub><strong>2</strong></sub><strong> M</strong><sub><strong>3</strong></sub><strong> Y</strong><sub><strong>3</strong></sub><strong> = 1 MOD m</strong><sub><strong>3</strong></sub></p>
+<p>15 Y<sub>1 </sub>= 1 MOD 2 10 Y<sub>2</sub> = 1 MOD 3 6 Y<sub>3 </sub> = 1 MOD 5</p>
+<p><strong>Y</strong><sub><strong>1</strong></sub> = 1 <strong>Y</strong><sub><strong>2</strong> </sub> = 1 <strong>Y</strong><sub><strong>3</strong> </sub>= 1</p>
+<p>now , putting the values</p>
+<p>we get</p>
+<p><strong>x = a</strong><sub><strong>1</strong></sub><strong> M</strong><sub><strong>1</strong></sub><strong> Y</strong><sub><strong>1</strong></sub><strong> + a</strong><sub><strong>2</strong></sub><strong> M</strong><sub><strong>2 </strong></sub><strong>Y</strong><sub><strong>2</strong></sub><strong> + a</strong><sub><strong>3</strong></sub><strong> M</strong><sub><strong>3</strong></sub><strong> Y</strong><sub><strong>3 </strong></sub><strong> ( MOD M )</strong></p>
+<p>= 0 x 15 x 1 + 2 x 10 x 1 + 3 x 6 x 1 ( MOD 30 )</p>
+<p>= 0 + 20 + 18 ( Mod 30 )</p>
+<p>= 38 ( Mod 30 )</p>
+<p>now putting the value of x ,</p>
+<p>To verify:</p>
+<p><strong>i) x = 0 ( MOD 2 )</strong> <strong> ii) x = 2 ( MOD 3 ) ii) x = 3 ( MOD 5 )</strong></p>
+<p>2 | 38 | 19 3 | 38 | 12 5 | 38 | 7</p>
+<p>&#8211; 38 &#8211; 36 &#8211; 35</p>
+<p><sub>&#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212; </sub> &#8212;&#8212;&#8212;-</p>
+<p><strong> 0 ( True ) 2 ( True ) 3 ( True )</strong></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define bipartile graph with example. State the necessary conditions for the graphs to be isomorphic.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <a href="http://en.wikipedia.org/wiki/Bipartite_graph" target="_blank" rel="noopener noreferrer nofollow">Bipartite Graph</a> is a graph whose vertices can be divided into two independent sets, U and V such that every edge (u, v) either connects a vertex from U to V or a vertex from V to U. In other words, for every edge (u, v), either u belongs to U and v to V, or u belongs to V and v to U. We can also say that there is no edge that connects vertices of same set.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/bipartitegraph-1.jpg?ssl=1" alt="Bipartite1" /></p>
+<h2><strong>Graph Isomorphism Conditions-</strong></h2>
+<p>&nbsp;</p>
+<p>For any two graphs to be isomorphic, following 4 conditions must be satisfied-</p>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Number of vertices in both the graphs must be same.</li>
+<li>Number of edges in both the graphs must be same.</li>
+<li>Degree sequence of both the graphs must be same.</li>
+<li>If a cycle of length k is formed by the vertices { v<sub>1</sub> , v<sub>2</sub> , ….. , v<sub>k </sub>} in one graph, then a cycle of same length k must be formed by the vertices { f(v<sub>1</sub>) , f(v<sub>2</sub>) , ….. , f(v<sub>k</sub>) } in the other graph as well.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>State Generalized Pigeonhole Principle. Find the MST from following graph using Kruskal algorithm.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6460 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal.jpg?resize=351%2C195&ssl=1" alt="" width="351" height="195" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal.jpg?w=900&ssl=1 900w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal.jpg?resize=768%2C427&ssl=1 768w" sizes="auto, (max-width: 351px) 100vw, 351px" /></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Discrete Mathematics, the pigeonhole principle states that if we must put N + 1 or more pigeons into N Pigeon Holes, then some pigeonholes must contain two or more pigeons.</p>
+<p><strong>Example:</strong></p>
+<p>If Kn+ 1 (where k is a positive integer) pigeons are distributed among n holes than some hole contains at least k + 1 pigeons.</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6460 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal.jpg?resize=351%2C195&#038;ssl=1" sizes="auto, (max-width: 351px) 100vw, 351px" srcset="https://hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal.jpg 900w, https://hamrocsit.com/wp-content/uploads/2022/06/ds-qnbank-2078-kruskal-768x427.jpg 768w" alt="- Hamro CSIT" width="351" height="195" /></p>
+<p>Listing all the edges with its weight in ascending order.</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table class=" alignleft" style="width: 100.169%; height: 257px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;"><strong>SN</strong></td>
+<td style="width: 26.2529%; height: 24px; text-align: center;"><strong>Edge</strong></td>
+<td style="width: 16.419%; height: 24px; text-align: center;"><strong>Weight</strong></td>
+<td style="width: 264.802%; height: 24px; text-align: center;"><strong>Selection</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">1</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">1,4</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">1</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">yes</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">2</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">1,2</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">2</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">yes</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">3</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">2,4</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">3</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">no</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">4</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">2,3</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">3</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">yes</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">5</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">1,5</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">4</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">yes</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">6</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">4,3</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">5</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">no</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">7</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">2,6</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">7</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">yes</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 17.9342%; height: 24px; text-align: center;">8</td>
+<td style="width: 26.2529%; height: 24px; text-align: center;">3,6</td>
+<td style="width: 16.419%; height: 24px; text-align: center;">8</td>
+<td style="width: 264.802%; height: 24px; text-align: center;">no</td>
+</tr>
+<tr style="height: 41px;">
+<td style="width: 17.9342%; height: 41px; text-align: center;">9</td>
+<td style="width: 26.2529%; height: 41px; text-align: center;">5,4</td>
+<td style="width: 16.419%; height: 41px; text-align: center;">9</td>
+<td style="width: 264.802%; height: 41px; text-align: center;">no</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-41679 aligncenter" style="text-align: center;" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/Untitled-Diagram.drawio.png?resize=361%2C201&#038;ssl=1" alt="- Hamro CSIT" width="361" height="201" /></p>
+</div>
+<p style="text-align: center;">
+weight = 1+2+3+4+7 = 17 .</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Given the premises “If it rains or strike holds then the exam will be cancelled. If the doesn’t rain then it will be sunny day. The exam was not cancelled. show that it is sunny day”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let p be the proposition &#8220;it rains&#8221; Let q be the proposition &#8220;strike holds&#8221; Let r be the proposition &#8220;the exam is cancelled&#8221; Let s be the proposition &#8220;it is a sunny day&#8221;</p>
+<p>The premises can then be rewritten as:</p>
+<ol style="list-style-type:decimal;">
+<li>p ∨ q → r</li>
+<li>¬p → s</li>
+<li>¬r</li>
+</ol>
+<p>To show that it is a sunny day, we need to prove that s is true. We can do this by using premises 1 and 3 to show that it is not the case that ¬s is true, i.e. that ¬s is false, which means that s is true.</p>
+<p>We can use a proof by contradiction to show that ¬s is false. Assume ¬s is true, i.e. it is not a sunny day. Then, by premise 2, it must have rained. So, we have ¬p → s and p → r, which means that p → (¬s ∧ r) by contraposition.</p>
+<p>Since it rained, we have p, so we can conclude that ¬s ∧ r is true. But this contradicts premise 3, which says that r is false (i.e. the exam was not cancelled). Therefore, ¬s must be false, which means that s is true. Hence, it is a sunny day.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Find the value of -2 MOD 3 and 3<sup>1</sup><sup>5</sup> MOD 5. Illustrate an example to show the join operation between any two boolean matrixes.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The value of</p>
+<p><strong>a) -2 MOD 3 =  1</strong></p>
+<p>To calculate this, you can follow these steps:</p>
+<ul style="list-style-type: square;">
+<li>Divide -2 by 3, which gives you -0.6666&#8230;</li>
+<li>Round towards zero to get the quotient, which is -0.</li>
+<li>Calculate the remainder using the formula: remainder = dividend &#8211; (divisor * quotient). In this case, the remainder is -2 &#8211; (3 * 0) = -2.</li>
+<li>Add the divisor (3) to the remainder (-2) to get the final result, which is 1.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>b) 3^15 MOD 5 = 2</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Starting with the base (3), repeatedly square and reduce modulo 5 for each bit.
+<ul style="list-style-type: square;">
+<li>3^1 MOD 5 = 3</li>
+<li>3^2 MOD 5 = 4</li>
+<li>3^4 MOD 5 = (3^2 MOD 5)^2 MOD 5 = 4^2 MOD 5 = 1</li>
+<li>3^8 MOD 5 = (3^4 MOD 5)^2 MOD 5 = 1^2 MOD 5 = 1</li>
+</ul>
+</li>
+<li>Multiply together the values that correspond to a 1 bit in the binary form:
+<ul style="list-style-type: square;">
+<li>3^15 MOD 5 = 3 * 4 * 1 * 1 MOD 5 = 12 MOD 5 = 2</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p>The given two Boolean matrices is</p>
+<p>A = <span id="MathJax-Span-157" class="mrow"><span id="MathJax-Span-158" class="mrow"><span id="MathJax-Span-159" class="mo">[100], B=[101]</span></span></span></p>
+<p>join two matrices AvB</p>
+<p>AvB=[101]</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Given an example of fallacy. State the necessary and sufficient conditions for a graph to have Euler path and Euler circuit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><header>
+<h1><span style="font-size: 16px;">Definition of Fallacy</span></h1>
+</header>
+<div class="post-single-content box mark-links entry-content">
+<div class="thecontent clearfix">
+<p>an idea or belief that is false but many people think is true</p>
+<p><strong>Examples of Fallacy in a sentence</strong></p>
+<ol style="list-style-type: lower-alpha;">
+<li>Having money makes you happy is a fallacy because happiness has nothing to do with wealth.</li>
+<li>While the business plan sounds good on paper, it is built on the fallacy that people will pay thirty dollars to see a movie.</li>
+</ol>
+<p><a href="http://en.wikipedia.org/wiki/Eulerian_path" target="_blank" rel="noopener noreferrer nofollow">Eulerian Path </a>is a path in graph that visits every edge exactly once. Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex.</p>
+<h1>Necessary and sufficient conditions for Euler paths</h1>
+<ul style="list-style-type: square;">Euler circuit if and only if it has exactly two vertices of odd degree.</ul>
+<ul style="list-style-type: square;">Proof:</ul>
+<ul style="list-style-type: square;">(ONLY IF) Assume the graph has an Euler path but not a circuit.</ul>
+<ul style="list-style-type: square;">Notice that every time the path passes through a vertex, it contributes</ul>
+<ul style="list-style-type: square;">2 to the degree of the vertex (1 when it enters, 1 when it leaves).</ul>
+<ul style="list-style-type: square;">Obviously the first and the last vertices will have odd degree and all</ul>
+<ul style="list-style-type: square;">the other vertices &#8211; even degree.</ul>
+<ul style="list-style-type: square;">(IF) Assume exactly two vertices, u and v, have odd degree.</ul>
+<ul style="list-style-type: square;">If we connect these two vertices, then every vertex will have even degree.</ul>
+<ul style="list-style-type: square;">By Theorem 1, there is an Euler circuit in such a graph.</ul>
+<ul style="list-style-type: square;">If we remove the added edge {u,v} from this circuit, we will get an</ul>
+<ul style="list-style-type: square;">Euler path for the original graph.</ul>
+<ul style="list-style-type: square;">End of proof</ul>
+<h1>Necessary and sufficient conditions for Euler circuits</h1>
+<ul style="list-style-type: square;">
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">Obviously a non-connected graph cannot have an Euler path unless it has isolated vertices.</ul>
+</li>
+</ul>
+<ul style="list-style-type: square;">Theorem 1. A connected multigraph has an Euler circuit if and only if each of its vertices has even degree.</ul>
+</div>
+</div>
+<div class="post-single-content box mark-links entry-content">
+<div class="thecontent clearfix">
+<ul style="list-style-type: square;">
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">Why “only if”:</ul>
+</li>
+</ul>
+<ul style="list-style-type: square;">Assume the graph has an Euler circuit.</ul>
+<ul style="list-style-type: square;">Observe that every time the circuit passes through a vertex, it</ul>
+<ul style="list-style-type: square;">contributes 2 to the vertex’s degree, since the circuit enters via an edge</ul>
+<ul style="list-style-type: square;">incident with this vertex and leaves via another such edge.</ul>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Find the GCD of 24 and 32 using Extended Euclidean algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>GCD of 24 and 32 by Euclidean Algorithm</h3>
+<p>As per the Euclidean Algorithm, GCF(X, Y) = GCF(Y, X mod Y)<br />
+where X &gt; Y and mod is the modulo operator.</p>
+<p>Here X = 32 and Y = 24</p>
+<ul style="list-style-type: square;">
+<li>EUCLID(32, 24) = EUCLID(24, 32 mod 24) = EUCLID(24, 8)</li>
+<li>EUCLID(24, 8) = EUCLID(8, 24 mod 8) = EUCLID(8, 0)</li>
+<li>EUCLID(8, 0) = 8 (∵ EUCLID(X, 0) = |X|, where X ≠ 0)</li>
+</ul>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">R1</td>
+<td style="width: 25%; text-align: center;">R2</td>
+<td style="width: 25%; text-align: center;">R</td>
+<td style="width: 25%; text-align: center;">Q</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">32</td>
+<td style="width: 25%; text-align: center;">24</td>
+<td style="width: 25%; text-align: center;">8</td>
+<td style="width: 25%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">24</td>
+<td style="width: 25%; text-align: center;">8</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">8</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+</tr>
+</tbody>
+</table></div>
+<p>Therefore, the value of GCF of 24 and 32 is 8.</p>
+</div>
+</body></html>

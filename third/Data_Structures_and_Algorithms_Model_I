@@ -1,0 +1,498 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DSA Model Question I 0</title>
+    </head>
+    <body>
+        <h1>DSA Model Question I - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Define queue as ADT. Describe its primitive operation on circular array implementation and singly linked list implementation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><span style="text-decoration: underline;">Queue as ADT:</span></strong></p>
+<p>A queue q of type T is a finite sequence of elements with the operations.</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>MakeEmpty(q):</strong> To make q as an empty queue</li>
+<li><strong>IsEmpty(q):</strong> To check whether the queue q is empty. Return true if queue is empty otherwise return false.</li>
+<li><strong>IsFull(q):</strong> To check whether the queue q is full. Return true if queue is full otherwise return false.</li>
+<li><b>Enqueue(q, x):</b> To insert an item x at the rear of the queue, if and only if q is not full</li>
+<li><b>Dequeue(q, x):</b> To delete an item x from the front of the queue, if and only if q is not empty</li>
+<li><strong>Traverse(q):</strong> To read entire queue that is to display the content of queue</li>
+</ol>
+<p>Circular Queue is an linear data structure in which the operations are performed based on FIFO principle and last portion is connected back to first position to make a circle.</p>
+<h3>Operations of Circular Queue:</h3>
+<p><span style="text-decoration: underline;"><strong>1. Declaration:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#define MAXQUEUE 50
+struct queue{
+    int front;
+    int rear;
+    int items[MAXQUEUE]
+}
+typedef struct queue qt;</pre>
+<p><span style="text-decoration: underline;"><strong>2. IsEmpty function</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void IsEmpty(qt *q){
+    if(q→rear &lt; q→front)
+        return 1;
+    else
+       return 0;
+}</pre>
+<p><span style="text-decoration: underline;"><strong>4. IsFull Function</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void IsFull(qt *q){
+    if(q→front = (q→rear+1) % MAXQUEUE)
+        return 1;
+    else
+       return 0;
+}</pre>
+<p><span style="text-decoration: underline;"><strong>5. Enqueue:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void Enqueue(qt *q, int newitem){
+    if( IsFull(q) ){
+        printf("Queue is Full");
+        exit(0);
+    }else{
+        q-&gt;rear = (q→rear + 1) % MAXQUEUE;
+        q-&gt;items[q-&gt;rear] = newitem;
+    }
+}</pre>
+<p><span style="text-decoration: underline;"><strong>6. Dequeue:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void Dequeue(qt *q){
+    if( IsEmpty(q) ){
+        printf("Queue is Empty");
+        exit(0);
+    }else{
+        q-&gt;front = (q-&gt;rear + 1) % MAXQUEUE;
+        return(q-&gt;items[q-&gt;front]);
+    }
+}</pre>
+<p>Queue can be implemented using link list. Here are the some basic operations:</p>
+<p><span style="text-decoration: underline;"><strong>1. Insert function:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void insert(int item){
+    NodeType *node;
+    node = (NodeType*) malloc(sizeof(NodeType));
+    if( rear == 0 ){
+        node-&gt;info = item;
+        node-&gt;next = NULL;
+        rear = front = node;
+    }else{
+        node-&gt;info = item;
+        node-&gt;next = NULL;
+        rear-&gt;next = node;
+        rear = node;
+    }
+}</pre>
+<p><span style="text-decoration: underline;"><strong>2. Delete Function</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void delete(){
+    NodeType *node;
+    if( front == 0 ){
+        printf("Queue is empty");
+        exit(0);
+    }else if(front-&gt;next == NULL){
+        temp = front;
+        rear = front = NULL;
+        printf("ItemDeleted");
+        free(temp);
+    }else{
+        temp = front;
+        front = temp-&gt;next;
+        printf("Item Deleted");
+        free(temp);
+    }
+}</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define Contiguous List as ADT. Write C program to implement the operation of Contiguous List.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 3</h3>
+<div><p><p>What do you mean by MST. Explain Kruskal Algorithm with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>MST stands for  Minimum Spanning Tree. MST is a connected weighted graph that has the smallest possible sum of weight of its edges.</p>
+<p><span style="text-decoration: underline;"><strong>Kruskal&#8217;s Algorithm:</strong></span></p>
+<p style="font-weight: 400;">Kruskal&#8217;s Algorithm is used to find the minimum spanning tree for a connected weighted graph. The main target of the algorithm is to find the subset of edges by using which, we can traverse every vertex of the graph.</p>
+<p style="font-weight: 400;">The Kruskal&#8217;s algorithm is given as follows:</p>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;">List all the edges of G with non-decreasing order of their weights.</li>
+<li style="font-weight: 400;">Select an edge of minimum weight. This will be the first edge of T.</li>
+<li style="font-weight: 400;">At each stage, select an edge of minimum weights from all remaining edges of G if it doesn’t form a cycle with previously selected edges in T. Then add the edge to T.</li>
+<li style="font-weight: 400;">Repeat step 3 until n-1 edges have been selected.</li>
+</ol>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6168 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/fb4b5cc3-a4d3-4e64-bd41-fd31a1d20447-1.png?resize=144%2C175&#038;ssl=1" alt="" width="144" height="175"></p>
+<p style="font-weight: 400;">Edges of given graph with non-decreasing order of their weights:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="font-weight: 400;">
+<tbody>
+<tr>
+<td style="text-align: center;" width="57">(1, 6)</td>
+<td style="text-align: center;" width="63">(4, 3)</td>
+<td style="text-align: center;" width="54">(2, 7)</td>
+<td style="text-align: center;" width="54">(2, 3)</td>
+<td style="text-align: center;" width="54">(7, 4)</td>
+<td style="text-align: center;" width="54">(4, 5)</td>
+<td style="text-align: center;" width="54">(5, 7)</td>
+<td style="text-align: center;" width="54">(5, 6)</td>
+<td style="text-align: center;" width="54">(1, 2)</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="57">7</td>
+<td style="text-align: center;" width="63">8</td>
+<td style="text-align: center;" width="54">9</td>
+<td style="text-align: center;" width="54">10</td>
+<td style="text-align: center;" width="54">11</td>
+<td style="text-align: center;" width="54">13</td>
+<td style="text-align: center;" width="54">15</td>
+<td style="text-align: center;" width="54">17</td>
+<td style="text-align: center;" width="54">18</td>
+</tr>
+</tbody>
+</table></div>
+<p style="font-weight: 400;"><em>Pick edge (1, 6):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6169 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/4a77b081-2519-41f7-80fd-8d97b1445979-1.png?resize=166%2C229&#038;ssl=1" alt="" width="166" height="229"></p>
+<p><i>Pick edge (4,3):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6170 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/2cacfb4b-d1b6-4c85-b27b-4d62f5e0008c-1.png?resize=178%2C231&#038;ssl=1" alt="" width="178" height="231"></p>
+<p><i>Pick edge (2,7):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6171 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/3267c641-d0d4-4909-8101-d8025034ef62.png?resize=163%2C231&#038;ssl=1" alt="" width="163" height="231"></p>
+<p><i>Pick edge (2,3):</i> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6172 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/dbfcbe40-3a01-48af-88ba-66e8917fefd8.png?resize=157%2C218&#038;ssl=1" alt="" width="157" height="218"></p>
+<p style="font-weight: 400;"><em>Pick edge (7,4):</em> Since including this edge results in cycle, discard it.</p>
+<p style="font-weight: 400;"><em>Pick edge (4,5):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6173 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/4c59c8d3-a59b-4b26-ad64-a8987db579c0.png?resize=155%2C218&#038;ssl=1" alt="" width="155" height="218"></p>
+<p style="font-weight: 400;"><em>Pick edge (5,7):</em> Since including this edge results in cycle, discard it.</p>
+<p style="font-weight: 400;"><em>Pick edge (5,6):</em> No cycle is formed, include it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6174 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/05/1136a0ce-2dab-4dc5-9baf-f59b45f8a9fe.png?resize=155%2C221&#038;ssl=1" alt="" width="155" height="221"></p>
+<p>Since the number of edges included equals (n– 1), the algorithm stops here.</p>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>State relative merits and demerits of contiguous list and linked list?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Merits of contiguous list are:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>It is used to represent multiple data items of same type by using only single name.</li>
+<li>It can be used to implement other data structures like linked lists, stacks, queues, trees, graphs etc.</li>
+<li>2D arrays are used to represent matrices.</li>
+<li>Implementation of list using array is easier as compared other implementation.</li>
+</ol>
+<p><strong>Demerits of contiguous list are:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The size of the array is fixed. Most often this size is specified at compile time. This makes the programmers to allocate arrays, which seems &#8220;large enough&#8221; than required.</li>
+<li>Inserting new elements at the front is potentially expensive because existing elements need to be shifted over to make room.</li>
+<li>Deleting an element from an array is not possible. Linked lists have their own strengths and weaknesses, but they happen to be strong where arrays are weak.</li>
+<li>Generally array&#8217;s allocates the memory for all its elements in one block whereas linked lists use an entirely different strategy. Linked lists allocate memory for each element separately and only when necessary.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Merits of Linked List:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Linked lists are dynamic data structures. i.e., they can grow or shrink during the execution of a program.</li>
+<li>Linked lists have efficient memory utilization. Here, memory is not pre-allocated. Memory is allocated whenever it is required and it is de-allocated (removed) when it is no longer needed.</li>
+<li>Insertion and Deletions are easier and efficient. Linked lists provide flexibility in inserting a data item at a specified position and deletion of the data item from the given position.</li>
+<li>Many complex applications can be easily carried out with linked lists.</li>
+<li>There is no need to define an initial size for a Linked list.</li>
+<li>Linked List reduces the access time.</li>
+</ol>
+<p><strong>Demerits of Linked List:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>They use more memory than arrays because of the storage used by their pointers.</li>
+<li>Difficulties arise in linked lists when it comes to reverse traversing. For instance, singly linked lists are cumbersome to navigate backwards and while doubly linked lists are somewhat easier to read, memory is wasted in allocating space for a back-pointer.</li>
+<li>Nodes in a linked list must be read in order from the beginning as linked lists are inherently sequential access.</li>
+<li>Nodes are stored in-contiguously, greatly increasing the time required to access individual elements within the list, especially with a CPU cache.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is Data Structure? Show the status of stack converting following infix expression to prefix</p>
+<p>A+(B*C-(D/E^F)*G) [Note ^ is the power]</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data structure is a way of collecting and organizing data in such a way that we can perform operations on these data in an effective way. Data structure is about rendering data elements in terms of some relationship, for better organizing and storage.</p>
+<p><span style="text-decoration: underline;"><strong>Infix to Prefix:</strong></span></p>
+<p>First we will reverse the infix expression and find postfix. Then after we will reverse the result to get the prefix.</p>
+<p>Reverse: (G*(F^E/D)-C*B)+A</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 432px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">Character Scanned</td>
+<td style="width: 33.3333%; height: 24px;">Opstack</td>
+<td style="width: 33.3333%; height: 24px;">Poststack</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">(</td>
+<td style="width: 33.3333%; height: 24px;">(</td>
+<td style="width: 33.3333%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">G</td>
+<td style="width: 33.3333%; height: 24px;">(</td>
+<td style="width: 33.3333%; height: 24px;">G</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">*</td>
+<td style="width: 33.3333%; height: 24px;">(*</td>
+<td style="width: 33.3333%; height: 24px;">G</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">(</td>
+<td style="width: 33.3333%; height: 24px;">(*(</td>
+<td style="width: 33.3333%; height: 24px;">G</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">^</td>
+<td style="width: 33.3333%; height: 24px;">(*(^</td>
+<td style="width: 33.3333%; height: 24px;">GF</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">E</td>
+<td style="width: 33.3333%; height: 24px;">(*(^</td>
+<td style="width: 33.3333%; height: 24px;">GFE</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">/</td>
+<td style="width: 33.3333%; height: 24px;">(*(/</td>
+<td style="width: 33.3333%; height: 24px;">GFE^</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">D</td>
+<td style="width: 33.3333%; height: 24px;">(*(/</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">)</td>
+<td style="width: 33.3333%; height: 24px;">(*</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">&#8211;</td>
+<td style="width: 33.3333%; height: 24px;">(-</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">C</td>
+<td style="width: 33.3333%; height: 24px;">(-</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*C</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">*</td>
+<td style="width: 33.3333%; height: 24px;">(-*</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*C</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">B</td>
+<td style="width: 33.3333%; height: 24px;">(-*</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*CB</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">)</td>
+<td style="width: 33.3333%; height: 24px;"></td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*CB*-</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">+</td>
+<td style="width: 33.3333%; height: 24px;">+</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*CB*-</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">A</td>
+<td style="width: 33.3333%; height: 24px;">+</td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*CB*-A</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"></td>
+<td style="width: 33.3333%; height: 24px;"></td>
+<td style="width: 33.3333%; height: 24px;">GFE^D/*CB*-A+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, For Prefix we reverse the postfix:</p>
+<p>Prefix: +A-*BC*/D^EFG</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is singly linked list? Write an algorithm to add  a node at the beginning and end of singly linked list.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Singly linked list is type of list in which each node contains two fields one is info field which is used to store the data items and another is link field which is used to point the next node in the list. The last node has NULL pointer. The following example is a singly linked list that contains three elements 5,3,8.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-4565 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/singly-linked-list-min.jpg?resize=1000%2C210&#038;ssl=1" alt="Singly Linked List | Hamro CSIT" width="1000" height="210" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/singly-linked-list-min.jpg?w=1000&amp;ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/singly-linked-list-min.jpg?resize=768%2C161&amp;ssl=1 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+<p><strong>Algorithm to add node at the beginning:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. Start
+2. Create a new node using malloc function as,
+      Newnode = (NodeType *)malloc(sizeof(NodeType));
+3. Read the data item to be inserted say 'el'
+4. Assign data to the info field of new node
+      Newnode→info = el;
+5. Set next of new node to first
+     Newnode→next = first;
+6. Set the first pointer to the new node
+     first = Newnode;
+7. End</pre>
+<p><strong>Algorithm to add at the end:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">1. Start
+2. Create a new node using malloc function as,
+      Newnode = (NodeType *)malloc(sizeof(NodeType));
+3. Read the data item to be inserted say 'el'
+4. Assign data to the info field of new node
+      Newnode→info = el;
+5. Set next of new node to null
+     Newnode→next = null;
+6. if(first == null)
+     Set first = last = Newnode and exit;
+7. else
+     Set last→next = Newnode;
+     Set last = Newnode;
+8. End</pre>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What do you mean by breadth first search in graph? Explain with recursive tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 8</h3>
+<div><p><p>Write recursive algorithm to get Fibonacci term. Illustrate it drawing recursive tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Algorithm:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Step 1: Start 
+Step 2: Declare variable a, b, c, n, i
+Step 3: Initialize variable a=0, b=1 and  i=2 
+Step 4: Read n from user 
+Step 5: Print a and b 
+Step 6: Repeat until i&lt;=n : 
+           Step 6.1: c=a+b 
+           Step 6.2: print c 
+           Step 6.3: a=b, b=c 
+           Step 6.4: i=i+1 
+Step 7: Stop</pre>
+<p><strong><span style="text-decoration: underline;">Recursive Tree:</span></strong></p>
+<p>Here is the recursive tree  diagram for n</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-4711 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/fibonacci-sequence-recursion-tree.png?resize=384%2C231&#038;ssl=1" alt="Fibonacci series Recursive Tree" width="384" height="231" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/fibonacci-sequence-recursion-tree.png?w=1000&amp;ssl=1 1000w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/fibonacci-sequence-recursion-tree.png?resize=768%2C461&amp;ssl=1 768w" sizes="auto, (max-width: 384px) 100vw, 384px" /></p>
+<p>Let&#8217;s look an real example. We will trace the recursive tree of 5</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-4712 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/59Rpw.png?resize=416%2C297&#038;ssl=1" alt="Fibonacci series Recursive Tree Example" width="416" height="297" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/59Rpw.png?w=871&amp;ssl=1 871w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/59Rpw.png?resize=768%2C548&amp;ssl=1 768w" sizes="auto, (max-width: 416px) 100vw, 416px" /></p>
+<p>Fifth term of Fibonacci series = 1 + 0 + 1 + 1 + 0 + 1 + 0 + 1 = 5</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is AVL tree? Draw the AVL tree when input is 1,2,3,4,5,6,7.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 10</h3>
+<div><p><p>State problem Tower of Hanoi. Explain the algorithm to solve problem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="font-weight: 400;">Tower of Hanoi (TOH) is a mathematical puzzle which consists of three pegs named as origin, intermediate and destination and more than one disks. These disks are of different sizes and the smaller one sits over the larger one.</p>
+<p style="font-weight: 400;">In this problem we transfer all disks from origin peg to destination peg using intermediate peg for temporary storage and move only one disk at a time.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-4708 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/The-tower-of-Hanoi-puzzle-problem-min.png?resize=350%2C246&#038;ssl=1" alt="The tower of Hanoi puzzle problem" width="350" height="246" /></p>
+<p><span style="text-decoration: underline;"><strong>Algorithm:</strong></span></p>
+<p>To move a tower of n disks from <strong>source to destination</strong></p>
+<ol style="list-style-type:decimal;">
+<li>If n == 1:
+<ol style="list-style-type: lower-roman;">
+<li>Move a single disk from source to destination</li>
+</ol>
+</li>
+<li>If n &gt; 1:
+<ol style="list-style-type: lower-roman;">
+<li>Let temp be the remaining pole other than source and destination</li>
+<li>Move a tower of (n-1) disks from source to temp</li>
+<li>Move a single disk from source to destination</li>
+<li>Move a tower of (n-1) disks from temp to destination</li>
+</ol>
+</li>
+<li>Stop</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is insertion sort? Trace and sort the following data using the insertion sorting algorithm.</p>
+<p>90, 56, 80, 10, 22, 21, 45, 9</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In insertion sort, an element get compared and inserted into the correct position in the list. To apply this sort, we must consider one part of the list to be sorted and other to be unsorted.</p>
+<p>To begin, consider the first element to be sorted position and the other elements of the list are unsorted. Now compare each element from the unsorted position with the element in the sorted portion. Then insert it in the correct position in the sorted part.</p>
+<p>Here we will sort and trace the following data using insertion sort:</p>
+<p style="text-align: center;">{90, 56, 80, 10, 22, 21, 45, 9}</p>
+<p><strong>Solution:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="background: #999;">
+<td style="text-align: center;">Array Position</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Initial State</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;1] is sorted (pass 1)</td>
+<td style="background: #000000; color: #ffffff; text-align: center;">90</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;2] is sorted (pass 2)</td>
+<td style="background: #000000; color: #ffffff; text-align: center;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;3] is sorted (pass 3)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;4] is sorted (pass 4)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">10</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;5] is sorted (pass 5)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">10</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">22</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;6] is sorted (pass 6)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">10</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">21</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">22</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;7] is sorted (pass 7)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">10</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">21</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">22</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">45</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">After a[0&#8230;8] is sorted (pass 8)</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">9</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">10</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">21</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">22</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">45</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">56</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">80</td>
+<td style="text-align: center; background: #000000; color: #ffffff;">90</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is hashing? Explain the different types to resolute collision?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+</body></html>

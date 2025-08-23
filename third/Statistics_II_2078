@@ -1,0 +1,367 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>There are three brands of computers namely Dell, Lenovo, and HP. The following are the lifetime of 15 computers in years.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Serial Number</strong></td>
+<td><strong>Computer Brand</strong></td>
+<td><strong>Lifetime in years</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Dell</td>
+<td>15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lenovo</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HP</td>
+<td>9</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dell</td>
+<td>12</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lenovo</td>
+<td>6</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HP</td>
+<td>7</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Dell</td>
+<td>4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Lenovo</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>HP</td>
+<td>13</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Dell</td>
+<td>11</td>
+</tr>
+<tr>
+<td>11</td>
+<td>HP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Lenovo</td>
+<td>7</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Dell</td>
+<td>3</td>
+</tr>
+<tr>
+<td>14</td>
+<td>HP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Lenovo</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Apply appropriate statistical tests to identify whether the average lifetime (in years) is significantly different across three rands of computers at a 5% level of significance. You can again tabulate the data initially in the required format for statistical analysis.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18871" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_090623_CamScanner.jpg" alt="" width="961" height="1414"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18872" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_090658_CamScanner.jpg" alt="" width="944" height="1075"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the sample distribution of mean with reference to some numerical example. Illustrate the practical implications of the Central Limit Theorem (CLT) in inferential statistics.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A sampling distribution of a statistic is a type of probability distribution created by drawing many random samples of a given size from the same population. These distributions help you understand how a sample statistic varies from sample to sample.</p>
+<p>Let us consider the sample distribution of sample mean x̄. Let us suppose that a random sample size n is taken from a normal population with mean x̄ and variance σ<sup>2</sup>. Let x1, x2, x3 . . . . xn is a random sample (without replacement) of size n from a finite population of size N, then E(x̄) = μ mean value of the sample distribution of sample mean is equal to population mean and its varience is given by \(V(\bar{X}) = \frac{σ^2 (N-n)}{n (N-1)}\) which measures the variability of sample mean.</p>
+<p>In the same way its sandard error will be S.E. (x̄) = \(\frac{σ}{\sqrt{n}} \sqrt{\frac{(N-n)}{N &#8211; 1}}\)</p>
+<p><strong>Numerical Example:</strong></p>
+<p>A sample of size 36 is drawn from a population consisting of 196 units. If the population standard deviation is 7, find the standard error of the sample mean.</p>
+<p>Solution:</p>
+<p>Population size(N) = 196</p>
+<p>Sample size(n) = 36</p>
+<p>Population SD(σ) = 7</p>
+<p>Now,</p>
+<p>Sandard Error is given by</p>
+<p>S.E.(x̄) = \(\frac{σ}{\sqrt{n}} \sqrt{\frac{(N-n)}{N &#8211; 1}}\)</p>
+<p>= \(\frac{7}{\sqrt{36}} \times \sqrt{\frac{196 &#8211; 36}{196 &#8211; 1}}\)</p>
+<p>= 1.0568</p>
+<h4>Central Limit Theorem:</h4>
+<p>The Central Limit Theorem states that the sampling distribution of the sample means approaches a normal distribution as the sample size gets larger — no matter what the shape of the population distribution. This fact holds especially true for sample sizes over 30.</p>
+<p><strong>Practical Implication of CLT:</strong></p>
+<ul style="list-style-type: square;">
+<li>One of the most common applications of central limit theorem is in election polls. To calculate the percentage of persons supporting a candidate which are seen on news as confidence intervals.</li>
+<li>Economists often use the central limit theorem when using sample data to draw conclusions about a population.
+<p>For example, an economist may collect a simple random sample of 50 individuals in a town and use the average annual income of the individuals in the sample to estimate the average annual income of individuals in the entire town.</li>
+<li>Biologists use the central limit theorem whenever they use data from a sample of organisms to draw conclusions about the overall population of organisms.
+<p>For example, a biologist may measure the height of 30 randomly selected plants and then use the sample mean height to estimate the population mean height.</li>
+<li>Manufacturing plants often use the central limit theorem to estimate how many products produced by the plant are defective.
+<p>For example, the manager of the plant may randomly select 60 products produced by the plant in a given day and count how many of the products are defective. He can use the proportion of defective products in the sample to estimate the proportion of all products that are defective that are produced by the entire plant.</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>A study was conducted among IT officers working in different IT Centers in Kathmandu valley. One of the objectives of the study was to quantify the effect of age and working hours per day on Computer Vision Syndrome (CVS). The CVS was measured in a continuum measurement scale varying from 0 to 50. A few parts of the data were taken randomly from the surveyed data and provided in the following table for the statistical analysis.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Respondent’s ID</td>
+<td>001</td>
+<td>007</td>
+<td>125</td>
+<td>231</td>
+<td>99</td>
+<td>299</td>
+<td>145</td>
+</tr>
+<tr>
+<td>Scales of CVS</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+<td>11</td>
+<td>3</td>
+<td>29.0</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Age of respondents (in years)</td>
+<td>24</td>
+<td>26</td>
+<td>30</td>
+<td>41</td>
+<td>47</td>
+<td>50</td>
+<td>52</td>
+</tr>
+<tr>
+<td>Working hour(per day)</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>8</td>
+<td>3</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Recognize which one is the dependent variable. Assuming that the relationship between CVS, age, and working hours is linear. Fit a multiple linear regression model to address the objective of the study and interpret the model appropriately.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18874" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_090733_CamScanner.jpg" alt="" width="957" height="1387"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18875" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_090800_CamScanner.jpg" alt="" width="953" height="1487"></p>
+</div>
+<h2>Group B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>The following are the details of working hours in the classroom per week of male and female faculty working in the area of Computer Science and Information Technology at Tribhuvan University.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td></td>
+<td>Male Faculty</td>
+<td>Female Faculty</td>
+</tr>
+<tr>
+<td>Sample Size</td>
+<td>60</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Average working hours per week</td>
+<td>12</td>
+<td>9</td>
+</tr>
+<tr>
+<td>The standard deviation of a working hour per week</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Apply independent t-test to examine the average working hour in the classroom per week is significantly different between male and female faculty, at 1% level of significance. State also null and alternative hypotheses appropriately.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18877" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_092933_CamScanner.jpg" alt="" width="950" height="1424"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>A survey was conducted among 70 students studying B.Sc. CSIT in some colleges randomly. Among them, 50 students secured more than 80% marks in statistics. Compute 99% and 95% confidence intervals for the population proportion of students who secured more than 80% marks in subject statistics, and comment on the results.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Sample size (n) = 70</p>
+<p>Proportion of student secured more than 80% marks in statistics is</p>
+<p>p = \(\frac{x}{n}\) = \(\frac{50}{70}\) = 0.71</p>
+<p>Hence an estimate of standard error of P is</p>
+<p>S.E. (p) = \(\sqrt{\frac{pq}{n}}\) = \(\sqrt{\frac{0.71 \times 0.29}{70}}\) = 0.034</p>
+<p>Now,</p>
+<p><span style="text-decoration: underline;"><strong>At 95% level of confidence interval for P i.e.</strong></span></p>
+<p>\(p \enspace \pm \enspace z_{\alpha / 2} \sqrt{\frac{pq}{n}}\)</p>
+<p>= 0.71 ± 1.96 x 0.034</p>
+<p>= (0.77664, 0.64336)</p>
+<p>Hence, At 95% level of confidence interval, Between 77.66% to 64.34% students scored more than 80% in statistics.</p>
+<p><span style="text-decoration: underline;"><strong>At 99% level of confidence interval for P i.e.</strong></span></p>
+<p>\(p \enspace \pm \enspace z_{\alpha / 2} \sqrt{\frac{pq}{n}}\)</p>
+<p>= 0.71 ± 2.58 x 0.034</p>
+<p>= (0.79772, 0.62228)</p>
+<p>Hence, At 99% level of confidence interval, Between 79.77% to 62.23% students scored more than 80% in statistics.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>In location 1, there are 250 corona-positive cases out of 460 persons, and in location 2, 250 positive cases were reported out of 650 persons. Can it be concluded that the proportion of corona-positive cases is higher in location 1 compared to location 2? Test at a 10% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18812" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230608_195754_CamScanner.jpg" alt="" width="917" height="1430"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Previous literature has reported that the average age of Bsc.CSIT enrolling students in Tribhuvan University is 22 years. A researcher has doubts about this information and he feels that the average age is less than 22 years. In order ti examine this, the following sample data were collected randomly from the enrolling students of CSIT.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Age in years</td>
+<td>20</td>
+<td>19</td>
+<td>22</td>
+<td>23</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>20</td>
+<td>19</td>
+<td>20</td>
+</tr>
+</tbody>
+</table></div>
+<p>Set up null and alternative hypotheses and test whether the researcher’s doubt will be justified. Use 5% level of significance. Assume that the parent population from which samples are drawn is normally distributed.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18879" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_092959_CamScanner.jpg" alt="" width="946" height="1420"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18880" src="https://hamrocsit.com/wp-content/uploads/2022/12/Screenshot_20230609_093037_CamScanner.jpg" alt="" width="943" height="836"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Apply the Mann-Whitney U test for examining the following knowledge score on IT among two groups of IT workers at a 5% level of significance.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Group A:</strong></td>
+<td>5</td>
+<td>8</td>
+<td>2</td>
+<td>7</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Group B:</strong></td>
+<td>9</td>
+<td>12</td>
+<td>4</td>
+<td>6</td>
+<td></td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18883" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_095327_CamScanner.jpg" alt="" width="961" height="932"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18884" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230609_095405_CamScanner.jpg" alt="" width="938" height="1062"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>A survey was conduct to see the association between hacking status of the email and the type of email account. The survey has reported the following cross tabulation.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Type of e-mail account</td>
+<td>Hacking status</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Yahoo</td>
+<td>60</td>
+<td>15</td>
+</tr>
+<tr>
+<td> Gmail</td>
+<td>20</td>
+<td>120</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do the information provide sufficient evidence to conclude that the type email account and the hacking status is associated? Use Chi-square test at 1% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18920" src="https://hamrocsit.com/wp-content/uploads/2021/12/SmartSelect_20230610_072905_CamScanner.jpg" alt="" width="951" height="1414"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>State the mathematical model for Statistical analysis for m x m LSD for one observation per experimental unit. Also prepare a dummy ANOVA table for this.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18826" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230608_203147_CamScanner.jpg" alt="" width="957" height="990"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18817" src="https://hamrocsit.com/wp-content/uploads/2021/12/SmartSelect_20230608_203350_CamScanner.jpg" alt="" width="956" height="952"></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18828" src="https://hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230608_205208_CamScanner.jpg" alt="" width="956" height="1402"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define the Markov chain and introduce its basic notations. Also, explain the characteristics of a Markov chain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>MARKOV CHAIN:</strong></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18924" src="https://hamrocsit.com/wp-content/uploads/2022/12/markov.jpg" alt="" width="456" height="132"></p>
+<p><strong>NOTATIONS:</strong></p>
+<p><strong>1 ) The Markov Chain</strong></p>
+<p>X0,X1,X2,…</p>
+<p><strong>2 ) The State Space</strong></p>
+<p>A finite or countably infinite set  S, consisting of all the possible values or states of  Xn for all  n</p>
+<p><strong>3 ) Unconditional Distribution at Time  n</strong></p>
+<p>Pn, defined by</p>
+<p>Pn(i)=P(Xn=i),   i∈S</p>
+<p><strong>4 ) One-Step Transition Probabilities</strong></p>
+<p>These are conditional probabilities  P(i,j) defined by</p>
+<p>P(i,j)=P(X1=j∣X0=i) for  i and  j in  S</p>
+<p>P(i,j)=P(Xn+1=j∣Xn=i)   for all n</p>
+<p><strong> 5 ) n-Step Transition Probabilities</strong></p>
+<p>For  n≥0, these are conditional probabilities  Pn(i,j) defined by</p>
+<p>Pn(i,j)=P(Xn=j∣X0=i) for  I and  j in  S</p>
+<p><strong>6 ) Communication</strong></p>
+<p>If it is possible for the chain to get from state  I to state  j , we say that  I leads to  j and we write  i→j. Usually you can decide whether  I leads to  j just by examining the transition behavior of the chain.</p>
+<p>We say that  i communicates with  j if  i→j and  j→i</p>
+<p>If all the states of a chain communicate with each other, the chain is called irreducible.</p>
+<p><strong>7 ) Period</strong></p>
+<p>Working in discrete time has disadvantages. One of them is that states can be periodic. Let&#8217;s start with the example of a random walk where the steps are based on tosses of a fair coin. Suppose the walk starts at state 0. Then it can return to 0 only at even times: the number of heads up to that point has to exactly equal the number of tails, and thus the number of tosses has to be even. We say that the state 0 has period 2.</p>
+<p>A state  I has period  d if, starting at  I , the chain can come back to  i only at times that are multiples of d. That is,  d is the greatest common divisor of the set all  n such that  Pn(i,i)&gt;0</p>
+<p>In the random walk described above, all states have period 2.</p>
+<p>&nbsp;</p>
+<p><strong>CHARACTERISTICS:</strong></p>
+<p>i. It is a mathematical system experiences transitions from one state to another according to certain probabilistic rules.</p>
+<p>ii. No matter how the process arrived at its present state, the possible future states are fixed i.e. the probability of transitioning to any particular state is dependent solely on the current state and time elapsed.</p>
+<p>iii. The state space, or set of all possible states, can be anything: letters, numbers, weather conditions, baseball scores, or stock performances.</p>
+<p>iv. Markov chains may be modeled by finite state machines, and random walks provide a prolific example of their usefulness in mathematics.</p>
+<p>v. They arise broadly in statistical and information-theoretical contexts and are widely employed in economics, game theory, queueing (communication) theory, genetics, and finance.</p>
+<p>vi. While it is possible to discuss Markov chains with any size of state space, the initial theory and most applications are focused on cases with a finite (or countably infinite) number of states.</p>
+<p>vii. Many uses of Markov chains require proficiency with common matrix methods.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on the following:</p>
+<ol>
+<li>The rationale of using the non-parametric statistical test</li>
+<li>Estimation of minimum size for  the given proportion</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The rationale of using the non-parametric statistical test:</p>
+<ol style="list-style-type:decimal;">
+<li>Can be applied to qualitative as well as quantitative data.</li>
+<li>When data size is small, it is the only possible test.</li>
+<li>When assumptions of parametric procedure aren&#8217;t satisfied.</li>
+<li>When data shows highly skewed nature.</li>
+<li>When basic question of interest is distribution free in nature.</li>
+<li>Has greater range of applicalibility due to milder assumptions.</li>
+<li>Doesn&#8217;t require complicated sampling theory.</li>
+<li>When data are in weak scaled.</li>
+<li>When quick data analysis is required.</li>
+<li>Simpler to understand.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Estimation of minimum size for  the given proportion:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18932" src="https://hamrocsit.com/wp-content/uploads/2022/12/ans.jpg" alt="" width="888" height="551"></p>
+<p>&nbsp;</p>
+</div>
+</body></html>

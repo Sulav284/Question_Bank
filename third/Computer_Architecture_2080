@@ -1,0 +1,302 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>CA Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the working of Booth’s multiplication algorithm and perform multiplication of 50 and (-13) using the same algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Booth algorithm</strong> gives a procedure for multiplying binary integers in signed 2’s complement representation in an efficient way.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31856" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240317_120658_CamScanner.jpg?resize=302%2C450&#038;ssl=1" alt="" width="302" height="450"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31854" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/SmartSelect_20240317_115951_CamScanner.jpg?resize=303%2C418&#038;ssl=1" alt="" width="303" height="418"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the instruction format of basic computer. Write down symbolic representation for FETCH routine.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 3</h3>
+<div><p><p>What is DMA? Explain the DMA controller with block diagram. How the DMA interact with I/O device.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Direct memory access</strong> (DMA) is a method that allows an input/output (I/O) device to send or receive data directly to or from the main memory, bypassing the CPU to speed up memory operations. The process is managed by a chip known as a DMA controller (DMAC).</p>
+<p><strong>DMA Controller</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18805" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/dma1.jpg?resize=529%2C99&#038;ssl=1" alt="" width="529" height="99"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18806" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/dmac.jpg?resize=486%2C291&#038;ssl=1" alt="" width="486" height="291"></p>
+<ul style="list-style-type: square;">
+<li>The CPU initializes the DMA by sending the given information through the data bus.</li>
+<li>The starting address of the memory block where the data is available (to read) or where data are to be stored (to write).</li>
+<li>It also sends word count which is the number of words in the memory block to be read or written. Control to define the mode of transfer such as read or write.</li>
+<li>A control to begin the DMA transfer.</li>
+</ul>
+<p dir="ltr">A DMA  enables a device to transfer data without exposing the CPU to a work overload. Without the DMA , the CPU copies every piece of data using a peripheral bus from the I/O device. Using a peripheral bus occupies the CPU during the read/write process and does not allow other work to be performed until the operation is completed With DMA, the CPU can process other tasks while data transfer is being performed. The transfer of data is first initiated by the CPU. The data block can be transferred to and from memory by the DMAC in three ways.</p>
+<p dir="ltr">In burst mode, the system bus is released only after the data transfer is completed.</p>
+<p dir="ltr">In cycle stealing mode, during the transfer of data between the DMA  and I/O device, the system bus is relinquished for a few clock cycles so that the CPU can perform other tasks. When the data transfer is complete, the CPU receives an interrupt request from the DMA controller.</p>
+<p dir="ltr">In transparent mode, the DMAC can take charge of the system bus only when it is not required by the processor. However, using a DMA controller might cause cache coherency problems. The data stored in RAM accessed by the DMA controller may not be updated with the correct cache data if the CPU is using external memory. Solutions include flushing cache lines before starting outgoing DMA transfers, or performing a cache invalidation on incoming DMA transfers when external writes are signaled to the cache controller.</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is arithmetic overflow? How can it be detected?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Overflow occurs when:</p>
+<ul style="list-style-type: square;">
+<li>Two negative numbers are added and an answer comes positive or,</li>
+<li>Two positive numbers are added and an answer comes as negative.</li>
+</ul>
+<p>i.e.</p>
+<ul style="list-style-type: square;">
+<li>If x &amp; y are +ve numbers then x+y &gt; max(x,y)</li>
+<li>If x &amp; y are -ve numbers then x+y &lt; min(x,y)</li>
+<li>If x is +ve and y is -ve then y&lt; x+y &lt; x</li>
+</ul>
+<p>So overflow can be detected by checking Most Significant Bit(MSB) of two operands and answer. But Instead of using a 3-bit Comparator, overflow can also be detected using 2 Bit Comparator just by checking Carry-in(C-in) and Carry-Out(C-out) from MSB’s. Consider the N-Bit Addition of 2’s Complement number.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-31867" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/03/cin.png?resize=261%2C115&#038;ssl=1" alt="" width="261" height="115"></p>
+<p>Overflow Occurs when C-in ≠ C-out because:</p>
+<ul style="list-style-type: square;">
+<li>if C-in is 1 we get answer’s MSB as 1 means answer is negative (Overflow) and C-out as 0.</li>
+<li>if C-in is 0 we get answer MSB as 0 means answer is positive(Overflow) and C-out as 1.</li>
+</ul>
+<p>So, the XOR gate with inputs C-in and C-out can be used to detect overflow.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What do you mean by error correction codes? Explain any one of error correction technique.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Error correction codes (ECC) are techniques used in computer architecture and memory systems to detect and correct errors that occur during data transmission or storage. These codes add redundancy to the transmitted or stored data, allowing the receiver to identify and correct errors that may have occurred due to various reasons such as electrical noise, interference, or component failures.</p>
+<p>One commonly used error correction technique is Hamming Code. Hamming codes are binary linear block codes named after Richard Hamming, who introduced them in the late 1940s. They are particularly effective for detecting and correcting single-bit errors in data.</p>
+<p>Here&#8217;s how Hamming Code works:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Adding Redundancy</strong>: Hamming codes add extra bits (parity bits) to the original data bits to create codewords of a specific length. The number of parity bits added depends on the length of the data. The positions of these parity bits are determined by powers of 2.</li>
+<li><strong>Calculating Parity Bits</strong>: Each parity bit is responsible for checking a specific combination of data bits. For example, in a 7-bit data word with 3 parity bits (P1, P2, and P3), the positions of the parity bits correspond to the powers of 2 (1, 2, and 4). Parity bit P1 checks all bits that have the least significant bit set to 1 (1, 3, 5, 7), P2 checks all bits with the second least significant bit set to 1 (2, 3, 6, 7), and so on.</li>
+<li><strong>Error Detection and Correction</strong>: When a codeword is received, the receiver recalculates the parity bits based on the received data. If the recalculated parity bits don&#8217;t match the received parity bits, an error is detected. The position of the erroneous bit can be determined by the combination of incorrect parity bits. By flipping the erroneous bit, the receiver can correct the error.</li>
+</ol>
+<p>Example:</p>
+<p>Let&#8217;s say we have a received codeword: 1010110.</p>
+<p>Calculate Parity Bits: We calculate the parity bits (P1, P2, P3) based on the received data.</p>
+<p>P1 = (1 + 1 + 0 + 1) % 2 = 1<br />
+P2 = (1 + 0 + 1 + 0) % 2 = 0<br />
+P3 = (1 + 1 + 0 + 0) % 2 = 0</p>
+<p>Compare the calculated parity bits with the received parity bits. In this example, the received parity bits are unknown because they were transmitted along with the data.</p>
+<p>Since the calculated parity bits don&#8217;t match the received ones, an error is detected. By analyzing which parity bits don&#8217;t match, we can determine the position of the erroneous bit. In this case, P1 doesn&#8217;t match, indicating that there&#8217;s an error in one of the bits associated with P1 (bits 1, 3, 5, or 7).</p>
+<p>Once the error position is identified (bit 1 in this case), the receiver flips the erroneous bit to correct the error. In our example, we flip bit 1 from 1 to 0.</p>
+<p>After correcting the error, the codeword becomes 0010110, which is the correct data.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain block diagram of microprogram sequencer in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A sequencer or microsequencer generates the addresses used to step through the microprogram of a control store. It is used as a part of the control unit of a CPU or as a stand-alone generator for address ranges.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23111 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/seqqq-1.jpg?resize=556%2C408&#038;ssl=1" alt="" width="556" height="408"></p>
+<p><strong>Steps in micro-sequencer</strong></p>
+<ul style="list-style-type: square;">
+<li>Initial address is loaded into control address register (CAR) when instruction is executed and it is the address of 1st microinstruction that activates the instruction fetch routine which may be sequenced by incrementing the content of CAR.</li>
+<li>At the end of fetch routine, instruction is available at instruction register.</li>
+<li>The control memory next must go through the routine that determines the effective address of operand which will be available in memory address register once this routine is complete.</li>
+<li>Next step is to generate microoperation that executes the instruction fetched from memory. Each instruction has its own microprogram routine stored in a given location of control memory.</li>
+<li>The transformation from instruction code bit to an address in control memory where routine is located is referred to as mapping process.</li>
+<li>A microprogram that employs subroutine will require an external register for storing the return address which is stored in external register known as subroutine register (SBR).</li>
+</ul>
+<p>In summary, the address sequencing capabilities required in control memory are:</p>
+<p>1. Incrementing of CAR.</p>
+<p>2. Unconditional or conditional branch depending on status bit condition.</p>
+<p>3. A mapping process from bits of an instruction to an address for control memory.</p>
+<p>4. A facility for subroutine call and return.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is cache memory? Explain the elements of cache design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="text-align: left;"><strong>Cache Memory</strong></p>
+<p>An extremely fast small memory placed between the CPU and the main memory that is used to significantly reduce the average memory access time and hence, the total execution time of the program is known as <strong>cache memory</strong>.</p>
+<p>When the CPU needs to access memory,  the cache is examined. If the word is found in the cache, it is read from the fast memory.  If the word addressed by the CPU is not found in the cache, the main memory is accessed to read the word. A block of words containing the one just accessed is then transferred from the main memory to the cache memory. The performance of cache memory is frequently measured in terms of a quantity called <strong><em>hit ratio. </em></strong>When the CPU refers to memory and finds the word in the cache, it is said to produce a <strong><em>hit</em></strong><em>. </em>If the word is not found in the cache, it is in the main memory and it counts as a <strong><em>miss</em></strong><em>. </em>The ratio of the number of hits divided by the total CPU references to memory  (hits plus misses) is the hit ratio.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23090 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/cache-1.png?resize=482%2C133&#038;ssl=1" alt="" width="482" height="133"></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>Figure: Cache Memory</strong></span></p>
+<p>The transformation of data from main memory to cache memory is called <strong>mapping process</strong>. There are three types of mapping processes:</p>
+<p>1. Associative mapping</p>
+<p>2. Direct mapping</p>
+<p>3. Set-associative mapping</p>
+<p>&nbsp;</p>
+<p><strong>Associative Mapping</strong></p>
+<ul style="list-style-type: square;">
+<li>The fastest and most flexible cache organization uses an associative memory.</li>
+<li>This organization is illustrated in Fig. below.</li>
+<li>The associative memory stores both the address and content  (data) of the memory.</li>
+<li>The diagram shows three words presently stored in the cache.</li>
+<li>The address value of 15 bits is shown as a five-digit octal number and its corresponding 12-bit word is shown as a four-digit octal number. A CPU address of 15 bits is placed in the argument register and the associative memory is searched for a matching address.</li>
+<li>If the address is found,  the corresponding 12-bit  data is read and sent to the CPU.</li>
+<li>If no match occurs, the main memory is accessed for the word. The address data pair is then transferred to the associative cache memory. <strong> </strong></li>
+<li>If the cache is full, an address data pair must be displaced to make room for a pair that is needed and not presently in the cache.</li>
+<li>The decision as to what pair is replaced is determined by the replacement algorithm that the designer chooses for the cache.</li>
+<li>A simple procedure is to replace cells of the cache in <strong>round-robin</strong> order whenever a new word is requested from the main memory. This constitutes a <strong>first-in-first-out (FIFO)</strong> replacement policy.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23091 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/assoc.jpg?resize=496%2C364&#038;ssl=1" alt="" width="496" height="364"></p>
+<p>&nbsp;</p>
+<p><strong>Direct Mapping: </strong><strong> </strong></p>
+<ul style="list-style-type: square;">
+<li>Associative memories are expensive compared to random-access memories because of the added logic associated with each cell.</li>
+<li>The CPU address of 15 bits is divided into two fields: <strong>index </strong>and <strong>tag.</strong></li>
+<li>The number of bits in the index field is equal to the number of address bits required to access the cache memory.</li>
+<li>In the general case, there are 2k words in cache memory and 2n words in main memory.</li>
+<li>The n-bit memory address is divided into two fields: k bits for the index field and n  &#8211; k bits for the tag field. <strong> </strong></li>
+<li>When the  CPU  generates a memory request,  the index field is used for the address to access the cache. <strong> </strong></li>
+<li>The tag field of the CPU address is compared with the tag in the word read from the cache.</li>
+<li>If the two tags match, there is a hit and the desired data word is in the cache.</li>
+<li>If there is no match, there is a miss and the required word is read from main memory.  <strong> </strong></li>
+<li>It is then stored in the cache together with the new tag, replacing the previous value. <strong> </strong></li>
+<li>The disadvantage of direct mapping is that the hit ratio can drop considerably if two or more words whose addresses have the same index but different tags are accessed repeatedly. <strong> </strong></li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23092 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/in.png?resize=553%2C283&#038;ssl=1" alt="" width="553" height="283"></p>
+<p><strong>Set Associative Mapping</strong></p>
+<ul style="list-style-type: square;">
+<li>A third type of cache organization, called set-associative mapping,  is an improvement over the direct-mapping organization in that each word of cache can store two or more words of memory under the same index address.  <strong> </strong></li>
+<li>Each data word is stored together with its tag and the number of tag—data items in one word of cache is said to form a set. An example of a set-associative cache organization for a set size of two is shown in Fig. below. <strong> </strong></li>
+<li>Each index address refers to two data words and their associated tags. Each tag requires six bits and each data word has 12 bits, so the word length is 2(6  + 12) =    36 bits. <strong> </strong></li>
+<li>An index address of nine bits can accommodate 512 words. Thus the size of cache memory is 512  X 36. <strong> </strong></li>
+<li>It can accommodate 1024 words of main memory since each word of the cache contains two data words.</li>
+<li>In general, a set-associative cache of set size <em>k </em>will accommodate <em>k </em>words of main memory in each word of the cache.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-23093 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/set.jpg?resize=438%2C283&#038;ssl=1" alt="" width="438" height="283"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is micro operation? Explain different arithmetci microoperations.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Micro-operations</strong> are operations done on data contained in registers. A micro-operation is a simple operation performed on data stored in one or more registers.</p>
+<p>Addition, subtraction, increment and decrement are examples of arithmetic micro-operations.</p>
+<p><strong>Add Micro-Operation</strong></p>
+<p>R1 + R2 = R3</p>
+<p>The information or contents of register R1 are to be placed into the data or contents of register R2, and the total is to be translated to register R3.</p>
+<p><strong>Subtract Micro-Operation</strong></p>
+<p>Subtract micro-operations are comparable to R3 → R1 + R2′ + 1 because they use the minus operator to construct 1’s complement and add 1 to the register that is subtracted.</p>
+<p><strong>Increment/Decrement Micro-Operation</strong></p>
+<p>It is commonly implemented by adding and removing 1 from the register, accordingly.</p>
+<p>R1 → R1 + 1</p>
+<p>R1 → R1 – 1</p>
+<p>Plus one and minus one operations represent increment and decrement micro-operations, respectively. A binary up-down counter or a combinational circuit is used to conduct these micro-operations.</p>
+<p>The table does not include the arithmetic operations of multiply and divide. These two arithmetic operations are valid, although they are not included in the basic set of micro-operations.</p>
+<p>In this case, the signals that execute these operations pass via gates, and the operation’s result can be transmitted into a destination location via a clock pulse shortly after the output signal passes through the combinational circuit.</p>
+<p>A series of add and shift micro-operations are used to perform the multiplication operation. A series of subtracting and shifting micro-operations are used to complete the division.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What do you mean by pipelining concept? Discuss various pipeline hazards and their solutions in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Any condition that causes a stall in the pipeline operations can be called a hazard. Pipeline hazards are situations that prevent the next instruction in the instruction stream from executing during its designated clock cycles.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23116" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041505_CamScanner.jpg?resize=305%2C339&#038;ssl=1" alt="" width="305" height="339"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23117" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041527_CamScanner.jpg?resize=305%2C476&#038;ssl=1" alt="" width="305" height="476"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23115" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041547_CamScanner.jpg?resize=305%2C450&#038;ssl=1" alt="" width="305" height="450"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23123" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041609_CamScanner-1.jpg?resize=305%2C456&#038;ssl=1" alt="" width="305" height="456"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23120" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041626_CamScanner.jpg?resize=305%2C459&#038;ssl=1" alt="" width="305" height="459"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-23119" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041643_CamScanner.jpg?resize=303%2C150&#038;ssl=1" alt="" width="303" height="150"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Write the program for following statement by using three, single, zero address instructions.</p>
+<p>X = (A+B*C-D)/(E*F+G)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Three Address Instruction</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">MUL R1, B, C
+ADD R2, A, R1
+SUB R3, R2, D
+MUL R4, E, F
+ADD R5, R4, G
+DIV X, R3, R5</pre>
+<p><strong>Single Address Instruction</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">LOAD B
+MUL C
+STORE T
+LOAD A
+ADD T
+SUB D
+STORE M
+LOAD E
+MUL F
+ADD G
+STORE N
+LOAD M
+DIV N
+STORE X
+</pre>
+<p><strong>Zero Address Instruction</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">PUSH A
+PUSH B
+PUSH C
+MUL
+ADD
+PUSH D
+SUB
+PUSH E
+PUSH F
+MUL
+PUSH G
+ADD
+DIV</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Differentiate between RISC and CISC architecture.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between RISC and CISC are:</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 243px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">RISC</td>
+<td style="width: 50%; text-align: center; height: 24px;">CISC</td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 50%; text-align: center; height: 51px;">RISC stands for Reduced Instruction Set Computer.</td>
+<td style="width: 50%; text-align: center; height: 51px;">CISC stands for Complex Instruction Set Computer.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It has few instruction.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Relatively it has large number of instruction (100 &#8211; 250).</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It has few addressing modes.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Relatively it has more variety of addressing mode (Typically from 5 &#8211; 20 different modes).</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Memory access limited to load and store instruction.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Memory access is frequent in a single instruction cycle.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">All operations are done within the register of CPU.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Operations are done with the help of CPU register and memory.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Fixed length instruction format.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Variable length instruction format.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Instructions are easily decoded.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Instruction takes time to decoded.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Single cycle instruction execution takes place.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Multicycle instruction execution takes place here.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two)</p>
+<ol>
+<li>Control ROM</li>
+<li>Common Bus System</li>
+<li>Flynn’s Classification</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Control ROM</strong></p>
+<p>Control ROM stands for Read-Only Memory used for controlling purposes. It contains fixed instructions or microprograms that dictate the operations of a computer&#8217;s control unit. The control unit of a computer fetches instructions from memory and decodes them to generate control signals for various components like ALU (Arithmetic Logic Unit), memory, and I/O devices. Control ROM stores these control sequences in a non-volatile memory form.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>As the instructions are stored in ROM, there&#8217;s no need to fetch them from external memory, thus saving time.</li>
+<li>Since ROM is non-volatile, the instructions are not lost even during power outages, ensuring reliable operation.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul style="list-style-type: square;">
+<li>Control ROM lacks flexibility as its instructions are fixed at the time of manufacturing. Any changes require physically altering the ROM chip.</li>
+<li>Upgrading or modifying the control logic demands replacing the entire ROM chip, which can be cumbersome and costly.</li>
+</ul>
+<p><strong>Common Bus System</strong></p>
+<p>A common bus system is a computer architecture where multiple components share a single communication path or bus for data transfer. These components typically include the CPU, memory, and I/O devices. In a common bus system, data travels along the shared bus, and each component listens to the bus to determine if the data is meant for it. This architecture simplifies communication between different parts of the computer and facilitates data transfer between them.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>The common bus system simplifies the design of a computer system by reducing the number of connections required between components.</li>
+<li>Since components share a common communication path, fewer physical connections are needed, leading to cost savings in terms of wiring and circuitry.</li>
+<li>Adding or upgrading components is relatively straightforward as they can be connected to the common bus without major modifications to the existing system.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul style="list-style-type: square;">
+<li>The shared bus can become a bottleneck as the number of connected components increases, leading to slower data transfer speeds.</li>
+<li>With multiple components contending for access to the bus, the available bandwidth may become limited, affecting overall system performance.</li>
+<li>Since all components rely on the common bus for communication, a failure in the bus can halt the entire system.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Flynn&#8217;s Classification</strong></p>
+<p>Flynn&#8217;s Classification is a taxonomy proposed by Michael J. Flynn in 1966 to categorize computer architectures based on the number of instruction streams (I) and data streams (D) processed simultaneously.</p>
+<p><strong>Types:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>SISD (Single Instruction, Single Data):</strong> In SISD architecture, only one instruction stream operates on one data stream at a time. It represents the traditional Von Neumann architecture.</li>
+<li><strong>SIMD (Single Instruction, Multiple Data):</strong> In SIMD architecture, a single instruction is applied to multiple data streams simultaneously. This architecture is commonly found in parallel processing systems like GPUs.</li>
+<li><strong>MISD (Multiple Instruction, Single Data):</strong> MISD architecture involves multiple instruction streams acting on a single data stream concurrently. It&#8217;s a theoretical model with limited practical implementations.</li>
+<li><strong>MIMD (Multiple Instruction, Multiple Data):</strong> MIMD architecture features multiple instruction streams operating on multiple data streams independently. This is common in modern multi-core processors and distributed computing systems.</li>
+</ol>
+</div>
+</body></html>

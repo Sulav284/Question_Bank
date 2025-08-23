@@ -1,0 +1,79 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SE Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>SE Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any Ten questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain system modeling with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>System modeling</strong> is the process of creating abstract representations of a system to understand,<br />
+design, analyze, and communicate its various aspects. Models provide a visual and conceptual<br />
+understanding of the system&#8217;s structure, behavior, and interactions, helping stakeholders comprehend and validate system requirements. One of the commonly used techniques for system modeling is Unified Modeling Language (UML).</p>
+<p>Example of System Modeling: Let&#8217;s consider the development of an online movie ticketing system</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Use Case Diagram</strong>:<br />
+A use case diagram in UML represents the interactions between actors (users or external systems) and the system. In this case, the actors could be customers, administrators, and the payment gateway. The use case diagram would illustrate various functionalities, such as &#8220;Search for books,&#8221; &#8220;Add to cart,&#8221; &#8220;Make a purchase,&#8221; &#8220;Manage inventory,&#8221; and &#8220;Generate sales report.&#8221; These use cases help identify the different user interactions and the system&#8217;s responses.</li>
+<li><strong>Sequence Diagram</strong>:<br />
+A sequence diagram describes the interactions between different objects in a sequential manner. In the context of the online bookstore system, a sequence diagram could illustrate the steps involved in a customer making a purchase. It would show the interactions between the &#8220;Customer&#8221; object, the &#8220;Order&#8221; object, and the &#8220;Payment&#8221; object, highlighting the sequence of events.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-20985 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-18-203637.png?resize=540%2C691&#038;ssl=1" alt="" width="540" height="691"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is software process model? Discuss waterfall model with its merits and demerits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A<strong> software process model</strong> is a structured approach used to guide and manage the software development process. It defines a set of activities, phases, and deliverables that need to be accomplished to successfully develop and deliver software. Each process model provides a specific framework to organize tasks, resources, and schedules in a logical manner.</p>
+<p><strong>The Waterfall Model</strong>: The Waterfall Model is one of the earliest and most straightforward software process models. It follows a sequential and linear approach, where each phase must be completed before moving to the next one. The development process flows from one phase to another in a cascading manner, resembling a waterfall.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-50176 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/waterfall.drawio.png?resize=255%2C198&#038;ssl=1" alt="" width="255" height="198"></p>
+<p style="text-align: center;">fig: Waterfall model</p>
+<p>The sequential phases in Waterfall model are :</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Requirement Gathering and analysis</strong> &#8211; All possible requirements of the system to be developed are captured in this phase and documented in a requirement specification document.</li>
+<li><strong>System Design</strong> &#8211; The requirement specifications from first phase are studied in this phase and the system design is prepared. This system design helps in specifying hardware and system requirements and helps in defining the overall system architecture.</li>
+<li><strong>Implementation</strong> &#8211; With inputs from the system design, the system is first developed in small programs called units, which are integrated in the next phase. Each unit is developed and tested for its functionality, which is referred to as Unit Testing.</li>
+<li><strong>Integration and Testing</strong> &#8211; All the units developed in the implementation phase are integrated into a system after testing of each unit. Post integration the entire system is tested for any faults and failures.</li>
+<li><strong>Deployment of system</strong> &#8211; Once the functional and non-functional testing is done; the product is deployed in the customer environment or released into the market.</li>
+<li><strong>Maintenance</strong> &#8211; There are some issues which come up in the client environment. To fix those issues, patches are released. Also to enhance the product some better versions are released. Maintenance is done to deliver these changes in the customer environment.</li>
+</ol>
+<p><strong>Merits of Waterfall model</strong></p>
+<ul style="list-style-type: square;">
+<li>This model is simple to implement also the number of resources that are required for it is minimal.</li>
+<li>Requirements are simple &amp; explicitly declared. They remain unchanged during entire project<br />
+development.</li>
+<li>The start and end points for each phase is fixed, which makes it easy to cover progress.</li>
+<li> It gives easy to control and clarity for the customer due to a strict reporting system.</li>
+<li>Easy to manage due to the rigidity of the model. Each phase has specific deliverables and a review process.</li>
+</ul>
+<p><strong>Demerits of Waterfall model</strong></p>
+<ul style="list-style-type: square;">
+<li>No working software is produced until late during the life cycle.</li>
+<li>In this model, the risk factor is higher, so this model is not suitable for more significant and complex projects.</li>
+<li>This model cannot accept the changes in requirements during development.</li>
+<li>It becomes tough to go back to the phase.</li>
+<li>Since the testing done at a later stage, it does not allow identifying the challenges and risks in the earlier phase, so the risk reduction strategy is difficult to prepare.</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Discuss different types of risks which are likely to arise in software projects. Briefly explain risk analysis stage during risk management process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 4</h3>
+<div><p><p>Briefly explain functional, non-functional, and domain requirements.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 5</h3>
+<div><p><p>What are rapid prototyping techniques? Briefly explain different rapid prototyping techniques</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 6</h3>
+<div><p><p>What is formal specification? Discuss interface specification in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>What are the activities of architectural design process? Discuss abstract machine model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 8</h3>
+<div><p><p>What is modular decomposition? Discuss object oriented model of decomposition.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 9</h3>
+<div><p><p>Discuss the importance of use case diagram in object-oriented development. Draw a use case diagram for library system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 10</h3>
+<div><p><p>What is clean room software development? Discuss the characteristics of cleanroom software development.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 11</h3>
+<div><p><p>Discuss path testing with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 12</h3>
+<div><p><p>Write Short notes on:<br />
+a. Reliability validation<br />
+b. Reverse engineering</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+</body></html>

@@ -1,0 +1,472 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>C Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>C Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Define structure and nested structure. Write a program to find out whether the nth term of the Fibonacci series is a prime number or not. Read the value of n from the user and display the result in the main function. Uses separate user-defined function to generate the nth Fibonacci term and to check whether that number is prime or not.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C, a <strong>structure</strong> is a user-defined data type that allows you to group different types of variables under a single name. It is a way to organize data. For example:</p>
+<p>struct Point {<br />
+int x;<br />
+int y;<br />
+};</p>
+<p>A<strong> nested structure</strong> in C is a structure that is a member of another structure. This allows you to create more complex data structures. For example:</p>
+<p>struct Address {<br />
+char city[50];<br />
+char state[50];<br />
+};</p>
+<p>struct Person {<br />
+char name[50];<br />
+int age;<br />
+struct Address address;<br />
+};</p>
+<p><strong>Program</strong></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function to generate the nth Fibonacci term<br />
+int fibonacci(int n) {<br />
+if (n &lt;= 1) {<br />
+return n;<br />
+} else {<br />
+return fibonacci(n &#8211; 1) + fibonacci(n &#8211; 2);<br />
+}<br />
+}</p>
+<p>// Function to check whether a number is prime<br />
+int isPrime(int num) {<br />
+if (num &lt;= 1) {<br />
+return 0; // Not a prime number<br />
+}<br />
+for (int i = 2; i * i &lt;= num; i++) {<br />
+if (num % i == 0) {<br />
+return 0; // Not a prime number<br />
+}<br />
+}<br />
+return 1; // Prime number<br />
+}</p>
+<p>int main() {<br />
+int n, nthTerm;</p>
+<p>// Read the value of n from the user<br />
+printf(&#8220;Enter the value of n: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;n);</p>
+<p>// Generate the nth Fibonacci term<br />
+nthTerm = fibonacci(n);</p>
+<p>// Check if the nth term is a prime number<br />
+if (isPrime(nthTerm)) {<br />
+printf(&#8220;%dth term of Fibonacci series (%d) is a prime number.\n&#8221;, n, nthTerm);<br />
+} else {<br />
+printf(&#8220;%dth term of Fibonacci series (%d) is not a prime number.\n&#8221;, n, nthTerm);<br />
+}</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the relation to array and pointer. Differentiate call by value and call by reference with a suitable program.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Relation to Array and Pointer:</strong></p>
+<p>In C, arrays and pointers have a close relationship. An array name is essentially a constant pointer to the first element of the array. Consider the following example:</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {<br />
+int arr[5] = {1, 2, 3, 4, 5};</p>
+<p>// Using array notation<br />
+printf(&#8220;Using array notation: %d\n&#8221;, arr[2]);</p>
+<p>// Using pointer notation<br />
+printf(&#8220;Using pointer notation: %d\n&#8221;, *(arr + 2));</p>
+<p>return 0;<br />
+}</p>
+<p>In this example, arr is an array, and arr itself represents the address of the first element. The expression arr[2] is equivalent to *(arr + 2). Both statements print the third element of the array.</p>
+<p>Arrays and pointers also become more intertwined when passing them to functions. When you pass an array to a function, you&#8217;re effectively passing a pointer to the first element of the array.</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function to modify array elements<br />
+void modifyArray(int *arr, int size) {<br />
+for (int i = 0; i &lt; size; i++) {<br />
+arr[i] *= 2;<br />
+}<br />
+}</p>
+<p>int main() {<br />
+int arr[5] = {1, 2, 3, 4, 5};</p>
+<p>// Passing array to a function<br />
+modifyArray(arr, 5);</p>
+<p>// Displaying modified array<br />
+for (int i = 0; i &lt; 5; i++) {<br />
+printf(&#8220;%d &#8220;, arr[i]);<br />
+}</p>
+<p>return 0;<br />
+}</p>
+<p>In this program, modifyArray takes a pointer to an integer (int *arr) and modifies the elements of the array passed to it. This is possible because the array is effectively passed as a pointer.</p>
+<p><strong>Call by Value and Call by Reference:</strong></p>
+<p>In C, function arguments can be passed in two ways: call by value and call by reference.</p>
+<p><strong>Call by Value:</strong></p>
+<p>In call by value, the actual value of the variable is passed to the function. Modifications made to the parameter inside the function do not affect the original variable outside the function.</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function using call by value<br />
+void increment(int num) {<br />
+num++;<br />
+}</p>
+<p>int main() {<br />
+int x = 5;</p>
+<p>// Passing x by value<br />
+increment(x);</p>
+<p>// x remains unchanged<br />
+printf(&#8220;Value of x: %d\n&#8221;, x);</p>
+<p>return 0;<br />
+}</p>
+<p><strong>Call by Reference:</strong></p>
+<p>In call by reference, the address of the variable is passed to the function using pointers. Modifications made to the parameter inside the function affect the original variable.</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function using call by reference<br />
+void incrementByReference(int *num) {<br />
+(*num)++;<br />
+}</p>
+<p>int main() {<br />
+int x = 5;</p>
+<p>// Passing address of x<br />
+incrementByReference(&amp;x);</p>
+<p>// x is modified<br />
+printf(&#8220;Value of x: %d\n&#8221;, x);</p>
+<p>return 0;<br />
+}</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate between source code and object code. Create a structure named Book with members Book_Name, Price and Author_Name, then take input for 10 records of Book and print the name of authors having the price of book greater than 1000.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Source Code vs Object Code</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 96.6944%;">
+<tbody>
+<tr>
+<td style="width: 46.5465%; text-align: center;"><strong>Source Code</strong></td>
+<td style="width: 50.1502%; text-align: center;"><strong>Object Code</strong></td>
+</tr>
+<tr>
+<td style="width: 46.5465%; text-align: center;">Human-readable form of a program written in a programming language like C, C++, Java, etc.</td>
+<td style="width: 50.1502%; text-align: center;">Machine-readable, binary representation of the program generated by the compiler from the source code.</td>
+</tr>
+<tr>
+<td style="width: 46.5465%; text-align: center;">The code that programmers write using a text editor or an integrated development environment (IDE).</td>
+<td style="width: 50.1502%; text-align: center;">Intermediate form before the final step of creating an executable file.</td>
+</tr>
+<tr>
+<td style="width: 46.5465%; text-align: center;">Contains high-level instructions and is written in a syntax that is understandable to programmers.</td>
+<td style="width: 50.1502%; text-align: center;">Not human-readable and is specific to the target architecture or platform for which the program is compiled.</td>
+</tr>
+<tr>
+<td style="width: 46.5465%; text-align: center;">Has file extensions like .c, .cpp, .java, etc.</td>
+<td style="width: 50.1502%; text-align: center;">Generated after the compilation process and may have file extensions like .obj, .o, or .class.</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Program</strong></span></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Define the structure named Book<br />
+struct Book {<br />
+char Book_Name[50];<br />
+float Price;<br />
+char Author_Name[50];<br />
+};</p>
+<p>int main() {<br />
+// Declare an array of Book to store 10 records<br />
+struct Book books[10];</p>
+<p>// Input data for 10 records<br />
+for (int i = 0; i &lt; 10; i++) {<br />
+printf(&#8220;Enter details for Book %d:\n&#8221;, i + 1);<br />
+printf(&#8220;Book Name: &#8220;);<br />
+scanf(&#8220;%s&#8221;, books[i].Book_Name);<br />
+printf(&#8220;Price: &#8220;);<br />
+scanf(&#8220;%f&#8221;, &amp;books[i].Price);<br />
+printf(&#8220;Author Name: &#8220;);<br />
+scanf(&#8220;%s&#8221;, books[i].Author_Name);<br />
+}</p>
+<p>// Print names of authors with the price greater than 1000<br />
+printf(&#8220;\nAuthors with the price of the book greater than 1000:\n&#8221;);<br />
+for (int i = 0; i &lt; 10; i++) {<br />
+if (books[i].Price &gt; 1000) {<br />
+printf(&#8220;%s\n&#8221;, books[i].Author_Name);<br />
+}<br />
+}</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe the different types of I/O functions used in file handling with syntax.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are different types of I/O functions used in file handling, and they are categorized into two main types: formatted I/O functions and unformatted I/O functions.</p>
+<p><strong>Formatted I/O Functions:</strong></p>
+<p>Formatted I/O functions are used for reading and writing data in a formatted way, where the format is specified using format specifiers. The most commonly used formatted I/O functions for file handling in C are fprintf, fscanf, printf, and scanf.</p>
+<ul style="list-style-type: square;">
+<li><strong>fprintf: </strong>int fprintf(FILE *stream, const char *format, &#8230;);</li>
+<li><strong>fscanf: </strong>int fscanf(FILE *stream, const char *format, &#8230;);</li>
+<li><strong>printf: </strong>int printf(const char *format, &#8230;);</li>
+<li><strong>scanf: </strong>int scanf(const char *format, &#8230;);</li>
+</ul>
+<p><strong>Unformatted I/O Functions:</strong></p>
+<p>Unformatted I/O functions are used for reading and writing data as raw bytes without any formatting. The commonly used unformatted I/O functions for file handling in C are fread, fwrite, fgetc, fputc, fgets, and fputs.</p>
+<ul style="list-style-type: square;">
+<li><strong>fread</strong>: size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);</li>
+<li><strong>fwrite</strong>: size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);</li>
+<li><strong>fgetc</strong>: int fgetc(FILE *stream);</li>
+<li><strong>fputc</strong>: int fputc(int c, FILE *stream);</li>
+<li><strong>fgets</strong>: char *fgets(char *s, int size, FILE *stream);</li>
+<li><strong>fputs</strong>: intfputs(const char *s, FILE *stream);</li>
+</ul>
+<p>Example:</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {<br />
+FILE *file;<br />
+char text[100];</p>
+<p>// Writing to a file using fprintf<br />
+file = fopen(&#8220;example.txt&#8221;, &#8220;w&#8221;);<br />
+fprintf(file, &#8220;Hello, this is a sample text.\n&#8221;);<br />
+fclose(file);</p>
+<p>// Reading from a file using fscanf<br />
+file = fopen(&#8220;example.txt&#8221;, &#8220;r&#8221;);<br />
+fscanf(file, &#8220;%[^\n]&#8221;, text);<br />
+printf(&#8220;Content of the file: %s\n&#8221;, text);<br />
+fclose(file);</p>
+<p>return 0;<br />
+}</p>
+<p><code class="!whitespace-pre hljs language-c"></code></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Write a program to read P*Q matrix of integers and find the largest integer of each row and display it.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>int main() {<br />
+int P, Q;</p>
+<p>// Read the dimensions of the matrix<br />
+printf(&#8220;Enter the number of rows (P): &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;P);</p>
+<p>printf(&#8220;Enter the number of columns (Q): &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;Q);</p>
+<p>// Check for valid dimensions<br />
+if (P &lt;= 0 || Q &lt;= 0) {<br />
+printf(&#8220;Invalid dimensions. Exiting.\n&#8221;);<br />
+return 1;<br />
+}</p>
+<p>int matrix[P][Q];</p>
+<p>// Read the matrix elements<br />
+printf(&#8220;Enter the elements of the matrix:\n&#8221;);<br />
+for (int i = 0; i &lt; P; i++) {<br />
+for (int j = 0; j &lt; Q; j++) {<br />
+printf(&#8220;Enter element at position (%d, %d): &#8220;, i + 1, j + 1);<br />
+scanf(&#8220;%d&#8221;, &amp;matrix[i][j]);<br />
+}<br />
+}</p>
+<p>// Find and display the largest integer in each row<br />
+printf(&#8220;\nLargest integers in each row:\n&#8221;);<br />
+for (int i = 0; i &lt; P; i++) {<br />
+int max = matrix[i][0];</p>
+<p>for (int j = 1; j &lt; Q; j++) {<br />
+if (matrix[i][j] &gt; max) {<br />
+max = matrix[i][j];<br />
+}<br />
+}</p>
+<p>printf(&#8220;Row %d: %d\n&#8221;, i + 1, max);<br />
+}</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write a program to calculate the factorial of a given number using recursion.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>// Function to calculate factorial using recursion<br />
+int factorial(int n) {<br />
+// Base case: factorial of 0 is 1<br />
+if (n == 0 || n == 1) {<br />
+return 1;<br />
+} else {<br />
+// Recursive case: n! = n * (n-1)!<br />
+return n * factorial(n &#8211; 1);<br />
+}<br />
+}</p>
+<p>int main() {<br />
+int num;</p>
+<p>// Read the number from the user<br />
+printf(&#8220;Enter a non-negative integer: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;num);</p>
+<p>// Check for a non-negative integer<br />
+if (num &lt; 0) {<br />
+printf(&#8220;Please enter a non-negative integer.\n&#8221;);<br />
+return 1;<br />
+}</p>
+<p>// Calculate and display the factorial<br />
+printf(&#8220;Factorial of %d = %d\n&#8221;, num, factorial(num));</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program to check whether the entered word is pallindrome or not.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;<br />
+#include &lt;string.h&gt;</p>
+<p>// Function to check if a word is a palindrome<br />
+int isPalindrome(char word[]) {<br />
+int length = strlen(word);</p>
+<p>// Compare characters from both ends towards the center<br />
+for (int i = 0; i &lt; length / 2; i++) {<br />
+if (word[i] != word[length &#8211; i &#8211; 1]) {<br />
+return 0; // Not a palindrome<br />
+}<br />
+}</p>
+<p>return 1; // Palindrome<br />
+}</p>
+<p>int main() {<br />
+char word[100];</p>
+<p>// Read the word from the user<br />
+printf(&#8220;Enter a word: &#8220;);<br />
+scanf(&#8220;%s&#8221;, word);</p>
+<p>// Check if the word is a palindrome<br />
+if (isPalindrome(word)) {<br />
+printf(&#8220;%s is a palindrome.\n&#8221;, word);<br />
+} else {<br />
+printf(&#8220;%s is not a palindrome.\n&#8221;, word);<br />
+}</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>List different types of operators and explain any three of them.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C programming, operators are symbols that perform operations on operands. Here are different types of operators in C:</p>
+<p><strong>Arithmetic Operators:</strong></p>
+<p>+ (addition), &#8211; (subtraction), * (multiplication), / (division), % (modulo, gives the remainder).</p>
+<p>int a = 10, b = 3;<br />
+int sum = a + b; // Addition<br />
+int difference = a &#8211; b; // Subtraction<br />
+int product = a * b; // Multiplication<br />
+int quotient = a / b; // Division<br />
+int remainder = a % b; // Modulo</p>
+<p><strong>Relational Operators:</strong></p>
+<p>== (equal to), != (not equal to), &lt; (less than), &gt; (greater than), &lt;= (less than or equal to), &gt;= (greater than or equal to).</p>
+<p>int x = 5, y = 10;<br />
+if (x == y) {<br />
+// Equality check<br />
+}<br />
+if (x != y) {<br />
+// Not equal check<br />
+}<br />
+if (x &lt; y) {<br />
+// Less than check<br />
+}<br />
+if (x &gt; y) {<br />
+// Greater than check<br />
+}<br />
+if (x &lt;= y) {<br />
+// Less than or equal to check<br />
+}<br />
+if (x &gt;= y) {<br />
+// Greater than or equal to check<br />
+}</p>
+<p><strong>Logical Operators:</strong></p>
+<p>&amp;&amp; (logical AND), || (logical OR), ! (logical NOT).</p>
+<p>int a = 1, b = 0;<br />
+if (a &amp;&amp; b) {<br />
+// Logical AND: true if both a and b are true<br />
+}<br />
+if (a || b) {<br />
+// Logical OR: true if either a or b is true<br />
+}<br />
+if (!a) {<br />
+// Logical NOT: true if a is false<br />
+}</p>
+<p>Other types of operators include assignment operators, bitwise operators, conditional (ternary) operators, increment and decrement operators, and more.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Trace the output</p>
+<p>#include<conio.h></p>
+<p>#include<stdio.h></p>
+<p>void main(){</p>
+<p>int i =0,k;</p>
+<p>for(k=5;k>=0;k–){</p>
+<p>i=i+k;</p>
+<p>}</p>
+<p>printf(“%d\t”,i);</p>
+<p>getch();</p>
+<p>}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Iteration 1: i = 0 + 5 = 5<br />
+Iteration 2: i = 5 + 4 = 9<br />
+Iteration 3: i = 9 + 3 = 12<br />
+Iteration 4: i = 12 + 2 = 14<br />
+Iteration 5: i = 14 + 1 = 15<br />
+Iteration 6: i = 15 + 0 = 15</p>
+<p>Final value of i: 15</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Write a program to compute the sum of first 10 even numbers using function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>// Function to compute the sum of the first n even numbers<br />
+int sumOfEvenNumbers(int n) {<br />
+int sum = 0;<br />
+for (int i = 1; i &lt;= n; i++) {<br />
+// Formula to find the nth even number: 2 * n<br />
+int evenNumber = 2 * i;<br />
+sum += evenNumber;<br />
+}<br />
+return sum;<br />
+}</p>
+<p>int main() {<br />
+// Calculate the sum of the first 10 even numbers using the function<br />
+int result = sumOfEvenNumbers(10);</p>
+<p>// Display the result<br />
+printf(&#8220;Sum of the first 10 even numbers: %d\n&#8221;, result);</p>
+<p>return 0;<br />
+}</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is dynamic memory allocation? Explain with a suitable program.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Dynamic memory allocation</strong> is a process in which memory is allocated or deallocated during the execution of a program. Unlike static memory allocation, where the size of memory is determined at compile-time, dynamic memory allocation allows the program to allocate memory at runtime. In C, dynamic memory allocation is achieved using functions like malloc, calloc, realloc, and free from the &lt;stdlib.h&gt; library.</p>
+<p>#include &lt;stdio.h&gt;<br />
+#include &lt;stdlib.h&gt;</p>
+<p>int main() {<br />
+int n;</p>
+<p>// Read the number of elements from the user<br />
+printf(&#8220;Enter the number of elements: &#8220;);<br />
+scanf(&#8220;%d&#8221;, &amp;n);</p>
+<p>// Dynamically allocate memory for an integer array<br />
+int *arr = (int *)malloc(n * sizeof(int));</p>
+<p>// Check if memory allocation is successful<br />
+if (arr == NULL) {<br />
+printf(&#8220;Memory allocation failed. Exiting.\n&#8221;);<br />
+return 1;<br />
+}</p>
+<p>// Input values into the dynamically allocated array<br />
+printf(&#8220;Enter %d elements:\n&#8221;, n);<br />
+for (int i = 0; i &lt; n; i++) {<br />
+scanf(&#8220;%d&#8221;, &amp;arr[i]);<br />
+}</p>
+<p>// Display the elements of the dynamically allocated array<br />
+printf(&#8220;Elements of the array are: &#8220;);<br />
+for (int i = 0; i &lt; n; i++) {<br />
+printf(&#8220;%d &#8220;, arr[i]);<br />
+}</p>
+<p>// Dynamically deallocate the allocated memory<br />
+free(arr);</p>
+<p>return 0;<br />
+}</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write a program to initialize an array of dimension 10 and sort the numbers within the array in ascending order.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>#include &lt;stdio.h&gt;</p>
+<p>// Function to perform ascending order sorting<br />
+void sortArray(int arr[], int size) {<br />
+for (int i = 0; i &lt; size &#8211; 1; i++) {<br />
+for (int j = 0; j &lt; size &#8211; i &#8211; 1; j++) {<br />
+if (arr[j] &gt; arr[j + 1]) {<br />
+// Swap elements if they are in the wrong order<br />
+int temp = arr[j];<br />
+arr[j] = arr[j + 1];<br />
+arr[j + 1] = temp;<br />
+}<br />
+}<br />
+}<br />
+}</p>
+<p>int main() {<br />
+// Initialize an array of dimension 10<br />
+int numbers[10] = {9, 3, 5, 1, 7, 2, 8, 4, 6, 10};</p>
+<p>// Calculate the size of the array<br />
+int size = sizeof(numbers) / sizeof(numbers[0]);</p>
+<p>// Display the original array<br />
+printf(&#8220;Original array: &#8220;);<br />
+for (int i = 0; i &lt; size; i++) {<br />
+printf(&#8220;%d &#8220;, numbers[i]);<br />
+}<br />
+printf(&#8220;\n&#8221;);</p>
+<p>// Sort the array in ascending order<br />
+sortArray(numbers, size);</p>
+<p>// Display the sorted array<br />
+printf(&#8220;Sorted array in ascending order: &#8220;);<br />
+for (int i = 0; i &lt; size; i++) {<br />
+printf(&#8220;%d &#8220;, numbers[i]);<br />
+}<br />
+printf(&#8220;\n&#8221;);</p>
+<p>return 0;<br />
+}</p>
+</div>
+</body></html>

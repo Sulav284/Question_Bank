@@ -1,0 +1,468 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crypto Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>Crypto Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Answer any TWO</h2><h3>Question 1</h3>
+<div><p><p>Illustrate the concept of security policy and mechanism with an example. Differentiate between block cipher and stream cipher. Explain the process of key expansion in AES.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Security policies and mechanisms play vital roles in the realm of information security. A security policy serves as a blueprint, articulating the regulations, recommendations, and procedures that guide an organization or system in safeguarding the confidentiality, integrity, and availability of its assets. On the flip side, security mechanisms encompass the technical or procedural tools and measures implemented to uphold and reinforce these policies. To illustrate this concept, consider the following example.</p>
+<p>Example: Email Security Policy and Mechanisms</p>
+<p>&nbsp;</p>
+<p><strong>Security Policy:</strong></p>
+<p>A security policy is a statement of what is and what is not, allowed. This defines security for particular site/system. It ensures the confidentiality and integrity of email communication within the organization.</p>
+<p>i. Encryption: All sensitive and confidential emails must be encrypted during transmission.</p>
+<p>ii. Authentication: Users must authenticate themselves before accessing their email accounts.</p>
+<p>iii. Access Control: Grant appropriate access levels to different users based on their roles and responsibilities.</p>
+<p>iv. Anti-Phishing Measures: Implement mechanisms to detect and prevent phishing attacks.</p>
+<p>v. Data Retention: Define policies for the retention and disposal of email data to comply with legal and regulatory requirements.</p>
+<p>Security Mechanism:</p>
+<p>Security mechanisms deal with prevention, detection, and recovery from a security attack. Prevention involves mechanisms to prevent the computer from being damaged. Detection requires mechanisms that allow detection of when, how, and by whom an attack occurred. Recovery involves a mechanism to stop the attack, assess the damage done, and then repair the damage.</p>
+<ul style="list-style-type: square;">
+<li> Transport Layer Security (TLS): Implement TLS to encrypt email traffic during transmission, preventing unauthorized access.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Multi-Factor Authentication (MFA): Enforce MFA to enhance user authentication and prevent unauthorized access to email accounts.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Role-Based Access Control (RBAC): Use RBAC to assign specific permissions and access levels to users based on their roles within the organization.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Email Filtering and Anti-Phishing Tools: Deploy email filtering solutions to identify and block phishing attempts, malicious attachments, and suspicious links.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Archiving and Retention Systems: Implement systems for archiving and retaining email data according to the defined policies.</li>
+</ul>
+<p>Example:</p>
+<p>An employee, Alice, needs to send a confidential report to her colleague, Bob. Following the email security policy:</p>
+<p>• Alice accesses her email account using MFA.</p>
+<p>• She encrypts the email containing the confidential report using TLS.</p>
+<p>• The RBAC ensures that only authorized personnel have access to the confidential report.</p>
+<p>• The email filtering system scans outgoing emails to prevent accidental leakage of sensitive information.</p>
+<p>• The organization&#8217;s data retention policy ensures that the email is stored appropriately and retained for the required period.</p>
+<p>In this example, the security policy provides a framework for safeguarding email communication, and the security mechanisms, such as TLS, MFA, RBAC, and email filtering, are the tools that enforce and support these policies, ensuring a secure and compliant email environment within the organization.</p>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table id="table0">
+<tbody>
+<tr id="row0">
+<td id="cell0"><span class="s1">Feature</span></td>
+<td id="cell1"><span class="s1">Block</span> <span class="s1">Cip</span><span class="s3">h</span><span class="s1">er</span></td>
+<td id="cell2"><span class="s1">Str</span><span class="s3">e</span><span class="s1">am</span> <span class="s1">Ci</span><span class="s3">p</span><span class="s1">her</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0"><span class="s1">Basic</span> <span class="s1">Unit</span></td>
+<td id="cell1"><span class="s4">Opera</span><span class="s5">t</span><span class="s4">es</span> <span class="s4">on</span> <span class="s4">fixe</span><span class="s5">d</span><span class="s5">&#8211;</span><span class="s4">size</span> <span class="s4">b</span><span class="s5">l</span><span class="s4">ocks</span> <span class="s4">of</span> <span class="s4">da</span><span class="s5">t</span><span class="s4">a</span></td>
+<td id="cell2"><span class="s4">Opera</span><span class="s5">t</span><span class="s4">es</span> <span class="s4">on</span> <span class="s4">ind</span><span class="s5">i</span><span class="s4">vid</span><span class="s5">u</span><span class="s5">a</span><span class="s4">l</span> <span class="s4">bits</span> <span class="s4">or</span> <span class="s4">by</span><span class="s5">t</span><span class="s4">es</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0"><span class="s1">Proce</span><span class="s3">s</span><span class="s1">sing</span><span class="s1">Mode</span></td>
+<td id="cell1"><span class="s4">Proc</span><span class="s5">e</span><span class="s4">ss</span><span class="s5">e</span><span class="s4">s</span> <span class="s4">i</span><span class="s5">n</span><span class="s4">put</span> <span class="s4">d</span><span class="s5">a</span><span class="s4">ta</span> <span class="s4">in</span> <span class="s4">f</span><span class="s5">i</span><span class="s4">xe</span><span class="s5">d</span><span class="s4">&#8211;</span> <span class="s4">si</span><span class="s5">z</span><span class="s4">e</span> <span class="s5">b</span><span class="s4">lo</span><span class="s5">c</span><span class="s4">ks</span></td>
+<td id="cell2"><span class="s4">Proc</span><span class="s5">e</span><span class="s4">ss</span><span class="s5">e</span><span class="s4">s</span> <span class="s4">i</span><span class="s5">n</span><span class="s4">put</span> <span class="s4">d</span><span class="s5">a</span><span class="s4">ta</span> <span class="s4">o</span><span class="s5">n</span><span class="s4">e</span> <span class="s4">bit</span> <span class="s4">or</span> <span class="s4">b</span><span class="s5">y</span><span class="s4">te</span> <span class="s5">a</span><span class="s4">t</span> <span class="s4">a</span> <span class="s5">t</span><span class="s4">i</span><span class="s5">m</span><span class="s4">e</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0"><span class="s1">E</span><span class="s3">n</span><span class="s1">cryp</span><span class="s3">t</span><span class="s1">ion</span><span class="s1">Proce</span><span class="s3">s</span><span class="s1">s</span></td>
+<td id="cell1"><span class="s4">Divid</span><span class="s5">e</span><span class="s4">s</span> <span class="s4">pla</span><span class="s5">i</span><span class="s4">nt</span><span class="s5">e</span><span class="s4">xt</span> <span class="s4">in</span><span class="s5">t</span><span class="s4">o</span> <span class="s4">b</span><span class="s5">l</span><span class="s4">ocks</span> <span class="s4">and</span> <span class="s4">en</span><span class="s5">c</span><span class="s4">rypts</span> <span class="s4">ea</span><span class="s5">c</span><span class="s4">h</span><span class="s4">blo</span><span class="s5">c</span><span class="s4">k</span> <span class="s4">sep</span><span class="s5">a</span><span class="s4">rate</span><span class="s5">l</span><span class="s4">y</span></td>
+<td id="cell2"><span class="s4">Encryp</span><span class="s5">t</span><span class="s4">s</span> <span class="s4">o</span><span class="s5">n</span><span class="s4">e</span> <span class="s4">b</span><span class="s5">i</span><span class="s4">t</span> <span class="s5">o</span><span class="s4">r</span> <span class="s4">by</span><span class="s5">t</span><span class="s4">e</span> <span class="s4">of</span> <span class="s4">pl</span><span class="s5">a</span><span class="s4">in</span><span class="s5">t</span><span class="s4">e</span><span class="s5">x</span><span class="s4">t</span> <span class="s4">at</span> <span class="s4">a</span> <span class="s5">t</span><span class="s4">i</span><span class="s5">m</span><span class="s4">e</span></td>
+</tr>
+<tr id="row4">
+<td id="cell0"><span class="s1">Complex</span><span class="s3">i</span><span class="s1">ty</span></td>
+<td id="cell1"><span class="s4">Gener</span><span class="s5">a</span><span class="s4">lly</span> <span class="s5">m</span><span class="s4">ore</span> <span class="s4">co</span><span class="s5">m</span><span class="s4">pl</span><span class="s5">e</span><span class="s4">x</span> <span class="s4">due</span> <span class="s4">to</span> <span class="s4">blo</span><span class="s5">c</span><span class="s5">k</span><span class="s5">&#8211;</span><span class="s4">l</span><span class="s5">e</span><span class="s4">vel</span><span class="s4">pro</span><span class="s5">c</span><span class="s4">essing</span></td>
+<td id="cell2"><span class="s4">Typically</span> <span class="s4">simpler</span> <span class="s5">a</span><span class="s4">s</span> <span class="s4">it</span> <span class="s5">o</span><span class="s4">pe</span><span class="s5">r</span><span class="s4">ates</span> <span class="s4">on</span> <span class="s4">a</span> <span class="s4">con</span><span class="s5">t</span><span class="s4">inuous</span><span class="s5">s</span><span class="s4">t</span><span class="s5">r</span><span class="s4">eam</span> <span class="s4">of</span> <span class="s4">data</span></td>
+</tr>
+<tr id="row5">
+<td id="cell0"><span class="s1">Me</span><span class="s3">m</span><span class="s1">ory</span><span class="s1">Requirements</span></td>
+<td id="cell1"><span class="s4">May</span> <span class="s5">r</span><span class="s4">equire</span> <span class="s5">m</span><span class="s4">ore</span> <span class="s5">m</span><span class="s5">e</span><span class="s4">mo</span><span class="s5">r</span><span class="s4">y</span> <span class="s4">for</span> <span class="s4">sto</span><span class="s5">r</span><span class="s4">ing</span> <span class="s4">blo</span><span class="s5">c</span><span class="s4">ks</span><span class="s4">du</span><span class="s5">r</span><span class="s4">ing</span> <span class="s4">pro</span><span class="s5">c</span><span class="s4">essing</span></td>
+<td id="cell2"><span class="s4">Typically</span> <span class="s5">r</span><span class="s5">e</span><span class="s4">qui</span><span class="s5">r</span><span class="s4">es</span> <span class="s4">less</span> <span class="s5">m</span><span class="s5">e</span><span class="s4">mory</span> <span class="s4">as</span> <span class="s5">i</span><span class="s4">t</span> <span class="s4">pro</span><span class="s5">c</span><span class="s4">es</span><span class="s5">s</span><span class="s5">e</span><span class="s4">s</span> <span class="s4">d</span><span class="s5">a</span><span class="s4">ta</span><span class="s4">in</span> <span class="s4">a</span> <span class="s4">con</span><span class="s5">t</span><span class="s4">i</span><span class="s5">n</span><span class="s4">uous</span> <span class="s4">s</span><span class="s5">t</span><span class="s4">re</span><span class="s5">a</span><span class="s4">m</span></td>
+</tr>
+<tr id="row6">
+<td id="cell0"><span class="s1">Error</span><span class="s1">Propagat</span><span class="s3">i</span><span class="s3">o</span><span class="s1">n</span></td>
+<td id="cell1"><span class="s4">Er</span><span class="s5">r</span><span class="s4">ors</span> <span class="s4">in</span> <span class="s4">o</span><span class="s5">n</span><span class="s4">e</span> <span class="s4">b</span><span class="s5">l</span><span class="s4">ock</span> <span class="s4">af</span><span class="s5">f</span><span class="s4">ect</span> <span class="s4">only</span> <span class="s4">th</span><span class="s5">a</span><span class="s4">t</span> <span class="s5">b</span><span class="s4">lo</span><span class="s5">c</span><span class="s4">k,</span> <span class="s4">with</span><span class="s5">l</span><span class="s4">i</span><span class="s5">m</span><span class="s4">i</span><span class="s5">t</span><span class="s4">ed</span> <span class="s4">i</span><span class="s5">m</span><span class="s4">pact</span> <span class="s4">on</span> <span class="s4">subsequent</span> <span class="s4">blo</span><span class="s5">c</span><span class="s4">ks</span></td>
+<td id="cell2"><span class="s4">Er</span><span class="s5">r</span><span class="s4">ors</span> <span class="s5">m</span><span class="s4">ay</span> <span class="s4">p</span><span class="s5">r</span><span class="s4">opagate</span> <span class="s4">through</span> <span class="s4">the</span> <span class="s4">en</span><span class="s5">t</span><span class="s4">ire</span> <span class="s4">stre</span><span class="s5">a</span><span class="s4">m,</span><span class="s4">af</span><span class="s5">f</span><span class="s4">ec</span><span class="s5">t</span><span class="s4">ing</span> <span class="s4">subs</span><span class="s5">e</span><span class="s4">quent</span> <span class="s4">bi</span><span class="s5">t</span><span class="s4">s</span> <span class="s4">or</span> <span class="s4">b</span><span class="s5">y</span><span class="s4">t</span><span class="s5">e</span><span class="s4">s</span></td>
+</tr>
+<tr id="row7">
+<td id="cell0"><span class="s1">A</span><span class="s3">p</span><span class="s1">pl</span><span class="s3">i</span><span class="s1">ca</span><span class="s3">t</span><span class="s1">io</span><span class="s3">n</span><span class="s1">s</span></td>
+<td id="cell1"><span class="s4">O</span><span class="s5">f</span><span class="s4">t</span><span class="s5">e</span><span class="s4">n</span> <span class="s4">used</span> <span class="s5">i</span><span class="s4">n</span> <span class="s4">s</span><span class="s5">i</span><span class="s4">tuations</span> <span class="s5">w</span><span class="s4">he</span><span class="s5">r</span><span class="s4">e</span> <span class="s4">da</span><span class="s5">t</span><span class="s4">a</span> <span class="s4">c</span><span class="s5">a</span><span class="s4">n</span> <span class="s5">b</span><span class="s4">e</span><span class="s4">pro</span><span class="s5">c</span><span class="s4">es</span><span class="s5">s</span><span class="s4">ed</span> <span class="s4">in</span> <span class="s4">blo</span><span class="s5">c</span><span class="s4">ks,</span> <span class="s4">such</span> <span class="s5">a</span><span class="s4">s</span> <span class="s4">d</span><span class="s5">i</span><span class="s4">sk</span> <span class="s4">enc</span><span class="s5">r</span><span class="s4">yp</span><span class="s5">t</span><span class="s4">ion</span> <span class="s4">and</span><span class="s4">ne</span><span class="s5">t</span><span class="s4">work</span> <span class="s4">c</span><span class="s5">o</span><span class="s4">m</span><span class="s5">m</span><span class="s4">uni</span><span class="s5">c</span><span class="s4">a</span><span class="s5">t</span><span class="s4">i</span><span class="s5">o</span><span class="s4">n</span></td>
+<td id="cell2"><span class="s4">Sui</span><span class="s5">t</span><span class="s4">able</span> <span class="s5">f</span><span class="s4">or</span> <span class="s5">r</span><span class="s4">ea</span><span class="s5">l</span><span class="s5">&#8211;</span><span class="s4">ti</span><span class="s5">m</span><span class="s4">e</span> <span class="s4">c</span><span class="s5">o</span><span class="s4">m</span><span class="s5">m</span><span class="s4">uni</span><span class="s5">c</span><span class="s4">a</span><span class="s5">t</span><span class="s4">i</span><span class="s5">o</span><span class="s4">n</span> <span class="s4">sys</span><span class="s5">t</span><span class="s4">e</span><span class="s5">m</span><span class="s4">s,</span><span class="s4">wir</span><span class="s5">e</span><span class="s4">l</span><span class="s5">e</span><span class="s4">ss</span> <span class="s5">c</span><span class="s4">o</span><span class="s5">m</span><span class="s4">munication,</span> <span class="s5">a</span><span class="s4">nd</span> <span class="s4">sc</span><span class="s5">e</span><span class="s4">narios</span> <span class="s4">where</span> <span class="s4">data</span> <span class="s5">i</span><span class="s4">s</span><span class="s4">con</span><span class="s5">t</span><span class="s4">inuous</span><span class="s5">l</span><span class="s4">y</span> <span class="s4">gene</span><span class="s5">r</span><span class="s5">a</span><span class="s4">t</span><span class="s5">e</span><span class="s4">d</span></td>
+</tr>
+<tr id="row8">
+<td id="cell0"><span class="s1">Examples</span></td>
+<td id="cell1"><span class="s4">AES</span> <span class="s4">(Adv</span><span class="s5">a</span><span class="s4">nced</span> <span class="s4">Enc</span><span class="s5">r</span><span class="s4">y</span><span class="s5">p</span><span class="s4">t</span><span class="s5">i</span><span class="s4">on</span> <span class="s4">Stand</span><span class="s5">a</span><span class="s4">rd</span><span class="s5">)</span><span class="s4">,</span> <span class="s5">D</span><span class="s4">ES</span><span class="s4">(Data</span> <span class="s4">Encryp</span><span class="s5">t</span><span class="s4">ion</span> <span class="s4">Stand</span><span class="s5">a</span><span class="s4">rd)</span></td>
+<td id="cell2"><span class="s4">R</span><span class="s5">C</span><span class="s4">4,</span> <span class="s4">A5/1,</span> <span class="s4">Sals</span><span class="s5">a</span><span class="s4">20</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>Key expansion stands as a pivotal phase within the Advanced Encryption Standard (AES) algorithm, facilitating the transformation of the initial key into a series of round keys essential for both encryption and decryption procedures. The process of AES key expansion comprises multiple steps, with variations contingent upon the chosen key size—whether 128, 192, or 256 bits.</p>
+<p>&nbsp;</p>
+<p><strong>1. Initial Round Key:</strong></p>
+<p>The original key of 128 bits is divided into four 32-bit words (4 words x 32 bits = 128 bits).</p>
+<p>These four words become the initial round key.</p>
+<p><strong>2. Key Schedule Core:</strong></p>
+<p>For the key expansion process, a key schedule core is used. It involves three operations: RotWord, SubWord and XOR with a round constant.</p>
+<p><strong>3. SubWord Operation:</strong></p>
+<p>Each of the four words in the initial round key undergoes a SubWord operation.</p>
+<p>SubWord substitutes each byte of the word with the corresponding byte from the AES S-box (a predefined substitution table).</p>
+<p><strong>4. RotWord Operation:</strong></p>
+<p>After the SubWord operation, a RotWord operation is performed on the word.  RotWord rotates the word, shifting its bytes to the left.</p>
+<p><strong>5. XOR with Round Constant:</strong></p>
+<p>Each word is XORed with a round constant derived from the Rijndael key schedule.</p>
+<p>The round constant is a value derived from the Rcon table, which contains values used for the key expansion process.</p>
+<p><strong>6. Generation of New Words:</strong></p>
+<p>Three new 32-bit words are generated by XORing the result of the RotWord, SubWord, and XOR operations with the previous three words of the expanded key.</p>
+<p><strong>7. Repeat:</strong></p>
+<p>Steps 3-6 are repeated until the key schedule has been expanded to the required number of rounds for the specific key size (10 rounds for a 128-bit key).</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Describe the properties of hash functions. Discuss how hash value is generated using SHA-1 algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Properties of hash functions are:</p>
+<p><strong>1. Determinism:</strong> A hash function is deterministic, meaning a given input will always produce the same output.</p>
+<p><strong>2. Uniformity:</strong> A good hash function should produce uniformly distributed outputs.</p>
+<p>This means that the probability of any given work should be equal. This property is essential because it helps to avoid collisions, where different inputs produce the same result.</p>
+<p><strong>3. Non-reversibility:</strong> A hash function is non-reversible, meaning it is impossible to determine the input that produced a given output. This property is essential because it helps to ensure data security and confidentiality.</p>
+<p><strong>4. Fixed-size output:</strong> It produces a fixed-size output regardless of the input size. This property is essential because it enables efficient storage and retrieval of data.</p>
+<p><strong>5. Sensitivity to input changes:</strong> A slight change in the input to a hash function should produce a significant difference in the output. This property is essential because it helps to ensure data integrity, as even minor changes in the input will result in a different production.</p>
+<p><strong>6. Collision resistance:</strong> A good hash function should be resistant to collisions, which occur when different inputs produce the same output. Collision resistance is significant because it helps ensure data accuracy and reliability.</p>
+<p><strong>7. Speed:</strong> A hash function should be fast and efficient, as it is for real-time applications where speed is critical.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function that produces a 160-bit hash value, typically represented as a 40-character hexadecimal number. Here is how the hash value is generated using the SHA-1 algorithm:</p>
+<p>&nbsp;</p>
+<p><strong>1. Padding:</strong></p>
+<ul style="list-style-type: square;">
+<li> The input message is padded to ensure its length is congruent to 448 modulo 512.</li>
+<li> Padding involves appending a &#8216;1&#8217; bit followed by a series of &#8216;0&#8217; bits and then appending the length of the original message as a 64-bit integer.</li>
+</ul>
+<p><strong>2. Initialization:</strong></p>
+<p>SHA-1 initializes five 32-bit variables (A, B, C, D, E) with specific constant values. These variables are used as part of the processing.</p>
+<p><strong>3. Processing 512-bit Blocks:</strong></p>
+<p>The padded message is divided into 512-bit blocks. Each block is further divided into 16 32-bit words.</p>
+<p><strong>4. Round Operations:</strong></p>
+<p>SHA-1 operates in 80 rounds, each involving different bitwise operations, logical functions, and additions.</p>
+<p><strong>5. Word Expansion:</strong></p>
+<p>Each 512-bit block goes through a process called &#8220;word expansion&#8221; where the 16 words are expanded into 80 words through bitwise operations.</p>
+<p><strong>6. Main Rounds:</strong></p>
+<p>SHA-1 has three main rounds. The operations in each round are based on the majority, parity, and XOR functions.</p>
+<p>Round 1: F (B, C, D) = (B AND C) OR ((NOT B) AND D) Round 2: G (B, C, D) = B XOR C XOR D Round 3: H (B, C, D) = (B AND C) OR (B AND D) OR (C AND D)</p>
+<p><strong>7. Update Variables:</strong></p>
+<p>After each round, the variables A, B, C, D, and E are updated based on the results of the operations.</p>
+<p><strong>8. Final Hash Value:</strong></p>
+<p>The final hash value is obtained by concatenating the variables A, B, C, D, and E in that order.</p>
+<p>&nbsp;</p>
+<p>Each round of SHA-1 involves different constants and different operations on the variables. The variables A, B, C, D and E are updated after each processing.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Show that Z 5is a field. John publishes the ElGamal public key (q, α, YA) =(101, 2, 14). Jane desired to send the secret message CSIT to John. Using the equivalence A = 0, B=1, … , Z=25, encrypt the message using John’s public key. Use a random number k = 4.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To show that Z 5is a field, we need to demonstrate that it satisfies the following properties:</p>
+<p>&nbsp;</p>
+<p><strong>1. Closure under Addition and Multiplication:</strong></p>
+<p>For any a, b in Z5 :</p>
+<p>i. a + b ≡ c (mod 5) where c is an integer in the range 0 to 4.</p>
+<p>ii. a · b ≡ d (mod 5) where d is an integer in the range 0 to 4.</p>
+<p>&nbsp;</p>
+<p><strong>2. Associativity of Addition and multiplication For any a, b, c in Z5 :</strong></p>
+<p>i. (a + b) + c ≡ a + (b + c) (mod 5).</p>
+<p>ii. (a · b) · c ≡ a · (b · c)</p>
+<p>&nbsp;</p>
+<p><strong>3. Existence of Additive and Multiplicative Identity:</strong></p>
+<p>There exist element 0 and 1 in Z 5 such that:</p>
+<p>i. a + 0 ≡ a (mod 5) for any a in Z5 .</p>
+<p>ii. a · 1 ≡ a (mod 5) for any a in Z5 .</p>
+<p>&nbsp;</p>
+<p><strong>4. Existence of Additive and Multiplicative Inverse.</strong></p>
+<p>For any a in Z5 .</p>
+<p>i. There exists –a in Z 5 such that a +(– a) ≡ 0(mod 5) a + (– a) ≡ 0 (mod 5).</p>
+<p>ii. For any a in Z 5 (except 0), there exists a –1 in Z 5 such that a · a –1 ≡ 1 ( mod 5).</p>
+<p>&nbsp;</p>
+<p><strong>5. Commutative of Addition and Multiplication:</strong></p>
+<p>i. a + b ≡ b + a</p>
+<p>ii. a · b ≡ b · a</p>
+<p>All these properties show that Z 5 is a field.</p>
+<p>Solution:</p>
+<p>In the ElGamal encryption the public key is denoted as (q, α, YA ) where,</p>
+<ul style="list-style-type: square;">
+<li> q is a prime number,</li>
+<li>α is a primitive root modulo q,</li>
+<li>Y A is the public key corresponding to John’s public key.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Step 1:</strong></p>
+<p>Represent the message &#8220;CSIT&#8221; as a sequence of numbers using the equivalence A=0,</p>
+<p>B=1, &#8230; , Z=25 as:</p>
+<p>C = 2, S = 18, I = 8, T = 19.</p>
+<p><strong>Step 2:</strong></p>
+<ul style="list-style-type: square;">
+<li>Choose a random number k = 4.</li>
+<li> Compute C 1 – α k mod q.</li>
+<li>Compute C 2 = (Y A k · M) mod q, where M is the numerical representation of the character</li>
+</ul>
+<p>Now,</p>
+<p><strong>For &#8220;C&#8221;</strong></p>
+<ul style="list-style-type: square;">
+<li> C 1 = 2 4 mod 101 = 16.</li>
+<li> C 2 = (14 4 · 2) mod 101 = 56.</li>
+</ul>
+<p><strong>For &#8220;S&#8221;:</strong></p>
+<ul style="list-style-type: square;">
+<li>C 1 = 24 mod 101 = 16 (same random k).</li>
+<li> C 2 = (14 4 · 18) mod 101 = 82.</li>
+</ul>
+<p><strong>For &#8220;I&#8221;:</strong></p>
+<p>C 1 = 24 mod 101 = 16.</p>
+<p>C 2 = (14 4 · 8) mod 101 = 37.</p>
+<p><strong>For &#8220;T&#8221;:</strong></p>
+<p>C 1 = 2 4 mod 101 = 16.</p>
+<p>C 2 = (14 4 · 19) mod 101 = 92.</p>
+<p>&nbsp;</p>
+<p>So, the cipher text pairs for the message <strong>CSIT</strong> are:</p>
+<p>(C1 , C2 ) = {(16,56), (16,82), (16,37), (16,92)}.</p>
+</div>
+<h2>Group B: Answer any EIGHT</h2><h3>Question 4</h3>
+<div><p><p>Differentiate between Trojan horse and virus. Describe any two types of intruders.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table id="table0">
+<tbody>
+<tr id="row0">
+<td id="cell0"><span class="s1">Feature</span></td>
+<td id="cell1"><span class="s1">Trojan</span> <span class="s1">Horse</span></td>
+<td id="cell2"><span class="s1">Virus</span></td>
+</tr>
+<tr id="row1">
+<td id="cell0"><span class="s1">Nature</span></td>
+<td id="cell1"><span class="s3">No</span><span class="s4">n</span><span class="s4">&#8211;</span><span class="s3">se</span><span class="s4">l</span><span class="s4">f</span><span class="s4">&#8211;</span><span class="s3">r</span><span class="s4">e</span><span class="s4">p</span><span class="s3">l</span><span class="s4">i</span><span class="s3">cating</span> <span class="s4">m</span><span class="s3">a</span><span class="s4">l</span><span class="s3">icious</span> <span class="s3">software</span> <span class="s3">d</span><span class="s4">i</span><span class="s4">s</span><span class="s3">guis</span><span class="s4">e</span><span class="s3">d</span> <span class="s3">as</span><span class="s3">l</span><span class="s4">e</span><span class="s3">gi</span><span class="s4">t</span><span class="s3">i</span><span class="s4">m</span><span class="s3">a</span><span class="s4">t</span><span class="s3">e</span> <span class="s3">software.</span></td>
+<td id="cell2"><span class="s3">Sel</span><span class="s4">f</span><span class="s4">&#8211;</span><span class="s3">r</span><span class="s4">e</span><span class="s3">p</span><span class="s4">l</span><span class="s3">i</span><span class="s4">c</span><span class="s4">a</span><span class="s3">ting</span> <span class="s4">m</span><span class="s3">a</span><span class="s4">l</span><span class="s3">i</span><span class="s4">c</span><span class="s3">io</span><span class="s4">u</span><span class="s3">s</span> <span class="s3">code</span> <span class="s3">that</span> <span class="s3">a</span><span class="s4">t</span><span class="s3">t</span><span class="s4">a</span><span class="s3">ches</span> <span class="s4">i</span><span class="s3">tself</span><span class="s3">to</span> <span class="s3">host</span> <span class="s4">f</span><span class="s3">iles</span> <span class="s3">or</span> <span class="s3">pro</span><span class="s4">g</span><span class="s3">ra</span><span class="s4">m</span><span class="s3">s.</span></td>
+</tr>
+<tr id="row2">
+<td id="cell0"><span class="s1">Repli</span><span class="s6">c</span><span class="s1">a</span><span class="s6">t</span><span class="s1">ion</span></td>
+<td id="cell1"><span class="s3">Does</span> <span class="s3">not</span> <span class="s4">r</span><span class="s3">e</span><span class="s4">p</span><span class="s3">l</span><span class="s4">i</span><span class="s3">cate</span> <span class="s3">on</span> <span class="s3">its</span> <span class="s3">own.</span></td>
+<td id="cell2"><span class="s3">Repl</span><span class="s4">i</span><span class="s3">cates</span> <span class="s4">b</span><span class="s3">y</span> <span class="s3">a</span><span class="s4">t</span><span class="s3">taching</span> <span class="s3">itse</span><span class="s4">l</span><span class="s3">f</span> <span class="s3">to</span> <span class="s4">o</span><span class="s3">th</span><span class="s4">e</span><span class="s3">r</span> <span class="s3">prog</span><span class="s4">r</span><span class="s3">a</span><span class="s4">m</span><span class="s3">s</span> <span class="s3">or</span><span class="s4">f</span><span class="s3">i</span><span class="s4">l</span><span class="s3">es.</span></td>
+</tr>
+<tr id="row3">
+<td id="cell0"><span class="s1">Me</span><span class="s6">t</span><span class="s1">hod</span> <span class="s1">of</span><span class="s1">Spread</span></td>
+<td id="cell1"><span class="s3">Gener</span><span class="s4">a</span><span class="s3">lly</span> <span class="s3">requires</span> <span class="s3">u</span><span class="s4">s</span><span class="s3">er</span> <span class="s3">in</span><span class="s4">t</span><span class="s4">e</span><span class="s3">r</span><span class="s4">a</span><span class="s3">ction</span> <span class="s3">to</span> <span class="s3">execut</span><span class="s4">e</span><span class="s3">.</span></td>
+<td id="cell2"><span class="s3">Spre</span><span class="s4">a</span><span class="s3">ds</span> <span class="s3">aut</span><span class="s4">o</span><span class="s4">m</span><span class="s3">a</span><span class="s4">t</span><span class="s3">i</span><span class="s4">c</span><span class="s3">ally</span> <span class="s3">through</span> <span class="s3">infe</span><span class="s4">c</span><span class="s3">t</span><span class="s4">e</span><span class="s3">d</span> <span class="s3">files</span> <span class="s3">or</span><span class="s3">progra</span><span class="s4">m</span><span class="s3">s.</span></td>
+</tr>
+<tr id="row4">
+<td id="cell0"><span class="s1">Purpose</span></td>
+<td id="cell1"><span class="s3">Typically</span> <span class="s3">used</span> <span class="s3">to</span> <span class="s3">create</span> <span class="s3">backdoo</span><span class="s4">r</span><span class="s3">s,</span> <span class="s4">s</span><span class="s3">t</span><span class="s4">e</span><span class="s3">al</span><span class="s3">infor</span><span class="s4">m</span><span class="s4">a</span><span class="s3">t</span><span class="s4">i</span><span class="s3">on,</span> <span class="s3">or</span> <span class="s3">pe</span><span class="s4">r</span><span class="s3">form</span> <span class="s3">ot</span><span class="s4">h</span><span class="s3">er</span> <span class="s4">m</span><span class="s3">a</span><span class="s4">l</span><span class="s3">i</span><span class="s4">c</span><span class="s3">ious</span> <span class="s3">act</span><span class="s4">i</span><span class="s3">o</span><span class="s4">n</span><span class="s3">s.</span></td>
+<td id="cell2"><span class="s3">Designed</span> <span class="s4">t</span><span class="s3">o</span> <span class="s3">cau</span><span class="s4">s</span><span class="s3">e</span> <span class="s3">harm</span> <span class="s4">t</span><span class="s3">o</span> <span class="s3">da</span><span class="s4">t</span><span class="s3">a,</span> <span class="s3">software,</span> <span class="s3">or</span> <span class="s3">the</span><span class="s3">system</span> <span class="s3">i</span><span class="s4">t</span><span class="s3">se</span><span class="s4">l</span><span class="s3">f.</span></td>
+</tr>
+<tr id="row5">
+<td id="cell0"><span class="s1">Vis</span><span class="s6">i</span><span class="s1">bility</span> <span class="s1">to</span><span class="s1">us</span><span class="s6">e</span><span class="s1">r</span></td>
+<td id="cell1"><span class="s3">O</span><span class="s4">f</span><span class="s3">t</span><span class="s4">e</span><span class="s3">n</span> <span class="s3">dis</span><span class="s4">g</span><span class="s3">u</span><span class="s4">i</span><span class="s3">sed</span> <span class="s4">a</span><span class="s3">s</span> <span class="s3">l</span><span class="s4">e</span><span class="s4">g</span><span class="s3">it</span><span class="s4">i</span><span class="s4">m</span><span class="s3">a</span><span class="s4">t</span><span class="s3">e</span> <span class="s3">or</span> <span class="s3">useful</span> <span class="s3">softwar</span><span class="s4">e</span><span class="s3">.</span></td>
+<td id="cell2"><span class="s3">May</span> <span class="s3">be</span> <span class="s3">no</span><span class="s4">t</span><span class="s3">i</span><span class="s4">c</span><span class="s3">eab</span><span class="s4">l</span><span class="s3">e</span> <span class="s3">th</span><span class="s4">r</span><span class="s3">o</span><span class="s4">u</span><span class="s3">gh</span> <span class="s3">the</span> <span class="s3">pr</span><span class="s4">e</span><span class="s4">se</span><span class="s3">nce</span> <span class="s3">of</span><span class="s3">unexpe</span><span class="s4">c</span><span class="s3">ted</span> <span class="s3">behavi</span><span class="s4">o</span><span class="s3">r,</span> <span class="s4">f</span><span class="s3">i</span><span class="s4">l</span><span class="s3">e</span> <span class="s3">s</span><span class="s4">i</span><span class="s4">z</span><span class="s3">e</span> <span class="s3">chang</span><span class="s4">e</span><span class="s3">s,</span> <span class="s3">or</span> <span class="s3">sys</span><span class="s4">t</span><span class="s3">em</span><span class="s3">slowdowns.</span></td>
+</tr>
+<tr id="row6">
+<td id="cell0"><span class="s1">Act</span><span class="s6">i</span><span class="s1">vat</span><span class="s6">i</span><span class="s1">on</span></td>
+<td id="cell1"><span class="s3">Act</span><span class="s4">i</span><span class="s3">vated</span> <span class="s4">w</span><span class="s3">hen</span> <span class="s3">the</span> <span class="s3">user</span> <span class="s3">runs</span> <span class="s3">the</span> <span class="s3">infec</span><span class="s4">t</span><span class="s3">ed</span> <span class="s3">p</span><span class="s4">r</span><span class="s4">o</span><span class="s3">gr</span><span class="s4">a</span><span class="s4">m</span><span class="s3">.</span></td>
+<td id="cell2"><span class="s3">Act</span><span class="s4">i</span><span class="s3">vated</span> <span class="s4">w</span><span class="s3">hen</span> <span class="s3">the</span> <span class="s3">inf</span><span class="s4">e</span><span class="s3">c</span><span class="s4">t</span><span class="s3">ed</span> <span class="s3">file</span> <span class="s4">o</span><span class="s3">r</span> <span class="s3">prog</span><span class="s4">r</span><span class="s3">am</span> <span class="s3">is</span><span class="s4">e</span><span class="s3">xecu</span><span class="s4">t</span><span class="s3">ed.</span></td>
+</tr>
+<tr id="row7">
+<td id="cell0"><span class="s1">Examples</span></td>
+<td id="cell1"><span class="s3">Sub7,</span> <span class="s3">Zeus,</span> <span class="s3">Back</span> <span class="s3">Orifi</span><span class="s4">c</span><span class="s3">e.</span></td>
+<td id="cell2"><span class="s3">Me</span><span class="s4">l</span><span class="s3">issa,</span> <span class="s3">I</span><span class="s4">L</span><span class="s3">O</span><span class="s4">V</span><span class="s3">EYOU,</span> <span class="s3">Code</span> <span class="s4">R</span><span class="s3">ed.</span></td>
+</tr>
+<tr id="row8">
+<td id="cell0"><span class="s1">Payload</span><span class="s1">Del</span><span class="s6">i</span><span class="s1">very</span><span class="s1">Me</span><span class="s6">t</span><span class="s1">hod</span></td>
+<td id="cell1"><span class="s3">Gener</span><span class="s4">a</span><span class="s3">lly</span> <span class="s4">d</span><span class="s3">e</span><span class="s4">l</span><span class="s3">ivered</span> <span class="s4">t</span><span class="s4">h</span><span class="s3">rough</span> <span class="s3">soc</span><span class="s4">i</span><span class="s4">a</span><span class="s3">l</span> <span class="s3">eng</span><span class="s4">i</span><span class="s4">n</span><span class="s3">ee</span><span class="s4">r</span><span class="s3">ing,</span><span class="s3">en</span><span class="s4">t</span><span class="s3">i</span><span class="s4">c</span><span class="s3">ing</span> <span class="s3">use</span><span class="s4">r</span><span class="s3">s</span> <span class="s3">to</span> <span class="s4">d</span><span class="s3">o</span><span class="s4">w</span><span class="s3">nlo</span><span class="s4">a</span><span class="s3">d</span> <span class="s3">and</span> <span class="s3">execute</span> <span class="s3">the</span><span class="s4">m</span><span class="s3">a</span><span class="s4">l</span><span class="s3">i</span><span class="s4">c</span><span class="s3">io</span><span class="s4">u</span><span class="s3">s</span> <span class="s3">fil</span><span class="s4">e</span><span class="s3">.</span></td>
+<td id="cell2"><span class="s3">Typically</span> <span class="s3">spreads</span> <span class="s4">t</span><span class="s4">h</span><span class="s3">rough</span> <span class="s3">infec</span><span class="s4">t</span><span class="s3">ed</span> <span class="s3">e</span><span class="s4">m</span><span class="s3">a</span><span class="s4">i</span><span class="s3">l</span><span class="s3">a</span><span class="s4">t</span><span class="s3">t</span><span class="s4">a</span><span class="s3">c</span><span class="s4">h</span><span class="s4">m</span><span class="s3">en</span><span class="s4">t</span><span class="s3">s,</span> <span class="s3">sha</span><span class="s4">r</span><span class="s3">ed</span> <span class="s3">fil</span><span class="s4">e</span><span class="s3">s,</span> <span class="s3">or</span> <span class="s3">co</span><span class="s4">m</span><span class="s3">pr</span><span class="s4">o</span><span class="s4">m</span><span class="s3">is</span><span class="s4">e</span><span class="s3">d</span> <span class="s3">websi</span><span class="s4">t</span><span class="s3">es.</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>The two types of intruders are:</p>
+<p><strong>i. Masquerader: </strong></p>
+<p>The category of individuals that are not authorized to use the system but still exploit users’ privacy and confidential information by possessing techniques that give them control over the system, such category of intruders is referred to as Masquerader. Masqueraders are outsiders and hence they don’t have direct access to the system, their aim is to attack unethically to steal data/ information.</p>
+<p><strong>ii. Misfeasor:</strong></p>
+<p>The category of individuals that are authorized to use the system, but misuse the granted access and privilege. These are individuals that take undue advantage of the permissions and access given to them, such category of intruders is referred to as Misfeasor. Misfeasors are insiders and they have direct access to the system, which they aim to attack unethically for stealing data/ information.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>The message “IMOGUN” was encrypted with a Playfair cipher using keyword “GALOIS”. Decrypt the message.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To decrypt the message ―IMOGUN using the keyword ―GALOIS, we need to make matrix using the keyword:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 28.2958%; height: 113px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>G</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>A</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>L</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>O</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>I/J</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>S</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>B</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>C</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>D</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>E</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>F</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>H</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>K</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>M</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>N</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>P</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Q</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>R</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>T</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>U</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px; text-align: center;"><strong>V</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>W</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>X</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Y</strong></td>
+<td style="width: 20%; height: 24px; text-align: center;"><strong>Z</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, break the encrypt message into pairs:</p>
+<p><strong>IM  OG UN<br />
+</strong><strong>ON  LI   NE<br />
+</strong></p>
+<p>Hence the decrypted text is ONLINE.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How encryption is done using IDEA algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>IDEA (International Data Encryption Algorithm) is a symmetric key block cipher that operates on 64-bit blocks of data using a 128-bit key. The algorithm consists of multiple rounds (typically 64 rounds for a 128-bit key) of substitution, permutation, and modular arithmetic operations. Here&#8217;s a simplified overview of the encryption process in IDEA:</p>
+<p>&nbsp;</p>
+<p><strong>Key Expansion:</strong></p>
+<ul style="list-style-type: square;">
+<li>Subkey Generation:
+<ul style="list-style-type: square;">
+<li>The 128-bit key is divided into eight 16-bit subkeys: K1, K2, &#8230;, K8.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Encryption Rounds (64 Rounds for a 128-bit Key):</strong></p>
+<ul style="list-style-type: square;">
+<li>For each 64-bit block of plaintext (divided into four 16-bit blocks: X1, X2, X3, X4), the following operations are performed in each round:
+<ul style="list-style-type: square;">
+<li><strong>Substitution (S-Box):</strong>
+<ul style="list-style-type: square;">
+<li>Each 16-bit block is substituted using a 16&#215;16 substitution box (S-Box). The S-Box replaces each 4-bit nibble with another using a specific lookup table.</li>
+</ul>
+</li>
+<li><strong>Permutation (P-Box):</strong>
+<ul style="list-style-type: square;">
+<li>The 64-bit block undergoes a permutation (P-Box) operation that shuffles the bits based on a predefined pattern.</li>
+</ul>
+</li>
+<li><strong>Key Mixing:</strong>
+<ul style="list-style-type: square;">
+<li>The current 64-bit block is mixed with a subkey (Ki) using bitwise XOR.</li>
+</ul>
+</li>
+<li><strong>Modular Addition and Multiplication:</strong>
+<ul style="list-style-type: square;">
+<li>Modular addition and multiplication operations are performed on the 64-bit block. Modular addition involves adding the result of the previous steps to the next 64-bit block. Modular multiplication involves multiplying the result by the next 64-bit block.</li>
+</ul>
+</li>
+<li><strong>Round Keys:</strong>
+<ul style="list-style-type: square;">
+<li>The subkeys are used in a specific order for each round, and they are combined with the data in different ways.</li>
+<li></li>
+</ul>
+</li>
+<li><strong>Final Round:</strong>
+<ul style="list-style-type: square;">
+<li>After 64 rounds, a final permutation is applied to the data, resulting in the final encrypted block.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Describe the services provided by Pretty Good Privacy protocol to secure email.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>PGP (Pretty Good Privacy) is a data encryption and decryption program that provides cryptographic privacy and authentication for data communication. It is primarily used for securing email communication. PGP offers a range of services to secure email, ensuring the confidentiality, integrity, and authenticity of the messages.</p>
+<p>Here are the key services provided by PGP:</p>
+<p><strong>Encryption:</strong></p>
+<p>PGP uses asymmetric key cryptography to encrypt the content of emails. Each user has a pair of public and private keys. The public key is used for encryption, while the private key is used for decryption. When someone sends an email to a recipient, they encrypt the message using the recipient&#8217;s public key, ensuring that only the recipient with the corresponding private key can decrypt and read the message.</p>
+<p><strong>Digital Signatures:</strong></p>
+<p>PGP enables users to sign their emails using their private key. This creates a digital signature that provides authentication and verifies the origin of the message. Recipients can use the sender&#8217;s public key to verify the signature, ensuring that the email has not been altered in transit and that it indeed comes from the claimed sender.</p>
+<p><strong>Key Management:</strong></p>
+<p>PGP includes a key management system to handle the distribution, storage, and revocation of public keys. Users can exchange public keys through key servers or other secure methods. PGP also supports key revocation, allowing users to mark their keys as invalid if they are compromised or no longer in use.</p>
+<p><strong>Web of Trust:</strong></p>
+<p>PGP incorporates a decentralized trust model known as the &#8220;Web of Trust.&#8221; Users can authenticate the ownership of public keys by signing them with their private keys. This creates a network of trust, where users can trust the keys of others based on the endorsements from people they trust.</p>
+<p><strong>Compatibility:</strong> PGP is compatible with various email clients and platforms, making it widely applicable for securing email communication across different systems. It supports both text-based and MIME-encoded emails.</p>
+<p><strong>Compatibility with OpenPGP:</strong> PGP is an implementation of the OpenPGP standard, ensuring interoperability with other OpenPGP-compliant systems and tools. This allows users to communicate securely with individuals using different PGP implementations.</p>
+<p><strong>Secure Key Generation:</strong> PGP provides a secure key generation process, ensuring that the keys generated are sufficiently random and secure. This is crucial for the overall strength of the encryption.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define challenge response system. Why do we need Kerberos?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A challenge-response system is a security mechanism designed to authenticate users or systems by presenting a challenge and expecting a valid response. This method is commonly used in authentication processes to fortify security measures. The fundamental purpose is to validate that the entity seeking authentication possesses specific knowledge or capabilities that are not easily replicated or intercepted by unauthorized parties.</p>
+<p>By requiring a correct response to a unique challenge, this system adds an extra layer of protection, ensuring a more robust and secure authentication process.</p>
+<p>Kerberos is a widely used network authentication protocol that provides secure authentication for users and systems in a networked environment. Here are several reasons why Kerberos is essential:</p>
+<p>&nbsp;</p>
+<p>Single Sign-On (SSO):</p>
+<p>Kerberos enables single sign-on, allowing users to authenticate once and obtain tickets that can be used to access various network services without the need to re-enter credentials. This improves user convenience and simplifies the authentication process. Centralized Authentication:</p>
+<p>Kerberos operates on a client-server model with a centralized authentication server. This centralization enhances security by providing a single point for authentication and reducing the need for distributed password databases.</p>
+<p><strong>Mutual Authentication:</strong></p>
+<p>Kerberos ensures mutual authentication between users and services. Both the user and the service authenticate each other, reducing the risk of man-in-the-middle attacks. Ticket-Based Authentication:</p>
+<p>Authentication in Kerberos is based on tickets. When a user authenticates, they receive a ticket that can be presented to access various services without re-entering credentials. This ticket is time-limited, enhancing security.</p>
+<p><strong>Secure Communication:</strong></p>
+<p>Kerberos uses encryption to secure the communication between clients and servers. This ensures the confidentiality and integrity of authentication information and other sensitive data exchanged in the network.</p>
+<p><strong>Authorization:</strong></p>
+<p>Kerberos tickets can include information about the user&#8217;s authorization level. This information is used by services to determine what actions the user is permitted to perform, enhancing access control.</p>
+<p><strong>Scalability:</strong></p>
+<p>Kerberos is scalable and suitable for large network environments. It efficiently handles authentication requests, making it well-suited for enterprises with numerous users and services.</p>
+<p><strong>Interoperability:</strong></p>
+<p>Kerberos is a widely adopted standard, making it interoperable with various operating systems and applications. It is supported by major platforms, including Windows, Unix, Linux, and macOS.</p>
+<p><strong>Reduced Password Exposure:</strong> Since users authenticate once to obtain tickets, there is a reduced need for entering passwords multiple times. This minimizes the risk of password exposure due to keyloggers or other password interception methods.</p>
+<p><strong>Support for Cross-Realm Authentication:</strong> Kerberos supports cross-realm authentication, allowing users from different Kerberos realms to authenticate and access resources across realms securely.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How direct digital signature different from arbitrated digital signature? How digital signature generation and verification is done using RSA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28125" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/Image-from-Crypto-2079-solution-page-14.png?resize=788%2C549&#038;ssl=1" alt="" width="788" height="549"></p>
+<p><strong>RSA encryption/decryption</strong> can be used to generate and verify digital signatures. Digital signatures ensure the authenticity and integrity of a message or document. They also allow the receiver to verify that the message or document has not been tampered with since it was signed.</p>
+<p><strong>Digital Signature Generation</strong></p>
+<p><strong>1. Hashing:</strong> The message or document is first hashed using a secure hash function, such as SHA-256. The hash value is a unique fingerprint of the message or document.</p>
+<p><strong>2. Encryption:</strong> The hash value is then encrypted using the signer&#8217;s private key. The encrypted hash value is the digital signature.</p>
+<p><strong>Digital Signature Verification</strong></p>
+<p><strong>1. Decryption:</strong> The receiver decrypts the digital signature using the signer&#8217;s public key. This recovers the hash value.</p>
+<p><strong>2. Hashing:</strong> The receiver hashes the received message or document using the same hash function as the signer.</p>
+<p><strong>3. Comparison:</strong> The receiver compares the recovered hash value from the signature decryption to the hash value calculated from the received message or document. If the two hash values match, then the signature is valid and the message or document has not been tampered with.</p>
+<p><strong>Example:</strong></p>
+<p>Alice wants to send a message to Bob with a digital signature.</p>
+<p>1. Alice hashes the message using SHA-256.</p>
+<p>2. Alice encrypts the hash value using her private key. This is the digital signature.</p>
+<p>3. Alice sends the message and the signature to Bob.</p>
+<p>4. Bob decrypts the signature using Alice&#8217;s public key. This recovers the hash value.</p>
+<p>5. Bob hashes the received message using SHA-256.</p>
+<p>6. Bob compares the recovered hash value from the signature decryption to the hash value calculated from the received message. If the two hash values match, then the signature is valid and the message has not been tampered with.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Why do we need discrete logarithm over normal logarithm? Find out whether 3 is primitive root of 7 or not.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We need discrete logarithm over normal logarithm because of the following:</p>
+<p><strong>Computational hardness:</strong> Discrete logarithms are computationally difficult to solve, while normal logarithms are relatively easy to compute. This makes discrete logarithms more suitable for cryptographic applications.</p>
+<p><strong>Applicability:</strong> Discrete logarithms are specifically designed for finite groups, while normal logarithms are applicable to a wider range of mathematical contexts.</p>
+<p><strong>Security:</strong> Discrete logarithms are preferred over normal logarithms in cryptography due to their computational hardness, which is crucial for ensuring the security of communication protocols and digital signatures.</p>
+<p><strong>Second part:</strong></p>
+<p>To find if 3 is primitive root of 7 or not, we calculate the powers of 3 mod 7 Now,</p>
+<p>3 1 ≡ 3 (mod 7)</p>
+<p>3 2 ≡ 2 (mod 7)</p>
+<p>3 3 ≡ 6 (mod 7)</p>
+<p>3 4 ≡ 4 (mod 7)</p>
+<p>35 ≡ 5 (mod 7)</p>
+<p>3 6 ≡ 1 (mod 7)</p>
+<p>So, the powers of 3 mod 7 generates all the nonzero residues modulo 7 so 3 is a primitive root of 7.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Which one is more secure, monoalphabetic cipher or poly alphabetic cipher? Justify. Using rail fence cipher encrypt the text “LEARNING AND TEACHING ARE DIFFERENT” using 3 as rails.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Polyalphabetic ciphers are more secure than monoalphabetic ciphers. This is because monoalphabetic ciphers have a number of weaknesses that can be exploited to break them. One weakness of monoalphabetic ciphers is that they do not disguise the frequency of letters in the plaintext.</p>
+<p>This means that an attacker can use frequency analysis to identify the most common letters in the plaintext and then use this information to guess the plaintext. For example, in English, the most common letter is &#8220;e&#8221;, so an attacker could guess that any cipher text letter that appears most frequently is the cipher text for &#8220;e&#8221;.</p>
+<p>Another weakness of monoalphabetic ciphers is that they can be broken with relatively little cipher text. This is because the attacker can use statistical techniques to identify patterns in the cipher text that can be used to guess the plaintext. For example, an attacker could look for patterns in the lengths of words in the cipher text and then use this information to guess the lengths of words in the plaintext.</p>
+<p>Polyalphabetic ciphers do not have these weaknesses. This is because they use multiple alphabets to encrypt the plaintext. This means that the frequency of letters in the plaintext is not disguised in any one cipher text alphabet, and it is therefore much more difficult for an attacker to use frequency analysis to break the cipher. Additionally, polyalphabetic ciphers can be broken only with a large amount of cipher text. This is because the attacker needs to identify all of the different alphabets that are used to encrypt the plaintext before they can start to guess the plaintext.</p>
+<p>As a result of these weaknesses, monoalphabetic ciphers are no longer considered to be secure and are not used in practice. Polyalphabetic ciphers are much more secure and are widely used in modern cryptography.</p>
+<p><strong>Second Part</strong></p>
+<p>The Rail Fence Cipher is a transposition cipher that works by writing the message in a zigzag pattern across a number of rows. In this case, you want to encrypt the text &#8220;LEARNING AND TEACHING ARE DIFFERENT&#8221; using 3 rails. Original Text: LEARNING AND TEACHING ARE DIFFERENT</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28130" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_28421.png?resize=800%2C600&#038;ssl=1" alt="" width="800" height="600"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is the condition of for two integers, x and y, to be relatively prime? Find whether 61 is prime or not using Miller-Rabin algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Two integers, x and y, are said to be relatively prime (or coprime) if the greatest common divisor (GCD) of x and y is equal to 1.</p>
+<p>In mathematical term, the condition for two integers x and y to be relatively prime is: GDC(x, y) = 1</p>
+<p><strong>Solution:</strong></p>
+<p>To check the number 61 is prime or not lets choose a random a such that 2 ≤ a ≤ 59. Let’s choose a = 2</p>
+<p>Now, 2 60 mod 61 = 1</p>
+<p>Since, 2 60 mod 61 is congruent to 1, the result says that 61 might be prime.</p>
+</div>
+</body></html>

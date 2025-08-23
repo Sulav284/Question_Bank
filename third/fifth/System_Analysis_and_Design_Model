@@ -1,0 +1,329 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Model question I 0</title>
+    </head>
+    <body>
+        <h1>SAD Model question I - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the modern approach to system analysis and design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System analysis and design are the complex, challenging, and simulating organization processes that a team of business and system professionals uses to develop and maintain computer-based information systems. It is an organizational improvement process. Information systems are built and rebuilt for their benefit.</p>
+<p>1. <strong>Joint Application Design (JAD) :</strong></p>
+<p>JAD is a structured process in which users, managers and analysts work together for several days in a series of intensive meetings to specify or review system requirements. It is a management process – a people process – which allows IS to work more effectively with users in a shorter time frame. Because of bringing the people directly affected by the system in one place and time, time and organizational resources are better managed. Also, group members develop a shared understanding of what the system is supposed to do. The JAD process also includes approaches for enhancing user participation, expediting development, and improving the quality of specifications.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-39058 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/jad.drawio.png?resize=436%2C257&amp;ssl=1" alt="- Hamro CSIT" width="436" height="257" data-recalc-dims="1" /></p>
+<p>fig : Joint Application Design</p>
+<p><strong>Advantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>JAD decreases time and costs associated with requirements elicitation process.</li>
+<li>Creative idea production and improved user ownership of the system.</li>
+<li>Rapid development of systems.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>JAD requires a large block of time to be available for all session participants.</li>
+<li>Requires significant planning, scheduling effort and stakeholder commitment of time and effort.</li>
+<li>Requires trained and experienced personnel for facilitation and recording.</li>
+</ul>
+<p>2. <strong>Agile model</strong> :</p>
+<p>This model is an intuitive approach to the waterfall model. Multiple development cycles take place here, making the life cycle a “multi-waterfall” cycle. Cycles are divided up into smaller, more easily managed iterations. Each iteration passes through the requirements, design, implementation and testing phases. A working version ofsoftware is produced during the first iteration,so you have working software early on during the software life cycle. Subsequent iterations build on the initial software produced during the first iteration.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-39062 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Agile.drawio.png?resize=262%2C225&amp;ssl=1" alt="- Hamro CSIT" width="262" height="225" data-recalc-dims="1" /></p>
+<p>fig : Agile development Model</p>
+<p><strong>Advantages : </strong></p>
+<ul style="list-style-type: square;">
+<li>In this model customer can respond to each built.</li>
+<li>More flexible – less costly to change scope and requirements.</li>
+<li>Easier to test and debug during a smaller iteration and manage risk because risky pieces are identified and handled during it’s iteration.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Total cost is higher than waterfall.</li>
+<li>Needs a clear and complete definition of the whole system before it can be broken down and built incrementally.</li>
+</ul>
+<p><strong>Prototyping</strong> <strong>: </strong></p>
+<p>Prototyping is an iterative process of systems development in which requirements are converted to a working system that is continually revised through close work between an analyst and users. Designing and building a scaled-down but functional version of a desired system is the process known as prototyping. Prototyping is part of the analysis phase of the systems development life cycle. It is the process of building a model of a system.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-39059 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/prototype.drawio.png?resize=293%2C252&amp;ssl=1" alt="- Hamro CSIT" width="293" height="252" data-recalc-dims="1" /></p>
+<p>fig : Prototype Development Model</p>
+<p><strong>Advantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Useful for projects in which user requirements are uncertain or imprecise.</li>
+<li>It encourages active user and management participation.</li>
+<li>Projects have higher visibility and support because of the extensive user involvement.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Incomplete or inadequate problem analysis.</li>
+<li>It increases lifetime cost to operate, support and maintain the system.</li>
+<li>Practically, this methodology may increase the complexity of the system as scope of the system may expand beyond original plans.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Draw a DFD diagram of MessManagement System up to level 2.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-39250 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/level-0.drawio.png?resize=497%2C483&#038;ssl=1" alt="" width="497" height="483"></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Fig : Level 0 DFD of Mess Management System</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-39248 alignnone" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/level1-drawio.png?resize=954%2C604&#038;ssl=1" alt="" width="954" height="604"></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Fig : Level 1 DFD of Mess Management System</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-39249 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/level-2.drawio.png?resize=813%2C596&#038;ssl=1" alt="" width="813" height="596"></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Fig : Level 2 DFD of Mess Management System</strong></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>A bank has the following policy on deposit. On same deposite for a period of Rs. 50,000and above for five years or above the interest rate is 15%. On same deposit for a period less than 5 year it is 12%. On deposit below Rs.50,000 the interest is 10% regardless of period of deposit. Write the above process using:</p>
+<ol>
+<li>Structured English</li>
+<li>A Decision Table</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>for deposit Rs.50,000 and above and time 5 years and more rate will be 15%</p>
+<p>for deposit Rs.50,000 and above and time less than 5 years rate will be 12%</p>
+<p>for deposit less than Rs.50,000 regardless of time time rate will be 10%</p>
+<p><strong>i. Structured English:</strong></p>
+<p style="text-align: center;">Intrest (deposit, time)</p>
+<p style="text-align: center;">{</p>
+<p style="text-align: center;">If deposit &gt;= 50,000 &amp;&amp; time &gt;= 5</p>
+<p style="text-align: center;">intrest = (deposit * time*15)/100</p>
+<p style="text-align: center;">If deposite &gt;= 50,000 &amp;&amp; time &lt; 5</p>
+<p style="text-align: center;">intrest = (deposit * time*15)/100</p>
+<p style="text-align: center;">If deposite &lt; 50,000</p>
+<p style="text-align: center;">intrest = (deposit * time*15)/100</p>
+<p style="text-align: center;">}</p>
+<p><strong>ii. A decision table :</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39162 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/decision-table.drawio.png?resize=594%2C550&#038;ssl=1" alt="" width="594" height="550"></p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Describe five method of interacting with a system in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Methods for interacting with the system are:</p>
+<p><strong>Command Language Interaction :</strong></p>
+<ul style="list-style-type: square;">
+<li>In Command Language Interaction, users communicate with the system by entering text commands into a command-line interface. The system interprets these commands and executes corresponding actions. CLI is known for its efficiency and is often favored by power users and administrators.</li>
+</ul>
+<p><strong>Menu Interaction:</strong></p>
+<ul style="list-style-type: square;">
+<li>Menu Interaction involves users selecting options from a predefined list of choices presented in a menu. Menus are organized hierarchically, and users navigate through them to perform specific tasks or access features.</li>
+</ul>
+<p><strong>Form Interaction:</strong></p>
+<ul style="list-style-type: square;">
+<li>Form Interaction requires users to enter information into predefined fields or forms. Forms consist of various input elements such as text fields, checkboxes, radio buttons, and dropdown lists.</li>
+</ul>
+<p><strong>Natural Language Interaction:</strong></p>
+<ul style="list-style-type: square;">
+<li>Natural Language Interaction allows users to communicate with the system using everyday language. Natural Language Processing (NLP) is employed to understand and interpret user input, providing a more conversational interaction.</li>
+</ul>
+<p><strong>Object-Based Interaction:</strong></p>
+<ul style="list-style-type: square;">
+<li>Object-based interaction involves users interacting with graphical objects or elements on the screen. Users manipulate visual elements through actions like clicking, dragging, and dropping to perform tasks.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define information system. What are the typical components of information system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Information System (IS) is an organized system for the collection, organization, storage, and communication of information. It encompasses the technology, people, and processes involved in the collection and distribution of data, which supports decision-making and control in an organization.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Computer Hardware</strong>: This includes physical technology like smartphones, supercomputers, and peripheral devices (e.g., keyboards, external drives, routers). With the rise of the Internet of Things, sensors are also part of this category.</li>
+<li><strong>Computer Software</strong>: Software directs hardware operations. System software (e.g., operating systems like Windows or iOS) manages hardware, while application software handles specific tasks (e.g., spreadsheets, document creation, web design).</li>
+<li><strong>Telecommunications</strong>: This component connects hardware to form networks. Wired (Ethernet, fiber optics) or wireless (Wi-Fi) connections create local area networks (LANs) or wide area networks (WANs). The Internet itself is a network of networks.</li>
+<li><strong>Databases</strong>: These store the material for other components. Databases collect and retrieve data based on specific criteria, and  hold all necessary organizational data.</li>
+<li><strong>Human Resources</strong>: People who manage, use, and interact with the system. They play a crucial role in its effectiveness.</li>
+<li><strong>Procedures</strong>: These define how the system operates, including rules, guidelines, and protocols.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Difference between logical database design and physical database design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50.3774%; text-align: center;"><strong>Logical Database Design</strong></td>
+<td style="width: 48.3018%; text-align: center;"><strong>Physical Database Design</strong></td>
+</tr>
+<tr>
+<td style="width: 50.3774%; text-align: center;">Focuses on defining the database schema, entities, relationships, and attributes.</td>
+<td style="width: 48.3018%; text-align: center;">Focuses on implementing the logical data model in a specific database management system (DBMS) and hardware environment.</td>
+</tr>
+<tr>
+<td style="width: 50.3774%; text-align: center;">Aims to represent the data model in a way that accurately reflects the business requirements.</td>
+<td style="width: 48.3018%; text-align: center;">Involves decisions related to storage structures, indexing, partitioning, and optimization for performance.</td>
+</tr>
+<tr>
+<td style="width: 50.3774%; text-align: center;">Results in a logical data model, are often depicted using entity-relationship diagrams (ERD).</td>
+<td style="width: 48.3018%; text-align: center;">Results in a physical schema detailing how data will be stored and accessed at the storage level.</td>
+</tr>
+<tr>
+<td style="width: 50.3774%; text-align: center;">Emphasizes data integrity, normalization, and adherence to business rules.</td>
+<td style="width: 48.3018%; text-align: center;">Emphasizes performance, resource utilization, and scalability.</td>
+</tr>
+<tr>
+<td style="width: 50.3774%; text-align: center;">Independent of the specific technology or platform.</td>
+<td style="width: 48.3018%; text-align: center;">Dependent on the chosen DBMS and hardware characteristics.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What do you mean by system implementation? Discuss the steps for system implementation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System implementation is the process of building properly working system, install it in the organization, replacing old system and working methods, and finalize system and user documentation and training end prepared to support the system to assists users.</p>
+<p>System implementation is made up of many activities. The six major activities are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Coding : </strong>Coding is the process where, physical design specifications created by the analysis team are turned into working computer code by program team. It means actually writing code or monitoring coding done by programmers to ensure that programs meet design specifications</li>
+<li><strong>Testing : </strong>Testing is the process of finding and fixing bugs and errors. Tests are performed using various strategies. Testing performed in parallel with coding. It involves using test data and scenarios to verify that each component and the whole system work under normal and abnormal circumstances</li>
+<li><strong>Installation : </strong>It is the process during which the current system is replaced by new system. It includes installing the new system in organizational sites as well as dealing with personal and organizational resistance to the change that the new system causes.</li>
+<li><strong>Documentation : </strong>It is the process of converting software specification with the hard copy format it acts as references maintained for user. It includes reviewing all project dictionary or CASE repository entries for completeness as well as finalizing all user documentation, such as user guides, reference cards and tutorials</li>
+<li><strong>Training : </strong>It is the process of providing necessary skills and knowledge to user. It may include a variety of human and computer-assisted sessions as well as tools to explain the purpose and use of the<br />
+system.</li>
+<li><strong>Support : </strong>It is the process of building of mechanism which acts as guidelines for the user in case of any problem arises. It ensures that users can obtain the assistance they need as questions and problems arise.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Who is system analyst? List and explain the skill of system analyst.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A system analyst is a professional who specializes in analyzing, designing, and implementing information systems. They act as a bridge between the business needs of an organization and the IT department, ensuring that the systems and software solutions meet the requirements of the business processes.</p>
+<ol style="list-style-type:decimal;">
+<li> <span style="text-decoration: underline;"><strong>Communication skill</strong></span> : System analyst must be able to communicate effectively with all stakeholders, including team members, clients, sponsors, and vendors. This involves clear and concise written and verbal communication, as well as the ability to listen actively and build rapport with others.</li>
+<li><span style="text-decoration: underline;"><strong>Leadership</strong></span>: System analyst are responsible for motivating and leading their teams to achieve project goals. This requires strong leadership skills, such as the ability to set a clear vision, delegate tasks effectively, and provide feedback constructively.</li>
+<li><span style="text-decoration: underline;"><strong>Interpersonal Skills</strong> </span>: System analyst works effectively with cross-functional teams, mediating between different stakeholder needs and priorities.</li>
+<li><span style="text-decoration: underline;"><strong>Problem-solving</strong></span> : System analyst often encounter unexpected challenges and setbacks. They must be able to think critically and creatively to identify solutions and keep the project moving forward.</li>
+<li><span style="text-decoration: underline;"><strong>Decision-making/ Analytical skill</strong></span> : System analyst frequently need to make quick and sound decisions. This requires the ability to gather and analyze information, weigh different options, and consider the potential impact of each decision.</li>
+<li><span style="text-decoration: underline;"><strong>Business Knowledge</strong></span> : System analyst must be familier with the organization&#8217;s business processes and workflows. They must be expertise in the specific industry or domain in which the organization operates.</li>
+<li><span style="text-decoration: underline;"><strong>Technical skills</strong></span>: System analyst need to have a basic understanding of the technical aspects of the project. This allows them to communicate effectively with technical team members and make informed decisions about technical matters.</li>
+<li><span style="text-decoration: underline;"><strong> Adaptability</strong></span>: System analyst must be able to adapt to changing circumstances. This involves being flexible, open to feedback, and willing to change plans as needed.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>A system costs Rs. 2,00,000 to install and Rs. 10,000 per month as recurring expenses. The benefit per year is 1,50,000. Assuming an intrest rate is 15%, what is the payback period of the investment?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>initial installation cost = Rs. 2,00,000</p>
+<p>Recurring expenses per month = Rs. 10,000</p>
+<p>Annual benefit = Rs. 1,50,000</p>
+<p>Now,</p>
+<p>Recurring expenses per year = Per month recurring expenses x 12 = 10,000 x 12 = Rs. 1,20,000</p>
+<p>Total annual cost = Rs. 2,00,000 + Rs. 1,20,000 = Rs. 3,20,000</p>
+<p>Net annual benefit = Rs. 1,50,000 &#8211; Rs. 1,20,000 = Rs. 30,000</p>
+<p>As net annual benefit is less than annual benefit. so, the payback period will be calculated as,</p>
+<p>$$Payback period = \frac{{installation-cost}}{{Net annual-benefit}} = \frac{{2,00,000}}{{30,000}} = \frac{{20}}{{3}} = 6.67 years$$</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the steps involved in corporate strategic planning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Corporate strategic planning is a three-step process—current enterprise, future enterprise, and strategic planning.</p>
+<p><strong>1. Current Enterprise:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Mission and Vision:</strong>
+<ul style="list-style-type: square;">
+<li>Define the current mission, specifying the organization’s present purpose and goals.</li>
+<li>Establish a clear vision of the organization’s current desired future state.</li>
+</ul>
+</li>
+<li><strong>SWOT Analysis:</strong>
+<ul style="list-style-type: square;">
+<li>Analyze the current internal strengths and weaknesses.</li>
+<li>Evaluate the external opportunities and threats facing the organization.</li>
+</ul>
+</li>
+<li><strong>Objectives and Goals:</strong>
+<ul style="list-style-type: square;">
+<li>Set objectives and goals that align with the current mission and vision.</li>
+<li>Ensure that these objectives are specific, measurable, achievable, relevant, and time-bound (SMART).</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Future Enterprise:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Vision for the Future:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a vision for the future enterprise, describing the desired state the organization aims to achieve.</li>
+</ul>
+</li>
+<li><strong>Strategic Gap Analysis:</strong>
+<ul style="list-style-type: square;">
+<li>Identify the gap between the current state and the envisioned future state.</li>
+<li>Understand the areas that need improvement or transformation to achieve the future vision.</li>
+</ul>
+</li>
+<li><strong>Long-Term Objectives:</strong>
+<ul style="list-style-type: square;">
+<li>Establish long-term objectives and goals that bridge the gap between the current and future states.</li>
+<li>Consider the changes required in areas such as technology, market presence, or organizational capabilities.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Strategic Planning:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Action Plans:</strong>
+<ul style="list-style-type: square;">
+<li>Develop detailed strategies and action plans based on the long-term objectives.</li>
+<li>Specify tasks, timelines, responsibilities, and resource requirements for successful implementation.</li>
+</ul>
+</li>
+<li><strong>Resource Allocation:</strong>
+<ul style="list-style-type: square;">
+<li>Allocate resources, including financial, human, and technological, to support the implementation of the action plans.</li>
+<li>Prioritize resource allocation based on the criticality of achieving long-term objectives.</li>
+</ul>
+</li>
+<li><strong>Monitoring and Measurement:</strong>
+<ul style="list-style-type: square;">
+<li>Establish key performance indicators (KPIs) to monitor and measure progress.</li>
+<li>Implement monitoring systems to assess performance regularly and make necessary adjustments.</li>
+</ul>
+</li>
+<li><strong>Evaluation and Adjustment:</strong>
+<ul style="list-style-type: square;">
+<li>Periodically review the effectiveness of the implemented strategies.</li>
+<li>Adjust action plans, resource allocation, or goals based on the ongoing evaluation and changing circumstances.</li>
+</ul>
+</li>
+<li><strong>Communication and Implementation:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a communication plan to share the strategic plan with stakeholders.</li>
+<li>Implement the strategies and action plans across the organization.</li>
+</ul>
+</li>
+<li><strong>Risk Management:</strong>
+<ul style="list-style-type: square;">
+<li>Identify potential risks and uncertainties that may impact the achievement of goals.</li>
+<li>Develop risk mitigation strategies to address and manage these risks.</li>
+</ul>
+</li>
+<li><strong>Long-Term Review and Update:</strong>
+<ul style="list-style-type: square;">
+<li>Conduct a comprehensive review of the strategic plan periodically to ensure its relevance.</li>
+<li>Update the plan based on changes in the internal and external environment.</li>
+</ul>
+</li>
+</ul>
+<p>This three-step approach ensures that the organization first understands its current state, envisions a desired future state, and then systematically plans and implements strategies to bridge the gap and achieve its long-term objectives.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define feasibility study. Explain different categories of feasibility.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A feasibility study is an analysis and evaluation of the practicality, viability, and potential success of a proposed project or business venture. It assesses various aspects, including technical, economic, legal, operational, and scheduling factors, to determine whether the project is worth pursuing.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Technical Feasibility –</strong><br />
+In Technical Feasibility current resources both hardware software along with required technology are analyzed/assessed to develop project. This technical feasibility study gives report whether there exists correct required resources and technologies which will be used for project development. Along with this, feasibility study also analyzes technical skills and capabilities of technical team, existing technology can be used or not, maintenance and up-gradation is easy or not for chosen technology etc.</li>
+<li><strong>Operational Feasibility –</strong><br />
+In Operational Feasibility degree of providing service to requirements is analyzed along with how much easy product will be to operate and maintenance after deployment. Along with this other operational scopes are determining usability of product, Determining suggested solution by software development team is acceptable or not etc.</li>
+<li><strong>Economic Feasibility –</strong><br />
+In Economic Feasibility study cost and benefit of the project is analyzed. Means under this feasibility study a detail analysis is carried out what will be cost of the project for development which includes all required cost for final development like hardware and software resource required, design and development cost and operational cost and so on. After that it is analyzed whether project will be beneficial in terms of finance for organization or not.</li>
+<li><strong>Legal Feasibility –</strong><br />
+In Legal Feasibility study project is analyzed in legality point of view. This includes analyzing barriers of legal implementation of project, data protection acts or social media laws, project certificate, license, copyright etc. Overall it can be said that Legal Feasibility Study is study to know if proposed project conform legal and ethical requirements.</li>
+<li><strong>Schedule Feasibility –</strong><br />
+In Schedule Feasibility Study mainly timelines/deadlines is analyzed for proposed project which includes how many times teams will take to complete final project which has a great impact on the organization as purpose of project may fail if it can’t be completed on time.</li>
+<li></li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is Use Case Modeling? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Use Case modeling is used for analyzing the functional requirements of a system. It focuses on what the system does or the new system should do. A use case model is developed in the analysis phase of the OODLC. A Use Case model describes what a system does without describing how the system does. It reflects the view at the system from the perspective of a user outside of the system. A Use Case model partitions system functionality into behaviors (i.e. Use Cases) that are significant to the users of the system (i.e. Actors).</p>
+<ul style="list-style-type: square;">
+<li><strong>Actor</strong> :  An Actor is an external entity exists outside of the system and interacts with the system. An actor can be a human, another system, hardware devices – anything with which the system interacts or exchanges information. Notation for actor is :</li>
+</ul>
+<p style="text-align: center;">  <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-39265" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/actor.drawio-1.png?resize=151%2C151&#038;ssl=1" alt="" width="151" height="151"></p>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>Use Case</strong> : A Use Case represents a sequence of related action initiated by an actor to accomplish a specific goal; it represents a specific way of using the system</li>
+</ul>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-39264" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/usecase.drawio.png?resize=151%2C151&#038;ssl=1" alt="" width="151" height="151"></p>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>Boundary</strong> : A boundary is the dividing line between the system and its environment. Use cases are within the boundary. Actors are outside of the boundary.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-39266 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/boundary.drawio-2.png?resize=151%2C151&#038;ssl=1" alt="" width="151" height="151"></p>
+<p>&nbsp;</p>
+<p>Example of use case diagram is:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-39255 alignnone" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/use-case.drawio-1.png?resize=1178%2C690&#038;ssl=1" alt="" width="1178" height="690"></p>
+</div>
+</body></html>

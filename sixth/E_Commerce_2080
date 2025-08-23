@@ -1,0 +1,227 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-commerce Question 2080 2080</title>
+    </head>
+    <body>
+        <h1>E-commerce Question 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is competitive advantage in a business model? How can firms achieve competitive advantage using dimensions of asymmetry, complementary resources, perfect market and leverage?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Competitive advantage</strong> in a business model refers to the unique strengths or attributes that enable a company to outperform its competitors in a particular industry or market. It&#8217;s essentially what sets a company apart and allows it to create superior value for its customers while generating higher profits.</p>
+<p>There are several ways firms can achieve competitive advantage using different dimensions:</p>
+<ol style="list-style-type:decimal;">
+<li>Asymmetry: Asymmetry refers to the differences or imbalances between competitors in terms of resources, capabilities, or market positioning. Firms can exploit these differences to gain a competitive edge. For example, a company might have superior technology, intellectual property, or access to exclusive distribution channels that its competitors lack. By leveraging these advantages, the company can offer better products or services, attract more customers, and capture a larger market share.</li>
+<li>Complementary resources: Complementary resources are assets or capabilities that, when combined, create greater value or efficiency than when used separately. Firms can achieve competitive advantage by strategically combining their resources with those of partners, suppliers, or other stakeholders. For instance, a manufacturer might collaborate with a technology company to integrate cutting-edge software into its products, enhancing their performance and appeal to customers.</li>
+<li>Perfect market: While a perfectly competitive market is theoretical and rarely exists in reality, the concept can still be useful for understanding how firms can achieve competitive advantage. In a perfectly competitive market, firms have no control over prices and must compete solely on factors like product quality, customer service, and brand reputation. To gain a competitive advantage in such a market, firms must focus on differentiating themselves through innovation, efficiency, or other means to attract customers and earn profits.</li>
+<li>Leverage: Leverage involves using specific tactics or strategies to amplify the impact of existing resources or capabilities. Firms can achieve competitive advantage by leveraging their strengths in ways that create additional value or opportunities. For example, a company might leverage its strong brand reputation to expand into new markets or diversify its product offerings. Similarly, firms can leverage their financial resources to invest in research and development, marketing campaigns, or acquisitions that enhance their competitive position.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is a digital wallet? How does it work? Describe the payment authorization and payment capture operations of SET.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>digital wallet</strong>, also known as an e-wallet or mobile wallet, is a software-based system that securely stores users&#8217; payment information, such as credit card details, bank account numbers, or cryptocurrency keys, for making online transactions. Digital wallets can be accessed through various devices, including smartphones, tablets, and computers, and they enable users to make purchases, send money to others, and manage their financial accounts conveniently and securely.</p>
+<p>Here&#8217;s how a digital wallet typically works:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Registration</strong>: Users download a digital wallet application and create an account by providing personal information and linking their preferred payment methods, such as credit/debit cards or bank accounts.</li>
+<li><strong>Security</strong>: To ensure the security of users&#8217; sensitive information, digital wallets employ encryption techniques and authentication mechanisms like passwords, PINs, biometrics (e.g., fingerprint or facial recognition), or two-factor authentication.</li>
+<li><strong>Storage of Payment Information</strong>: Once registered, users can securely store their payment information within the digital wallet. This eliminates the need to repeatedly enter payment details for each transaction.</li>
+<li><strong>Transaction Initiation</strong>: When making a purchase online or in-store, users select the digital wallet as their payment method and authorize the transaction using their chosen authentication method.</li>
+<li><strong>Payment Authorization</strong>: The digital wallet communicates with the payment processor or financial institution to authorize the transaction. This involves verifying the user&#8217;s identity, checking the availability of funds, and ensuring the transaction meets security standards.</li>
+<li><strong>Payment Capture</strong>: Once the transaction is authorized, the payment processor captures the funds from the user&#8217;s selected payment method and transfers them to the merchant&#8217;s account. The digital wallet then records the transaction details for the user&#8217;s records.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>SET</strong> was a standard developed in the 1990s to facilitate secure electronic transactions over the internet. It aimed to enhance the security of online payments by ensuring the confidentiality and integrity of sensitive information exchanged between buyers, sellers, and financial institutions.</p>
+<p>Here&#8217;s how the payment authorization and payment capture operations of SET worked:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Payment Authorization</strong>:
+<ul style="list-style-type: square;">
+<li>The buyer initiates a payment by selecting SET as the payment method and providing their digital certificate, which contains their public key and other identifying information.</li>
+<li>The buyer&#8217;s digital wallet creates a payment message containing the transaction details, such as the purchase amount and merchant information.</li>
+<li>The buyer&#8217;s digital wallet encrypts the payment message using the seller&#8217;s public key obtained from the seller&#8217;s digital certificate.</li>
+<li>The encrypted payment message, along with the buyer&#8217;s digital certificate, is sent to the merchant&#8217;s server.</li>
+<li>The merchant&#8217;s server decrypts the payment message using its private key and verifies the buyer&#8217;s digital certificate.</li>
+<li>The merchant then forwards the payment message, along with its digital certificate and other necessary information, to the payment gateway or acquirer for further processing.</li>
+</ul>
+</li>
+<li><strong>Payment Capture</strong>:
+<ul style="list-style-type: square;">
+<li>After receiving the payment message from the merchant, the payment gateway or acquirer verifies the authenticity of the transaction and the merchant&#8217;s identity.</li>
+<li>If the transaction is valid, the payment gateway or acquirer captures the funds from the buyer&#8217;s account and transfers them to the merchant&#8217;s account.</li>
+<li>The payment gateway or acquirer sends a confirmation message to the merchant and the buyer, indicating that the payment has been successfully processed.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is display ad marketing? How attrition rate, view-to-cart ratio, acquisition rate and retention rate influence display ad marketing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Display ad marketing</strong> refers to the practice of promoting products, services, or brands through visual advertisements that appear on websites, social media platforms, mobile apps, and other digital channels. These ads typically consist of images, graphics, videos, or interactive elements and are displayed to targeted audiences based on demographics, interests, browsing behavior, and other criteria.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Attrition Rate</strong>: Attrition rate refers to the rate at which customers stop engaging with a brand or product over a specific period. In display ad marketing, a high attrition rate indicates that a significant portion of the audience exposed to the ads is not converting or taking desired actions, such as making purchases or signing up for services. Analyzing attrition rate helps marketers identify potential issues with ad creatives, targeting, messaging, or user experience that may be causing audiences to disengage.</li>
+<li><strong>View-to-Cart Ratio</strong>: The view-to-cart ratio measures the percentage of users who add items to their shopping carts after viewing a display ad. This metric is particularly relevant for e-commerce businesses that use display ads to drive product sales. A high view-to-cart ratio indicates that the ad effectively captures the audience&#8217;s interest and motivates them to explore further or take action. Conversely, a low view-to-cart ratio suggests that the ad may not be resonating with the target audience or that there are barriers preventing users from progressing to the next stage of the purchase funnel.</li>
+<li><strong>Acquisition Rate</strong>: The acquisition rate represents the proportion of users who become new customers or subscribers as a result of interacting with display ads. It measures the effectiveness of display ad campaigns in acquiring new business opportunities or expanding the customer base. A high acquisition rate indicates that the ads are successfully attracting and converting prospects into paying customers or engaged users. Marketers can optimize their campaigns to improve the acquisition rate by refining audience targeting, optimizing ad creatives and messaging, and enhancing the user experience on landing pages or conversion paths.</li>
+<li><strong>Retention Rate</strong>: Retention rate measures the percentage of customers or users who continue to engage with a brand or product over time. In the context of display ad marketing, retention rate reflects the effectiveness of ongoing campaigns in nurturing existing relationships, encouraging repeat purchases, and fostering brand loyalty. A high retention rate indicates that the ads are resonating with existing customers and reinforcing their affinity for the brand, leading to sustained engagement and repeat business. Marketers can enhance retention rate by delivering personalized ad experiences, offering relevant incentives or promotions, and providing exceptional post-purchase support or customer service.</li>
+</ol>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What are some of the factors driving the growth of social e-commerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Social e-commerce, the convergence of social media and online shopping, has experienced significant growth in recent years, driven by several key factors:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Increasing Social Media Usage</strong>: The widespread adoption of social media platforms globally has provided a fertile ground for social e-commerce to thrive. With billions of users active on platforms like Facebook, Instagram, TikTok, and Pinterest, businesses have a vast audience to reach and engage with directly.</li>
+<li><strong>Social Media Shopping Features</strong>: Social media platforms have introduced various shopping features and functionalities to facilitate e-commerce transactions directly within their ecosystems. Features like Instagram Shopping, Facebook Shops, and Pinterest Buyable Pins enable users to discover and purchase products seamlessly without leaving the platform.</li>
+<li><strong>Influencer Marketing</strong>: Influencer marketing has become a powerful driver of social e-commerce growth. Influencers, who have built large and engaged audiences on social media, can effectively promote products and brands to their followers, driving awareness, consideration, and purchase intent. Many influencers also collaborate with brands through affiliate marketing programs, earning commissions for driving sales.</li>
+<li><strong>User-Generated Content (UGC)</strong>: User-generated content, such as product reviews, ratings, and recommendations shared by consumers on social media, plays a crucial role in influencing purchase decisions. Social e-commerce leverages UGC to build trust, credibility, and social proof, as consumers are more likely to trust recommendations from peers or influencers they follow.</li>
+<li><strong>Mobile Commerce</strong>: The proliferation of smartphones and mobile devices has made it easier for consumers to shop online anytime, anywhere. Social e-commerce capitalizes on the mobile-first behavior of consumers, offering seamless shopping experiences optimized for mobile platforms, including mobile-friendly websites, apps, and social media integrations.</li>
+<li><strong>Personalization and Targeting</strong>: Social media platforms collect vast amounts of data about users&#8217; interests, preferences, and behaviors, enabling highly targeted and personalized advertising campaigns. Social e-commerce leverages data-driven insights to deliver relevant product recommendations, advertisements, and content tailored to individual users, increasing the likelihood of conversion and engagement.</li>
+<li><strong>Live Commerce and Interactive Experiences</strong>: Live commerce, or live streaming shopping, has emerged as a popular trend in social e-commerce, particularly in markets like China. Live streaming allows brands and influencers to showcase products in real-time, interact with viewers, answer questions, and drive immediate purchases, creating engaging and immersive shopping experiences.</li>
+<li><strong>Social Proof and FOMO</strong>: Social e-commerce leverages psychological triggers like social proof (e.g., testimonials, user-generated content) and fear of missing out (FOMO) to stimulate demand and urgency among consumers. Limited-time offers, exclusive deals, and social validation from peers encourage users to make purchase decisions quickly, driving sales and conversions.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is EDI? Describe the significance of EDI in e-commerce? Justify your answer with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Electronic Data Interchange (EDI)</strong> is the electronic exchange of business documents, such as purchase orders, invoices, shipment notices, and other transactional information, between trading partners in a standardized format.</p>
+<p>The significance of EDI in e-commerce lies in its ability to streamline and improve the efficiency, accuracy, and speed of business-to-business (B2B) transactions.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Efficiency</strong>: EDI eliminates the need for manual data entry and paper-based processes, reducing the time, effort, and resources required to exchange business documents between trading partners. This increases operational efficiency and enables organizations to process transactions faster, leading to shorter order-to-cash cycles and improved productivity.</li>
+<li><strong>Accuracy</strong>: By standardizing the format and structure of business documents, EDI reduces the risk of errors, discrepancies, and misinterpretations that can occur with manual data entry or paper-based systems. This improves data accuracy and integrity, minimizing the likelihood of order processing errors, invoicing discrepancies, and other costly mistakes.</li>
+<li><strong>Cost Savings</strong>: EDI helps businesses save costs by eliminating the need for paper-based document storage, printing, postage, and manual labor associated with document processing. It also reduces the risk of late payments, invoice disputes, and order processing delays, leading to lower operational expenses and improved cash flow management.</li>
+<li><strong>Speed and Agility</strong>: EDI enables real-time or near-real-time exchange of data between trading partners, allowing businesses to respond quickly to customer demands, market changes, and supply chain disruptions. This agility is essential in today&#8217;s fast-paced e-commerce environment, where timely order fulfillment and delivery are critical for customer satisfaction and retention.</li>
+<li><strong>Integration with E-commerce Platforms</strong>: EDI can be seamlessly integrated with e-commerce platforms, enterprise resource planning (ERP) systems, inventory management systems, and other business applications, enabling end-to-end automation and synchronization of data across the entire supply chain. This integration streamlines business processes, enhances visibility, and facilitates better decision-making.</li>
+</ol>
+<p>Example: Consider a retailer that sells consumer electronics products through its e-commerce website. The retailer sources products from multiple suppliers and manufacturers located around the world. To streamline its procurement process and manage inventory effectively, the retailer implements an EDI system to exchange purchase orders, shipment notices, and invoices with its suppliers electronically.</p>
+<p>When the retailer needs to restock inventory, its inventory management system automatically generates a purchase order in the standardized EDI format and sends it electronically to the suppliers. The suppliers receive the purchase orders instantly, process them electronically, and prepare the requested products for shipment. Once the products are ready to be shipped, the suppliers generate electronic shipment notices (ASN) and send them to the retailer, providing details about the shipment, such as tracking numbers, quantities, and expected delivery dates.</p>
+<p>Upon receiving the shipment notices, the retailer&#8217;s system automatically updates its inventory records, notifies the warehouse staff to expect incoming shipments, and prepares to receive and process the products upon arrival. When the products are delivered, the retailer receives electronic invoices from the suppliers, which are automatically matched with the corresponding purchase orders and shipment notices to reconcile the transactions.</p>
+<p>In this example, EDI enables the retailer and its suppliers to exchange business documents efficiently, accurately, and electronically, leading to streamlined procurement processes, improved inventory management, and faster order fulfillment.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is virtual currency? How does it work? Mention the usages of virtual currency in e-commerce.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Virtual currency</strong>, also known as digital currency or cryptocurrency, is a type of digital or electronic currency that exists purely in electronic form and is not backed by any physical commodity or government authority. Virtual currencies are decentralized and typically rely on cryptographic techniques to secure transactions and control the creation of new units.</p>
+<p>Here&#8217;s how virtual currency works:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Blockchain Technology</strong>: Many virtual currencies, such as Bitcoin and Ethereum, are based on blockchain technology. A blockchain is a decentralized, distributed ledger that records all transactions across a network of computers. Each transaction is verified by network participants (miners) and added to a block, which is then linked to previous blocks, creating a chain of blocks (hence the term &#8220;blockchain&#8221;).</li>
+<li><strong>Cryptography</strong>: Virtual currencies use cryptographic techniques to secure transactions and control the creation of new units. Public and private keys are used to encrypt and decrypt transaction information, ensuring the security and integrity of the network.</li>
+<li><strong>Decentralization</strong>: Unlike traditional currencies, which are issued and regulated by governments or central banks, virtual currencies operate in a decentralized manner, meaning they are not controlled by any single authority. Transactions are validated and recorded by network participants, eliminating the need for intermediaries like banks or payment processors.</li>
+<li><strong>Mining</strong>: Some virtual currencies, such as Bitcoin, use a process called mining to create new units and verify transactions. Miners use powerful computers to solve complex mathematical puzzles, which validate transactions and add them to the blockchain. In return, miners are rewarded with newly created units of the virtual currency.</li>
+</ol>
+<p>Usages of virtual currency in e-commerce include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Payment Method</strong>: Virtual currencies can be used as a payment method for purchasing goods and services online. Many e-commerce merchants accept virtual currencies as a form of payment, providing customers with an alternative payment option.</li>
+<li><strong>Cross-Border Transactions</strong>: Virtual currencies can facilitate cross-border transactions by eliminating the need for currency conversion and reducing transaction fees associated with traditional payment methods. This makes it easier for customers to make purchases from international e-commerce websites.</li>
+<li><strong>Lower Transaction Fees</strong>: Virtual currency transactions typically have lower transaction fees compared to traditional payment methods like credit cards or bank transfers. This can benefit e-commerce merchants by reducing payment processing costs and increasing profit margins.</li>
+<li><strong>Anonymity and Privacy</strong>: Virtual currencies offer a certain degree of anonymity and privacy for users, as transactions are pseudonymous and not directly linked to personal identity information. This can appeal to customers who prioritize privacy when making online purchases.</li>
+<li><strong>Micropayments</strong>: Virtual currencies enable micropayments, allowing users to make small transactions or pay for digital content on a per-use basis. This can be useful for e-commerce platforms that offer digital downloads, subscriptions, or pay-per-view services.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is catalog in e-commerce? How are catalogs created?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In e-commerce, a catalog refers to a digital or online listing or collection of products or services that a retailer or seller offers for sale. It serves as a comprehensive and organized showcase of available items, allowing customers to browse, search, and select products they wish to purchase.</p>
+<p>Here&#8217;s how catalogs are typically created in e-commerce:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Product Information Gathering</strong>: The first step in creating an e-commerce catalog is to gather all the necessary information about the products or services to be included. This may include product names, descriptions, specifications, prices, images, SKUs (stock keeping units), categories, and any other relevant details.</li>
+<li><strong>Product Photography and Imaging</strong>: High-quality images are essential for showcasing products effectively in an e-commerce catalog. Sellers typically photograph or obtain images of the products from manufacturers, ensuring that they accurately represent the appearance, features, and details of each item.</li>
+<li><strong>Content Creation</strong>: Once product information and images are collected, sellers create compelling and informative content for each product listing. This may involve writing product descriptions, highlighting key features and benefits, specifying technical specifications, and providing any other relevant details that help customers make informed purchasing decisions.</li>
+<li><strong>Catalog Structure and Organization</strong>: Sellers organize the products into categories, subcategories, or collections to facilitate navigation and improve the shopping experience for customers. Categories may be based on product type, brand, price range, or any other relevant criteria. A well-structured catalog makes it easier for customers to find the products they&#8217;re looking for quickly.</li>
+<li><strong>Catalog Software or Platform</strong>: Sellers use e-commerce platforms, content management systems (CMS), or specialized catalog management software to create and manage their catalogs. These tools provide features and functionalities for adding, editing, organizing, and updating product listings, as well as managing inventory, pricing, and promotions.</li>
+<li><strong>Data Entry and Upload</strong>: Sellers input product information, descriptions, prices, and other details into the catalog management system or software. They may also upload product images and multimedia content to enhance product listings. Depending on the platform or software used, sellers may have to follow specific formatting guidelines or templates for data entry and upload.</li>
+<li><strong>Quality Assurance and Review</strong>: Before publishing the catalog online, sellers typically review and verify each product listing to ensure accuracy, consistency, and completeness. This may involve checking for typos, errors, missing information, broken links, or discrepancies between product descriptions and images.</li>
+<li><strong>Publishing and Updates</strong>: Once the catalog is finalized and reviewed, sellers publish it on their e-commerce website or platform, making it accessible to customers for browsing and shopping. Sellers regularly update the catalog to add new products, remove discontinued items, adjust prices, or make other changes based on inventory updates, customer feedback, or market trends.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is an intrusion? How intrusion detection systems are used to ensure security in e-commerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An <strong>intrusion</strong> refers to any unauthorized or malicious attempt to gain access to computer systems, networks, or data. Intrusions can take various forms, including hacking, phishing, malware infections, denial-of-service (DoS) attacks, and unauthorized access to sensitive information.</p>
+<p>Intrusion Detection Systems (IDS) are cybersecurity tools and technologies designed to monitor and analyze network traffic, system activity, and user behavior to detect and respond to potential security threats and intrusions in real-time.</p>
+<p>Here&#8217;s how intrusion detection systems are used to enhance security in e-commerce:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Real-Time Monitoring</strong>: IDS continuously monitor network traffic, system logs, and other data sources for suspicious or anomalous activity that may indicate a security breach or intrusion attempt. They analyze network packets, server logs, and application traffic patterns to detect signs of unauthorized access, malware infections, or other security threats.</li>
+<li><strong>Alerting and Notification</strong>: When suspicious activity is detected, IDS generate alerts and notifications to inform system administrators or security personnel about potential security incidents. Alerts may include details about the type of intrusion, the source IP address, the affected system or application, and other relevant information to facilitate timely investigation and response.</li>
+<li><strong>Threat Detection and Analysis</strong>: IDS use various detection techniques and algorithms to identify known attack patterns, signatures, or behaviors associated with different types of intrusions. They leverage threat intelligence feeds, vulnerability databases, and machine learning algorithms to enhance detection accuracy and reduce false positives.</li>
+<li><strong>Incident Response and Mitigation</strong>: Upon detecting a security incident or intrusion attempt, IDS can trigger automated responses or actions to mitigate the threat and minimize its impact. This may involve blocking suspicious IP addresses, quarantining infected devices or users, restricting access to sensitive resources, or initiating other security measures to contain and neutralize the threat.</li>
+<li><strong>Forensic Analysis and Reporting</strong>: IDS provide detailed logs, reports, and forensic data that help investigate security incidents, analyze attack patterns, and identify vulnerabilities in the e-commerce environment. These insights enable organizations to strengthen their security posture, implement proactive measures, and enhance incident response capabilities to prevent future intrusions.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is social engineering? How access control mechanisms are used in e-commerce for authorization?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Social engineering</strong> refers to the manipulation of individuals or groups into divulging confidential information, performing actions, or providing access to sensitive systems or data through psychological manipulation, deception, or manipulation of human behavior. Instead of exploiting technical vulnerabilities, social engineering attacks exploit human psychology and trust to gain unauthorized access to information or resources.</p>
+<p>Examples of social engineering techniques include phishing emails, pretexting (creating a false scenario to obtain information), baiting (offering something enticing to trick users into disclosing information), and pretext calling (posing as a trusted individual or authority to gain access).</p>
+<p>Access control mechanisms are used in e-commerce to manage and enforce authorization, ensuring that only authorized users or entities have access to specific resources, systems, or functionalities. Access control mechanisms in e-commerce typically include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>User Authentication</strong>: User authentication verifies the identity of users before granting access to e-commerce systems or services. Common authentication methods include usernames/passwords, biometric authentication (fingerprint, facial recognition), two-factor authentication (2FA), and multi-factor authentication (MFA).</li>
+<li><strong>Role-Based Access Control (RBAC)</strong>: RBAC assigns permissions to users based on their roles and responsibilities within the organization. In e-commerce, RBAC can be used to control access to different areas of the website, such as product management, order processing, and customer support, based on users&#8217; roles (e.g., admin, customer service representative, sales manager).</li>
+<li><strong>Access Control Lists (ACL)</strong>: ACLs are lists of permissions attached to resources or objects, specifying which users or groups are allowed or denied access to those resources. In e-commerce, ACLs can be used to control access to specific product categories, customer data, or administrative functions.</li>
+<li><strong>Encryption and Secure Communication</strong>: Encryption techniques, such as SSL/TLS, are used to secure communication between clients and servers in e-commerce systems, preventing unauthorized access or eavesdropping. Secure communication protocols ensure that sensitive information, such as login credentials, payment details, and personal data, remains confidential and protected from interception or tampering.</li>
+<li><strong>Session Management</strong>: Session management mechanisms control user sessions and access privileges during a user&#8217;s interaction with the e-commerce website or application. This includes mechanisms for session timeout, session termination, and session validation to prevent unauthorized access or session hijacking.</li>
+<li><strong>Audit Trails and Logging</strong>: Audit trails and logging mechanisms record and monitor user activities, access attempts, and system events in e-commerce systems. By maintaining detailed logs of user interactions and access attempts, organizations can track and investigate security incidents, unauthorized access, or suspicious behavior.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How fan acquisition, amplification and brand strengthening is done using Facebook marketing tools?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Facebook offers a range of marketing tools and features that can be leveraged to acquire fans, amplify brand messaging, and strengthen brand presence. Here&#8217;s how each of these objectives can be achieved using Facebook marketing tools:</p>
+<p><span style="text-decoration: underline;"><strong>Fan Acquisition</strong></span></p>
+<p><strong>Facebook Ads</strong>: Utilize Facebook&#8217;s robust advertising platform to create targeted ad campaigns aimed at acquiring new fans. You can target specific demographics, interests, behaviors, and locations to reach potential customers who are likely to be interested in your brand.</p>
+<p><strong>Page Promotion</strong>: Promote your Facebook page organically by sharing engaging content, running contests or giveaways, and encouraging your existing followers to invite their friends to like your page.</p>
+<p><strong>Cross-Promotion</strong>: Collaborate with other brands, influencers, or organizations to cross-promote each other&#8217;s Facebook pages, expanding your reach and attracting new fans from complementary audiences.</p>
+<p><span style="text-decoration: underline;"><strong>Amplification</strong></span></p>
+<p><strong>Boosted Posts</strong>: Boosting posts allows you to amplify the reach of your content to a broader audience beyond your existing fan base. You can target specific demographics or interests to ensure your content reaches the most relevant audience.</p>
+<p><strong>Facebook Ads</strong>: In addition to acquiring fans, Facebook ads can also be used to amplify your brand messaging to a wider audience. Create ad campaigns focused on promoting specific products, services, or brand initiatives to increase visibility and engagement.</p>
+<p><strong>Engagement Campaigns</strong>: Encourage engagement with your content by running interactive campaigns such as polls, quizzes, or user-generated content contests. Engaging content is more likely to be shared, increasing its reach and amplification.</p>
+<p><span style="text-decoration: underline;"><strong>Brand Strengthening</strong></span></p>
+<p><strong>Consistent Brand Voice</strong>: Maintain a consistent brand voice and aesthetic across your Facebook page, posts, and ads to reinforce your brand identity and messaging.</p>
+<p><strong>Engagement and Interaction</strong>: Foster meaningful interactions with your audience by responding to comments, messages, and feedback promptly. Engaging with your audience humanizes your brand and strengthens the connection with your fans.</p>
+<p><strong>Content Strategy</strong>: Develop a content strategy that aligns with your brand values, objectives, and target audience preferences. Share valuable and relevant content that educates, entertains, or inspires your fans, reinforcing your brand&#8217;s authority and relevance in your industry or niche.</p>
+<p><strong>Community Building</strong>: Create a sense of community among your fans by encouraging discussions, facilitating user-generated content, and organizing online or offline events. Building a community around your brand fosters loyalty and advocacy, strengthening your brand&#8217;s position and influence.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is the significance of recommendation systems in e-commerce? How is collaborative filtering different from content based?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Recommendation systems play a crucial role in e-commerce by helping users discover relevant products or services based on their preferences, behavior, and past interactions. Here are some key reasons why recommendation systems are important in e-commerce:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Personalization</strong>: Recommendation systems analyze user data, such as browsing history, purchase history, demographics, and preferences, to deliver personalized product recommendations tailored to each user&#8217;s individual interests and needs. By presenting users with relevant and personalized recommendations, e-commerce platforms can enhance the user experience, increase engagement, and drive conversion rates.</li>
+<li><strong>Discovery and Exploration</strong>: Recommendation systems help users discover new products or services that they may not have otherwise found on their own. By suggesting related or complementary items based on users&#8217; interests and preferences, recommendation systems encourage exploration and serendipitous discovery, leading to increased discovery of products and higher average order values.</li>
+<li><strong>Cross-Selling and Upselling</strong>: Recommendation systems enable e-commerce platforms to promote cross-selling and upselling opportunities by suggesting additional products or upgrades that complement or enhance the items users are already interested in or have purchased. This helps increase average order values and maximize revenue per customer.</li>
+<li><strong>Increased Engagement and Repeat Purchases</strong>: By providing users with relevant and engaging product recommendations, e-commerce platforms can increase user engagement, encourage repeat visits, and foster long-term customer relationships. Personalized recommendations make users feel understood and valued, leading to higher levels of satisfaction and loyalty.</li>
+<li><strong>Inventory Management and Merchandising</strong>: Recommendation systems help e-commerce businesses optimize their inventory management and merchandising strategies by highlighting popular or high-margin products, promoting slow-moving inventory, and minimizing stockouts or overstock situations. This enables businesses to maximize the efficiency of their inventory and improve overall profitability.</li>
+</ol>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Collaborative Filtering</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Content-based</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Collaborative filtering recommends items to users based on the preferences and behaviors of similar users or items. It relies on historical user interactions, such as ratings, reviews, and purchase history, to identify patterns and similarities between users and items.</td>
+<td style="width: 50%; text-align: center;">Content-based filtering recommends items to users based on the characteristics or attributes of the items themselves. It analyzes item metadata, such as product descriptions, categories, tags, or features, to generate recommendations that are similar to items the user has shown interest in.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Collaborative filtering does not require explicit knowledge or metadata about the items being recommended. Instead, it focuses on identifying correlations and relationships between users and items based on their past interactions.</td>
+<td style="width: 50%; text-align: center;">Content-based filtering does not rely on user interactions with items or other users. Instead, it focuses on matching the features of items to the user&#8217;s preferences or profile.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Examples of collaborative filtering algorithms include user-based collaborative filtering, item-based collaborative filtering, and matrix factorization techniques like Singular Value Decomposition (SVD) or Alternating Least Squares (ALS).</td>
+<td style="width: 50%; text-align: center;">Examples of content-based filtering techniques include keyword matching, vector space models, and machine learning algorithms that learn user preferences based on item attributes.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How provisions relating to digital certificates are defined in the electronic transaction act of Nepal?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Certifying Authority may issue a Certificate</strong>:</p>
+<p>Only a licensed or recognized Certifying Authority under this Act may issue a Digital Signature Certificate.</p>
+<p><strong>Apply to obtain a Certificate:</strong></p>
+<p>(1) Any person desirous to obtain Digital Signature Certificate may apply to the Certifying Authority in such a format along with such fee and other statements as prescribed.</p>
+<p>(2) On receipt of an application under Sub-section (1), the CertifyingAuthority shall have to decide whether to issue or not a certificate to the applicant within one month of such application so received.</p>
+<p>(3) The Certifying Authority shall, if it decides to issue a certificate under Sub-section (2), issue a Digital Signature Certificate within seven days affixing his signature in a prescribed format with the inclusion of such statements as prescribe and if it decides to reject to issue such certificate, the applicant shall be notified the reasons for rejection within seven days.</p>
+<p><strong>Certificate may be suspended:</strong></p>
+<p>(1) Certifying Authority may suspend the Certificate in following circumstances:</p>
+<ul style="list-style-type: square;">
+<li>If the subscriber obtaining the certificate or any person authorized to act on behalf of such a subscriber, requests to suspend the certificate.</li>
+<li> If it is found necessary to suspend the certificate that contravenes public interest as prescribed.</li>
+<li>If it is found that significant loss might be caused to those persons who depend on the certificate by the reason that provisions of this Act or the Rules framed hereunder were not followed at the time of issuance of the certificate, and if the controller instructs to suspend the certificate having specified the above ground.</li>
+</ul>
+<p>(2) Grounds and procedures for suspension and release of the suspended certificates shall be as prescribed.</p>
+<p><strong>Certificate may be revoked:</strong></p>
+<p>(1) The Controller or the Certifying Authority may revoke a Certificate in following conditions:</p>
+<ul style="list-style-type: square;">
+<li>Where the subscriber or any other person authorized by him requests to revoke a certificate,</li>
+<li>If it is necessary to revoke in a certificate that contravenes the public interest as prescribed,</li>
+<li>Upon the death of the subscriber,</li>
+<li> Upon the insolvency, winding up or dissolution of the company or corporate body under the prevailing laws, where the subscriber is a company or a corporate body.</li>
+<li>If it is proved that a requirement for issuance of the Certificate was not satisfied.</li>
+<li>If a material fact represented in the certificate is proved to be false.</li>
+<li>If a key used to generate key pair or security system was compromised in a manner that affects materially the Certificate&#8217;s reliability.</li>
+</ul>
+<p>(2) The procedures to be followed by the Controller or Certifying Authority with respect to revocation of a Certificate shall be as prescribed.</p>
+<p><strong>Notice of Suspension or Revocation: </strong></p>
+<p>(1) Where a Certificate is suspended or revoked under sections 32 or 33, the Certifying Authority or the Controller, as the case may be, shall publish a public notice thereof maintaining its record in their repository.</p>
+<p>(2) It shall be the responsibility of the Certifying Authority or the Controller, as the case may be, to communicate the subscribers as soon as possible on suspension or revocation Certificates.</p>
+</div>
+</body></html>

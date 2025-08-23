@@ -1,0 +1,276 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SM Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>SM Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Why is it necessary to analyze the simulation output. Explain different estimation method which are used in simulatiom output analysis.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Analysis of simulation output</strong> mean to mean to predict output performance of the system or to compare the performance of two or more system designs. Analysis of simulation output is needed for following :</p>
+<ul style="list-style-type: square;">
+<li>Verifies that the simulation model faithfully captures behavior in the actual world.</li>
+<li>To predict the system performance or compare performance of two or more system designs.</li>
+<li>Making decisions: Assists in deriving inferences from the data, enabling well-informed choices to be made in light of the simulation&#8217;s outcomes.</li>
+<li>Error Reduction: Helps minimize possible mistakes by detecting randomness or variability in the simulation data.</li>
+<li>Performance evaluation helps with optimization by gauging the simulated system&#8217;s performance in different settings.</li>
+<li>Randomness and variability are common features of simulation outcomes and by analyzing these findings, it is feasible to evaluate the risk and dependability of different outcomes by quantifying the prediction uncertainty.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Point Estimation</strong></span> :</p>
+<p>Point estimation is the process of estimating a single number, known as a &#8220;point estimate&#8221;, from sample data that represents the best estimate or guess of an unknown population parameter (e.g., variance, mean, or percentage). This one number is the parameter&#8217;s most likely value according to the information gathered. It uses sample data to generate a single best estimate or value for an unknown population parameter (such the mean, variance, or percentage). As an illustration, the sample mean.<br />
+The population mean is served as a point estimate by <span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="mord mathnormal">X</span><span class="accent-body"><span class="mord">ˉ</span></span></span></span></span></span><span class="mclose">)</span>. It’s called a “point” estimate because it gives a specific value, rather than a range.</p>
+<p><span style="text-decoration: underline;"><strong>Interval estimation</strong></span> :</p>
+<p>With interval estimation, the unknown population parameter is predicted to fall within a range of values called a confidence interval. There is a certain likelihood that the interval contains the real value because it is computed with a particular confidence level (such as 95% or 99%).<br />
+In contrast to point estimation, interval estimation takes sample variability into account and provides a range of reasonable values instead of a single estimate, increasing the inference&#8217;s dependability.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Consider that a machine tool in a manufacturing shop is turning out parts at the rate of two every 5 minutes. As they are finished, the parts go to an inspector, who takes 5±2 minutes to examine each one and reject about 15% of the parts. Now develop a block diagram and write the code for simulating the above problem using GPSS, and also explain the function of each block used in the block diagram in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-44111 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/gpss.drawio-1.png?resize=163%2C563&#038;ssl=1" alt="" width="163" height="563"></p>
+<p>SIMULATE</p>
+<p>GENERATE 5, 0         ; Generate part every 5 minute</p>
+<p>QUEUE 1                      ; Place the part in queue when needed</p>
+<p>SEIZE 1                         ; Seize the facility when available</p>
+<p>DEPART 1                    ; parts leaves the queue</p>
+<p>ADVANCE 5, 2            ;Inspector inspects the parts (5±2 minutes)</p>
+<p>RELEASE 1                  ; Release the facility when served</p>
+<p>TRANSFER 0.15, ACC, REJ</p>
+<p style="text-align: center;">ACC TERMINATE 1    ; Those parts which are accepted and then terminate<br />
+REJ TERMINATE 1    ; Those parts which are rejected and then terminate</p>
+<p>END</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the independenceand uniformity property of random number. For the following sample of random numbers, perform test for independence using K-S test. <strong>(D<sub>0.05,10</sub> = 0.41)<br />
+</strong></p>
+<p>0.35, 0.77, 0.12, 0.33, 0.88, 0.45, 0.19, 0.25, 0.91, 0.54</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Independence :<br />
+</strong>The term &#8220;independence&#8221; describes the absence of any association or correlation between consecutive random values in a series. The value or occurrence of one number in a perfect random sequence shouldn&#8217;t reveal anything about the value or occurrence of the subsequent number.</p>
+<p><strong>Uniformity :<br />
+</strong>Uniformity indicates that each number in the sequence has the same chance of being chosen. A uniformly distributed random sequence has the same chance of occurrence for all values.</p>
+<p><strong>Numerical part</strong>:</p>
+<p><span style="text-decoration: underline;"><strong>Null Hypothesis (H<sub>0</sub>)</strong></span> : The given set of numbers are random.</p>
+<p><span style="text-decoration: underline;"><strong>Alternative Hypothesis (H<sub>1</sub>)</strong> </span>: The given set of numbers are not random.</p>
+<p><span style="text-decoration: underline;"><strong>Level of Significance</strong></span> : D<sub>0.05</sub> = 0.521</p>
+<p><span style="text-decoration: underline;"><strong>Test Statistics</strong></span> :<br />
+Arranging the given numvers in ascending order:</p>
+<p>0.12, 0.19, 0.25, 0.33, 0.35, 0.45, 0.54, 0.77, 0.88, 0.91</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44166 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/KS.drawio.png?resize=375%2C450&#038;ssl=1" alt="" width="375" height="450"></p>
+<p style="text-align: center;">D<sup>+</sup> = max {i/N  &#8211;  R(i)} = 0.113</p>
+<p style="text-align: center;">D<sup>&#8211;</sup> = max {R(i) &#8211;  i-1/N} = 0.333</p>
+<p style="text-align: center;">D = max{ D<sup>+</sup> , D<sup>&#8211;</sup> } = 0.333</p>
+<p><span style="text-decoration: underline;"><strong>Conclusion</strong></span> :<br />
+As D &lt; D<sub>0.05 </sub> i.e 0.333 &lt; 0.521 so the Null hypothesis is accepted i.e the num.</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Difference between static physical and dynamic physical models.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Static Physical Model</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Dynamic Physical Model</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It depicts the structure of a system at a certain moment in time.</td>
+<td style="width: 50%; text-align: center;">It depicts the way a system changes or acts throughout time.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It shows no movement or changes over time.</td>
+<td style="width: 50%; text-align: center;">It displays modifications, exchanges, and reactions to inputs.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">used frequently for permanent layouts, plans, and designs.</td>
+<td style="width: 50%; text-align: center;">It is utilized in simulations to examine real-world phenomena, like as temperature or traffic.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">As it is time-dependent data is not used, it is easier and faster to create.</td>
+<td style="width: 50%; text-align: center;">More intricate development is needed, such as rules or algorithms to mimic real-world situations.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is frequently employed for visual representation, as in product design, technology, and architecture.</td>
+<td style="width: 50%; text-align: center;">It is often used to forecast system reactions in disciplines including economics, physics, biology, and engineering.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe different phases of simulation study with help of flowchart.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p>simulation study includes some steps and they are dealt below with a flowchart.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39346 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/model-simulation.drawio.png?resize=387%2C1916&#038;ssl=1" alt="- Hamro CSIT" width="387" height="1916" /></p>
+<p style="text-align: center;"><strong>fig : flowchart of system study</strong></p>
+<p>&nbsp;</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation:</strong>
+<ul style="list-style-type: square;">
+<li>Clearly define the problem that needs to be addressed using simulation. Identify the objectives and goals of the study.</li>
+</ul>
+</li>
+<li><strong>Setting of Objectives &amp; Overall Project Plan:</strong>
+<ul style="list-style-type: square;">
+<li>Establish specific objectives for the simulation study and create an overall project plan outlining the timeline, resources, and milestones.</li>
+</ul>
+</li>
+<li><strong>Model Conceptualization:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a conceptual model that represents the system being simulated. This involves deciding on the structure and components of the model.</li>
+</ul>
+</li>
+<li><strong>Data Collection:</strong>
+<ul style="list-style-type: square;">
+<li>Gather relevant data to support the model. This includes parameters, inputs, and initial conditions. The data should be accurate and representative of the real system.</li>
+</ul>
+</li>
+<li><strong>Model Translation:</strong>
+<ul style="list-style-type: square;">
+<li>Translate the conceptual model into a formal representation, often using mathematical equations or computational algorithms. Implement the model in a simulation environment.</li>
+</ul>
+</li>
+<li><strong>Verification:</strong>
+<ul style="list-style-type: square;">
+<li>Ensure that the simulation model accurately represents the conceptual model by checking its correctness. Verification involves validating the coding and logic of the model.</li>
+</ul>
+</li>
+<li><strong>Validation:</strong>
+<ul style="list-style-type: square;">
+<li>Validate the simulation model by comparing its outputs to real-world data. This step ensures that the model behaves realistically and provides valid insights into the system.</li>
+</ul>
+</li>
+<li><strong>Experimental Design:</strong>
+<ul style="list-style-type: square;">
+<li>Plan the experiments or scenarios that will be simulated. Define the input variations, conditions, and factors to be tested. Set up the simulation’s boundary conditions.</li>
+</ul>
+</li>
+<li><strong>Production Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Execute the simulation with the specified inputs and conditions. Collect data on the system’s behavior, performance, and other relevant output measures during the production runs.</li>
+</ul>
+</li>
+<li><strong>Repetition of Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Conduct multiple simulation runs to assess the variability and robustness of the model. Repetition helps ensure that the results are consistent and reliable.</li>
+</ul>
+</li>
+<li><strong>Documentation &amp; Report:</strong>
+<ul style="list-style-type: square;">
+<li>Document the simulation study, including the model details, assumptions, data sources, and results. Generate a comprehensive report summarizing the findings and insights.</li>
+</ul>
+</li>
+<li><strong>Implementation:</strong>
+<ul style="list-style-type: square;">
+<li>Implement the recommendations or decisions based on the simulation results. This may involve changes to the real-world system or the adoption of specific strategies.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain markov chain with suitable example. What are diffrernt application areas of markov chain?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the future states of a process are independent of the past and depend only on the present, the process is called a Markov process. A discrete state Markov process is called a Markov chain. A Markov Chain is a random process with the property that the next state depends only on the current state.</p>
+<p>Markov chains are used to analyze trends and predict the future. (Weather, stock market, genetics, product success, etc.</p>
+<p><strong>Formally,</strong></p>
+<p>A Markov chain is a sequence of random variables X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, … with the Markov property, namely that, given the present state, the future and past states are independent.</p>
+<p><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" style="box-sizing: border-box; scroll-behavior: inherit !important; display: inline-table; line-height: 0; text-indent: 0px; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 18.72px; font-size-adjust: none; letter-spacing: normal; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; margin: 0px; padding: 1px 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">P</span></span><span id="MJXc-Node-4" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">(</span></span><span id="MJXc-Node-5" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-6" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-7" class="mjx-texatom"><span id="MJXc-Node-8" class="mjx-mrow"><span id="MJXc-Node-9" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span><span id="MJXc-Node-10" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">+</span></span><span id="MJXc-Node-11" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">1 </span></span></span></span></span></sub></span><span id="MJXc-Node-12" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-13" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I">j</span></span><span id="MJXc-Node-14" class="mjx-texatom"><span id="MJXc-Node-15" class="mjx-mrow"><span id="MJXc-Node-16" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">|</span></span></span></span><span id="MJXc-Node-17" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-18" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-19" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n </span></span></span></sub></span><span id="MJXc-Node-20" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-21" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-22" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-23" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span></span></sub></span><span id="MJXc-Node-24" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">, </span></span><span id="MJXc-Node-25" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-26" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">x</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-27" class="mjx-texatom"><span id="MJXc-Node-28" class="mjx-mrow"><span id="MJXc-Node-29" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span><span id="MJXc-Node-30" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">−</span></span><span id="MJXc-Node-31" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">1 </span></span></span></span></span></sub></span><span id="MJXc-Node-32" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-33" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-34" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-35" class="mjx-texatom"><span id="MJXc-Node-36" class="mjx-mrow"><span id="MJXc-Node-37" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span><span id="MJXc-Node-38" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">−</span></span><span id="MJXc-Node-39" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">1</span></span></span></span></span></sub></span><span id="MJXc-Node-40" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">, </span></span><span id="MJXc-Node-41" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R">.</span></span><span id="MJXc-Node-42" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R">.</span></span><span id="MJXc-Node-43" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R">.</span></span><span id="MJXc-Node-44" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R">, </span></span><span id="MJXc-Node-45" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-46" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">x</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-47" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">0 </span></span></span></sub></span><span id="MJXc-Node-48" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-49" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-50" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-51" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">0</span></span></span></sub></span><span id="MJXc-Node-52" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">) </span></span><span id="MJXc-Node-53" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-54" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I">P</span></span><span id="MJXc-Node-55" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">(</span></span><span id="MJXc-Node-56" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-57" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-58" class="mjx-texatom"><span id="MJXc-Node-59" class="mjx-mrow"><span id="MJXc-Node-60" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span><span id="MJXc-Node-61" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">+</span></span><span id="MJXc-Node-62" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R">1 </span></span></span></span></span></sub></span><span id="MJXc-Node-63" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-64" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I">j</span></span><span id="MJXc-Node-65" class="mjx-texatom"><span id="MJXc-Node-66" class="mjx-mrow"><span id="MJXc-Node-67" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">|</span></span></span></span><span id="MJXc-Node-68" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-69" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-70" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n </span></span></span></sub></span><span id="MJXc-Node-71" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= </span></span><span id="MJXc-Node-72" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-73" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-74" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span></span></sub></span><span id="MJXc-Node-75" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">)</span></span></span></span></span></p>
+<p>The conditional probability above gives us the probability that a process in state i<sub>n</sub> at time n moves to i<sub>n+1</sub> at time n + 1. We call this the transition probability for the Markov chain. If the transition probability does not depend on the time n, we have a stationary Markov chain, with transition probabilities</p>
+<p><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" style="box-sizing: border-box; scroll-behavior: inherit !important; display: inline-table; line-height: 0; text-indent: 0px; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 18.72px; font-size-adjust: none; letter-spacing: normal; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; margin: 0px; padding: 1px 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;"><span id="MJXc-Node-76" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-77" class="mjx-mrow"><span id="MJXc-Node-78" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-79" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">P</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-80" class="mjx-texatom"><span id="MJXc-Node-81" class="mjx-mrow"><span id="MJXc-Node-82" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span><span id="MJXc-Node-83" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">j </span></span></span></span></span></sub></span><span id="MJXc-Node-84" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R"><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" style="box-sizing: border-box; scroll-behavior: inherit !important; display: inline-table; line-height: 0; text-indent: 0px; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 18.72px; font-size-adjust: none; letter-spacing: normal; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; margin: 0px; padding: 1px 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-53" class="mjx-mo MJXc-space3">= </span><span id="MJXc-Node-54" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I">P</span></span><span id="MJXc-Node-55" class="mjx-mo">(</span><span id="MJXc-Node-56" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-57" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-58" class="mjx-texatom"><span id="MJXc-Node-59" class="mjx-mrow"><span id="MJXc-Node-60" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span><span id="MJXc-Node-61" class="mjx-mo">+</span><span id="MJXc-Node-62" class="mjx-mn">1 </span></span></span></span></sub></span><span id="MJXc-Node-63" class="mjx-mo MJXc-space3">= </span><span id="MJXc-Node-64" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I">j</span></span><span id="MJXc-Node-65" class="mjx-texatom"><span id="MJXc-Node-66" class="mjx-mrow"><span id="MJXc-Node-67" class="mjx-mo">|</span></span></span><span id="MJXc-Node-68" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-69" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">X</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-70" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n </span></span></span></sub></span><span id="MJXc-Node-71" class="mjx-mo MJXc-space3">= </span><span id="MJXc-Node-72" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-73" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">i</span></span></span><sub><span class="mjx-sub"><span id="MJXc-Node-74" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">n</span></span></span></sub></span><span id="MJXc-Node-75" class="mjx-mo">)</span></span></span></span></span></span></span></span></span></p>
+<p>Now we can write down the whole Markov chain as a matrix P:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44114 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-602.png?resize=217%2C137&#038;ssl=1" alt="" width="217" height="137"></p>
+<p>Example:</p>
+<p>Weather Problem:</p>
+<ul style="list-style-type: square;">
+<li>raining today  ⇒ 40 % rain tomorrow</li>
+</ul>
+<p>⇒ 60 % no rain tomorrow</p>
+<ul style="list-style-type: square;">
+<li>not raining today  ⇒ 20 % rain tomorrow</li>
+</ul>
+<p>⇒ 80 % no rain tomorrow</p>
+<p>What will be the probability if today is not raining then not rain the day after tomorrow?</p>
+<p><i>Markov chain diagram:</i></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10953 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-2.png?resize=334%2C145&#038;ssl=1" alt="- Hamro CSIT" width="334" height="145" /></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-44115" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-603.png?resize=204%2C153&#038;ssl=1" alt="" width="204" height="153"></p>
+<p>Thus, the probability of not being rainy the day after tomorrow is 0.76.</p>
+<p><strong>Applcation areas of Markov chain:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Physics</strong>: Whenever probabilities are employed to describe unknown or unmodeled system features, Markovian systems are widely utilized in statistical mechanics and thermodynamics. Assuming that the dynamics are time-invariant, it is unnecessary to take into account any pertinent history that is not included in the state description.</li>
+<li><strong>Queuing Theory</strong>: Queues are treated analytically using Markov chains as the foundation. Because of this, they are essential for maximizing the efficiency of telecommunication networks, where messages frequently have to contend for scarce resources like bandwidth. Markov chains in continuous time are used in many queuing models.</li>
+<li><strong>Internet Applications</strong>: Google uses a Markov chain to determine a webpage&#8217;s page rank. It is the likelihood that the following stationary distribution will have page x.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain itetrative process of calibrating a simulation model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Calibration is the itetrative process of compearing the model to the real system and make adjustment to the model by compearing again and again. This comparision of model to the reality is carried out through by variety of test.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44149 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Untitled-Diagram.drawio-1.png?resize=265%2C248&#038;ssl=1" alt="" width="265" height="248"></p>
+<ul style="list-style-type: square;">
+<li>An initial model is built on the basis of the real system.</li>
+<li>The initial model is compared to the real system and the adjustments are made.</li>
+<li>The new model is again revised by comparing it to real system and the second version of the model is formed.</li>
+<li>This itetration takes again and again until the  system built is close to the real system.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Describe the process of model building, verification and validation in detail with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Process of model building</strong> :</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44151 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Untitled-Diagram-Page-2.drawio.png?resize=201%2C203&#038;ssl=1" alt="" width="201" height="203"></p>
+<ul style="list-style-type: square;">
+<li>The first step in model building consist of observing the real system and the interaction among various component and collecting data on its behaviour.</li>
+<li>Next step in model building is construction of a conceptual model a collection of assumptions of the components and the structure of the system plus hypothesis of the values of model inpput parameters.</li>
+<li>The third step is translation of the operatikonal model into the computer recognizable form or computer model.</li>
+</ul>
+<p><strong>Verification</strong> :<br />
+It is the process of confirming that the simulation has been carried out accurately in accordance with its parameters and design.Verification examines the simulation&#8217;s capabilities, methods, and structure in order to determine whether it was constructed correctly. The software or model&#8217;s functionality and lack of programming or implementation problems are evaluated.</p>
+<p><strong>Validation</strong> :<br />
+It is the process of determining if the simulation accurately depicts the real-world system it is meant to mimic. The outputs or behavior of the simulation are compared to observations, empirical data, or experimental outcomes from the real system.It guarantees that the simulation is as accurate as is necessary for the task for which it was designed.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define traffic intensity and server utilization. Write down the Kendall’s notation for queuing system with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Traffic Intensity</strong>:<br />
+The ratio of arrival rate to service rate is used to determine how busy a system is. It displays the percentage of the system&#8217;s capacity that is being utilized. A common way to represent traffic intensity is using the symbol ρ, which quantifies the demand on a queuing system in relation to its capacity. Formula: <span class="katex"><span class="katex-mathml">ρ = μ/λ.</span></span></p>
+<p><strong>Server utilization</strong> :<br />
+The percentage of time a server (or service facility) is actively involved in serving tasks as opposed to being idle is known as server utilization. Server usage in a single-server system is equal to the traffic intensity. It is determined by dividing the arrival rate by the product of the service rate and the number of servers in multi-server systems.</p>
+<p><strong>Kendall’s Notation:</strong></p>
+<p>Different notations are frequently used in the queuing system and are called Kendall Notations. Kendall Notation is the standard system used to describe and classify a queueing node. The Kendall Notation can be represented in the form A/B/C/N/K.</p>
+<p>where A indicates arrival pattern, B indicates service pattern, C indicates the number of servers, D indicates queuing discipline, N indicates system capacity, and K indicates calling population.</p>
+<p>The symbols used for the probability distribution for inter-arrival time,  and service time are, D for deterministic, M for exponential, and E<sub>k</sub> for Erlang distribution.</p>
+<p>If parameters D, N &amp; K are not specified then, N = ∞ (infinity), K = ∞ (infinity), D = FIFO</p>
+<p>Example:</p>
+<p>M/D/2/FIFO/5/∞, queuing system having exponential arrival pattern, deterministic service time, 2 servers, FIFO queuing discipline, the capacity of 5 customers, and infinite population.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define traffic intensity and server utilization. Write down the Kendall’s notation for queuing system with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Traffic Intensity</strong>:<br />
+The ratio of arrival rate to service rate is used to determine how busy a system is. It displays the percentage of the system&#8217;s capacity that is being utilized. A common way to represent traffic intensity is using the symbol ρ, which quantifies the demand on a queuing system in relation to its capacity. Formula: <span class="katex"><span class="katex-mathml">ρ = μ/λ.</span></span></p>
+<p><strong>Server utilization</strong> :<br />
+The percentage of time a server (or service facility) is actively involved in serving tasks as opposed to being idle is known as server utilization. Server usage in a single-server system is equal to the traffic intensity. It is determined by dividing the arrival rate by the product of the service rate and the number of servers in multi-server systems.</p>
+<p><strong>Kendall’s Notation:</strong></p>
+<p>Different notations are frequently used in the queuing system and are called Kendall Notations. Kendall Notation is the standard system used to describe and classify a queueing node. The Kendall Notation can be represented in the form A/B/C/N/K.</p>
+<p>where A indicates arrival pattern, B indicates service pattern, C indicates the number of servers, D indicates queuing discipline, N indicates system capacity, and K indicates calling population.</p>
+<p>The symbols used for the probability distribution for inter-arrival time,  and service time are, D for deterministic, M for exponential, and E<sub>k</sub> for Erlang distribution.</p>
+<p>If parameters D, N &amp; K are not specified then, N = ∞ (infinity), K = ∞ (infinity), D = FIFO</p>
+<p>Example:</p>
+<p>M/D/2/FIFO/5/∞, queuing system having exponential arrival pattern, deterministic service time, 2 servers, FIFO queuing discipline, the capacity of 5 customers, and infinite population.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is analog computer ? Explain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An analog computer is a kind of computing equipment that uses continuous impulses to represent data. These signals can include mechanical, hydraulic, or electronic components. Because they can analyze and modify continuous data, analog computers are ideal for jobs involving physical quantities and measurements.</p>
+<p><strong>Characteristics of Analog Computers:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Continuous Signals</strong> : Continuous signals enable a smooth representation of values and are used by analog computers to represent data.</li>
+<li><strong>Speed</strong> : For some jobs, analog computers may process information more quickly than digital computers.</li>
+<li><strong>Accurate Measurement</strong> : Excellent for assignments involving actual measurements and phenomena.</li>
+</ul>
+<p><strong>Analog Computer Example</strong> :<br />
+An analog electronic thermometer is an example of an analog computer. The continuous analog representation of temperature in this device is provided by the location of a mercury column in a glass tube.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes:</p>
+<ol>
+<li>Queuing discipline</li>
+<li>Random variate</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Queue Discipline :<br />
+</strong>A queuing discipline is the body of regulations that establishes the sequence in which work or clients are handled in a line.</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">FIFO (First-In-First-Out)</span>: This queuing discipline tells that the entity that arrives first is the first to be served. eg: the one with first entry in the bank will get first served.</li>
+<li><span style="text-decoration: underline;">LIFO (Last-In-First-Out)</span>: This queuing discipline tells that the entity that arrives last is the first to be served. for eg: thehistory of the browser, the last existed tab is displayed first in history.</li>
+<li><span style="text-decoration: underline;">Priority Queues</span>: A special way where the entities are served based on assigned priorities.</li>
+<li><span style="text-decoration: underline;">(SIRO) Service in Random Order</span> : A queuing discipline where the service is given to any random. Here, no any algorithm is used to determine which process or customer would be the next.</li>
+<li><span style="text-decoration: underline;">SPT (Shortest Process Time)</span> :  When the process or customer with the shortest time is given the first service then it is called SPT i.e Shortest Process Time.</li>
+</ul>
+<p><strong>Random variate :<br />
+</strong>A value that is produced at random from a certain probability distribution is known as a random variate. In statistical modeling, simulations, and probabilistic analysis, it is used to simulate random processes in a controlled way by representing a potential result of a random variable.<br />
+An exponential distribution is frequently used to describe the time between client arrivals in a queue. For example, each random variate produced from this distribution would represent one potential arrival time, according to the statistical characteristics of that distribution.</p>
+</div>
+</body></html>

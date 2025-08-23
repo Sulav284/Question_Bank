@@ -1,0 +1,526 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CDC Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>CDC Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt all question.</h2><h3>Question 1</h3>
+<div><p><p>Difference between compiler and interpreter. “Symbol table is necessary component of compiler”. Justify this statement with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Difference between compiler and interpreter.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 28.314%; text-align: center;">Features</td>
+<td style="width: 38.3526%; text-align: center;"><strong>Compiler</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Interpreter</strong></td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Translation</strong></td>
+<td style="width: 38.3526%; text-align: center;">Translates entire source code into machine code at once.</td>
+<td style="width: 33.3333%; text-align: center;">Translates source code line by line during execution.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Output</strong></td>
+<td style="width: 38.3526%; text-align: center;">Generates executable file or machine code</td>
+<td style="width: 33.3333%; text-align: center;">Doesn,t produce a separate executable file.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Execution Speed</strong></td>
+<td style="width: 38.3526%; text-align: center;">Generally produces faster execution of code.</td>
+<td style="width: 33.3333%; text-align: center;">May have slower execution due to real time translation.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Error Detection</strong></td>
+<td style="width: 38.3526%; text-align: center;">May detect error during compilation.</td>
+<td style="width: 33.3333%; text-align: center;">Detects error during interpretation often as encountered.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Memory Usage</strong></td>
+<td style="width: 38.3526%; text-align: center;">Typically requires more memory during compilation.</td>
+<td style="width: 33.3333%; text-align: center;">Require less memory during execution.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Portability</strong></td>
+<td style="width: 38.3526%; text-align: center;">Compiled code may not be portable across platforms.</td>
+<td style="width: 33.3333%; text-align: center;">Interpreted code is usually more portable.</td>
+</tr>
+<tr>
+<td style="width: 28.314%; text-align: center;"><strong>Debugging</strong></td>
+<td style="width: 38.3526%; text-align: center;">Debugging may be more complex due to machine code.</td>
+<td style="width: 33.3333%; text-align: center;">Easier debugging as error are encountered in the source.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A symbol table is crucial for a compiler because it helps to keep track of information about variables, functions, and other identifiors in a program. This is essential for the compiler to correctly analyze and generate code.</p>
+<p>some simplified reasons with eg:</p>
+<p>a. <strong>Tracking variables and their scopes</strong> : The symbol table helps the compiler know which variables are in scope and accessible at any point in program.</p>
+<p>eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void scope()
+{
+int x = 10;
+{
+int x = 20;
+printf("%d",x);
+}
+printf("%d",x);
+}</pre>
+<p>b. <strong>Type checking</strong> : The symbol table helps ensure that operations on variables are performed correctly according to their types.</p>
+<p>eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int a = 2;
+float b = 3.5;
+a = a+b; // Error : adding float to int without conversion</pre>
+<p>c. <strong>Memory allocation</strong> : The symbol table that compiler allocate memory for variables.</p>
+<p>eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int num;
+char letter;
+float amount;</pre>
+<p>d. <strong>Function information</strong> : The symbol table stores details about functions such as their return types and parameters.</p>
+<p>eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int add(int x, int y)
+{
+return x+y;
+}
+int main()
+{
+int result = add(2, 3);
+printf("%d", result);
+}</pre>
+<p>e.<strong> Name Resoulation</strong> : The symbol table helps resolve which variable or function an identifier refers to.</p>
+<p>eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int value = 10;
+int get value()
+{
+return value;
+}</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>List out the major tasks carried out in Lexical Analysis Phase. Convert the following NFA to DFA.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36794" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/qn-NFA.drawio.png?resize=722%2C275&ssl=1" alt="" width="722" height="275"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The lexical analysis phase, also known as scanning or tokenization is the first phase of a compiler. During this phase, the sourse code is processed to convert it into a sequence of tokens.</p>
+<p>Here, are the major tasks carried out in the lexical analysis phase.</p>
+<p>a.<span style="text-decoration: underline;"><em> Reading Input Characters</em></span> : The lexical analyzer reads the input characters from source code sequentially.</p>
+<p>b.<span style="text-decoration: underline;"><em> Removing whitespace and comments</em></span> : Whitespace and comments are removed as they are not needed foe further analysis.</p>
+<p>c.<em><span style="text-decoration: underline;"> Token Generation</span></em> : Characters are grouped into meaningful sequences called tokens.</p>
+<p>d. <span style="text-decoration: underline;"><em>Lexeme Recognition</em></span> : Specific sequences of characters or lexemes are recognized according to token patterns.</p>
+<p>e. <em><span style="text-decoration: underline;">Token classification</span></em>: Each lexeme is classified into a token type such as keyword, identifier, operator etc.</p>
+<p>f. <em><span style="text-decoration: underline;">Error handling</span></em>: The lexical analyzer detects and reports invalid tokens or characters.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36794" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/qn-NFA.drawio.png?resize=722%2C275&#038;ssl=1" alt="" width="722" height="275"></p>
+<p>solution</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">States</td>
+<td style="width: 33.3333%; text-align: right;">Next</td>
+<td style="width: 33.3333%; text-align: left;"> state</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">→* {p}</td>
+<td style="width: 33.3333%; text-align: center;">{r,q}</td>
+<td style="width: 33.3333%; text-align: center;">Φ</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">* {r,q}</td>
+<td style="width: 33.3333%; text-align: center;">{r,q}</td>
+<td style="width: 33.3333%; text-align: center;">{r}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">* {r}</td>
+<td style="width: 33.3333%; text-align: center;">{r}</td>
+<td style="width: 33.3333%; text-align: center;">Φ</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Φ</td>
+<td style="width: 33.3333%; text-align: center;">Φ</td>
+<td style="width: 33.3333%; text-align: center;">Φ</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Transition diagram for above table</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36795" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/DFA.drawio-2.png?resize=692%2C376&#038;ssl=1" alt="" width="692" height="376"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate between recursive descent and non-recursive predictive parsing method. Find first and follow of all the non-terminals in the following grammar.</p>
+<p>E→TA; A→ +TA|ε ; T→FB; B→*FB|ε ; F→(E)|id</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Difference between recursive descent and non-recursive predictive parsing method:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 312px;">
+<tbody>
+<tr style="height: 48px;">
+<td style="width: 33.5264%; text-align: center; height: 48px;">Feature</td>
+<td style="width: 33.1402%; text-align: center; height: 48px;"><strong>Recursive Descent Parsing</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 48px;"><strong>Non-recursive predictive parsing</strong></td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.5264%; text-align: center; height: 72px;"><strong>Defination</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 72px;">User recursive function for each non-terminal.</td>
+<td style="width: 33.3333%; text-align: center; height: 72px;">Uses a stack and parsing table to predict and parse.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 33.5264%; text-align: center; height: 48px;"><strong>Implementation </strong></td>
+<td style="width: 33.1402%; text-align: center; height: 48px;">Recursive procedure.</td>
+<td style="width: 33.3333%; text-align: center; height: 48px;">Explicit stack and parsing table.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Ease of implementation</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">Easier to implement manually.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">More complex due to parsing table construction.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Space Complexity</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">Higher , depends on recursion depth.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Lower, uses explicit stack.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Speed</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">Slower due to recursive calls.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Faster, avoids function call overhead.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Error Handling</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">Complex, involves managing recursive calls.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">simplor error detected using parsing table.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Productive capability</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">Uses lookahead and recursion.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Uses single lookahead and parsing table.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.5264%; text-align: center; height: 24px;"><strong>Back tracking</strong></td>
+<td style="width: 33.1402%; text-align: center; height: 24px;">May require back tracking</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">No back tracking if grammar is LL(1).</td>
+</tr>
+</tbody>
+</table></div>
+<p>given grammar</p>
+<p>E→TA</p>
+<p>A→ +TA|ε</p>
+<p>T→FB</p>
+<p>B→*FB|ε</p>
+<p>F→(E)|id</p>
+<p>The FIRST and FOLLOW for the non-terminals are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Non-terminal</td>
+<td style="width: 33.3333%; text-align: center;">First</td>
+<td style="width: 33.3333%; text-align: center;">Follows</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">E</td>
+<td style="width: 33.3333%; text-align: center;">{c, id}</td>
+<td style="width: 33.3333%; text-align: center;">{$, )}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">A</td>
+<td style="width: 33.3333%; text-align: center;">{+, ε }</td>
+<td style="width: 33.3333%; text-align: center;">{$, )}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">T</td>
+<td style="width: 33.3333%; text-align: center;">{c, id}</td>
+<td style="width: 33.3333%; text-align: center;">{+,$, )}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">B</td>
+<td style="width: 33.3333%; text-align: center;">{*, ε }</td>
+<td style="width: 33.3333%; text-align: center;">{+,$, )}</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">F</td>
+<td style="width: 33.3333%; text-align: center;">{c, id}</td>
+<td style="width: 33.3333%; text-align: center;">{*,+,$, )}</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>Construct SLR parse table for the following grammar</p>
+<p>S→E</p>
+<p>E→E+T|T</p>
+<p>T→T*F|F</p>
+<p>F→id</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given grammar,</p>
+<p>S→E</p>
+<p>E→E+T|T</p>
+<p>T→T*F|F</p>
+<p>F→id</p>
+<p>solution</p>
+<p>The augmented of given grammar is :</p>
+<p>S&#8217;→S</p>
+<p>S→E</p>
+<p>E→E+T|T</p>
+<p>T→T*F|F</p>
+<p>F→id</p>
+<p>I<sub>0 </sub>= closure(S&#8217;→.E) = {S&#8217;→.E,  E→.E+T,  E→.T, T→.F, F→id}</p>
+<p>I<sub>1 </sub>= Goto(I<sub>0</sub>, E) = closure {S&#8217;→E. ,  E→E.+T} = {S&#8217;→E. ,  E→E.+T}</p>
+<p>I<sub>2 </sub>= Goto(I<sub>0</sub>, T) = closure {S&#8217;→T. ,  T→T.*F} = {E→T. ,  T→T.*F}</p>
+<p>I<sub>3 </sub>= Goto(I<sub>0</sub>, F) = closure {T→F.} = {T→F.}</p>
+<p>I<sub>4 </sub>= Goto(I<sub>0</sub>, id) = closure {F→id.} = {F→id.}</p>
+<p>I<sub>5 </sub>= Goto(I<sub>1</sub>, +) = closure {E→E+.T} = {E→E+.T, T→.T*F, T→.F, F→.id}</p>
+<p>= Goto (I<sub>5 </sub>,F) = closure {T→F.} = {T→F.} same as I<sub>3 </sub></p>
+<p>= Goto (I<sub>5 </sub>,id) = closure {F→id.} = {F→id.} same as I<sub>4</sub></p>
+<p>I<sub>6 </sub>= Goto(I<sub>2</sub>, *) = closure {T→T*.F} = {T→T*.F, F→.id}</p>
+<p>= Goto (I<sub>6 </sub>,id) = closure {F→id.} = {F→id.} same as I<sub>4</sub></p>
+<p>I<sub>7 </sub>= Goto(I<sub>5</sub>, T) = closure {E→E+T.} = {E→E+T.}</p>
+<p>I<sub>8 </sub>= Goto(I<sub>6</sub>, F) = closure {T→T*F.} = {T→T*F.}</p>
+<p>Compute FOLLOW function as,</p>
+<p>Follow (S&#8217;) = {$}</p>
+<p>Follow (S) = Follow (S&#8217;) ={$}</p>
+<p>Follow (E) = { First(+T) U Follow(S) } = {+, $}</p>
+<p>Follow (T) = { First(*F) U First(F) } = {*,+, $}</p>
+<p>Follow (F) = {*,+, $}</p>
+<p>Drawing DFA</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36803" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/SLR-parsing.drawio.png?resize=825%2C497&#038;ssl=1" alt="" width="825" height="497"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36806" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/table.drawio.png?resize=627%2C597&#038;ssl=1" alt="" width="627" height="597"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define Syntax directed definition. Construct annotated parse tree for the input expression (5*3+2)*5 according to the following<br />
+syntax directed definition.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-20633" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/07/Screenshot-2023-07-16-150843.png?resize=459%2C272&ssl=1" alt="- Hamro CSIT" width="459" height="272" data-recalc-dims="1" /></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SDD i.e Syntax Directed Defination is a formal way to specify the syntax and symantic of a programming language. It is a context-free grammar togetherwith attributes and rules.</p>
+<p>for eg:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Production</td>
+<td style="width: 50%; text-align: center;">Semantic Rules</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">E → T</td>
+<td style="width: 50%; text-align: center;">E.val = T.val</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">T → T<sub>1 </sub>* F</td>
+<td style="width: 50%; text-align: center;">T.val = T<sub>1</sub>.val * F.val</td>
+</tr>
+</tbody>
+</table></div>
+<p>The annoted parse trees for input expression:</p>
+<p>(5*3+2)*5</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36760" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/annoted-parse-tree.drawio.png?resize=710%2C750&#038;ssl=1" alt="" width="710" height="750"></p>
+<p style="text-align: center;">fig : Annoted parse tree for expression (5*3+2)*5</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between static and dynamic type checking. How can we carry out type checking for the following expression using syntax-directed defination?</p>
+<p>S→ id = E</p>
+<p>S→ if E then S1</p>
+<p>S→ while E do S1</p>
+<p>S→ S1; S2</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">Features</td>
+<td style="width: 33.3333%; text-align: center;"><strong>Static type checking</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Dynamic type checking</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Timing</strong></td>
+<td style="width: 33.3333%; text-align: center;">Performed at compilation.</td>
+<td style="width: 33.3333%; text-align: center;">Performed at runtime.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Error Detection</strong></td>
+<td style="width: 33.3333%; text-align: center;">Type error are deteted before execution.</td>
+<td style="width: 33.3333%; text-align: center;">Type error are deteted during execution.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Performance</strong></td>
+<td style="width: 33.3333%; text-align: center;">Typically results in faster execution.</td>
+<td style="width: 33.3333%; text-align: center;">May result in slower execution.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Safety</strong></td>
+<td style="width: 33.3333%; text-align: center;">Provides higher safety gurantees as errors are caught early.</td>
+<td style="width: 33.3333%; text-align: center;">Provides flexiblity but with possible runtime error.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Flexiability</strong></td>
+<td style="width: 33.3333%; text-align: center;">Less flexible, requires explicit type declarations and consistency.</td>
+<td style="width: 33.3333%; text-align: center;">More flexibility types can change and adapt during execution.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Language example</strong></td>
+<td style="width: 33.3333%; text-align: center;">C, C++, Java</td>
+<td style="width: 33.3333%; text-align: center;">Python, JavaScript, Ruby</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Error Handling</strong></td>
+<td style="width: 33.3333%; text-align: center;">Errors are caught and reported at compile time.</td>
+<td style="width: 33.3333%; text-align: center;">Error must be handled or caught during execution.</td>
+</tr>
+</tbody>
+</table></div>
+<p>given grammar,</p>
+<p>S→ id = E</p>
+<p>S→ if E then S1</p>
+<p>S→ while E do S1</p>
+<p>S→ S1; S2</p>
+<p>we will define the following attributes:</p>
+<ul style="list-style-type: square;">
+<li>E.type : The type expression &#8216;E&#8217;.</li>
+<li>S.type : The type statement &#8216;S&#8217;.</li>
+<li>id.type : The type identifier &#8216;id&#8217;.</li>
+</ul>
+<p>SDD for type checking</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.5005%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;">Production</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Attributes</td>
+<td style="width: 32.8358%; text-align: center; height: 24px;">Semantic Rule</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 33.3333%; text-align: center; height: 48px;">S→ id = E</td>
+<td style="width: 33.3333%; text-align: center; height: 48px;">S.type, id.type, E.type</td>
+<td style="width: 32.8358%; text-align: center; height: 48px;">S.type = if (id.type == E.type) then valid else &#8220;type error&#8221;.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;">S→ if E then S1</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">S.type, E.type, S1.type</td>
+<td style="width: 32.8358%; text-align: center; height: 24px;">S.type = if (E.type == &#8216;boolean&#8217;) then S1.type else &#8220;type error&#8221;.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;">S→ while E do S1</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">S.type, E.type, S1.type</td>
+<td style="width: 32.8358%; text-align: center; height: 24px;">S.type = if (E.type == &#8216;boolean&#8217;) then S1.type else &#8220;type error&#8221;.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;">S→ S1; S2</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">S.type, S1.type, S2.type</td>
+<td style="width: 32.8358%; text-align: center; height: 24px;">S.type = if (S1.type == valid and S2.type == valid) then valid else &#8220;type error&#8221;.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define three address codes. write three address codes for</p>
+<p>S → do m = n-p while a <= b</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Three-address code is an intermediate representation used in compilors to simplify the process of code generation and optimization. It is a type of intermediate code that uses at most three address (or operands) for each instruction.</p>
+<p>For eg: Three address code for expression : a+b*c+d</p>
+<p>t<sub>1</sub> = b*c</p>
+<p>t<sub>2</sub> = a+ t<sub>1</sub></p>
+<p>t<sub>3</sub> = t<sub>2 </sub>+ d</p>
+<p>given expression :</p>
+<p>S → do m = n-p while a &lt;= b</p>
+<p>Three address code for given expression:</p>
+<ol style="list-style-type:decimal;">
+<li>m = n-p</li>
+<li>if a &lt; b goto (1)</li>
+<li>if a = b goto (1)</li>
+<li>stop.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define code optimization. Discuss about any three code optimization techniques with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Code optimization is the process of improving the efficiency of code by making it run faster consume less memory, or use fewer resources while preserving the original functionality and output. The goal is to enhance the performance of the code without altering its expected behavior.</p>
+<p>Common code optimization technique</p>
+<p>a. Constant Folding : In this technique, it involves folding the constants. The expression that contain the operands having constant values at compile time are evaluated. These expression are then replaced with their respective results</p>
+<p>Eg: Circumference of circle  = $$\frac{{22}}{{7}}×Diameter$$</p>
+<p>Here,</p>
+<ul style="list-style-type: square;">
+<li>This technique evaluate the expression 22/7 at compile time.</li>
+<li>The expression is then replaced with its result 3.14</li>
+<li>This saves time at run time.</li>
+</ul>
+<p>b. Dead code eliminate: In this technique, it involves eliminating the dead code. The statement of the code which either never executes or are unrechable or their output is never used are eliminated.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Code before optimization</td>
+<td style="width: 50%; text-align: center;">Code after optimized</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">i = o;</td>
+<td style="width: 50%; text-align: center;">i = 0;</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">if (i == 1)</td>
+<td style="width: 50%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">{</td>
+<td style="width: 50%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">a = x+5;</td>
+<td style="width: 50%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">}</td>
+<td style="width: 50%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>c. Strength reduction:</p>
+<p>Here, it involves reducing the strength of expression. This technique replaces the expensive and costly operators with simple and cheaper one&#8217;s.</p>
+<p>Eg:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Code before optimization</td>
+<td style="width: 50%; text-align: center;">Code after optimized</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">B = A×2</td>
+<td style="width: 50%; text-align: center;">B = A +A</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is activation record? Discuss the different activities performed by caller and callee during procedure call and return.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An activation reocord is a data structure used to manage the execution of produces or functions within a program. Whwn a function is called during execution of program, an activation record is created and stored on the call stack.</p>
+<p>The activation recrd contains several pieces of information:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Return address.</li>
+<li>Parametors.</li>
+<li>Local variables.</li>
+<li>Temporary variables.</li>
+<li>Control link</li>
+</ol>
+<p>Different activities performed by caller and callee during procedure call and return are as:</p>
+<p>Caller (Calling function)</p>
+<ol style="list-style-type:decimal;">
+<li>Passes argument to the callee.</li>
+<li>Saves the return address.</li>
+<li>Transfers control to the callee.</li>
+<li>Handles the return value after the callee complete execution.</li>
+</ol>
+<p>Callee (called function):</p>
+<p>1. Executes a prologue:</p>
+<ul style="list-style-type: square;">
+<li>Sets up the activation record.</li>
+<li>Allocate space for local variables.</li>
+<li>Sets up the fram pointer.</li>
+</ul>
+<p>2. Execute the function code, performing the intended computation.</p>
+<p>3. Executes an epilogue before returning:</p>
+<ul style="list-style-type: square;">
+<li>Stores return value.</li>
+<li>Restores the frame pointer.</li>
+<li>Deallocates space for local variables.</li>
+</ul>
+<p>4. Returns control to the caller, jumping to the saved return address.</p>
+<p>5. Returns a value if applicable placing it in the designated return value location.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Discuss about the different factors affecting target code generation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Target code genration the process of translating an intermediate representation (IR) or high-level language into machine code or a lower &#8211; level representation.</p>
+<p>Here&#8217;s are the different factors affecting target  code generation.</p>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;"><em>Architecture</em></span> : Target code generation is influenced by the specific hardware architecture and its features.</li>
+<li><span style="text-decoration: underline;"><em>Calling convention</em></span> : Code generation must adhere to rules for parametor passing , return values , interaperability between modules.</li>
+<li><em><span style="text-decoration: underline;">Optimization goals</span></em> :Depending on priorities like speed , size , or energy efficiency , the compiler applies different optmization technique , during code generation.</li>
+<li><em><span style="text-decoration: underline;">Intruction selection</span></em> :Choosing appropriate machine instruction based on the available instrction set , addressing modes , and  optimization goals is crucial.</li>
+<li><em><span style="text-decoration: underline;">Data representation</span></em> :Optimizing memory access patterns , data size , and alignment affects code efficiency.</li>
+<li><em><span style="text-decoration: underline;">Control flow</span></em> : Handling control flow constructs like loops and conditionals efficiently improves code performance.</li>
+</ol>
+</div>
+</body></html>

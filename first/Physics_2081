@@ -1,0 +1,220 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Physics Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>Physics Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Long Answer Question:
+Attempt any two questions:</h2><h3>Question 1</h3>
+<div><p><p>What do you mean by the contact potential? Give a schematic of a p-n Junction by illustrating:</p>
+<ul>
+<li>(a) Potential difference V, resulting from the positive donor ions in the n-side of the depletion layer and the negative acceptor ions in the p-side of the depletion layer.</li>
+<li>(b) Potential energy barrier faced by the majority charge carriers (electrons) in the n-side of the diode as they attempt to cross the junction.</li>
+<li>(c) Potential energy barrier faced by the majority side of the diode as they attempt to cross the junction.</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Contact Potential in a P-N Junction:</strong></p>
+<p>Potential difference in a p-n junction is the potential difference which arises across the junction when a p-type semiconductor (with a high hole concentration as charge carriers) is brought in contact with an n-type semiconductor (with an excess of electrons). This potential difference is created due to the diffusion of charge carriers from one side to the other, creating an electric field and a depletion region free of free charge carriers.</p>
+<p>&nbsp;</p>
+<p>When the p-type and n-type materials are brought together, electrons from the n-side diffuse into the p-side and combine with holes. Similarly, holes from the p-side diffuse into the n-side. This results in the creation of an electric field, which causes the positive donor ions on the n-side and the negative acceptor ions on the p-side to create a built-in potential difference. This contact potential is the potential difference and plays a crucial role in determining the behavior of the junction in devices like diodes.</p>
+<p><strong>Schematic of a P-N Junction with Explanations</strong></p>
+<p>Below is a breakdown of the schematic depicting the p-n junction, along with explanations of the contact potential and potential energy barriers that the charge carriers face.</p>
+<p><img class="aligncenter" /><img class="aligncenter" /></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-57201" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/qn1physics.jpg?resize=1075%2C716&#038;ssl=1" alt="" width="1075" height="716"></p>
+<p><strong>(a) Potential Difference (V) Due to Donor and Acceptor Ions:</strong></p>
+<p>Because of the diffusion of charge carriers within depletion region between n-side and p-side of the junction, positive donor ions on the n-side and negative acceptor ions on the p-side are formed. The separation of charges results in an electric field and a potential difference across the junction. This potential difference ‘V’ or the contact potential. It opposes further diffusion of electrons and holes, basically stopping them from freely crossing the junction.</p>
+<p>&nbsp;</p>
+<p><strong>(b) Potential Energy Barrier to Electrons on the N-side:</strong></p>
+<p>Electrons are the majority charge carriers in the n-side of the junction. When these electrons attempt to cross the junction to the p-side, they must overcome the potential energy barrier offered by the contact potential. This obstacle is the energy that has to be used up for an electron to move from the n-side, through the depletion region, and into the p-side. This potential energy barrier is the cause for the absence of free flow of electrons from the n-side to the p-side under no applied voltage.</p>
+<p>&nbsp;</p>
+<p><strong>(c) Potential Energy Barrier for Holes in the P-side</strong></p>
+<p>Holes are the dominant charge carriers in the p-side of the junction. Since these holes attempt to diffuse to the n-side, they face an equivalent potential energy barrier as the electrons. This barrier prevents the holes from freely diffusing from the p-side to the n-side. An external voltage (forward bias) needs to be overcome by the potential energy barrier so that current can be forced to flow through the junction.</p>
+<p>Contact potential is a result of charge carrier diffusion through the p-n junction, forming an electric field that prevents further diffusion. The hole and electron potential energy barriers are energies that majority carriers must diffuse through the junction in order to allow current to flow. The diagram provided does serve to make these matters more visually clear by depicting the depletion region and charges that create the contact potential.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Discuss single crystal growth by discussing the following techniques:</p>
+<ul>
+<li>(a) Czochralski Method,</li>
+<li>(b) Bridgman-Stockbarger Method,</li>
+<li>(c) Floating Zone Method, and</li>
+<li>(d) Vapor-Phase Epitaxy.</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h4><strong>1. Czochralski Method</strong></h4>
+<p>The Czochralski method is a widely used technique for growing single crystals, especially for semiconductors like silicon. Here’s how it works:</p>
+<ul style="list-style-type: square;">
+<li>A seed crystal is dipped into a melt of the material (e.g., silicon) in a crucible.</li>
+<li>The seed crystal is slowly rotated and pulled upward while the melt is cooled.</li>
+<li>As the seed is pulled, the material solidifies into a single crystal with the same orientation as the seed.</li>
+<li>This method is used to produce large, high-quality crystals for the semiconductor industry.</li>
+</ul>
+<h4><strong>2. Bridgman-Stockbarger Method</strong></h4>
+<p>The Bridgman-Stockbarger method is used to grow single crystals of materials like semiconductors, metals, and optical crystals. The process involves:</p>
+<ul style="list-style-type: square;">
+<li>Placing the material in a crucible with a pointed end.</li>
+<li>Heating the crucible in a furnace to melt the material.</li>
+<li>Slowly moving the crucible through a temperature gradient, causing the material to solidify from the pointed end.</li>
+<li>The slow cooling and controlled solidification result in a single crystal.</li>
+</ul>
+<h4><strong>3. Floating Zone Method</strong></h4>
+<p>The floating zone method is used to grow high-purity single crystals, especially for materials like silicon and germanium. The process involves:</p>
+<ul style="list-style-type: square;">
+<li>A polycrystalline rod of the material is held vertically.</li>
+<li>A small zone of the rod is melted using a heating source (e.g., a laser or RF coil).</li>
+<li>The molten zone is moved along the rod, and as it cools, it solidifies into a single crystal.</li>
+<li>This method avoids contamination from crucibles, making it ideal for high-purity applications.</li>
+</ul>
+<h4><strong>4. Vapor-Phase Epitaxy</strong></h4>
+<p>Vapor-phase epitaxy (VPE) is a technique used to grow thin single-crystal layers on a substrate. The process involves:</p>
+<ul style="list-style-type: square;">
+<li>Introducing gaseous precursors of the material into a reaction chamber.</li>
+<li>The precursors react on the surface of a heated substrate, forming a single-crystal layer.</li>
+<li>This method is used to grow materials like gallium arsenide (GaAs) and silicon carbide (SiC) for electronic and optoelectronic devices.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-52641 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/Screenshot-2025-03-01-113220.png?resize=521%2C586&#038;ssl=1" alt="" width="521" height="586"> <img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-52642 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/Screenshot-2025-03-01-113232.png?resize=568%2C441&#038;ssl=1" alt="" width="568" height="441"> <img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-52643 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/Screenshot-2025-03-01-113324.png?resize=425%2C505&#038;ssl=1" alt="" width="425" height="505"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-52644 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/Screenshot-2025-03-01-113338.png?resize=495%2C401&#038;ssl=1" alt="" width="495" height="401"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe torque on a current-carrying rectangular loop of wire on a pivot rod when placed in a magnetic field. Give an alternative way of increasing the torque on the coil.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-52638" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/03/Screenshot-2025-03-01-104816.png?resize=657%2C938&#038;ssl=1" alt="" width="657" height="938"></p>
+<h3></h3>
+<p>To increase the torque on the coil, we can:</p>
+<ol start="1">
+<li><strong>Increase the Current (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">I</span></span></span></span>)</strong>: The torque is directly proportional to the current. Increasing the current will increase the torque.</li>
+<li><strong>Increase the Area (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span></span></span></span>)</strong>: A larger loop area will result in a larger torque.</li>
+<li><strong>Increase the Magnetic Field (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">B</span></span></span></span>)</strong>: A stronger magnetic field will increase the torque.</li>
+<li><strong>Adjust the Angle (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">θ</span></span></span></span>)</strong>: The torque is maximum when <span class="katex"><span class="katex-mathml">θ=90∘</span></span> (loop perpendicular to the field). Adjusting the loop to this angle will maximize the torque.</li>
+</ol>
+</div>
+<h2>Section B : Short answer questions
+Attempt any Eight Questions</h2><h3>Question 4</h3>
+<div><p><p>Explain group velocity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="dad65929">
+<div class="f9bf7997 d7dc56a8 c05b5566">
+<div class="ds-markdown ds-markdown--block">
+<p>Group velocity is the speed at which the <strong>overall shape</strong> (envelope) of a group of waves travels. It tells us how fast the energy or information in a wave moves.</p>
+<ul style="list-style-type: square;">
+<li><strong>Wave Packet</strong>: A group of waves with slightly different frequencies forms a &#8220;wave packet.&#8221; The group velocity is the speed of this packet.</li>
+<li><strong>Phase Velocity</strong>: This is the speed of individual wave crests. Group velocity and phase velocity are different in most materials.</li>
+<li><strong>Formula</strong>: Group velocity <span class="katex"><span class="katex-mathml">vg=dω/dk</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span>, where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">ω</span></span></span></span> is the wave&#8217;s frequency and <span class="katex"><span class="katex-mathml">k</span></span> is the wave number.</li>
+</ul>
+<h4></h4>
+<p><strong>Example </strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Prism Example</strong>: When light passes through a prism, it splits into colors because different colors travel at different speeds. The group velocity is the speed of the overall light beam, while the phase velocity is the speed of each color.</li>
+</ul>
+<p><strong>Why it matters</strong></p>
+<p>Group velocity is important in communication (e.g., how fast signals travel in fiber optics) and in understanding wave behavior in materials.</p>
+<p><strong>Hence</strong>, Group velocity is the speed of the wave&#8217;s &#8220;envelope.&#8221; It’s different from the speed of individual waves and is crucial for understanding how waves carry energy and information.</p>
+</div>
+</div>
+</div>
+<div class="e886deb9">
+<div class="e214291b"></div>
+</div>
+<div class="cbcaa82c">
+<div class="aaff8b8f">
+<div class="cefa5c26">
+<div class="dd442025 b699646e"></div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Discuss effective mass of electrons and holes.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>effective mass</strong> of an electron or hole is a concept used in solid-state physics to describe how electrons and holes move in a crystal lattice. It accounts for the interaction of electrons/holes with the periodic potential of the lattice, making them behave as if they have a different mass than their actual mass.</p>
+<p><strong>Effective mass of electron:</strong></p>
+<ul style="list-style-type: square;">
+<li>In a crystal lattice, electrons experience forces due to the periodic potential of the atoms. This changes their motion, making them behave as if they have an <strong>effective mass (<span class="katex"><span class="katex-mathml">me∗</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span>)</strong>.</li>
+<li>The effective mass is determined by the curvature of the electron&#8217;s energy band in the <strong>E-k diagram</strong> (energy vs. wave vector):<img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-52494 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot_2025-02-26_174516-removebg-preview.png?resize=82%2C58&#038;ssl=1" alt="" width="82" height="58"><br />
+where <span class="katex"><span class="katex-mathml">ℏ</span></span> is the reduced Planck&#8217;s constant, <span class="katex"><span class="katex-mathml">E</span></span> is the energy, and <span class="katex"><span class="katex-mathml">k</span></span> is the wave vector.</li>
+<li>If the band is steep (high curvature), the effective mass is small. If the band is flat (low curvature), the effective mass is large.</li>
+</ul>
+<p><strong>Effective mass of holes:</strong></p>
+<ul style="list-style-type: square;">
+<li>A <strong>hole</strong> is the absence of an electron in the valence band. It behaves like a positively charged particle with an <strong>effective mass (<span class="katex"><span class="katex-mathml">mh∗</span></span>)</strong>.<img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-52495 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot_2025-02-26_174953-removebg-preview.png?resize=117%2C67&#038;ssl=1" alt="" width="117" height="67"></li>
+<li>The effective mass of a hole is also determined by the curvature of the valence band in the <strong>E-k diagram</strong>:</li>
+<li>Holes typically have a larger effective mass than electrons because the valence band is usually flatter than the conduction band.</li>
+</ul>
+<p><strong>Importance of Effective mass:</strong></p>
+<ul style="list-style-type: square;">
+<li>The effective mass determines how easily electrons and holes can move through the crystal lattice when an electric field is applied.</li>
+<li>It affects properties like <strong>mobility</strong>, <strong>conductivity</strong>, and the behavior of semiconductors and devices like transistors and diodes.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Set up Schrodinger equation and discuss the wavefunction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3><span style="font-size: 12pt;"><strong>Schrodinger Equation :</strong></span></h3>
+<p>The <strong>Schrodinger equation</strong> is the fundamental equation of quantum mechanics. It describes how the <strong>wavefunction</strong> of a quantum system evolves over time. There are two forms: <strong>time-dependent</strong> and <strong>time-independent</strong>.</p>
+<h4><span style="font-size: 12pt;"><strong>Time- dependent </strong><strong>Schrodinger Equation </strong></span></h4>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-52574 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot_2025-02-27_210642-removebg-preview.png?resize=188%2C49&#038;ssl=1" alt="" width="188" height="49">where:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">Ψ(r,t)</span></span> is the <strong>wavefunction</strong> of the system,</li>
+<li><span class="katex"><span class="katex-mathml">H^</span></span> is the <strong>Hamiltonian operator</strong> (total energy operator),</li>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">ℏ</span></span></span></span> is the reduced Planck&#8217;s constant (<span class="katex"><span class="katex-mathml">ℏ=h/2π</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span>),</li>
+<li><span class="katex"><span class="katex-mathml">r</span></span> represents the spatial coordinates,</li>
+<li><span class="katex"><span class="katex-mathml">t</span></span> is time.</li>
+</ul>
+<p><strong>Time-independent s</strong><span style="font-size: 12pt;"><strong>chrodinger Equation </strong></span></p>
+<p>For stationary states (where the wavefunction does not change with time), the time-dependent equation simplifies to:</p>
+<p><span class="katex-display ds-markdown-math"><span class="katex"><span class="katex-mathml">H^ψ(r)=Eψ(r),</span></span></span></p>
+<p>where:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">ψ(r)</span></span> is the <strong>time-independent wavefunction</strong>,</li>
+<li><span class="katex"><span class="katex-mathml">E</span></span> is the energy of the system.</li>
+</ul>
+<p>The Hamiltonian operator <span class="katex"><span class="katex-mathml">H^</span></span> is given by:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-52576 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot_2025-02-27_210713-removebg-preview.png?resize=203%2C59&#038;ssl=1" alt="" width="203" height="59">where:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">m</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">m</span></span></span></span> is the mass of the particle,</li>
+<li><span class="katex"><span class="katex-mathml">∇2</span></span>is the Laplacian operator (second derivative with respect to space),</li>
+<li><span class="katex"><span class="katex-mathml">V(r)</span></span> is the potential energy.</li>
+</ul>
+<h3><span style="font-size: 12pt;"><strong>2. Wavefunction :</strong></span></h3>
+<p>The <strong>wavefunction</strong> <span class="katex"><span class="katex-mathml">Ψ(r,t)</span></span> (or <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">ψ</span><span class="mopen">(</span><span class="mord mathbf">r</span><span class="mclose">)</span></span></span></span> for stationary states) is a mathematical function that describes the quantum state of a system. It contains all the information about the system.</p>
+<p><strong>Properties of the Wavefunction:</strong></p>
+<ol start="1">
+<li><strong>Probability Interpretation</strong>:
+<ul style="list-style-type: square;">
+<li>The square of the wavefunction <span class="katex"><span class="katex-mathml">∣Ψ(r,t)∣<sup>2</sup></span></span> (or <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">∣</span><span class="mord mathnormal">ψ</span><span class="mopen">(</span><span class="mord mathbf">r</span><span class="mclose">)</span><span class="mord">∣<sup>2</sup></span></span></span></span>) gives the <strong>probability density</strong> of finding the particle at position <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathbf">r</span></span></span></span> at time <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">t</span></span></span></span>.</li>
+<li>The probability of finding the particle in a small volume <span class="katex"><span class="katex-mathml">dV</span></span> is:<span class="katex-display ds-markdown-math"><span class="katex"><span class="katex-mathml">P(r,t) dV=∣Ψ(r,t)∣<sup>2</sup>  dV</span></span></span></li>
+</ul>
+</li>
+<li><strong>Normalization</strong>:
+<ul style="list-style-type: square;">
+<li>The wavefunction must be normalized, meaning the total probability of finding the particle somewhere in space is 1:<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-52578 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/Screenshot_2025-02-27_210735-removebg-preview.png?resize=180%2C62&#038;ssl=1" alt="" width="180" height="62"></li>
+</ul>
+</li>
+<li><strong>Superposition Principle</strong>:
+<ul style="list-style-type: square;">
+<li>If <span class="katex"><span class="katex-mathml">Ψ1</span></span> and <span class="katex"><span class="katex-mathml">Ψ2</span></span> are solutions to the Schrödinger equation, then any linear combination <span class="katex"><span class="katex-mathml">Ψ=c1Ψ1+c2Ψ2</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> is also a solution.</li>
+</ul>
+</li>
+<li><strong>Boundary Conditions</strong>:
+<ul style="list-style-type: square;">
+<li>The wavefunction must be <strong>continuous</strong> and <strong>smooth</strong> (its derivative must also be continuous) everywhere in space.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>An oscillating block of mass 250 g takes 0.15 sec to move between the endpoints of the motion, which are 40 cm apart. Find (a) frequency and (b) amplitude of the motion, and.(c) force constant of the spring.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-56789" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/CamScanner-04-04-2025-12.00n_3.jpg?resize=1728%2C2308&#038;ssl=1" alt="" width="1728" height="2308"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>A proton is accelerated through a potential difference of 200V. It then enters a region which there is a magnetic field B = 0.5 T. The magnetic field is perpendicular to the direction of motion of the proton. Find the force experienced by the proton.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51606" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-14-at-6.03.41-PM.jpeg?resize=1600%2C1506&#038;ssl=1" alt="" width="1600" height="1506"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>A small particle of mass 10<sup>-6</sup> g moves along the x axis; its speed is uncertain by 10<sup>-6</sup> m/sec. (a) What is the uncertainty in the x coordinate of the particle? (b) Repeat the calculation for an electron assuming that the uncertainty in its velocity is also 10<sup>-6</sup> m/sec.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51608" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-14-at-6.03.41-PM-2.jpeg?resize=1158%2C1600&#038;ssl=1" alt="" width="1158" height="1600"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>A beam of hydrogen atoms is used in a Stern-Gerlach type experiment. The atoms emerge from the oven with a velocity v = 10<sup>4</sup>m/sec. They enter a region 20 cm long where there is a magnetic field gradient $$ \frac{dB}{dz} = 3 \times 10^4 \text{ T/m} $$. The field gradient is perpendicular to the incident velocity of the atoms. The mass of the hydrogen atom is $$ 1.67 \times 10^{-27} \text{ kg}$$. What is the separation of the two components of the beam as they emerge from the magnet?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51611" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-14-at-6.03.42-PM-1.jpeg?resize=1150%2C1500&#038;ssl=1" alt="" width="1150" height="1500"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51610" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-14-at-6.03.42-PM-2-scaled.jpeg?resize=2560%2C567&#038;ssl=1" alt="" width="2560" height="567"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>The energy gaps of some alkali halides are KCI = 7.6 eV, KBr = 6.3 eV, KI = 5.6 eV. Which of these are transparent to visible light? At what wavelength does each become opaque?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51607" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-14-at-6.03.42-PM.jpeg?resize=1563%2C1233&#038;ssl=1" alt="" width="1563" height="1233"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>The output of a digital circuit (\( y \)) is given by this expression:</p>
+<p>\[<br />
+y = \left( AB + \overline{CB} \cdot A \right) \cdot \overline{B + C}<br />
+\]</p>
+<p>Where \( A \), \( B \), and \( C \) represent inputs. Draw a circuit of the above equation using OR, AND, and NOT gates and hence find its truth table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-57059" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-06-at-11.47.37%E2%80%AFAM.jpeg?resize=1053%2C1280&#038;ssl=1" alt="" width="1053" height="1280"></p>
+</div>
+</body></html>

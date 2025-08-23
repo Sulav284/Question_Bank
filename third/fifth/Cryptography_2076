@@ -1,0 +1,499 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crypto Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>Crypto Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Among monoalphabetic and polyalphabetic cipher, which one is more vulnerable? Justify your statement. Which types of keys are considered weak keys in DES? Explain the round operation in IDEA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Among monoalphabetic and polyalphabetic ciphers, the monoalphabetic cipher is more vulnerable because of its fixed key substitution which opens it to many attacks. This type of encryption can be easily broken down using the &#8220;Brute Force Algorithm&#8221; and frequency analysis attacks. This BFA tries to decrypt the message by trying all the possible combinations. Thus, to prevent this type of attack, the words should be long enough, which is impossible for every word in a sentence.</p>
+<p>DES with a cipher key of 56 bits is not safe enough to be used comfortably. Four out of 2<sup>56</sup> possible keys are called weak keys. A weak key is one that, after parity drop operation, consists either of all 0s, all 1s, or half 0s and half 1s. These keys are shown in the figure below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11406 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-1-1.png?resize=450%2C112&#038;ssl=1" alt="" width="450" height="112"></p>
+<p>The round keys created from any of these weak keys are the same and have the same pattern as the cipher key. If we encrypt a block with a weak key and subsequently encrypt the result with the same weak key, we get the original block. The process creates the same original block if we decrypt the block twice. In other words, each weak key is the inverse of itself E<sub>k</sub>(E<sub>k</sub>(P)) = P.</p>
+<p>IDEA is a block cipher and it operates on 64-bit plaintext and a 128-bit key. IDEA is reversible like DES that is, the equivalent algorithm can be used for encryption and decryption. IDEA needs both diffusion and confusion for encryption.</p>
+<p>The 64-bit plaintext is divided into four portions of 16-bit plaintext (P<sub>1</sub> to P<sub>4</sub>). These are inputs to the first round. There are eight such rounds. The key includes 128 bits. In each round, six sub-keys are produced from the original key, each of these sub-keys includes 16 bits.</p>
+<p>For the first round it can have keys K<sub>1</sub> to K<sub>6</sub>, for the second round it can have keys K<sub>7</sub> to K<sub>12</sub> and finally the last round. The final step includes an output transformer, which needs four subkeys (K<sub>49</sub> to K<sub>52</sub>).</p>
+<p>The final output is the output created by the output transformation step. The blocks C<sub>1 </sub>to C<sub>4</sub> are linked to form the final output.</p>
+<p><span style="text-decoration: underline;"><strong>Encryption in IDEA:</strong></span></p>
+<p>By using a 128-bit key, IDEA encrypts a 64-bit block of plaintext into a 64-bit block of cipher text. One process partitions the plain text block into four 16-bit sub-blocks for each of the eight complete rounds, namely X1, X2, X3 an X4.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11407 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Simplified-International-Data-Encryption-AlgorithmIDEA.jpg?resize=794%2C842&#038;ssl=1" alt="" width="794" height="842"></p>
+<p>Another process produces six 16-bit key subblocks for each of the encryption rounds, namely Z1, Z2, Z3, Z4, Z5 and Z6. For subsequent output transformation, a further four 16-bit key subblocks are required. Thus, from a 128-bit key, a total of 52 16-bit subblocks are generated.</p>
+<p>In each complete round, three algebraic operations are performed: bitwise XOR, addition modulo 2<sup>16</sup> and multiplication modulo 2<sup>16</sup>+1.</p>
+<p>The 14 steps for a complete round are the following:</p>
+<ol class="default-list">
+<li>Multiply X1 with Z1.</li>
+<li>Add X2 to Z2.</li>
+<li>Add X3 to Z3.</li>
+<li>Multiply X4 with Z4.</li>
+<li>Bitwise XOR the results of steps 1 and 3.</li>
+<li>Bitwise XOR the results of steps 2 and 4.</li>
+<li>Multiply the result of step 5 with Z5.</li>
+<li>Add the results of steps 6 and 7.</li>
+<li>Multiply the result of step 8 with Z6.</li>
+<li>Add the results of steps 7 and 9.</li>
+<li>Bitwise XOR the results of steps 1 and 9.</li>
+<li>Bitwise XOR the results of steps 3 and 9.</li>
+<li>Bitwise XOR the results of steps 2 and 10.</li>
+<li>Bitwise XOR the results of steps 4 and 10.</li>
+</ol>
+<p>Six subkeys are used in each of the eight rounds, and the final 4 subkeys are used in the ninth half-round final transformation.</p>
+<p>Swapping occurs for every round until the final complete round (round 8). After eight complete rounds, the final half-round transformation occurs. The steps involved are the following:</p>
+<ol class="default-list">
+<li>Multiply X1 with the first subkey.</li>
+<li>Add X2 with the second subkey.</li>
+<li>Add X3 with the third subkey.</li>
+<li>Multiply X4 with the fourth subkey.</li>
+</ol>
+<p>The concatenation of the four blocks is the encrypted output.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>State Fermat’s theorem with an example. Given the prime number p=29 and its primitive root g=8, private key sender with X=9 and random integer K=11, encrypt the message m=13 using ElGamal cryptosystem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Fermat’s theorem states that if p is a prime number, then for any integer a, the number a<sup>p</sup> – a is an integer multiple of p.</p>
+<p>Here p is a prime number<br />
+a<sup>p</sup> ≡ a (mod p)</p>
+<p><b>Example:</b></p>
+<p>P = an integer Prime number<br />
+a = an integer that is not a multiple of P<br />
+Let a = 2 and P = 17</p>
+<p>According to Fermat&#8217;s little theorem<br />
+2 17 &#8211; 1 ≡ 1 mod(17)<br />
+we got 65536 % 17 ≡ 1<br />
+that mean (65536-1) is a multiple of 17</p>
+<p><strong>Numerical Part:</strong></p>
+<p>Given,</p>
+<p>p = 29</p>
+<p>g = 8</p>
+<p>the private key (X) = 9</p>
+<p>random integer (K) = 11</p>
+<p>messages (m) = 13</p>
+<p>Now,</p>
+<p>Public key = (p, g, y = g<sup>x</sup> mode p)</p>
+<p>= (29, 8, 8<sup>9</sup> mode 29)</p>
+<p>= (8<sup>11</sup> mode 29, 13, 15<sup>11</sup> mode 29)</p>
+<p>= (29, 8, 15)</p>
+<p>Again, encryption the message (m)</p>
+<p>E(m) = (g<sup>x</sup> mode p, m, y<sup>k</sup> mode p)</p>
+<p>= (8<sup>11</sup> mode 29, 13, 15<sup>11</sup> mode 29)</p>
+<p>= (3, 12)</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Compare the SHA parameters between SHA-1 and SHA-2 families. Decrypt the cipher text DRJI with the key \(\begin{pmatrix}7 & 8\\ 11 & 11\end{pmatrix}\) using the Hill cipher.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The major differences between SHA-1 and SHA-2 families are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>SHA1</th>
+<th>SHA2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is a cryptographic hash function designed by U.S. National Security Agency to replace SH0.</td>
+<td>It is a cryptographic hash function designed by U.S. National Security Agency to replace SH1.</td>
+</tr>
+<tr>
+<td>It was published in 1995.</td>
+<td>While it was published in 2001.</td>
+</tr>
+<tr>
+<td>It produces 160 bits hash value.</td>
+<td>It produces 224, 256, 384, or 512 bits hash values.</td>
+</tr>
+<tr>
+<td>It is the successor to SH0 and the predecessor to SH2.</td>
+<td>It is the successor to SH1 and the predecessor to SH3.</td>
+</tr>
+<tr>
+<td>It is less secure.</td>
+<td>While it is more secure.</td>
+</tr>
+<tr>
+<td>Its structure is based on Merkle–Damgard construction.</td>
+<td>Its structure is based on Merkle–Damgard structure with Davies–Meyer compression function.</td>
+</tr>
+<tr>
+<td>SHA1 certificates are not reliable.</td>
+<td>SHA2 has more improved certificates.</td>
+</tr>
+<tr>
+<td>It generates a smaller hash.</td>
+<td>While it generates a larger hash.</td>
+</tr>
+<tr>
+<td>The hash generated by SHA1 is weak.</td>
+<td>While the hash generated by SHA2 is strong.</td>
+</tr>
+<tr>
+<td>It is not widely used nowadays.</td>
+<td>While it is used widely.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Solution:</p>
+<p>Given,</p>
+<p>k = \(\begin{pmatrix}7 &amp; 8\\ 11 &amp; 11\end{pmatrix}\)</p>
+<p><strong>Step 1:</strong> Find the multiplicative inverse of determinant of key matrix \(\begin{pmatrix}7 &amp; 8\\ 11 &amp; 11\end{pmatrix}\).</p>
+<p>= 7 x 11 &#8211; 8 x 11 = 15 mode 26</p>
+<p>Now, the multiplicative inverse of 15 mode 26 is</p>
+<p>or, 15 x a = 1 mode 26</p>
+<p>or, a = 7</p>
+<p><strong>Step 2:</strong> Find the adjoint of the matrix of key matrix \(\begin{pmatrix}7 &amp; 8\\ 11 &amp; 11\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}11 &amp; -8\\ -11 &amp; 7\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}11 &amp; 8\\ 15 &amp; 7\end{pmatrix}\)</p>
+<p><strong>Step 3:</strong> Multiply multiplicative inverse of determinant by adjoint of matrix</p>
+<p>= 7 x \(\begin{pmatrix}11 &amp; 18\\ 15 &amp; 7\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}25 &amp; 22\\ 1 &amp; 23\end{pmatrix}\) mode 26</p>
+<p>Now, cipher text = &#8220;DRJI&#8221;</p>
+<p>\(\begin{pmatrix}D\\ R\end{pmatrix}\) = \(\begin{pmatrix}3\\ 17\end{pmatrix}\)</p>
+<p>\(\begin{pmatrix}J\\ I\end{pmatrix}\) = \(\begin{pmatrix}9\\ 8\end{pmatrix}\)</p>
+<p><strong>Step 4:</strong> Multiply cipher text (c) by inverse key matrix</p>
+<p>= \(\begin{pmatrix}25 &amp; 22\\ 1 &amp; 23\end{pmatrix} \begin{pmatrix}3\\ 17\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}75 + 374\\ 3 + 391\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}449\\ 394\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}7\\ 4\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}H\\ E\end{pmatrix}\)</p>
+<p>Similarly,</p>
+<p>= \(\begin{pmatrix}25 &amp; 22\\ 1 &amp; 23\end{pmatrix} \begin{pmatrix}9\\ 8\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}225 + 176\\ 9 + 184\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}401\\ 193\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}11\\ 11\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}L\\ L\end{pmatrix}\)</p>
+<p>Therefore, Plain text (P) = HELL</p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Define discrete logarithm. Explain the procedure of sharing the secret key in Diffie Hellman.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If a is an arbitrary integer relatively prime to a and g is a primitive root of n, then there exists among the numbers 0, 1, 2, &#8230;, Φ(n) &#8211; 1 where Φ(n) is the totient function, exactly one number µ such that</p>
+<p>a = g<sup>µ</sup> (mode n)</p>
+<p>The number µ is then called the discrete logarithm of a with respect to the base g modulo n and is denoted</p>
+<p>µ = ind<sub>g</sub>a (mod n)</p>
+<p>Figure below shows the procedure of sharing the secret key in Diffie Hellman</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11363 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/diffie-hellman.jpg?resize=1811%2C1105&#038;ssl=1" alt="" width="1811" height="1105"></p>
+<p>The steps are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>Alice chooses a large random number x such that 0 ≤ x ≤ p &#8211; 1 and calculatesR<sub>1</sub> = g<sup>x</sup> mode p</li>
+<li>Bob chooses a large random number y such that 0 ≤ y ≤ p &#8211; 1 and calculatesR<sub>2</sub> = g<sup>y</sup> mode p</li>
+<li>Alice sends R1 to Bob. Note that Alice doesn&#8217;t send the value of x; she send only R<sub>1</sub></li>
+<li>Bob sends R2 to Alice. Again, note that Bob does not send the value of y, he sends only R<sub>2</sub></li>
+<li>Alice calculate K = (R2 )<sup>x</sup> mod p</li>
+<li>Bob calculate K = (R1 )<sup>y</sup> mod p</li>
+</ol>
+<p>K is a symmetric key for the session.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Distinguish between stream cipher and block cipher. Encrypt the message WE ARE IN SAME RACE UNTILL OVER LIVE END using Rail fence cipher using 4 as a number of rails.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differences between stream cipher and block cipher are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Key</th>
+<th>Block Cipher</th>
+<th>Stream Cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition</td>
+<td>Block Cipher is a type of encryption where the conversion of plaintext is performed by taking its block at a time.</td>
+<td>Stream Cipher is a type of encryption where the conversion of plaintext is performed by taking one byte of the plaintext at a time.</td>
+</tr>
+<tr>
+<td>Conversion of Bits</td>
+<td>Since Block Cipher converts blocks at a time, it converts a more significant number of bits than Stream Cipher, which can convert 64 bits or more.</td>
+<td>In the case of Stream Cipher, however, only 8 bits can be transformed at a time.</td>
+</tr>
+<tr>
+<td>Principle</td>
+<td>Block Cipher uses both the &#8220;confusion&#8221; and &#8220;diffusion&#8221; principles for the conversion required for encryption.</td>
+<td>Stream Cipher uses only the confusion principle for the conversion.</td>
+</tr>
+<tr>
+<td>Algorithm</td>
+<td>For encryption of plain text Block Cipher uses Electronic Code Book (ECB) and Cipher Block Chaining (CBC) algorithm.</td>
+<td>Stream Cipher uses CFB (Cipher Feedback) and OFB (Output Feedback) algorithms.</td>
+</tr>
+<tr>
+<td>Decryption</td>
+<td>As a combination of more bits gets encrypted in the case of Block Cipher, so the reverse encryption or decryption is comparatively complex as compared to that of Stream Cipher.</td>
+<td>Stream Cipher uses XOR for the encryption which can be easily reversed to the plain text.</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Feistel Cipher is the most common Block Cipher implementation.</td>
+<td>The main implementation of Stream Cipher is Vernam Cipher.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Solution:</p>
+<p>Number of rails = 4</p>
+<p>Plain text = <strong>WE ARE IN SAME RACE UNTILL OVER LIVE END</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<thead>
+<tr>
+<th>W</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>N</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>A</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>I</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>L</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>E</td>
+<td></td>
+<td></td>
+<td></td>
+<td>I</td>
+<td></td>
+<td>S</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R</td>
+<td></td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+<td>T</td>
+<td></td>
+<td>L</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R</td>
+<td></td>
+<td>I</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>A</td>
+<td></td>
+<td>E</td>
+<td></td>
+<td></td>
+<td></td>
+<td>A</td>
+<td></td>
+<td>E</td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td></td>
+<td>N</td>
+<td></td>
+<td></td>
+<td></td>
+<td>L</td>
+<td></td>
+<td>U</td>
+<td></td>
+<td></td>
+<td></td>
+<td>V</td>
+<td></td>
+<td>E</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>R</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>M</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>U</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>O</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>Take characters row-wise</p>
+<p>Ciphertext = WNAILDEISRCTLRINAEAEENLUVERMUO</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define digital signature. Describe the approaches of DSS.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A digital signature is a mathematical technique used to validate the authenticity and integrity of a message, software, or digital document. It&#8217;s the digital equivalent of a handwritten signature or stamped seal, but it offers far more inherent security. A digital signature is intended to solve the problem of tampering and impersonation in digital communications.</p>
+<p><span style="text-decoration: underline;">Types of Digital Signature:</span></p>
+<ul style="list-style-type: square;">
+<li><strong>Electronic signature –</strong> This digital signature is usually defined as “data in electronic form which are attached to or logically associated with other electronic data and which serve as a method of authentication”.</li>
+<li><strong>Advanced electronic signature –</strong> means an electronic signature that satisfies a number of additional requirements, including a unique link that is capable of identifying the signatory. An advanced electronic signature guarantees the integrity and authentication of the text.</li>
+<li><strong>Qualified digital signature –</strong> means an advanced electronic signature based on a qualified certificate and is created by a secure signature-creation device. All technical elements used to apply such a digital signature must be of the latest technology.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>DSS Approach:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11302 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Iihhz3e.jpg?resize=625%2C165&#038;ssl=1" alt="" width="625" height="165"></p>
+<p style="font-weight: 400;">The DSS approach also makes use of a hash function. The hash code is pro- vided as input to a signature function along with a random number <em>k </em>generated for this particular signature. The signature function also depends on the sender’s private key (<em>PR</em><em>a</em>) and a set of parameters known to a group of communicating principals.</p>
+<p style="font-weight: 400;">We can consider this set to constitute a global public key (<em>PU</em><em>G</em>).1 The result is a signature consisting of two components, labeled <em>s, </em>and <em>r</em>.</p>
+<p>At the receiving end, the hash code of the incoming message is generated. This plus the signature is input to a verification function. The verification function also depends on the global public key as well as the sender’s public key (<i>PU</i><i>a</i>), which is paired with the sender’s private key. The output of the verification function is a value that is equal to the signature component <i>r </i>if the signature is valid. The signature function is such that only the sender, with knowledge of the private key, could have produced a valid signature.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is the task of a firewall? List the elements of X.509.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A &#8220;firewall&#8221;, is a tool that provides a filter of both incoming and outgoing packets. Thus, the main task of the firewall itself is to monitor and control all incoming or outgoing access to network connections based on predetermined security rules. Most firewalls perform two basic security functions.</p>
+<ul style="list-style-type: square;">
+<li>Packet filtering is based on accept or deny policy that is itself based on the rules of the security policy.</li>
+<li>Application proxy gateways provide services to the inside users and at the same time protect each individual host from the &#8220;bad&#8221; outside users.</li>
+</ul>
+<p><span style="text-decoration: underline;">The list of the elements of X.509 is as follows:</span></p>
+<ul class="default-list">
+<li><strong>Version.</strong> Which X.509 version applies to the certificate, indicating what data the certificate must include?</li>
+<li><strong>Serial number.</strong> The CA creates the certificate and must assign it a serial number that distinguishes the CA certificate from other certificates.</li>
+<li><strong>Algorithm information.</strong> The signature algorithm the issuer uses to sign the certificate.</li>
+<li><strong>Issuer distinguished name.</strong> The name of the entity issuing the certificate &#8212; usually, the CA.</li>
+<li><strong>Validity period of the certificate.</strong> The start and end date, as well as the time the certificate is valid and can be trusted.</li>
+<li><strong>Subject distinguished name.</strong> The name to which the certificate is issued.</li>
+<li><strong>Subject public key information.</strong> The public key is associated with the identity.</li>
+<li><strong>Extensions (optional).</strong> Extensions have their own unique IDs, expressed as a set of values called an <em>object identifier</em>. An extension can be rejected if it is not recognized or if the extension has information that can&#8217;t be processed.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How does the nature of worms differ from viruses? Define PKI with its architecture model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The primary difference between a virus and a worm is that viruses must be triggered by the activation of their host; whereas worms are stand-alone malicious programs that can self-replicate and propagate independently as soon as they have breached the system.</p>
+<p>Public-key infrastructure (PKI) is defined as the set of hardware, software, people, policies, and procedures needed to create, manage, store, distribute, and revoke digital certificates based on asymmetric cryptography. The principal objective for developing a PKI is to enable the secure, convenient, and efficient acquisition of public keys.</p>
+<p>The Internet Engineering Task Force (IETF) Public Key Infrastructure X.509 (PKIX) working group has been the driving force behind setting up a formal (and generic) model based on X.509 that is suitable for deploying a certificate-based architecture on the Internet. The figure below shows the interrelationship amount of the key elements of the PKIX model. These elements are</p>
+<ul style="list-style-type: square;">
+<li><b><strong>End ent</strong></b><b><strong>i</strong></b><b><strong>ty</strong></b><b><strong>: </strong></b>A generic term used to denote end users, devices (e.g., servers, routers), or any other entity that can be identified in the subject field of a public key certificate. End entities typically consume and/or support PKI-related services.</li>
+<li><b><strong>Cert</strong></b><b><strong>i</strong></b><b><strong>f</strong></b><b><strong>i</strong></b><b><strong>cat</strong></b><b><strong>i</strong></b><b><strong>on author</strong></b><b><strong>i</strong></b><b><strong>ty (CA)</strong></b><b><strong>: </strong></b>The issuer of certificates and (usually) certificate revocation lists (CRLs). It may also support a variety of administrative functions, although these are often delegated to one or more Registration Authorities.</li>
+<li><b><strong>Reg</strong></b><b><strong>i</strong></b><b><strong>strat</strong></b><b><strong>i</strong></b><b><strong>on author</strong></b><b><strong>i</strong></b><b><strong>ty (RA)</strong></b><b><strong>: </strong></b>An optional component that can assume a number of administrative functions from the CA. The RA is often associated with the end entity registration process but can assist in a number of other areas as well.</li>
+<li><b><strong>CRL </strong></b><b><strong>i</strong></b><b><strong>ssuer</strong></b><b><strong>: </strong></b>An optional component that a CA can delegate to publish CRLs.</li>
+<li><b><strong>Repos</strong></b><b><strong>i</strong></b><b><strong>tory</strong></b><b><strong>: </strong></b>A generic term used to denote any method for storing certificates and CRLs so that they can be retrieved by end entities.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11299 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/9NT1ki4.jpg?resize=601%2C529&#038;ssl=1" alt="" width="601" height="529"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain the procedure of mix column transformation in AES with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>This method messes with columns instead of rows. MixColumns transformation takes each column in the state and performs the linear transformation on it. Since each column has 4 rows, the matrix transformation has to be 4 x 4 and is defined as follows</p>
+<p>\(M = \begin{bmatrix}2 &amp; 3 &amp; 1 &amp; 1\\ 1 &amp; 2 &amp; 3 &amp; 1\\ 1 &amp; 1 &amp; 2 &amp; 3\\ 3 &amp; 1 &amp; 1 &amp; 2\end{bmatrix}\)</p>
+<p>And since linear transformation has an inverse, this operation is invertible. In fact, the matrix used to revert the state back to its original standing is given by</p>
+<p>\(M^{-1} = \begin{bmatrix}14 &amp; 11 &amp; 13 &amp; 9\\ 9 &amp; 14 &amp; 11 &amp; 13\\ 13 &amp; 9 &amp; 14 &amp; 11\\ 11 &amp; 13 &amp; 9 &amp; 14\end{bmatrix}\)</p>
+<div id="attachment_11295" style="width: 434px" class="wp-caption aligncenter"><img data-recalc-dims="1" loading="lazy" decoding="async" aria-describedby="caption-attachment-11295" class="wp-image-11295" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Mix-column-transformation2.png?resize=424%2C209&#038;ssl=1" alt="" width="424" height="209"><p id="caption-attachment-11295" class="wp-caption-text">Figure: MixColumns transformation</p></div>
+<p>The figure below shows how a state is transformed using the MixColumns transformation. The figure also shows that the InvMixColumns transformation creates the original one.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11297 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Illustration-of-InvMixColumns-state-transformation.png?resize=473%2C182&#038;ssl=1" alt="" width="473" height="182"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the role of the prime number in the Euler totient Function? Find the GCD of 12 and 16 using the Euclidean algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Euler’s Totient function Φ (n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest Common Divisor) with n is 1. It is also called an arithmetic function.</p>
+<p>Two things are important for an application or use of Euler&#8217;s totient function. One is that the gcd formed from the given integer &#8216;n&#8217; should be multiplicative. The other is that the numbers of gcd should be the prime numbers only. The integer &#8216;n&#8217; in this case should be more than 1. Calculating the Euler&#8217;s totient function from a negative integer is impossible. The principle, in this case, is that for Φ(n), the multiplicators called m and n should be greater than 1. Hence, denoted by 1 &lt; m &lt; n and gcd (m, n) = 1. Sign Φ is the sign used to denote the totient function.</p>
+<p>Euclidean algorithm for GCD:</p>
+<p>a = q<sub>0</sub> x b + r<sub>0</sub></p>
+<p>or, b = q<sub>1</sub> x r<sub>0</sub> + r<sub>1</sub> and so on</p>
+<p>Here, a = 16 and b = 12</p>
+<p>or, 16 = 1 x 12 + 4</p>
+<p>or, 12 = 3 x 4 + 0</p>
+<p>Hence, the GCD of 12 and 16 using the Euclidean algorithm is 4.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write down any two limitations of MAC. What do policy and mechanism mean in cryptography? Describe with a scenario.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are two major limitations of MAC, both due to its symmetric nature of the operation −</p>
+<ul class="list">
+<li><b>Establishment of Shared Secret.</b>
+<ul class="list">
+<li>It can provide message authentication among pre-decided legitimate users who have shared keys.</li>
+<li>This requires the establishment of shared secrets prior to the use of MAC.</li>
+</ul>
+</li>
+<li><b>Inability to Provide Non-Repudiation</b>
+<ul class="list">
+<li>Non-repudiation is the assurance that a message originator cannot deny any previously sent messages and commitments or actions.</li>
+<li>MAC technique does not provide a non-repudiation service. If the sender and receiver get involved in a dispute over message origination, MACs cannot provide proof that a message was indeed sent by the sender.</li>
+<li>Though no third party can compute the MAC, still sender could deny having sent the message and claim that the receiver forged it, as it is impossible to determine which of the two parties computed the MAC.</li>
+</ul>
+</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Security Policies and Mechanisms:</strong></span></p>
+<p>Simply stating that a system should be able to protect itself against all possible security threats is not the way to actually build a secure system. What is first needed is a description of security requirements, that is, a <strong>security policy.</strong> A security policy describes precisely which actions the entities in a system are allowed to take and which ones are prohibited. Entities include users, services, data, machines, and so on. Once a security policy has been laid down, it becomes possible to concentrate on the security mechanism by which a policy can be enforced i.e, security mechanism implement security policies. Important security mechanisms are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Encryption:</strong> It provides a means to implement data confidentially. In addition, it allows the user to verify data modification so, it also provides support for integrity checks.</li>
+<li><strong>Authentication:</strong> It is used to verify the claimed identity of a user, or client, authenticated by password, but there are many other ways to authenticate clients.</li>
+<li><strong>Authorization:</strong> After a client has been authenticated, authorization is to check whether the client is authorized o perform a specific task.</li>
+<li><strong>Auditing:</strong> Auditing tools are used to trace which client accessed what information, when and in which way they did so. Although auditing does not provide any protection against security threats. Audit logs can be useful for the analysis of a security breach, and subsequently taking measures against intruders.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on</p>
+<ol>
+<li>Classes of Intruder</li>
+<li>SSL</li>
+<li>DoS Attack</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) Classes of Intruder:</strong></span></p>
+<p>Intruders are often referred to as hackers and are the most harmful factors contributing to the vulnerability of security. They have immense knowledge and an in-depth understanding of technology and security. Intruders breach the privacy of users and aim at stealing the confidential information of users. The stolen information is then sold to third-party, which aim at misusing the information for their own personal or professional gains.</p>
+<p><strong>Intruders are divided into three categories:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Masquerader: </strong>The category of individuals that are not authorized to use the system but still exploit user privacy and confidential information by possessing techniques that give them control over the system, such category of intruders is referred to as Masqueraders. Masqueraders are outsiders and hence they don’t have direct access to the system, their aim is to attack unethically to steal data/ information.</li>
+<li><strong>Misfeasor: </strong>The category of individuals that are authorized to use the system, but misuse the granted access and privilege. These are individuals that take undue advantage of the permissions and access given to them, such category of intruders is referred to as Misfeasor. Misfeasors are insiders and they have direct access to the system, which they aim to attack unethically for stealing data/ information.</li>
+<li><strong>Clandestine User: </strong>The category of individuals who have supervision/administrative control over the system and misuse the authoritative power given to them. The misconduct of power is often done by superlative authorities for financial gains, such a category of intruders is referred to as Clandestine Users. A Clandestine User can be any of the two, insiders or outsiders, and accordingly, they can have direct/ indirect access to the system, which they aim to attack unethically by stealing data/ information.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>b) SSL:</strong></span></p>
+<p>A secure Socket Layer (SSL) provides security to the data that is transferred between the web browser and the server. SSL encrypts the link between a web server and a browser which ensures that all data passed between them remain private and free from attack.</p>
+<p><span style="text-decoration: underline;">Secure Socket Layer Protocols: </span></p>
+<ul style="list-style-type: square;">
+<li>SSL record protocol</li>
+<li>Handshake protocol</li>
+<li>Change-cipher spec protocol</li>
+<li>Alert protocol</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>c) DoS Attack:</strong></span></p>
+<p>A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users. DoS attacks accomplish this by flooding the target with traffic or sending it information that triggers a crash. In both instances, the DoS attack deprives legitimate users (i.e. employees, members, or account holders) of the service or resource they expected.</p>
+<p>There are two general methods of DoS attacks: flooding services or crashing services. Flood attacks occur when the system receives too much traffic for the server to buffer, causing them to slow down and eventually stop. Popular flood attacks include:</p>
+<ul style="list-style-type: square;">
+<li><b>Buffer overflow attacks</b> – the most common DoS attack. The concept is to send more traffic to a network address than the programmers have built the system to handle. It includes the attacks listed below, in addition to others that are designed to exploit bugs specific to certain applications or networks</li>
+<li><b>ICMP flood</b> – leverages misconfigured network devices by sending spoofed packets that ping every computer on the targeted network, instead of just one specific machine. The network is then triggered to amplify the traffic. This attack is also known as the smurf attack or ping of death.</li>
+<li><b>SYN flood</b> – sends a request to connect to a server, but never completes the handshake. Continues until all open ports are saturated with requests and none are available for legitimate users to connect to.</li>
+</ul>
+</div>
+</body></html>

@@ -1,0 +1,440 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technology Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>Web Technology Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60+20+20</p>
+        <p><strong>Pass Marks:</strong> 24+8+8 </p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Answer any two questions</h2><h3>Question 1</h3>
+<div><p><p>What is the use of XML?Create a XML file with simple type and complex type elements. Write its equivalent DTD.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>XML stands for Extensible Markup Language. It is a text-based markup language derived from Standard Generalized Markup Language (SGML).</p>
+<p>XML tags identify the data and are used to store and organize the data, rather than specifying how to display it like HTML tags, which are used to display the data.</p>
+<p>XML is used in web development to store and structure data, such as website content or product information. This data can then be used by other applications, such as content management systems or search engines. Moreover, XML is also used to create configuration files for applications.</p>
+<p><strong>XML file:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;data&gt;
+    &lt;simple_type&gt;123&lt;/simple_type&gt;
+    &lt;complex_type&gt;
+        &lt;name&gt;Ram Bahadur&lt;/name&gt;
+        &lt;age&gt;100&lt;/age&gt;
+        &lt;email&gt;rambahadur@gmail.com&lt;/email&gt;
+    &lt;/complex_type&gt;
+&lt;/data&gt;
+</pre>
+<p><strong>Equivalent DTD:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!ELEMENT document (simple_type, complex_type)&gt;
+
+&lt;!ELEMENT simple_type (#PCDATA)&gt;
+
+&lt;!ELEMENT complex_type (name, age)&gt;
+&lt;!ELEMENT name (#PCDATA)&gt;
+&lt;!ELEMENT age (#PCDATA)&gt;</pre>
+<p data-sourcepos="27:1-27:227">The XML file has two elements: a simple type element and a complex type element. The simple type element has a name attribute and a text value. The complex type element has two child elements: a name element and an age element.</p>
+<p data-sourcepos="29:1-29:163">The DTD defines the structure of the XML file. It specifies the elements that can be used in the document, their attributes, and their relationships to each other.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Create an HTML file containing form elements textbox for username, password field and a checkbox for hobbies. Now write javascript function for the form validation. You should validate for username to be empty, password should be of length at least 5, and the check box should be checked.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The HTML file is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Form Validation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form id="myForm" onsubmit="return validateForm()"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="hobbies"&gt;Hobbies:&lt;/label&gt;
+    &lt;input type="checkbox" id="hobbies" name="hobbies"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var hobbies = document.getElementById('hobbies').checked;
+
+      if (username === '') {
+        alert('Username cannot be empty');
+        return false;
+      }
+
+      if (password.length &lt; 5) {
+        alert('Password should be at least 5 characters long');
+        return false;
+      }
+
+      if (!hobbies) {
+        alert('Please check the hobbies checkbox');
+        return false;
+      }
+
+      return true;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How database connection is created in PHP? Write a PHP program to create a form and insert values in to the database table. The form should contain at least two input fields.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To create a database connection: initially, establish a connection to the database using credentials such as the hostname, username, password, and database name. Then, only we can be able to execute queries to interact with the database.</p>
+<p>PHP program that creates a form with two input fields (name and email) and inserts values into a database table:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database_name";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn-&gt;connect_error) {
+    die("Connection failed: " . $conn-&gt;connect_error);
+}
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve data from the form
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    // Prepare and execute SQL query to insert data into the table
+    $sql = "INSERT INTO your_table_name (name, email) VALUES ('$name', '$email')";
+
+    if ($conn-&gt;query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "&lt;br&gt;" . $conn-&gt;error;
+    }
+}
+
+$conn-&gt;close();
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Form to Insert Data&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF']; ?&gt;"&gt;
+        Name: &lt;input type="text" name="name"&gt;&lt;br&gt;
+        Email: &lt;input type="text" name="email"&gt;&lt;br&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h2>Group B: Answer any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Differentiate Web 1.0 from Web 2.0.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table data-sourcepos="1:1-12:57">
+<tbody>
+<tr data-sourcepos="1:1-1:31">
+<th data-sourcepos="1:1-1:9">Feature</th>
+<th data-sourcepos="1:11-1:19">Web 1.0</th>
+<th data-sourcepos="1:21-1:29">Web 2.0</th>
+</tr>
+<tr data-sourcepos="3:1-3:62">
+<td data-sourcepos="3:1-3:15">Role of users</td>
+<td data-sourcepos="3:17-3:38">Consumers of content</td>
+<td data-sourcepos="3:40-3:60">Creators of content</td>
+</tr>
+<tr data-sourcepos="4:1-4:69">
+<td data-sourcepos="4:1-4:9">Content</td>
+<td data-sourcepos="4:11-4:38">Static and one-directional</td>
+<td data-sourcepos="4:40-4:67">Dynamic and user-generated</td>
+</tr>
+<tr data-sourcepos="5:1-5:71">
+<td data-sourcepos="5:1-5:13">Interaction</td>
+<td data-sourcepos="5:15-5:23">Limited</td>
+<td data-sourcepos="5:25-5:69">High level of interaction and collaboration</td>
+</tr>
+<tr data-sourcepos="6:1-6:82">
+<td data-sourcepos="6:1-6:17">Control of data</td>
+<td data-sourcepos="6:19-6:38">Owned by companies</td>
+<td data-sourcepos="6:40-6:80">Users have more control over their data</td>
+</tr>
+<tr data-sourcepos="7:1-7:85">
+<td data-sourcepos="7:1-7:10">Examples</td>
+<td data-sourcepos="7:12-7:54">Wikipedia, Britannica Online Encyclopedia</td>
+<td data-sourcepos="7:56-7:83">Facebook, Twitter, YouTube</td>
+</tr>
+<tr data-sourcepos="8:1-8:34">
+<td data-sourcepos="8:1-8:7">Focus</td>
+<td data-sourcepos="8:9-8:19">Read-only</td>
+<td data-sourcepos="8:21-8:32">Read-write</td>
+</tr>
+<tr data-sourcepos="9:1-9:61">
+<td data-sourcepos="9:1-9:12">Navigation</td>
+<td data-sourcepos="9:14-9:25">Hyperlinks</td>
+<td data-sourcepos="9:27-9:59">Search engines and social media</td>
+</tr>
+<tr data-sourcepos="10:1-10:53">
+<td data-sourcepos="10:1-10:14">Applications</td>
+<td data-sourcepos="10:16-10:32">Static websites</td>
+<td data-sourcepos="10:34-10:51">Web applications</td>
+</tr>
+<tr data-sourcepos="11:1-11:53">
+<td data-sourcepos="11:1-11:12">Technology</td>
+<td data-sourcepos="11:14-11:25">HTML, HTTP</td>
+<td data-sourcepos="11:27-11:51">JavaScript, AJAX, HTML5</td>
+</tr>
+<tr data-sourcepos="12:1-12:57">
+<td data-sourcepos="12:1-12:16">Business model</td>
+<td data-sourcepos="12:18-12:30">Advertising</td>
+<td data-sourcepos="12:32-12:55">Freemium, subscription</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Write a HTML script to generate following list of items;</p>
+<p>1. Coffee : I. Black coffee II. Green coffee</p>
+<p>2. Tea A:  Black tea B. Green tea</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;List of Items&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Coffee
+            &lt;ol type="I"&gt;
+                &lt;li&gt;Black coffee&lt;/li&gt;
+                &lt;li&gt;Green coffee&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Tea A
+            &lt;ol type="A"&gt;
+                &lt;li&gt;Black tea&lt;/li&gt;
+                &lt;li&gt;Green tea&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Create a HTML page containing a div having id “dv1”. The div should contain canvas element. The id of canvas should be “mycanvas”. The height and width of canvas should be 200 and 300.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Canvas Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="dv1"&gt;
+        &lt;canvas id="mycanvas" width="300" height="200"&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are the usages of class and id selectors in CSS? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In CSS, <strong>class</strong> and <strong>ID selectors</strong> are used to identify various HTML elements. The main benefit of setting class or ID is that you can present the same HTML element differently, depending on its class or ID.</p>
+<h2><span style="font-size: 12pt;">Class selector:</span></h2>
+<p>The <strong>class selector</strong> selects elements with a specific class attribute. It matches all the HTML elements based on the contents of their <code>class</code> attribute. The <code>.</code> symbol, along with the class name, is used to select the desired class.</p>
+<h2><span style="font-size: 12pt;">ID selector:</span></h2>
+<p>The <strong>ID selector</strong> matches an element based on the value of its <code>id</code> attribute. In order for the element to be selected, its ID attribute must exactly match the value given in the selector. The <code>#</code> symbol and the <code>id</code> of the HTML element name are used to select the desired element.</p>
+<p>Here is an <strong>example</strong> that uses both class and id selectors.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;CSIT&lt;/title&gt;
+    &lt;style&gt;
+        /* CSS */
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+
+        #special-text {
+            color: green;
+            font-style: italic;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="highlight"&gt;This paragraph has the 'highlight' class.&lt;/p&gt;
+    &lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+    &lt;p id="special-text"&gt;This paragraph has the 'special-text' ID.&lt;/p&gt;
+    &lt;p class="highlight"&gt;Another paragraph with the 'highlight' class.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>In this example, we have used CSS for styling both class and id.</p>
+<ul style="list-style-type: square;">
+<li>Elements with the class &#8220;highlight&#8221; will have blue text color and bold font weight.</li>
+<li>The element with the ID &#8220;special-text&#8221; will have green text color and italic font style.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is word-wrap property in CSS? Write an HTML script to illustrate the word-wrap property.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <code class="">word-wrap</code> property in CSS is used to control whether or not long words can be wrapped to the next line. This property is applicable to inline elements like <code class="">span</code> and <code class="">p</code> tags. By default, long words will overflow the container element and may not be displayed correctly.</p>
+<p>Using the <code class="">word-wrap</code> property, we can specify whether the browser should break long words at appropriate points to prevent them from overflowing the container.</p>
+<p>&nbsp;</p>
+<p>For example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Word Wrap Example&lt;/title&gt;
+  &lt;style&gt;
+    .text-container {
+      word-wrap: break-word; 
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="text-container"&gt;
+  &lt;p&gt;Study well for your exams, otherwise you're going to fail bro.Anyways, Hope you had a great dashain and tihar vacation.All the best for your exams &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe the jQuery Animate() method. Write an html script to create a div with id “mydiv”. The position of the div should be set to absolute. Now show the use of animate method to the div element to right by 300px.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="5:1-5:260">The jQuery Animate() method is a built-in method in jQuery that is used to create custom animations for elements. It allows you to gradually change the CSS properties of an element over time, creating a smooth animation effect. The Animate() method takes three parameters:</p>
+<ol data-sourcepos="7:1-7:138">
+<li data-sourcepos="7:1-7:138">
+<p data-sourcepos="7:4-7:157"><strong>CSS Properties:</strong> An object specifying the CSS properties to animate. The property names should be camel-cased, and the values can be numbers or arrays.</p>
+</li>
+<li data-sourcepos="9:1-10:0">
+<p data-sourcepos="9:4-9:212"><strong>Speed:</strong> The speed of the animation. This can be a string representing a pre-defined speed (&#8220;slow&#8221;, &#8220;medium&#8221;, &#8220;fast&#8221;), a number indicating the animation duration in milliseconds, or a custom easing function.</p>
+</li>
+<li data-sourcepos="11:1-12:0">
+<p data-sourcepos="11:4-11:101"><strong>Callback Function:</strong> An optional callback function to be executed after the animation completes.</p>
+</li>
+</ol>
+<p>Second part:</p>
+<p>The HTML script is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function(){
+            $("#mydiv").animate({
+                right: "300px"
+            }, 1000);
+        });
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="mydiv" style="position: absolute; background-color: #ccc; width: 100px; height: 100px;"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is XML Namespace? How it is used to avoid element name conflict in XML? Justify with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An XML Namespace is a way to uniquely identify elements and attributes in an XML document to avoid naming conflicts, especially when different XML vocabularies or schemas are combined.</p>
+<p>Namespaces are identified within the XML document where they are used. An XML document may use multiple namespaces simultaneously. Each namespace is identified using a Unified Resource Identifier (URI), which points to an external file that defines the namespace. In addition to identifying the namespace resource, the XML document may assign the namespace a variable name that will be used in element names to identify the namespace they belong to.</p>
+<p>&nbsp;</p>
+<p><strong>Let&#8217;s consider an example to illustrate this:</strong></p>
+<p>Suppose you have two XML vocabularies: one for describing books and another for describing cars. Both have an element named &#8220;title&#8221; to represent the title of a book or a car.</p>
+<p>Without namespaces, if you try to combine these two XML documents, you might face a conflict because both vocabularies have elements with the same name. For instance:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;!-- Book XML --&gt;
+&lt;book&gt;
+    &lt;title&gt;Introduction to XML&lt;/title&gt;
+&lt;/book&gt;
+
+&lt;!-- Car XML --&gt;
+&lt;car&gt;
+    &lt;title&gt;Toyota Corolla&lt;/title&gt;
+&lt;/car&gt;
+</pre>
+<p>In this case, if you attempt to merge these two XML documents without namespaces, there would be ambiguity about which &#8220;title&#8221; element belongs to which vocabulary.</p>
+<p>To solve this issue, XML namespaces are used. Here&#8217;s how you can use namespaces to differentiate between these conflicting elements:</p>
+<p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;!-- Book XML with Namespace --&gt;
+&lt;book xmlns:bookns="http://example.com/book"&gt;
+    &lt;bookns:title&gt;Introduction to XML&lt;/bookns:title&gt;
+&lt;/book&gt;
+
+&lt;!-- Car XML with Namespace --&gt;
+&lt;car xmlns:carns="http://example.com/car"&gt;
+    &lt;carns:title&gt;Toyota Corolla&lt;/carns:title&gt;
+&lt;/car&gt;
+</pre>
+<p>In this updated example, each element has a namespace prefix (<code>bookns</code> and <code>carns</code>) associated with a URL (which is typically unique and used as an identifier). Now, &#8220;title&#8221; elements are distinguished by their namespace prefixes (<code>bookns:title</code> and <code>carns:title</code>), preventing conflicts when these XML documents are combined or processed together.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How can you define class and objects in PHP? Write a PHP script to create class and its object.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2><span style="font-size: 12pt;">Defining a PHP Class</span></h2>
+<p>To define a class in PHP, use the <code>class</code> keyword followed by the name of the class. The class name should be in CamelCase (i.e., the first letter of each word is capitalized) and should be a noun that describes the purpose of the class.</p>
+<p>Syntax:</p>
+<pre class="language-php" tabindex="0"><code class="language-php"><span class="token keyword">class</span> <span class="token class-name-definition class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Properties and methods go here</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><span style="font-size: 12pt;">Defining an Object</span></h2>
+<p>To define  an object from a class, use the <code>new</code> keyword followed by the class name and a pair of parentheses.</p>
+<p>Syntax:<code><br />
+$object1 = new MyClass();<br />
+</code></p>
+<p>For example:</p>
+<p>We have created PHP class <code>Person</code> with object <code>$person1</code></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">class Person {
+    public $firstName;
+    public $lastName;
+
+    public function getFullName() {
+        return $this-&gt;firstName . ' ' . $this-&gt;lastName;
+    }
+
+    public function sayHello() {
+        echo "Hello, my name is " . $this-&gt;getFullName() . ".";
+    }
+}
+
+$person1 = new Person();
+$person1-&gt;firstName = "John";
+$person1-&gt;lastName = "Doe";
+$person1-&gt;sayHello(); // Output: Hello, my name is John Doe.
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How can you define array in PHP? Write a PHP function to create an array of type integer and print its elements.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An array in PHP is an ordered collection of data items that can be indexed numerically or associatively. To define an array in PHP, we  use the <code class="">array()</code> function. It takes any number of comma-separated key =&gt; value pairs as arguments.</p>
+<p>In PHP, there are three types of arrays:</p>
+<ul style="list-style-type: square;">
+<li><b>Indexed arrays</b> &#8211; Arrays with a numeric index</li>
+<li><b>Associative arrays</b> &#8211; Arrays with named keys</li>
+<li><b>Multidimensional arrays</b> &#8211; Arrays containing one or more arrays</li>
+</ul>
+<p><strong>PHP function</strong> to create an array of type integer and print its elements:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+function createAndPrintIntArray() {
+    $intArray = [1, 2, 3, 4, 5]; // Creating an array of integers
+    
+    // Printing the elements of the array
+    echo "Array elements: ";
+    foreach ($intArray as $element) {
+        echo $element . " ";
+    }
+}
+
+createAndPrintIntArray();
+?&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+</body></html>

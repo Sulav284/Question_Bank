@@ -1,0 +1,538 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>DS Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>State pigeonhole principle. Solve the recurrence relation a<sub>n </sub>= 3a<sub>n-1 </sub>–  3a<sub>n-2 </sub>+ a<sub>n-3</sub> with initial conditions a<sub>0</sub>=1 ,a<sub>1 </sub>= 3, a<sub>2</sub>=7.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pigeonhole principle states taht if n items are put into m contines with n &gt; m, then at least one container must contain more than one item. For example if one has three gloves then one must have at least two right hand gloves or at least two left hand gloves because one has three objects, but only two categories of handed ness to put then into.</p>
+<p>Given recurrance relation is</p>
+<p>a<sub>n</sub> = 3a<sub>n-1</sub> &#8211; 3a<sub>n-2</sub> + a<sub>n-3</sub></p>
+<p>Here, degree = 3</p>
+<p>The characeristics equation is</p>
+<p>r<sup>3</sup> = 3r<sup>2</sup> &#8211; 3r + 1</p>
+<p>or, r<sup>3</sup> &#8211; 3r<sup>2</sup> &#8211; 3r + 1 = 0</p>
+<p>Solving, We get</p>
+<p>(r-1)(r-1)(r-1) = 0</p>
+<p>r = 1 i.e. r<sub>1</sub> = r<sub>2</sub> = r<sub>3</sub> = 1</p>
+<p>Now, The general solution of homogenuous equation is:</p>
+<p>a<sub>n</sub> = A<sub>1</sub>r<sub>1</sub><sup>n</sup> + A<sub>2</sub>nr<sub>2</sub><sup>n</sup> + A<sub>3</sub>n<sup>2</sup>r<sub>3</sub><sup>n</sup></p>
+<p>a<sub>n</sub> = A<sub>1</sub>1<sup>n</sup> + A<sub>2</sub> . n . (1)<sup>n</sup> + A<sub>3</sub> . n<sup>2</sup> . (1)<sup>n</sup></p>
+<p>a<sub>n</sub> = A<sub>1</sub> + A<sub>2</sub>n + A<sub>3</sub>n<sup>2</sup>  &#8212;&#8212;&#8211;(i)</p>
+<p>Given condition are</p>
+<p>a<sub>0</sub> = 0    ∴ n = 0</p>
+<p>From equation (i):</p>
+<p>a<sub>0</sub> = A<sub>1</sub> + A<sub>2</sub> . 0 + A<sub>3</sub> . 0</p>
+<p>∴ A<sub>1</sub> = 1   &#8212;&#8212;(ii)</p>
+<p>Also,  a<sub>1</sub> = 3    ∴ n = 1</p>
+<p>a<sub>1</sub> = A<sub>1</sub> + A<sub>2</sub> + A<sub>3</sub></p>
+<p>3 = 1 + A<sub>2</sub> + A<sub>3</sub></p>
+<p>A<sub>2</sub> + A<sub>3</sub> = 2   &#8212;&#8212;&#8211;(iii)</p>
+<p>Also, a<sub>2</sub> = 7   ∴ n = 2</p>
+<p>a<sub>2</sub> = A<sub>1</sub> + A<sub>2</sub> . 2 + A<sub>3</sub> . (2)<sup>2</sup></p>
+<p>7 = 1 + 2A<sub>2</sub> + 4A<sub>3</sub></p>
+<p>2A<sub>2</sub> + 4A<sub>3</sub> = 6</p>
+<p>A<sub>2</sub> + 2A<sub>3</sub> = 3   &#8212;&#8212;- (iv)</p>
+<p>Solving equation (iii) and (iv), We get</p>
+<p>A<sub>3</sub> = 1 and A<sub>2</sub> = 1</p>
+<p>Hence, We get A<sub>1</sub> = 1, A<sub>2</sub> = 1 and A<sub>3</sub> = 1</p>
+<p>From equation (i), the general solution is</p>
+<p style="text-align: center;">a<sub>n</sub> = 1 + n + n<sup>2</sup></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Find the value of x such that x = 1 (mod 3), x = 1 (mod 4),  x = 1 (mod 5) and x = 0 (mod 7) using Chinese remainder theorem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here, from question</p>
+<p>x = 1(mod 3)</p>
+<p>x = 1(mod 4)</p>
+<p>x = 1(mod 5)</p>
+<p>x = 0(mod 7)</p>
+<p>We know, linear congurency is of form x = a<sub>n</sub> (mod m<sub>n</sub>) where n is an integer. So, Let us suppose</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse;">
+<tbody>
+<tr>
+<td>a<sub>1</sub>  = 1</td>
+<td>m<sub>1</sub> = 3</td>
+</tr>
+<tr>
+<td>a<sub>2</sub> = 1</td>
+<td>m<sub>2</sub> = 4</td>
+</tr>
+<tr>
+<td>a<sub>3</sub> = 1</td>
+<td>m<sub>3</sub> = 5</td>
+</tr>
+<tr>
+<td>a<sub>4</sub> = 0</td>
+<td>m<sub>4</sub> = 7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, m = m<sub>1</sub> × m<sub>2</sub> × m<sub>3</sub> × m<sub>4</sub></p>
+<p>= 3 × 4 × 5 × 7</p>
+<p>= 420</p>
+<p>Also,</p>
+<p>M<sub>1</sub> = \(\frac{m}{m_1} = \frac{420}{3}\) = 140</p>
+<p>M<sub>2</sub> = \(\frac{m}{m_2} = \frac{420}{4}\) = 105</p>
+<p>M<sub>3</sub> = \(\frac{m}{m_3} = \frac{420}{5}\) = 84</p>
+<p>M<sub>4</sub> = \(\frac{m}{m_4} = \frac{420}{7}\) = 60</p>
+<p>Now, we need to find the inverse of M<sub>1</sub> mod m<sub>1</sub>,  M<sub>2</sub> mod m<sub>2</sub>, M<sub>3</sub> mod m<sub>3</sub> and M<sub>4</sub> mod m<sub>4</sub>.</p>
+<p>Now, inverse of M<sub>1</sub> mod m<sub>1</sub> i.e 140 mod 3 is</p>
+<p>140 × 0 = 0 (mod 3)</p>
+<p>140 × 1 = 2 (mod 3)</p>
+<p>140 × 2 = 1 (mod 3)</p>
+<p>∴ 2 is the invers of 140 mod 3</p>
+<p style="text-align: center;">Let y<sub>1</sub> = 2</p>
+<p>Also, inverse of 105 mod 4 is</p>
+<p>105 × 0 = 0 (mod 4)</p>
+<p>105 × 1 = 1 (mod 4)</p>
+<p>∴ 1 is the inverse of 105 mod 4.</p>
+<p style="text-align: center;">Let y<sub>2</sub> = 1</p>
+<p>Also, inverse of 84 mod 5</p>
+<p>84 × 0 = 0 (mod 5)</p>
+<p>84 × 1 = 4 (mod 5)</p>
+<p>84 × 2 = 3 (mod 5)</p>
+<p>84 × 3 = 2 (mod 5)</p>
+<p>84 × 4 = 1 (mod 5)</p>
+<p>∴ 4 is the inverse of 84 mod 5</p>
+<p style="text-align: center;">Let y<sub>3</sub> = 4</p>
+<p>Similarly, inverse of 60 mod 7</p>
+<p>60 × 0 = 0 (mod 7)</p>
+<p>60 × 1 = 4 (mod 7)</p>
+<p>60 × 2 = 1 (mod 7)</p>
+<p>∴ 2 is the inverse of 60 mod 7</p>
+<p style="text-align: center;">Let y<sub>4</sub> = 2</p>
+<p>Now, we know,</p>
+<p>a<sub>1</sub> = 1,    a<sub>2</sub> = 1,   a<sub>3</sub> = 1,   a<sub>4</sub> = 0</p>
+<p>M<sub>1</sub> = 140,    M<sub>2</sub> = 105,   M<sub>3</sub> = 84,   M<sub>4</sub> = 60</p>
+<p>y<sub>1</sub> = 2,   y<sub>2</sub> = 1,   y<sub>3</sub> = 4,   y<sub>4</sub> = 2</p>
+<p>The solutions to these systems are those</p>
+<p>x such that</p>
+<p>x = a<sub>1</sub>M<sub>1</sub>y<sub>1</sub> + a<sub>2</sub>M<sub>2</sub>y<sub>2</sub> + a<sub>3</sub>M<sub>3</sub>y<sub>3</sub> + a<sub>4</sub>M<sub>4</sub>y<sub>4</sub>  mod m</p>
+<p>= 1 × 140 × 2 + 1× 105 × 1 + 1 × 84 × 4 + 0 × 60 × 2 mo 420</p>
+<p>= 280 + 105 + 446 (mod 420)</p>
+<p>= 301</p>
+<p>Hence, we conclde that 301 is the smallest +ve integer that leaves remainder 1 when divided by 3,4,5 and 7.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Euler circuit with suitable example. Find the maximal flow s to t from the given network flow.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-4374 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download.png?resize=421%2C161&ssl=1" alt="" width="421" height="161"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Eular circuit is a circuit made using a path where every edge of the graph G is used exactly one and only once and the path returns to its statring vertex. A connected multigraph with at least two vertices has an Euler circuit if and only if each of its vertices has even degrees.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5660" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/eular-circuit.jpg?resize=143%2C107&#038;ssl=1" alt="Eular Circuit Example | HAMROCSIT" width="143" height="107" /></p>
+<p>It is an Eular circuit because statring and ending vertex are same.</p>
+<p>(a-e-c-d-e-b-a)</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Let&#8217;s do using S-T cut method.</p>
+<p>Given,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-4374 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download.png?resize=421%2C161&#038;ssl=1" alt="Maximum Flow S cut | HAMROCSIT" width="421" height="161" /></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 264px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;"></td>
+<td style="width: 20%; height: 24px;">X</td>
+<td style="width: 20%; height: 24px;">Y</td>
+<td style="width: 20%; height: 24px;">cuts(X, Y)</td>
+<td style="width: 20%; height: 24px;">Capacity K(X, Y)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">1</td>
+<td style="width: 20%; height: 24px;">{S}</td>
+<td style="width: 20%; height: 24px;">{1, 2, 3, ,4, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(S, 1), (S, 2), (S, 3)}</td>
+<td style="width: 20%; height: 24px;">8 + 9 + 5 = 22</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">2</td>
+<td style="width: 20%; height: 24px;">{S, 1}</td>
+<td style="width: 20%; height: 24px;">{2, 3, 4, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(S, 2), (S, 3), (1, 4)}</td>
+<td style="width: 20%; height: 24px;">9 + 5 + 6 = 20</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">3</td>
+<td style="width: 20%; height: 24px;">{S, 1, 4}</td>
+<td style="width: 20%; height: 24px;">{2, 3, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(S, 2), (S, 3), (4, t), (4, 5)}</td>
+<td style="width: 20%; height: 24px;">9 + 5 + 11 + 4 = 29</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">4</td>
+<td style="width: 20%; height: 24px;">{S, 2}</td>
+<td style="width: 20%; height: 24px;">{3, 4, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(S, 1), (S, 3), (2, 3), (2, 5)}</td>
+<td style="width: 20%; height: 24px;">8 + 5 + 7 + 5 = 25</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">5</td>
+<td style="width: 20%; height: 24px;">{S, 1, 2}</td>
+<td style="width: 20%; height: 24px;">{3, 4, t}</td>
+<td style="width: 20%; height: 24px;">{(S, 3), (1, 4), (2, 5), (2, 3), (3, 4), (3, 6)}</td>
+<td style="width: 20%; height: 24px;">5 + 6 + 5 + 7 = 23</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">6</td>
+<td style="width: 20%; height: 24px;">{S, 1, 2, 3}</td>
+<td style="width: 20%; height: 24px;">{4, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(1, 4), (2, 5), (3, 4), (3, 6)}</td>
+<td style="width: 20%; height: 24px;">6 + 5 + 2 + 6 = 19</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">7</td>
+<td style="width: 20%; height: 24px;">{S, 1. 2, 3, 4}</td>
+<td style="width: 20%; height: 24px;">{5, t}</td>
+<td style="width: 20%; height: 24px;">{(2, 5), (3, 5), (4, 5), (4, t)}</td>
+<td style="width: 20%; height: 24px;">5 + 6 + 4  + 11 = 26</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">8</td>
+<td style="width: 20%; height: 24px;">{S, 1, 2, 3, 4, 5}</td>
+<td style="width: 20%; height: 24px;">{t}</td>
+<td style="width: 20%; height: 24px;">{(4, t), (5, t)}</td>
+<td style="width: 20%; height: 24px;">11 + 13 = 24</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">9</td>
+<td style="width: 20%; height: 24px;">{S, 1, 2, 3, 5}</td>
+<td style="width: 20%; height: 24px;">{4, t}</td>
+<td style="width: 20%; height: 24px;">{(1, 4), (3, 4), (5, t)}</td>
+<td style="width: 20%; height: 24px;">6 + 2  + 13 = 21</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 20%; height: 24px;">10</td>
+<td style="width: 20%; height: 24px;">{S, 1, 3, 4}</td>
+<td style="width: 20%; height: 24px;">{2, 5, t}</td>
+<td style="width: 20%; height: 24px;">{(5, 2), (3, 5), (4, 5), (4, t)}</td>
+<td style="width: 20%; height: 24px;">9 + 6 + 4 + 11 = 30</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, Minimum cut capacity  = 19 and Maximum flow = 19</p>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Prove that for every positive integer n ≥ 1, n<sup>2</sup>+n is even integer using mathematical induction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let p(n) = n<sup>2</sup> + n</p>
+<p>First we perform basic steps</p>
+<p>We show p(1) is true</p>
+<p>i.e. p(1) = 1<sup>2</sup> + 1 = 2 (which is divisible by 2)</p>
+<p>Hence, n<sup>2</sup> + n is an even integer when n = 1</p>
+<p><span style="text-decoration: underline;"><strong>Induction Step:</strong></span></p>
+<p>Let us suppose, for any arbitary k, p(k) is true. i,e, it is divisible by 2 so that it is an even integer.</p>
+<p>i.e. k<sup>2</sup> + k = 2t, where t is an integer</p>
+<p>Now, we have to show p(k + 1) is also even i.e. divisible by 2</p>
+<p>(k + 1)<sup>2</sup>  + (k + 1)</p>
+<p>= k<sup>2</sup> + 2k + 1 + k  + 1</p>
+<p>= k<sup>2</sup> + k + 2k + 2</p>
+<p>= 2t + 2k + 2</p>
+<p>= 2t + 2(k+1)</p>
+<p>= 2t + 2m (where m is an integer)</p>
+<p>= 2(t+m)</p>
+<p>= 2s (where is an integer)</p>
+<p>Here, 2s is divisible by 2. Som p(x + 1) is an even integer. So, its true.</p>
+<p>Hence, by matematical induction, n<sup>2</sup> + n is even whenever p ≥ 1</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>All over smart people are stupid. Children of stupid people are naughty. John is a children of Jane. Jane is over smart. Represent these statements in FOPL and prove that John is naughty.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Let x = total number of people</p>
+<p>y = total children of people</p>
+<p>OS(x) = x people are oversmart</p>
+<p>S(x) = x people are stupid</p>
+<p>C(y, x) = y childresn of x people</p>
+<p>n(y) = y children are naughty</p>
+<p>OS(jane) = Jane is oversmart</p>
+<p>n(John) = John is naughty</p>
+<p><span style="text-decoration: underline;"><strong>Promises:</strong></span></p>
+<p>1)   ∀ x ( OS → S(x) )</p>
+<p>2)  ∀ x, y ( S(x) ∧ C(y, x) → n(y) )</p>
+<p>3)  OS (Jane)</p>
+<p>4)    C(John, Jane)</p>
+<p>Conclusion: n(John)</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;"></td>
+<td style="width: 56.2102%; height: 24px;">Steps</td>
+<td style="width: 33.3333%; height: 24px;">Reason</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">1</td>
+<td style="width: 56.2102%; height: 24px;">OS (Jane)</td>
+<td style="width: 33.3333%; height: 24px;">Promises</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">2</td>
+<td style="width: 56.2102%; height: 24px;">∀ x ( OS → S(x) )</td>
+<td style="width: 33.3333%; height: 24px;">Promises</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">3</td>
+<td style="width: 56.2102%; height: 24px;">OS (Jane) → S( Jane)</td>
+<td style="width: 33.3333%; height: 24px;">Universal instantiation (2)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">4</td>
+<td style="width: 56.2102%; height: 24px;">S( Jane)</td>
+<td style="width: 33.3333%; height: 24px;">Modus pones (1 &amp; 3)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">5</td>
+<td style="width: 56.2102%; height: 24px;">C(John, Jane)</td>
+<td style="width: 33.3333%; height: 24px;">Promises</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">6</td>
+<td style="width: 56.2102%; height: 24px;">∀ x, y ( S(x) ∧ C(y, x) → n(y) )</td>
+<td style="width: 33.3333%; height: 24px;">Promises</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">7</td>
+<td style="width: 56.2102%; height: 24px;">S( Jane) ∧ C( John, Jane ) → n (John)</td>
+<td style="width: 33.3333%; height: 24px;">Universal instantiation(6)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">8</td>
+<td style="width: 56.2102%; height: 24px;">C(John, Jane) → n (John)</td>
+<td style="width: 33.3333%; height: 24px;">Simplification</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 10.4564%; height: 24px;">9</td>
+<td style="width: 56.2102%; height: 24px;">n( John)</td>
+<td style="width: 33.3333%; height: 24px;">Modus Pones (5, )</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence, John is naughty</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Which of the following are possets?</p>
+<ol>
+<li>(Z, =)</li>
+<li>(Z, ≠)</li>
+<li>(Z, ⊆)</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a) (Z, = )</strong></p>
+<ol style="list-style-type:decimal;">
+<li>When a ∈ z then a = a and thus relation is reflexive (Here, a = a ∀ a ∈ z)</li>
+<li>When a = b and b = a  ∀ a, b ∈ z then a = b and thus relation is antisymmetric</li>
+<li>When a = b and b = c  ∀ a, b, c ∈ z then a = c and thus relation is transitive.</li>
+</ol>
+<p>So, (Z, =) is a poset.</p>
+<p><strong>b) (Z, ≠)</strong></p>
+<ol style="list-style-type:decimal;">
+<li>When a ∈ z, then a ≠ a thus relation is not reflexive (Here, a ≠ a ∀ a ∈ z)</li>
+<li>When a ≠ b and b ≠ a ∀ a, b ∈ z then a ≠ b and thus relation is not antisymmetric.</li>
+<li>When a ≠ b and b ≠ c  ∀ a, b, c ∈ z then a ≠ c and thus relation is not transitive.</li>
+</ol>
+<p>So, (Z, ≠) is not a poset.</p>
+<p><strong>c) (Z, ⊆)</strong></p>
+<ol style="list-style-type:decimal;">
+<li>When a ∈ z, then a ⊆ a thus relation is reflexive (Here, a ⊆ a ∀ a ∈ z)</li>
+<li>When a ⊆ b and b ⊆ a ∀ a, b ∈ z then a ⊆ b and thus relation is antisymmetric.</li>
+<li>When a ⊆ b and b ⊆ c  ∀ a, b, c ∈ z then a ⊆ c and thus relation is transitive.</li>
+</ol>
+<p>So, (Z, ≠) is a poset.</p>
+<p><strong>d) (Z, <b>≥</b>)</strong></p>
+<ol style="list-style-type:decimal;">
+<li>When a ≥ z, then a ≥ a thus relation is reflexive (Here, a ≥ a ∀ a ∈ z)</li>
+<li>When a ≥ b and b ≥ a ∀ a, b ≥ z then a ≥ b and thus relation is antisymmetric.</li>
+<li>When a ≥ b and b ≥ c  ∀ a, b, c ≥ z then a ≥ c and thus relation is transitive.</li>
+</ol>
+<p>So, (Z, ≥) is a poset.</p>
+<div style="padding: 0.75rem 1.25rem; color: #856404; background-color: #fff3cd; border-color: #fff3cd;">Similarly, (Z, ≤), (Z, ÷) are also posets.</div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define reflexive closure and symmetric closure. Find the remainder when 4x<sup>2</sup> – x + 3  is divided by x + 2 using remainder theorem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Suppose, for example, R is not reflexive. If so, We could add missing ordered pairs to this relation to make it reflexive. Which is caused reflexive closure i.e. The reflexive closure of a relation R on set A is obtained by adding (a, a) to R to each a ∈ A.</p>
+<p>It is denoted by R ∪ △, where △ = {(a, a) : a ∈ A}</p>
+<p>Similarly, the symmetric closure of R is obtained by adding (b, a) to R for each (a, b) ∈ R. It is denoted by R ∪ R<sup>-1</sup>, R<sup>-1</sup> = {(b, a) : to each a, b ∈ R}</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Let p(x) = 4x<sup>2</sup> + x + 3</p>
+<p>Putting x + 2 = 0</p>
+<p>x = -2</p>
+<p>Now, by remainder theorem</p>
+<p>Remainder = p)-2)</p>
+<p>= 4 (-2)<sup>2</sup> + (-2) 3</p>
+<p>= 16 + 1</p>
+<p>= 17</p>
+<p>∴ By remainder theorem, the remainder when 4x<sup>2</sup> &#8211; x + 3 is divided by x + 2 is 17</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define Euler path and Hamilton path. Give examples of both Euler and Hamilton path.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Eular path is a path using every edge of the graph G exactly once and only once. An Eular Curcuit is an eular path that returns to its staring vertex. An connected multigraph has an eular path but not an eular circuit if and only if it has at most two vertices of odd degree.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5666 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/eular_path.jpg?resize=303%2C184&#038;ssl=1" alt="Eular Path | HAMROCSIT" width="303" height="184" /></p>
+<p>It is an Eular path.</p>
+<p>a → c → d → e → b → d → a → b</p>
+<p>All edges are used to make the path, no edges are repeated. It is not eular circult as it doesn&#8217;t end with starting vertex.</p>
+<p>Alsp, d(a) = 3, d(b) = 3,  d(c) = 2,  d(d) = 4,  d(e) = 2</p>
+<p>Maximum of two vertices have odd degree so, it can be said eular path.</p>
+<p><span style="text-decoration: underline;"><strong>Hamilton Path:</strong></span></p>
+<p>Hamilton path is a path which contains each vertex once and only once of graph G, no matter how many edgres. Formally, a simple path in a graph G that passes through every vertex exactly once is called a hamilton path.</p>
+<p>Note: Length pf Hamilton path is a connected graph of &#8216;n&#8217; vertices is (n-1) edge.</p>
+<p>Examples:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5667 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/f8tdp.png?resize=151%2C210&#038;ssl=1" alt="Hamilton Graph Example | HMROCSIT" width="151" height="210" />1, 2, 3, 4, 5 or 1, 2, 4, 3 or 1, 4, 3, 2, 5</p>
+<p>Here, np vertices is repeated. so, it is hamilton path.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How many 3 digits numbers can be formed from the digits 1,2,3,4 and 5 assuming that:</p>
+<ol>
+<li>Repetitions of digits are allowed</li>
+<li>Repetitions of digits are not allowed</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here, We have to form a 3 digit number</p>
+<p><strong>a) If repetitions of digits are allowded</strong></p>
+<p style="text-align: center;">5  x  5  x  5</p>
+<p>The one&#8217;s place cane be filled with 5 times. Similarly ten&#8217;s place can also be filled 5 time same wit Hundred&#8217;s place.</p>
+<p>Total numbers = 5 x 5 x 5 = 125</p>
+<p>So, 125 numbers of 3 ditis can be formed when repitations are allowed.</p>
+<p><strong>b) If repetitions of digits are not allowed</strong></p>
+<p style="text-align: center;">3   x  4   x   5</p>
+<p>The one&#8217;s place can be filled up 5 times, ten&#8217;s place can be 4 times and hundred&#8217;s can be 3 times</p>
+<p>Total numbers = 5 x 4 x 3 = 60</p>
+<p>So, 60 numbers of 3 ditis can be formed when repitations are not allowed.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is minimum spanning tree? Explain Kruskal’s algorithm for finding minimum spanning tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In a weighted graph, a minimum spanning tree is a subgraph of unidirected graph that includes all nodes and has minimum weight than all other nodes and has minimum weight than all other spaning trees of the same graph.</p>
+<p>The minimum spanning tree should contain all the vertices as in graph, and no of edges should be n-1 where n = no of vertices of graph.</p>
+<p>It should be connected ad no circuit should form.</p>
+<p>Example: The minimum spanning tree of following:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-5670" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/mst1-min.jpg?resize=220%2C183&#038;ssl=1" alt="" width="220" height="183"></p>
+<p>Here, no of vertices  = 4</p>
+<p>So, all spanning tree should have 3 edges</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5671 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/mst2-min.jpg?resize=251%2C208&#038;ssl=1" alt="" width="251" height="208"></p>
+<p style="text-align: center;">Cost = 15</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5672 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/mst3-min.jpg?resize=250%2C208&#038;ssl=1" alt="" width="250" height="208"></p>
+<p style="text-align: center;">Cost = 6</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5673 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/mst4-min.jpg?resize=252%2C210&#038;ssl=1" alt="" width="252" height="210"></p>
+<p style="text-align: center;">Cost = 9<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5674 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/mst5-min.jpg?resize=248%2C207&#038;ssl=1" alt="" width="248" height="207"></p>
+<p style="text-align: center;">Cost = 10</p>
+<p>Among these spanning trees, The tree with minimum cost is the minimum spanning tree.</p>
+<p><span style="text-decoration: underline;"><strong>Kruskal Algorithm:</strong></span></p>
+<p>Is is a algorithm which find a minimum spanning tree of a undirected edge-weighted graph. If a graph is connected, it finds minimum spanning tree.</p>
+<p>It basically takes a connected weighted graph finds the subset of edges of that graph and forms a tree that includes every vertex which includes minimum sum of weights among all the spanning trees that can be formed from the graph.</p>
+<p>Example: The minimum spanning tree of following using Kruskal Algrithm:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5679 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm1.png?resize=408%2C210&#038;ssl=1" alt="Kruskal Algorithm" width="408" height="210" /></p>
+<p>The weight of the edges of the above graph is given in the below table &#8211;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<td><strong>Edge</strong></td>
+<td>AB</td>
+<td>AC</td>
+<td>AD</td>
+<td>AE</td>
+<td>BC</td>
+<td>CD</td>
+<td>DE</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td>1</td>
+<td>7</td>
+<td>10</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, sort the edges given above in the ascending order of their weights.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<td><strong>Edge</strong></td>
+<td>AB</td>
+<td>DE</td>
+<td>BC</td>
+<td>CD</td>
+<td>AE</td>
+<td>AC</td>
+<td>AD</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>7</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, let&#8217;s start constructing the minimum spanning tree.</p>
+<p><strong>Step 1 &#8211;</strong> First, add the edge <strong>AB</strong> with weight <strong>1</strong> to the MST.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5678 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm2.png?resize=179%2C164&#038;ssl=1" alt="Kruskal Algorithm" width="179" height="164" /></p>
+<p><strong>Step 2 &#8211;</strong> Add the edge <strong>DE</strong> with weight <strong>2</strong> to the MST as it is not creating the cycle.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5677 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm3.png?resize=194%2C170&#038;ssl=1" alt="Kruskal Algorithm" width="194" height="170" /></p>
+<p><strong>Step 3 &#8211;</strong> Add the edge <strong>BC</strong> with weight <strong>3</strong> to the MST, as it is not creating any cycle or loop.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5676 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm4.png?resize=422%2C175&#038;ssl=1" alt="Kruskal Algorithm" width="422" height="175" /></p>
+<p><strong>Step 4 &#8211;</strong> Now, pick the edge <strong>CD</strong> with weight <strong>4</strong> to the MST, as it is not forming the cycle.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5675 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm5.png?resize=457%2C198&#038;ssl=1" alt="Kruskal Algorithm" width="457" height="198" /></p>
+<p><strong>Step 5 &#8211;</strong> After that, pick the edge <strong>AE</strong> with weight <strong>5.</strong> Including this edge will create the cycle, so discard it.</p>
+<p><strong>Step 6 &#8211;</strong> Pick the edge <strong>AC</strong> with weight <strong>7.</strong> Including this edge will create the cycle, so discard it.</p>
+<p><strong>Step 7 &#8211;</strong> Pick the edge <strong>AD</strong> with weight <strong>10.</strong> Including this edge will also create the cycle, so discard it.</p>
+<p>So, the final minimum spanning tree obtained from the given weighted graph by using Kruskal&#8217;s algorithm is &#8211;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-5675 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/kruskals-algorithm5.png?resize=404%2C175&#038;ssl=1" alt="Kruskal Algorithm" width="404" height="175" /></p>
+<p>The cost of the MST is = AB + DE + BC + CD = 1 + 2 + 3 + 4 = 10.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>List any two applications of graph coloring theorem. Prove that “A tree with n vertices has n-1 edges”</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The process o f assigning a color to each vertex of a simple graph so that no two adjacent verticesa re asigned to the same cover is called graph coloring.</p>
+<p>Some applications of graph coloring is</p>
+<ol style="list-style-type: lower-roman;">
+<li>Making schedule on Time table</li>
+<li>Mobile radio Frequency assugnment</li>
+<li>Sudoko</li>
+<li>Register Allocation</li>
+<li>Bipastitle Graph</li>
+<li>Map coloring</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Prove Part:</strong></span></p>
+<p>&#8220;A tree with n vertices has n-1 edge&#8221;</p>
+<p>Let &#8216;s prove by mathematical induction</p>
+<p>Assume p(n) : Number of edges  = n-1 for all tree with n vertices</p>
+<p><span style="text-decoration: underline;"><strong>Basic Step:</strong></span></p>
+<p>p(1): For one vertex, there will be zero edges. So, it is true.</p>
+<p>p(2): For two vertices, there will be one edge to connect them. so, it is true.</p>
+<p>p(3): For three vertices, there should be two edge to connect them. So, it is true</p>
+<p><span style="text-decoration: underline;"><strong>Inductive method:</strong></span></p>
+<p>Let us assume for any arbitary k, p(k) is true. i.e. for k no of vertices, no of edges = k -1</p>
+<p>Now, for p(k+1)</p>
+<p>the no. of edges will be (k-1) + no of edges required to add (k+1)<sup>th</sup> vertex.</p>
+<p>Every vertex that is added to the tree contributes one edge to the tree.</p>
+<p>Thus, no of edges required to add (k+1)<sup>th</sup> node = 1</p>
+<p>So, total no of edges will be = (k-1) + 1 = k-1 +1 = k</p>
+<p>Thus, p(k+1) is true</p>
+<p>So, by using principle of mathematical induction. It is proved that for n vertices, no of edges  = n-1</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Define ceiling and floor function. Why do we need Inclusion – Exclusion principle? Make it clear with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let x be a real numbers. The floor function of x, denoted by ⌊x⌋ or floor(x), is defined to be the gratest integer that is less than or equal to x.</p>
+<p>For example: ⌊1.4⌋ = 1 and ⌊5⌋ = 5</p>
+<p>The ceiling function of x, denoted by ⌈x⌉ or ceil(x), is defined to be the greatest integer that is greater than or equal to x</p>
+<p>For example: ⌈5⌉ = 5 and ⌈1.5⌉ = 2</p>
+<p><span style="text-decoration: underline;"><strong>Inclusive-Exclusive Principle:</strong></span></p>
+<p>It is a counting technique which generalizes the familiar method of obtaining the number of elements in the union of two or more finite steps.</p>
+<p>Symbolically represented as</p>
+<p style="text-align: center;">|A∪B| = |A| + |B| &#8211; |A∩B|</p>
+<p style="text-align: center;">|A ∪ B ∪ C| = |A| + |B| + |C| &#8211; |A∩B| &#8211; |B∩C| &#8211; |A∩C| + |A∩B∩C|</p>
+<p>We need inclusion-exclusion principle to distinguish the number of distinct elements which exist in a set.</p>
+<p>An example to distinguish the number of integers in {1, 2, 3, 4, &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.., 100} that are divisible by 2, 3, or 5 is</p>
+<p>Let A = {an integer that is divisible by 2}</p>
+<p>∴ |A| = 50</p>
+<p>B = {an integer that is divisible by 3}</p>
+<p>∴ |B| = 33</p>
+<p>C= {an integer that is divisible by 5}</p>
+<p>∴ |C| = 20</p>
+<p>Now, A ∩ B = { divisible by 2 and 3 } = 16</p>
+<p>Similarly,</p>
+<p>|B ∩ C|  = 6</p>
+<p>|A ∩ C| = 10</p>
+<p>|A ∩ B ∩ C| = 3</p>
+<p>By inclusion exclusion principle,</p>
+<p>|A ∪ B ∪ C| = |A| + |B| + |C| &#8211; |A∩B| &#8211; |B∩C| &#8211; |A∩C| + |A∩B∩C|</p>
+<p>=50 + 33 + 20 &#8211; 16 &#8211; 10 &#8211; 6  + 3</p>
+<p>= 74</p>
+<p>Here, we distinguish the no of integers that are divisible by 2,3 or 5 using inclusion-exclusion principle.</p>
+</div>
+</body></html>

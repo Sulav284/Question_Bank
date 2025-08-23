@@ -1,0 +1,467 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cloud Computing Question Bank 2081 0</title>
+    </head>
+    <body>
+        <h1>Cloud Computing Question Bank 2081 - 0</h1>
+        <p><strong>Full Marks:</strong> 160 + 40</p>
+        <p><strong>Pass Marks:</strong> 64 + 16</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p><span>Define cloud computing service. Describe each of PaaS, SaaS and IaaS with suitable examples.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="0" data-end="28"><strong data-start="0" data-end="28">Cloud Computing Service:</strong></p>
+<p data-start="30" data-end="315">Cloud computing is a model that provides on-demand access to a shared pool of configurable computing resources (like servers, storage, applications, and services) over the internet. These services are scalable, cost-efficient, and eliminate the need for owning physical infrastructure.</p>
+<p data-start="322" data-end="368"><strong data-start="326" data-end="368">1. Infrastructure as a Service (IaaS):</strong></p>
+<p data-start="369" data-end="533">IaaS provides virtualized computing infrastructure over the internet. Users can rent servers, storage, and networking hardware on demand instead of purchasing them.</p>
+<p data-start="535" data-end="552"><strong data-start="535" data-end="552">Key Features:</strong></p>
+<ul data-start="553" data-end="742">
+<li class="" data-start="553" data-end="622">
+<p data-start="555" data-end="622">Scalable infrastructure depending on processing and storage needs</p>
+</li>
+<li class="" data-start="623" data-end="672">
+<p data-start="625" data-end="672">Pay-as-you-go model (no need to buy hardware)</p>
+</li>
+<li class="" data-start="673" data-end="742">
+<p data-start="675" data-end="742">Data hosted on the cloud, reducing the risk of single-point failure</p>
+</li>
+</ul>
+<p data-start="744" data-end="757"><strong data-start="744" data-end="757">Benefits:</strong></p>
+<ul data-start="758" data-end="844">
+<li class="" data-start="758" data-end="791">
+<p data-start="760" data-end="791">Minimizes capital expenditure</p>
+</li>
+<li class="" data-start="792" data-end="816">
+<p data-start="794" data-end="816">Enhances scalability</p>
+</li>
+<li class="" data-start="817" data-end="844">
+<p data-start="819" data-end="844">Supports quick deployment</p>
+</li>
+</ul>
+<p data-start="846" data-end="949">Example: Amazon Web Services (AWS) – offers virtual machines, storage, and network resources.</p>
+<p data-start="956" data-end="996"><strong data-start="960" data-end="996">2. Platform as a Service (PaaS):</strong></p>
+<p data-start="997" data-end="1109">PaaS provides a cloud-based environment with everything developers need to build, test, and deploy applications.</p>
+<p data-start="1111" data-end="1128"><strong data-start="1111" data-end="1128">Key Features:</strong></p>
+<ul data-start="1129" data-end="1308">
+<li class="" data-start="1129" data-end="1168">
+<p data-start="1131" data-end="1168">Browser-based development platforms</p>
+</li>
+<li class="" data-start="1169" data-end="1223">
+<p data-start="1171" data-end="1223">Built-in security, scalability, and workflow tools</p>
+</li>
+<li class="" data-start="1224" data-end="1260">
+<p data-start="1226" data-end="1260">Easy integration with other apps</p>
+</li>
+<li class="" data-start="1261" data-end="1308">
+<p data-start="1263" data-end="1308">Offers APIs and web services for connectivity</p>
+</li>
+</ul>
+<p data-start="1310" data-end="1323"><strong data-start="1310" data-end="1323">Benefits:</strong></p>
+<ul data-start="1324" data-end="1426">
+<li class="" data-start="1324" data-end="1352">
+<p data-start="1326" data-end="1352">Reduces development time</p>
+</li>
+<li class="" data-start="1353" data-end="1396">
+<p data-start="1355" data-end="1396">Supports multiple programming languages</p>
+</li>
+<li class="" data-start="1397" data-end="1426">
+<p data-start="1399" data-end="1426">Enhances team collaboration</p>
+</li>
+</ul>
+<p data-start="1428" data-end="1541">Example: Google App Engine – allows developers to build and host applications in Google’s data centers.</p>
+<p data-start="1548" data-end="1588"><strong data-start="1552" data-end="1588">3. Software as a Service (SaaS):</strong></p>
+<p data-start="1589" data-end="1752">SaaS delivers software applications over the internet, typically on a subscription basis. Users can access the software through a web browser without installation.</p>
+<p data-start="1754" data-end="1771"><strong data-start="1754" data-end="1771">Key Features:</strong></p>
+<ul data-start="1772" data-end="1924">
+<li class="" data-start="1772" data-end="1813">
+<p data-start="1774" data-end="1813">Apps are managed by service providers</p>
+</li>
+<li class="" data-start="1814" data-end="1843">
+<p data-start="1816" data-end="1843">Secure cloud data storage</p>
+</li>
+<li class="" data-start="1844" data-end="1876">
+<p data-start="1846" data-end="1876">Scalable according to demand</p>
+</li>
+<li class="" data-start="1877" data-end="1924">
+<p data-start="1879" data-end="1924">Accessible from any internet-connected device</p>
+</li>
+</ul>
+<p data-start="1926" data-end="1939"><strong data-start="1926" data-end="1939">Benefits:</strong></p>
+<ul data-start="1940" data-end="2032">
+<li class="" data-start="1940" data-end="1973">
+<p data-start="1942" data-end="1973">Affordable and cost-effective</p>
+</li>
+<li class="" data-start="1974" data-end="2009">
+<p data-start="1976" data-end="2009">Ready to use with minimal setup</p>
+</li>
+<li class="" data-start="2010" data-end="2032">
+<p data-start="2012" data-end="2032">Global accessibility</p>
+</li>
+</ul>
+<p data-start="2034" data-end="2158">Examples: Google Workspace (Docs, Drive, Gmail) and Salesforce – offer CRM and productivity tools via the web.<br />
+Another is: Zoom – SaaS-based video conferencing solution used globally for online meetings and webinars.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p><span>What is Map Reduce? Using an example, discuss how Map function, shuffling, and sorting, and Reduce function work in Map Reduce.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="133" data-end="426">MapReduce is a programming model and framework designed for processing and analyzing large-scale datasets in a distributed computing environment, typically in the cloud. It was introduced by Google and has become widely adopted due to its ability to efficiently manage massive volumes of data.</p>
+<p data-start="428" data-end="488">In MapReduce, computations are divided into two main phases:</p>
+<p data-start="490" data-end="526"><strong>1. Map Function (Map Stage):</strong></p>
+<p data-start="527" data-end="736">In this phase, input data is split into smaller chunks and processed independently by multiple map tasks. Each task applies a map function to its chunk of data to generate intermediate key-value pairs.</p>
+<p data-start="738" data-end="786"><strong>2. Shuffle and Sort (Intermediate Step):</strong></p>
+<p data-start="787" data-end="1024">Once the mapping is complete, the system automatically shuffles the intermediate data by grouping all values by their keys and sorts them. This ensures that data associated with a specific key is sent to the same reduce task.</p>
+<p data-start="1026" data-end="1068"><strong>3. Reduce Function (Reduce Stage):</strong></p>
+<p data-start="1069" data-end="1307">In this phase, the grouped key-value pairs are passed to reduce tasks. Each reduce function combines the values associated with each key by performing operations such as aggregation, summarization, or generating final outputs.</p>
+<p data-start="1314" data-end="1341"><strong>Example: Word Count</strong></p>
+<p data-start="1343" data-end="1446">Imagine you have a large collection of text documents and you want to count the frequency of each word.</p>
+<ul data-start="1448" data-end="1822">
+<li class="" data-start="1448" data-end="1588">
+<p data-start="1450" data-end="1588">Map Phase: Each mapper reads a block of text, breaks it into words, and emits key-value pairs like <strong><code data-start="1553" data-end="1567">("cloud", 1)</code>, <code data-start="1569" data-end="1587">("computing", 1)</code>.</strong></p>
+</li>
+<li class="" data-start="1589" data-end="1734">
+<p data-start="1591" data-end="1734">Shuffle and Sort: The framework groups all key-value pairs by key, so all <code data-start="1669" data-end="1678">"cloud"</code> keys are brought together: <strong><code data-start="1706" data-end="1733">("cloud", [1, 1, 1, ...])</code>.</strong></p>
+</li>
+<li class="" data-start="1735" data-end="1822">
+<p data-start="1737" data-end="1822">Reduce Phase: The reducer takes each key and sums up the values: <strong><code data-start="1806" data-end="1821">("cloud", 10)</code>.</strong></p>
+</li>
+</ul>
+<p data-start="1829" data-end="1861">
+<p data-start="1829" data-end="1861"><strong>Advantages of MapReduce:</strong></p>
+<ul data-start="1862" data-end="2330">
+<li class="" data-start="1862" data-end="1927">
+<p data-start="1864" data-end="1927">Fault Tolerant: It can recover from failures automatically.</p>
+</li>
+<li class="" data-start="1928" data-end="1996">
+<p data-start="1930" data-end="1996">Efficient: It can process GBs of unstructured data in minutes.</p>
+</li>
+<li class="" data-start="1997" data-end="2063">
+<p data-start="1999" data-end="2063">Scalable: Supports massive datasets and parallel processing.</p>
+</li>
+<li class="" data-start="2064" data-end="2137">
+<p data-start="2066" data-end="2137">Status Monitoring: Nodes report regular updates to the master node.</p>
+</li>
+<li class="" data-start="2138" data-end="2330">
+<p data-start="2140" data-end="2330">Widely Used: Implementations like Apache Hadoop and Apache Spark make MapReduce practical and accessible for big data tasks like batch processing, log analysis, and web indexing.</p>
+</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p><span>Describe the architecture of Aneka. Discuss how application services, foundation services, and fabric services are organized in Aneka.</span><span><br />
+</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="334" data-end="815">Aneka is a cloud-based platform and framework developed by <em data-start="397" data-end="409">Manjrasoft</em> for building and deploying distributed applications. It serves as an Application Platform as a Service (aPaaS), offering developers tools and APIs to create scalable, cloud-enabled applications efficiently. Aneka supports several programming paradigms including Task Programming, Thread Programming, and MapReduce Programming, allowing flexible and high-performance application design.</p>
+<p data-start="817" data-end="1050">Aneka is built on a layered architecture, categorized into three core service layers: Application Services, Foundation Services, and Fabric Services, each serving distinct roles in cloud application deployment and management.</p>
+<p data-start="1057" data-end="1101"><strong>1. Application Services (Top Layer):</strong></p>
+<ul style="list-style-type: square;">
+<li>This layer provides the developer-facing interface and is responsible for handling application logic.</li>
+<li>It includes tools for rapid development, such as SDKs (Software Development Kits), which contain essential APIs and components.</li>
+<li>Application services in Aneka enable the creation of apps using task-based, thread-based, and MapReduce models, providing flexibility in design.</li>
+<li>Aneka allows deployment on both private and public clouds, ensuring application portability and scalability.</li>
+</ul>
+<p data-start="1611" data-end="1625"><strong>Example:</strong> A developer writing a data analytics application using MapReduce in Aneka can utilize application services to define the map and reduce stages without worrying about the infrastructure.</p>
+<p data-start="1822" data-end="1868"><strong>2. Foundation Services (Middle Layer):</strong></p>
+<ul style="list-style-type: square;">
+<li data-start="1871" data-end="1958">These services offer core runtime support and manage the execution of applications.</li>
+<li data-start="1961" data-end="2041">Foundation services include scheduling, resource management, and monitoring.</li>
+<li data-start="2044" data-end="2238">They ensure that applications execute based on the defined requirements, managing distributed resources such as CPU cycles across a heterogeneous network of devices (PCs, servers, data centers).</li>
+<li data-start="2241" data-end="2354">This layer also includes the Runtime Engine, which handles application lifecycle and deployment across nodes.</li>
+</ul>
+<p data-start="2361" data-end="2401"><strong>3. Fabric Services (Base Layer):</strong></p>
+<ul style="list-style-type: square;">
+<li data-start="2404" data-end="2548">This layer is responsible for managing the underlying infrastructure, such as provisioning virtual machines, storage, and network resources.</li>
+<li data-start="2551" data-end="2717">Fabric services ensure resource availability and configuration, enabling seamless and fault-tolerant operation of applications across the distributed environment.</li>
+<li data-start="2720" data-end="2774">It supports hybrid and public cloud deployment models.</li>
+</ul>
+<p data-start="2781" data-end="2849"><strong>Types of Services Hosted in Aneka Containers:</strong></p>
+<ol style="list-style-type:decimal;">
+<li data-start="2852" data-end="2967"><strong>Web Applications:</strong> Support web technologies like Java, .NET, PHP, Python, and provide runtime for HTTP requests.</li>
+<li data-start="2852" data-end="2967"><strong>Micro services:</strong> Deploys small, loosely-coupled services that work together.</li>
+<li data-start="2852" data-end="2967"><strong>Database Services:</strong> Hosts databases for data storage and retrieval.</li>
+<li data-start="2852" data-end="2967"><strong>Content Management Systems (CMS):</strong> Supports platforms like WordPress, Drupal, and Joomla.</li>
+</ol>
+</div>
+<h2>Section B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p><span>Explain the properties of cloud computing.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="220" data-end="480">Cloud computing offers a set of key characteristics that make it an efficient, flexible, and user-friendly solution for individuals and organizations. These properties are essential for understanding how cloud services function and why they are widely adopted:</p>
+<p data-start="487" data-end="516"><strong data-start="492" data-end="516">1. On-Demand Service</strong></p>
+<p data-start="517" data-end="774">Cloud computing allows users to provision computing resources—such as processing power, storage, and applications—automatically without requiring human intervention. Users can request and access resources as needed, making the process dynamic and efficient.</p>
+<p data-start="776" data-end="879">Example:  A developer can instantly launch a virtual machine on AWS without waiting for IT support.</p>
+<p data-start="886" data-end="918"><strong data-start="891" data-end="918">2. Broad Network Access</strong></p>
+<p data-start="919" data-end="1124">Cloud services are accessible over the internet from any device (e.g., laptops, tablets, smartphones) with a network connection. This ensures flexibility and mobility, enabling users to work from anywhere.</p>
+<p data-start="1126" data-end="1216">Example: You can access your Google Docs from your phone, laptop, or tablet, anytime.</p>
+<p data-start="1223" data-end="1251"><strong data-start="1228" data-end="1251">3. Measured Service</strong></p>
+<p data-start="1252" data-end="1515">Cloud providers monitor and measure resource usage (e.g., storage, bandwidth, processing time) and typically charge users on a pay-per-use or usage-based pricing model. This ensures cost transparency and optimization, as users only pay for what they actually use.</p>
+<p data-start="1517" data-end="1611">Example: If you store 10 GB on Google Drive, you&#8217;re only billed for that amount—not more.</p>
+<p data-start="1618" data-end="1651"><strong data-start="1623" data-end="1651">4. Scalable Architecture</strong></p>
+<p data-start="1652" data-end="1889">Cloud systems are designed to scale up or down based on demand. Users can increase or decrease hardware, storage, and other resources depending on workload needs. This allows systems to maintain performance under varying load conditions.</p>
+<p data-start="1891" data-end="2007">Example: An e-commerce site can automatically add more servers during a flash sale to handle increased traffic.</p>
+<p data-start="2014" data-end="2047"><strong data-start="2019" data-end="2047">5. Location Independence</strong></p>
+<p data-start="2048" data-end="2220">Cloud services can be accessed from anywhere, regardless of the user’s physical location. This provides seamless availability and continuity of services across geographies.</p>
+<p data-start="2222" data-end="2349">Example: A remote team working from different countries can still collaborate on cloud-hosted tools like GitHub or Trello.</p>
+<p data-start="2356" data-end="2396"><strong data-start="2361" data-end="2396">6. Security and Data Protection</strong></p>
+<p data-start="2397" data-end="2586">Cloud computing platforms implement robust security protocols to safeguard user data and privacy. These include encryption, access control, and compliance with international data standards.</p>
+<p data-start="2588" data-end="2709">Example: Platforms like Microsoft Azure offer end-to-end encryption and role-based access to protect corporate data.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p><span>What are the challenges while adapting to the cloud computing environment?</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="177" data-end="350">While cloud computing offers numerous benefits, its adoption also presents several challenges that organizations must consider carefully to ensure successful implementation.</p>
+<p data-start="352" data-end="727"><strong data-start="352" data-end="393">1. Internet Connectivity is Essential</strong><br data-start="393" data-end="396" />Cloud computing heavily relies on a stable internet connection. Without consistent and high-speed internet, users may experience downtime and an inability to access cloud services, which can disrupt operations.<br data-start="606" data-end="609" />Example: Remote teams working with cloud-based tools may face delays if their internet connection is weak or unstable.</p>
+<p data-start="729" data-end="1109"><strong data-start="729" data-end="750">2. Vendor Lock-In</strong><br data-start="750" data-end="753" />Migrating from one cloud service provider to another can be difficult due to differing architectures, APIs, or data formats. This limits flexibility and may increase costs and technical complexity when switching vendors.<br data-start="973" data-end="976" />Example: Moving an application from AWS to Microsoft Azure may require rewriting parts of the application or changing configurations.</p>
+<p data-start="1111" data-end="1473"><strong data-start="1111" data-end="1138">3. Limited User Control</strong><br data-start="1138" data-end="1141" />Cloud users often do not have full control over the backend infrastructure. The cloud provider manages the underlying systems, which may restrict customization or specific configurations needed for certain applications.<br data-start="1360" data-end="1363" />Example: Users on shared cloud infrastructure cannot modify system-level settings or access physical hardware.</p>
+<p data-start="1475" data-end="1845"><strong data-start="1475" data-end="1499">4. Security Concerns</strong><br data-start="1499" data-end="1502" />Security remains one of the top concerns in cloud computing. Although cloud providers implement strong security protocols, businesses are still responsible for securing their data and ensuring compliance with regulations.<br data-start="1723" data-end="1726" />Example: Healthcare companies must ensure that cloud-stored patient data complies with data privacy laws such as HIPAA.</p>
+<p data-start="1847" data-end="2235"><strong data-start="1847" data-end="1884">5. High Ongoing Operational Costs</strong><br data-start="1884" data-end="1887" />While cloud services follow a pay-per-use model, costs can become high for organizations with extensive or continuous usage. Without proper monitoring and resource management, expenses can grow rapidly.<br data-start="2089" data-end="2092" />Example: A company running intensive data analytics or machine learning processes may face substantial monthly bills if usage is not optimized. There are many cases of these happening.</p>
+<p data-start="2237" data-end="2483">
+</div>
+<h3>Question 6</h3>
+<div><p><p><span>When do organizations have to adapt hybrid and community cloud deployment models?</span><span><br />
+</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="204" data-end="526">Organizations adopt hybrid and community cloud deployment models when they require a balance between flexibility, cost-efficiency, control, and collaboration. These models are chosen based on the specific data sensitivity, workload requirements, regulatory demands, and collaborative needs of the organization.</p>
+<p data-start="533" data-end="573"><strong>1. Hybrid Cloud Deployment Model</strong></p>
+<p data-start="575" data-end="897">A hybrid cloud combines both private and public cloud infrastructures, allowing data and applications to be shared between them. Organizations adopt this model when they want to leverage the scalability of the public cloud while maintaining security and control over critical operations in a private cloud.</p>
+<p data-start="899" data-end="941">Organizations adopt hybrid cloud when:</p>
+<ol style="list-style-type:decimal;">
+<li data-start="945" data-end="1137">They handle sensitive data (e.g., customer records, financial data) that must remain on-premises, while offloading less-sensitive workloads (e.g., analytics or backup) to the public cloud.</li>
+<li data-start="1140" data-end="1240">They require scalable infrastructure for variable workloads, such as seasonal spikes in traffic.</li>
+<li data-start="1243" data-end="1334">They need to gradually migrate to the cloud without abandoning existing infrastructure.</li>
+<li data-start="1337" data-end="1453">They want to optimize cost by balancing between the pay-as-you-go public cloud and the fixed-cost private cloud.</li>
+</ol>
+<p data-start="1455" data-end="1671">Example: HamroCSIT stores customer data and billing information in its private cloud (for compliance) but uses the public cloud to run promotional campaigns.</p>
+<p data-start="1678" data-end="1721"><strong>2. Community Cloud Deployment Model</strong></p>
+<p data-start="1723" data-end="1910">A community cloud is shared by multiple organizations with similar interests, policies, or compliance needs. It can be managed by the organizations themselves or by a third party.</p>
+<p data-start="1912" data-end="1957">Organizations adopt community cloud when:</p>
+<ol style="list-style-type:decimal;">
+<li data-start="1961" data-end="2104">They operate in highly regulated industries such as healthcare, finance, or education, where data privacy and compliance are essential.</li>
+<li data-start="2107" data-end="2239">Multiple organizations want to share infrastructure and costs while maintaining customized governance and security controls.</li>
+<li data-start="2242" data-end="2360">There is a need for collaboration on joint projects or research that involves shared datasets or common standards.</li>
+</ol>
+<p data-start="2362" data-end="2593">Example: Universities and research institutes collaborating on climate change modeling may use a community cloud to share computing resources, research data, and software tools while keeping access restricted to members only.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p><span>How and why cloud applications are designed using loosely coupled components?</span><span><br />
+</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p style="font-weight: 400;"><span style="font-weight: 400;">Cloud applications are designed using loosely coupled components to enhance flexibility, scalability, and reusability. This approach is widely implemented using </span><b>Service-Oriented Architecture (SOA)</b><span style="font-weight: 400;">, which supports the development and management of distributed cloud-based services.</span></p>
+<p style="font-weight: 400;"><b>Loosely coupled</b><span style="font-weight: 400;"> components refer to independent services that interact through clearly defined interfaces and protocols, rather than being tightly dependent on one another. This architectural principle allows each component or service to operate independently, while still being part of a larger system.</span></p>
+<h4><b>Why Loosely Coupled Components are Used:</b></h4>
+<ol style="font-weight: 400;">
+<li style="font-weight: 400;" aria-level="1"><b>Modularity and Reusability</b><span style="font-weight: 400;">: Services can be reused in different applications, reducing development time and cost.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Scalability</b><span style="font-weight: 400;">: Individual components can be scaled independently based on demand, improving resource efficiency.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Maintainability</b><span style="font-weight: 400;">: Because services are independent, updates or changes to one service do not affect the entire application.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Fault Tolerance</b><span style="font-weight: 400;">: The failure of one component does not necessarily disrupt the entire system.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Improved Deployment and Testing</b><span style="font-weight: 400;">: Independent services can be developed, tested, and deployed separately, improving agility.</span></li>
+</ol>
+<h4><b>How Loosely Coupled Design is Implemented (Based on SOA):</b></h4>
+<ol style="font-weight: 400;">
+<li style="font-weight: 400;" aria-level="1"><b>Identify Service Boundaries</b><span style="font-weight: 400;">: Analyze system requirements and determine logical boundaries for each service, along with their roles.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Define Service Contracts</b><span style="font-weight: 400;">: Specify the interfaces, message formats, protocols, and Service-Level Agreements (SLAs) that define how services communicate.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Implement Services</b><span style="font-weight: 400;">: Services are implemented using various technologies such as RESTful APIs, SOAP, or microservices.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Deploy Services in the Cloud</b><span style="font-weight: 400;">: Services are deployed on suitable cloud platforms like AWS or Azure based on their requirements.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Implement Service Governance</b><span style="font-weight: 400;">: Establish policies and procedures for managing the service lifecycle.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Compose Services</b><span style="font-weight: 400;">: Combine multiple services to create larger business processes or composite applications.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Apply Security Measures</b><span style="font-weight: 400;">: Ensure data integrity and secure access across all services.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Monitor and Manage Services</b><span style="font-weight: 400;">: Use monitoring tools to track service performance, availability, and usage.</span></li>
+</ol>
+<h4></h4>
+<p style="font-weight: 400;"><span style="font-weight: 400;">Thus, loosely coupled design enables organizations to build robust, scalable, and adaptable cloud applications. By minimizing interdependencies, this approach ensures that cloud services can be developed, maintained, and upgraded efficiently, leading to better resource utilization and faster response to changing business needs.</span></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p><span>Discuss the various types of virtualizations.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="241" data-end="433">Virtualization is a foundational technology in cloud computing that allows multiple virtual environments to run on a single physical hardware system. Below are the key types of virtualization:</p>
+<p data-start="440" data-end="475">1. <strong data-start="448" data-end="473">Server Virtualization</strong></p>
+<p data-start="476" data-end="743">Server virtualization divides a physical server into multiple virtual machines (VMs), each with its own operating system and applications. This enables better utilization of server resources and allows multiple users or applications to share the same physical server.</p>
+<p data-start="747" data-end="796">Examples: VMware vSphere, Microsoft Hyper-V</p>
+<ul data-start="745" data-end="939">
+<li class="" data-start="797" data-end="939">
+<p data-start="799" data-end="814"><strong data-start="799" data-end="814">Advantages:</strong></p>
+<ol data-start="817" data-end="939">
+<li class="" data-start="817" data-end="840">
+<p data-start="819" data-end="840">Higher server ability</p>
+</li>
+<li class="" data-start="843" data-end="868">
+<p data-start="845" data-end="868">Cheaper operating costs</p>
+</li>
+<li class="" data-start="871" data-end="901">
+<p data-start="873" data-end="901">Eliminates server complexity</p>
+</li>
+<li class="" data-start="904" data-end="939">
+<p data-start="906" data-end="939">Increases application performance</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="946" data-end="982">
+<p data-start="946" data-end="982">2. <strong data-start="954" data-end="980">Storage Virtualization</strong></p>
+<p data-start="983" data-end="1171">Storage virtualization creates an abstraction layer over physical storage devices. Multiple storage systems are managed as a single resource, enhancing storage efficiency and availability.</p>
+<p data-start="1175" data-end="1217">Examples: EMC VAPR, OpenStack Cinder</p>
+<ul data-start="1173" data-end="1389">
+<li class="" data-start="1218" data-end="1389">
+<p data-start="1220" data-end="1235"><strong data-start="1220" data-end="1235">Advantages:</strong></p>
+<ol data-start="1238" data-end="1389">
+<li class="" data-start="1238" data-end="1273">
+<p data-start="1240" data-end="1273">Centralized management of storage</p>
+</li>
+<li class="" data-start="1276" data-end="1303">
+<p data-start="1278" data-end="1303">Simplified administration</p>
+</li>
+<li class="" data-start="1306" data-end="1336">
+<p data-start="1308" data-end="1336">Increased storage efficiency</p>
+</li>
+<li class="" data-start="1339" data-end="1389">
+<p data-start="1341" data-end="1389">Improved data availability and disaster recovery</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="1396" data-end="1432">3. <strong data-start="1404" data-end="1430">Network Virtualization</strong></p>
+<p data-start="1433" data-end="1634">This type involves managing and monitoring the entire computer network as a single administrative entity. It enables the creation of virtual networks that can be allocated and configured independently.</p>
+<p data-start="1638" data-end="1675"> Examples: VMware NSX, Cisco ACI</p>
+<ul data-start="1636" data-end="1780">
+<li class="" data-start="1676" data-end="1780">
+<p data-start="1678" data-end="1693"><strong data-start="1678" data-end="1693">Advantages:</strong></p>
+<ol data-start="1696" data-end="1780">
+<li class="" data-start="1696" data-end="1746">
+<p data-start="1698" data-end="1746">Enhanced flexibility, scalability, and isolation</p>
+</li>
+<li class="" data-start="1749" data-end="1780">
+<p data-start="1751" data-end="1780">Simplified network management</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="1787" data-end="1823">4. <strong data-start="1795" data-end="1821">Desktop Virtualization</strong></p>
+<p data-start="1824" data-end="2004">Desktop virtualization delivers desktop environments to end-users from a centralized server. The desktop is virtualized and accessed remotely through thin clients or other devices.</p>
+<p data-start="2008" data-end="2072">Examples: VMware Horizon, Citrix Virtual Apps and Desktops</p>
+<ul data-start="2006" data-end="2214">
+<li class="" data-start="2073" data-end="2214">
+<p data-start="2075" data-end="2090"><strong data-start="2075" data-end="2090">Advantages:</strong></p>
+<ol data-start="2093" data-end="2214">
+<li class="" data-start="2093" data-end="2125">
+<p data-start="2095" data-end="2125">Centralized desktop management</p>
+</li>
+<li class="" data-start="2128" data-end="2160">
+<p data-start="2130" data-end="2160">Reduced administration efforts</p>
+</li>
+<li class="" data-start="2163" data-end="2182">
+<p data-start="2165" data-end="2182">Enhanced security</p>
+</li>
+<li class="" data-start="2185" data-end="2214">
+<p data-start="2187" data-end="2214">Access from various devices</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="2221" data-end="2261">5. <strong data-start="2229" data-end="2259">Application Virtualization</strong></p>
+<p data-start="2262" data-end="2464">This type abstracts applications from the underlying operating system and encapsulates them into containers or self-contained units. These can run on various platforms without installation or conflicts.</p>
+<p data-start="2468" data-end="2502"> Examples: Docker, Kubernetes</p>
+<ul data-start="2466" data-end="2621">
+<li class="" data-start="2503" data-end="2621">
+<p data-start="2505" data-end="2520"><strong data-start="2505" data-end="2520">Advantages:</strong></p>
+<ol data-start="2523" data-end="2621">
+<li class="" data-start="2523" data-end="2546">
+<p data-start="2525" data-end="2546">Simplified deployment</p>
+</li>
+<li class="" data-start="2549" data-end="2590">
+<p data-start="2551" data-end="2590">Increased portability and compatibility</p>
+</li>
+<li class="" data-start="2593" data-end="2621">
+<p data-start="2595" data-end="2621">Efficient use of resources</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="2628" data-end="2661">6. <strong data-start="2636" data-end="2659">Data Virtualization</strong></p>
+<p data-start="2662" data-end="2857">Data virtualization enables access to and manipulation of data from multiple sources (databases, files, services) without moving or copying it. It creates a unified view of data for applications.</p>
+<p data-start="2861" data-end="2911"> Examples: Denodo, Oracle Data Virtualization</p>
+<ul data-start="2859" data-end="3024">
+<li class="" data-start="2912" data-end="3024">
+<p data-start="2914" data-end="2929"><strong data-start="2914" data-end="2929">Advantages:</strong></p>
+<ol data-start="2932" data-end="3024">
+<li class="" data-start="2932" data-end="2970">
+<p data-start="2934" data-end="2970">Abstraction layer for unified access</p>
+</li>
+<li class="" data-start="2973" data-end="3024">
+<p data-start="2975" data-end="3024">Real-time data integration from different sources</p>
+</li>
+</ol>
+</li>
+</ul>
+<p data-start="3031" data-end="3204">
+</div>
+<h3>Question 9</h3>
+<div><p><p><span>Describe the cloud security threat issues.</span><span><br />
+</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud security refers to the set of practices, technologies, and policies used to protect data, applications, and infrastructure in cloud computing environments. As the cloud is a shared resource, it introduces several potential security concerns. The major cloud security issues are:</p>
+<p><strong data-start="540" data-end="561">1. Data Breaches:</strong><br data-start="561" data-end="564" />Unauthorized access to sensitive data stored in the cloud is a serious threat. Breaches may occur due to weak access controls, inadequate encryption, or insider threats. It can lead to loss of privacy, financial damage, and reputational harm.</p>
+<p><strong data-start="813" data-end="849">2. Insecure Interfaces and APIs:</strong><br data-start="849" data-end="852" />Cloud services provide APIs and interfaces for users to interact with the platform. If these are not properly secured, they can be exploited by attackers to gain unauthorized access or manipulate data.</p>
+<p><strong data-start="1060" data-end="1083">3. Insider Threats:</strong><br data-start="1083" data-end="1086" />Even with strong external security measures, the actions of authorized users within an organization can pose a risk. Insiders may intentionally or accidentally expose sensitive information or compromise cloud security.</p>
+<p><strong data-start="1311" data-end="1328">4. Data Loss:</strong><br data-start="1328" data-end="1331" />Data loss can occur due to hardware failures, natural disasters, human errors, or software bugs. Without proper backup and disaster recovery plans, there is a risk of permanent data loss.</p>
+<p><strong data-start="1525" data-end="1574">5. Inadequate Identity and Access Management:</strong><br data-start="1574" data-end="1577" />Weak practices in identity verification and access control can allow unauthorized users to gain access to cloud resources. Common issues include poor password policies and insufficient authentication mechanisms.</p>
+<p><strong data-start="1701" data-end="1746">6. Shared Infrastructure Vulnerabilities:</strong><br data-start="1746" data-end="1749" />Cloud environments typically operate on shared infrastructure. A vulnerability in the underlying system may affect multiple customers, potentially exposing their data or applications to risk.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p><span>How is security monitoring done in the cloud?</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="" data-start="227" data-end="533"><strong>Security monitoring</strong> in the cloud is the process of actively observing systems to detect and respond to security threats and incidents. Its primary goal is to identify potential breaches or suspicious activities in real time and allow timely investigation and mitigation to reduce the impact of an incident.</p>
+<p class="" data-start="535" data-end="732">Centralized security information management systems are used to continuously verify vulnerabilities and monitor systems using automated techniques.  This is done by the following methods:</p>
+<ol data-start="734" data-end="1607">
+<li class="" data-start="734" data-end="928">
+<p class="" data-start="737" data-end="928"><strong data-start="737" data-end="755">Log Monitoring</strong>:<br data-start="756" data-end="759" />Involves analyzing logs generated by servers, firewalls, intrusion detection systems, and antivirus software. It helps identify unusual behavior and possible threats.</p>
+</li>
+<li class="" data-start="930" data-end="1136">
+<p class="" data-start="933" data-end="1136"><strong data-start="933" data-end="989">Intrusion Detection and Prevention Systems (IDS/IPS)</strong>:<br data-start="990" data-end="993" />These systems monitor network traffic in real time, searching for patterns or signatures that signal potential attacks or security breaches.</p>
+</li>
+<li class="" data-start="1138" data-end="1289">
+<p class="" data-start="1141" data-end="1289"><strong data-start="1141" data-end="1164">Threat Intelligence</strong>:<br data-start="1165" data-end="1168" />Utilizes threat feeds and databases to help security teams recognize and respond to emerging threats more effectively.</p>
+</li>
+<li class="" data-start="1291" data-end="1462">
+<p class="" data-start="1294" data-end="1462"><strong data-start="1294" data-end="1319">Continuous Monitoring</strong>:<br data-start="1320" data-end="1323" />Security monitoring should not be a one-time activity. It must be an ongoing process to ensure continuous protection of cloud resources.</p>
+</li>
+<li class="" data-start="1464" data-end="1607">
+<p class="" data-start="1467" data-end="1607"><strong data-start="1467" data-end="1500">User Behavior Analytics (UBA)</strong>:<br data-start="1501" data-end="1504" />UBA tools analyze user activity to detect anomalies such as insider threats or compromised accounts.</p>
+</li>
+</ol>
+<p class="" data-start="1609" data-end="1824">Together, these strategies ensure that cloud environments are secured by continuously identifying and addressing potential security concerns, allowing organizations to maintain data integrity and operational safety.</p>
+</div>
+<h3>Question 11</h3>
+<div><p></p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="" data-start="161" data-end="431">To ensure confidentiality, integrity, and availability of data and services, cloud environments implement a variety of security mechanisms. These mechanisms are essential for protecting against threats such as data breaches, unauthorized access, and service disruptions.</p>
+<p class="" data-start="433" data-end="501">The major security mechanisms adapted in cloud environments include:<br />
+<strong data-start="508" data-end="547">1. Authentication and Authorization</strong><br data-start="547" data-end="550" />Authentication ensures that only verified users can access cloud resources. Authorization controls what actions each user is permitted to perform. Techniques such as multi-factor authentication (MFA), role-based access control (RBAC), and single sign-on (SSO) are commonly used.</p>
+<p><strong data-start="835" data-end="857">2. Data Encryption</strong><br data-start="857" data-end="860" />Data is encrypted both at rest (when stored) and in transit (when being transmitted). Strong encryption standards such as AES (Advanced Encryption Standard) and secure communication protocols like SSL/TLS are implemented to protect data from unauthorized access.</p>
+<p><strong data-start="1129" data-end="1145">3. Firewalls</strong><br data-start="1145" data-end="1148" />Firewalls are used to monitor and control incoming and outgoing network traffic based on security rules. They help in preventing unauthorized access and attacks by acting as a barrier between trusted and untrusted networks.</p>
+<p><strong data-start="1378" data-end="1437">4. Intrusion Detection and Prevention Systems (IDS/IPS)</strong><br data-start="1437" data-end="1440" />IDS monitors cloud environments for suspicious activity, while IPS actively blocks detected threats. These systems help detect unauthorized access attempts, malware, and other network-based attacks.</p>
+<p><strong data-start="1645" data-end="1663">5. Secure APIs</strong><br data-start="1663" data-end="1666" />Cloud services are accessed through APIs. If not secured properly, these APIs can become attack vectors. Security mechanisms include token-based authentication (such as OAuth), rate limiting, and secure input validation to prevent misuse.</p>
+<p><strong data-start="1911" data-end="1949">6. Virtual Private Networks (VPNs)</strong><br data-start="1949" data-end="1952" />VPNs encrypt data traveling between the user and cloud infrastructure. This ensures privacy and secure access, especially for remote users accessing the cloud over public networks.</p>
+<p><strong data-start="2139" data-end="2194">7. Security Information and Event Management (SIEM)</strong><br data-start="2194" data-end="2197" />SIEM systems collect, analyze, and correlate security events and logs from across the cloud infrastructure. They provide real-time alerts, audit trails, and centralized visibility of security posture.</p>
+<p><strong data-start="2404" data-end="2460">8. Regular Security Audits and Compliance Management</strong><br data-start="2460" data-end="2463" />Security audits are conducted to evaluate the effectiveness of security controls. Compliance with standards like ISO 27001, GDPR, HIPAA, and SOC 2 is essential, especially for industries dealing with sensitive data.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p><span>Describe the various scientific applications of cloud computing.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-start="177" data-end="521">Cloud computing plays an important role in scientific research by providing high-performance infrastructure, scalability, and real-time data processing. It supports scientists and researchers in handling complex computations and large datasets across various scientific domains. The major scientific applications of cloud computing include:</p>
+<p data-start="528" data-end="573"><strong data-start="532" data-end="573">1. Healthcare – ECG Analysis in Cloud</strong></p>
+<p data-start="575" data-end="746">In the healthcare sector, cloud computing supports scientists in developing preventive healthcare solutions. One prominent example is <strong data-start="709" data-end="745">ECG (Electrocardiogram) analysis</strong>.</p>
+<ul data-start="748" data-end="1157">
+<li class="" data-start="748" data-end="860">
+<p data-start="750" data-end="860"><strong data-start="750" data-end="762">Function</strong>: The ECG machine measures the electrical activity of the heart and generates heartbeat waveforms.</p>
+</li>
+<li class="" data-start="861" data-end="1034">
+<p data-start="863" data-end="1034"><strong data-start="863" data-end="877">Cloud Role</strong>: Cloud computing enables remote monitoring of patient heartbeat data. Patients at risk can be continuously monitored without physically visiting a hospital.</p>
+</li>
+<li class="" data-start="1035" data-end="1157">
+<p data-start="1037" data-end="1157"><strong data-start="1037" data-end="1048">Benefit</strong>: Doctors receive instant notifications about abnormal cases, which allows timely intervention and treatment.</p>
+</li>
+</ul>
+<p data-start="1164" data-end="1219"><strong data-start="1168" data-end="1219">2. Biology – Protein Structure Prediction (PSP)</strong></p>
+<p data-start="1221" data-end="1372">Proteins are composed of long sequences of amino acids, and their functions depend on their structural form (primary, secondary, tertiary, quaternary).</p>
+<ul data-start="1374" data-end="1835">
+<li class="" data-start="1374" data-end="1546">
+<p data-start="1376" data-end="1546"><strong data-start="1376" data-end="1388">Function</strong>: Predicting protein structure is computationally intensive, involving technologies such as <strong data-start="1480" data-end="1521">AI, machine learning, neural networks</strong>, and <strong data-start="1527" data-end="1545">bioinformatics</strong>.</p>
+</li>
+<li class="" data-start="1547" data-end="1666">
+<p data-start="1549" data-end="1666"><strong data-start="1549" data-end="1563">Cloud Role</strong>: Cloud computing supports PSP by providing high computing power and handling extensive I/O operations.</p>
+</li>
+<li class="" data-start="1667" data-end="1835">
+<p data-start="1669" data-end="1835"><strong data-start="1669" data-end="1680">Benefit</strong>: Significantly reduces the time needed to create accurate <strong data-start="1739" data-end="1752">3D models</strong> of protein structures, accelerating research in drug discovery and bioengineering.</p>
+</li>
+</ul>
+<p data-start="1842" data-end="1892"><strong data-start="1846" data-end="1892">3. Geoscience – Satellite Image Processing</strong></p>
+<p data-start="1894" data-end="2020">Geoscientific studies involve analyzing <strong data-start="1934" data-end="1983">large volumes of spatial and non-spatial data</strong> collected through satellite imagery.</p>
+<ul data-start="2022" data-end="2457">
+<li class="" data-start="2022" data-end="2142">
+<p data-start="2024" data-end="2142"><strong data-start="2024" data-end="2036">Function</strong>: Data must be processed, managed, and visualized using GIS (Geographic Information Systems) applications.</p>
+</li>
+<li class="" data-start="2143" data-end="2264">
+<p data-start="2145" data-end="2264"><strong data-start="2145" data-end="2159">Cloud Role</strong>: Cloud computing offers the required storage and processing power to handle <strong data-start="2236" data-end="2255">terabytes (TBs)</strong> of data.</p>
+</li>
+<li class="" data-start="2265" data-end="2457">
+<p data-start="2267" data-end="2457"><strong data-start="2267" data-end="2278">Benefit</strong>: Enables centralized access, faster analysis, and seamless integration of different geoscience technologies—something that is difficult with traditional physical storage systems</p>
+</li>
+</ul>
+</div>
+</body></html>

@@ -1,0 +1,259 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ABD Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>ABD Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Explain different features of enhanced ER(EER) model. Compare specialization with generalization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An Enhanced Entity-Relationship (EER) model is an extension of the original Entity-Relationship (ER) model that includes additional concepts and features to support more complex data modeling requirements. The EER model includes all the elements of the ER model and adds new constructs, such as subtypes and supertypes, generalization and specialization, and inheritance. Here are some of the key features of the EER model:</p>
+<p><strong>Subtypes and Supertypes</strong> :  The EER model allows for the creation of subtypes and supertypes. A supertype is a generalization of one or more subtypes, while a subtype is a specialization of a supertype. For example, a vehicle could be a supertype, while car, truck, and motorcycle could be subtypes.</p>
+<p><strong>Generalization and Specialization</strong> : Generalization is the process of identifying common attributes and relationships between entities and creating a supertype based on these common features. Specialization is the process of identifying unique attributes and relationships between entities and creating subtypes based on these unique features.</p>
+<p><strong>Inheritance</strong> :  Inheritance is a mechanism that allows subtypes to inherit attributes and relationships from their supertype. This means that any attribute or relationship defined for a supertype is automatically inherited by all its subtypes.</p>
+<p><strong>Constraints</strong> : The EER model allows for the specification of constraints that must be satisfied by entities and relationships. Examples of constraints include cardinality constraints, which specify the number of relationships that can exist between entities, and participation constraints, which specify whether an entity is required to participate in a relationship.</p>
+<p><strong>Attribute Inheritance</strong> :  EER model allows attributes to be inherited from a superclass to its subclasses. This means that attributes defined in the superclass are automatically inherited by all its subclasses.</p>
+<p><strong>Union Types</strong> : EER model allows for the creation of a union type, which is a combination of two or more entity types. The union type can have attributes and relationships that are common to all the entity types that make up the union.</p>
+<p><strong>Aggregation</strong> : EER model allows for the creation of an aggregate entity that represents a group of entities as a single entity. The aggregate entity has its unique attributes and relationships.</p>
+<p><strong>Multi-valued Attributes</strong> : EER model allows an attribute to have multiple values for a single entity instance. For example, an entity representing a person may have multiple phone numbers.</p>
+<p><strong>Relationships with Attributes</strong> : EER model allows relationships between entities to have attributes. These attributes can describe the nature of the relationship or provide additional information about the relationship.</p>
+<p>Overall, the EER model provides a powerful and flexible way to model complex data relationships, making it a popular choice for database design.</p>
+<p>The differences between specialization and generalization are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>GENERALIZATION</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>SPECIALIZATION</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">Generalization works in Bottom-Up approach.</td>
+<td style="width: 50%; text-align: center; height: 48px;">Specialization works in Top-Down approach.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">In Generalization, size of schema gets reduced.</td>
+<td style="width: 50%; text-align: center; height: 48px;">In Specialization, size of schema gets increased.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Generalization is normally applied to group of entities.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Specialization can be defined as process of creating subgrouping within an entity set.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">In Generalization process, whatactually happens is that it takes the union of two or more lower-level entity sets to produce a higher-level entity sets.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Specialization is reverse of Generalization. Specialization is a process of taking a subset of a higher level entity st to form a lower-level entity set.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Generalization process starts with the number of entity sets and it creates high-level entity with the help of some common features.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Specialization process starts from a single set and it creates a different entity set by using some different features.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">In Generalization, the difference and similarities between lower entities are ignored to form a higher entity</td>
+<td style="width: 50%; text-align: center; height: 24px;">In Specialization, a higher entity is split to from lower entities.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"></td>
+<td style="width: 50%; text-align: center; height: 24px;"></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Compare object oriented database with object relational database. What are different object database features that have been included in SQL ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>OODBMS</strong><br />
+The object-oriented database system is an extension of an object-oriented programming language that includes DBMS functions such as persistent objects, integrity constraints, failure recovery, transaction management, and query processing. These systems feature object description language (ODL) for database structure creation and object query language (OQL) for database querying. Some examples of OODBMS are ObjectStore, Objectivity/DB, GemStone, db4o, Giga Base, and Zope object database.</p>
+<p><strong>ORDBMS</strong><br />
+An object-relational database system is a relational database system that has been extended to incorporate object-oriented characteristics. Database schemas and the query language natively support objects, classes, and inheritance. Furthermore, it permits data model expansion with new data types and procedures, exactly like pure relational systems. Oracle, DB2, Informix, PostgreSQL (UC Berkeley research project), etc. are some of the ORDBMSs.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 240px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>OODBMS</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>ORDBMS</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">It stands for Object Oriented Database Management System.</td>
+<td style="width: 50%; text-align: center; height: 48px;">It stands for Object Relational Database Management System.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; text-align: center; height: 72px;">Object-oriented databases, like object oriented programming represents data in the form of objects and classes.</td>
+<td style="width: 50%; text-align: center; height: 72px;">Object-relational database is the one that is based on both the relational and object-oriented database models.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">OODBMSs support ODL/OQL.</td>
+<td style="width: 50%; text-align: center; height: 48px;">ORDBMS adds object-oriented functionalities to SQL.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Every object-oriented system has a different set of constraints that it can accomodate.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Keys, entity integrity and referential integrity are constraints of an object-oriented database.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">The efficiency of query processing is low.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Processing of queries is quite effective.</td>
+</tr>
+</tbody>
+</table></div>
+<p>SQL, which is traditionally a relational database language, has been extended to support various object-oriented features. These extensions enable the handling of more complex data types and relationships. Here are the key object-oriented features that have been included in SQL:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>User-Defined Types (UDTs)</strong> : Obeject database often support UDTs, which allow developers to define custome data types that encapsulate both data and behavior. SQL exensions for UDT enable the creation, manipulation and querying of objects of these custom types within SQL statements</li>
+<li><strong>Methods and Function</strong> : Object databases support method and function associated with objects SQL extension allow to define and invoke method and function on objects stored in the database directly from SQL statments.</li>
+<li><strong>Inheritance</strong> : Object databases typically support inheritance relationship between classes. SQL extensions enable the creation and manipulation of these inheritance.</li>
+<li><strong>Type Constructor</strong> : It is collection of multiple similar basic type under a common name. It determine hw the object is constructed. They can be used to define the data structure for an object oriented database.</li>
+</ol>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why distributed database is important? What is transparency? Explain different types of transparencies in distributed databases.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Distributed databases offer several advantages over centralized databases, especially in the context of modern, large-scale, and geographically dispersed applications. Here are the key benefits:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Scalability</strong> : Distributed databases can be scaled out by adding more nodes to the system, allowing for increased capacity and processing power without significantly impacting performance. The workload can be distributed across multiple nodes for load balancing.</li>
+<li><strong>Fault Tolerance and High Availability</strong> : Data can be replicated across multiple nodes, ensuring that if one node fails, others can take over, thus minimizing downtime. These systems can be designed to handle and recover from regional failures by storing data in multiple geographic locations.</li>
+<li><strong>Performance</strong> : Queries can be executed in parallel across multiple nodes, significantly improving query performance and response times.</li>
+<li><strong>Flexibility</strong> : Nodes can be added, removed, or upgraded with minimal impact on the overall system, allowing for flexible and modular growth.</li>
+</ol>
+<p>In distributed databases, transparency refers to the abstraction that hides the complexity of the distributed nature of the system from the user and application programs. It allows users to interact with the system as if it were a single entity rather than individual components regardless of the underlying distribution of data across multiple locations. Different types of transparencies in distributed databases are:</p>
+<p><strong>Access Transparency</strong> : It ensures that users can access the data uniformly without needing to know the specifics of how the data is accessed. This means that the method of access (e.g., direct database access, remote procedure calls, web services) does not matter to the user or application; the system abstracts these details. Example: whether data is accessed from a local disk or retrieved over a network from a remote server, the user experience remains the same.</p>
+<p><strong>Location Transparency</strong> : It hides the physical location of data from users and applications. Users can query or update the database without knowing where the data is stored. For example, a user in New York can retrieve customer records without needing to know whether the data is located in a New York, London, or Tokyo data center.</p>
+<p><strong>Concurrency Transparency</strong> : It ensures that users are unaware of other users concurrently accessing and modifying the data. The database system manages all the concurrency control mechanisms, such as locking and transaction isolation, to prevent conflicts and ensure data consistency. For example, if two users try to update the same record simultaneously, the system handles these updates correctly without requiring user intervention.</p>
+<p><strong>Replication Transparency</strong> : It hides the complexity of data replication from the users. Users are not aware of the multiple copies (replicas) of data that exist across different locations. The database system automatically manages the replication process to ensure consistency and availability. For example, when a user updates a piece of data, the system ensures that all replicas are updated accordingly without the user&#8217;s knowledge.</p>
+<p><strong>Failure Transparency</strong> : It ensures that the database system continues to operate correctly despite failures in some of its components. Users are unaware of these failures as the system seamlessly handles them. For example, if a server in one data center goes down, the system can still provide data from other servers or data centers, ensuring uninterrupted access.</p>
+<p><strong>Mobility Transparency</strong> : It allows the system to move data or processes from one location to another without affecting the operation or performance seen by users. Users remain unaware of the physical movement of data or processes.</p>
+<p><strong>Performance Transparency</strong> : It ensures that the database optimizes query execution and resource utilization without user intervention. The system automatically selects the best strategies for executing queries based on current conditions, such as data distribution and load. Users do not need to manually optimize queries or manage performance tuning.</p>
+<p><strong>Scaling Transparency</strong> : It allows the system to scale up (add more resources to an existing node) or scale out (add more nodes) without affecting user interactions or requiring changes to applications. Users and applications are unaware of the changes in the scale of the system.</p>
+<p><strong>Parallelism Transparency</strong> : It enables the database system to execute operations in parallel to improve performance. Users are unaware of the parallel execution of queries or transactions, as the system handles the distribution and synchronization of tasks. For example, a large query can be broken down into smaller sub-queries that run simultaneously on different nodes, significantly reducing the total execution time.</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Why hashing is important to store data in databases? What is primary file organization?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Hashing is important databases for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Efficient Data Retrieval</strong> : Hashing allows for constant-time complexity (O(1)) for search, insert, and delete operations. By mapping data to a hash value and storing it in a specific location, the database can quickly locate the desired data without needing to search through multiple records.</li>
+<li><strong>Indexing</strong> : Hashing is used to create hash indexes. These indexes map keys to the positions of records, facilitating fast lookups. Hash indexes are particularly effective for equality searches (i.e., finding a record with a specific key value).</li>
+<li><strong>Load Distribution</strong> : In distributed databases, consistent hashing helps evenly distribute data across multiple nodes, preventing any single node from becoming a bottleneck and improving the overall performance and reliability of the system.</li>
+</ol>
+<p>Primary file organization refers to the method by which a database physically organizes and stores its data records on disk. The primary organization determines how data is accessed, updated, and managed. There are several types of primary file organizations, but the main ones include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Heap (Unordered) Files</strong> : Records are placed randomly in available spaces as they are inserted. There is no particular order to the records. Suitable for small databases or scenarios where insertions and deletions are frequent, but searches are infrequent.Simple to implement, fast for insert operations. Inefficient for searches and deletions because it requires scanning the entire file.</li>
+<li><strong> Sequential (Ordered) Files</strong> : Records are stored in a specific order, usually based on the value of a key field. Suitable for applications requiring frequent read operations and range queries. Efficient for range queries and ordered traversals. Insertions and deletions can be slow because maintaining the order may require shifting records.</li>
+<li><strong>Hashed Files</strong> : Records are stored based on the result of a hash function applied to a key field. The hash function determines the location of the record. Ideal for equality searches where the exact value of the key is known. Very fast for exact match queries and insertions. Not suitable for range queries and can suffer from hash collisions, leading to potential performance degradation.</li>
+<li><strong>Clustered Files</strong> : Records that are frequently accessed together are physically stored close to each other. Useful for applications that frequently access related records, such as relational joins. Improves performance for related queries and joins. More complex to maintain and manage compared to other file organizations.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain aggregation with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Aggregation is a modeling concept used to represent a “whole-part” relationship or a higher-level abstraction in which an entity itself is composed of multiple entities and relationships. Aggregation allows you to treat a relationship between entities as a higher-level entity or “aggregate.”</p>
+<p>An ER diagram is not capable of representing the relationship between an entity and a relationship which may be required in some scenarios. In those cases, a relationship with its corresponding entities is aggregated into a higher-level entity. Aggregation is an abstraction through which we can represent relationships as higher-level entity sets. It provides a clearer and more concise representation of complex relationships, making the diagram easier to understand.</p>
+<p>For Example, an Employee working on a project may require some machinery. So, REQUIRE relationship is needed between the relationship WORKS_FOR and entity MACHINERY. Using aggregation, WORKS_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into a single entity and relationship REQUIRE is created between the aggregated entity and MACHINERY.</p>
+<p><img loading="lazy" decoding="async" class=" wp-image-37407 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Aggregation.drawio.png?resize=406%2C319&amp;ssl=1" alt="- Hamro CSIT" width="406" height="319" data-recalc-dims="1" /></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is ODMG object model? What is object definition language?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Object Data Management Group (ODMG) object model is a standard that was developed to provide a unified approach for managing object-oriented databases. It specifies how objects in a database should be defined, stored, and manipulated. The ODMG object model aims to bridge the gap between object-oriented programming languages and database systems, allowing for seamless integration and management of objects within databases.<br />
+Key Components of the ODMG Object Model</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Objects and Literals</strong> : Objects are instances of classes that have an object identifier (OID) which uniquely identifies them. Objects encapsulate both state (attributes) and behavior (methods). Literals are fixed values such as integers, strings, and dates that do not have an OID.</li>
+<li><strong>Classes and Extents</strong> : Classes Define the structure (attributes) and behavior (methods) of objects. Extents is a set that contains all instances of a class. It is similar to a table in relational databases but for objects.</li>
+<li><strong>Attributes and Relationships</strong> : Attributes Define the properties of a class. They can be of primitive types (like integers or strings) or object types (references to other objects). Relationships Define associations between objects. They can be one-to-one, one-to-many, or many-to-many. Relationships can be navigable, allowing traversal from one object to another.</li>
+</ol>
+<p>Object Defination Language :</p>
+<p>Object Defination Language is a language used in the context of object-oriented daabases to define the structure and characteristics of objects within a database. In ODL, data is organized and stored as objects rather than in tradational relational tables. Some common elements found in an ODL includes: Classes, Attributes, Relationship, Inheritance, Methods Constraints.</p>
+<p>ODL provides a powerful and expressive language for defining object-oriented database schemas. It enables the modeling and organization of data in a way that closely aligns with the principles of object-oriented programming, offering flexibility, modularity and extensibility in database design.</p>
+<p>Class declarations:</p>
+<p style="text-align: center;">Interface &lt;name&gt; {elements = attributes, relationships, methods}</p>
+<p>Element declarations:</p>
+<p style="text-align: center;">Attributes (&lt;type&gt; : &lt;name&gt;);</p>
+<p style="text-align: center;">relationship (&lt;rangtype&gt; : &lt;name&gt;);</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain different steps in query processing</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Concept of Query procssing</strong> :</p>
+<p>Query processing of executing a database query or request for information. It involves several steps that transfer a high-level query written in a programming language(such as SQL) into instructions that can be understood and exected by database management system(DBMS).</p>
+<p><span style="text-decoration: underline;"><strong>Steps involved in query processing</strong></span>:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Parsing and Validation</strong> : The DBMS first parses the query to check its syntax and ensure that it conforms to the languages grammar rules. It verifies the query&#8217;s structure and validates it for correctness.</li>
+<li><strong>Semantic analysis</strong> : The DBMS performs semantic analysis to ensure that th query makes sense in the context of the database schema and the available data. It checks for things like table and column existence data types etc.</li>
+<li><strong>Query Optimization</strong> : It explores different execution plans to determine the most efficient way to retrive th requested data. Optimization is performed by optimizer which considers factors like indexes, statistics, join algorithms and other techniques.</li>
+<li><strong>Plan generation</strong> : It specifies the sequence of operations to execute query. This plan may involve accessing one or more tables, applying filters, performing joins and other operations.</li>
+<li><strong>Plan executation</strong> : Plan executation may involve disk I/O , memory management and CPU operations to process the data efficiently.</li>
+<li><strong>Result retrival</strong> : Finally, the DBMS retrives the result set and returns it to the application that initiated the query. The result may be returned in various formats depending on the query and the application&#8217;s requirements.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why query optimization is essential in databases? What is heuristic optimization?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Query optimization is an important component of database management systems (DBMS) for several reasons. Optimizing queries ensures that database operations are efficient, cost-effective, and scalable, which directly impacts the performance and user experience.</p>
+<p><strong>Heuristic for Query optimization</strong> :</p>
+<p>Heuristic refers to rules or guidelines that guide decision-making process of the query optimizer. Heuristic are practical techniques based on general principles and assumptions about the behavior of database systems and the characteristics of queries and data. They are not guranteed to always find the optimal solution but aims to find good solutions within a resonable amount of time and resources.</p>
+<p><strong>Heuristic rules</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Thy are used as an optimization technique to modify the internal representation of query.</li>
+<li>Usually, these rules are in form of query tree or query graph data structure, to improve it&#8217;s performance.</li>
+<li>One of the main heuristic rule is to apply SELECT operation before applying the JOIN or other binary oprations.</li>
+<li>SELECT and PROJECT reduces the size of the file and hence, should be applied before JOIN or other binary operation.</li>
+<li>Heuristic query optimizer transforms the initial query tree into final query tree equivalence transformation rules.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define fragmentation. Explain horizontal fragmentation with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Fragmentation refers to the process of dividing a database into smaller, more manageable pieces called fragments. These fragments are distributed across various locations (nodes) in a network. The goal of fragmentation is to improve performance, manageability, and availability by ensuring that data is stored close to where it is most frequently accessed and that the system can handle queries more efficiently. Fragmentation can be of three main types: Horizontal Fragmentation, Vertical Fragmentation and Hybrid (or Mixed) Fragmentation.</p>
+<p><strong>Horizontal Fragmentation</strong> : It involves dividing a table into subsets of rows or tuples. Each subset is stored on a different node. This fragmentation technique is useful when thre ia s need to distribute data evenly accross nodes or when subsets of rows are frequently accessed together.</p>
+<p>Example : Suppose we have an “Employee” table with attributes: Employee ID, Name, Department, Position and Salary. Now, Horizontal fragmentation can be applied to this table based on specific ranges or conditions. For instance, we can fragment the table into two subset as follows:</p>
+<p style="text-align: center;">Fragment 1: EmployeeID from 1 to 100</p>
+<p style="text-align: center;">Fragment 2: EmployeeID from 101 to 200</p>
+<p>In this case, Fragment 1 contains the rows or tuple with EmployeeIDs ranging from 1 to 100 while, Fragment 2 contains the rows or tuples with EmployeeIDs ranging from 101 to 200.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the characteristics of NOSQL Systems?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>NOSQL systems are alternative to traditional relational databases, empowering developers and organizations to efficiently handle large-scale data and build scalable, flexible and high-performance applications.</p>
+<p>A NOSQL database, which stands for “non SQL” or “non-relational” is a database that allows for data storage and retrival. It avoids joins snd is easy to scale. NOSQL is used for big data and real-time web apps.</p>
+<p>Why NOSQL?</p>
+<ul style="list-style-type: square;">
+<li>Efficient method</li>
+<li>Can handle large-scale data</li>
+<li>Scalable and flexiable</li>
+<li>High-performance</li>
+<li>Effective for big data and real-time web apps</li>
+</ul>
+<p><strong>Characteristics of NoSQL Systems</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Schema-less Data Model</strong> : No fixed schema; data can have different structures within the  same database, allowing for flexibility and rapid iteration.</li>
+<li><strong>Distributed and Decentralized Architecture</strong> : Data is distributed across multiple nodes, often with no single point of failure, ensuring high availability and fault tolerance.</li>
+<li><strong>Horizontal Scalability</strong> : Designed to scale out by adding more nodes rather than scaling up with more powerful hardware.</li>
+<li><strong>Replication and Partitioning (Sharding)</strong>:<br />
+○ Replication : Copies of data are stored across different nodes for redundancy and fault tolerance.<br />
+○ Sharding : Data is partitioned across multiple nodes to balance load and improve performance.</li>
+<li><strong>Eventual Consistency</strong> : Unlike ACID transactions in relational databases, many NoSQL databases follow BASE principles (Basically Available, Soft state, Eventually consistent), prioritizing availability and partition tolerance over immediate consistency.</li>
+<li><strong>Performance Optimization</strong> : Optimized for specific read and write patterns, enabling high throughput and low latency for particular use cases.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is the concept of active database? What are triggers?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong><em>Active Database Concepts and Triggers</em> </strong></span>:</p>
+<p>Active Database is a database system that goes beyond the traditional role of data storage and retrival by incorporating active behavior. It enables the database to react and respond to events and triggers in real-time. Active database are suitable for applications that require dynamic, event-driven behavior and complex data processing.</p>
+<p>A trigger is a procedure that automatically invokes DBMS in response to changes to the database and is specified by the database administrator(DBA). A database with set of associated triggers is generally called active database. Triggers provide a powerful mechanism for sutomating actions and maintaining data consistency and integrity within the database.</p>
+<p><span style="text-decoration: underline;"><strong>Active Database Example:</strong></span></p>
+<p>Consider a banking system that uses an active database to monitor customer transactions and delete potential  fraud activities. The database would be designed to react to certain triggers, such as high-value transaction or a series of unusual transactions from same or different locations within a short period. Here&#8217;s how it could work:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Trigger</strong> : A high-value transiction occurs, exceeding a predefined threshold</li>
+<li><strong>Active Rule</strong> : The active database has a rule defined to detect high-value transactions and potential fraud.</li>
+<li><strong>Action</strong> : The rule trigger an action, such as sending an alert to the bank&#8217;s fraud detection team.</li>
+<li><strong>Real-time response</strong> : Upon receiving the alert, the fraud detection team can take immediate action, such as blocking the account or contacting the customer to verify the transaction&#8217;s legitimacy.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on: a) Big data b) Information retrieval</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a) <span style="text-decoration: underline;"><em><strong>Big data </strong></em></span></p>
+<p>Big Data refers to extremely large and complex datasets that are challenging to process and analyze using traditional data processing techniques. These datasets can come from various sources, including social media, sensors, transactions, and more. Big Data requires specialized tools and technologies for storage, processing, and analysis, such as Spark, NoSQL databases (e.g. MongoDB), and data visualization tools.</p>
+<p><span style="text-decoration: underline;"><strong>Characteristics</strong></span>:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Volume</strong>: The sheer size of data, often measured in terabytes, petabytes, or even exabytes.</li>
+<li><strong>Velocity</strong>: The speed at which data is generated, collected, and processed. This includes real-time or near-real-time data streams.</li>
+<li><strong>Variety</strong>: The diverse types of data, including structured, semi-structured, and unstructured data (e.g., text, images, videos).</li>
+<li><strong>Veracity</strong>: The uncertainty or quality of data, emphasizing the importance of data accuracy and reliability.</li>
+<li><strong> Value</strong>: The potential insights and benefits derived from analyzing the data.</li>
+</ol>
+<p>b)  <span style="text-decoration: underline;"><em><strong>Information retrieval</strong></em></span>:</p>
+<p>Information Retrieval (IR) is the process of obtaining relevant information from a large repository, such as databases, documents, or the web, based on user queries. Ex: Query Processing: Interpreting user queries to understand what information is required.</p>
+<p><span style="text-decoration: underline;"><strong>Techniques</strong></span>:</p>
+<ul style="list-style-type: square;">
+<li><strong>Keyword-based Retrieval</strong> : Matching user queries with keywords in the documents.</li>
+<li><strong>Boolean Retrieval</strong> : Using Boolean operators (AND, OR, NOT) to combine keywords and refine searches.</li>
+<li><strong>Boolean Retrieval</strong> : Using Boolean operators (AND, OR, NOT) to combine keywords and refine searches.</li>
+<li><strong>Probabilistic Models</strong> : Estimating the probability that a document is relevant to a query.</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Applications</span>:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Search Engines</strong> : Google, Bing, and other web search engines use IR techniques to retrieve and rank web pages.</li>
+<li><strong>Recommendation Systems</strong> : Suggesting products, movies, or articles based on user preferences and past interactions.</li>
+</ul>
+</div>
+</body></html>

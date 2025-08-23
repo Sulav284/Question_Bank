@@ -1,0 +1,523 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Advanced Java Programming 2077 2077</title>
+    </head>
+    <body>
+        <h1>Advanced Java Programming 2077 - 2077</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is the significance of stub and skeleton In RMI? Create a RMI application such that a client sends an Integer number to the server and the server return the factorial value of that integer. Give a clear specification for every step.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Java RMI (Remote Method Invocation), stubs and skeletons play a crucial role in facilitating communication between a client and a server.</p>
+<p><strong>Stub:</strong> A stub is a client-side proxy for the remote object. It acts as a local representative of the remote object, allowing the client to invoke methods on the remote object as if it were a local object. The stub handles the communication details, such as parameter marshalling, network communication, and result unmarshalling. It forwards method calls from the client to the actual remote object on the server.</p>
+<p><strong>Skeleton: </strong>A skeleton is a server-side object that dispatches incoming remote method invocations to the actual implementation of the remote object. It receives method calls from the stub, invokes the corresponding methods on the remote object, and sends the results back to the client. The skeleton abstracts the details of receiving method calls, unmarshalling parameters, invoking methods on the remote object, and marshalling the results.</p>
+<p>&nbsp;</p>
+<p>import java.rmi.Naming;<br />
+import java.rmi.Remote;<br />
+import java.rmi.RemoteException;<br />
+import java.rmi.server.UnicastRemoteObject;</p>
+<p>public interface FactorialInterface extends Remote {<br />
+int calculateFactorial(int number) throws RemoteException;<br />
+}</p>
+<p>public class FactorialServer extends UnicastRemoteObject implements FactorialInterface {<br />
+protected FactorialServer() throws RemoteException {<br />
+super();<br />
+}</p>
+<p>@Override<br />
+public int calculateFactorial(int number) throws RemoteException {<br />
+if (number == 0 || number == 1) {<br />
+return 1;<br />
+} else {<br />
+return number * calculateFactorial(number &#8211; 1);<br />
+}<br />
+}</p>
+<p>public static void main(String[] args) {<br />
+try {<br />
+FactorialServer factorialServer = new FactorialServer();<br />
+java.rmi.Naming.rebind(&#8220;FactorialService&#8221;, factorialServer);<br />
+System.out.println(&#8220;FactorialServer is ready.&#8221;);<br />
+} catch (Exception e) {<br />
+System.err.println(&#8220;FactorialServer exception: &#8221; + e.getMessage());<br />
+e.printStackTrace();<br />
+}<br />
+}<br />
+}</p>
+<p>public class FactorialClient {<br />
+public static void main(String[] args) {<br />
+try {<br />
+FactorialInterface factorialService = (FactorialInterface) Naming.lookup(&#8220;rmi://localhost/FactorialService&#8221;);</p>
+<p>int number = 5; // The number for which we want to calculate factorial<br />
+int result = factorialService.calculateFactorial(number);</p>
+<p>System.out.println(&#8220;Factorial of &#8221; + number + &#8221; is: &#8221; + result);<br />
+} catch (Exception e) {<br />
+System.err.println(&#8220;FactorialClient exception: &#8221; + e.getMessage());<br />
+e.printStackTrace();<br />
+}<br />
+}<br />
+}</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>You are hired by a reputed software company which is going to design an application for “Movie Rental System”. Your responsibility is to design a schema named MRS and create a table named Movie(id, Tille, Genre, Language, Length). Write a program to design a GUI form to take input for this table and insert the data into table after clicking the OK button</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>import javax.swing.*;<br />
+import java.awt.event.ActionEvent;<br />
+import java.awt.event.ActionListener;<br />
+import java.sql.Connection;<br />
+import java.sql.DriverManager;<br />
+import java.sql.PreparedStatement;<br />
+import java.sql.SQLException;</p>
+<p>public class MovieRentalSystemForm extends JFrame {</p>
+<p>private JTextField idField, titleField, genreField, languageField, lengthField;</p>
+<p>public MovieRentalSystemForm() {<br />
+setTitle(&#8220;Movie Rental System Form&#8221;);<br />
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br />
+setSize(400, 250);</p>
+<p>initializeComponents();<br />
+}</p>
+<p>private void initializeComponents() {<br />
+JPanel panel = new JPanel();<br />
+panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</p>
+<p>// Components for input fields<br />
+idField = new JTextField(20);<br />
+titleField = new JTextField(20);<br />
+genreField = new JTextField(20);<br />
+languageField = new JTextField(20);<br />
+lengthField = new JTextField(20);</p>
+<p>panel.add(new JLabel(&#8220;ID:&#8221;));<br />
+panel.add(idField);<br />
+panel.add(new JLabel(&#8220;Title:&#8221;));<br />
+panel.add(titleField);<br />
+panel.add(new JLabel(&#8220;Genre:&#8221;));<br />
+panel.add(genreField);<br />
+panel.add(new JLabel(&#8220;Language:&#8221;));<br />
+panel.add(languageField);<br />
+panel.add(new JLabel(&#8220;Length:&#8221;));<br />
+panel.add(lengthField);</p>
+<p>// OK button to insert data<br />
+JButton okButton = new JButton(&#8220;OK&#8221;);<br />
+okButton.addActionListener(new ActionListener() {<br />
+@Override<br />
+public void actionPerformed(ActionEvent e) {<br />
+insertData();<br />
+}<br />
+});</p>
+<p>panel.add(okButton);</p>
+<p>getContentPane().add(panel);<br />
+}</p>
+<p>private void insertData() {<br />
+try {<br />
+// Connect to the database (replace the connection URL, username, and password)<br />
+Connection connection = DriverManager.getConnection(&#8220;jdbc:mysql://localhost:3306/your_database&#8221;, &#8220;username&#8221;, &#8220;password&#8221;);</p>
+<p>// Prepare the SQL statement<br />
+String sql = &#8220;INSERT INTO Movie (id, Title, Genre, Language, Length) VALUES (?, ?, ?, ?, ?)&#8221;;<br />
+PreparedStatement preparedStatement = connection.prepareStatement(sql);</p>
+<p>// Set values from the input fields<br />
+preparedStatement.setInt(1, Integer.parseInt(idField.getText()));<br />
+preparedStatement.setString(2, titleField.getText());<br />
+preparedStatement.setString(3, genreField.getText());<br />
+preparedStatement.setString(4, languageField.getText());<br />
+preparedStatement.setInt(5, Integer.parseInt(lengthField.getText()));</p>
+<p>// Execute the SQL statement<br />
+preparedStatement.executeUpdate();</p>
+<p>// Close resources<br />
+preparedStatement.close();<br />
+connection.close();</p>
+<p>// Display a success message<br />
+JOptionPane.showMessageDialog(this, &#8220;Data inserted successfully!&#8221;);</p>
+<p>} catch (SQLException | NumberFormatException ex) {<br />
+ex.printStackTrace();<br />
+JOptionPane.showMessageDialog(this, &#8220;Error inserting data: &#8221; + ex.getMessage(), &#8220;Error&#8221;, JOptionPane.ERROR_MESSAGE);<br />
+}<br />
+}</p>
+<p>public static void main(String[] args) {<br />
+// Ensure the MySQL JDBC driver is loaded<br />
+try {<br />
+Class.forName(&#8220;com.mysql.cj.jdbc.Driver&#8221;);<br />
+} catch (ClassNotFoundException e) {<br />
+e.printStackTrace();<br />
+}</p>
+<p>SwingUtilities.invokeLater(new Runnable() {<br />
+@Override<br />
+public void run() {<br />
+new MovieRentalSystemForm().setVisible(true);<br />
+}<br />
+});<br />
+}<br />
+}</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe the responsibility of Serializable interface. Write a program to read an input string from the user and write the vowels of that string in VOWEL.TXT and consonants in CONSOLNANT.TXT</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Serializable interface in Java is a marker interface that indicates that the class implementing it can be serialized. Serialization is the process of converting an object into a byte stream, which can be easily persisted to a file or transmitted over a network. The primary responsibility of the Serializable interface is to allow objects to be saved and later reconstructed.</p>
+<p>&nbsp;</p>
+<p>import java.io.FileWriter;<br />
+import java.io.IOException;<br />
+import java.io.Serializable;<br />
+import java.util.Scanner;</p>
+<p>public class VowelConsonantSeparator implements Serializable {</p>
+<p>public static void main(String[] args) {<br />
+Scanner scanner = new Scanner(System.in);</p>
+<p>// Read input string from the user<br />
+System.out.print(&#8220;Enter a string: &#8220;);<br />
+String inputString = scanner.nextLine();</p>
+<p>// Separate vowels and consonants<br />
+String vowels = extractVowels(inputString);<br />
+String consonants = extractConsonants(inputString);</p>
+<p>// Write vowels to VOWEL.TXT<br />
+writeToFile(&#8220;VOWEL.TXT&#8221;, vowels);</p>
+<p>// Write consonants to CONSONANT.TXT<br />
+writeToFile(&#8220;CONSONANT.TXT&#8221;, consonants);</p>
+<p>System.out.println(&#8220;Vowels and consonants separated and written to files.&#8221;);</p>
+<p>scanner.close();<br />
+}</p>
+<p>private static String extractVowels(String input) {<br />
+return input.replaceAll(&#8220;[^aeiouAEIOU]&#8221;, &#8220;&#8221;);<br />
+}</p>
+<p>private static String extractConsonants(String input) {<br />
+return input.replaceAll(&#8220;[aeiouAEIOU]&#8221;, &#8220;&#8221;);<br />
+}</p>
+<p>private static void writeToFile(String filename, String content) {<br />
+try (FileWriter writer = new FileWriter(filename)) {<br />
+writer.write(content);<br />
+} catch (IOException e) {<br />
+e.printStackTrace();<br />
+}<br />
+}<br />
+}</p>
+</div>
+<h2>Group B: Attempt any eight question.</h2><h3>Question 4</h3>
+<div><p><p>A non-empty array A of length n is called on array of all possibilities if it contains all numbers between 0 and A.length-1 inclusive. Write a method named is All Possibilities that accepts an integer array and returns 1 if the array is an array of all possiblities, otherwise it returns 0.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>public class AllPossibilitiesChecker {</p>
+<p>public static void main(String[] args) {<br />
+int[] array1 = {1, 0, 2, 3}; // This is an array of all possibilities<br />
+int[] array2 = {1, 0, 3}; // This is not an array of all possibilities</p>
+<p>System.out.println(isAllPossibilities(array1)); // Output: 1<br />
+System.out.println(isAllPossibilities(array2)); // Output: 0<br />
+}</p>
+<p>public static int isAllPossibilities(int[] arr) {<br />
+int n = arr.length;</p>
+<p>// Check if array is empty<br />
+if (n == 0) {<br />
+return 0;<br />
+}</p>
+<p>// Check if all numbers between 0 and n-1 are present in the array<br />
+boolean[] visited = new boolean[n];<br />
+for (int i = 0; i &lt; n; i++) {<br />
+int num = arr[i];</p>
+<p>// If num is out of bounds or already visited, return 0<br />
+if (num &lt; 0 || num &gt;= n || visited[num]) {<br />
+return 0;<br />
+}</p>
+<p>visited[num] = true;<br />
+}</p>
+<p>// Check if all numbers between 0 and n-1 have been visited<br />
+for (boolean status : visited) {<br />
+if (!status) {<br />
+return 0;<br />
+}<br />
+}</p>
+<p>// If all conditions are met, return 1<br />
+return 1;<br />
+}<br />
+}</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define event delegation model. Why do we need adapter class in event handling?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Event Delegation Model:</strong></p>
+<p>The Event Delegation Model is a design pattern used in event handling systems, especially in graphical user interfaces (GUIs). In this model, instead of having each event source directly handle its own events, a central component known as an &#8220;event listener&#8221; or &#8220;event handler&#8221; is responsible for managing and handling events from multiple sources. This central component delegates the handling of events to appropriate handlers based on the type of event and the source of the event.</p>
+<p>In the context of Java Swing or other GUI frameworks, this model is implemented using interfaces like EventListener and specific event listener interfaces (e.g., ActionListener, MouseListener, etc.). Components register their interest in specific types of events with the central event listener, and the listener dispatches events to the appropriate registered handlers.</p>
+<p><strong>Adapter Class in Event Handling:</strong></p>
+<p>An adapter class in event handling provides default implementations for various listener interfaces. These adapter classes are useful when you want to implement only a subset of the methods in a listener interface. By using adapter classes, you can avoid implementing all methods of an interface, making the code cleaner and more readable.</p>
+<p>For example, in Java&#8217;s AWT and Swing libraries, there are adapter classes for commonly used listener interfaces like MouseListener and KeyListener. These adapter classes provide empty implementations for all methods of the interface, allowing you to override only the methods you are interested in.</p>
+<p>Here&#8217;s an example:</p>
+<p>import java.awt.event.MouseAdapter;<br />
+import java.awt.event.MouseEvent;</p>
+<p>public class MyMouseListener extends MouseAdapter {</p>
+<p>@Override<br />
+public void mouseClicked(MouseEvent e) {<br />
+// Override only the method you are interested in<br />
+System.out.println(&#8220;Mouse Clicked&#8221;);<br />
+}</p>
+<p>// Other methods like mousePressed, mouseReleased, mouseEntered, mouseExited, etc., are provided by the adapter with empty implementations.<br />
+}</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the task of Layout manager? Describe about default layout manager.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A<strong> layout manager</strong> in Java is responsible for determining the size and position of components within a container. It defines the rules or algorithms that govern how components should be arranged and resized based on the size of the container. Layout managers help in achieving a consistent and dynamic arrangement of components, adapting to changes in the container size or content.</p>
+<p>The primary tasks of a layout manager include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Arrangement:</strong> Deciding the placement of components within the container.</li>
+<li><strong>Sizing:</strong> Determining the size of components based on the container&#8217;s size and layout policies.</li>
+<li><strong>Responsiveness:</strong> Adjusting the layout dynamically when the container is resized or when components are added or removed.</li>
+</ol>
+<p><strong>Default Layout Manager in Java:</strong></p>
+<p>The default layout manager in Java is provided by the FlowLayout class. The FlowLayout arranges components in a left-to-right flow, placing them in a row until there&#8217;s not enough space horizontally, and then moving to the next row.</p>
+<p>Here are some characteristics of the FlowLayout:</p>
+<ul style="list-style-type: square;">
+<li><strong>Default Alignment:</strong> Components are left-aligned within their respective rows.</li>
+<li><strong>Default Gap:</strong> A small gap is maintained between components horizontally and vertically.</li>
+<li><strong>Dynamic Adjustment:</strong> When the container is resized, components are rearranged to fit the new size.</li>
+</ul>
+<p>Example of using FlowLayout:</p>
+<p>import javax.swing.JButton;<br />
+import javax.swing.JFrame;<br />
+import java.awt.FlowLayout;</p>
+<p>public class FlowLayoutExample {<br />
+public static void main(String[] args) {<br />
+JFrame frame = new JFrame(&#8220;FlowLayout Example&#8221;);<br />
+frame.setLayout(new FlowLayout());</p>
+<p>frame.add(new JButton(&#8220;Button 1&#8221;));<br />
+frame.add(new JButton(&#8220;Button 2&#8221;));<br />
+frame.add(new JButton(&#8220;Button 3&#8221;));<br />
+frame.add(new JButton(&#8220;Button 4&#8221;));</p>
+<p>frame.setSize(300, 150);<br />
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br />
+frame.setVisible(true);<br />
+}<br />
+}</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>When does the finally block is mandatory in while handling exception? Describe with a suitable scenario.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The finally block in exception handling is used to define a block of code that will be executed whether an exception is thrown or not. It is typically used for cleanup or resource management tasks that must be performed regardless of whether an exception occurs. The finally block is optional, but there are scenarios where using it is highly recommended or even mandatory.</p>
+<p>One scenario where the finally block is often mandatory is when dealing with resources that need to be explicitly released, such as file streams, database connections, or network connections. In these cases, the finally block ensures that the resources are properly closed or released, even if an exception occurs.</p>
+<p>Here&#8217;s an example using file I/O in Java:</p>
+<p>import java.io.BufferedReader;<br />
+import java.io.FileReader;<br />
+import java.io.IOException;</p>
+<p>public class FileReadingExample {</p>
+<p>public static void main(String[] args) {<br />
+BufferedReader reader = null;</p>
+<p>try {<br />
+// Open a file for reading<br />
+reader = new BufferedReader(new FileReader(&#8220;example.txt&#8221;));</p>
+<p>// Read data from the file<br />
+String line;<br />
+while ((line = reader.readLine()) != null) {<br />
+System.out.println(line);<br />
+}</p>
+<p>// Other code that might throw exceptions</p>
+<p>} catch (IOException e) {<br />
+// Handle the exception<br />
+System.err.println(&#8220;An error occurred: &#8221; + e.getMessage());</p>
+<p>} finally {<br />
+try {<br />
+// Close the file, whether an exception occurred or not<br />
+if (reader != null) {<br />
+reader.close();<br />
+}<br />
+} catch (IOException e) {<br />
+// Handle the exception, or log it<br />
+System.err.println(&#8220;Error closing the file: &#8221; + e.getMessage());<br />
+}<br />
+}<br />
+}<br />
+}</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain the life cycle of a servlet.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The life cycle of a servlet refers to the series of steps that a servlet goes through from its initialization to its destruction. The servlet life cycle is managed by the servlet container, such as Apache Tomcat, which is responsible for creating, initializing, invoking, and destroying servlet instances. The life cycle is defined by the Servlet interface, and each servlet must implement this interface.</p>
+<p>The servlet life cycle consists of the following phases:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Loading:</strong>
+<ul style="list-style-type: square;">
+<li>When the servlet container starts or receives a request for a servlet that hasn&#8217;t been loaded, it loads the servlet class.</li>
+<li>The init() method is called once to initialize the servlet. It is typically used for one-time initialization tasks.</li>
+</ul>
+</li>
+<li><strong>Initialization:</strong>
+<ul style="list-style-type: square;">
+<li>The init(ServletConfig config) method is called by the container to initialize the servlet.</li>
+<li>The ServletConfig object provides the servlet with its configuration parameters, allowing it to retrieve initialization parameters from the deployment descriptor (web.xml).</li>
+</ul>
+</li>
+<li><strong>Request Handling:</strong>
+<ul style="list-style-type: square;">
+<li>The servlet is now ready to handle client requests.</li>
+<li>For each request, the servlet&#8217;s service(ServletRequest request, ServletResponse response) method is invoked.</li>
+<li>The service() method dispatches the request to appropriate methods (e.g., doGet(), doPost(), etc.) based on the HTTP method of the request.</li>
+</ul>
+</li>
+<li><strong>Handling Multiple Requests:</strong>
+<ul style="list-style-type: square;">
+<li>For each client request, a new thread is spawned, and the service() method is called.</li>
+<li>The servlet container handles multiple requests concurrently by creating multiple threads for the servlet.</li>
+</ul>
+</li>
+<li><strong>Destroying:</strong>
+<ul style="list-style-type: square;">
+<li>The destroy() method is called by the container when it decides to unload the servlet, such as during servlet container shutdown or when the web application is undeployed.</li>
+<li>The destroy() method is used for releasing resources, closing database connections, and performing cleanup tasks.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is the task of manifest file? Write the procedure to create it.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The manifest file in Java is a special file that contains metadata about the structure and properties of a Java Archive (JAR) file. The manifest file is located within the JAR file and is named <code>MANIFEST.MF</code>. It plays a crucial role in defining various attributes of the JAR file, including the main class, classpath, version information, and more.</p>
+<p><strong>Tasks of the Manifest File:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Main-Class Attribute: </strong>Specifies the entry point of the application (the class with the <code>main</code> method) when the JAR file is executed.</li>
+<li><strong>Class-Path Attribute: </strong>Specifies the classpath entries for the JAR file. Used to define dependencies on other JAR files.</li>
+<li><strong>Dependencies and Package Information: </strong>Contains information about package names, version numbers, and other attributes.</li>
+<li><strong>Custom Attributes: </strong>Allows the inclusion of custom attributes to provide additional information about the JAR file.</li>
+</ol>
+<p><strong>Procedure to Create a Manifest File:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Create a Text File: </strong>Open a text editor (e.g., Notepad, TextEdit) to create a new text file.</li>
+<li><strong>Define Manifest Header: </strong>Start the file with the Manifest-Version header. Optionally, add other attributes as needed. Manifest-Version: 1.0</li>
+<li><strong>Specify Main-Class Attribute: </strong>Add the Main-Class attribute to specify the entry point of the application. Main-Class: com.example.MyMainClass</li>
+<li><strong>Specify Class-Path Attribute (Optional): </strong>If your JAR file depends on other JAR files, you can use the Class-Path attribute to specify them. Paths are separated by spaces. Class-Path: lib/dependency1.jar lib/dependency2.jar</li>
+<li><strong>Save the File: </strong>Save the text file with the name MANIFEST.MF. Ensure that the file extension is .MF.</li>
+<li><strong>Create JAR File: </strong>Once the manifest file is created, you can use the jar command to create a JAR file. jar cfm YourJarFile.jar MANIFEST.MF -C YourClassDirectory .</li>
+<li><strong>Verify the Manifest: </strong>You can verify that the manifest file has been included by using the jar command with the tf option: jar tf YourJarFile.jar</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Why multiple inheritance is not allowed in Java using classes? Give an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Java, multiple inheritance using classes is not allowed to avoid certain complexities and ambiguities associated with it, primarily related to the &#8220;diamond problem.&#8221; The diamond problem arises when a class inherits from two classes that have a common ancestor. If both parent classes provide an implementation for the same method, it becomes unclear which implementation should be used by the child class.</p>
+<p>Consider the following example:</p>
+<p>class A {<br />
+void display() {<br />
+System.out.println(&#8220;A&#8221;);<br />
+}<br />
+}</p>
+<p>class B extends A {<br />
+void display() {<br />
+System.out.println(&#8220;B&#8221;);<br />
+}<br />
+}</p>
+<p>class C extends A {<br />
+void display() {<br />
+System.out.println(&#8220;C&#8221;);<br />
+}<br />
+}</p>
+<p>class D extends B, C { // This is not allowed in Java<br />
+// Error: Multiple inheritance is not allowed<br />
+}</p>
+<p>In the example above, B and C both extend A, and class D attempts to inherit from both B and C. This scenario would lead to ambiguity when calling the display method of class A through class D. The question is, which display method should be invoked: the one from class B or the one from class C?</p>
+<p>To avoid such ambiguity and make the language design more straightforward and predictable, Java introduced a single inheritance model with classes. However, Java supports multiple inheritance through interfaces.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How forms can be created and processed using JSP? Make it clear with your own assumptions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JavaServer Pages (JSP) is a technology used to create dynamic web pages in Java. It allows embedding Java code within HTML pages to generate dynamic content.</p>
+<p><strong>Assumptions:</strong></p>
+<ul style="list-style-type: square;">
+<li>You have a web application project structure with a directory for JSP files (e.g., WebContent in a standard Java web application structure).</li>
+<li>You are using a servlet container or application server to deploy and run the web application.</li>
+</ul>
+<p><strong>1. Create a JSP Form:</strong></p>
+<p>Create a new JSP file (e.g., form.jsp) in your project&#8217;s WebContent directory. This JSP file will contain the HTML form.</p>
+<p>&lt;!&#8211; form.jsp &#8211;&gt;<br />
+&lt;%@ page contentType=&#8221;text/html;charset=UTF-8&#8243; language=&#8221;java&#8221; %&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Sample Form&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;form action=&#8221;processForm.jsp&#8221; method=&#8221;post&#8221;&gt;<br />
+&lt;label for=&#8221;name&#8221;&gt;Name:&lt;/label&gt;<br />
+&lt;input type=&#8221;text&#8221; id=&#8221;name&#8221; name=&#8221;name&#8221; required&gt;&lt;br&gt;</p>
+<p>&lt;label for=&#8221;email&#8221;&gt;Email:&lt;/label&gt;<br />
+&lt;input type=&#8221;email&#8221; id=&#8221;email&#8221; name=&#8221;email&#8221; required&gt;&lt;br&gt;</p>
+<p>&lt;input type=&#8221;submit&#8221; value=&#8221;Submit&#8221;&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p><strong>2. Create a JSP Page to Process the Form Data:</strong></p>
+<p>Create a new JSP file (e.g., processForm.jsp) to handle the form submission and process the form data.</p>
+<p>&lt;!&#8211; processForm.jsp &#8211;&gt;<br />
+&lt;%@ page contentType=&#8221;text/html;charset=UTF-8&#8243; language=&#8221;java&#8221; %&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Form Processing&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;h2&gt;Form Data Received:&lt;/h2&gt;<br />
+&lt;%&#8211; Retrieve form parameters using request.getParameter() &#8211;%&gt;<br />
+&lt;p&gt;Name: &lt;%= request.getParameter(&#8220;name&#8221;) %&gt;&lt;/p&gt;<br />
+&lt;p&gt;Email: &lt;%= request.getParameter(&#8220;email&#8221;) %&gt;&lt;/p&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p><strong>3. Test the Application:</strong></p>
+<p>Deploy your web application to a servlet container or application server (e.g., Tomcat). Access the form.jsp page through your web browser (http://localhost:8080/your-web-app/form.jsp).</p>
+<p>Fill out the form and click the &#8220;Submit&#8221; button. The data will be submitted to processForm.jsp, which will display the received information.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Why synchronization in essential in multithreading? Describe.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Synchronization</strong> is essential in multithreading to ensure proper coordination and consistency when multiple threads access shared resources concurrently. In a multithreaded environment, where multiple threads are executing concurrently, synchronization helps in avoiding data corruption, race conditions, and ensures the correct execution of the program.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Race Conditions:</strong>
+<ul style="list-style-type: square;">
+<li>A race condition occurs when the final outcome of a program depends on the timing or order of thread execution. It leads to unpredictable results.</li>
+<li>Synchronization mechanisms, like locks or synchronized methods, help prevent race conditions by allowing only one thread to access critical sections of code at a time.</li>
+</ul>
+</li>
+<li><strong>Data Corruption:</strong>
+<ul style="list-style-type: square;">
+<li>When multiple threads read and write shared data concurrently, there is a risk of data corruption if not properly synchronized.</li>
+<li>Synchronization ensures that threads have a consistent view of shared data, preventing situations where one thread reads data while another is modifying it.</li>
+</ul>
+</li>
+<li><strong>Atomicity of Operations:</strong>
+<ul style="list-style-type: square;">
+<li>Certain operations that involve multiple steps should be atomic, meaning they should execute entirely or not at all. Without synchronization, interleaved execution of threads can result in partial completion of such operations.</li>
+<li>Synchronization mechanisms, like the <code>synchronized</code> keyword in Java, provide atomicity for a block of code, ensuring that it is executed without interruption.</li>
+</ul>
+</li>
+<li><strong>Memory Visibility:</strong>
+<ul style="list-style-type: square;">
+<li>In a multithreaded environment, threads may cache variables or read stale values from memory, leading to inconsistencies.</li>
+<li>Synchronization ensures memory visibility, making sure that changes made by one thread are visible to other threads.</li>
+</ul>
+</li>
+<li><strong>Deadlocks and Livelocks:</strong>
+<ul style="list-style-type: square;">
+<li>Without proper synchronization, situations like deadlocks and livelocks may occur.</li>
+<li>Deadlock is a situation where two or more threads are blocked forever, waiting for each other. Livelock is a state where threads continuously change their state but make no progress.</li>
+<li>Synchronization helps in preventing or resolving such scenarios by providing mechanisms like locking with timeout or using higher-level concurrency utilities.</li>
+</ul>
+</li>
+<li><strong>Thread Safety:</strong>
+<ul style="list-style-type: square;">
+<li>Ensuring thread safety is essential for shared resources or critical sections of code.</li>
+<li>Synchronization mechanisms allow developers to design and implement thread-safe code, enabling multiple threads to access shared resources without compromising data integrity.</li>
+</ul>
+</li>
+<li><strong>Consistency and Order of Execution:</strong>
+<ul style="list-style-type: square;">
+<li>In certain scenarios, the order in which threads execute or access shared resources is critical for correct program behavior.</li>
+<li>Synchronization helps in maintaining a consistent and predictable order of execution for threads.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. JAVA beans and JAR file</p>
+<p>b. MVC design pattern</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. JAVA Beans and JAR File:</strong></p>
+<p><strong>JavaBeans:</strong></p>
+<p>JavaBeans are reusable software components in Java that follow a specific coding convention to enable easy integration into visual development environments. They are often used to encapsulate reusable pieces of code, making it easy to assemble and reuse software components in various applications.JavaBeans adhere to specific naming conventions for getter and setter methods, making them accessible in visual development tools. Example of a JavaBean:</p>
+<p>public class PersonBean implements java.io.Serializable {<br />
+private String name;<br />
+private int age;</p>
+<p>// Getter and setter methods follow naming conventions<br />
+public String getName() {<br />
+return name;<br />
+}</p>
+<p>public void setName(String name) {<br />
+this.name = name;<br />
+}</p>
+<p>public int getAge() {<br />
+return age;<br />
+}</p>
+<p>public void setAge(int age) {<br />
+this.age = age;<br />
+}<br />
+}</p>
+<p><strong>JAR File:</strong></p>
+<p>JAR (Java ARchive) is a file format that packages Java classes, metadata, and resources into a single file. It is used for efficient distribution, storage, and deployment of Java applications or libraries. JAR files can be created using the jar command, bundling multiple class files and resources into a single archive. JAR files support compression, making them more space-efficient. Example of creating a JAR file:</p>
+<p>jar cf MyLibrary.jar MyClass.class MyOtherClass.class</p>
+<p><strong>b. </strong><strong>MVC (Model-View-Controller) Design Pattern:</strong></p>
+<p>MVC is a software design pattern that separates an application into three interconnected components: Model, View, and Controller.</p>
+<p><strong>Model:</strong> Represents the application&#8217;s data and business logic. It manages the data and notifies observers of any changes.</p>
+<p><strong>View:</strong> Represents the user interface components responsible for displaying the data to the user. It observes the model for changes.</p>
+<p><strong>Controller:</strong> Handles user input and updates the model and view accordingly. It acts as an intermediary between the model and the view.</p>
+<p><strong>Advantages of MVC:</strong></p>
+<ul style="list-style-type: square;">
+<li>Separation of concerns: Each component has a distinct responsibility, making the code modular and maintainable.</li>
+<li>Reusability: Components can be reused in different parts of the application or in different applications.</li>
+<li>Testability: Components can be tested independently, enhancing the overall testability of the system.</li>
+</ul>
+<p><strong>Example Scenario:</strong></p>
+<p>In a web application, the user interacts with the web page (View), which sends a request to the server. The Controller processes the request, updates the Model (business logic, database), and then updates the View to reflect changes.</p>
+</div>
+</body></html>

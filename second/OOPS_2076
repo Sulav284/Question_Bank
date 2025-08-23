@@ -1,0 +1,378 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OOPS Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>OOPS Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO Questions</h2><h3>Question 1</h3>
+<div><p><p>Write a program according to the specification given below:</p>
+<ul>
+<li>– Create a class Account with data members acc no, balance, and min_balance(static)</li>
+<li>-Include methods for reading and displaying values of objects</li>
+<li>– Define static member function to display min_balance</li>
+<li>-Create array of objects to store data of 5 accounts and read and display values of each object</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="generic">/**
+ * @author Suresh Chand (sureshchand12a@gmail.com)
+ * @brief https://hamrocsit.com/question/3733/
+ * @version 0.1
+ * @date 2022-04-16
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+#include &lt;iostream&gt;
+using namespace std;
+#define SIZE 5
+
+class Account{
+
+    public:
+        string acc_no;
+        int balance;
+
+        //static data member
+        static int min_balance;
+
+        //read the data
+        void readData(){
+            cout &lt;&lt; "\nEnter Account No: ";
+            cin &gt;&gt; acc_no;
+
+            cout &lt;&lt; "Enter balance: ";
+            cin &gt;&gt; balance;
+        }
+
+        //print data
+        void displayData(){
+            cout &lt;&lt; "Account No: " &lt;&lt; acc_no &lt;&lt; endl;
+            cout &lt;&lt; "Balance: " &lt;&lt; balance &lt;&lt; endl;
+        }
+
+        //read minimum balance
+        static void readMinBalance(){
+            cout &lt;&lt; "\nEnter Minimum Balance: ";
+            cin &gt;&gt; min_balance;
+        }
+
+        //static function to print static member
+        static void dispMinBalance(){
+            cout &lt;&lt; "Minimum Balance: " &lt;&lt; min_balance &lt;&lt; endl &lt;&lt; endl;
+        }
+};
+
+//Initialize static data member
+int Account::min_balance = 0;
+
+int main(){
+
+    Account acc[SIZE];
+    int i = 0;
+
+    //Read the account data
+    Account::readMinBalance();
+
+    cout &lt;&lt; "\n=======Enter Account Data=======" &lt;&lt; endl;
+    for(i = 0; i &lt; SIZE; i++){
+        acc[i].readData();
+    }
+
+    //print the account data
+    cout &lt;&lt; "\n=======Account Details=======\n" &lt;&lt; endl;
+    for(i = 0; i &lt; SIZE; i++){
+        acc[i].displayData();
+        acc[i].dispMinBalance();
+    }
+
+    return 0;
+}</pre>
+<p>The output of the above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter Minimum Balance: 100
+
+=======Enter Account Data=======
+
+Enter Account No: HAMROCSIT1
+Enter balance: 200
+
+Enter Account No: HAMROCSIT2
+Enter balance: 300
+
+Enter Account No: HAMROCSIT3
+Enter balance: 400
+
+Enter Account No: HAMROCSIT4
+Enter balance: 500
+
+Enter Account No: HAMROCSIT5
+Enter balance: 600
+
+=======Account Details=======
+
+Account No: HAMROCSIT1
+Balance: 200
+Minimum Balance: 100
+
+Account No: HAMROCSIT2
+Balance: 300
+Minimum Balance: 100
+
+Account No: HAMROCSIT3
+Balance: 400
+Minimum Balance: 100
+
+Account No: HAMROCSIT4
+Balance: 500
+Minimum Balance: 100
+
+Account No: HAMROCSIT5
+Balance: 600
+Minimum Balance: 100</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the concept of operator overloading? List the operators that cannot be overloaded. Write programs to add two object of distance class with data members feet and inch by using by using member function and friend function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Operator overloading is a technique by which operators used in a programming language are implemented in user-defined types with customized logic that is based on the types of arguments passed.</p><p>To overload an operator, we use a special&nbsp;<code>operator</code>&nbsp;function.&nbsp;We define the function inside the class or structure whose objects/variables we want the overloaded operator to work with.</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">class className {
+    ... .. ...
+    public
+       returnType operator symbol (arguments) {
+           ... .. ...
+       } 
+    ... .. ...
+};</pre><p>Almost all operators can be overloaded except few. Following is the list of operators that cannot be overloaded. </p><ul class="wp-block-list"><li>. (dot)</li><li>::</li><li>?:</li><li>sizeof</li></ul><p><strong>Program Part:</strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;iostream>
+
+using namespace std;
+
+class Distance{
+    private:
+        int feet;
+        int inch;
+
+    public:
+        void set_distance()
+        {
+            cout &lt;&lt; "Enter feet: ";
+            cin >> feet;
+            cout &lt;&lt; "Enter inch: ";
+            cin >> inch;
+        }
+
+        void display(){
+            cout &lt;&lt; "\nFeet => " &lt;&lt; feet &lt;&lt; " Inch => " &lt;&lt; inch &lt;&lt; endl;
+        }
+
+        friend Distance operator + (Distance d1, Distance d2);
+};
+
+Distance operator + (Distance d1, Distance d2)
+{
+    Distance d3;
+    d3.feet = d1.feet + d2.feet;
+    d3.inch = d1.inch + d2.inch;
+    return d3;
+}
+
+int main()
+{
+    Distance d1, d2, d3;
+    d1.set_distance();
+    d2.set_distance();
+    d3 = d1 + d2;
+    d3.display();
+    return 0;
+}</pre><p>The output of above program is</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Enter feet: 12
+Enter inch: 13
+Enter feet: 12
+Enter inch: 13
+
+Feet => 24 Inch => 26</pre></div>
+<h3>Question 3</h3>
+<div><p><p>Explain types of polymorphism briefly. Write down roles of polymorphism. How can we achieve dynamic polymorphism briefly? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Polymorphism means that have many form. In simple form, Polymorphism  means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function. </p><h4 class="wp-block-heading"><span style="text-decoration: underline;">Types of Polymorphism</span></h4><ul class="wp-block-list"><li>Compile time Polymorphism</li><li>Runtime Polymorphism</li></ul><div class="wp-block-image"><figure class="aligncenter size-full is-resized"><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Polymorphism-min.jpg?resize=348%2C247&#038;ssl=1" alt="Types of Polymorphism | HAMROCSIT" class="wp-image-5590" width="348" height="247"/></figure></div><p><strong><span style="text-decoration: underline;">1. <strong>Compile time polymorphism</strong>:</span></strong></p><p>This type of polymorphism is achieved by function overloading or operator overloading.</p><ul class="wp-block-list"><li><strong>Function Overloading</strong>: When there are multiple functions with same name but different parameters then these functions are said to be <strong>overloaded</strong>. Functions can be overloaded by <strong>change in number of arguments</strong> or/and <strong>change in type of arguments</strong>.</li><li><strong>Operator Overloading</strong>: C++ also provide option to overload operators. For example, we can make the operator (‘+’) for string class to concatenate two strings. We know that this is the addition operator whose task is to add two operands. So a single operator ‘+’ when placed between integer operands , adds them and when placed between string operands, concatenates them.</li></ul><p><strong><span style="text-decoration: underline;">2. Run Time <strong><span style="text-decoration: underline;"><strong>polymorphism</strong></span></strong></span></strong></p><p>This type of polymorphism is achieved by Function Overriding.</p><ul class="wp-block-list"><li><strong>Function overriding</strong> on the other hand occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be <strong>overridden</strong>.</li></ul><h4 class="wp-block-heading"><span style="text-decoration: underline;">How to achieve Dymamic Polymorphism?</span></h4><p><strong>Dynamic Polymorphism </strong>is the polymorphism which can be achieved by runtime. It is achieve by overriding.</p><p>Overriding can be implement using in two ways.</p><ul class="wp-block-list"><li>Virtual functions/methods</li><li>Template meta programming</li></ul><p>Here are the examples showing the implementation of dynamic polymorphism.</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include&lt;iostream>
+using namespace std;
+
+class Base{
+
+    public:
+        virtual void baseFunction(){
+            cout &lt;&lt; "Base class perform some function . . . " &lt;&lt; endl;
+        }
+};
+
+class Child: public Base{
+
+    public:
+        void baseFunction(){
+            cout &lt;&lt; "Child class perform some new function . . . " &lt;&lt; endl;
+        }
+};
+
+int main(){
+
+    Base *b;
+    Child c;
+    b = &amp;c;
+    b->baseFunction();
+
+    return 0;
+
+}</pre><p>The the output of above code is</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Child class perform some new function . . . </pre><p><strong><span style="text-decoration: underline;">Explanation:</span></strong></p><ul class="wp-block-list"><li>If we don&#8217;t make Base class function as virtual function then Base class&#8217;s function is called instead of child class&#8217;s function.</li><li>If you clearly see on main function, We have set address of Child class to Base pointer. It&#8217;s means that, It must call the child function but it call base class.</li><li>So, We will make Base class function as virtual function.</li></ul></div>
+<h2>Group B: Attempts any EIGHT Questions</h2><h3>Question 4</h3>
+<div><p><p>How object oriented programming differs from object based programming language? Discuss benefits of OOP.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here are the significant difference between&nbsp;Object-oriented Programming Language and Object-based Programming Language:</p><figure class="wp-block-table"><div class="table_wrapper" style="overflow-x:auto;"><table><tbody><tr><th>Object-oriented Programming Language</th><th>Object-based Programming Language</th></tr><tr><td>All the characteristics and features of object-oriented programming are supported.</td><td>All characteristics and features of object-oriented programming, such as inheritance and polymorphism are not supported.</td></tr><tr><td>These types of programming languages don&#8217;t have a built-in object. Example: C++.</td><td>These types of programming languages have built-in objects. Example: JavaScript has a window object.</td></tr><tr><td>Java is an example of object-oriented programing language which supports creating and inheriting (which is reusing of code) one class from another.</td><td>VB is another example of object-based language as you can create and use classes and objects, but inheriting classes is not supported.</td></tr></tbody></table></div></figure><p><strong><span style="text-decoration: underline;">Advantage of OOPS:</span></strong></p><ul class="wp-block-list"><li>We can build the programs from standard working modules that communicate with one another, rather than having to start writing the code from scratch which leads to saving of development time and higher productivity,</li><li>OOP language allows to break the program into the bit-sized problems that can be solved easily (one object at a time).</li><li>The new technology promises greater programmer productivity, better quality of software and lesser maintenance cost.</li><li>OOP systems can be easily upgraded from small to large systems.</li><li>It is possible that multiple instances of objects co-exist without any interference,</li><li>It is very easy to partition the work in a project based on objects.</li><li>It is possible to map the objects in problem domain to those in the program.</li><li>The principle of data hiding helps the programmer to build secure programs which cannot be invaded by the code in other parts of the program.</li><li>By using inheritance, we can eliminate redundant code and extend the use of existing classes.</li><li>Message passing techniques is used for communication between objects which makes the interface descriptions with external systems much simpler.</li><li>The data-centered design approach enables us to capture more details of model in an implementable form.</li></ul></div>
+<h3>Question 5</h3>
+<div><p><p>What is the use of new and delete operators? Illustrate with example. What are advantages of new malloc.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The new operator denotes a request for memory allocation on the Free Store. If sufficient memory is available, new operator initializes the memory and returns the address of the newly allocated and initialized memory to the pointer variable. </p><p><strong>Synatx:</strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pointer-variable = new data-type;</pre><p>Once we no longer need to use a variable that we have declared dynamically, we can deallocate the memory occupied by the variable.</p><p>For this, the <code>delete</code> operator is used. It returns the memory to the operating system. This is known as <strong>memory deallocation</strong>.</p><p><strong>Synatx:</strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">delete pointer-variable;</pre><p><strong><span style="text-decoration: underline;">Advantage of new over malloc are</span></strong></p><ul class="wp-block-list"><li>new does not need the sizeof() operator where as malloc() needs to know the size before memory allocation.</li><li>Operator new can make a call to a constructor where as malloc() cannot.</li><li>new can be overloaded malloc() can never be overloaded.</li><li>new could initialize object while allocating memory to it where as malloc () cannot.</li></ul></div>
+<h3>Question 6</h3>
+<div><p><p>What is destructor? Write a program to show the destructor call such that it prints the message “memory is released”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Destructors are members functions in a class that delete an object. They are called when the class object goes out of scope such as when the function ends, the program ends, a delete variable is called etc.</p><p>Destructors are different from normal member functions as they don’t take any argument and don’t return anything. Also, destructors have the same name as their class and their name is preceded by a tilde(~).</p><p>Let look an example of destructor that will delete an object and print message &#8220;Memory is released&#8221;.</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;iostream>
+using namespace std;
+
+class CSIT
+{
+    private:
+        int num1, num2;
+
+    public:
+        CSIT(int n1, int n2)
+        {
+            num1 = n1;
+            num2 = n2;
+        }
+
+        ~CSIT()
+        {
+            cout &lt;&lt; "Memory is released";
+        }
+};
+
+int main()
+{
+    CSIT obj1(10, 20);
+    return 0;
+}</pre></div>
+<h3>Question 7</h3>
+<div><p><p>What is this pointer? How can we use it for name conflict resolution? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>this</strong>&nbsp;is a keyword that refers to the current instance of the class. There can be 3 main usage of this keyword in C++.</p><ul class="wp-block-list"><li>used <strong>to pass current object as a parameter to another method.</strong></li><li>can be used <strong>to refer current class instance variable.</strong></li><li>used <strong>to declare indexers.</strong></li></ul><p>One of the main usage of this pointer is to remove name conflict resolution. Let&#8217;s see an example</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;iostream>
+using namespace std;
+
+class Distance{
+    
+    private:
+        float inch;
+
+    public:
+        void setValue(float inch){
+            this->inch = inch;
+        }
+
+        void display(){
+            cout &lt;&lt; "Distance: " &lt;&lt; inch;
+        }
+};
+
+int main(){
+    Distance d1;
+    d1.setValue(10);
+    d1.display();    
+    return 0;
+} </pre><p>In the above example, We have on class <code>Distance</code> which has member variable <code>inch</code>. We are going to set value on this.</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">void setValue(float inch){
+    this->inch = inch;
+}</pre><p>If you closely see <code>setValue </code>function then we have passed inch as parameter and we are setting value also on <code>inch</code>.</p><p>On this case, compiler get confused because passed parameter and set variable name are same. To fix this issue, We will use this pointer.</p></div>
+<h3>Question 8</h3>
+<div><p><p>How can you define catch statement that can catch any type of exception? Illustrate the use of multiple catch statement with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Exceptions are run-time anomalies or abnormal conditions that a program encounters during its execution. </p><p>Exception Handling is one of the main advantage of c++.</p><p>We will use try and catch block to catch exception. The syntax of try and catch statement is</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">try {
+  // Block of code to try
+  throw exception; // Throw an exception when a problem arise
+}catch () {
+  // Block of code to handle errors
+}</pre><p>We can catch all exception using three dots <code>...</code> on catch as parameter. The syntax is given below</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">try {
+  // Block of code to try
+  throw exception; // Throw an exception when a problem arise
+}catch (...) {
+  // Block of code to handle errors
+}</pre><p>We can use catch multiple times to catch multiple types of exception. In below example, We have used multiple catch to catch multiple exception.</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;iostream>
+using namespace std;
+ 
+int main()
+{
+    try  {
+       throw 10;
+    }
+    //catching character exception
+    catch (char *c)  {
+        cout &lt;&lt; "Caught " &lt;&lt; c;
+    }
+    //catching all exception
+    catch (...){
+        cout &lt;&lt; "Exception Occured\n";
+    }
+    return 0;
+}</pre></div>
+<h3>Question 9</h3>
+<div><p><p>Which functions can be used for reading and writing object? Describe briefly. Write a program that read values of two objects of student class(assume data members are sid , sname, and level) and display the data in monitor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reading and writing data to and from files requires another standard library of C++ &lt;fstream&gt;. The three main data types of fstream are −</p><ul class="wp-block-list"><li><strong>ifstream</strong> − represents input file stream and reads information from files.</li><li><strong>ofstream</strong> − represents output file stream and writes information to files.</li><li><strong>fstream</strong> − represents general file stream and has capabilities of both.</li></ul><p>To read or write object from/to file, We will use following functions</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">file1.write( (char*)&amp;Emp_1, sizeof(Emp1) );</pre><ul class="wp-block-list"><li>Here data present in class object Emp_1 is written to file Employee.txt by calling write function. (char*)&amp;Emp_1 is used to point at the start of an object and sizeof(Emp_1) calculates the number of bytes copied in file.</li></ul><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">file2.read( (char*)&amp;Emp_1, sizeof(Emp1) );</pre><ul class="wp-block-list"><li>Here data present in class object Emp_1 is read from file Employee.txt by calling read function. (char*)&amp;Emp_1 is used to point at the start of an object and sizeof(Emp_1) calculates the number of bytes read from the file.</li></ul><p><strong>Program Part:</strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">
+using namespace std;
+
+class Student{
+    public:
+        int sid;
+        string sname;
+        string level;
+
+        void read_data(){
+            cout &lt;&lt; "Enter Student ID: ";
+            cin >> sid;
+
+            cout &lt;&lt; "Enter Student Name: ";
+            cin >> sname;
+
+            cout &lt;&lt; "Enter Student Level: ";
+            cin >> level;
+        }
+
+        void print_data(){
+            cout &lt;&lt; "\nStudent ID: " &lt;&lt; sid &lt;&lt; endl;
+            cout &lt;&lt; "Student Name: " &lt;&lt; sname &lt;&lt; endl;
+            cout &lt;&lt; "Student Level: " &lt;&lt; level &lt;&lt; endl;
+        }
+};
+
+int main()
+{
+    Student s1;
+    s1.read_data();
+    s1.print_data();
+    return 0;
+}</pre></div>
+<h3>Question 10</h3>
+<div><p><p>Which functions can be used for reading and writing object? Describe briefly. Write a program that read values of two objects of student class(assume data members are sid , sname, and level) and display the data in monitor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reading and writing data to and from files requires another standard library of C++ &lt;fstream&gt;. The three main data types of fstream are −</p><ul class="wp-block-list"><li><strong>ifstream</strong> − represents input file stream and reads information from files.</li><li><strong>ofstream</strong> − represents output file stream and writes information to files.</li><li><strong>fstream</strong> − represents general file stream and has capabilities of both.</li></ul><p>To read or write object from/to file, We will use following functions</p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">file1.write( (char*)&amp;Emp_1, sizeof(Emp1) );</pre><ul class="wp-block-list"><li>Here data present in class object Emp_1 is written to file Employee.txt by calling write function. (char*)&amp;Emp_1 is used to point at the start of an object and sizeof(Emp_1) calculates the number of bytes copied in file.</li></ul><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">file2.read( (char*)&amp;Emp_1, sizeof(Emp1) );</pre><ul class="wp-block-list"><li>Here data present in class object Emp_1 is read from file Employee.txt by calling read function. (char*)&amp;Emp_1 is used to point at the start of an object and sizeof(Emp_1) calculates the number of bytes read from the file.</li></ul><p><strong>Program Part:</strong></p><pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">
+using namespace std;
+
+class Student{
+    public:
+        int sid;
+        string sname;
+        string level;
+
+        void read_data(){
+            cout &lt;&lt; "Enter Student ID: ";
+            cin >> sid;
+
+            cout &lt;&lt; "Enter Student Name: ";
+            cin >> sname;
+
+            cout &lt;&lt; "Enter Student Level: ";
+            cin >> level;
+        }
+
+        void print_data(){
+            cout &lt;&lt; "\nStudent ID: " &lt;&lt; sid &lt;&lt; endl;
+            cout &lt;&lt; "Student Name: " &lt;&lt; sname &lt;&lt; endl;
+            cout &lt;&lt; "Student Level: " &lt;&lt; level &lt;&lt; endl;
+        }
+};
+
+int main()
+{
+    Student s1;
+    s1.read_data();
+    s1.print_data();
+    return 0;
+}</pre></div>
+</body></html>

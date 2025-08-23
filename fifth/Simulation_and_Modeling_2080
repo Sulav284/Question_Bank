@@ -1,0 +1,318 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAM Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>SAM Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Why model of a system is built? What is static model? Differentiate between static and dynamic mathematical models in simulation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>model</strong> of a system is built to represent and simulate the behavior of the real-world system to analyze, understand, predict, or control its performance. Models are used in various fields such as engineering, physics, economics, biology, and more. They can be physical, conceptual, or mathematical representations of a system.</p>
+<p>A <strong>static model</strong> is a type of mathematical model that represents the relationships and dependencies among variables at a specific point in time, without considering the changes over time. In other words, it captures the system&#8217;s state or structure without accounting for the dynamic aspects. Static models are often used to analyze equilibrium conditions or to study the steady-state behavior of a system. Example: Supply and demand model, class diagrams etc.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 96.1538%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 46.5385%; text-align: center; height: 24px;"><strong>Static Model</strong></td>
+<td style="width: 49.6153%; text-align: center; height: 24px;"><strong>Dynamic Model</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 46.5385%; text-align: center; height: 24px;">Does not consider the changes over time; focuses on the system&#8217;s state at a specific point in time.</td>
+<td style="width: 49.6153%; text-align: center; height: 24px;">Captures the evolution of the system over time, representing how variables change with respect to time.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 46.5385%; text-align: center; height: 24px;">Typically involves algebraic equations that express relationships between variables at a specific moment.</td>
+<td style="width: 49.6153%; text-align: center; height: 24px;">Involves differential equations or difference equations to represent the rate of change of variables over time.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 46.5385%; text-align: center; height: 24px;">Suitable for analyzing steady-state conditions, examining system structure, or studying equilibrium.</td>
+<td style="width: 49.6153%; text-align: center; height: 24px;">Used for simulating and understanding the time-dependent behavior of a system, predicting future states, or studying transient responses.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 46.5385%; text-align: center; height: 24px;">Represents the system at a snapshot in time, providing a snapshot of the system&#8217;s configuration.</td>
+<td style="width: 49.6153%; text-align: center; height: 24px;">Represents how the system evolves over time, offering insights into its dynamic behavior.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is storage in GPSS? Describe the blocks associated to storage in GPSS. A machine tool in a manufacturing shop is turning out parts at the rate off one every 5 minutes. As they are finished the parts go on an inspector who takes 10 ± 3 minutes to examine each one and rejects 10% of the parts. Represent the system in GPSS using the concept of facility and run the simulation for 500 parts.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p align="left">A Storage Entity is associated with several storage units that are allocated and returned by Transactions. Storage Entities can be used as &#8220;token pools&#8221; for controlling the flow of Transactions in the model.</p>
+<p align="left"><strong>ENTER</strong> and <strong>LEAVE</strong> Blocks are used to update the statistics associated with a Storage Entity and several SNAs are available that return derived statistics.</p>
+<p align="left">Storage entities must be defined by a STORAGE Command.</p>
+<ul style="list-style-type: square;">
+<li><strong>ENTER</strong> block:
+<p align="left">When a Transaction ENTERs a Storage Entity, it utilizes or occupies one or more storage units of the Storage Entity. A Transaction is denied entry into an ENTER Block if its storage demand cannot be met. Such a Transaction comes to rest on the Delay Chain of the Storage Entity. Then it must wait until other Transactions free enough storage by entering LEAVE Blocks. Storage capacity may be released by any Transaction, even if it had not previously ENTERed the Storage Entity. However, if more capacity is released than was declared in the STORAGE Command an Error Stop occurs.</p>
+</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29703 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/enter.jpg?resize=181%2C61&#038;ssl=1" alt="" width="181" height="61"></p>
+<ul style="list-style-type: square;">
+<li><strong>LEAVE</strong> block: When a Transaction enters a LEAVE Block and gives up one or more storage units, other Transactions are sought that can have their storage demands satisfied. A &#8220;first-fit-with-skip&#8221; discipline is used to schedule Transactions that are waiting. This means that each Transaction on the Delay Chain is tested for fit in the Storage Entity, starting with the highest priority. If a fit is found, the Transaction is removed from the Storage Delay Chain, allowed to enter the ENTER Block, and placed on the CEC behind its priority peers. Then the next Transaction on the Storage Delay Chain is tested.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-29704 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/leave.jpg?resize=181%2C61&#038;ssl=1" alt="" width="181" height="61"></p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29706" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/gpss.jpg?resize=415%2C606&#038;ssl=1" alt="" width="415" height="606"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What are the two main properties of random numbers? Test whether the 3rd, 7th, 11th, and so on numbers in the sequence in the following random number sample are auto-correlated. (Z<sub>α</sub>=0.05 and Z<sub>0.025</sub>=1.96)</p>
+<p>0.12 0.01 0.23 0.28 0.89 0.31 0.64 0.28 0.83 0.93 0.99 0.15 0.33 0.35 0.91 0.41 0.60 0.27 0.75 0.88 0.68 0.49 0.05 0.43 0.95 0.58 0.19 0.36 0.69 0.87</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The two main properties of random numbers are independence and uniformity.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Independence: </strong>Independence refers to the lack of correlation or relationship between successive random numbers in a sequence. In an ideal random sequence, the occurrence or value of one number should not provide information about the occurrence or value of the next number.</li>
+<li><strong>Uniformity: </strong>Uniformity means that each number in the sequence has an equal chance of being selected. In a uniformly distributed random sequence, the probability of any specific value occurring is the same for all values.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29709" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/SmartSelect_20240204_180216_CamScanner.jpg?resize=497%2C755&#038;ssl=1" alt="" width="497" height="755"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain Markov chain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the future states of a process are independent of the past and depend only on the present, the process is called a Markov process. A discrete state Markov process is called a Markov chain. A Markov Chain is a random process with the property that the next state depends only on the current state.</p>
+<p>Markov chains are used to analyze trends and predict the future. (Weather, stock market, genetics, product success, etc.</p>
+<p><strong>Formally,</strong></p>
+<p>A Markov chain is a sequence of random variables X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, &#8230; with the Markov property, namely that, given the present state, the future and past states are independent.</p>
+<p>\(P(X_{n+1} = j|X_n = i_n, x_{n-1} = i_{n-1}, . . ., x_0 = i_0) = P(X_{n+1} = j|X_n = i_n)\)</p>
+<p>The conditional probability above gives us the probability that a process in state i<sub>n</sub> at time n moves to i<sub>n+1</sub> at time n + 1. We call this the transition probability for the Markov chain. If the transition probability does not depend on the time n, we have a stationary Markov chain, with transition probabilities</p>
+<p>\(P_{ij} = P(X_{n+1} = j|X_n = i)\)</p>
+<p>Now we can write down the whole Markov chain as a matrix P:</p>
+<p>\(P = \begin{bmatrix}<br />
+P_11 &amp; P_12 &amp; &#8230;. &amp; P_1n\\<br />
+P_21 &amp; P_22 &amp; &#8230;. &amp; P_2n\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+P_n1 &amp; P_n2 &amp; &#8230;. &amp; P_nn\\<br />
+\end{bmatrix}\)</p>
+<p>Example:</p>
+<p>Weather Problem:</p>
+<ul style="list-style-type: square;">
+<li>raining today  ⇒ 40 % rain tomorrow</li>
+</ul>
+<p>⇒ 60 % no rain tomorrow</p>
+<ul style="list-style-type: square;">
+<li>not raining today  ⇒ 20 % rain tomorrow</li>
+</ul>
+<p>⇒ 80 % no rain tomorrow</p>
+<p>What will be the probability if today is not raining then not rain the day after tomorrow?</p>
+<p><i>Markov chain diagram:</i></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10953 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-2.png?resize=334%2C145&#038;ssl=1" alt="" width="334" height="145"></p>
+<p>\(P^2 = \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix} \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.16 + 0.12 &amp; 0.24 + 0.48 \\ 0.08 + 0.16 &amp; 0.12 + 0.64\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.28 &amp; 0.72 \\ 0.24 &amp; 0.76\end{pmatrix}\)</p>
+<p>Thus, the probability of not being rainy the day after tomorrow is 0.76.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are steps involved in simulation study? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation:</strong>
+<ul style="list-style-type: square;">
+<li>Clearly define the problem that needs to be addressed using simulation. Identify the objectives and goals of the study.</li>
+</ul>
+</li>
+<li><strong>Setting of Objectives &amp; Overall Project Plan:</strong>
+<ul style="list-style-type: square;">
+<li>Establish specific objectives for the simulation study and create an overall project plan outlining the timeline, resources, and milestones.</li>
+</ul>
+</li>
+<li><strong>Model Conceptualization:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a conceptual model that represents the system being simulated. This involves deciding on the structure and components of the model.</li>
+</ul>
+</li>
+<li><strong>Data Collection:</strong>
+<ul style="list-style-type: square;">
+<li>Gather relevant data to support the model. This includes parameters, inputs, and initial conditions. The data should be accurate and representative of the real system.</li>
+</ul>
+</li>
+<li><strong>Model Translation:</strong>
+<ul style="list-style-type: square;">
+<li>Translate the conceptual model into a formal representation, often using mathematical equations or computational algorithms. Implement the model in a simulation environment.</li>
+</ul>
+</li>
+<li><strong>Verification:</strong>
+<ul style="list-style-type: square;">
+<li>Ensure that the simulation model accurately represents the conceptual model by checking its correctness. Verification involves validating the coding and logic of the model.</li>
+</ul>
+</li>
+<li><strong>Validation:</strong>
+<ul style="list-style-type: square;">
+<li>Validate the simulation model by comparing its outputs to real-world data. This step ensures that the model behaves realistically and provides valid insights into the system.</li>
+</ul>
+</li>
+<li><strong>Experimental Design:</strong>
+<ul style="list-style-type: square;">
+<li>Plan the experiments or scenarios that will be simulated. Define the input variations, conditions, and factors to be tested. Set up the simulation&#8217;s boundary conditions.</li>
+</ul>
+</li>
+<li><strong>Production Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Execute the simulation with the specified inputs and conditions. Collect data on the system&#8217;s behavior, performance, and other relevant output measures during the production runs.</li>
+</ul>
+</li>
+<li><strong>Repetition of Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Conduct multiple simulation runs to assess the variability and robustness of the model. Repetition helps ensure that the results are consistent and reliable.</li>
+</ul>
+</li>
+<li><strong>Documentation &amp; Report:</strong>
+<ul style="list-style-type: square;">
+<li>Document the simulation study, including the model details, assumptions, data sources, and results. Generate a comprehensive report summarizing the findings and insights.</li>
+</ul>
+</li>
+<li><strong>Implementation:</strong>
+<ul style="list-style-type: square;">
+<li>Implement the recommendations or decisions based on the simulation results. This may involve changes to the real-world system or the adoption of specific strategies.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Generate 10 random integers using Linear congruential method where m=1000, a =19, c=6 and X<sub>0</sub>=13</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mord">13</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅</span></span><span class="base"><span class="mord">13</span><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000=</span></span><span class="base"><span class="mrel">253</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅253</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=</span></span><span class="base"><span class="mrel">813</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅813</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=4</span></span><span class="base"><span class="mord">53</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅4</span></span><span class="base"><span class="mord">53</span><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=613</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅613</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=653</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅653</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000=413</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅413</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=853</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅853</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=213</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅213</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=53</span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">10</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">19</span><span class="mbin">⋅53</span></span><span class="base"><span class="mbin">+</span></span><span class="base"><span class="mord">6</span><span class="mclose">)</span></span><span class="base"><span class="mord"><span class="mord mathrm">mod</span></span><span class="mord">1000</span><span class="mrel">=13</span></span></span></span></span></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain different estimation methods which are used in simulation output analysis.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29719" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/point-1.jpg?resize=556%2C255&#038;ssl=1" alt="" width="556" height="255"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29717" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/confidence.jpg?resize=555%2C318&#038;ssl=1" alt="" width="555" height="318"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define verification and validation. Explain the process of model verification in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>Verification: </strong>Verification is the process of ensuring that a simulation model is implemented correctly. It involves confirming that the model adheres to the specifications, equations, and logic of the conceptual model without errors in the coding or programming. The objective is to check that the model is an accurate representation of the intended system and that there are no mistakes in the implementation.</li>
+<li><strong>Validation: </strong>Validation is the process of determining whether the simulation model represents the real-world system accurately. It involves comparing the model&#8217;s outputs to observed or measured data from the actual system to assess its ability to replicate the system&#8217;s behavior. The objective is to assess the model&#8217;s credibility and reliability in predicting real-world outcomes.</li>
+</ol>
+<p><strong>Model Verification Process:</strong></p>
+<p>The process of model verification typically involves several steps to ensure that the simulation model is implemented correctly:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Conceptual Model Verification: </strong>Check that the conceptual model accurately represents the system, including the relationships, constraints, and variables involved.</li>
+<li><strong>Program Code Verification: </strong>Verify the correctness of the code or programming implementing the simulation model. This includes checking algorithms, equations, and data input/output.</li>
+<li><strong>Input Verification: </strong>Validate the accuracy and appropriateness of input data, including parameters, initial conditions, and external inputs.</li>
+<li><strong>Logic and Arithmetic Verification: </strong>Ensure that logical constructs and arithmetic calculations within the model are implemented correctly and align with the conceptual model.</li>
+<li><strong>Output Verification: </strong>Verify that the output of the simulation model aligns with expectations based on the conceptual model. Check for consistency and correctness in the results.</li>
+<li><strong>Debugging: </strong>Identify and correct any errors or discrepancies found during verification. This may involve troubleshooting code, logic, or data issues.</li>
+<li><strong>Sensitivity Analysis: </strong>Conduct sensitivity analysis to assess how variations in input parameters impact the model output. This helps identify potential sources of error.</li>
+<li><strong>Replication Verification: </strong>If the model involves randomness or variability, verify that replications of the simulation produce consistent results. This is important for assessing the reliability of stochastic elements.</li>
+<li><strong>Documentation Verification: </strong>Ensure that the documentation of the simulation model is accurate, complete, and up-to-date. This includes model specifications, assumptions, and any changes made during the verification process.</li>
+<li><strong>Peer Review: </strong>Engage in peer review, where other individuals with expertise in simulation or the specific domain review the model and its implementation. This can provide valuable insights and catch potential errors.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is feedback system? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>feedback system</strong> is a system in which the output of the system is fed back to the input, influencing the subsequent behavior of the system. Feedback can either be positive or negative, depending on whether the output reinforces or counteracts the input. Feedback mechanisms are common in various fields, including engineering, biology, economics, and control systems.</p>
+<p><strong>Types of Feedback:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Positive Feedback:</strong>
+<ul style="list-style-type: square;">
+<li>In positive feedback, the output enhances or amplifies the input, leading to a self-reinforcing loop. This can result in exponential growth or destabilization of the system.</li>
+<li>Positive feedback loops are less common in stable systems and are often associated with processes that lead to dramatic or rapid changes.</li>
+<li>Example: The process of blood clotting is regulated by positive feedback. Once a clot begins to form, it releases chemicals that further activate the clotting process, leading to the rapid formation of a blood clot.</li>
+</ul>
+</li>
+<li><strong>Negative Feedback:</strong>
+<ul style="list-style-type: square;">
+<li>In negative feedback, the output opposes or reduces the input, maintaining stability and equilibrium in the system. Negative feedback loops are common in homeostatic systems.</li>
+<li>Example: The regulation of body temperature is a classic example of negative feedback. If the body temperature deviates from the set point (e.g., becomes too high), physiological mechanisms are activated to bring it back to the normal range. Sweating and vasodilation help dissipate heat, reducing the temperature.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example: Thermostat in a Heating System (Negative Feedback)</strong></p>
+<p><strong>Input:</strong> Desired room temperature is set to 72°F.</p>
+<p><strong>Output:</strong> The heating system works to maintain the room temperature at the set point.</p>
+<p><strong>Negative Feedback Loop:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Comparison:</strong> The actual room temperature is compared to the desired set point (72°F).</li>
+<li><strong>Deviation:</strong> If the room temperature is below 72°F, the heating system is activated.</li>
+<li><strong>Output:</strong> The heating system adds heat to the room.</li>
+<li><strong>Comparison (Again):</strong> The room temperature is continuously monitored.</li>
+<li><strong>Adjustment:</strong> Once the room temperature approaches 72°F, the heating system reduces or turns off.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is calling population? Explain arrival and service process in a queue.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Calling Population:</strong></p>
+<p>The calling population in the context of a queueing system refers to the set of all entities (individuals, items, tasks, etc.) that have the potential to enter the queue and request service. It represents the source from which entities may arrive and join the queue for service. Understanding the characteristics of the calling population is essential for modeling and analyzing queueing systems.</p>
+<p><strong>Arrival Process:</strong></p>
+<p>The arrival process in a queueing system describes how entities from the calling population enter the queue over time. Key components of the arrival process include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Arrival Rate (λ):</strong> The average rate at which entities arrive at the queue. It is often denoted by the symbol λ and measured in entities per unit of time (e.g., customers per minute).</li>
+<li><strong>Interarrival Time:</strong> The time between successive arrivals of entities. The distribution of interarrival times provides insights into the variability of the arrival process.</li>
+<li><strong>Arrival Pattern:</strong> The pattern or randomness associated with the arrivals. Arrivals can follow different patterns, such as being random, periodic, or influenced by external factors.</li>
+</ol>
+<p>Understanding the arrival process helps in determining the workload on the system and influences decisions related to queue design, capacity planning, and resource allocation.</p>
+<p><strong>Service Process:</strong></p>
+<p>The service process in a queueing system describes how entities are served by the system once they enter the queue. Key components of the service process include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Service Rate (μ):</strong> The average rate at which entities are served by the system. It is often denoted by the symbol μ and measured in entities per unit of time.</li>
+<li><strong>Service Time:</strong> The time required to complete the service for an individual entity. The distribution of service times provides insights into the variability of the service process.</li>
+<li><strong>Number of Servers:</strong> The number of parallel servers available to provide service. The presence of multiple servers can influence the service rate and system capacity.</li>
+<li><strong>Service Discipline:</strong> The rules governing the order in which entities are served. Common disciplines include first-come, first-served (FCFS), last-come, first-served (LCFS), and priority-based service.</li>
+</ol>
+<p>Understanding the service process is crucial for determining the efficiency of the system, minimizing waiting times, and optimizing resource utilization.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain Monte Carlo simulation method with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Monte Carlo simulation</strong> is a computational technique that uses random sampling to model and analyze complex systems or processes. It is particularly useful for problems that involve uncertainty, variability, or randomness. The method gets its name from the Monte Carlo Casino in Monaco, known for its games of chance.</p>
+<p><strong>Monte Carlo Simulation Method:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation: </strong>Identify a system or process that involves uncertainty or randomness. Define input parameters and their probability distributions.</li>
+<li><strong>Random Sampling: </strong>Generate random samples for the input parameters based on their probability distributions. This can be done using random number generators.</li>
+<li><strong>Simulation Execution: </strong>Run the simulation model using the randomly generated input values. Record the output or results for each simulation run.</li>
+<li><strong>Analysis: </strong>Aggregate the results over multiple simulation runs to obtain statistical measures such as mean, variance, confidence intervals, etc. Analyze the distribution of the output to understand the system&#8217;s behavior under different scenarios.</li>
+</ol>
+<p><strong>Example: Estimating π using Monte Carlo Simulation:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation:</strong>
+<p>Consider a square with a circle inscribed in it. The circle&#8217;s diameter is equal to the square&#8217;s side length.</li>
+<li><strong>Random Sampling:</strong>
+<p>Generate random points within the square. Each point&#8217;s coordinates (x, y) are uniformly distributed between -1 and 1.</li>
+<li><strong>Simulation Execution:</strong>
+<p>For each random point, determine whether it falls inside the circle using the equation <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">x</span><sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></sup></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">y</span><sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></sup></span><span class="mrel">≤</span></span><span class="base"><span class="mord">1. </span></span></span></span></span>Count the number of points inside the circle and the total number of points.</li>
+<li><strong>Analysis:</strong>
+<p>The ratio of the points inside the circle to the total points is approximately equal to the ratio of the circle&#8217;s area to the square&#8217;s area. Using this ratio, estimate the value of π: <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">π</span><span class="mrel">≈</span></span><span class="base"><span class="mord">4</span><span class="mbin">×</span></span><span class="base"><span class="mopen">(</span><span class="mord text"><span class="mord">Points inside the circle</span></span><span class="mord">/</span><span class="mord text"><span class="mord">Total points</span></span><span class="mclose">)</span></span></span></span></span>.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. Non-stationary poisson process</p>
+<p>b. Poker test</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Non-Stationary Poisson Process:</strong></p>
+<p>A Poisson process is a stochastic process that represents the occurrence of events in continuous time. The standard Poisson process has the property of stationarity, meaning that the rate of event occurrences remains constant over time. However, in some scenarios, the rate may vary with time, leading to the concept of a non-stationary Poisson process.</p>
+<p><strong>Characteristics of Non-Stationary Poisson Process:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Time-Varying Intensity (Rate):</strong> Unlike the stationary Poisson process where the intensity remains constant, a non-stationary Poisson process allows the event rate to change over time.</li>
+<li><strong>Intensity Function:</strong> The intensity function, often denoted by <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">λ</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span>, specifies the time-varying rate of events. It represents the instantaneous rate of events at time <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">t</span></span></span></span></span>.</li>
+<li><strong>Random Events:</strong> Events still occur randomly, and the time between events follows an exponential distribution.</li>
+</ol>
+<p><strong>Mathematical Representation:</strong></p>
+<p>The probability of observing <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">k</span></span></span></span></span> events in a small time interval <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">Δ</span><span class="mord mathnormal">t</span></span></span></span></span> is given by:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mbin">+</span></span><span class="base"><span class="mord">Δ</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mbin">−</span></span><span class="base"><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">k</span><span class="mclose">)</span><span class="mrel">=(</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mathnormal mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span><span class="mbin mtight">⋅</span>Δ<span class="mord mathnormal mtight">t</span><span class="mclose mtight">]<sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">k</span></span></span></span></sup></span><span class="mbin mtight">⋅</span><span class="mord mathnormal mtight">e</span><sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight">−<span class="mord mathnormal mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span><span class="mbin mtight">⋅</span>Δ<span class="mord mathnormal mtight">t</span></span></span></span></sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">) / k<span class="mclose mtight">!</span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p>where <span class="math math-inline"><span class="katex"><span class="katex-mathml">)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span> is the number of events up to time <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">t</span></span></span></span></span>.</p>
+<p>Non-stationary Poisson processes find applications in various fields, including telecommunications, finance, and healthcare, where event rates may be influenced by external factors.</p>
+<p><strong>b. Poker Test:</strong></p>
+<p>The Poker test is a statistical method used to assess the randomness of a sequence of values or outcomes. It is particularly applicable in evaluating sequences generated by random number generators or other stochastic processes. The test derives its name from its analogy to the card game of poker, where certain combinations of cards have specific probabilities.</p>
+<p><strong>Procedure of the Poker Test:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Sequence Preparation:</strong>
+<p>Organize the sequence of values into non-overlapping groups (e.g., five consecutive values).</li>
+<li><strong>Group Classification:</strong>
+<p>Classify each group based on the patterns it exhibits. Common classifications include &#8220;One Pair,&#8221; &#8220;Two Pairs,&#8221; &#8220;Three of a Kind,&#8221; &#8220;Four of a Kind,&#8221; and &#8220;Five Different Values&#8221; (a straight).</li>
+<li><strong>Expected Probabilities:</strong>
+<p>Calculate the expected probabilities for each classification based on the assumption of randomness.</li>
+<li><strong>Chi-Square Test:</strong>
+<p>Apply a chi-square test to compare the observed frequencies of each classification with the expected frequencies.</li>
+</ol>
+<p><strong>Interpretation:</strong></p>
+<ul style="list-style-type: square;">
+<li>If the chi-square test indicates that the observed frequencies significantly deviate from the expected frequencies, it suggests non-randomness in the sequence.</li>
+<li>If the observed frequencies align closely with the expected frequencies, it supports the randomness of the sequence.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>The Poker test is relatively simple to implement.</li>
+<li>It is versatile and applicable to various types of sequences.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul style="list-style-type: square;">
+<li>The test may not be sensitive to certain types of non-randomness.</li>
+<li>The effectiveness depends on the quality of the initial classification and expected probabilities.</li>
+</ul>
+</div>
+</body></html>

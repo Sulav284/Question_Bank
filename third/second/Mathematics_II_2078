@@ -1,0 +1,333 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>Math Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 80</p>
+        <p><strong>Pass Marks:</strong> 32</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any THREE questions</h2><h3>Question 1</h3>
+<div><p><p>Define system of linear equations. When a system of equation is consistent? Determine if the system -2x<sub>1</sub> – 3x<sub>2</sub> + 4x<sub>3</sub> = 5, x<sub>2</sub> – 2x<sub>3</sub> = 4, x<sub>1</sub> + 3x<sub>2</sub> – x<sub>3</sub> = 2 is consistent.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System of linear equations is a collection of one or more linear equations involving the same variables.</p>
+<p>For example:</p>
+<p>3x + 2y &#8211; z = 1</p>
+<p>2x &#8211; 2y + 4z = -2</p>
+<p>-x + y &#8211; z = 0</p>
+<p>If system of linear equation has at <strong>least one solution</strong> then system of equation is consistent.</p>
+<p><span style="text-decoration: underline;"><strong>Soluton</strong></span></p>
+<p>Given Equations are</p>
+<p>-2x<sub>1</sub> – 3x<sub>2</sub> + 4x<sub>3</sub> = 5</p>
+<p>x<sub>2</sub> – 2x<sub>3</sub> = 4</p>
+<p>x<sub>1</sub> + 3x<sub>2</sub> – x<sub>3</sub> = 2</p>
+<p>The given equations can be written in the form</p>
+<p>Ax = b</p>
+<p>Where</p>
+<p>A = \(\begin{bmatrix}-2 &amp; -3 &amp; 4\\ 0 &amp; 1 &amp; -2\\ 1 &amp; 3 &amp; -1\end{bmatrix}\)</p>
+<p>x = \(\begin{bmatrix}x_1\\ x_2\\ x_3\end{bmatrix}\)</p>
+<p>b = \(\begin{bmatrix}5\\ 4\\ 2\end{bmatrix}\)</p>
+<p>Its augmented form is [A:b]</p>
+<p>~ [A:b]</p>
+<p>~ \(\begin{bmatrix}-2 &amp; -3 &amp; 4 &amp; : &amp; 5\\ 0 &amp; 1 &amp; -2 &amp; : &amp; 4\\ 1 &amp; 3 &amp; -1 &amp; : &amp; 2 \end{bmatrix}\)</p>
+<p>R<sub>3</sub> ↔ R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 3 &amp; -1 &amp; : &amp; 2\\ 0 &amp; 1 &amp; -2 &amp; : &amp; 4\\ -2 &amp; -3 &amp; 4 &amp; : &amp; 5 \end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> + 2R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 3 &amp; -1 &amp; : &amp; 2\\ 0 &amp; 1 &amp; -2 &amp; : &amp; 4\\ 0 &amp; 3 &amp; 2 &amp; : &amp; 9 \end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R1 &#8211; 3R<sub>2</sub> ,  R<sub>3</sub> → R<sub>3</sub> &#8211; 3R<sub>2</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 5 &amp; : &amp; -10\\ 0 &amp; 1 &amp; -2 &amp; : &amp; 4\\ 0 &amp; 0 &amp; 8 &amp; : &amp; -3 \end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> / 8</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 5 &amp; : &amp; -10\\ 0 &amp; 1 &amp; -2 &amp; : &amp; 4\\ 0 &amp; 0 &amp; 1 &amp; : &amp; \frac{-3}{8} \end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> + 2R<sub>3</sub> ,  R<sub>1</sub> → R<sub>1</sub> &#8211; 5R<sub>3</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; \frac{-65}{8} \\ 0 &amp; 1 &amp; 0 &amp; : &amp; \frac{13}{4}\\ 0 &amp; 0 &amp; 1 &amp; : &amp; \frac{-3}{8} \end{bmatrix}\)</p>
+<p>From the above, We can say that</p>
+<p>x = \(\begin{bmatrix}x_1\\ x_2\\ x_3\end{bmatrix}\) = \(\begin{bmatrix}\frac{-65}{8}\\ \frac{13}{4}\\ \frac{-3}{8}\end{bmatrix}\)</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define linear transformation with an example.</p>
+<p>Let A = \(\begin{bmatrix}1 & -3\\ 3 & 5\\ -1 & 7\end{bmatrix}\), v = \(\begin{bmatrix}2\\ -1\end{bmatrix}\), b = \(\begin{bmatrix}3\\ 2\\ 4\end{bmatrix}\), x = \(\begin{bmatrix}x_1\\ x_2\end{bmatrix}\)</p>
+<p>and define a transformation <strong>T:R<sup>2</sup> → R<sup>2</sup> </strong>by T(x) = Ax then</p>
+<ol>
+<li>find T(v)</li>
+<li>find x ∈ R<sup>2</sup> whose image under T is b</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let T:V → W be a tranformation (mapping or function) such that,</p>
+<ol style="list-style-type: lower-roman;">
+<li>T(c, v) = c . T(v)</li>
+<li>T(u + v) = T(u) + T(v)  ∀ c ∈ K and u, v ∈ V</li>
+</ol>
+<p><span style="text-decoration: underline;">Example:</span><strong> </strong>Let A = (a<sub>ij</sub>)<sub>m × n</sub> be an m × n matrix.</p>
+<p>Let T:R<sup>n</sup> → R<sup>m</sup></p>
+<p>T: multiplication be the matrix A</p>
+<p>i.e. T(x) = Ax is a linear transformation</p>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>Given Matrices are</p>
+<p>A = \(\begin{bmatrix}1 &amp; -3\\ 3 &amp; 5\\ -1 &amp; 7\end{bmatrix}\)</p>
+<p>v = \(\begin{bmatrix}2\\ -1\end{bmatrix}\)</p>
+<p>b = \(\begin{bmatrix}3\\ 2\\ 4\end{bmatrix}\)</p>
+<p>x = \(\begin{bmatrix}x_1\\ x_2\end{bmatrix}\)</p>
+<p>Given  that transformation T:R<sup>2</sup> → R<sup>2</sup> by T(x) = A<span style="text-decoration: underline;">x</span></p>
+<p><span style="text-decoration: underline;"><strong>a) First Part:</strong></span></p>
+<p>T(u) = Au</p>
+<p>= \(\begin{bmatrix}1 &amp; -3\\ 3 &amp; 5\\ -1 &amp; 7\end{bmatrix}\) \(\begin{bmatrix}2\\ -1\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2+3\\ 6-5 \\-2-7\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}5\\ 1 \\-9\end{bmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>b) Second Part:</strong></span></p>
+<p>Let x = \(\begin{bmatrix}x_1\\ x_2\end{bmatrix}\)</p>
+<p>Suppose x in R<sup>2</sup> where image under T is b then</p>
+<p>T(x) = b</p>
+<p>Ax = b</p>
+<p>\(\begin{bmatrix}1 &amp; -3\\ 3 &amp; 5\\ -1 &amp; 7\end{bmatrix}\)\(\begin{bmatrix}x_1\\ x_2\end{bmatrix}\) = \(\begin{bmatrix}3\\ 2\\ 4\end{bmatrix}\)</p>
+<p>The augmented matrix of Ax = b is</p>
+<p>\(\begin{bmatrix}1 &amp; -3 &amp; : &amp; 3\\ 3 &amp; 5 &amp; : &amp; 2\\ -1 &amp; 7 &amp; : &amp; 4\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> &#8211; 3R<sub>1</sub>,   R<sub>3</sub> → R<sub>3</sub> + R<sub>1</sub></p>
+<p>\(\begin{bmatrix}1 &amp; -3 &amp; : &amp; 3\\ 0 &amp; 14 &amp; : &amp; -7\\ 0 &amp; 4 &amp; : &amp; 7\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> / 14</p>
+<p>\(\begin{bmatrix}1 &amp; -3 &amp; : &amp; 3\\ 0 &amp; 1 &amp; : &amp; \frac{-1}{2}\\ 0 &amp; 4 &amp; : &amp; 7\end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> &#8211; 4R<sub>2</sub>,   R<sub>1</sub> → R<sub>1</sub> + 3R<sub>2</sub></p>
+<p>\(\begin{bmatrix}1 &amp; 0 &amp; : &amp; \frac{3}{2}\\ 0 &amp; 1 &amp; : &amp; \frac{-1}{2}\\ 0 &amp; 0 &amp; : &amp; 9\end{bmatrix}\)</p>
+<p>This implies \(x_1 = \frac{3}{2}\) and \(x_2 = \frac{-1}{2}\)</p>
+<p>Thus, x = \(\begin{bmatrix}\frac{3}{2}\\ \frac{-1}{2}\end{bmatrix}\) in R<sup>2</sup> whose image under T is b.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Find the LU factorization of \(\begin{bmatrix}2 & 4 & -1 & 5 & -2\\ -4 & -5 & 3 & -8 & 1\\ 2 & -5 & -4 & 1 & 8\\ -6 & 0 & 7 & -3 & 1\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Let A = \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ -4 &amp; -5 &amp; 3 &amp; -8 &amp; 1\\ 2 &amp; -5 &amp; -4 &amp; 1 &amp; 8\\ -6 &amp; 0 &amp; 7 &amp; -3 &amp; 1\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> + 2R<sub>1</sub>,   R<sub>3</sub> → R<sub>3</sub> + (-1) R<sub>1</sub>,  R<sub>4</sub> → R<sub>4</sub> + 3R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ 0 &amp; 3 &amp; 1 &amp; 2 &amp; -3\\ 0 &amp; -9 &amp; -3 &amp; -4 &amp; 10\\ 0 &amp; 12 &amp; 4 &amp; 12 &amp; -5\end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> + 3R<sub>2</sub>,  R<sub>4</sub> → R<sub>4</sub> + (-4) R<sub>2</sub></p>
+<p>~ \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ 0 &amp; 3 &amp; 1 &amp; 2 &amp; -3\\ 0 &amp; 0 &amp; 0 &amp; 2 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 4 &amp; 7\end{bmatrix}\)</p>
+<p>R<sub>4</sub> → R<sub>4</sub> + (-2) R<sub>3</sub></p>
+<p>~ \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ 0 &amp; 3 &amp; 1 &amp; 2 &amp; -3\\ 0 &amp; 0 &amp; 0 &amp; 2 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 5\end{bmatrix}\)</p>
+<p>First Pivot column is 2. So,</p>
+<p>= \(\begin{bmatrix}2\\ -4\\ 2\\ -6\end{bmatrix}\) ÷ 2</p>
+<p>= \(\begin{bmatrix}1\\ -2\\ 1\\ -3\end{bmatrix}\)</p>
+<p>Second Picot column is 3. so,</p>
+<p>= \(\begin{bmatrix}3\\ -9\\ 12\end{bmatrix}\) ÷ 3</p>
+<p>= \(\begin{bmatrix}1\\ -3\\ 4\end{bmatrix}\)</p>
+<p>Third Picot column is 2. so,</p>
+<p>= \(\begin{bmatrix}2\\ 4\end{bmatrix}\) ÷ 2</p>
+<p>= \(\begin{bmatrix}1\\ 2\end{bmatrix}\)</p>
+<p>Fourth Pivot column is 5. so,</p>
+<p>= [5] ÷ 2</p>
+<p>= 1</p>
+<p>Finally,</p>
+<p>L = \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0\\ -2 &amp; 1 &amp; 0 &amp; 0\\ 1 &amp; -3 &amp; 1 &amp; 0\\ -3 &amp; 4 &amp; 2 &amp; 1\end{bmatrix}\)</p>
+<p>U = \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ 0 &amp; 3 &amp; 1 &amp; 2 &amp; -3\\ 0 &amp; 0 &amp; 0 &amp; 2 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 5\end{bmatrix}\)</p>
+<p>∴ LU = \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0\\ -2 &amp; 1 &amp; 0 &amp; 0\\ 1 &amp; -3 &amp; 1 &amp; 0\\ -3 &amp; 4 &amp; 2 &amp; 1\end{bmatrix}\) \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ 0 &amp; 3 &amp; 1 &amp; 2 &amp; -3\\ 0 &amp; 0 &amp; 0 &amp; 2 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 5\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2 &amp; 4 &amp; -1 &amp; 5 &amp; -2\\ -4 &amp; -5 &amp; 3 &amp; -8 &amp; 1\\ 2 &amp; -5 &amp; -4 &amp; 1 &amp; 8\\ -6 &amp; 0 &amp; 7 &amp; -3 &amp; 1\end{bmatrix}\)</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>Find a least square solution of the inconsistent system Ax =  b for</p>
+<p>A = \(\begin{bmatrix}-1 & 2\\ 2 & -3\\ -1 & 3\end{bmatrix}\), b = \(\begin{bmatrix}4\\ 2\\ 1\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution</p>
+<p>Given,</p>
+<p>A = \(\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -3\\ -1 &amp; 3\end{bmatrix}\) and b = \(\begin{bmatrix}4\\ 2\\ 1\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>\(\hat{x} = (A^{T}A)^{-1} (A^{T}b)\)  &#8212;&#8212;&#8212;&#8211; (1)</p>
+<p>A<sup>T</sup> = \(\begin{bmatrix}-1 &amp; 2 &amp; -1\\ 2 &amp; -3 &amp; 3\end{bmatrix}\)</p>
+<p>A<sup>T</sup>A = \(\begin{bmatrix}-1 &amp; 2 &amp; -1\\ 2 &amp; -3 &amp; 3\end{bmatrix}\) \(\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -3\\ -1 &amp; 3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1+4+1 &amp; -2-6-3\\ -2-6-3 &amp; 4+9+9\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}6 &amp; -11\\ -11 &amp; 22\end{bmatrix}\)</p>
+<p>and</p>
+<p>A<sup>T</sup>b = \(\begin{bmatrix}-1 &amp; 2 &amp; -1\\ 2 &amp; -3 &amp; 3\end{bmatrix}\) \(\begin{bmatrix}4\\ 2\\ 1\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-4+4-1\\ 8-6+3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-1\\ 5\end{bmatrix}\)</p>
+<p>Since we have definition of least square; the set of least square solutions of Ax = b coincides with the non-empty set of solutions of A<sup>T</sup>Ax = A<sup>T</sup>b</p>
+<p>therefore</p>
+<p>\(\hat{x} = (A^{T}A)^{-1} (A^{T}b)\)</p>
+<p>Here,</p>
+<p>|A<sup>T</sup>A| = \(\begin{bmatrix}6 &amp; -11\\ -11 &amp; 22\end{bmatrix}\) = -11 ≠ 0</p>
+<p>then</p>
+<p>(A<sup>T</sup>A)<sup>-1</sup> = \(\frac{1}{-11} \begin{bmatrix}22 &amp; 11\\ 11 &amp; 6\end{bmatrix}\)</p>
+<p>then equation(1) becomes</p>
+<p>\(\hat{x}\) = \(\frac{1}{-11} \begin{bmatrix}22 &amp; 11\\ 11 &amp; 6\end{bmatrix}\) \(\begin{bmatrix}-1\\ 5\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2 &amp; 1\\ 1 &amp; \frac{6}{11}\end{bmatrix}\) \(\begin{bmatrix}-1\\ 5\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-2-5\\ -1 + \frac{6}{11}\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}3\\ \frac{19}{11}\end{bmatrix}\)</p>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 5</h3>
+<div><p><p>Determine the column of the matrix A are linearly independent, where</p>
+<p>\(A = \begin{bmatrix}0 & 1 & 4\\ 1 & 2 & -1\\ 5 & 8 & 0\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given matrix is</p>
+<p>\(A = \begin{bmatrix}0 &amp; 1 &amp; 4\\ 1 &amp; 2 &amp; -1\\ 5 &amp; 8 &amp; 0\end{bmatrix}\)</p>
+<p>To check it independency, We have an augmented form</p>
+<p>\(\begin{bmatrix}0 &amp; 1 &amp; 4 &amp; : &amp; 0\\ 1 &amp; 2 &amp; -1 &amp; : &amp; 0\\ 5 &amp; 8 &amp; 0 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>1</sub> ↔ R<sub>3</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 2 &amp; -1 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 4 &amp; : &amp; 0\\ 5 &amp; 8 &amp; 0 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> &#8211; 5R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 2 &amp; -1 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 4 &amp; : &amp; 0\\ 0 &amp; -2 &amp; 5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> &#8211; 2R<sub>2</sub> ,  R<sub>3</sub> → R<sub>3</sub> + 2R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; -9 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 4 &amp; : &amp; 0\\ 0 &amp; 0 &amp; 3 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> / 3</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; -9 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 4 &amp; : &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> &#8211; 4R<sub>3</sub>,  R<sub>1</sub> → R<sub>1</sub> + 9R<sub>3</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; : &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Hence, It is linearly independent.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>When two column vector in R<sup>2</sup> are equal? Give an example. Computer u + 3v, u – 2v, where</p>
+<p>u = \(\begin{bmatrix}1\\ -3\\ 2\end{bmatrix}\), v = \(\begin{bmatrix}1\\ -1\\ 3\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Two column vectors in R<sup>2</sup> are equal if and only if their corresponding components are equal.</p>
+<p>In other words, if we have two-column vectors in R<sup>2</sup>:</p>
+<p>a = [a1, a2] b = [b1, b2]</p>
+<p>Then a and b are equal if a1 = b1 and a2 = b2.</p>
+<p>Note that if the order of the components is different, then the vectors are not equal, even if the values of the components are the same.</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Solution:</p>
+<p>Given,</p>
+<p>u = \(\begin{bmatrix}1\\ -3\\ 2\end{bmatrix}\)</p>
+<p>v = \(\begin{bmatrix}1\\ -1\\ 3\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>u + 3v = \(\begin{bmatrix}1\\ -3\\ 2\end{bmatrix}\) + 3 \(\begin{bmatrix}1\\ -1\\ 3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1\\ -1\\ 3\end{bmatrix}\) + \(\begin{bmatrix}3\\ -3\\ 9\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1+3\\ -1-3\\ 3+9\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}4\\ -4\\ 12\end{bmatrix}\)</p>
+<p>Again,</p>
+<p>u &#8211; 2v = \(\begin{bmatrix}1\\ -3\\ 2\end{bmatrix}\) &#8211; 2 \(\begin{bmatrix}1\\ -1\\ 3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1\\ -3\\ 2\end{bmatrix}\) &#8211; \(\begin{bmatrix}2\\ -2\\ 6\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1-2\\ -3-2\\ 2-6\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-1\\ -5\\ -4\end{bmatrix}\)</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Let A = \(\begin{bmatrix}0 & 1\\ -1 & 0\end{bmatrix}\) and define <strong>T:R<sup>2</sup> → R<sup>2</sup></strong> by T(x) = Ax, find the image under T of</p>
+<p>\(u = \begin{bmatrix}1\\ -3\end{bmatrix}\) and \(v = \begin{bmatrix}1\\ 5\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given</p>
+<p>A = \(\begin{bmatrix}0 &amp; 1\\ -1 &amp; 0\end{bmatrix}\)</p>
+<p>\(u = \begin{bmatrix}1\\ -3\end{bmatrix}\)</p>
+<p>\(v = \begin{bmatrix}1\\ 5\end{bmatrix}\)</p>
+<p>Now, We have to find image of T under u and v</p>
+<p>T(u) = Au = \(\begin{bmatrix}0 &amp; 1\\ -1 &amp; 0\end{bmatrix}\) \(\begin{bmatrix}1\\ -3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-3\\ -1\end{bmatrix}\)</p>
+<p>T(v) = Av = \(\begin{bmatrix}0 &amp; 1\\ -1 &amp; 0\end{bmatrix}\) \(\begin{bmatrix}1\\ 5\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}5\\ 1\end{bmatrix}\)</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Find the eigen value of \(\begin{bmatrix}3 & 6 & -8\\ 0 & 0 & 6\\ 0 & 0 & 2\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A = \(\begin{bmatrix}3 &amp; 6 &amp; -8\\ 0 &amp; 0 &amp; 6\\ 0 &amp; 0 &amp; 2\end{bmatrix}\)</p>
+<p>The characteristic Equation is</p>
+<p>|A – λI| = 0</p>
+<p>Now,</p>
+<p>A – λI = \(\begin{bmatrix}3 &amp; 6 &amp; -8\\ 0 &amp; 0 &amp; 6\\ 0 &amp; 0 &amp; 2\end{bmatrix}\) &#8211; λ \(\begin{bmatrix}1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0\\ 0 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}3 &amp; 6 &amp; -8\\ 0 &amp; 0 &amp; 6\\ 0 &amp; 0 &amp; 2\end{bmatrix}\) &#8211; \(\begin{bmatrix}λ &amp; 0 &amp; 0\\ 0 &amp; λ &amp; 0\\ 0 &amp; 0 &amp; λ\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}3-λ &amp; 6 &amp; -8\\ 0 &amp; -λ &amp; 6\\ 0 &amp; 0 &amp; 2-λ\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>|A – λI| = 0</p>
+<p>\(\begin{vmatrix}3-λ &amp; 6 &amp; -8\\ 0 &amp; -λ &amp; 6\\ 0 &amp; 0 &amp; 2-λ\end{vmatrix}\) = 0</p>
+<p>(3-λ) {-λ . (2-λ) &#8211; 0} = 0</p>
+<p>or, (3-λ) (-2λ + λ<sup>2</sup>) = 0</p>
+<p>or, (3-λ) (λ<sup>2</sup> &#8211; 2λ) = 0</p>
+<p>or, 3λ<sup>2</sup> &#8211; λ<sup>3</sup> &#8211; 6λ + 2λ<sup>2</sup> = 0</p>
+<p>or, λ<sup>3</sup> &#8211; 5λ<sup>2</sup> + 6λ = 0</p>
+<p>or λ (λ<sup>2</sup> &#8211; 5λ + 6) = 0</p>
+<p>or, λ = 0 and λ<sup>2</sup> &#8211; 5λ + 6 = 0</p>
+<p>Solving λ<sup>2</sup> &#8211; 5λ + 6 =0 , we get,</p>
+<p>λ = 2 and λ = 3</p>
+<p>The Eigen values are 0, 2 and 3.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define null space of a matrix A. Let</p>
+<p>A = \(\begin{bmatrix}-1 & -3 & 2\\ -5 & -9 & 1\end{bmatrix}\), and v = \(\begin{bmatrix}5\\ -3\\ -2\end{bmatrix}\)</p>
+<p>Then show that v is in the null A</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A be a m x n matrix. Then, the null space of A, denoted by nulA, is the set of all vectors x ∈ R<sup>n</sup>, such that Ax = 0 i.e.</p>
+<p>Nul A = {x ∈ R<sup>n</sup> : Ax = 0}</p>
+<p>Note: Nul A ≠ Φ</p>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>Given,</p>
+<p>A = \(\begin{bmatrix}-1 &amp; -3 &amp; 2\\ -5 &amp; -9 &amp; 1\end{bmatrix}\), and v = \(\begin{bmatrix}5\\ -3\\ -2\end{bmatrix}\)</p>
+<p>From the definition of Null Space, If v is the null of A then  AV must be zero.</p>
+<p>so, Av = 0</p>
+<p>= \(\begin{bmatrix}-1 &amp; -3 &amp; 2\\ -5 &amp; -9 &amp; 1\end{bmatrix}\)\(\begin{bmatrix}5\\ -3\\ -2\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-5+9-4\\ -25+27-2\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}0\\ 0\end{bmatrix}\)</p>
+<p>Since Av = 0. So, v is in the null A.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Verify that 1<sup>k</sup>, (-2)<sup>k</sup>, 3<sup>k</sup> are linearly independent signals.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>We have,</p>
+<p>u<sub>k</sub> = 1<sup>k</sup>, v<sub>k</sub> = (-2)<sup>k</sup>, w<sub>k</sub> = 3<sup>k</sup></p>
+<p>By castrati matrix we have</p>
+<p>\(\begin{bmatrix}u_k &amp; v_k &amp; w_k\\ u_{k+1} &amp; v_{k+1} &amp; w_{k+1}\\ u_{k+1} &amp; v_{k+1} &amp; w_{k+2}\end{bmatrix}\) = \(\begin{bmatrix}1^k &amp; (-2)^k &amp; 3^k\\ 1^{k+1} &amp; (-2)^{k+1} &amp; 3^{k+1}\\ 1^{k+2} &amp; (-2)^{k+2} &amp; 3^{k+2}\end{bmatrix}\)</p>
+<p>taking k = 0, we have,</p>
+<p>\(\begin{bmatrix}1 &amp; 1 &amp; 1\\ 1 &amp; -2 &amp; 3\\ 1 &amp; 4 &amp; 9\end{bmatrix}\)</p>
+<p>Apply R2 → R2 &#8211; R1 and R3 → R3 &#8211; R1</p>
+<p>~ \(\begin{bmatrix}1 &amp; 1 &amp; 1\\ 0 &amp; -3 &amp; 2\\ 0 &amp; 3 &amp; 8\end{bmatrix}\)</p>
+<p>Apply R3 → R3 + R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; 1 &amp; 1\\ 0 &amp; -3 &amp; 2\\ 0 &amp; 0 &amp; 10\end{bmatrix}\)</p>
+<p>Since, Each column is a pivot column which shows that the castrati is invertible for k = 0, 1<sup>k</sup>, (-2)<sup>k</sup>, 3<sup>k</sup> are linearly independent.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>If A = \(\begin{bmatrix}7 & 2\\ -4 & 1\end{bmatrix}\). find a formula for A<sup>n</sup>, where A = PDP<sup>-1</sup></p>
+<p>P = \(\begin{bmatrix}1 & 1\\ -1 & -2\end{bmatrix}\) and D = \(\begin{bmatrix}5 & 0\\ 0 & 3\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-45674" src="https://hamrocsit.com/wp-content/uploads/2021/12/WhatsApp-Image-2024-11-15-at-3.42.22-PM.jpeg" alt="" width="2544" height="1784"></p>
+<p><img loading="lazy" decoding="async" class="alignnone  wp-image-45673" src="https://hamrocsit.com/wp-content/uploads/2021/12/WhatsApp-Image-2024-11-15-at-3.42.23-PM.jpeg" alt="" width="326" height="212"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Find a unit vector v of u = (1, -2, 2, 3) in the direction of u.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To find the unit vector in the same direction as a vector, we divide it by its magnitude.</p>
+<p>The magnitude of v is \(\sqrt{1^2 + (-2)^2 + 2^2 + 3^2}\) = \(\sqrt{18}\)</p>
+<p>We will divide \(\vec{u}\) by magnitude of \(\vec{v}\). So,</p>
+<p>\(\left ( \frac{1}{\sqrt{18}}, \frac{-2}{\sqrt{18}}, \frac{-2}{\sqrt{18}}, \frac{3}{\sqrt{18}} \right )\)</p>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Prove that the two vectors u and v are perpendicular to each other if and only if the line through u is perpendicular bisector of the line segment from -u to v</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To prove that two vectors u and v are perpendicular to each other if and only if the line through u is the perpendicular bisector of the line segment from -u to v, we will break the proof into two parts: the &#8220;if&#8221; part and the &#8220;only if&#8221; part.</p>
+<p><strong>&#8220;If&#8221; Part:</strong> First, let&#8217;s prove that if u and v are perpendicular to each other, then the line through u is the perpendicular bisector of the line segment from -u to v.</p>
+<p>Assume that u and v are perpendicular vectors, which means their dot product is zero:</p>
+<p>u · v = 0</p>
+<p>Now, let&#8217;s consider the line through u. This line can be represented as the set of all points parameterized by t as follows:</p>
+<p>L(u) = {-u + tu | t ∈ ℝ}</p>
+<p>Here, -u is a point on the line (t = 0), and tu represents all points on the line as t varies.</p>
+<p>Now, let&#8217;s find the midpoint of the line segment from -u to v, which is the average of -u and v:</p>
+<p>Midpoint = (-u + v) / 2</p>
+<p>Now, we need to show that the line through u is perpendicular to this line segment. To do this, we will show that the direction vector of the line through u is orthogonal (perpendicular) to the vector from -u to v, which is v &#8211; (-u) = v + u.</p>
+<p>The direction vector of the line through u is u (since u parameterizes the line), and we want to show that u · (v + u) = 0. Let&#8217;s calculate the dot product:</p>
+<p>u · (v + u) = u · v + u · u</p>
+<p>We know that u · v = 0 (because u and v are perpendicular). Now, we need to determine whether u · u = 0. If u · u = 0, it means u is a zero vector, which would contradict the assumption that u and v are perpendicular. Therefore, u · u ≠ 0.</p>
+<p>Since u · u ≠ 0, we have:</p>
+<p>u · (v + u) ≠ 0</p>
+<p>This means that the line through u is not perpendicular to the line segment from -u to v when u and v are perpendicular to each other. Therefore, the &#8220;if&#8221; part is proved.</p>
+<p><strong>&#8220;Only If&#8221; Part:</strong> Now, let&#8217;s prove the &#8220;only if&#8221; part, which means if the line through u is the perpendicular bisector of the line segment from -u to v, then u and v are perpendicular.</p>
+<p>Assume that the line through u is the perpendicular bisector of the line segment from -u to v. This means that the midpoint of the line segment is on the line through u, and the line through u is perpendicular to the line segment.</p>
+<p>The midpoint of the line segment from -u to v is given as:</p>
+<p>Midpoint = (-u + v) / 2</p>
+<p>We are given that the line through u is perpendicular to this line segment. Therefore, the direction vector of the line through u, which is u, must be orthogonal (perpendicular) to the vector from -u to v, which is v &#8211; (-u) = v + u.</p>
+<p>So, u · (v + u) = 0</p>
+<p>Now, let&#8217;s expand the dot product:</p>
+<p>u · (v + u) = u · v + u · u</p>
+<p>Since u · (v + u) = 0, we have:</p>
+<p>u · v + u · u = 0</p>
+<p>Now, subtract u · u from both sides:</p>
+<p>u · v = -u · u</p>
+<p>If u · u ≠ 0, then we can divide both sides of the equation by u · u (which is a scalar), and we would have:</p>
+<p>(u · v) / (u · u) = -1</p>
+<p>However, this would mean that v is a scalar multiple of u (v = -u), which contradicts our assumption that the line through u is the perpendicular bisector of the line segment from -u to v. Therefore, the only way for this equation to hold is if u · u = 0.</p>
+<p>Since we&#8217;ve shown that u · u = 0, it means u is a zero vector:</p>
+<p>u · u = 0 ⟹ u = 0</p>
+<p>If u is the zero vector, then v · u = 0 for any vector v, which means that u and v are perpendicular.</p>
+<p>Therefore, the &#8220;only if&#8221; part is proved.</p>
+<p>Combining both parts, we have shown that two vectors u and v are perpendicular to each other if and only if the line through u is the perpendicular bisector of the line segment from -u to v.</p>
+</div>
+<h3>Question 14</h3>
+<div><p><p>Let an operation * be defined on Q<sup>+</sup> by \(a * b = \frac{ab}{2}\). Then show that Q<sup>+</sup> forms a group.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To show, an operation * be defined on Q<sup>+</sup> by \(a * b = \frac{ab}{2}\). We need to show that Q<sup>+</sup> forms a group.</p>
+<p>Now,</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Closure:<br />
+</strong>Let a, b ∈ Q<sup>+</sup><br />
+then,\(a * b = \frac{ab}{2}\) ∈ Q<sup>+</sup>  so it is closed</li>
+<li><strong>Associative:<br />
+</strong>Let a, b, c ∈ Z then<br />
+$$(a * b) * c = \frac{{ab}}{{2}} * c = \frac{{\frac{{ab}}{{2}} * c}}{{2}} = \frac{{abc}}{{4}}$$<br />
+$$a * (b * c) = a * \frac{{bc}}{{2}} = \frac{{a * \frac{{bc}}{{2}}}}{{2}} = \frac{{abc}}{{4}}$$<br />
+so, it is associative</li>
+<li><strong>Identity Element:<br />
+</strong>Here, 2 ∈ Q<sup>+<br />
+</sup>such that<br />
+$$a * 2 = \frac{{a.2}}{{2}} = a$$<br />
+$$2 * a = \frac{{2.a}}{{2}} = a$$<br />
+Identity Element = e = 2</li>
+<li><strong>Exsistence of inverse:<br />
+</strong>Here, ∀ a ∈ Q<sup>+<br />
+</sup>there exists  ∈ Q<sup>+ </sup>so,<br />
+\(a * \frac{{4}}{{a}}\) = \(\frac{{a * \frac{{4}}{{a}}}}{{2}}\) = 2 ∈ Q<sup>+</sup>= e<br />
+\(\frac{{4}}{{a}} * a\) = \(\frac{{\frac{{4}}{{a}}*a}}{{2}}\) = 2 ∈ Q<sup>+</sup>= e<br />
+so, inverse element = \(\frac{{4}}{{a}}\)</li>
+</ol>
+<p>Hence, we can say that an operation * be defined on Q<sup>+</sup> by \(a * b = \frac{ab}{2}\) forms a group for Q<sup>+</sup>.</p>
+</div>
+<h3>Question 15</h3>
+<div><p><p>Define ring and show that set of real numbers with respect to addition and multiplication operation is a ring.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Ring can be defined as algebraic structure (R, +, x) such that:</p><ul class="wp-block-list"><li>R is an abeian group under +</li><li>Associativity holds for multiplication</li><li>Multiplication is distributive from left as well as right.</li></ul><p></p></div>
+</body></html>

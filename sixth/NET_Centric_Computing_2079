@@ -1,0 +1,336 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NET Centric Question 2079 2079</title>
+    </head>
+    <body>
+        <h1>NET Centric Question 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is the purpose of web form? Write a program to demonstrate the concept of collection and generics.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The purpose of a web form is to enable users to submit data to a web server for processing. It allows users to enter information, make selections, and perform actions on a web page. The data submitted through a web form can be processed on the server-side to perform various operations, such as storing data in a database, sending emails, performing calculations, or generating dynamic content.</p>
+<p>Here&#8217;s an example program that demonstrates the concept of collections and generics in C#:</p>
+<p>using System;<br />
+using System.Collections.Generic;<br />
+class Program<br />
+{<br />
+static void Main()<br />
+{<br />
+// Create a list of strings<br />
+List&lt;string&gt; names = new List&lt;string&gt;();<br />
+// Add elements to the list<br />
+names.Add(&#8220;Ankit&#8221;);<br />
+names.Add(&#8220;Kushal&#8221;);<br />
+names.Add(&#8220;Suraj&#8221;);<br />
+// Display the elements<br />
+Console.WriteLine(&#8220;Names:&#8221;);<br />
+foreach (string name in names)<br />
+{<br />
+Console.WriteLine(name);<br />
+}<br />
+// Create a dictionary of string keys and int values<br />
+Dictionary&lt;string, int&gt; ages = new Dictionary&lt;string, int&gt;();<br />
+// Add key-value pairs to the dictionary<br />
+ages.Add(&#8220;Ankit&#8221;, 25);<br />
+ages.Add(&#8220;Kushal&#8221;, 30);<br />
+ages.Add(&#8220;Suraj&#8221;, 35);<br />
+// Display the elements<br />
+Console.WriteLine(&#8220;\nAges:&#8221;);<br />
+foreach (KeyValuePair&lt;string, int&gt; pair in ages)<br />
+{<br />
+Console.WriteLine(pair.Key + &#8220;: &#8221; + pair.Value);<br />
+}<br />
+}<br />
+}</p>
+<p>When you run this code, the output will be:</p>
+<p>Names:<br />
+Ankit<br />
+Kushal<br />
+Suraj<br />
+Ages:<br />
+Ankit: 25<br />
+Kushal: 30<br />
+Suraj: 35</p>
+<p>In this example, we create a list of strings called `names` using the `List&lt;string&gt;` type. We add elements to the list using the `Add` method and then iterate over the collection to display the names. Next, we create a dictionary called `ages` using the `Dictionary&lt;string, int&gt;` type, where the keys are strings representing names and the values are integers representing ages. We use the `Add` method to add key-value pairs to the dictionary, and then iterate over the collection to display the names and ages.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the uses of cookies. What types of vulnerabilities can occur in web application? Show the case of Cross-site Scripting attack.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cookies are small pieces of data that are stored on a user&#8217;s device by a website. They are sent by the web server to the browser and are stored locally on the user&#8217;s device. Cookies are commonly used to manage user sessions. When a user logs into a website, a session cookie is created, which allows the server to identify the user across different requests. This helps maintain the user&#8217;s authentication state and enables personalized experiences. Cookies can also be used for security purposes, such as storing session tokens or authentication-related information. By using secure and encrypted cookies, websites can enhance the security of user sessions and protect against unauthorized access. Vulnerabilities in .NET Core applications refer to weaknesses or flaws in the code, configuration, or architecture of applications developed using the .NET Core framework. These vulnerabilities can potentially be exploited by attackers to compromise the security or functionality of the application, leading to unauthorized access, data breaches, or other malicious activities. Cross site scripting attack, Sql injection attack, Cross-Site Request Forgery (CSRF) &amp; Open Redirect Attacks are one of the most common vulnerabilities.</p>
+<p>Cross-site Scripting (XSS) is a security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. Here&#8217;s a example of a non-persistent (or reflected) Cross-Site Scripting (XSS) attack in ASP.NET Core:</p>
+<p>Consider the following vulnerable ASP.NET Core Razor Page:</p>
+<p><span style="text-decoration: underline;"><strong>Search.cshtml</strong></span></p>
+<p>@page<br />
+@model SearchModel<br />
+&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Search Page&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;form method=&#8221;get&#8221;&gt;<br />
+&lt;input type=&#8221;text&#8221; name=&#8221;query&#8221; placeholder=&#8221;Search&#8230;&#8221;&gt;<br />
+&lt;input type=&#8221;submit&#8221; value=&#8221;Search&#8221;&gt;<br />
+&lt;/form&gt;<br />
+&lt;h3&gt;Search Results:&lt;/h3&gt;<br />
+&lt;p&gt;Your search results for &#8216;@Model.Query&#8217;:&lt;/p&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p><span style="text-decoration: underline;"><strong>Search.cshtml.cs</strong></span></p>
+<p>using Microsoft.AspNetCore.Mvc;<br />
+using Microsoft.AspNetCore.Mvc.RazorPages;<br />
+namespace XSSExample.Pages<br />
+{<br />
+public class SearchModel : PageModel<br />
+{<br />
+public string Query { get; set; }<br />
+public void OnGet(string query)<br />
+{<br />
+Query = query;<br />
+}<br />
+}<br />
+}</p>
+<p>In this example, a user can submit a search query through the form, and the value is displayed within a paragraph (`&lt;p&gt;`) tag without any encoding or sanitization. An attacker can exploit this vulnerability by crafting a malicious script within the search query. For instance, they can use the following query:</p>
+<p>&lt;script&gt;alert(&#8216;XSS Attack!&#8217;);&lt;/script&gt;</p>
+<p>If the user enters this query, the script will be executed when the search results page loads for other users, potentially leading to malicious actions. To prevent XSS attacks in ASP.NET Core, you should always perform proper input validation, encoding, and output escaping.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe any two hosting models for core application. Design a client side validation application using jquery for taking input data from student in Library Management System, assume your own assumptions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Two hosting models for ASP.NET Core applications are:</p>
+<p><strong>Self-Hosting Model</strong>:</p>
+<p>In the self-hosting model, the ASP.NET Core application is responsible for hosting itself using a lightweight web server. It does not rely on a separate web server like IIS. Instead, it uses the Kestrel web server, which is a cross-platform, open-source web server built into ASP.NET Core. This model allows the application to be self-contained and deployed as a standalone executable, making it suitable for scenarios where full IIS hosting is not required or available.</p>
+<p><strong>IIS Hosting Model:</strong> In the IIS hosting model, the ASP.NET Core application is hosted within Internet Information Services (IIS). It leverages the IIS web server to handle HTTP requests and manage the application&#8217;s lifecycle. The application runs as a module within the IIS worker process (w3wp.exe). This model provides benefits such as process isolation, enhanced scalability, and the ability to take<br />
+advantage of IIS features and configurations, such as load balancing, SSL termination, and URL rewriting.</p>
+<p>Here&#8217;s an example of a client-side validation application using jQuery for a Library Management System student registration form</p>
+<p><span style="text-decoration: underline;"><strong>StudentRegistration.cshtml</strong></span></p>
+<p>@page<br />
+@model StudentRegistrationModel<br />
+&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Library Management System &#8211; Student Registration&lt;/title&gt;<br />
+&lt;script src=&#8221;https://code.jquery.com/jquery-3.6.0.min.js&#8221;&gt;&lt;/script&gt;<br />
+&lt;script&gt;<br />
+$(document).ready(function() {<br />
+$(&#8220;#registrationForm&#8221;).submit(function(e) {<br />
+e.preventDefault(); // Prevent form submission<br />
+// Perform client-side validation<br />
+var name = $(&#8220;#name&#8221;).val();<br />
+var rollNumber = $(&#8220;#rollNumber&#8221;).val();<br />
+if (name === &#8220;&#8221;) {<br />
+alert(&#8220;Please enter your name&#8221;);<br />
+return;<br />
+}<br />
+if (rollNumber === &#8220;&#8221;) {<br />
+alert(&#8220;Please enter your roll number&#8221;);<br />
+return;<br />
+}<br />
+// If all validations pass, submit the form to the server<br />
+$(&#8220;#registrationForm&#8221;).unbind(&#8220;submit&#8221;).submit();<br />
+});<br />
+});<br />
+&lt;/script&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;h1&gt;Student Registration&lt;/h1&gt;<br />
+&lt;form id=&#8221;registrationForm&#8221; method=&#8221;post&#8221;&gt;<br />
+&lt;label for=&#8221;name&#8221;&gt;Name:&lt;/label&gt;<br />
+&lt;input type=&#8221;text&#8221; id=&#8221;name&#8221; name=&#8221;Name&#8221; /&gt;<br />
+&lt;label for=&#8221;rollNumber&#8221;&gt;Roll Number:&lt;/label&gt;<br />
+&lt;input type=&#8221;text&#8221; id=&#8221;rollNumber&#8221; name=&#8221;RollNumber&#8221; /&gt;<br />
+&lt;input type=&#8221;submit&#8221; value=&#8221;Register&#8221; /&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p><span style="text-decoration: underline;"><strong>StudentRegistration.cshtml.cs</strong></span></p>
+<p>using Microsoft.AspNetCore.Mvc;<br />
+using Microsoft.AspNetCore.Mvc.RazorPages;<br />
+namespace LibraryManagement.Pages<br />
+{<br />
+public class StudentRegistrationModel : PageModel<br />
+{<br />
+public void OnGet()<br />
+{<br />
+}<br />
+}<br />
+}</p>
+<p>In this example, we have an ASP.NET Core Razor Page for student registration. The form includes name and roll number fields. The jQuery code performs client-side validation when the form is submitted. It checks if the name and roll number fields are filled in. If any of the validations fail, an alert message is<br />
+displayed. If all validations pass, the form is submitted to the server.</p>
+</div>
+<h2>Group B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>How to you assign roles, claims and policies? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>1. Roles:</strong></p>
+<p>Roles represent groups or categories of users with specific privileges or permissions. Suppose you have a simple web application with two roles: Admin and User. You can assign roles to users during registration or in the user management section.</p>
+<p>[Authorize(Roles = &#8220;Admin&#8221;)]<br />
+public IActionResult AdminDashboard()<br />
+{<br />
+// Code for the admin dashboard<br />
+}</p>
+<p>In this example, the `AdminDashboard` action is only accessible to users in the &#8220;Admin&#8221; role. Users in the &#8220;User&#8221; role would be denied access to this action.</p>
+<p><strong>2. Claims:</strong></p>
+<p>Claims are pieces of information about a user, such as their username, email, or any custom information. Let&#8217;s consider a scenario where you have an application with a claim called &#8220;Age&#8221; that represents the age of a user. You can assign this claim to a user during authentication or based on their data.</p>
+<p>services.AddAuthorization(options =&gt;<br />
+{<br />
+options.AddPolicy(&#8220;AdultOnly&#8221;, policy =&gt;<br />
+policy.RequireClaim(&#8220;Age&#8221;, &#8220;18&#8221;, &#8220;19&#8221;, &#8220;20&#8221;));<br />
+});</p>
+<p>In this example, the &#8220;AdultOnly&#8221; policy requires the user to have an &#8220;Age&#8221; claim of &#8220;18&#8221;, &#8220;19&#8221;, or &#8220;20&#8221; to access the associated resources or actions.</p>
+<p><strong>3. Policies:</strong></p>
+<p>Policies are a flexible way to define authorization rules based on various conditions, such as roles, claims, or custom requirements. Suppose you have a policy that allows access to certain actions only during business hours.</p>
+<p>public class BusinessHoursRequirement : IAuthorizationRequirement<br />
+{<br />
+// Custom requirement logic<br />
+}<br />
+public class BusinessHoursHandler : AuthorizationHandler&lt;BusinessHoursRequirement&gt;<br />
+{<br />
+protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, BusinessHoursRequirementrequirement)<br />
+{<br />
+// Check if it&#8217;s business hours and succeed or fail the requirement<br />
+}<br />
+}</p>
+<p>services.AddAuthorization(options =&gt;<br />
+{<br />
+options.AddPolicy(&#8220;BusinessHoursPolicy&#8221;, policy =&gt;<br />
+policy.Requirements.Add(new BusinessHoursRequirement()));<br />
+});</p>
+<p>In this example, the &#8220;BusinessHoursPolicy&#8221; requires the custom requirement &#8220;BusinessHoursRequirement&#8221; to be satisfied. The custom handler &#8220;BusinessHoursHandler&#8221; determines whether the requirement is met based on the current time.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What types of problems lead to SQL injection attack? Discuss any two types of ASP.Net host models.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SQL injection attacks occur due to vulnerabilities in the way an application handles user input and constructs SQL queries. The following problems can lead to SQL injection attacks:</p>
+<p>&#8211; If an application fails to validate and sanitize user input before using it in SQL queries, it becomes vulnerable to SQL injection attacks.<br />
+&#8211; If the application does not properly sanitize or escape special characters in the input, an attacker can manipulate the query structure by injecting SQL code.<br />
+&#8211; If an application does not enforce appropriate access controls or privilege separation, an attacker can exploit SQL injection vulnerabilities to gain unauthorized access to sensitive data or perform unauthorized actions on the database.</p>
+<p>Two hosting models for ASP.NET Core applications are:</p>
+<p><strong>Self-Hosting Model:</strong> In the self-hosting model, the ASP.NET Core application is responsible for hosting itself using a lightweight web server. It does not rely on a separate web server like IIS. Instead, it uses the Kestrel web server, which is a cross-platform, open-source web server built into ASP.NET Core. This model allows the application to be self-contained and deployed as a standalone executable, making it suitable for scenarios where full IIS hosting is not required or available.</p>
+<p><strong>IIS Hosting Model:</strong> In the IIS hosting model, the ASP.NET Core application is hosted within Internet Information Services (IIS). It leverages the IIS web server to handle HTTP requests and manage the application&#8217;s lifecycle. The application runs as a module within the IIS worker process (w3wp.exe). This model provides benefits such as process isolation, enhanced scalability, and the ability to take advantage of IIS features and configurations, such as load balancing, SSL termination, and URL rewriting.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What does single page application means? Discuss about server side strategies.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong> A Single Page Application (SPA)</strong> is a web application that operates within a single web page, where the content dynamically updates without requiring a full page reload. In a SPA, the initial HTML, CSS, and JavaScript are loaded once, and subsequent interactions or data updates are handled through JavaScript, typically using APIs to retrieve or send data asynchronously. SPAs provide a more responsive and interactive user experience similar to that of a desktop application. They eliminate the need for full-page reloads, resulting in faster and smoother transitions between different views or components within the application.</p>
+<p>Server-side strategies complement SPAs by handling tasks that are better suited for server-side processing or where security and privacy are concerns. Some server-side strategies commonly used in conjunction with SPAs include:</p>
+<p><strong>1. Authentication and Authorization:</strong> Server-side logic is responsible for managing user authentication, validating access tokens or cookies, and enforcing authorization rules. This ensures secure access to protected resources and prevents unauthorized access to sensitive data.</p>
+<p><strong>2. Data Validation and Business Logic:</strong> While client-side validation is crucial for a smooth user experience, serverside validation is essential for enforcing data integrity, ensuring consistency, and applying complex business rules that cannot be trusted to client-side code alone.</p>
+<p><strong>3. Data Persistence:</strong> Server-side components handle interactions with the database or other data sources, ensuring data consistency, data integrity, and managing transactions. They handle operations such as CRUD (Create, Read, Update, Delete) and complex database queries.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write an ADO. Net application to read the data from the existing table MOVIE(id, name, genre), where genre is “comedy”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>using System;<br />
+using System.Data;<br />
+using System.Data.SqlClient;<br />
+namespace MovieApp<br />
+{<br />
+class Program<br />
+{<br />
+static void Main(string[] args)<br />
+{<br />
+string connectionString = &#8220;Your_Connection_String&#8221;; // Replace with your actual connection string<br />
+try<br />
+{<br />
+using (SqlConnection connection = new SqlConnection(connectionString))<br />
+{<br />
+connection.Open();<br />
+string query = &#8220;SELECT * FROM MOVIE WHERE genre = &#8216;comedy'&#8221;;<br />
+SqlCommand command = new SqlCommand(query, connection);<br />
+SqlDataReader reader = command.ExecuteReader();<br />
+while (reader.Read())<br />
+{<br />
+int id = Convert.ToInt32(reader[&#8220;id&#8221;]);<br />
+string name = reader[&#8220;name&#8221;].ToString();<br />
+string genre = reader[&#8220;genre&#8221;].ToString();<br />
+Console.WriteLine($&#8221;ID: {id}, Name: {name}, Genre: {genre}&#8221;);<br />
+}<br />
+reader.Close();<br />
+}<br />
+}<br />
+catch (Exception ex)<br />
+{<br />
+Console.WriteLine(&#8220;Error: &#8221; + ex.Message);<br />
+}<br />
+Console.ReadKey();<br />
+}<br />
+}<br />
+}</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between .NET and ASP.NET frameworks. How do you test the .NET core applications?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>.NET</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>ASP.NET</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">.NET is a software development framework aimed to develop Windows, Web, and Server-based applications.</td>
+<td style="width: 50%; height: 24px;">ASP.NET is a main tool that is present in the .NET framework and aimed at simplifying the creation of dynamic webpages.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Server-side and client-side application development can be done using the .NET framework.</td>
+<td style="width: 50%; height: 24px;">We can develop server-side web applications using ASP.NET as it is integrated with .NET framework.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Mainly used to make business applications on the Windows platform.</td>
+<td style="width: 50%; height: 24px;">Mainly used to make dynamic web pages and websites using the .NET languages.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Its programming can be done using any language with CIL (Common Intermediate Language) compiler.</td>
+<td style="width: 50%; height: 24px;">Its programming can be done using any .NET compliant language.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Testing .NET Core applications using the .NET CLI is a straightforward process. You can open a command prompt or terminal and navigate to your application&#8217;s root directory. From there, you run the `dotnet test` command, which automatically discovers and executes the unit tests in your application&#8217;s test project(s). The command displays the test results, including any failures or diagnostic messages, directly in the console.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define HTTP. Explain the MVC pattern.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>HTTP (Hypertext Transfer Protocol) is an application-layer protocol used for communication between clients<br />
+(web browsers) and servers. It is the foundation of data communication on the World Wide Web. HTTP defines how data is formatted and transmitted, and it specifies the actions that clients and servers should take to send and receive requests and responses. The MVC (Model-View-Controller) pattern is a software architectural pattern commonly used in web development.</p>
+<p><strong>1. Model:</strong></p>
+<p>The Model represents the data and business logic of the application. It encapsulates the data, handles data validation and manipulation, and interacts with the database or external data sources. The Model is responsible for retrieving, storing, and manipulating the data required by the application.</p>
+<p><strong>2. View:</strong></p>
+<p>The View is responsible for presenting the user interface to the users. It defines how the data from the Model should be displayed and provides the necessary user interaction elements. The View is typically implemented using HTML, CSS, and JavaScript in web applications.</p>
+<p><strong>3. Controller: </strong></p>
+<p>The Controller acts as an intermediary between the Model and the View. It receives user requests from the View, processes the requests, and interacts with the Model to retrieve or update the data. The Controller then updates the View with the updated data or triggers appropriate actions based on user input. It handles the logic and flow of the application.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What does dependency injection and IOC container means? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Dependency Injection (DI):</strong></p>
+<p>Dependency Injection is a design pattern that allows the dependencies of a class to be provided from the outside rather than being created within the class itself. It helps to remove the direct coupling between classes and makes them more flexible, maintainable, and testable. Instead of creating dependencies inside a class, they are &#8220;injected&#8221; from external sources. In DI, the dependencies are typically passed to a class through constructor parameters or setter methods. The class doesn&#8217;t need to know how to create or obtain its dependencies but relies on an external entity to provide them. This improves code reusability, and separation of concerns, and makes it easier to replace or modify dependencies without modifying the class itself.</p>
+<p><strong>Inversion of Control (IoC) Container:</strong><br />
+An Inversion of Control (IoC) container is a software component or framework that implements the DI pattern and manages the creation and resolution of dependencies. It acts as a centralized container that holds the definitions of dependencies and resolves them when needed. IoC containers manage the lifecycle of objects, handle dependency resolution, and provide automatic dependency injection. They simplify the configuration and management of dependencies in an application by automatically wiring up the required dependencies based on predefined rules or configurations. IoC containers typically use reflection or configuration files to scan and analyze the application&#8217;s dependencies, construct objects, and inject the required dependencies automatically. Some popular IoC containers in the .NET ecosystem include Microsoft.Extensions.DependencyInjection, Autofac, and Unity.</p>
+<p>In summary, Dependency Injection is a design pattern that allows dependencies to be provided from external sources, while an Inversion of Control container is a framework or component that manages the creation and injection of dependencies. Together, they promote loose coupling, and modular design, and make software more flexible and maintainable.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is tag helper? Discuss about razor syntax with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Tag Helpers are a feature in ASP.NET Core that simplify the process of generating HTML elements and attributes in Razor views. They provide a more natural and readable way to create HTML markup by embedding server-side code within HTML tags. Tag Helpers enable a more intuitive and maintainable approach to generate dynamic content and interact with server-side functionality.<br />
+Razor syntax is a combination of HTML markup and server-side code that allows for dynamic content generation and server-side rendering in ASP.NET Core. It provides a concise and expressive way to mix static HTML with server-side logic.</p>
+<p>Here&#8217;s a simple example that demonstrates the usage of Razor syntax in an ASP.NET Core application:</p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Razor Syntax Example&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;h1&gt;Welcome to the Razor Syntax Example!&lt;/h1&gt;<br />
+&lt;p&gt;The current date and time is: @DateTime.Now&lt;/p&gt;<br />
+&lt;h2&gt;Names List:&lt;/h2&gt;<br />
+&lt;ul&gt;<br />
+@foreach (var name in Model.Names)<br />
+{<br />
+&lt;li&gt;@name&lt;/li&gt;<br />
+}<br />
+&lt;/ul&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>In this example, we have an HTML view that incorporates Razor syntax.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):</p>
+<p>1. Lambda Expression</p>
+<p>2. Containerization using Docker</p>
+<p>3. Delegates and Events</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>1. Lambda Expression:</strong></p>
+<p>A Lambda expression is a concise way to define an anonymous function in programming. It allows you to write a block of code inline, without explicitly defining a separate method. Lambda expressions are often used in<br />
+functional programming and provide a more concise and readable syntax. They are especially useful when working with collections, LINQ queries, or when passing functions as parameters.</p>
+<p>example:<br />
+int result = numbers.Sum(x =&gt; x * x);</p>
+<p>In this example, the Lambda expression `x =&gt; x * x` represents a function that squares each element in the `numbers` collection and returns the sum of the squared values. It provides a shorter and more expressive way to define the operation.</p>
+<p><strong>2. Containerization using Docker:</strong></p>
+<p>Containerization is a method of packaging and running applications in a lightweight, isolated environment called a container. Docker is a popular containerization platform that allows you to create, deploy, and manage containers. Containers provide a consistent and portable environment for applications, ensuring that they can run reliably across different systems. Docker enables you to package an application along with its dependencies and configuration into a single container image. This image can be deployed on any system that has Docker installed, providing a consistent runtime environment. Containers offer benefits such as easy scalability, efficient resource utilization, and isolation of applications from the underlying infrastructure.<br />
+By using Docker, you can simplify the deployment process, improve application portability, and enable efficient utilization of resources in a consistent manner.</p>
+<p><strong>3. Delegates and Events:</strong></p>
+<p>Delegates and Events are concepts used in event-driven programming. A delegate is a type that represents a reference to a method. It allows you to treat methods as first-class objects, enabling you to pass methods as parameters, store them in variables, and invoke them dynamically. Delegates provide a way to define and work with callback functions. Events, on the other hand, are a language construct built on top of delegates. They provide a way to handle and respond to specific occurrences or actions, such as user interactions or system events. Events allow you to define and subscribe to event handlers, which are methods that are executed when the event is triggered.</p>
+<p>For example, in C#, you can define an event like this:<br />
+public event EventHandler ButtonClicked;</p>
+<p>This event indicates that a button click action can be subscribed to. Other parts of the code can then subscribe to this event and provide the corresponding event handler method that will be executed when the button is clicked.</p>
+</div>
+</body></html>

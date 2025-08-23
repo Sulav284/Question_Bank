@@ -1,0 +1,402 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>Math Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 80</p>
+        <p><strong>Pass Marks:</strong> 32</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A (3 x 10 = 30): Attempt any THREE questions.</h2><h3>Question 1</h3>
+<div><p><p>When a system of linear equation is consistent and inconsistent? Give an example for each. Test the consistency and solve the system of equations: x – 2y = 5, -x + y + 5z = 2, y + z = 0</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given</p>
+<p>x &#8211; 2y = 5   &#8230;&#8230;&#8230;&#8230;..(i)</p>
+<p>-x + y + 5z = 2 &#8230;&#8230;&#8230;&#8230;..(ii)</p>
+<p>y + z = 0 &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;..(iii)</p>
+<p>The given equations can be written in the form</p>
+<p>Ax = b</p>
+<p>Where</p>
+<p>A = \(\begin{bmatrix}1 &amp; -2 &amp; 0\\-1 &amp; 1 &amp; 5\\ 0 &amp; 1 &amp; 1\end{bmatrix}\), x = \(\begin{bmatrix}x\\ y\\ z\end{bmatrix}\), b = \(\begin{bmatrix}5\\ 2\\ 0\end{bmatrix}\)</p>
+<p>Its augmented form is [A:b]</p>
+<p>~ [A:b]</p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; 0 &amp; : &amp; 5\\-1 &amp; 1 &amp; 5 &amp; : &amp; 2\\ 0 &amp; 1 &amp; 1 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → R<sub>2</sub> + R<sub>1</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; 0 &amp; : &amp; 5\\0 &amp; -1 &amp; 5 &amp; : &amp; 7\\ 0 &amp; 1 &amp; 1 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>2</sub> → (-1) R<sub>2</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; 0 &amp; : &amp; 5\\0 &amp; 1 &amp; -5 &amp; : &amp; -7\\ 0 &amp; 1 &amp; 1 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> + 2R<sub>2</sub> , R<sub>3</sub> → R<sub>3</sub> &#8211; R<sub>2</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; -10 &amp; : &amp; -9\\0 &amp; 1 &amp; -5 &amp; : &amp; -7\\ 0 &amp; 0 &amp; 6 &amp; : &amp; 7\end{bmatrix}\)</p>
+<p>\(R_3 \to \frac{1}{6} R_3\)</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; -10 &amp; : &amp; -9\\0 &amp; 1 &amp; -5 &amp; : &amp; -7\\ 0 &amp; 0 &amp; 1 &amp; : &amp; \frac{7}{6}\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> + 10R<sub>3</sub> ,  R<sub>2</sub> → R<sub>2</sub> + 5R<sub>3</sub></p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; \frac{8}{3}\\0 &amp; 1 &amp; 0 &amp; : &amp; \frac{-7}{6}\\ 0 &amp; 0 &amp; 1 &amp; : &amp; \frac{7}{6}\end{bmatrix}\)</p>
+<p>From the above, We can say that</p>
+<p>x = \(\begin{bmatrix}x\\ y\\ z\end{bmatrix}\) = \(\begin{bmatrix}\frac{8}{3}\\ \frac{-7}{6}\\ \frac{7}{6}\end{bmatrix}\)</p>
+<p>This is the required solution.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is the condition of a matrix to have an inverse? Find the inverse of the matrix \(A = \begin{bmatrix} 5 & 1 & 2\\ 1 & 0 & 3\\ 4 & -3 & 8 \end{bmatrix}\)  If it exists.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The condition of a matrix to have an inverse is If A is an invertible matrix then there is a matrix C such that</p>
+<p style="text-align: center;">AC = I = CA</p>
+<p>In such case, C is called inverse of A and write as C = A<sup>-1</sup></p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Given</p>
+<p>A = \(\begin{bmatrix}1 &amp; -2 &amp; -1\\ -1 &amp; 5 &amp; 6\\ 5 &amp; -4 &amp; 5\end{bmatrix}\)</p>
+<p>~ [A:I]</p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ -1 &amp; 5 &amp; 6 &amp; : &amp; 0 &amp; 1 &amp; 0\\ 5 &amp; -4 &amp; 5 &amp; : &amp; 0 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>Applying Reduced Echelon Form</p>
+<p>R<sub>2</sub> → R<sub>2</sub> + R<sub>1</sub>,   R<sub>3</sub> → R<sub>3</sub> &#8211; 5R<sub>1</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 3 &amp; 5 &amp; : &amp; 1 &amp; 1 &amp; 0\\ 0 &amp; 6 &amp; 10 &amp; : &amp; -5 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>\(R_2 \to \frac{1}{3} R_2\)</p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; \frac{5}{3} &amp; : &amp; \frac{1}{3} &amp; \frac{1}{3} &amp; 0\\ 0 &amp; 6 &amp; 10 &amp; : &amp; -5 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> + 2R<sub>2</sub> ,   R<sub>3</sub> → R<sub>3</sub> &#8211; 6R<sub>2</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; 0 &amp; \frac{7}{3} &amp; : &amp; \frac{5}{3} &amp; \frac{2}{3} &amp; 0\\ 0 &amp; 1 &amp; \frac{5}{3} &amp; : &amp; \frac{1}{3} &amp; \frac{1}{3} &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; : &amp; -7 &amp; -2 &amp; 1\end{bmatrix}\)</p>
+<p>To have inverse, We should have one pivot element in each row but in above matrix R<sub>3</sub> doesn&#8217;t have pivot element. So,  Inverse of Matrix doesn&#8217;t exists.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Find the least-square solution of Ax=b for \(A = \begin{bmatrix} 1 & -6\\ 1 & -2\\ 1 & 1\\ 1 & 7 \end{bmatrix}\) and \(b = \begin{bmatrix}-1 \\ 2\\ 1\\ 6 \end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here,</p>
+<p>A = \(\begin{bmatrix}1 &amp; -6\\ 1 &amp; -2\\ 1 &amp; 1\\ 1 &amp; 7\end{bmatrix}\) and b = \(\begin{bmatrix}-1\\ 2\\ 1\\ 6\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>\(\hat{x} = (A^{T}A)^{-1} (A^{T}b)\)  &#8212;&#8212;&#8212;&#8211; (1)</p>
+<p>A<sup>T</sup> = \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\\ -6 &amp; -2 &amp; 1 &amp; 7\end{bmatrix}\)</p>
+<p>A<sup>T</sup>A = \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\\ -6 &amp; -2 &amp; 1 &amp; 7\end{bmatrix}\)\(\begin{bmatrix}1 &amp; -6\\ 1 &amp; -2\\ 1 &amp; 1\\ 1 &amp; 7\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1+1+1+1 &amp; -6-2+1+7\\ -6-2+1+7 &amp; 36+4+1+49\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}4 &amp; 0\\ 0 &amp; 90\end{bmatrix}\)</p>
+<p>and</p>
+<p>A<sup>T</sup>b = \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\\ -6 &amp; -2 &amp; 1 &amp; 7\end{bmatrix}\)\(\begin{bmatrix}-1\\ 2\\ 1\\ 6\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-1+2+1+6\\ 6-4+1+42\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}8\\ 45\end{bmatrix}\)</p>
+<p>Since we have definition of least square; the set of least square solutions of Ax = b coincides with the non-empty set of solutions of A<sup>T</sup>Ax = A<sup>T</sup>b</p>
+<p>therefore</p>
+<p>\(\hat{x} = (A^{T}A)^{-1} (A^{T}b)\)</p>
+<p>Here,</p>
+<p>|A<sup>T</sup>A| = \(\begin{bmatrix}4 &amp; 0\\ 0 &amp; 90\end{bmatrix}\) = 360 ≠ 0</p>
+<p>then</p>
+<p>(A<sup>T</sup>A)<sup>-1</sup> = \(\frac{1}{360} \begin{bmatrix}90 &amp; 0\\ 0 &amp; 4\end{bmatrix}\)</p>
+<p>then equation(1) becomes</p>
+<p>\(\hat{x}\) = \(\frac{1}{360} \begin{bmatrix}90 &amp; 0\\ 0 &amp; 4\end{bmatrix}\begin{bmatrix}8\\ 45\end{bmatrix}\)</p>
+<p>= \(\frac{1}{360}\begin{bmatrix}720+0\\ 0+180\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2\\ \frac{1}{2}\end{bmatrix}\)</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>Let T is a linear transformation. Find the standard matrix of T such that</p>
+<ol>
+<li><strong>T:R<sup>2</sup> → R<sup>4</sup></strong> by T(e1) = (3, 1, 3, 1) and T(e<sub>2</sub>) = (-5, 2, 0, 0) where e<sub>1</sub> = (1, 0) and e<sub>2</sub> = (0, 1);</li>
+<li><strong>T:R<sup>2</sup> → R<sup>4</sup></strong> rotates point as the origin through \(\frac{3\pi}{4}\) radians counter clockwise.</li>
+<li><strong>T:R<sup>2</sup> → R<sup>4</sup></strong> Is a vertical shear transformation that maps e<sub>1</sub> into e<sub>1</sub>-2e<sub>2</sub> but leaves vector e<sub>2</sub> unchanged.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We know,</p>
+<p>Standard matrix (A) = [T(e<sub>1</sub>)   T(e<sub>2</sub>)  T(e<sub>3</sub>)   &#8230;&#8230;&#8230;&#8230;]</p>
+<p>for this</p>
+<p>A = [T(e<sub>1</sub>)   T(e<sub>2</sub>)]</p>
+<p>By Question</p>
+<p>T(e<sub>1</sub>) = (3, 1, 3, 1) = \(\begin{bmatrix}3\\ 1\\ 3\\ 1\end{bmatrix}\)</p>
+<p>T(e<sub>2</sub>) = (-5, 2, 0, 0) = \(\begin{bmatrix}-5\\ 2\\ 0\\ 0\end{bmatrix}\)</p>
+<p>\(\therefore A = \begin{bmatrix}3 &amp; -5\\ 1 &amp; 2\\ 3 &amp; 0\\ 1 &amp; 0\end{bmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Question (b):</strong></span></p>
+<p>T:R2 → R4 rotates points about the origin through 3π/4 radians counter clockwise.</p>
+<p>To find the standard matrix of T, we use the fact that rotating a vector in R2 through an angle θ counter clockwise is given by the matrix:</p>
+<p>\(\begin{bmatrix} cos(θ) &amp; -sin(θ)\\ sin(θ) &amp; cos(θ) \end{bmatrix}\)</p>
+<p>In this case, θ = 3π/4, so the matrix for rotating through this angle is:</p>
+<p>= \(\begin{bmatrix} cos(\frac{3\pi}{4}) &amp; -sin(\frac{3\pi}{4})\\ sin(\frac{3\pi}{4}) &amp; cos(\frac{3\pi}{4}) \end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}\frac{-1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}\\\frac{-1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}\end{bmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Answer (c):</strong></span></p>
+<p>T:R2 → R4 is a vertical shear transformation that maps e1 into e1-2e2 but leaves vector e2 unchanged.</p>
+<p>To find the standard matrix of T, we note that a vertical shear transformation that maps e1 into e1-2e2 can be represented by the matrix:</p>
+<p>\(\begin{bmatrix}1 &amp; -2\\ 0 &amp; 1\end{bmatrix}\)</p>
+<p>Since T leaves vector e2 unchanged, we can append a row of zeros to the bottom of the matrix to get a 4&#215;2 matrix:</p>
+<p>\(\begin{bmatrix}1 &amp; -2\\ 0 &amp; 1\\ 0 &amp; 0\\ 0 &amp; 0\end{bmatrix}\)</p>
+<p>So the standard matrix of T is:</p>
+<p>T = \(\begin{bmatrix}1 &amp; -2\\ 0 &amp; 1\\ 0 &amp; 0\\ 0 &amp; 0\end{bmatrix}\)</p>
+</div>
+<h2>Group B (10 x 5 = 50): Attempt any TEN questions.</h2><h3>Question 5</h3>
+<div><p><p>For what value of h will y be in span {v<sub>1</sub> , v<sub>2</sub>, v<sub>3</sub>} if \(v_1 = \begin{bmatrix}1\\ -1\\ -2\end{bmatrix}\), \(v_2 = \begin{bmatrix}5\\ -4\\ -7\end{bmatrix}\), \(v_3 = \begin{bmatrix}-3\\ 1\\ 0\end{bmatrix}\) and \(y = \begin{bmatrix}-4\\ 3\\ h\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If y is in span {v1, v2, v3} then it can be written as</p>
+<p style="text-align: center;">x<sub>1</sub>v<sub>1</sub> + x<sub>2</sub>v<sub>2</sub> + x<sub>3</sub>v<sub>3</sub> = y</p>
+<p>where x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> are scalar</p>
+<p>The augmented matrix is</p>
+<p>\(\begin{bmatrix}1 &amp; 5 &amp; -3 &amp; : &amp; -4\\ -1 &amp; -4 &amp; 1 &amp; : &amp; 3\\ -2 &amp; -7 &amp; 0 &amp; : &amp; h\end{bmatrix}\)</p>
+<p>Reducing to Echelong form</p>
+<p>Apply R2 → R2 + R1,   R3 → R3 + 2R1</p>
+<p>\(~\begin{bmatrix}1 &amp; 5 &amp; -3 &amp; : &amp; -4\\ 0 &amp; 1 &amp; -2 &amp; : &amp; -1\\ 0 &amp; 3 &amp; -6 &amp; : &amp; h-8\end{bmatrix}\)</p>
+<p>Apply R3 → R3 &#8211; 3R2</p>
+<p>\(~\begin{bmatrix}1 &amp; 5 &amp; -3 &amp; : &amp; -4\\ 0 &amp; 1 &amp; -2 &amp; : &amp; -1\\ 0 &amp; 0 &amp; 0 &amp; : &amp; h-8 + 3\end{bmatrix}\)</p>
+<p>\(~\begin{bmatrix}1 &amp; 5 &amp; -3 &amp; : &amp; -4\\ 0 &amp; 1 &amp; -2 &amp; : &amp; -1\\ 0 &amp; 0 &amp; 0 &amp; : &amp; h-5\end{bmatrix}\)</p>
+<p>It will be consistent when h-5 = 0</p>
+<p>Therefore, h =5</p>
+<p>Hence, y be in span {v1. v2. v3} when h = 5</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Let us define a linear transformation <strong>T:R<sup>2</sup> → R<sup>2 </sup></strong>by T(x) = \(\begin{bmatrix}0 & -1\\ 1 & 0\end{bmatrix}\begin{bmatrix}x_1\\ x_2\end{bmatrix}\) = \(\begin{bmatrix}-x_2\\ x_1\end{bmatrix}\). Find the image under T of \(u = \begin{bmatrix}4\\ 1\end{bmatrix}\), \(v = \begin{bmatrix}2\\ 3\end{bmatrix}\) and u + v = \(\begin{bmatrix}6\\ 4\end{bmatrix}\)</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here, Given transformation T:R<sup>2</sup>→R<sup>2</sup> defined by</p>
+<p>T(X) = \(\begin{bmatrix}0 &amp; 1\\ 1 &amp; 0\end{bmatrix}\begin{bmatrix}x1\\ x2\end{bmatrix}\)</p>
+<p>A = \(\begin{bmatrix}0 &amp; 1\\ 1 &amp; 0\end{bmatrix}\) is standard matrix of transforation.</p>
+<p>Now,</p>
+<p>T(U) = AU</p>
+<p>= \(\begin{bmatrix}0 &amp; 1\\ 1 &amp; 0\end{bmatrix}\begin{bmatrix}4\\ 1\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}-1\\ 4\end{bmatrix}\)</p>
+<p>Also, T(v) = Av</p>
+<p>= \(\begin{bmatrix}0 &amp; -1\\ 1 &amp; 0\end{bmatrix}\begin{bmatrix}2\\ 3\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}-3\\ 2\end{bmatrix}\)</p>
+<p>Also</p>
+<p>T(u+v) = A(u+v)</p>
+<p>= \(\begin{bmatrix}0 &amp; -1\\ 1 &amp; 0\end{bmatrix}\begin{bmatrix}6\\ 4\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}-4\\ 6\end{bmatrix}\)</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Let \(A = \begin{bmatrix}2 & 5\\ -3 & 1\end{bmatrix}\) and \(B = \begin{bmatrix}4 & -5\\ 3 & k\end{bmatrix}\). Determine the value (s) of k if any will make AB = BA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given</p>
+<p>A = \(\begin{bmatrix}2 &amp; 5\\ -3 &amp; 1\end{bmatrix}\),   B = \(\begin{bmatrix}4 &amp; -5\\ 3 &amp; k\end{bmatrix}\)</p>
+<p>By question,</p>
+<p>AB = BA</p>
+<p>\(\begin{bmatrix}2 &amp; 5\\ -3 &amp; 1\end{bmatrix}\begin{bmatrix}5 &amp; -5\\ 3 &amp; k\end{bmatrix}\) = \(\begin{bmatrix}4 &amp; -5\\ 3 &amp; k\end{bmatrix}\begin{bmatrix}2 &amp; 5\\ -3 &amp; 1\end{bmatrix}\)</p>
+<p>\(\begin{bmatrix}8+5 &amp; -10+5k\\ -12+3 &amp; 15+k\end{bmatrix}\) = \(\begin{bmatrix}8+15 &amp; 20-5\\ 6-3k &amp; 15+k\end{bmatrix}\)</p>
+<p>\(\begin{bmatrix}23 &amp; 5k-10\\ -9 &amp; 15+k\end{bmatrix}\) = \(\begin{bmatrix}23 &amp; 15\\ 6-3k &amp; 15+k\end{bmatrix}\)</p>
+<p>Equating the corresponding element,</p>
+<p>5k &#8211; 10 = 15</p>
+<p>or, 5k = 25</p>
+<p>∴ k = 5</p>
+<p>6 &#8211; 3k = -9</p>
+<p>or, 3k = 15</p>
+<p>∴ k = 5</p>
+<p>Hence, AB = BA when k = 5</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define determinant. Compute the determinant without expanding \(\begin{bmatrix}-2 & 8 & -9\\ -1 & 7 & 0\\ 1 & -4 & 2\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The determinant of a matrix is a scalar value that is a function of the entries of a square matrix. It is basically a special number that is calculated from a square matrix.</p>
+<p>Given</p>
+<p>\(\begin{vmatrix}-2 &amp; 8 &amp; -9\\ -1 &amp; 7 &amp; 0\\ 1 &amp; -4 &amp; 2\end{vmatrix}\)</p>
+<p>Apply, R1 ↔ R3</p>
+<p>\(~ \begin{vmatrix} 1 &amp; -4 &amp; 2\\ -1 &amp; 7 &amp; 0\\-2 &amp; 8 &amp; -9\end{vmatrix}\)</p>
+<p>Apply R2 → R2 + R1,   R3 → R3 + 2R1</p>
+<p>\(~ \begin{vmatrix} 1 &amp; -4 &amp; 2\\ 0 &amp; 3 &amp; 2\\ 0 &amp; 0 &amp; -5\end{vmatrix}\)</p>
+<p>Since, it is an upper triangular matrix</p>
+<p>Determinant  = -(1 x 3 x -5) = 15</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define null space . Find the basis for the null space of the matrix \(A = \begin{bmatrix}1 & 2 & 3\\ 2 & 3 & 4\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A be a m x n matrix. Then, the null space of A, denoted by nulA, is the set of all vectors x ∈ R<sup>n</sup>, such that Ax = 0 i.e.</p>
+<p>Nul A = {x ∈ R<sup>n</sup> : Ax = 0}</p>
+<p>Note: Nul A ≠ Φ</p>
+<p>Given, A = \(\begin{bmatrix}1 &amp; 2 &amp; 3\\ 2 &amp; 3 &amp; 4\end{bmatrix}\)</p>
+<p>Let the homogeneous equation be</p>
+<p>Ax = 0, x = \(\begin{bmatrix}x1\\ x2\\ x3\end{bmatrix}\)</p>
+<p>Now, the augmented matrix is</p>
+<p>\(\begin{bmatrix}1 &amp; 2 &amp; 3 &amp; : &amp; 0\\ 2 &amp; 3 &amp; 4 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Apply R2 → R2 &#8211; 2R1</p>
+<p>\(~ \begin{bmatrix}1 &amp; 2 &amp; 3 &amp; : &amp; 0\\ 0 &amp; -1 &amp; -5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Here, x1 and x2 are basic variable and x3 is free variable</p>
+<p>Now, Apply R2 → (-1) R2</p>
+<p>\(~ \begin{bmatrix}1 &amp; 2 &amp; 3 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Apply R1 → R1 &#8211; 2R2</p>
+<p>\(~ \begin{bmatrix}1 &amp; 0 &amp; -7 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>From 1st row,</p>
+<p>x1 &#8211; 7&#215;3 = 0</p>
+<p>∴ x1 = 7&#215;3</p>
+<p>From 2nd row,</p>
+<p>x2 + 5&#215;3 = 0</p>
+<p>∴ x2 = -5&#215;3</p>
+<p>The solution is</p>
+<p>x = \(\begin{bmatrix}x1\\ x2\\ x3\end{bmatrix}\) = \(\begin{bmatrix}7&#215;3\\ -5&#215;3\\ x3\end{bmatrix}\) = x3 \(\begin{bmatrix}7\\ -5\\ 1\end{bmatrix}\)</p>
+<p>∴ Basis for the null space = \(\left \{ \begin{bmatrix}7\\ -5\\ 1\end{bmatrix} \right \}\)</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Let B = {b<sub>1</sub>, b<sub>2</sub>} and C = (c<sub>1</sub>, c<sub>2</sub>) be bases for a vector  V, and suppose b<sub>1</sub> = -c<sub>1</sub> + 4c<sub>2</sub> and b<sub>2</sub> = 5c<sub>1</sub> – 3c<sub>2</sub>. Find the change of coordinate matrix for a vector space and find [x]<sub>c</sub> for x = 5b<sub>1</sub> + 3b<sub>2</sub>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let&#8217;s find change of coordinate matrix from B to C.</p>
+<p>\(P_{C ← B} = \begin{bmatrix}[b_1]_c &amp; [b_2]_c\end{bmatrix}\)</p>
+<p>Here, B = {b<sub>1</sub>, b<sub>2</sub>} and c={c<sub>2</sub>, c<sub>2</sub>} are bases for V.</p>
+<p>Given,</p>
+<p>b<sub>1</sub> = -c<sub>1</sub> + 4c<sub>2</sub></p>
+<p>b<sub>1</sub> = \(\begin{bmatrix}c_1 &amp; c_2\end{bmatrix}\begin{bmatrix}-1\\ 4\end{bmatrix}\)</p>
+<p>∴ [b<sub>1</sub>]<sub>c</sub> = \(\begin{bmatrix}-1\\ 4\end{bmatrix}\)</p>
+<p>Also,</p>
+<p>b<sub>2</sub> = 5c<sub>1</sub> &#8211; 3c<sub>2</sub></p>
+<p>b<sub>2</sub> = \(\begin{bmatrix}c_1 &amp; c_2\end{bmatrix}\begin{bmatrix}5\\ -3\end{bmatrix}\)</p>
+<p>∴ [b<sub>2</sub>]<sub>c</sub> = \(\begin{bmatrix}5\\ -3\end{bmatrix}\)</p>
+<p>∴ change of cordinate matrix from B to C is</p>
+<p>\(P_{C ← B} = \begin{bmatrix}[b_1]_c &amp; [b_2]_c\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}-1 &amp; 5\\ 4 &amp; -3\end{bmatrix}\)</p>
+<p>Also, Given</p>
+<p>x = 5b<sub>1</sub> + 3b<sub>2</sub></p>
+<p>x = \(\begin{bmatrix}b_1 &amp; b_2\end{bmatrix}\begin{bmatrix}5\\ 3\end{bmatrix}\)</p>
+<p>∴ [x]<sub>B</sub> = \(\begin{bmatrix}5\\ 3\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>[x]<sub>C</sub> = \(P_{C ← B} [x]_B\)</p>
+<p>= \(\begin{bmatrix}-1 &amp; 5\\ 4 &amp; -3\end{bmatrix}\begin{bmatrix}5\\ 3\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}-5 + 15\\ 20-9\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}10\\ 11\end{bmatrix}\)</p>
+<p>[x]<sub>C</sub> = \(\begin{bmatrix}10\\ 11\end{bmatrix}\)</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Find the eigen values of the matrix \(\begin{bmatrix}6 & 5\\ -8 & -6\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A = \(\begin{bmatrix}6 &amp; 5\\ -8 &amp; -6\end{bmatrix}\)</p>
+<p>The characteristic Equation is</p>
+<p>|A &#8211; λI| = 0</p>
+<p>Now,</p>
+<p>A &#8211; λI = \(\begin{bmatrix}6 &amp; 5\\ -8 &amp; -6\end{bmatrix}\) &#8211; λ \(\begin{bmatrix}1 &amp; 0\\ 0 &amp; 1\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}6 &amp; 5\\ -8 &amp; -6\end{bmatrix}\) &#8211; \(\begin{bmatrix}λ &amp; 0\\ 0 &amp; λ\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}6-λ &amp; 5\\ -8 &amp; -6-λ\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>|A &#8211; λI| = 0</p>
+<p>\(\begin{bmatrix}6-λ &amp; 5\\ -8 &amp; -6-λ\end{bmatrix}\) = 0</p>
+<p>(6-λ)(6-λ) + 40 = 0</p>
+<p>&#8211; 36 &#8211; 6λ + 6λ + λ<sup>2</sup> + 40 = 0</p>
+<p>λ<sup>2</sup> + 4 = 0</p>
+<p>λ<sup>2</sup> = -4</p>
+<p>Hence, Given values are</p>
+<p>λ<sup>2</sup> = 4i<sup>2</sup></p>
+<p>λ<sup>2</sup> =  (±2i)<sup>2</sup></p>
+<p>λ = 2i, -2i</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Find the QR factorization of the matrix \(\begin{bmatrix}2 & 1\\ 3 & -1\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>LEt the columns of A is x<sub>1</sub>, x<sub>2</sub>. So, x<sub>1</sub> = (2, 3) and x<sub>2</sub> = (1, -1)</p>
+<p>Let v<sub>1</sub> = x<sub>1</sub> = (2, 3)</p>
+<p>v<sub>2</sub> = x<sub>2</sub> &#8211; \(\frac{x_2 . v_1}{v_1 . v_2}\) . v<sub>1</sub></p>
+<p>= (1, -1) &#8211; \(\frac{(1, -1) . (2, 3)}{(2, 3) (2, 3)}\) (2, 3)</p>
+<p>= (1, -1) &#8211; \(\frac{-1}{13}\) (2, 3)</p>
+<p>= \(\left ( 1 + \frac{2}{13}, -1 + \frac{3}{13}\right )\)</p>
+<p>= \(\left ( \frac{15}{13}, \frac{-10}{13} \right )\)</p>
+<p>= \(\frac{5}{13}\) (3, -2)</p>
+<p>set v<sup>&#8216;</sup><sub>2</sub> = (3, -2)</p>
+<p>Thus, {v<sub>1</sub>, v<sup>&#8216;</sup><sub>2</sub> } be an orthogonal basis. Let {u<sub>1</sub>, u<sub>2</sub>} be normalize of the orthogonal basis.</p>
+<p>so, u<sub>1</sub> = \(\frac{v_1}{||v_1||}\) = \(\frac{(2, 3)}{13}\)</p>
+<p>u<sub>2</sub> = \(\frac{v_2}{||v_2||}\) = \(\frac{(3, -2)}{13}\)</p>
+<p>Let ! be a matrix whose columns are u<sub>1</sub> , u<sub>2</sub></p>
+<p>Q = \(\begin{bmatrix}\frac{2}{\sqrt{13}} &amp; \frac{3}{\sqrt{13}}\\ \frac{3}{\sqrt{13}} &amp; \frac{-2}{\sqrt{13}}\end{bmatrix}\)</p>
+<p>since, we have</p>
+<p>A = QR (by QR &#8211; Factorization theorem)</p>
+<p>then</p>
+<p>Q<sup>T</sup>A = Q<sup>T</sup>(QR)</p>
+<p>Q<sup>T</sup>A = R</p>
+<p>R = Q<sup>T</sup>A</p>
+<p>= \(\begin{bmatrix}\frac{2}{\sqrt{13}} &amp; \frac{3}{\sqrt{13}}\\ \frac{3}{\sqrt{13}} &amp; \frac{-2}{\sqrt{13}}\end{bmatrix}\) \(\begin{bmatrix}2 &amp; 1\\ 3 &amp; -1\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}2 &amp; 1\\ 3 &amp; -1\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}\frac{4}{\sqrt{13}} + \frac{4}{\sqrt{13}} &amp; \frac{2}{\sqrt{13}} -\frac{3}{\sqrt{13}}\\ \frac{6}{\sqrt{13}} &#8211; \frac{6}{\sqrt{13}} &amp; \frac{3}{\sqrt{13}} + \frac{2}{\sqrt{13}}\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}\frac{13}{\sqrt{13}} &amp; \frac{-1}{\sqrt{13}}\\ 0 &amp; \frac{5}{\sqrt{13}}\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}\sqrt{13} &amp; \frac{-1}{\sqrt{13}}\\ 0 &amp; \frac{5}{\sqrt{13}}\end{bmatrix}\)</p>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Define binary operation. Determine whether the binary operation * is associative or commutative or both where * is defined on <b>Q</b> by letting \(x * y = \frac{x+y}{3}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A binary operation * on a set A is a map A × A → A, written (a, b) → a * b. Examples include most of the arthematic operations on the real and complex numbers, such as addition (a+b), multiplication (a × b), subtraction (a &#8211; b) and so on.</p>
+<p>Given binary operation * defined by x * y = \(\frac{x + y}{3}\) on Rational number (Q)</p>
+<p><span style="text-decoration: underline;"><strong>1) Check if * is commutative</strong></span></p>
+<p>x * y = \(\frac{x + y}{3}\)    ∀ x, y ∈ Q</p>
+<p>y * x = \(\frac{y + x}{3}\)  = \(\frac{x + y}{3}\)</p>
+<p>Since, x * y = y * x, So, it is commutative</p>
+<p><span style="text-decoration: underline;"><strong>2) Check if * is associative</strong></span></p>
+<p>∀ x, y, z ∈ Q</p>
+<p>(x * y) * z = \(\left (\frac{x + y}{3}\right )\) * z = \(\frac{\frac{x + y}{3} + z}{3}\) = \(\frac{x + y + 3z}{9}\)</p>
+<p>x * (y * z) = x * \(\left (\frac{y + z}{3}\right )\) = \(\frac{x + \frac{x + y}{3}}{3}\) = \(\frac{3x + y + z}{9}\)</p>
+<p>Since, (x * y) * z ≠ x * (y * z), So it is not associative</p>
+</div>
+<h3>Question 14</h3>
+<div><p><p>Show that the ring (Z<sub>4</sub>, +<sub>4</sub>, .<sub>4</sub>) is an integral domain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Z<sub>4</sub> = {0, 1, 2, 3}</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">+<sub>4</sub></td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">.<sub>4</sub></td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">2</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 20%; text-align: center;">3</td>
+<td style="width: 20%; text-align: center;">2</td>
+<td style="width: 20%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p>R<sub>1</sub>: (Z<sub>4</sub>, +) is an abelian group</p>
+<ul style="list-style-type: square;">
+<li>Here, (Z<sub>4</sub>, +) closure according to table under +</li>
+<li>It is associative</li>
+<li>Identity element is 0</li>
+<li>Inverse of 0 is 0 , 1 is 3, 2 is 2, 3 is 1</li>
+<li>It is also sommutative in 0 +<sub>4</sub> 1 = 1 = 1 +<sub>4</sub> 0</li>
+</ul>
+<p>R<sub>2</sub>: Associative</p>
+<p style="text-align: center;">0 ×<sub>4</sub> (1 ×<sub>4</sub> 2) = 0 = (0 ×<sub>4</sub> 1) ×<sub>4</sub> 2</p>
+<p>R<sub>3</sub>: Distributive</p>
+<p style="text-align: center;">1 ×<sub>4</sub> (2 +<sub>4</sub> 3) = 1 ×<sub>4</sub> 1 = 1</p>
+<p style="text-align: center;">(1 +<sub>4</sub> 2) ×<sub>4</sub> 3 = 3 ×<sub>4</sub> 3 = 1</p>
+<p>So, it is a ring</p>
+<p>Now,</p>
+<p>0 ×<sub>4</sub> 1 = 1 ×<sub>4</sub> 0 = 0</p>
+<p>So, it is commutative ring</p>
+<p>Aslo, multiplicative identity 1 ∈ Z<sub>4</sub></p>
+<p>so, it is commutative ring with identity</p>
+<p>Also, z<sub>4</sub> = {0, 1, 2, 3}</p>
+<p>For a ring to be an integral domain, it should not have a zero divisor. So the given ring is not an integral domain.</p>
+</div>
+<h3>Question 15</h3>
+<div><p><p>Find the vector x determined by the coordinate vector \([x]_{β} = \begin{bmatrix}-4\\ 8\\ 7\end{bmatrix}\) where \( β = \left \{ \begin{bmatrix}-1\\ 2\\ 0\end{bmatrix}, \begin{bmatrix}3\\ -5\\ 2\end{bmatrix}, \begin{bmatrix}4\\ -7\\ 3\end{bmatrix} \right \}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>[x]<sub>β</sub> = \(\begin{bmatrix}-4\\ 8\\ -7\end{bmatrix}\)</p>
+<p>β = \(\left \{ \begin{bmatrix}-1\\ 2\\ 0\end{bmatrix}, \begin{bmatrix}3\\ -5\\ 2\end{bmatrix}, \begin{bmatrix}4\\ -7\\ 3\end{bmatrix} \right \}\)</p>
+<p>Writing β in matrix form</p>
+<p>β = \(\begin{bmatrix}-1 &amp; 3 &amp; 4\\ 2 &amp; -5 &amp; -7\\ 0 &amp; 2 &amp; 3\end{bmatrix}\)</p>
+<p>Also, [x]<sub>β</sub> = \(\begin{bmatrix}-4\\ 8\\ -7\end{bmatrix}\)</p>
+<p>We know,</p>
+<p>x = β [x]<sub>β</sub></p>
+<p>= \(\begin{bmatrix}-1 &amp; 3 &amp; 4\\ 2 &amp; -5 &amp; -7\\ 0 &amp; 2 &amp; 3\end{bmatrix}\) \(\begin{bmatrix}-4\\ 8\\ -7\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}4 + 24 &#8211; 28\\ -8 &#8211; 40 + 49\\ 0 + 16 &#8211; 21\end{bmatrix}\)</p>
+<p>=\(\begin{bmatrix}0\\ 1\\ -5\end{bmatrix}\)</p>
+<p>Therefore, Vector x = \(\begin{bmatrix}0\\ 1\\ -5\end{bmatrix}\)</p>
+</div>
+</body></html>

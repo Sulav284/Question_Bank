@@ -1,0 +1,274 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ABD Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>ABD Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Design and EER model for library management system having generalization and specialization hierarchies. The EER model should have disjoint and overlapping constraints with at least one of the entities having total participation. Use your own assumption for other concepts. Now convert the EER diagram into its equivalent relational model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37395" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/EER1.drawio.png?resize=876%2C1139&#038;ssl=1" alt="" width="876" height="1139"></p>
+<p>Mapping EER diagram of library management system into model:</p>
+<p>Library management system :</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37396" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/library-management-.drawio.png?resize=767%2C464&#038;ssl=1" alt="" width="767" height="464"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are different concepts and features of object oriented databases? What is object<br />
+relational model?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Object-oriented databases (OODBs) is a type of database that extends the capabilities of traditional relational databases to work seamlessly with object-oriented programming languages. They store objects rather than data such as integers, strings, or real numbers, and provide mechanisms to manage object-oriented data. The main goal is to combine the advantages of object oriented technologies and traditional databases. It helps in improving the modeling of real world concepts in the database. Here are the key concepts and features of object-oriented databases:</p>
+<p><em><span style="text-decoration: underline;"><strong>Key Concepts</strong></span></em></p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><strong>Objects</strong> </span>: The basic building blocks of OODBs, similar to objects in object-oriented programming. They encapsulate both data and behavior.</li>
+<li><span style="text-decoration: underline;"><strong>Classes</strong> </span>: Templates or blueprints for creating objects. A class defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.</li>
+<li>I<span style="text-decoration: underline;"><strong>nheritance</strong></span> : The mechanism by which a class can inherit properties and methods from another class. This allows for code reuse and the creation of more complex data models.</li>
+<li><span style="text-decoration: underline;"><strong>Encapsulation</strong></span> : The bundling of data and methods that operate on the data into a single unit, or class. Encapsulation restricts direct access to some of the object&#8217;s components, which is a means of preventing accidental interference and misuse of the methods and data.</li>
+<li><span style="text-decoration: underline;"><strong>Polymorphism</strong> </span>: The ability to present the same interface for different underlying data types. In an OODB, this allows objects of different classes to be treated as objects of a common superclass.</li>
+<li><span style="text-decoration: underline;"><strong>Object Identity</strong> </span>: Each object in an OODB has a unique identifier (OID) that distinguishes it from all other objects, regardless of its state or value</li>
+</ol>
+<p><span style="text-decoration: underline;"><em><strong>Features</strong> </em></span>:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><strong>Complex Objects</strong></span> : OODBs can store complex data types directly, such as multimedia files, CAD/CAM designs, and other user-defined types, without requiring them to be broken down into simpler components.</li>
+<li><span style="text-decoration: underline;"><strong>Object Identity (OID)</strong> </span>: Each object has a unique identifier that is independent of its values or attributes, ensuring that objects can be referenced and retrieved uniquely.</li>
+<li><span style="text-decoration: underline;"><strong>Persistence</strong> </span>: Objects can be stored in the database and retrieved as needed. The state of an object can be saved to the database and later restored.</li>
+<li><span style="text-decoration: underline;"><strong>Relationships</strong> </span>: Objects can have complex relationships with other objects, including one-to-one, one-to-many, and many-to-many relationships. These relationships can be navigated directly through object references.</li>
+<li><strong><span style="text-decoration: underline;">Schema Evolution</span></strong> : OODBs allow the database schema to evolve over time without requiring a complete breakdown. This means that new classes can be added, and existing classes can be modified without disrupting the existing data.</li>
+<li><span style="text-decoration: underline;"><strong>Query Language</strong></span> : OODBs provide powerful query languages, often extensions of SQL or new languages designed specifically for object-oriented data. These query languages allow for complex queries that can navigate through object relationships.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Object relational model</strong> </span>: ORM is a data model that combines the features of object oriented programming and relational database management systems. It is a framework that facilitates the conversion between incompatible types: typically, the data types used in an object-oriented programming language and the data types used in a relational database. This model allows developers to interact with the database using objects, thus bridging the gap between relational and object-oriented paradigms. Here data is organized into objects that have attributes and methods. These objects are directly mapped into relational database tables where each object corresponds to a row in a table, and each attribute corresponds to a column.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define distributed database. What are the benefits of using distributed databases over<br />
+centralized database? Explain availability, reliability, and scalability features of distributed<br />
+databases.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A distributed database refers to a database system that is spread across multiple computers or nodes, connected by a computer network. In this type of database, the data is stored in a distributed manner, with each node holding a subset of overall data. The nodes can be located in the same physical location or geographically dispersed.</p>
+<p>The primary goal of a distributed database is to provide scalability, fault tolerance and improved performance compared to centralized database. A distributed database can handle larger data volumes and support higher levels of concurrent access.</p>
+<p>Distributed databases offer several advantages over centralized databases, especially in the context of modern, large-scale, and geographically dispersed applications. Here are the key benefits:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Scalability</strong> : Distributed databases can be scaled out by adding more nodes to the system, allowing for increased capacity and processing power without significantly impacting performance. The workload can be distributed across multiple nodes for load balancing.</li>
+<li><strong>Fault Tolerance and High Availability</strong> : Data can be replicated across multiple nodes, ensuring that if one node fails, others can take over, thus minimizing downtime. These systems can be designed to handle and recover from regional failures by storing data in multiple geographic locations.</li>
+<li><strong>Performance</strong> : Queries can be executed in parallel across multiple nodes, significantly improving query performance and response times.</li>
+<li><strong>Flexibility</strong> : Nodes can be added, removed, or upgraded with minimal impact on the overall system, allowing for flexible and modular growth.</li>
+</ol>
+<p><span style="text-decoration: underline;"><em><strong>Availability</strong></em></span><br />
+Availability refers to the system&#8217;s ability to remain accessible and operational, even in the case of failures or maintenance activities.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Redundancy</strong> : Distributed databases often replicate data across multiple nodes. If one node fails, another can take over, ensuring the system remains operational.</li>
+<li><strong>Geographic Distribution</strong> : By distributing data across multiple geographic locations, distributed databases can ensure that local failures (e.g., power outages, natural disasters) do not affect overall availability.</li>
+<li><strong>Partitioning</strong> : Data is partitioned and spread across different nodes, which helps in isolating failures. If one partition becomes unavailable, others can continue to serve data<br />
+requests.</li>
+</ol>
+<p><span style="text-decoration: underline;"><em><strong>Reliability</strong></em></span><br />
+Reliability refers to the system&#8217;s ability to function correctly and provide accurate data consistently over time, even in the case of faults.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data Replication</strong> : Data is replicated across multiple nodes to prevent data loss. Consistency protocols ensure that data remains accurate and up-to-date.</li>
+<li><strong>Fault Tolerance</strong> : Distributed databases are designed to tolerate faults and continue operating correctly. This includes handling node failures, network issues, and other disruptions.</li>
+<li><strong>Regular Backups</strong> : Automated and regular backups of data across different nodes ensure that data can be recovered in case of corruption or catastrophic failures.</li>
+</ol>
+<p><strong><span style="text-decoration: underline;"><em>Scalability</em></span></strong><br />
+Scalability refers to the system&#8217;s ability to handle increased load by adding resources. Distributed<br />
+databases perform well in both vertical and horizontal scalability.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Horizontal Scalability</strong> : Nodes can be added to a distributed database system to increase its capacity. This enables the system to handle more transactions and store more data without degrading performance.</li>
+<li><strong>Load Balancing</strong> : The system can distribute queries and transactions across multiple nodes, balancing the load to prevent any single node from becoming a bottleneck.</li>
+<li><strong>Partitioning</strong> : Data can be partitioned into smaller, manageable pieces that are distributed across nodes. Each node handles a portion of the total data, allowing the system to grow by simply adding more nodes.</li>
+<li><strong>Elastic Scalability</strong> : Distributed databases can dynamically add or remove nodes based on the current workload. This elasticity ensures that resources are used efficiently, scaling up during peak times and down during low usage periods.</li>
+</ol>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Why indexing is important to store data in database?What’s multilevel index?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When executing SQL queries, it takes some amount of time to access data from the disk. An index is a data structure that helps to find and access data in a table of a database quickly Indexing technique reduces the number of disks accessed to process queries.</p>
+<p>An index consist of two section : A search key and a data refrence. The search key contains the primary key or the candidate key of the table. Data refrence holds the address of the disk block that has value corresponding to the value.</p>
+<p>Indexing is an important technique for enhancing the performance of database systems because :</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><strong>Speeding Up Query Performance</strong></span> : Indexes allow the database to locate and access data more quickly. Without an index, the database must scan the entire table to find the relevant rows, which can be time-consuming, especially for large datasets.</li>
+<li><span style="text-decoration: underline;"><strong>Efficient Data Retrieval</strong> </span>: Indexes enable more efficient data retrieval by reducing the amount of data that needs to be scanned. This leads to faster execution of queries, including SELECT, UPDATE, and DELETE operations.</li>
+<li><span style="text-decoration: underline;"><strong>Support for Search Operations</strong> </span>: Indexes support various types of search operations, such as range queries, pattern matching, and sorting. For instance, a B-tree index allows efficient range queries, while a hash index can speed up exact match lookups.</li>
+<li><span style="text-decoration: underline;"><strong>Optimization of JOIN Operations</strong> </span>: Indexes can significantly improve the performance of JOIN operations by allowing the database to quickly locate and join related rows from different tables.</li>
+<li><span style="text-decoration: underline;"><strong>Reduced I/O Operations</strong></span> : By reducing the amount of data that needs to be scanned, indexes help in minimizing disk I/O operations, leading to better overall performance.</li>
+</ol>
+<p><span style="text-decoration: underline;"><em><strong>Multilevel index</strong> </em></span>:  A multilevel index is an indexing technique used to manage large indexes efficiently. It addresses the limitations of single-level indexing by adding additional layers to the index structure. With the growth of the size of the database, indices also grow. As the index is stored in the main memory, a single-level index might become too large a size to store with multiple disk accesses. The multilevel indexing segregates the main block into various smaller blocks so that the same can be stored in a single block. The outer blocks are divided into inner blocks which in turn are pointed to the data blocks. This can be easily stored in the main memory with fewer overheads.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is aggregation? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Aggregation is a modeling concept used to represent a &#8220;whole-part&#8221; relationship or a higher-level abstraction in which an entity itself is composed of multiple entities and relationships. Aggregation allows you to treat a relationship between entities as a higher-level entity or &#8220;aggregate.&#8221;</p>
+<p>An ER diagram is not capable of representing the relationship between an entity and a relationship which may be required in some scenarios. In those cases, a relationship with its corresponding entities is aggregated into a higher-level entity. Aggregation is an abstraction through which we can represent relationships as higher-level entity sets. It provides a clearer and more concise representation of complex relationships, making the diagram easier to understand.</p>
+<p>For Example, an Employee working on a project may require some machinery. So, REQUIRE relationship is needed between the relationship WORKS_FOR and entity MACHINERY. Using aggregation, WORKS_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into a single entity and relationship REQUIRE is created between the aggregated entity and MACHINERY.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-37407 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/Aggregation.drawio.png?resize=406%2C319&#038;ssl=1" alt="" width="406" height="319"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define ODMG Object model? What is Object Query Language(OQL)?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Object Data Management Group (ODMG) object model is a standard that was developed to provide a unified approach for managing object-oriented databases. It specifies how objects in a database should be defined, stored, and manipulated. The ODMG object model aims to bridge the gap between object-oriented programming languages and database systems, allowing for seamless integration and management of objects within databases.<br />
+Key Components of the ODMG Object Model</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><strong>Objects and Literals</strong></span> : Objects are instances of classes that have an object identifier (OID) which uniquely identifies them. Objects encapsulate both state (attributes) and behavior (methods). Literals are fixed values such as integers, strings, and dates that do not have an OID.</li>
+<li><span style="text-decoration: underline;"><strong>Classes and Extents</strong></span> : Classes Define the structure (attributes) and behavior (methods) of objects. Extents is a set that contains all instances of a class. It is similar to a table in relational databases but for objects.</li>
+<li><span style="text-decoration: underline;"><strong>Attributes and Relationships</strong></span> : Attributes Define the properties of a class. They can be of primitive types (like integers or strings) or object types (references to other objects). Relationships Define associations between objects. They can be one-to-one, one-to-many, or many-to-many. Relationships can be navigable, allowing traversal from one object to another.</li>
+</ol>
+<p>Object Query Language (OQL) :</p>
+<p>Object Query Language (OQL) is an SQL like decelerative language that provides a rich environment for efficient querying of database objects, including high-level primitives for object sets and structures.</p>
+<p>The OQL syntax for queries is similar to the syntax of relational Standard Query Language (SQL), with additional features of ODMG concept such as object identity, complex objects, operation, inheritance, polymorphism and relationships. It is designsted to work closely with programming languages for which an ODMG binding is defined such as C++, Java etc.</p>
+<p>Example : Query to retrive the names of all departments in the college of &#8216;Engineering&#8217; can be written as follows:</p>
+<p>SELECT D.Dname</p>
+<p>FROM D in Departments</p>
+<p>WHERE D.College = &#8216;Engineering&#8221;;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is query processing? Differentiate query processing with query optimization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Query optimization is a subset of query processing that specifically focuses on improving the efficiency of executing a query. It involves analyzing different possible ways to execute a query and selecting the most cost-effective strategy. The main objectives are to minimize response time and resource usage (like CPU, memory, and disk I/O).</p>
+<p>The main differences between them are:</p>
+<p><strong>Scope and Function</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><strong>Query Processing</strong> </span>: Encompasses the entire lifecycle of executing a query, from parsing and translating to execution and returning results.</li>
+<li><span style="text-decoration: underline;"><strong>Query Optimization</strong></span> : Focuses specifically on improving the efficiency of the query execution phase by choosing the best execution plan.</li>
+</ul>
+<p><strong>Objectives</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><strong>Query Processing</strong> </span>: Ensure the query is executed correctly &amp; the desired data is retrieved.</li>
+<li><span style="text-decoration: underline;"><strong>Query Optimization</strong> </span>: Minimize the resources (time, memory, I/O) required to execute the query.</li>
+</ul>
+<p><strong>Stages</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><strong>Query Processing</strong></span> : Includes parsing, translation, optimization, and execution.</li>
+<li><span style="text-decoration: underline;"><strong>Query Optimization</strong></span> : Is part of the optimization stage within query processing.</li>
+</ul>
+<p><strong>Techniques Used</strong></p>
+<ul style="list-style-type: square;">
+<li><strong> Query Processing:</strong><br />
+○ <span style="text-decoration: underline;"><em>Parsing</em></span> : Syntax analysis.<br />
+○ <em><span style="text-decoration: underline;">Translation</span></em> : Converting to internal representation.<br />
+○ <em><span style="text-decoration: underline;">Execution</span> </em>: Running the optimized plan.</li>
+<li><strong>Query Optimization:</strong><br />
+○ <em><span style="text-decoration: underline;">Cost estimation</span></em> :  Evaluating different plans.<br />
+○ <span style="text-decoration: underline;"><em>Heuristics</em></span> : Applying rules to improve plans.<br />
+○ <em><span style="text-decoration: underline;">Join strategies</span></em> : Choosing efficient join methods.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why query optimization is necessary? Illustrate on the choices of query execution<br />
+plans.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Query optimization is an important component of database management systems (DBMS) for several reasons. Optimizing queries ensures that database operations are efficient, cost-effective, and scalable, which directly impacts the performance and user experience. Here are the key reasons why query optimization is necessary:</p>
+<ul style="list-style-type: square;">
+<li>Optimized queries run faster by reducing the time needed to retrieve data. This is particularly important for complex queries involving large datasets or multiple table joins.</li>
+<li>As databases grow, query performance can degrade if not optimized. Query optimization ensures that the system can handle large volumes of data efficiently.</li>
+<li>Efficient queries reduce the need for expensive hardware upgrades and minimize operational costs by making better use of existing resources.</li>
+<li>Faster query responses lead to more responsive applications, enhancing the user experience and satisfaction.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Why fragmentation is carried out? Difference between horizontal and vertical<br />
+fragmentation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data fragmentation is carried out in databases, particularly in distributed database systems, to improve performance, manageability, and availability. Here are the key reason.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Improved Performance</strong> : Fragmentation allows parallel processing by distributing fragments across different sites. Queries can be processed in parallel, reducing response time.</li>
+<li><strong>Increased Availability</strong> : Distributing fragments across multiple sites enhances fault tolerance. If one site fails, other sites can still access and process their fragments. It also helps in load balancing.</li>
+<li><strong>Data Localization</strong> : Fragmentation enables data localization by storing fragments close to where they are most frequently accessed. This minimizes data transfer costs and improves query response times.</li>
+<li><strong>Scalability</strong> : Adding new sites or nodes to the distributed system and distributing new fragments to them can easily scale the database.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Vertical Fragmentation</strong></span> : It involves dividing a table into subset of columns or attributes. Each subset is stored on a different node. This fragmentation technique is useful when different subsets of attributes are frequently accessed together or when there  is need to reduce data transmission over the network.</p>
+<p>Example : Suppose we have a &#8220;product&#8221; table with the attributes: Product ID, Product Name, Category, Price and stock as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">Product ID</td>
+<td style="width: 20%; text-align: center;">Product Name</td>
+<td style="width: 20%; text-align: center;">Category</td>
+<td style="width: 20%; text-align: center;">Price</td>
+<td style="width: 20%; text-align: center;">Stock</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now vertical fragmentation can be applied to this table, where fragment1 contains attributes related to identification and name of fragment, while fragment2 contains attribute related to category, price and stock information.</p>
+<p style="text-align: center;">Fragmentation 1: Product ID, Product Name</p>
+<p style="text-align: center;">Fragmentation 2: Category, Price, Stock</p>
+<p><span style="text-decoration: underline;"><strong>Horizontal Fragmentation</strong></span> : It involves dividing a table into subsets of rows or tuples. Each subset is stored on a different node. This fragmentation technique is useful when thre ia s need to distribute data evenly accross nodes or when subsets of rows are frequently accessed together.</p>
+<p>Example : Suppose we have an &#8220;Employee&#8221; table with attributes: Employee ID, Name, Department, Position and Salary. Now, Horizontal fragmentation can be applied to this table based on specific ranges or conditions. For instance, we can fragment the table into two subset as follows:</p>
+<p style="text-align: center;">Fragment 1: EmployeeID from 1 to 100</p>
+<p style="text-align: center;">Fragment 2: EmployeeID from 101 to 200</p>
+<p>In this case, Fragment 1 contains the rows or tuple with EmployeeIDs ranging from 1 to 100 while, Fragment 2 contains the rows or tuples with EmployeeIDs ranging from 101 to 200.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Why NOSQL system is essential? What are the different characteristics of this<br />
+system?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>NOSQL systems are alternative to traditional relational databases, empowering developers and organizations to efficiently handle large-scale data and build scalable, flexible and high-performance applications.</p>
+<p>A NOSQL database, which stands for &#8220;non SQL&#8221; or &#8220;non-relational&#8221; is a database that allows for data storage and retrival. It avoids joins snd is easy to scale. NOSQL is used for big data and real-time web apps.</p>
+<p>Why NOSQL?</p>
+<ul style="list-style-type: square;">
+<li>Efficient method</li>
+<li>Can handle large-scale data</li>
+<li>Scalable and flexiable</li>
+<li>High-performance</li>
+<li>Effective for big data and real-time web apps</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Characteristics of NoSQL Systems</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Schema-less Data Model</strong> : No fixed schema; data can have different structures within the  same database, allowing for flexibility and rapid iteration.</li>
+<li><strong>Distributed and Decentralized Architecture</strong> : Data is distributed across multiple nodes, often with no single point of failure, ensuring high availability and fault tolerance.</li>
+<li><strong>Horizontal Scalability</strong> : Designed to scale out by adding more nodes rather than scaling up with more powerful hardware.</li>
+<li><strong> Replication and Partitioning (Sharding)</strong>:<br />
+○ <span style="text-decoration: underline;">Replication</span> : Copies of data are stored across different nodes for redundancy and fault tolerance.<br />
+○ <span style="text-decoration: underline;">Sharding</span> : Data is partitioned across multiple nodes to balance load and improve performance.</li>
+<li><strong>Eventual Consistency</strong> : Unlike ACID transactions in relational databases, many NoSQL databases follow BASE principles (Basically Available, Soft state, Eventually consistent), prioritizing availability and partition tolerance over immediate consistency.</li>
+<li><strong>Performance Optimization</strong> : Optimized for specific read and write patterns, enabling high throughput and low latency for particular use cases.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is spatial database? Explain the concept of trigger with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Spatial Database Concepts</strong>:</p>
+<p>A spatial database is a database that is enhanced to store and access spatial data or data that defines a geometric shape. These data are often associated with geographic locations and features or constructed features like cities. Data on spatial databases are stored as coordinates, points, lines, polygon and topology. Some spatial databases handle mor-complex data like three-dimensional objects.</p>
+<p>Spatial databases sddress many of the limitations of static data files. Spatial databases can contain large amount of data in multiple tables with linking mechanisms that maintains data integrity. They can enforce restrictions on data entry to limit collection of inconsistent data. They can grow and can maintain cpoies of themselves for redundancy.</p>
+<p>Example of non-spatial data : Names, Phone numbers, emails stc.</p>
+<p>Example of spatial data : Weather and climate data, Rivers, Forms, Medical imaging etc.</p>
+<p>A trigger is a procedure that automatically involves DBMS in response to changes to the database and is specified by the database administrator (DBA). A database with set of associated triggers is generally called active database. Triggers provide a powerful mechanism for automating actions and maintaining data consistecy and integrity within the database.</p>
+<p><strong>Active Database Example</strong>:</p>
+<p>Consider a banking system that uses an active database to monitor customer transactions and detect potential fraud activities. The database would be designed to react to certain triggera, such as high-value transaction or a series of unsual transactions from same or different locaions within a short period. Here&#8217;s how it could work:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Trigger</strong> : A high-value transaction occours, exceeding a predefined threashold.</li>
+<li><strong>Active Rule</strong> : The active database has a rule defined to detect high-value trancastions and potential fraud.</li>
+<li><strong>Action</strong> : The rule triggers an action, such as sending an alert to the bank&#8217;s fraud detection team.</li>
+<li><strong>Real-time Response</strong> : Upon receiving the alert, the fraud detection team can take immediate action, such as blocking the account or cintacting the customer to verify the transaction&#8217;s legitimacy.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on a. CAP Theorem b. Deductive database</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. CAP theorem</p>
+<p>CAP Theorem is a theoretical framework which stands for Consistency, Avalability and Partitioning. CAP theorem helps to understand the limitation of NOSQL systems. NOSQL can&#8217;t provide all three Consistency, Availability and Partitioning togethr. CAP states that we can only achieve at most two out of three gurantees of database: Consistency, Avaliability and Partition tolerance.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37444 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/CAP-.drawio.png?resize=306%2C277&#038;ssl=1" alt="" width="306" height="277"></p>
+<p>Consistency : Every nodes of database has exactly same information at given time.</p>
+<p>Availability : Ability of database to be always availableno matter what happens.</p>
+<p>Partitioning : Having ability to support broken links within the cluster in database in which it is distributed.</p>
+<p>&nbsp;</p>
+<p>b. Deductive Database Concepts:</p>
+<p>A database system that can make deductions based on rules and facts stored in the database. Datalog is the language typically used to specify facts, rules and queries in deductive databases.</p>
+<p style="text-align: center;">Database + Inference = Deductive Database</p>
+<p>It uses two main types of specification: &#8220;Facts&#8221; and &#8220;Rules&#8221;. Facts are specified in a manner similar to the way relations are specified, expect that it is not necessary to include attribute name.</p>
+<p>Rules are somewhat similar to relation views. They specify virtual relations.</p>
+<p>Example:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37445 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/deductive-database.drawio.png?resize=363%2C233&#038;ssl=1" alt="" width="363" height="233"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Facts</td>
+<td style="width: 50%; text-align: center;">Rules</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Supervise (Frankin, Rajesh)</p>
+<p>Supervise (Frankin, Roshan)</p>
+<p>Supervise (James, Frankin)</p>
+<p>Supervise (James, Jenny)</p>
+<p>Supervise (Jenny, Dinesh)</td>
+<td style="width: 50%; text-align: center;">Suprior(X,Y)←Spervise(X,Y)</p>
+<p>Suprior(X,Y)←Supervise(X,Z), Superior(Z,Y)</p>
+<p>Subordinary(X,Y)←Sperior(Y,X)</td>
+</tr>
+</tbody>
+</table></div>
+<p style="text-align: left;">
+</div>
+</body></html>

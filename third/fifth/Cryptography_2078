@@ -1,0 +1,342 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crypto Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>Crypto Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Any Two Questions</h2><h3>Question 1</h3>
+<div><p><p>Define CIA triad. State the encryption process of double and triple DES. What is the task of S-Box in DES ? Discuss with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The CIA triad is one of the most important models which is designed to guide policies for information security within an organization.</p>
+<p>CIA stands for :</p>
+<ol style="list-style-type:decimal;">
+<li>Confidentiality</li>
+<li>Integrity</li>
+<li>Availability</li>
+</ol>
+<p><span style="text-decoration: underline;">1. Confidentiality:</span></p>
+<p>It is roughly equivalent to privacy. Confidentiality measures are designed to prevent sensitive information from unauthorized access attempts. It is common for data to be categorized according to the amount and type of damage that could be done if it fell into the wrong hands. More or less stringent measures can then be implemented according to those categories.</p>
+<p><span style="text-decoration: underline;">2. Integrity:</span></p>
+<p>It involves maintaining the consistency, accuracy, and trustworthiness of data over its entire lifecycle. Data must not be changed in transit, and steps must be taken to ensure data cannot be altered by unauthorized people (for example, in a breach of confidentiality).</p>
+<p><span style="text-decoration: underline;">3. Availability:</span></p>
+<p>It means information should be consistently and readily accessible to authorized parties. This involves properly maintaining hardware and technical infrastructure and systems that hold and display the information.</p>
+<p><span style="text-decoration: underline;"><strong>Encryption in Double DES:</strong></span></p>
+<p>Given plaintext and two encryption keys K<sub>1</sub> and K<sub>2</sub> a cipher text can be generated as,</p>
+<p>Cipher Text = E(K<sub>2</sub>, E(K<sub>1</sub>, Plaintext))</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11649 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/F1FjnSO.png?resize=336%2C442&#038;ssl=1" alt="" width="336" height="442"></p>
+<p><span style="text-decoration: underline;"><strong>Encryption in Triple DES:</strong></span></p>
+<p>Given a plaintext and two encryption and decryption keys K<sub>1</sub>, K<sub>2</sub> and K<sub>3</sub>, a cipher text can be generated as</p>
+<p>Cipher Text = E(K<sub>3</sub>, D(K<sub>2</sub>, E(K<sub>1</sub>, Plaintext)))</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11650 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/encryption_scheme.jpg?resize=318%2C421&#038;ssl=1" alt="" width="318" height="421"></p>
+<p><span style="text-decoration: underline;"><strong>Task of S-Box:</strong></span></p>
+<p>An S-box is a substitution box and it is the only non-linear component in the cipher. Its main purpose is to obscure the relationship between the key, the plaintext, and the ciphertext. The role of the S-boxes is the function F is that the substitution consists of a set of eight S-boxes, each of which accepts 6 bits as input and produces 4 bits as follows:</p>
+<p>The first and last bits of the input to box Si form a 2-bit binary number to select one of the four substitutions defined by the four rows in the table for Si. The middle four bits select one of the sixteen columns. The decimal value in the cell selected by the row and column is then converted to its 4-bit representation to produce the output.</p>
+<p><span style="text-decoration: underline;">For Example:</span></p>
+<p>in S1, for input 011001, the row is 01 and the column is 1100. The value in row 1, column 12 is 9. So, the output is 1001.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the generic model of digital signature process. Consider the two prime numbers 7 and 19. Select 29 as public key and 41 as private key. Encrypt the plaintext 4 and decrypt the cipher text 3 using RSA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-12109 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/Flowchart-Maker-Online-Diagram-Software-2.png?resize=1308%2C634&#038;ssl=1" alt="" width="1308" height="634"></p>
+<p>The above figure shows the digital signature process. The sender uses a signing algorithm to sign the message. The sender uses a signing algorithm to sign the message. The message and the signature are sent to the receiver. The receiver receives the message and the signature and applies the verifying algorithm to the combination. If the result is true, the message is accepted otherwise, it is rejected.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-12111 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/Flowchart-Maker-Online-Diagram-Software-3.png?resize=1305%2C615&#038;ssl=1" alt="" width="1305" height="615"></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Numerical Part:</strong></span></p>
+<p>Given,</p>
+<p>Two prime numbers i.e. p = 7 and q = 19</p>
+<p>Public key(e) = 29</p>
+<p>Private key(d) = 14</p>
+<p>Now,</p>
+<p>n = p x q = 7 x 19 = 133</p>
+<p>then,</p>
+<p>Public key pair = (e, n) = (29, 133)</p>
+<p>Private key pair  = (d, n) = (41, 133)</p>
+<p><strong>Encrypting the plain text (m) = 4</strong></p>
+<p>Cipher text = m<sup>e</sup> mod n</p>
+<p>= 4<sup>29</sup> mod 133</p>
+<p>= 16</p>
+<p>Decrypting the cipher text (c) = 3</p>
+<p>Plain text = c<sup>d</sup> mod n</p>
+<p>= 3<sup>41</sup> mod 1333</p>
+<p>= 110</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Galois field with an example. Explain any two modes of block cipher encryption. Deterimine the quadratic residues of 7.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Galois fields contain a finite number of elements. A Galois field can be represented as p<sup>n</sup> where n is a positive integer and p is a prime number. The number of elements of a finite field is called its order. The finite field of order p<sup>n</sup> is generally written as GF(p<sup>n</sup>).</p>
+<p><span style="text-decoration: underline;">Two special cases of GF(p<sup>n</sup>):</span></p>
+<ol style="list-style-type:decimal;">
+<li>If n = 1 then GF(p)</li>
+<li>If n &gt; 1 then GF(p<sup>n</sup>)</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Modes of Block Cipher Encryption:</strong></span></p>
+<p>A block cipher is a method of encrypting data in blocks to produce ciphertext using a cryptographic key and algorithm. The block cipher processes fixed-size blocks simultaneously, as opposed to a stream cipher, which encrypts data one bit at a time. Most modern block ciphers are designed to encrypt data in fixed-size blocks of either 64 or 128 bits.</p>
+<p>There are four modes of block cipher encryption:</p>
+<ol style="list-style-type:decimal;">
+<li>Electronic Code Book:</li>
+<li>Cipher Block Chaining Mode:</li>
+<li>Cipher Feedback Mode:</li>
+<li>Output Feedback Mode:</li>
+<li>Counter Mode:</li>
+</ol>
+<p>Out of these, we will explain two of them.</p>
+<p><span style="text-decoration: underline;">1. Electronic Code Book:</span></p>
+<p>An electronic code book is the easiest block cipher mode of functioning. It is easier because of the direct encryption of each block of input plaintext and output is in form of blocks of encrypted ciphertext. Generally, if a message is larger than <i>b</i> bits in size, it can be broken down into a bunch of blocks and the procedure is repeated.</p>
+<p>The procedure of ECB is illustrated below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11643 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/electronic-code-book-1.png?resize=786%2C544&#038;ssl=1" alt="" width="786" height="544"></p>
+<p><span style="text-decoration: underline;">2) Cipher Block Channing:</span></p>
+<p>Cipher block chaining or CBC is an advancement made by ECB since ECB compromises some security requirements. In CBC, the previous cipher block is given as input to the next encryption algorithm after XOR with the original plaintext block. In a nutshell here, a cipher block is produced by encrypting an XOR output of the previous cipher block and the present plaintext block.</p>
+<p>The process is illustrated here:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11644 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/Cipher-Block-Chaining-1.png?resize=842%2C686&#038;ssl=1" alt="" width="842" height="686"></p>
+<p><span style="text-decoration: underline;"><strong>For the quadratic residue of 7:</strong></span></p>
+<p>Here, p = 7</p>
+<p>Φ(7) = 6</p>
+<p>We have,</p>
+<p>y<sup>2</sup> = a (mod p)</p>
+<p>or, 1<sup>2</sup> = 1 (mod 7)</p>
+<p>or, 2<sup>2</sup> = 4 (mod 7)</p>
+<p>or, 3<sup>2</sup> = 2 (mod 7)</p>
+<p>or, 4<sup>2</sup> = 2 (mod 7)</p>
+<p>or, 5<sup>2</sup> = 4 (mod 7)</p>
+<p>or, 6<sup>2</sup> = 1 (mod 7)</p>
+<p>Hence, 1, 2, and 4 are the quadratic residue of 7.</p>
+</div>
+<h2>Section B: Attempt Eight Questions</h2><h3>Question 4</h3>
+<div><p><p>What does intrusion mean? How the system detect intrusion? List any four types of firewall.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Intrusion is any set of actions that attempts to compromise the confidentiality , integrity or availability of a computer resource. It could involve accessing sensitive information, altering data, disrupting services, or gaining unauthorized control over the system.</p>
+<p>A system detects intrusion by using Intrusion Detection System (IDS). It is a system designed to test network system traffic and events against given set of parameters using the following approaches:</p>
+<p><strong>Statistical Anomaly detection</strong>: It involves the collection of data relating to the behaviors of legitimate users over a period of time. Then statistical test are applied to determine with a high level of confidence whether the behavior is not legitimate user behaviors. This detection falls into the following two broad category:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Threshold detection:</strong> involves counting the number of occurrences of specified vent type over an interval of time.</li>
+<li><strong>Profile based anomaly decision:</strong> Focuses on characterizing the past behcaiour of individual uses or related groups of users and then detecting significant deviation.</li>
+</ol>
+<p><strong>Rule Based Detection: </strong></p>
+<p>It involves an attempt to define a setoff rules that can be used to decide that a given behavior is that of an intruder.</p>
+<p>It&#8217;s category are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Rule based anomaly detection:</strong> historical audit records are analyzed to identify usage patterns and to generate automatically rules that describe those pattern.</li>
+<li><strong>Rule based penetration identification:</strong> Uses rules for identifying known penetrations or penetrations that would exploit known weakness.</li>
+</ol>
+<p>The four types of <strong>Firewalls</strong> are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Packet filtering firewalls :</strong> implemented on network layer of OSI model, deployed on routers hick connect the internal network on the internet. Follow the rules defined by Access Control Lists (ACL).</li>
+<li><strong>Circuit Level Gateway firewall:</strong> deployed at session layer , inexpensive and provides anonymity to private network.</li>
+<li><strong>Application Level Gateway Firewall:</strong> Work on application layer of OSI model by providing protection to specific application layer. Example: Proxy server</li>
+<li><strong>Next Generation Firewall:</strong> It is a network security device that provides capabilities beyong=f a traditional, stateful firewall. It allows or blocks traffic based on state, port and protocol.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Decrypt the message “GVPJ” using Hill cipher taking the key as  {Row1 = 3  7, Row2= 5  12}.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>The key is 2 x 2 matrix and key = \(\begin{pmatrix}3 &amp; 7\\ 5 &amp; 12\end{pmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Step 1:</strong></span><strong> </strong>Find the multiplicative inverse of the determinant of key matrix \(\begin{pmatrix}3 &amp; 7\\ 5 &amp; 12\end{pmatrix}\)</p>
+<p>= (3 x 12 &#8211; 7 x 5) mod 26</p>
+<p>= 1 mod 26</p>
+<p>a = 1</p>
+<p><span style="text-decoration: underline;"><strong>Step 2:</strong></span> Find the adj. matrix of key matrix \(\begin{pmatrix}3 &amp; 7\\ 5 &amp; 12\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}12 &amp; -7\\ -5 &amp; 3\end{pmatrix}\) mod 26</p>
+<p>= \(\begin{pmatrix}3 &amp; 7\\ 5 &amp; 12\end{pmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Step 3:</strong></span> Multiply the multiplicative inverse of the determinant by adj. matrix</p>
+<p>= 1 x \(\begin{pmatrix}12 &amp; -7\\ -5 &amp; 3\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}12 &amp; 19\\ 21 &amp; 3\end{pmatrix}\)</p>
+<p>Now, cipher text = &#8220;GVPJ&#8221;</p>
+<p>\(\begin{pmatrix}G\\ V\end{pmatrix} = \begin{pmatrix}6\\ 21\end{pmatrix}\)</p>
+<p>and \(\begin{pmatrix}P\\ J\end{pmatrix} = \begin{pmatrix}15\\ 9\end{pmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Step 4:</strong></span> Multiply cipher text (c) by the inverse of a matrix</p>
+<p>= \(\begin{pmatrix}12 &amp; 19\\ 21 &amp; 3\end{pmatrix} \begin{pmatrix}6\\ 21\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}72 + 399\\ 126 + 63\end{pmatrix}\) mod 26</p>
+<p>=  \(\begin{pmatrix}471\\ 189\end{pmatrix}\) mod 26</p>
+<p>= \(\begin{pmatrix}3\\ 7\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}D\\ H\end{pmatrix}\)</p>
+<p>Similarly,</p>
+<p>= \(\begin{pmatrix}12 &amp; 19\\ 21 &amp; 3\end{pmatrix} \begin{pmatrix}15\\ 9\end{pmatrix}\) mode 26</p>
+<p>= \(\begin{pmatrix}180 + 171\\ 315 + 27\end{pmatrix}\) mod 26</p>
+<p>=  \(\begin{pmatrix}351\\ 342\end{pmatrix}\) mod 26</p>
+<p>= \(\begin{pmatrix}13\\ 4\end{pmatrix}\)</p>
+<p>= \(\begin{pmatrix}N\\ E\end{pmatrix}\)</p>
+<p>Therefore, Plain text = DHNE</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Describe the PKI trust model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Public Key Infrastructure (PKI) trust model is a framework that establishes and manages the creation, distribution, and authentication of digital certificates, enabling secure communication and transactions over insecure networks like the internet.</p>
+<p>It relies on the use of public key cryptography to facilitate secure data transmission and verification of identities. The principal objective for developing PKI is to enable secure, convenient, and effective acquisition of public keys.</p>
+<p>The PKI trust model involves several key components:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Certificate Authority (CA):</strong> The CA is a trusted entity responsible for issuing digital certificates. It verifies the identity of individuals, organizations, or devices requesting certificates and binds their public keys to their identities.</li>
+<li><strong>Digital Certificates:</strong> These are electronic documents issued by the CA that bind a public key to a particular entity&#8217;s identity. A certificate includes the entity&#8217;s information, public key, expiration date, and the CA&#8217;s digital signature. It serves as a credential that allows others to verify the holder&#8217;s identity and encrypt data meant for them.</li>
+<li><strong>Registration Authority (RA):</strong>  RA is an optional component that responsible for verifying the identities of entities requesting certificates before the CA issues them. It forwards the validated information to the CA for certificate issuance.</li>
+<li><strong>Repository:</strong> A centralized or distributed database or repository that stores issued certificates, making them accessible for verification purposes.</li>
+<li><strong>Certificate Revocation List (CRL) issuer :</strong> Certificates might need to be revoked if they are compromised, expired, or if the entity&#8217;s status changes. It is an optional component.</li>
+</ol>
+<p>Trust is established by entities relying on the CA&#8217;s digital signature to validate the authenticity of certificates it issues. If a CA is deemed trustworthy and its digital signature is verified, the relying party can trust the information contained in the digital certificate</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define authentication system. Illustrate the need of mutual authentication over one way authentication with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An authentication system is a security measure used to verify the identity of a user or device before granting them access to a system or resource. It is a critical component of information security, as it helps to prevent unauthorized access to sensitive data.</p>
+<p>For example, this is mostly used by banking websites, email provides, etc.</p>
+<p>Authentication systems provide several benefits, including:</p>
+<ul style="list-style-type: square;">
+<li><strong>Prevent unauthorized access to sensitive data:</strong> Authentication systems help to prevent unauthorized access to sensitive data, such as personal information, financial information, and trade secrets.</li>
+<li><strong>Protect against data breaches:</strong> By preventing unauthorized access, authentication systems help to protect against data breaches, which can result in significant financial losses and reputational damage.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Mutual authentication, also called two-way authentication , is a process or technology in which both entities in a communications link authenticate each other. In a network environment, the client authenticates the server and the server verifies the client before data can be exchanged.</p>
+<p><strong>Example part:</strong></p>
+<p>Let&#8217;s see an example of why it is needed over one way authentication :</p>
+<p data-sourcepos="3:1-3:57">Consider an online banking scenario where a customer logs in to their account using their username and password. This represents a one-way authentication approach, as only the customer verifies the bank&#8217;s identity by entering the correct login credentials.</p>
+<p data-sourcepos="5:1-5:136">Now, imagine a scenario where both the customer and the bank verify each other&#8217;s identities. The customer authenticates the bank using a digital certificate issued by a trusted third party, ensuring they are communicating with the legitimate bank and not an imposter. Simultaneously, the bank authenticates the customer using their login credentials and additional factors, such as a one-time passcode sent to their registered mobile number.</p>
+<p data-sourcepos="7:1-7:371">This mutual authentication approach provides enhanced security compared to one-way authentication, as it prevents impersonation attacks and ensures secure communication between the customer and the bank. The customer is confident that their transactions are conducted with the genuine bank, while the bank is assured that the customer accessing the account is authorized.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Find the value of 7^2019 MOD 13 using Fermat’s Little theorem. Define Euler totient function with<br />
+an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Now,</p>
+<p>7<sup>2019</sup> mod 13</p>
+<p>From Femat&#8217;s Little theorem,</p>
+<p>7<sup>13 &#8211; 1</sup> = 1 (mod 13)</p>
+<p>or, 7<sup>12</sup> = 1 (mod 13)</p>
+<p>and, 7<sup>13</sup> = 7 (mod 13)</p>
+<p>Also,</p>
+<p>= 7<sup>2019</sup> (mod 13)</p>
+<p>= (7<sup>12</sup>)<sup>168</sup> (mod 13)</p>
+<p>= (1)<sup>168</sup> x 7<sup>3</sup> (mod 13)</p>
+<p>= 7<sup>3</sup> (mod 13)</p>
+<p>= 343 (mod 13)</p>
+<p>= 5 (mod 13)</p>
+<p><span style="text-decoration: underline;"><strong>Euler&#8217;s Totient Function:</strong></span></p>
+<p>Euler&#8217;s Totient function Φ(n) for an input n is count of positive intergers in {1, 2, 3, . . . . , n-1} that are relatively prime to n, i.e. the positive integers whose GCD with n is 1.</p>
+<p>Examples:</p>
+<p>Φ(1) = 1; gcd (1, 1) is 1</p>
+<p>Φ(2) = 1; gcd(1, 2) is 1, but gcd(2, 2) is 2.</p>
+<p>Φ(3) = 2; gcd(1, 3) is 1, and gcd(2, 3) is 1.</p>
+<p>Φ(4) = 2; gcd(1, 4) is 1 and gcd(3, 4) is 1</p>
+<p>Φ(5) = 4; gcd(1, 5) is 1, gcd(2, 5) is 1, gcd(3, 5) is 1 and gcd(4, 5) is 1</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>List the properties of hash function. Discuss the first pass of MD4.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Hash Function is a function that maps a message of any length into a fixed-length hash value, which serves as the authenticator. Cryptography has functions are important tools of cryptography and play a fundamental role in efficient and secure information processing.</p>
+<p><span style="text-decoration: underline;"><strong>Properties of Hash Function:</strong></span></p>
+<p><span style="text-decoration: underline;">1. One-Way Property:</span></p>
+<p>It is computationally hard to find the input(message) from the output(hash value) i.e. for any given hash value h, it should be difficult to find any message, such that H(m) = h.</p>
+<p><span style="text-decoration: underline;">2. Weak collision resistance:</span></p>
+<p>For any given input m1, it is computationally hard to find a different m2 such that H(m1) = H(m2).</p>
+<p><span style="text-decoration: underline;">3. Strong collision resistance:</span></p>
+<p>It is computationally hard to find two different message m1 and m2 such that H(m1) = H(m2)</p>
+<p>4. Produce fixed-length output.</p>
+<p>5. Hash Function can be applied to a block of data of any size.</p>
+<p><span style="text-decoration: underline;"><strong>First Pass of MD4:</strong></span></p>
+<p>A function F(x, y, z) = (x ∨ y) ∨ (~x ∧ z); takes 32-bit words x, y, and z, and produces an output 32-bit word. This function is sometimes known as the selection function because if the n<sup>th</sup> bit of x is a 0) it selects the n<sup>th</sup> bit of z for the n<sup>th</sup> bit of the output.</p>
+<p>Each of the 16 worlds of the message is separated and processed using the following relation, where i move from 0 to 15.</p>
+<p>d<sub>(-i) ∧ 3</sub> = (d<sub>(-i) ∧ 3</sub> + F(d<sub>(1-i) ∧ 3</sub>, d<sub>(2-i) ∧ 3</sub>, d<sub>(3-i) ∧ 3</sub>) + m<sub>i</sub>)</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between Symmetric and Asymmetric cipher. Encrypt the message “HELL” using<br />
+the key “FAIL” using Vernanm cipher.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between Symmetric Encryption and Asymmetric Encryption are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th><strong>Symmetric Encryption</strong></th>
+<th><strong>Asymmetric Encryption</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It only requires a single key for both encryption and decryption.</td>
+<td>It requires two keys, a public key and a private key, one to encrypt and the other one to decrypt.</td>
+</tr>
+<tr>
+<td>The size of the cipher text is the same or smaller than the original plain text.</td>
+<td>The size of the cipher text is the same or larger than the original plain text.</td>
+</tr>
+<tr>
+<td>The encryption process is very fast.</td>
+<td>The encryption process is slow.</td>
+</tr>
+<tr>
+<td>It is used when a large amount of data is required to transfer.</td>
+<td>It is used to transfer small amounts of data.</td>
+</tr>
+<tr>
+<td>It only provides confidentiality.</td>
+<td>It provides confidentiality, authenticity, and non-repudiation.</td>
+</tr>
+<tr>
+<td>The length of the key used is 128 or 256 bits</td>
+<td>The  length of the key used is 2048 or higher</td>
+</tr>
+<tr>
+<td>In symmetric key encryption, resource utilization is low as compared to asymmetric key encryption.</td>
+<td>In asymmetric key encryption, resource utilization is high.</td>
+</tr>
+<tr>
+<td>It is efficient as it is used for handling a large amount of data.</td>
+<td>It is comparatively less efficient as it can handle a small amount of data.</td>
+</tr>
+<tr>
+<td>Security is less as only one key is used for both encryption and decryption purposes.</td>
+<td>It is more secure as two keys are used here- one for encryption and the other for decryption.</td>
+</tr>
+<tr>
+<td>Examples: 3DES, AES, DES and RC4</td>
+<td>Examples: Diffie-Hellman, ECC, El Gamal, DSA, and RSA</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Encryption the message using Vernam Cipher:</strong></span></p>
+<p>Now,</p>
+<p>Plain text = HELL</p>
+<p>Key = FAIL</p>
+<p>Assign numbers are</p>
+<p>A = 0, B = 1, C = 2, .  .  .   .  , Z = 25</p>
+<p>\(\begin{matrix}<br />
+\enspace &amp; 7 &amp; 4 &amp; 11 &amp; 11 \\<br />
++ &amp; 5 &amp; 0 &amp; 8 &amp; 11 \\<br />
+\end{matrix} \\<br />
+\rule{10em}{0.5px} \\<br />
+\begin{matrix}<br />
+\enspace &amp; 12 &amp; 4 &amp; 19 &amp; 22 \\<br />
+\end{matrix}\)</p>
+<p>Cipher text = METW</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Divide 3x<sup>2</sup> + 4x +3 by 5x +6 over GF(7).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>\(\begin{array}{ll}<br />
+5x + 6 | \overline{3x^2 + 4x + 3}| 2x + 4\\<br />
+\qquad \quad 3x^2 + 5x\\<br />
+\qquad \quad &#8211; \enspace \enspace -\\<br />
+\qquad \quad \rule{6em}{0.5px} \\<br />
+\qquad \quad -x + 3\\<br />
+\qquad \quad = 6x + 3 \qquad (mode 7)\\<br />
+\qquad \quad 20x + 24\\<br />
+\qquad \quad &#8211; \enspace \enspace -\\<br />
+\qquad \quad \rule{6em}{0.5px} \\<br />
+\qquad \quad -14x + 14\\<br />
+\qquad \quad 0 \qquad \qquad \qquad (mod 7)\\<br />
+\end{array}\)</p>
+<p>Q = 2x + 4</p>
+<p>R = 0</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Define SSL protocol. Mention the services provided by PGP.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SSL (Secure Sockets Layer) is an encryption-based Internet security protocol. It was first developed by Netscape in 1995 for the purpose of ensuring privacy, authentication, and data integrity in Internet communications. SSL is the predecessor to the modern TLS encryption used today.</p>
+<p>The actual operations in PGP are based on five services:</p>
+<ol style="list-style-type:decimal;">
+<li>Authentication</li>
+<li>Confidentially</li>
+<li>Compression</li>
+<li>Email Compatibility</li>
+<li>Segmentation</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1. Authentication:</strong></span></p>
+<p>Authentication basically means something that is used to validate something as true or real. To login into some sites sometimes we give our account name and password, which is an authentication verification procedure.</p>
+<p><span style="text-decoration: underline;"><strong>2. Confidentially:</strong></span></p>
+<p>Sometimes we see some packages labeled as ‘Confidential’, which means that those packages are not meant for all people and only selected persons can see them. The same applies to email confidentiality as well. Here, in the email service, only the sender and the receiver should be able to read the message, which means the contents have to be kept secret from every other person, except for those two.</p>
+<p><span style="text-decoration: underline;"><strong>3. Compression:</strong></span></p>
+<p>As a default, PGP restricts the message after using the signature but before encryption. This has the advantage of storing space both for e-mail transmission and file storage.</p>
+<p><span style="text-decoration: underline;"><strong>4. Email Compatibility:</strong></span></p>
+<p>Some electronic-mail systems only allow the use of blocks including ASCII text. When PGP is used, the minimum part of the block to be transmitted is encrypted.</p>
+<p><span style="text-decoration: underline;"><strong>5. Segmentation:</strong></span></p>
+<p>E-mail facilities are restricted to a maximum message length. For instance, some facilities accessible throughout the internet set a maximum length of 50,000 octets. Some messages higher than that should be broken up into smaller segments, each of which is mailed independently.</p>
+</div>
+</body></html>

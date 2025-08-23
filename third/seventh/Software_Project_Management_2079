@@ -1,0 +1,409 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Software Project Management 2079 2079</title>
+    </head>
+    <body>
+        <h1>Software Project Management 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60+20+20</p>
+        <p><strong>Pass Marks:</strong> 24 +8+8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two question.</h2><h3>Question 1</h3>
+<div><p><p>Perform Earned value analysis of the given project.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Activity</td>
+<td>Duration(days)</td>
+<td>Precedence</td>
+<td>Cost day(Rs)</td>
+<td>Total Cost</td>
+</tr>
+<tr>
+<td>A</td>
+<td>5</td>
+<td>_</td>
+<td>200</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>B</td>
+<td>5</td>
+<td>A</td>
+<td>200</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10</td>
+<td>A</td>
+<td>100</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>D</td>
+<td>5</td>
+<td>A, B</td>
+<td>200</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table></div>
+<p>The progress after the end of 10th day is as follows:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Activity</td>
+<td>%completion</td>
+<td>Incurred Cost</td>
+</tr>
+<tr>
+<td>A</td>
+<td>100</td>
+<td>1200</td>
+</tr>
+<tr>
+<td>B</td>
+<td>100</td>
+<td>800</td>
+</tr>
+<tr>
+<td>C</td>
+<td>40</td>
+<td>800</td>
+</tr>
+<tr>
+<td>D</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calculate SV, SPI, CV and CPI respectively.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><iframe loading="lazy" allowfullscreen webkitallowfullscreen width="100%" height="800px" src="https://hamrocsit.com/wp-content/plugins/pdfjs-viewer-hamrocsit/pdfjs/web/viewer.php?file=https://hamrocsit.com/wp-content/uploads/2024/01/79.pdf&#038;attachment_id=49874&#038;dButton=false&#038;pButton=false&#038;oButton=false&#038;sButton=false#zoom=auto&#038;pagemode=none&#038;_wpnonce=cd9fbd3433" title="Embedded PDF | Hamro CSIT" class="pdfjs-iframe"></iframe>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain why discounted cash flow techniques provide better criteria for project selection than net profit or return on investment. Highlight on the applicability of IRR with respect to NPV. How can it be calculated manually?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Discounted Cash Flow (DCF) techniques offer a better criteria for project selection compared to net profit or return on investment (ROI) for several reasons:<br />
+1. Time Value of Money: DCF techniques take into account the time value of money, acknowledging that a dollar today is worth more than a dollar in the future. This is crucial for accurately assessing long-term projects.<br />
+2. Comprehensive Cash Flow Consideration: Unlike net profit or ROI, which often focus on earnings or profitability, DCF methods consider all cash flows associated with a project,<br />
+including initial outlays, ongoing expenses, and final revenue streams.<br />
+3. Risk Assessment: DCF methods can incorporate risk assessments by adjusting the discount rate, providing a more realistic view of the project&#8217;s potential.<br />
+4. Objective Valuation: DCF methods provide a more objective basis for comparison between<br />
+projects, as they are based on projected cash flows rather than accounting profits, which can be subject to different accounting practices. IRR is the discount rate at which the NPV of all cash flows from a project equals zero. It&#8217;s often used to determine the profitability of potential investments. NPV calculates the present value of the project&#8217;s cash flows by discounting them at a predetermined rate, typically the cost of capital.<br />
+IRR and NPV:<br />
+&#8211; Consistency with Value Maximization: NPV is generally considered superior for making investment decisions as it directly measures the value added to the firm. A project with a positive NPV increases the firm&#8217;s value.<br />
+&#8211; Reinvestment Assumption: IRR assumes that the cash flows can be reinvested at the IRR, which might be unrealistically high. NPV uses a more conservative approach, assuming reinvestment at the firm&#8217;s cost of capital.<br />
+&#8211; Multiple IRRs and No IRR Issues: In projects with alternating cash flows, IRR can be misleading or impossible to calculate, whereas NPV does not have this issue. Calculating IRR manually involves a trial-and-error method, as it requires solving the equation<br />
+where the NPV equals zero. This can be done by:<br />
+1. Estimating an initial rate of return and calculating the NPV.<br />
+2. Adjusting the rate and recalculating the NPV until it is as close to zero as possible.<br />
+3. The IRR is the rate at which this condition is met.<br />
+This process can be quite complex and is more efficiently done with financial calculators or spreadsheet software, but it&#8217;s still possible to do it manually if necessary.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>List techniques that are used for progress visualization and explain them. Why do you think project monitoring and control is very challenging?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>After the collection of data by the manager about project progress, he/she needs some way of representing that data to greatest effect. Following are some of the methods for visualizing progress of a project:</p>
+<p>i. Gantt chart: It is one of the oldest and simplest technique for tracking project progress. It is an activity bar chart indicating scheduled activity dates.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29186" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-170214.png?resize=522%2C271&#038;ssl=1" alt="" width="522" height="271"></p>
+<p>ii. Slip chart: Slip chart provides more visual indication of those activities that are not progressing to schedule. The more slip line bends, grater the validation from the plan.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29188" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-170407.png?resize=521%2C274&#038;ssl=1" alt="" width="521" height="274"></p>
+<p>iii. Ball charts: Ball charts are even more striking way of showing whether or not the targets have met. Circles only contains two dates: The original and most recent target dates or the original and actual dates.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29189" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-16-170625.png?resize=321%2C222&#038;ssl=1" alt="" width="321" height="222"></p>
+<p>Project monitoring and control can be challenging due to several reasons:<br />
+1. Rapid Technological Changes: The technology evolves rapidly, with frequent updates in tools, platforms, and languages. Keeping a project aligned with the latest technologies while<br />
+maintaining progress can be challenging.<br />
+2. Human Factor: Software development is highly dependent on the skills, experience, and<br />
+collaboration of the development team. Team dynamics, communication issues, or turnover can significantly impact the project&#8217;s progress.<br />
+3. Quality Assurance: Ensuring the software meets quality standards and is free of bugs requires thorough testing, which can be time-consuming and difficult to plan accurately. Balancing quality with timely delivery is often one of the most challenging aspects of software project management.<br />
+4. User Acceptance: The success of software often depends on user acceptance, which can be<br />
+difficult to predict. Monitoring and adjusting the project to align with user feedback requires flexibility and can complicate project timelines</p>
+<p>&nbsp;</p>
+</div>
+<h2>Group B: Attempt any eight question.</h2><h3>Question 4</h3>
+<div><p><p>Which project would you choose from following projects and why?</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Year</td>
+<td>Project A</td>
+<td>Project B</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-40,000</td>
+<td>-80,000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>5,000</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>15,000</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5,000</td>
+<td>70,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>40,000</td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>50,000</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table></div>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Since, discount rate is not given. suppose it is 10% Now, we calculate discount for project A &amp; B using discount = cashflow/(1+r)^n, where r= discount rate = 0.10, n= year.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%;">Year</td>
+<td style="width: 25%;">Project A</td>
+<td style="width: 25%;">discount</td>
+<td style="width: 25%;">Cummulative discount</td>
+</tr>
+<tr>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">-40,000</td>
+<td style="width: 25%;">-40,000</td>
+<td style="width: 25%;">-40,000</td>
+</tr>
+<tr>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">5,000</td>
+<td style="width: 25%;">4545.45</td>
+<td style="width: 25%;">-35454.55</td>
+</tr>
+<tr>
+<td style="width: 25%;">2</td>
+<td style="width: 25%;">15,000</td>
+<td style="width: 25%;">12396.69</td>
+<td style="width: 25%;">-23057.86</td>
+</tr>
+<tr>
+<td style="width: 25%;">3</td>
+<td style="width: 25%;">5,000</td>
+<td style="width: 25%;">3756.57</td>
+<td style="width: 25%;">-19301.29</td>
+</tr>
+<tr>
+<td style="width: 25%;">4</td>
+<td style="width: 25%;">40,000</td>
+<td style="width: 25%;">27320.54</td>
+<td style="width: 25%;">8019.25</td>
+</tr>
+<tr>
+<td style="width: 25%;">5</td>
+<td style="width: 25%;">50,000</td>
+<td style="width: 25%;">31046.06</td>
+<td style="width: 25%;">39065.31</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since, Cummulative discount turns positive in 4th year. So, discounted payback period for project1 = previous year +(positive cummulative discount of previous year/discount of the 1st positive year)</p>
+<p>=3 + (19301.29/27320.54)</p>
+<p>=3.7 year</p>
+<p>Similarly for project B</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%;">Year</td>
+<td style="width: 25%;">Project B</td>
+<td style="width: 25%;">discount</td>
+<td style="width: 25%;">Cummulative disccount</td>
+</tr>
+<tr>
+<td style="width: 25%;">0</td>
+<td style="width: 25%;">-80,000</td>
+<td style="width: 25%;">-80000</td>
+<td style="width: 25%;">-80000</td>
+</tr>
+<tr>
+<td style="width: 25%;">1</td>
+<td style="width: 25%;">2,000</td>
+<td style="width: 25%;">1818.18</td>
+<td style="width: 25%;">-78181.82</td>
+</tr>
+<tr>
+<td style="width: 25%;">2</td>
+<td style="width: 25%;">10,000</td>
+<td style="width: 25%;">8264.46</td>
+<td style="width: 25%;">-69917.36</td>
+</tr>
+<tr>
+<td style="width: 25%;">3</td>
+<td style="width: 25%;">70,000</td>
+<td style="width: 25%;">52592.04</td>
+<td style="width: 25%;">-17325.32</td>
+</tr>
+<tr>
+<td style="width: 25%;">4</td>
+<td style="width: 25%;">50,000</td>
+<td style="width: 25%;">34150.67</td>
+<td style="width: 25%;">16825.35</td>
+</tr>
+<tr>
+<td style="width: 25%;">5</td>
+<td style="width: 25%;">50,000</td>
+<td style="width: 25%;">31046.07</td>
+<td style="width: 25%;">47871.42</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since, Cummulative discount turns +ve in 4th year</p>
+<p>So, discounted payback period = 3 +(17325.32/34150.67)</p>
+<p>=3.5 year</p>
+<p>Since, discounted payback period for project B is 3.5 year which is less than that of project A. Hence, project B will be more worthwhile because wee will recover initial cost faster than project A which will lead to more profit than project A. So I will choose project B.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What are different stages required to create a project schedule?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The primary stages required to create a project schedule:<br />
+1. Define Project Scope: Before you can schedule anything, you need to have a clear understanding of the project&#8217;s scope. This involves defining the project goals, deliverables, tasks, and boundaries.<br />
+2. Identify Activities and Tasks: Break down the project into smaller, manageable activities and tasks. This process, known as Work Breakdown Structure (WBS), involves listing out everything that needs to be done to complete the project.<br />
+3. Sequence Activities: Determine the order in which the tasks need to be completed. This involves identifying dependencies between tasks, such as which tasks must be completed before others can start (sequential dependencies), and which tasks can be done in parallel.<br />
+4. Estimate Resources and Durations: For each task, estimate the resources (labor, equipment, materials) required and the duration it will take to complete. This estimation should be as accurate as possible and can be based on historical data, expert opinions, or standardized formulas.<br />
+5. Assign Resources: Allocate the necessary resources to each task. This includes assigning team members to tasks, scheduling the use of equipment, and planning<br />
+for material availability.<br />
+6. Develop the Schedule: Using the information gathered, start creating the schedule. This is often done using project management software which can help in visualizing the schedule (e.g., Gantt charts), identifying critical paths, and making adjustments as needed.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain project management cycle.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Project Management Life Cycle</p>
+<p>It has four phases: each with specific activities and deliverables.</p>
+<p>1. Project Initiation</p>
+<p>In this phase, the project is defined at a broad level. The project&#8217;s purpose, scope, feasibility, and objectives are identified. The key activities are: Project charter development, stakeholder identification, preliminary cost and timeline estimates.</p>
+<p>2.Project Planning</p>
+<p>This phase involves detailed planning to establish the project scope, define objectives, outline tasks, and develop schedules and budgets. The key activities are: Work breakdown structure (WBS), resource planning, risk management, scheduling, budgeting, and communication planning.</p>
+<p>3. Project Execution</p>
+<p>This is the phase where the project plan is put into motion. Resources are allocated, teams are informed, and tasks are performed. The key activities are: Team collaboration, task execution, status meetings, quality assurance, and ongoing communication.</p>
+<p>4.Project Closure</p>
+<p>Here we formally close the project, ensuring that all objectives are met and stakeholders are satisfied.</p>
+<p>We evaluate the project performance and document everything about the project.</p>
+<p>We provide the project outputs to the client or end users.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Draw CPM network diagram for the following and identify the critical path.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Activity</td>
+<td>Duration(weeks)</td>
+<td>Precedence</td>
+</tr>
+<tr>
+<td>A</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>4</td>
+<td>A</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>D</td>
+<td>6</td>
+<td>B, C</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><iframe loading="lazy" allowfullscreen webkitallowfullscreen width="100%" height="800px" src="https://hamrocsit.com/wp-content/plugins/pdfjs-viewer-hamrocsit/pdfjs/web/viewer.php?file=https://hamrocsit.com/wp-content/uploads/2024/01/CamScanner-01-06-2025-12.24.pdf&#038;attachment_id=49861&#038;dButton=false&#038;pButton=false&#038;oButton=false&#038;sButton=false#zoom=auto&#038;pagemode=none&#038;_wpnonce=cd9fbd3433" title="Embedded PDF | Hamro CSIT" class="pdfjs-iframe"></iframe>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Highlight on different types of leadership styles.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Leadership style refers to the manner and approach of providing direction, implementing plans, and motivating people. Different leadership styles are suited to different contexts and individuals, and understanding these styles can help leaders become more effective<br />
+1. Task-Oriented Leadership (Focus on Work in Hand):<br />
+&#8211; This style emphasizes the tasks &amp; jobs that need to be done. Leaders who adopt this approach focus primarily on getting the job done &amp; can be very directive in their management style.<br />
+&#8211; Task-oriented leaders typically define the work &amp; roles required, put structures in place, plan, organize, and monitor work closely. They are often less concerned about the well-being of team members, prioritizing efficiency and productivity above all else.<br />
+2. People-Oriented Leadership (Focus on Relationships in Uncertain Situations):<br />
+-This style is more focused on the relationships within the team. Leaders adopting this style are supportive, and they prioritize the welfare and needs of the members of their team.<br />
+&#8211; People-oriented leaders work on building trust and respect, and creating a positive team<br />
+atmosphere. They encourage participation, collaboration, and are often good listeners.<br />
+3. Reduce Uncertainty (Focus on People-Oriented Tasks):<br />
+&#8211; This style combines elements of both task-oriented and people-oriented leadership, focusing<br />
+on reducing uncertainty in the team. Leaders adopting this style aim to clarify the path forward,<br />
+often by providing structure and support simultaneously.<br />
+&#8211; These leaders are proactive in identifying &amp; addressing areas of uncertainty and ambiguity.<br />
+They provide clear directions &amp; expectations while also being attentive to team members&#8217; needs and concerns. They often engage in constant communication, offering both guidance &amp; support.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Differentiate between verification and validation. List testing principles.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 288px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Verification</td>
+<td style="width: 50%; height: 24px;">Validation</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Verification process includes checking documents, design, code, and program.</td>
+<td style="width: 50%; height: 48px;">Validation process includes testing and validation of the  actual product.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It does not require executing the code.</td>
+<td style="width: 50%; height: 24px;">It require executing the code to test the usability and functionality of the product.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">It uses methods like reviews, walkthroughs, inspections, and desk-checking.</td>
+<td style="width: 50%; height: 48px;">It uses methods like Black box testing, white box testing, and non-functional testing.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">The quality assurance (QA) team would be engaged.</td>
+<td style="width: 50%; height: 48px;">The software testing team along with the QA team would be engaged.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">It targets internal aspects such as requirements, design, software architecture, database, and code.</td>
+<td style="width: 50%; height: 72px;">It targets the end product that is ready to be deployed.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It comes before validation.</td>
+<td style="width: 50%; height: 24px;">It comes after verification.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Testing Principles:</p>
+<p>1.  All tests should be tractable to customers requirements.</p>
+<p>2. Tests should be planned long before testing begins.</p>
+<p>3. Testing should begin &#8221; in the small&#8221; and progress toward testing &#8221; in the large&#8221;.</p>
+<p>4. 80% of all errors uncovered during testing will likely be tractable to 20% of all program components. That&#8217;s why testing should be done throughly.</p>
+<p>5. Testing should be done early to minimize errors.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is a baseline? Why Software Configuration Management is a critical activity?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A baseline refers to a defined reference point in the project&#8217;s lifecycle. This reference point serves as a standard or benchmark against which actual performance and progress can be measured. Baselines are established for various aspects of a project, including scope, cost, schedule, and quality. The purpose of establishing a baseline is to provide a stable basis for<br />
+assessing project performance and managing changes. Software Configuration Management (SCM) is a critical activity in the software development process due to its role in efficiently managing and controlling changes in the software. SCM<br />
+addresses the complexities of software development by ensuring that changes are made systematically and that the integrity and consistency of the software product are maintained over time. Some aspects of it are:<br />
+1. Managing Changes: Software projects are dynamic, often requiring changes in code, design, and other documents. SCM helps in tracking and controlling these changes, ensuring that they are made without disrupting the project&#8217;s progress.<br />
+2. Version Control: SCM involves version control, which is crucial for maintaining different versions of software products. It allows teams to manage multiple versions, revert to previous versions if necessary, and understand the evolution of the software over time.<br />
+3. Coordination Among Team Members: In a team environment, multiple developers work on different parts of the same software. SCM ensures that changes made by different team members are integrated smoothly, reducing the chances of conflicts or overwrites in the codebase.<br />
+4. Maintaining Consistency and Integrity: SCM maintains the consistency &amp; integrity of the software by ensuring that all components (code, documentation, tests, etc.) are synchronized &amp; updated. This is especially important in complex projects with many dependencies.<br />
+5. Facilitates Build and Release Management: SCM supports the build and release management process by keeping track of which versions of which components make up a given build or release. This is essential for efficient deployment and troubleshooting</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why PERT chart is an efficient technique? Explain estimated time, standard deviation and Z-value with respect to PERT chart.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Program Evaluation and Review Technique (PERT) chart is considered an efficient technique for project management due to its unique approach in handling uncertainties and complexities in project timelines. PERT charts are particularly useful in planning, scheduling, and coordinating tasks within large and complex projects. Here&#8217;s why PERT charts are efficient:<br />
+1. Handling Uncertainty: PERT involves estimating the shortest (optimistic), longest (pessimistic), and most likely durations for each task. This range of time estimates helps in dealing with uncertainty in project planning and execution.<br />
+2. Visual Representation: A PERT chart provides a visual representation of a project’s timeline by illustrating the tasks, their durations, and dependencies. This helps in identifying critical paths and potential bottlenecks.<br />
+3. Focus on Critical Path: By highlighting the critical path, PERT charts help project managers to focus on tasks that directly impact the project timeline, enabling more effective allocation of resources and attention.<br />
+4. Flexibility in Planning: PERT charts allow for adjustments and updates as more information becomes available or as conditions change, making them adaptable to dynamic project environments.</p>
+<p>Estimated Time: In PERT, the estimated time for each task is calculated using the formula: E = (O + 4M + P) / 6 ,Where E is the estimated time, O is the optimistic time, M is the most likely time, and P is the pessimistic time.</p>
+<p>Standard Deviation: The standard deviation in PERT is used to measure the uncertainty or variability of the time estimate. It is calculated as: SD = (P &#8211; O) / 6 This formula gives an idea of how spread out the times are over the range from optimistic to pessimistic. A higher standard deviation indicates greater uncertainty in the time estimates.</p>
+<p>Z-value (or Z-score): The Z-value in the context of PERT is used to assess the probability of completing the project within a certain time frame. It is calculated by comparing the desired project completion time (DCT) with the expected project completion time (EPT) and the standard deviation of the project’s critical path. The formula is: Z = (DCT &#8211; EPT) / (Standard Deviation of Critical Path) The Z-value can then be used to find the probability of completing the project on or before the desired time by referencing a standard normal distribution table</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Short Notes:</p>
+<p>a) Annual Worth</p>
+<p>b) Risk Exposure</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a) Annual Worth<br />
+The annual worth of a project is a financial measure used to evaluate the average annual economic impact of a project over its lifespan. It converts all of the project&#8217;s cash flows, including initial investment, ongoing operational costs, and revenues, into a uniform annual<br />
+value. This is accomplished by first identifying the project&#8217;s cash inflows and outflows and then discounting these amounts to their present value using a chosen discount rate, typically the cost of capital or desired rate of return. The concept is based on the time value of money, acknowledging that money available now is worth more than the same amount in the future due to its potential earning capacity. The annual worth calculation helps in comparing the economic viability of different projects, particularly when they have differing life spans and cash flow structures. A positive annual worth indicates a profitable project, while a negative value suggests it may not be financially viable. This uniform annual figure simplifies complex financial assessments by providing a consistent basis for<br />
+comparison, making it a valuable tool in capital budgeting and investment decision-making.</p>
+<p>b) Risk Exposure<br />
+Risk exposure management refers to the potential impact of risks on the project, considering both the likelihood of the risk occurring and the severity of its consequences. It&#8217;s a measure of the extent to which a project is threatened by a potential risk. Understanding risk exposure is crucial for effective risk management, as it helps project managers prioritize risks and develop strategies to mitigate them.<br />
+Risk exposure is typically calculated by multiplying the probability of a risk occurring by the impact of that risk:<br />
+Risk Exposure = Probability of Occurrence ×Impact<br />
+For example, if there&#8217;s a 40% chance of a critical software component failing (probability), which would lead to a two-month delay and Rs.100,000 in extra costs (impact), the risk exposure could be calculated in monetary terms</p>
+</div>
+</body></html>

@@ -1,0 +1,164 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NM Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>NM Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions:</h2><h3>Question 1</h3>
+<div><p><p>How can  Horner’s rule be used to evaluate the f(x) and f(x) of a polynomial at a given point? Explain. Write an algorithm and program to calculate a real root of a polynomial using Horner’s rule.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Horner&#8217;s Rule:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18119" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/horner.jpg?resize=594%2C542&#038;ssl=1" alt="" width="594" height="542"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18120" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/ex.jpg?resize=721%2C471&#038;ssl=1" alt="" width="721" height="471"></p>
+<p>Algorithm:</p>
+<p>1 Read order of polynomial, say &#8216;n&#8217;.</p>
+<p>2 Read coefficient of polynomial.</p>
+<p>for i=0 to n</p>
+<p>read a[i]</p>
+<p>end for</p>
+<p>3 Read point of evaluation, say x0.</p>
+<p>4 Set b[n]=a[n]</p>
+<p>5 Compute</p>
+<p>for i = n-1 to 0</p>
+<p>b[n-1]=a[n-1]+b[n]*x0</p>
+<p>end for</p>
+<p>6 Print b[0] as result</p>
+<p>7 End</p>
+<p>&nbsp;</p>
+<p>Program:</p>
+<pre class="lang:c decode:true">#include &lt;stdio.h&gt;
+
+int main()
+{
+     float a[100],sum=0,x;
+     int n,i;
+
+     printf("\nEnter degree of the polynomial X :: ");
+     scanf("%d",&amp;n);
+     printf("\nEnter coefficient's of the polynomial X :: \n");
+     for(i=n;i&gt;=0;i--)
+     {
+            printf("\nEnter Coefficient of [ X^%d ] :: ",i);
+            scanf("%f",&amp;a[i]);
+     }
+
+     printf("\nEnter the value of X :: ");
+     scanf("%f",&amp;x);
+
+     for(i=n;i&gt;0;i--)
+     {
+        sum=(sum+a[i])*x;
+     }
+
+     sum=sum+a[0];
+
+     printf("\nValue of the polynomial is = [ %f ]\n",sum);
+
+     return 0;
+}</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write matrix factorization? How can be used to solve a system of linear equations? Factorize the given matrix A and solve the system of equations Ax = b for given b using L and U matrices.</p>
+<p>A = \(\begin{bmatrix}1 & 2 & 3\\ 2 & 8 & 11\\ 3 & 22 & 36\end{bmatrix}\) and b = \(\begin{bmatrix}4\\ 12 \\28\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10508" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672242462589.jpg?resize=1700%2C2173&#038;ssl=1" alt="" width="1700" height="2173"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10509" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672242462582.jpg?resize=1680%2C2200&#038;ssl=1" alt="" width="1680" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10510" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672242462567.jpg?resize=1489%2C2200&#038;ssl=1" alt="" width="1489" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10511" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672242462575.jpg?resize=1700%2C2185&#038;ssl=1" alt="" width="1700" height="2185"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is a higher-order differential equation? How can you solve the higher-order differential equation? Explain. Solve the following differential equation for 1 ≤ x ≥ 2, taking h = 0.25</p>
+<p>\(\frac{d^2y}{dx^2} + 3\frac{dy}{dx} + 5y = 0\), width y(1) = 1 and y<sup>‘</sup>(1) = 2</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10504" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672245934222.jpg?resize=1618%2C2200&#038;ssl=1" alt="" width="1618" height="2200"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10506" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672245934212.jpg?resize=1632%2C2200&#038;ssl=1" alt="" width="1632" height="2200"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10505" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672245934203.jpg?resize=1605%2C2200&#038;ssl=1" alt="" width="1605" height="2200"></p>
+</div>
+<h2>Section B: Attempt any EIGHT questions:</h2><h3>Question 4</h3>
+<div><p><p>How the half-interval method can be estimate a root of a non-linear equation? Find a real root of the following equation using the half-interval method to correct up to two decimal places.</p>
+<p>x<sup>2</sup> – e<sup>-x</sup> – x = 1</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10498" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672247738626.jpg?resize=1690%2C2200&#038;ssl=1" alt="" width="1690" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10499" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672247738617.jpg?resize=1620%2C2200&#038;ssl=1" alt="" width="1620" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10500" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672247738609.jpg?resize=1317%2C2200&#038;ssl=1" alt="" width="1317" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10501" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672247738600.jpg?resize=1564%2C2200&#038;ssl=1" alt="" width="1564" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10502" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672247738591.jpg?resize=1700%2C1094&#038;ssl=1" alt="" width="1700" height="1094"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Calculate the real root of the given equation using fixed point iteration correct up to 3 significant figures.</p>
+<p>2x<sup>3</sup> – 2x = 5</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18236" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230602_181842_CamScanner.jpg?resize=926%2C1082&#038;ssl=1" alt="" width="926" height="1082"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18237" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230602_181909_CamScanner.jpg?resize=932%2C454&#038;ssl=1" alt="" width="932" height="454"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is Newton’s interpolation? Obtain the divided difference table from the following data set and estimate the f(x) at x = 2 and x = 5.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>x</td>
+<td>3.2</td>
+<td>2.7</td>
+<td>1.0</td>
+<td>4.8</td>
+<td>5.6</td>
+</tr>
+<tr>
+<td>f(x)</td>
+<td>22.0</td>
+<td>17.8</td>
+<td>14.2</td>
+<td>38.3</td>
+<td>51.7</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23694" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20230822_153539_CamScanner.jpg?resize=930%2C1192&#038;ssl=1" alt="" width="930" height="1192"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is linear regression? Fit the linear function to the following data</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>x</td>
+<td>1.0</td>
+<td>1.2</td>
+<td>1.4</td>
+<td>1.6</td>
+<td>1.8</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>f(x)</td>
+<td>2.0</td>
+<td>2.6</td>
+<td>3.9</td>
+<td>6.0</td>
+<td>9.3</td>
+<td>15</td>
+<td>20.6</td>
+<td>30.4</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-10370" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/4_1.jpg?resize=686%2C1021&#038;ssl=1" alt="" width="686" height="1021"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-10371" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/4_2.jpg?resize=682%2C923&#038;ssl=1" alt="" width="682" height="923"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What are the problems with polynomial interpolation for a large number of data set? How such problems are addressed? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Polynomial interpolation is a method of estimating the value of a function at a certain point based on the known values of the function at other points. One of the main problems with polynomial interpolation is that it can become unstable as the number of data points increases. This is because polynomial interpolation involves fitting a polynomial curve to the data points, and as the number of data points increases, the polynomial curve may become more complex and may not accurately represent the underlying function.</p>
+<p>&nbsp;</p>
+<p>One way to address this problem is to use a technique called regularization, which involves adding a penalty term to the polynomial interpolation equation to discourage overly complex solutions. This can help to reduce overfitting, which is when the polynomial curve fits the data points too closely and does not generalize well to new data.</p>
+<p>&nbsp;</p>
+<p>Another method for addressing the problem of instability in polynomial interpolation is to use a different interpolation technique, such as spline interpolation or smoothing spline interpolation. These methods involve fitting a smooth curve to the data points rather than a polynomial curve, which can be more stable and accurate for large datasets.</p>
+<p>&nbsp;</p>
+<p>For example, consider a dataset with 50 data points that are evenly spaced along the x-axis. If we try to fit a polynomial curve to these data points, the resulting curve may be highly complex and may not accurately represent the underlying function. However, if we use spline interpolation or smoothing spline interpolation instead, we may obtain a smoother and more stable curve that is more representative of the underlying function.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><div class="hamrocsit_news_card">
+<div class="description">
+<p>Evaluate the following integration using Romberg integration.</p>
+<p>\(\int_{0}^{1} \frac{sin^2 x}{x} dx\)</p>
+</div>
+</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25864" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/SmartSelect_20231001_164125_CamScanner.jpg?resize=885%2C614&#038;ssl=1" alt="" width="885" height="614"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Solve the following set of linear equations using the Gauss-Jordan method.</p>
+<p>x<sub>2</sub> + 2x<sub>3</sub> + 3x<sub>4</sub> = 9</p>
+<p>7x<sub>1</sub> + 6x<sub>2</sub> + 5x<sub>3</sub> + 4x<sub>4</sub> = 33</p>
+<p>8x<sub>1</sub> + 9x<sub>2</sub> + x<sub>4</sub> = 27</p>
+<p>2x<sub>1</sub> + 5x<sub>2</sub> + 4x<sub>3</sub> + 3x<sub>4</sub> = 23</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10487" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672252909535.jpg?resize=1690%2C2200&#038;ssl=1" alt="" width="1690" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10488" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672252909526.jpg?resize=1700%2C2166&#038;ssl=1" alt="" width="1700" height="2166"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10489" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672252909520.jpg?resize=1617%2C2200&#038;ssl=1" alt="" width="1617" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10490" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672252909511.jpg?resize=1534%2C2200&#038;ssl=1" alt="" width="1534" height="2200"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Solve the following differential equation for 1 ≤ x ≤ 2, taking h = 0.25 using Heun’s method.</p>
+<p>y<sup>‘</sup>(x) + x<sup>2</sup>y = 3x, with y(1) = 1</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10420" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/11_1.jpg?resize=1700%2C2138&#038;ssl=1" alt="" width="1700" height="2138"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10421" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/11_2.jpg?resize=1700%2C1910&#038;ssl=1" alt="" width="1700" height="1910"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10422" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/11_3.jpg?resize=1700%2C1990&#038;ssl=1" alt="" width="1700" height="1990"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10423" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/11_4.jpg?resize=1700%2C1153&#038;ssl=1" alt="" width="1700" height="1153"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Consider a metallic plate of size 90cm by 90cm. The two adjacent sides of the plate are maintained at a temperature of 100<sup>0</sup>C and the remaining two adjacent sides are held at 200<sup>0</sup>C. Calculate the steady-state temperature at interior points assuming a grid size of 30 cm by 30 cm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-10482" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672255966740.jpg?resize=715%2C960&#038;ssl=1" alt="" width="715" height="960"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10483" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672255966731.jpg?resize=1635%2C2200&#038;ssl=1" alt="" width="1635" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10484" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672255966722.jpg?resize=1326%2C2200&#038;ssl=1" alt="" width="1326" height="2200"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-10485" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/12/1672255966712.jpg?resize=1485%2C2200&#038;ssl=1" alt="" width="1485" height="2200"></p>
+</div>
+</body></html>

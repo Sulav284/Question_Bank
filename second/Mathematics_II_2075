@@ -1,0 +1,336 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>Math Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 80</p>
+        <p><strong>Pass Marks:</strong> 32</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any three questions:(3 x 10 = 30)</h2><h3>Question 1</h3>
+<div><p><p>When a system of linear equation is consistent and inconsistent? Give an example for each. Test the consistency and solve: x + y + z = 4, x + 2y + 2z = 2, 2x + 2y + z = 5.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A system of linear Equation is consistent if the right most column of the augmented matrix is not a pivot column i.e. if Echelon form of the augmented matrix has not row of the augmented matrix has not row of the form [0  0   &#8230;&#8230;&#8230;&#8230;&#8230;  0 : k]</p>
+<p>where k  is non-zero value.</p>
+<p>otherwise, it is said to be inconsistent</p>
+<p>Let us consider two augmented matrices in Echelon form</p>
+<p>\(\begin{bmatrix}1 &amp; 2 &amp; 3 &amp; : &amp; 2\\ 0 &amp; 3 &amp; 4 &amp; : &amp; 3\\ 0 &amp; 0 &amp; 0 &amp; : &amp; 8\end{bmatrix}\)</p>
+<p>It is Inconsistent.</p>
+<p>\(\begin{bmatrix}1 &amp; 3 &amp; : &amp; 8\\ 0 &amp; 1 &amp; : &amp; 3\\ 0 &amp; 3 &amp; : &amp; 6\end{bmatrix}\)</p>
+<p>It is Consistent.</p>
+<p>Given system of linear Equation:</p>
+<p>x + y + z = 4</p>
+<p>x + 2y + 2z = 2</p>
+<p>2x + 2y + z = 5</p>
+<p>writing in matrix form</p>
+<p>\(\begin{bmatrix}1 &amp; 1 &amp; 1\\ 1 &amp; 2 &amp; 2\\ 2 &amp; 2 &amp; 1\end{bmatrix}\) \(\begin{bmatrix}x\\ y\\ z\end{bmatrix}\) = \(\begin{bmatrix}4\\ 2\\ 5\end{bmatrix}\)</p>
+<p>The augmented matrix is</p>
+<p>\(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; : &amp; 4\\ 1 &amp; 2 &amp; 2 &amp; : &amp; 2\\ 2 &amp; 2 &amp; 1 &amp; : &amp; 5\end{bmatrix}\)</p>
+<p>Apply R2 → R2 &#8211; R1,   R3 → R3 &#8211; 2R1</p>
+<p>~ \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; : &amp; 4\\ 0 &amp; 1 &amp; 1 &amp; : &amp; -2\\ 0 &amp; 0 &amp; -1 &amp; : &amp; -3\end{bmatrix}\)</p>
+<p>clearly, We can see the system is consitent. Now, row reducing it to reduced Echelon form</p>
+<p>Apply R1 → R1 &#8211; R2,   R3 → (-1) R3</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; 6\\ 0 &amp; 1 &amp; 1 &amp; : &amp; -2\\ 0 &amp; 0 &amp; 1 &amp; : &amp; 3\end{bmatrix}\)</p>
+<p>Apply R2 → R2 &#8211; R3</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; 6\\ 0 &amp; 1 &amp; 0 &amp; : &amp; -5\\ 0 &amp; 0 &amp; 1 &amp; : &amp; 3\end{bmatrix}\)</p>
+<p>From this we get</p>
+<p>x = 6</p>
+<p>y = -5</p>
+<p>z = 3</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is the condition of a matrix to have an inverse? Find the inverse of the matrix \(A = \begin{bmatrix} 5 & 1 & 2\\ 1 & 0 & 3\\ 4 & -3 & 8 \end{bmatrix}\)  If it exists.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The condition of a matrix to have an inverse is If A is an invertible matrix then there is a matrix C such that</p>
+<p style="text-align: center;">AC = I = CA</p>
+<p>In such case, C is called inverse of A and write as C = A<sup>-1</sup></p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Given</p>
+<p>A = \(\begin{bmatrix}1 &amp; -2 &amp; -1\\ -1 &amp; 5 &amp; 6\\ 5 &amp; -4 &amp; 5\end{bmatrix}\)</p>
+<p>~ [A:I]</p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ -1 &amp; 5 &amp; 6 &amp; : &amp; 0 &amp; 1 &amp; 0\\ 5 &amp; -4 &amp; 5 &amp; : &amp; 0 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>Applying Reduced Echelon Form</p>
+<p>R<sub>2</sub> → R<sub>2</sub> + R<sub>1</sub>,   R<sub>3</sub> → R<sub>3</sub> &#8211; 5R<sub>1</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 3 &amp; 5 &amp; : &amp; 1 &amp; 1 &amp; 0\\ 0 &amp; 6 &amp; 10 &amp; : &amp; -5 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>\(R_2 \to \frac{1}{3} R_2\)</p>
+<p>\(~\begin{bmatrix}1 &amp; -2 &amp; -1 &amp; : &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; \frac{5}{3} &amp; : &amp; \frac{1}{3} &amp; \frac{1}{3} &amp; 0\\ 0 &amp; 6 &amp; 10 &amp; : &amp; -5 &amp; 0 &amp; 1\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> + 2R<sub>2</sub> ,   R<sub>3</sub> → R<sub>3</sub> &#8211; 6R<sub>2</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; 0 &amp; \frac{7}{3} &amp; : &amp; \frac{5}{3} &amp; \frac{2}{3} &amp; 0\\ 0 &amp; 1 &amp; \frac{5}{3} &amp; : &amp; \frac{1}{3} &amp; \frac{1}{3} &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; : &amp; -7 &amp; -2 &amp; 1\end{bmatrix}\)</p>
+<p>To have inverse, We should have one pivot element in each row but in above matrix R<sub>3</sub> doesn&#8217;t have pivot element. So,  Inverse of Matrix doesn&#8217;t exists.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define linearly independent set of vectors with an example. Show that the vectors (1, 4, 3), (0, 3, 1) and (3, -5, 4) are linearly independent. Do they form a basis? Justify.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The given three vector are</p>
+<p>V<sub>1</sub> = (1, -4, 3), V<sub>2</sub> = (0, 3, 1) and V<sub>3</sub> = (3, -5, 4)</p>
+<p>to check its independency</p>
+<p>We have an augmented form</p>
+<p>\(~\begin{bmatrix}1 &amp; -4 &amp; 3 &amp; : &amp; 0\\ 0 &amp; 3 &amp; 1 &amp; : &amp; 0\\ 3 &amp; -5 &amp; 4 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>3</sub> → R<sub>3</sub> &#8211; 3R<sub>1</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; -4 &amp; 3 &amp; : &amp; 0\\ 0 &amp; 3 &amp; 1 &amp; : &amp; 0\\0 &amp; 7 &amp; -5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>\(R_2 \to \frac{1}{3} R_2\)</p>
+<p>\(~\begin{bmatrix}1 &amp; -4 &amp; 3 &amp; : &amp; 0\\ 0 &amp; 1 &amp; \frac{1}{3} &amp; : &amp; 0\\0 &amp; 7 &amp; -5 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R<sub>1</sub> → R<sub>1</sub> + 4R<sub>2</sub>,   R<sub>3</sub> → R<sub>3</sub> &#8211; 7R<sub>2</sub></p>
+<p>\(~\begin{bmatrix}1 &amp; 0 &amp; \frac{13}{3} &amp; : &amp; 0\\ 0 &amp; 1 &amp; \frac{1}{3} &amp; : &amp; 0\\0 &amp; 0 &amp; \frac{-22}{3}&amp; : &amp; 0\end{bmatrix}\)</p>
+<p>\(R_3 \to \frac{-3}{22} R_3\)</p>
+<p>\(~\begin{bmatrix}1 &amp; 0 &amp; \frac{13}{3} &amp; : &amp; 0\\ 0 &amp; 1 &amp; \frac{1}{3} &amp; : &amp; 0\\0 &amp; 0 &amp; 1&amp; : &amp; 0\end{bmatrix}\)</p>
+<p>\(R_1 \to R_1 &#8211; \frac{13}{2}R_3\) ,  \(R_1 \to R_2 &#8211; \frac{1}{3}R_3\)</p>
+<p>\(~\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; : &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; : &amp; 0\\0 &amp; 0 &amp; 1&amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Hence, It is linearly independent.</p>
+<p>Yes, they form basis because there is pivot element in each Row.</p>
+</div>
+<h3>Question 4</h3>
+<div><p><p>Find the least-square solution of Ax = b for A = \(\begin{bmatrix}1 & 3 & 5\\ 1 & 1 & 0\\ 1 & 1 & 2\\ 1 & 3 & 3\end{bmatrix}\) and b= \(\begin{pmatrix}3\\ 5\\ 7\\ 3\end{pmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Least Square Solution of Ax = b</p>
+<p>Where A= \(\begin{bmatrix}1 &amp; 3 &amp; 5\\ 1 &amp; 1 &amp; 0\\ 1 &amp; 1 &amp; 2\\1 &amp; 3 &amp; 3\end{bmatrix}\), b = \(\begin{bmatrix}3\\5\\7\\3\end{bmatrix}\)</p>
+<p>Here, Ax = b</p>
+<p>A<sup>T</sup>Ax = A<sup>T</sup>b</p>
+<p>∴ x = (A<sup>T</sup>A)<sup>-1</sup> A<sup>T</sup>B   &#8212;&#8212;&#8212; (i)</p>
+<p>Now,</p>
+<p>A<sup>T</sup>A = \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\\ 3 &amp; 1 &amp; 1 &amp; 3\\ 5 &amp; 0 &amp; 2 &amp; 3\end{bmatrix}\)\(\begin{bmatrix}1 &amp; 3 &amp; 5\\ 1 &amp; 1 &amp; 0\\ 1 &amp; 1 &amp; 2\\1 &amp; 3 &amp; 3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}1+1+1+1 &amp; 3+1+1+3 &amp; 5+0+2+3\\ 3+1+1+3 &amp; 9+1+1+9 &amp; 15+0+2+9\\ 5+0+2+3 &amp; 15+0+2+9 &amp; 25+0+4+9\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}4 &amp; 8 &amp; 10\\ 8 &amp; 20 &amp; 26\\ 10 &amp; 26 &amp; 38\end{bmatrix}\)</p>
+<p>A<sup>T</sup>B = \(\begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\\ 3 &amp; 1 &amp; 1 &amp; 3\\ 5 &amp; 0 &amp; 2 &amp; 3\end{bmatrix}\) \(\begin{bmatrix}3\\5\\7\\3\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}18\\20\\3\end{bmatrix}\)</p>
+<p>Now (A<sup>T</sup>A)<sup>-1</sup></p>
+<p>det(A<sup>T</sup>A) = \(\begin{vmatrix}4 &amp; 8 &amp; 10\\ 8 &amp; 20 &amp; 26\\ 10 &amp; 26 &amp; 38\end{vmatrix}\)</p>
+<p>= 4\(\begin{vmatrix}20 &amp; 26\\ 26 &amp; 38\end{vmatrix}\) &#8211; 8\(\begin{vmatrix}8 &amp; 26\\ 10 &amp; 38\end{vmatrix}\) + 10\(\begin{vmatrix}8 &amp; 20\\ 10 &amp; 26\end{vmatrix}\)</p>
+<p>= 4 × 84 &#8211; 44 × 8 + 10 × 8</p>
+<p>= 64</p>
+<p>Now,</p>
+<p>a<sub>11</sub> = \(\begin{vmatrix}20 &amp; 26\\ 26 &amp; 38\end{vmatrix}\) = 84</p>
+<p>a<sub>12</sub> = -\(\begin{vmatrix}8 &amp; 26\\ 10 &amp; 38\end{vmatrix}\) = -44</p>
+<p>a<sub>13</sub> = \(\begin{vmatrix}8 &amp; 20\\ 10 &amp; 26\end{vmatrix}\) = 8</p>
+<p>a<sub>21</sub> = \(\begin{vmatrix}8 &amp; 10\\ 26 &amp; 38\end{vmatrix}\) = -44</p>
+<p>a<sub>22</sub> = \(\begin{vmatrix}4 &amp; 10\\ 10 &amp; 38\end{vmatrix}\) = 52</p>
+<p>a<sub>23</sub> = -\(\begin{vmatrix}4 &amp; 8\\ 10 &amp; 26\end{vmatrix}\) = -24</p>
+<p>a<sub>31</sub> = \(\begin{vmatrix}8 &amp; 10\\ 26 &amp; 38\end{vmatrix}\) = 44</p>
+<p>a<sub>32</sub> = -\(\begin{vmatrix}4 &amp; 10\\ 8 &amp; 26\end{vmatrix}\) = -24</p>
+<p>a<sub>33</sub> = \(\begin{vmatrix}4 &amp; 8\\8 &amp; 20\end{vmatrix}\) = 16</p>
+<p>i.e. \(\begin{bmatrix}84 &amp; -44 &amp; 8\\ -44 &amp; 52 &amp; -24\\ 44 &amp; -24 &amp; 16\end{bmatrix}\)</p>
+<p>Its transpose is</p>
+<p>\(\begin{bmatrix}84 &amp; -44 &amp; 44\\ -44 &amp; 52 &amp; -24\\ 8 &amp; -24 &amp; 16\end{bmatrix}\)</p>
+<p>∴ (A<sup>T</sup>A)<sup>-1</sup> = \(\frac{1}{64} \begin{bmatrix}84 &amp; -44 &amp; 44\\ -44 &amp; 52 &amp; -24\\ 8 &amp; -24 &amp; 16\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}\frac{21}{16} &amp; \frac{-11}{16} &amp; \frac{1}{8}\\ \frac{-11}{16} &amp; \frac{13}{16} &amp; \frac{-3}{8}\\ \frac{1}{8} &amp; \frac{-3}{8} &amp; \frac{1}{4}\end{bmatrix}\)</p>
+<p>From (i)</p>
+<p>x = (A<sup>T</sup>A)<sup>-1</sup> × A<sup>T</sup>B</p>
+<p>= \(\begin{bmatrix}\frac{21}{16} &amp; \frac{-11}{16} &amp; \frac{1}{8}\\ \frac{-11}{16} &amp; \frac{13}{16} &amp; \frac{-3}{8}\\ \frac{1}{8} &amp; \frac{-3}{8} &amp; \frac{1}{4}\end{bmatrix}\) \(\begin{bmatrix}18\\20\\3\end{bmatrix}\)</p>
+<p>∴ x = \(\begin{bmatrix}\frac{31}{4}\\\frac{-9}{4}\\\frac{1}{2}\end{bmatrix}\) is the solution</p>
+</div>
+<h2>Group B: Attempt any ten questions: (5 x 10 = 50)</h2><h3>Question 5</h3>
+<div><p><p>Change into reduce echelon form of the matrix \(\begin{pmatrix}0 & 3 & -6\\ 3 & -7 & 8\\ 3 & -9 & 12\end{pmatrix}\).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>\(\begin{bmatrix}0 &amp; 3 &amp; -6\\ 3 &amp; -7 &amp; 8\\ 3 &amp; -9 &amp; 12\end{bmatrix}\)</p>
+<p>Apply R1 ↔ R3</p>
+<p>\(\begin{bmatrix}3 &amp; -9 &amp; 12\\3 &amp; -7 &amp; 8\\0 &amp; 3 &amp; -6\end{bmatrix}\)</p>
+<p>Apply R1 → 1/3 R1 ,   R3 → 1/3 R3</p>
+<p>~ \(\begin{bmatrix}1 &amp; -3 &amp; 4\\3 &amp; -7 &amp; 8\\0 &amp; 1 &amp; -2\end{bmatrix}\)</p>
+<p>Apply, R2 → R2 &#8211; 3R1</p>
+<p>~ \(\begin{bmatrix}1 &amp; -3 &amp; 4\\0 &amp; 2 &amp; -4\\0 &amp; 1 &amp; -2\end{bmatrix}\)</p>
+<p>Apply, R2 → 1/2 R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; -3 &amp; 4\\0 &amp; 1 &amp; -2\\0 &amp; 1 &amp; -2\end{bmatrix}\)</p>
+<p>Apply R3 → R3 &#8211; R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; -3 &amp; 4\\0 &amp; 1 &amp; -2\\0 &amp; 0 &amp; 0\end{bmatrix}\)</p>
+<p>Apply R1 → R1 + 3R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; 0 &amp; -2\\0 &amp; 1 &amp; -2\\0 &amp; 0 &amp; 0\end{bmatrix}\)</p>
+<p>Which is reduced echelon form</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define linear transformation with an example. Is a transformation defined by T(x, y) = (3x + y, 5x + 7y, x + 3y) linear? Justify.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>i) Solution:</p>
+<p>T(x, y) = (3x + y, 5x + 2y, x + 3y)</p>
+<p>Let u = (x1, y1)</p>
+<p>v = (x2, y2)</p>
+<p>Now,</p>
+<p>T(\(\vec{u} + \vec{v}\)) = T(x1 + x2, y1 + y2)</p>
+<p>= (3(x1 + x2) + y1 + y2), 5(x1 + x2) + 2(y1 + y2), (x1 + x2) + 3(y1 + y2))</p>
+<p>∴ T(u + v) = (3&#215;1 + 3&#215;2 + y1 + y2, 5&#215;1 + 5&#215;2 + 2y1 + 2y2, x1 + x3 + 3y1 + 3y2,)</p>
+<p>Now,</p>
+<p>\(T(\vec{u}) + T(\vec{v})\) = T(x1, y1) + T(x2, y2)</p>
+<p>= (3&#215;1 + y1, 5&#215;1 + 2y1, x1 + 3y1) + (3&#215;2 + y2, 5&#215;2 + 2y2, x2 + 3y2)</p>
+<p>= (3&#215;1 + 3&#215;2 + y1 + y2, 5&#215;1 + 2y1 + 5&#215;2, 2y2, x1 + x2 + 3y1 + 3y2)</p>
+<p>Since, T(\(\vec{u} + \vec{v}\)) = \(T(\vec{u}) + T(\vec{v})\)</p>
+<p>So, it is linear transformation</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Let \(A = \begin{pmatrix}-1 & -2\\ 5 & 9\end{pmatrix}\) and \(b = \begin{pmatrix}9 & 2\\ k & -1\end{pmatrix}\). What value (s) of k if any will make AB = BA?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>By the Questions, AB = BA</p>
+<p>\(\begin{bmatrix}-1 &amp; -2\\ 5 &amp; -9\end{bmatrix}\)\(\begin{bmatrix}9 &amp; 2\\ k &amp; -1\end{bmatrix}\) = \(\begin{bmatrix}9 &amp; 2\\ k &amp; -1\end{bmatrix}\) \(\begin{bmatrix}-1 &amp; -2\\ 5 &amp; -9\end{bmatrix}\)</p>
+<p>\(\begin{bmatrix}-9-2k &amp; -2+2\\ 45+9k &amp; 10-9\end{bmatrix}\) = \(\begin{bmatrix}-9+10 &amp; -18+18\\ -k-5 &amp; -2k-9\end{bmatrix}\)</p>
+<p>\(\begin{bmatrix}-9-2k &amp; 0\\ 45+9k &amp; 1\end{bmatrix}\) = \(\begin{bmatrix}1 &amp; 0\\ -k-5 &amp; -2k-9\end{bmatrix}\)</p>
+<p>Equating the corresponding elements</p>
+<p>-9 &#8211; 2k = 1</p>
+<p>∴ k = -5</p>
+<p>-2k &#8211; 9 = 1</p>
+<p>∴ k = -5</p>
+<p>45 + 9k = -k &#8211; 5</p>
+<p>∴ k  = -5</p>
+<p>∴ AB = BA when k = -5</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define determinant. Evaluate without expanding \(\begin{vmatrix}1 & 5 & -6\\ -1 & -4 & 4\\ -2 & -7 & 9\end{vmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The determinant of a matric is a scalar value that is a function of the entries of a square matrix. It is basically a special number that is calculated from a square matric.</p>
+<p>\(\begin{vmatrix}1 &amp; 5 &amp; -6\\ -1 &amp; -4 &amp; 4\\ -2 &amp; -7 &amp; 9\end{vmatrix}\)</p>
+<p>Apply R2 🡒 R2 + R1, R3 🡒 R3 + R1</p>
+<p>~ \(\begin{vmatrix}1 &amp; 5 &amp; -6\\ 0 &amp; 1 &amp; -2\\ 0 &amp; 3 &amp; -3\end{vmatrix}\)</p>
+<p>Apply R3 🡒 R3 &#8211; 3R2</p>
+<p>~ \(\begin{vmatrix}1 &amp; 5 &amp; -6\\ 0 &amp; 1 &amp; -2\\ 0 &amp; 0 &amp; 3\end{vmatrix}\)</p>
+<p>Since, it is a upper-triangular matrix</p>
+<p>so, Determinant = 1 x 1 x 3 = 3</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define subspace of a vector space. Let \(H = \left \{ \begin{pmatrix}s\\ t\\ 0\end{pmatrix}:s,t \in R \right \}\). Show that H is a subspace of:</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let V be a vector space over a field k, then a non empty subset w of vector space v is saied to be subspace of v if it statisfies the following properties</p>
+<ol style="list-style-type:decimal;">
+<li>∀ u, v ∈ W,   u + v ∈ w  [Closure under addition]</li>
+<li>∀ u ∈ W,   c ∈ w, cu ∈ w  [Closure under scalar multiplication]</li>
+<li>The zero vector is in w i.e. 0 ∈ w</li>
+</ol>
+<p>Given,</p>
+<p>H = \(\left\{ \begin{bmatrix}s\\ t\\ 0\end{bmatrix} \right.\)     s, t ∈ R</p>
+<p>To show H is a subspace of R<sup>3</sup>. First we check, if H is a subsset of R<sup>3</sup>.</p>
+<p>Obviously, H ⊆ R<sup>3</sup></p>
+<p>Now,</p>
+<p><strong><span style="text-decoration: underline;">* Closure Under Addition</span></strong></p>
+<p>Let H1 = \(\begin{bmatrix}s1\\ t1\\ 0\end{bmatrix}\), H2 = \(\begin{bmatrix}s2\\ t2\\ 0\end{bmatrix}\)  ∈ H</p>
+<p>∴ H1 + H2 = \(\begin{bmatrix}s1 + s2\\ t1 + t2\\ 0\end{bmatrix}\) also ∈ H</p>
+<p>So, it is closed under addition</p>
+<p><span style="text-decoration: underline;"><strong>* Closure under scalar multiplication</strong></span></p>
+<p>Here, H = \(\begin{bmatrix}s\\ t\\ 0\end{bmatrix}\)</p>
+<p>Let, c ∈ H</p>
+<p>∴ cH = c \(\begin{bmatrix}s\\ t\\ 0\end{bmatrix}\) = \(\begin{bmatrix}cs\\ ct\\ 0\end{bmatrix}\) ∈ H</p>
+<p>so, it closed under scalar multiplication</p>
+<p><span style="text-decoration: underline;"><strong>* Obviously</strong></span></p>
+<p>0 = \(\begin{bmatrix}0\\ 0\\ 0\end{bmatrix}\) ∈ H</p>
+<p>Hence, H is a subset of R<sup>3</sup></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Find the dimension of the null space and column space of \(A = \begin{bmatrix}-3 & 6 & -1 & 1 & -7\\ 1 & -2 & 2 & 3 & -1\\ 2 & -4 & 5 & 8 & -4\end{bmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let the homogeneous equation be</p>
+<p>Ax = 0 &#8212; (i)</p>
+<p>The augmented matrix for (i) is</p>
+<p>\(\begin{bmatrix}-3 &amp; 6 &amp; -1 &amp; 1 &amp; -7 &amp; : &amp; 0\\ 1 &amp; -2 &amp; 2 &amp; 3 &amp; -1 &amp; : &amp; 0\\ -2 &amp; -4 &amp; 5 &amp; 8 &amp; -4 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>Reducing to Echelon form</p>
+<p>Apply R1 → &#8211; 1/3 R1</p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; \frac{1}{3} &amp; \frac{-1}{3} &amp; \frac{7}{3} &amp; : &amp; 0\\ 1 &amp; -2 &amp; 2 &amp; 3 &amp; -1 &amp; : &amp; 0\\ 2 &amp; -4 &amp; 4 &amp; 8 &amp; -4 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R2 → R2 &#8211; R1 and R3 → R3 &#8211; 2R1</p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; \frac{1}{3} &amp; \frac{-1}{3} &amp; \frac{7}{3} &amp; : &amp; 0\\ 0 &amp; 0 &amp; \frac{5}{3} &amp; \frac{10}{3} &amp; \frac{-10}{3} &amp; : &amp; 0\\ 0 &amp; 0 &amp; \frac{13}{3} &amp; \frac{26}{3} &amp; \frac{-26}{3} &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R2 → 3/5 R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; \frac{1}{3} &amp; \frac{-1}{3} &amp; \frac{7}{3} &amp; : &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 2 &amp; -2 &amp; : &amp; 0\\ 0 &amp; 0 &amp; \frac{13}{3} &amp; \frac{26}{3} &amp; \frac{-26}{3} &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>R3 → R3 &#8211; 13/3 R2,    R1 → R1 &#8211; 1/3R2</p>
+<p>~ \(\begin{bmatrix}1 &amp; -2 &amp; 0 &amp; -1 &amp; 3 &amp; : &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 2 &amp; -2 &amp; : &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; : &amp; 0\end{bmatrix}\)</p>
+<p>In reduced echelon form of A, there are three fre variables x2, x4 and x5. So, the dimension of NulA is 3. also, it has two pivot column that is first and third column. So, the dimension of colA is 2.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Find the eigenvalues of the matrix \(\begin{pmatrix}6 & 3 & -8\\ 0 & -2 & 0\\ 1 & 0 & -3\end{pmatrix}\)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A = \(\begin{bmatrix}6 &amp; 3 &amp; -8\\ 0 &amp; -2 &amp; 0 \\1 &amp; 0 &amp; &#8211; 3 \end{bmatrix}\)</p>
+<p>The characteristics equation is</p>
+<p style="text-align: center;">|A &#8211; λI| = 0</p>
+<p>Now,</p>
+<p>A &#8211; λI = \(\begin{bmatrix}6 &amp; 3 &amp; -8\\ 0 &amp; -2 &amp; 0 \\1 &amp; 0 &amp; &#8211; 3 \end{bmatrix}\) &#8211; λ \(\begin{bmatrix}1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; 1 \end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}6 &amp; 3 &amp; -8\\ 0 &amp; -2 &amp; 0 \\1 &amp; 0 &amp; &#8211; 3 \end{bmatrix}\) &#8211; \(\begin{bmatrix}λ &amp; 0 &amp; 0\\ 0 &amp; λ &amp; 0 \\0 &amp; 0 &amp;  λ\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}6-λ &amp; 3 &amp; -8\\ 0 &amp; -2-λ &amp; 0 \\1 &amp; 0 &amp; &#8211; 3-λ \end{bmatrix}\)</p>
+<p>Now,</p>
+<p>|A &#8211; λI| = 0</p>
+<p>\(\begin{bmatrix}6-λ &amp; 3 &amp; -8\\ 0 &amp; -2-λ &amp; 0 \\1 &amp; 0 &amp; &#8211; 3-λ \end{bmatrix}\) = 0</p>
+<p>6-λ\(\begin{bmatrix}-2-λ &amp; 0\\ 0 &amp; -3-λ\end{bmatrix}\) + 1\(\begin{bmatrix}3 &amp; -8\\ -2-λ &amp; 0\end{bmatrix}\) = 0</p>
+<p>or, (6 &#8211; λ)(-2-λ)(-3-λ) + (0 &#8211; (16 + 8λ)) = 0</p>
+<p>or, (6 &#8211; λ)(-2-λ)(-3-λ) + 8(-2 &#8211; λ) = 0</p>
+<p>or, (-2 &#8211; λ) {(6 &#8211; λ)(-3-λ) + 8} = 0</p>
+<p>or, (-2 &#8211; λ) {-18 &#8211; 6λ + 3λ + λ<sup>2</sup> + 8} = 0</p>
+<p>or, (-2 &#8211; λ) ( λ<sup>2</sup> &#8211; 3λ &#8211; 10) = 0</p>
+<p>Either,</p>
+<p>-2-λ = 0</p>
+<p>λ = 2</p>
+<p>or,</p>
+<p>λ<sup>2</sup> &#8211; 3λ &#8211; 10 = 0</p>
+<p>or, λ<sup>2</sup> &#8211; (5 &#8211; 2)λ &#8211; 10 = 0</p>
+<p>or, λ<sup>2</sup> &#8211; 5λ + 2λ &#8211; 10 = 0</p>
+<p>or, λ(λ &#8211; 5) + 2(λ &#8211; 5) = 0</p>
+<p>or, (λ + 2) (λ &#8211; 5) = 0</p>
+<p>or, λ = -2, 5</p>
+<p>Therefore, Eigen values = -2, -2, 5</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Find LU factorization of the matrix \begin{pmatrix}2 & 5\\ 6 & -7\end{pmatrix}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let A = \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; -7\end{bmatrix}\)</p>
+<p>Now, A is of order 2 x 2. So, L should be the lower-triangular matrix of order 2 x 2.</p>
+<p>Let L = \(\begin{bmatrix}1 &amp; 0\\ * &amp; 1\end{bmatrix}\)</p>
+<p>Now, A = \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; -7\end{bmatrix}\)</p>
+<p>1st column of L is the first column of A obtained by dividing it by the pivot element</p>
+<p>L = \(\begin{bmatrix}1 &amp; 0\\ 6 &amp; 1\end{bmatrix}\)</p>
+<p>Now, reducing A to Echelon form</p>
+<p>i.e. A = \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; -7\end{bmatrix}\)</p>
+<p>Apply R2 → R2 &#8211; 3R1</p>
+<p>~ \(\begin{bmatrix}2 &amp; 5\\ 0 &amp; -22\end{bmatrix}\)</p>
+<p>Therefore, U = Echelon form of A = \(\begin{bmatrix}2 &amp; 5\\ 0 &amp; 22\end{bmatrix}\)</p>
+<p>Now, A = \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; -7\end{bmatrix}\)</p>
+<p>L = \(\begin{bmatrix}1 &amp; 0\\ 3 &amp; 1\end{bmatrix}\)</p>
+<p>U = \(\begin{bmatrix}2 &amp; 5\\ 0 &amp; -22\end{bmatrix}\)</p>
+<p>Now,</p>
+<p>LU = \(\begin{bmatrix}1 &amp; 0\\ 3 &amp; 1\end{bmatrix} \begin{bmatrix}2 &amp; 5\\ 0 &amp; -22\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; 15 &#8211; 22\end{bmatrix}\)</p>
+<p>= \(\begin{bmatrix}2 &amp; 5\\ 6 &amp; -7\end{bmatrix}\)</p>
+<p>Therefore, A = LU</p>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Define group. Show that the set of all integers<b> Z</b> forms group under addition operation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A group is a non empty set G equivalent with a binary operation *. It is denoted by (G, *)</p>
+<p>G × G → G satisfying the following axion</p>
+<ol style="list-style-type: lower-roman;">
+<li>Closure: ∀ a,b ∈ G,   a * b ∈ G</li>
+<li>Associatie: ∀ a,b,c ∈ G(a * b) * c = a * (b * c)</li>
+<li>Identity Element: ∀ a ∈ G, ∃ an element e ∈ G such that<br />
+a * e = a = e * a</li>
+<li>Inverse Element: ∀ a ∈ G, ∃ a<sup>-1</sup> ∈ G such thata * a<sup>-1</sup> = e = a<sup>-1</sup> * a</li>
+</ol>
+<p>To show, set of all integerr Z froms group under addition. Let * be defined by</p>
+<p style="text-align: center;">a * b = a  + b</p>
+<p>Now,</p>
+<p><span style="text-decoration: underline;"><strong>1) Closure:</strong></span></p>
+<p>Let a, b ∈ Z</p>
+<p>then, a * b = a + b ∈ Z  so it is closed</p>
+<p><span style="text-decoration: underline;"><strong>2)</strong><strong> Associative:</strong></span></p>
+<p>Let a, b, c ∈ Z then</p>
+<p>(a * b) * c = (a + b) * c = a + b + c</p>
+<p>a * (b * c) = a * (b + c) = a + b + c</p>
+<p>so, it is associative</p>
+<p><span style="text-decoration: underline;"><strong>3) Identity Element:</strong></span></p>
+<p>Here, O ∈ Z such that</p>
+<p>a * 0 = a + 0 = a</p>
+<p>0 * a = 0  + a = a</p>
+<p>Identity Element = e = 0</p>
+<p><span style="text-decoration: underline;"><strong>4) Ezesistence of inverse:</strong></span></p>
+<p>Here, ∀ a ∈ Z there exists -a ∈ Z so,</p>
+<p>a * -a = a &#8211; a = e</p>
+<p>-a * a = -a + a = 0 = e</p>
+<p>so, inverse element = -a</p>
+<p>Hence, all conditions are satisfied. So, Z forms group under addition operation.</p>
+</div>
+<h3>Question 14</h3>
+<div><p><p>Define ring with an example. Compute the product in the given ring (-3, 5) (2, -4) in <b>Z<sub>4</sub></b> x <b>Z<sub>11</sub></b>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A non-empty set R together with two binary operator + and <b>•</b> denoted by &lt;R, +, <b>•</b> &gt; is called ring if the following conditions are statisfied</p>
+<p>R1: &lt;R, +&gt; is an abelian group</p>
+<p>R2: closed: ∀ a, b, ∈ R, ab ∈ R</p>
+<p>R3: Associative: ∀ a,b, c ∈ R    ,    (ab)c = a(bc)</p>
+<p>R4: Distributive: ∀ a,b, c ∈ R</p>
+<p style="text-align: center;">a (b + c) = ab + bc           (left)</p>
+<p style="text-align: center;">(a + b) c = ac + bc          (right)</p>
+<p>Ex: The set of all integer Z is a ring under binary operation addition and multiplication.</p>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Given ring is Z<sub>4</sub> x Z<sub>11</sub></p>
+<p>Given, (-3, 5), (2, -4)</p>
+<p>Product is given as</p>
+<p>(-3, 5) (2, -4) = (-6, -20)</p>
+<p>Divide (-6) by 4 we get remainder -2</p>
+<p>so, -2 + 4 = 2</p>
+<p>Divide (-20) by 11 we get remainder -9</p>
+<p>so, -9 + 11 = 2</p>
+<p>Therefore The product (-3, 5) and (2, -4) is (2, 2) in ring Z<sub>4</sub> x Z<sub>11</sub></p>
+</div>
+<h3>Question 15</h3>
+<div><p><p>State and prove the Pythagorean theorem of two vectors and verify this for u = (1, -1) and v = (1, 1).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pythagorem theorem of two vectors states that if two vectors say \(\vec{u}\) and \(\vec{v}\) are orthogonal (i.e. their dot product us zero \(\vec{u} . \vec{v} = 0\) then</p>
+<p style="text-align: center;">\(||\vec{u} + \vec{v}||^2 = ||\vec{u}||^2 + ||\vec{v}||^2\)</p>
+<p><span style="text-decoration: underline;"><strong>Proof:</strong></span></p>
+<p>\(||\vec{u} + \vec{v}||^2\)</p>
+<p>\(= (\vec{u} + \vec{v}) (\vec{u} + \vec{v}) \)</p>
+<p>\(= \vec{u}.\vec{u} + \vec{v}.\vec{v} + 2\vec{u}.\vec{v}\)</p>
+<p>\(= \vec{u}.\vec{u} + \vec{v}.\vec{v} + 0\)</p>
+<p>\(= ||\vec{u}||^2 + ||\vec{v}||^2\)</p>
+<p><em>          proved</em></p>
+<p>Given</p>
+<p>\(\vec{u}\) = (1, -1) and \(\vec{v}\) = (1, 1)</p>
+<p>\(\vec{u} + \vec{v}\) = (1 + 1, -1 + 1) = (2, 0)</p>
+<p>\(||\vec{u} + \vec{v}||^2\) = \((\sqrt{(2)^2 + 0})^2\) = 4</p>
+<p>Also,</p>
+<p>\(||\vec{u}||^2\) = \((\sqrt{(1)^2 + (-1)^2})^2\) = 2</p>
+<p>\(||\vec{v}||^2\) = \((\sqrt{(1)^2 + (1)^2})^2\) = 2</p>
+<p>\(||\vec{u}||^2 + ||\vec{v}||^2\) = 2 + 2 = 4 = \(||\vec{u} + \vec{v}||^2\)</p>
+</div>
+</body></html>

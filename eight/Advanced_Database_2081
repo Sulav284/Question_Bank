@@ -1,0 +1,454 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ABD Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>ABD Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p><span>Explain different object database concepts in brief. What are type constructors?</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-weight: 400;">Object-oriented databases (OODB) are databases that represent data in the form of objects and classes. In object-oriented terminology, an object is a real-world entity, and a class is a collection of objects. Object-oriented databases follow the fundamental principles of object-oriented programming (OOP). The combination of relational model features (concurrency, transaction, and recovery) with object-oriented principles results in an object-oriented database model.</span></p>
+<p><span style="font-weight: 400;">Object-oriented databases add the database functionality to object programming languages, creating more manageable code bases. The object-oriented database model (OODBM) is an alternative implementation to that of a relational model. An object-oriented database is similar in principle to an object-oriented programming language. An object-oriented database management system is a hybrid application that uses a combination of object-oriented and relational database principles to process data. That said, we can use the following formula to outline the OODBM:</span></p>
+<p><b>Object-Oriented Programming + Relational Database Features = Object-Oriented Database Model</b></p>
+<p><span style="font-weight: 400;">The different object databases concepts includes:</span></p>
+<h3><b> 1. Object-Oriented Data Model</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Stores data in the form of </span><b>objects</b><span style="font-weight: 400;">, similar to object-oriented programming (OOP).</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Objects have </span><b>attributes</b><span style="font-weight: 400;"> (data) and </span><b>methods</b><span style="font-weight: 400;"> (behavior).</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Supports </span><b>encapsulation</b><span style="font-weight: 400;">, </span><b>inheritance</b><span style="font-weight: 400;">, and </span><b>polymorphism</b><span style="font-weight: 400;">.</span></li>
+</ul>
+<h3><b> 2. Objects and Classes</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><b>Class</b><span style="font-weight: 400;">: Blueprint defining the structure (attributes) and behavior (methods) of objects.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Object</b><span style="font-weight: 400;">: An instance of a class, with specific values.</span><span style="font-weight: 400;">
+<p></span></li>
+</ul>
+<p><span style="font-weight: 400;">Example:</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">class Student {</span></p>
+<p><span style="font-weight: 400;">    String name;</span></p>
+<p><span style="font-weight: 400;">    int age;</span></p>
+<p><span style="font-weight: 400;">}</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> Here, each Student object would store different name and age values.</span></li>
+</ul>
+<h3><b> 3. Object Identity (OID)</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Every object has a </span><b>unique identifier</b><span style="font-weight: 400;"> (OID), which is independent of its data.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Used to track and reference objects, even if values change.</span></li>
+</ul>
+<h3><b> 4. Encapsulation</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Internal details of objects are hidden.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Access is via </span><b>methods</b><span style="font-weight: 400;">, not direct access to attributes.</span></li>
+</ul>
+<h3><b> 5. Inheritance</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Objects can inherit properties and behavior from parent classes.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Promotes </span><b>code reuse</b><span style="font-weight: 400;"> and </span><b>hierarchical modeling</b><span style="font-weight: 400;">.</span></li>
+</ul>
+<h3><b> 6. Persistence</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Objects in object databases are </span><b>persistent</b><span style="font-weight: 400;">—they remain in the database after the program ends.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">No need to convert objects to tables (like in relational DBs).</span></li>
+</ul>
+<h3><b> 7. Complex Objects</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Objects can be composed of </span><b>other objects</b><span style="font-weight: 400;">.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Supports modeling of real-world entities naturally (e.g., a </span><span style="font-weight: 400;">Person</span><span style="font-weight: 400;"> object containing an </span><span style="font-weight: 400;">Address</span><span style="font-weight: 400;"> object).</span></li>
+</ul>
+<h3><b> 8. Object Query Language (OQL)</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Similar to SQL but designed for object databases.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Allows querying of objects using their attributes and relationships.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Example:</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">SELECT s.name FROM Student s WHERE s.age &gt; 18;</span></p>
+<h3><b> 9. Relationships</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Objects are linked via </span><b>references</b><span style="font-weight: 400;">, not foreign keys.</span><span style="font-weight: 400;">
+<p></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Relationships can be </span><b>one-to-one</b><span style="font-weight: 400;">, </span><b>one-to-many</b><span style="font-weight: 400;">, or </span><b>many-to-many</b><span style="font-weight: 400;">.</span></li>
+</ul>
+<h3><b> 10. Versioning</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Some object databases support </span><b>version control</b><span style="font-weight: 400;">, allowing objects to be stored and retrieved in different states or versions over time.</span></li>
+</ul>
+<h3><b> 11. Schema Evolution</b></h3>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Object databases can handle </span><b>dynamic schema changes</b><span style="font-weight: 400;">, like adding new attributes to classes, more easily than relational databases.</span></li>
+</ul>
+<p><b>Type constructor</b><span style="font-weight: 400;"> is used to define the data structure for object oriented, DB there are six types of type constructor. Type constructor is the collection of multiple similar basic types under a common name. It determines how the object is constructed. The type constructors can be used to define the data structures for an object oriented database schema. The three basic type constructors are atom, tuple and set. Other commonly used constructors include list, bag and array. The type constructors set, list, array and bag are called collection types and to distinguish them from basic types and tuple types. Here the state of the object will be a collection of object: that may be unordered or ordered.</span></p>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Type Constructor</b></td>
+<td style="width: 33.3333%; height: 24px;"><b>Description</b></td>
+<td style="width: 33.3333%; height: 24px;"><b>Example</b></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Atomic</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Primitive types (basic building blocks)</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">INTEGER</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">FLOAT</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">BOOLEAN</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">CHAR</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Tuple</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Group of attributes (like a record or struct)</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Person(name CHAR, age INTEGER)</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Array</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Ordered collection of elements of same type</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">PhoneNumbers ARRAY[CHAR(10)]</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Set/Bag/List</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Collection of elements; sets are unordered &amp; unique</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">SET&lt;INTEGER&gt;</span><span style="font-weight: 400;"> or </span><span style="font-weight: 400;">LIST&lt;STRING&gt;</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Object</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Encapsulated type with identity, attributes, and methods</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">OBJECT Person { name, age, getAge() }</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;"><b>Reference (REF)</b></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">Pointer to another object (like a foreign key)</span></td>
+<td style="width: 33.3333%; height: 24px;"><span style="font-weight: 400;">REF Person</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3><b>Example in SQL (Object-Relational Syntax)</b></h3>
+<p><span style="font-weight: 400;">CREATE TYPE Address AS (</span></p>
+<p><span style="font-weight: 400;">  street VARCHAR(50),</span></p>
+<p><span style="font-weight: 400;">  city VARCHAR(30),</span></p>
+<p><span style="font-weight: 400;">  zip INTEGER</span></p>
+<p><span style="font-weight: 400;">);</span></p>
+<p><span style="font-weight: 400;">CREATE TYPE Person AS OBJECT (</span></p>
+<p><span style="font-weight: 400;">  name VARCHAR(30),</span></p>
+<p><span style="font-weight: 400;">  age INTEGER,</span></p>
+<p><span style="font-weight: 400;">  address Address</span></p>
+<p><span style="font-weight: 400;">);</span></p>
+<p><span style="font-weight: 400;">Here:</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Address</span><span style="font-weight: 400;"> is a </span><b>tuple type constructor</b><span style="font-weight: 400;">.</span><span style="font-weight: 400;">
+<p></span></li>
+</ul>
+<p><span style="font-weight: 400;">Person</span><span style="font-weight: 400;"> is an </span><b>object type constructor</b><span style="font-weight: 400;"> that uses another type.</span></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why do we need query optimization in databases? Explain heuristic query optimization with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-weight: 400;"><strong>Query Optimization</strong> refers to the process of improving the performance and efficiency of database queries. It involves the most effective way to retrieve data, the primary goal of query optimization is to minimize the execution time consumption of a query such as CPU usage, disk I/0, and network traffic. We need query optimization in databases because of the following reasons:</span></p>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Improved Performance: Query optimization helps improve the performance of the database systems by reducing the execution time of queries.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Resource Utilization: Query optimization aims to minimize resource consumption such as CPU usage, disk I/0, and network traffic.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cost Reduction:  Query optimization helps reduce the costs by minimizing the resource usage and improving the overall efficiency of the query optimization.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Scalability:  Optimization techniques such as indexing, caching, help ensure that the system can handle growing workloads and provide consistent performance.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Complex Query Support: Query optimization techniques consider various factors such as query rewriting,join ordering and index selection, to generate effective execution plans for complex queries.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Application Responsiveness: It provides faster responses, leading to better user responsiveness.</span></li>
+</ol>
+<p><b> Heuristic query optimization:</b><b><br />
+</b><span style="font-weight: 400;">Heuristic optimization transforms the query-tree by using a set of rules (Heuristics) that typically (but not in all cases) improve execution performance. Some common heuristic rules are:</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Perform selection early (reduces the number of tuples)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Perform projection early (reduces the number of attributes)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Perform most restrictive selection and join operations (i.e., with smallest result size) before other similar operations.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Initially a query tree from SQL statements is generated. Query tree is transformed into a more efficient query tree, via a series of tree modifications, each of which hopefully reduces the execution time. A single query tree is involved at last.</span></p>
+<p><span style="font-weight: 400;">Let’s take an example</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">SELECT E.name, D.name FROM Employee E, Department D </span></p>
+<p><span style="font-weight: 400;">WHERE E.dept_id = D.id AND E.age &gt; 40;</span></p>
+<h3><b>Naive Query Plan (Before Optimization):</b></h3>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;" aria-level="1"><b>Cartesian Product</b><span style="font-weight: 400;"> of Employee × Department (huge!)</span><span style="font-weight: 400;"><br />
+</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Apply Join Condition:</b><span style="font-weight: 400;"> E.dept_id = D.id</span><span style="font-weight: 400;"><br />
+</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Apply Selection:</b><span style="font-weight: 400;"> E.age &gt; 40</span><span style="font-weight: 400;"><br />
+</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Apply Projection:</b><span style="font-weight: 400;"> Select only E.name, D.name</span><span style="font-weight: 400;">
+<p></span></li>
+</ol>
+<p><b> This plan is inefficient because the Cartesian product is large and slow.</b></p>
+<h3><b> Optimized Plan (Using Heuristics):</b></h3>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;" aria-level="1"><b>Apply Selection Early:</b><b>
+<p></b></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">SELECT * FROM Employee WHERE age &gt; 40 — </span><span style="font-weight: 400;">reduces number of employee rows early.</span><span style="font-weight: 400;">
+<p></span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><b>Perform Join (not Cartesian product):</b><b>
+<p></b></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Join filtered Employee table with Department using </span><span style="font-weight: 400;">E.dept_id = D.id</span><span style="font-weight: 400;">
+<p></span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><b>Apply Projection Early:</b><b>
+<p></b></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Only keep </span><span style="font-weight: 400;">E.name, D.name</span><span style="font-weight: 400;"> instead of entire rows.</span><span style="font-weight: 400;">
+<p></span></li>
+</ul>
+</li>
+</ol>
+<p><span style="font-weight: 400;">This plan reduces both the number of rows and the size of rows involved in the join, which makes execution faster and more efficient.</span></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p><span>Explain different distributed database architectures. What is data fragmentation?</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="font-weight: 400;">DDBS architecture are generally developed depending on three parameters:</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><b>Distribution</b><span style="font-weight: 400;">: It states the physical distribution of data across the different sites</span></li>
+</ul>
+<p><span style="font-weight: 400;">i.e., whether the components of the system are located on the same machine or not.</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><b>Autonomy</b><span style="font-weight: 400;">: It indicates the distribution of control of the database system and the</span></li>
+</ul>
+<p><span style="font-weight: 400;">degree to which each constituent DBMS can operate independently. Autonomy is a</span></p>
+<p><span style="font-weight: 400;">function of a number of factors such as whether the component systems (.e.,</span></p>
+<p><span style="font-weight: 400;">individual DBMSs) exchange information, whether they can independently execute</span></p>
+<p><span style="font-weight: 400;">transactions, and whether one is allowed to modify them.</span></p>
+<ul style="list-style-type: square;">
+<li style="font-weight: 400;" aria-level="1"><b>Heterogeneity</b><span style="font-weight: 400;">: It refers to the uniformity or dissimilarity of the data models, </span>system components and databases.</li>
+</ul>
+<p>&nbsp;</p>
+<p><b>General Architecture of Pure Distributed Databases</b></p>
+<p><span style="font-weight: 400;">Here, we discuss both the logical and component architectural models of a DDBS. In figure below, which describes the generic schema architecture of a DDBS, the enterprise is presented with a consistent, unified view showing the logical structures of underlying data across all nodes.</span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61139" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/ADB.jpg?resize=649%2C479&#038;ssl=1" alt="" width="649" height="479"></p>
+<p><b>Federated Database Schema Architecture</b></p>
+<p><span style="font-weight: 400;">Typical five-level schema architecture to support global applications in the FDBS environment is shown in figure below. In this architecture, the local schema is the conceptual schema (full database definition) of a component database, and the component schema is derived by translating the local schema into a canonical data model or common data model (CDM) for the FDBS. </span></p>
+<p><span style="font-weight: 400;">Schema translation from the local schema to the component schema is accompanied by generating mappings to transform commands on a component schema into commands on the corresponding local schema. The export schema represents the subset of a component schema that is available to the FDBS. The federated schema is the global schema or view, which is the result of integrating all the shareable export schema. The external schema define the schema for a user group or an application, as in the three-level schema architecture.</span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61140" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/ADBB.png?resize=902%2C531&#038;ssl=1" alt="" width="902" height="531"></p>
+<p><strong>Overview of Three -Tier Client/Server Architecture</strong><strong> </strong></p>
+<p>Full-scale DDBMSs have not been developed to support all the types of functionalities that we have known so far. Instead, distributed database applications are being developed in the context of the client/server architectures. It is now more common to use a three-tier architecture rather than a two tier architecture, particularly in Web applications. This architecture is illustrated in the figure below.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61141" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/adbbbbb.png?resize=606%2C241&#038;ssl=1" alt="" width="606" height="241"></p>
+<p><strong>Data Fragmentation</strong></p>
+<p>Fragmentation is the task of dividing a table into a set of smaller tables. The subsets of the</p>
+<p>tables are called fragments. These fragments may be stored at different locations. Moreover,</p>
+<p>fragmentation increases parallelism and provides better disaster recovery. Fragmentation can be of three types:</p>
+<ul style="list-style-type: square;">
+<li>Vertical Fragmentation</li>
+<li>Horizontal Fragmentation</li>
+<li>Hybrid Fragmentation</li>
+</ul>
+<p>Fragmentation should be done in a way so that the original table can be reconstructed from the fragments. This is needed so that the original table can be reconstructed from the fragments whenever required. This requirement is called &#8220;<strong>reconstructiveness</strong>&#8220;.</p>
+<p>&nbsp;</p>
+<p><strong>Advantages of Fragmentation</strong></p>
+<ul style="list-style-type: square;">
+<li>Since data is stored close to the site of usage, efficiency of the database system is</li>
+</ul>
+<p>increased.</p>
+<ul style="list-style-type: square;">
+<li>Local query optimization techniques are sufficient for most queries since data a</li>
+</ul>
+<p>locally available.</p>
+<ul style="list-style-type: square;">
+<li>Since irrelevant data is not available at the sites, security and privacy of ce</li>
+</ul>
+<p>database systems can be maintained.</p>
+<p><strong>Disadvantages of Fragmentation</strong></p>
+<ul style="list-style-type: square;">
+<li>When data from different fragments are required, the access speeds may be very</li>
+</ul>
+<p>high.</p>
+<ul style="list-style-type: square;">
+<li>In case of recursive fragmentation, the job of reconstruction will need expensive</li>
+</ul>
+<p>techniques.</p>
+<ul style="list-style-type: square;">
+<li>Lack of back-up copies of data in different sites may render the database ineffectively</li>
+</ul>
+<p>in case of failure of a site.</p>
+</div>
+<h2>Group B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p><span>Explain different constraints of specialization and generalization.</span></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Generalization</b></p>
+<p><span style="font-weight: 400;">Generalization is a bottom-up approach in which two lower-level entities combine to form a higher-level entity. In generalization, the higher level entity can also combine with other lower-level entities to make further higher-level entities. It&#8217;s more like a Superclass and Subclass system, but the only difference is the approach, which is bottom up. Hence, entities are combined to form a more generalized entity, in other words, sub-classes are combined to form a super-class.</span></p>
+<p><b>Specialization</b></p>
+<p><span style="font-weight: 400;">Specialization is opposite to Generalization. It is a top-down approach in which one higher level entity can be broken down into two lower-level entities. In specialization, a higher-level entity may not have any lower-level entity sets, it&#8217;s possible. It maximizes the difference between the members of an entity by identifying the unique characteristics or attributes of each member. It defines one or more sub classes for the super class and also forms the super class/subclass relationship.</span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61143" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/22222.jpg?resize=915%2C583&#038;ssl=1" alt="" width="915" height="583"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61144" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/3333333.jpg?resize=913%2C581&#038;ssl=1" alt="" width="913" height="581"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is hashing? How does hashing improve database efficiency?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Hashing</strong></p>
+<p>It can be almost impossible to search all the index values in its level for a huge database structure and then enter the destination data block to retrieve the requested data. Hashing is an effective technique to calculate the direct location of a data record on the disk without using sequential index structure which results in a decrease in data retrieval time.</p>
+<p>Hashing uses hash functions with search keys as parameters to generate the address of a data record. A hash function (h) returns a value which is nothing but the address of the desired data block. The memory location (address) where these records are stored is known as data bucket or data blocks. Bucket is considered a unit of storage. A bucket typically stores one complete disk block, which in turn can store one or more records. The hashing can be further divided into two types: Static Hashing and Dynamic Hashing.The hashing improves the database efficiency by following reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Faster Data Access</strong>: Hashing computes the location directly, bypassing the need for index traversal or sequential searches.</li>
+<li><strong>Reduced Disk I/O</strong>: Accessing the exact disk block minimizes the number of disk reads.</li>
+<li><strong>Efficient for Equality Searches</strong>: Especially effective when the query involves equality conditions (e.g., WHERE ID = 101).</li>
+<li><strong>Scalability</strong>: With dynamic hashing, performance remains stable as the database grows.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain ODMG object model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>ODMG object model</strong> is the data model upon which the object definition language (ODL) and object query language (OQL) are based. It is meant to provide a standard data model for object databases, just as SQL describes a standard data model for relational databases. It also provides a standard terminology in a field where the same terms were sometimes used to describe different concepts.</p>
+<p><strong>Objects and literals </strong>are the basic building blocks of the object model. The main difference between the two is that an object has both an object identifier and a state (or current value), whereas a literal has a value (state) but no object identifier. In either case, the value can have a complex structure. The object state can change over time by modifying the object value. A literal is basically a constant value, possibly having a complex structure, but it does not change.</p>
+<p>Following the <strong>ODMG terminology,</strong> we use the word behavior to refer to operations and state to refer to properties (attributes and relationships). An interface specifies only behavior of an object type and is typically not instantiable (that is, no objects are created corresponding to an interface). Although an interface may have state properties (attributes and relationships) as part of its specifications, these cannot be inherited from the interface. Hence, an interface serves to define operations that can be inherited by other interfaces, as well as by classes that define the user-defined objects for a particular application.</p>
+<p>A class specifies both state (attributes) and behavior (operations) of an object type, and is instantiable. Hence, database and application objects are typically created based on the user specified class declarations that form a database schema. Finally, a literal declaration specifies state but no behavior. Thus, a literal instance holds :simple or complex structured value but has neither an object identifier nor encapsulated operations.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are the uses of query trees in query processing? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Query trees are a hierarchical representation of the steps and operations involved in executing a database query.</p>
+<p>The uses of query trees in query processing are:</p>
+<ol style="list-style-type:decimal;">
+<li>Visualization and Understanding: Query trees provide a visual to understand and analyze the steps involved in processing a query.</li>
+<li>Query optimization: By representing the query execution plan as a tree, the optimizer can efficiently explore and evaluate various plan alternatives to find the most efficient one.</li>
+<li>Execution Order and Data flow: Query tress define the order in which the operations are performed and how data flows between them.</li>
+<li>Query plan caching and reuse: Query trees can be cached and reused for similar queries with different parameters values. This improves query performance by avoiding re-computation.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is the CAP theorem? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>CAP stands for Consistency, Availability, and Partitioning. It is very important to understand the limitations of NoSQL databases. NoSQL cannot provide consistency and high availability together. This was first expressed by Eric Brewer in CAP Theorem. CAP theorem or Eric Brewer&#8217;s theorem states that we can only achieve at most two out of three guarantees for a database: Consistency, Availability and Partition Tolerance.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61151" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/88888.jpg?resize=700%2C300&#038;ssl=1" alt="" width="700" height="300"></p>
+<p><strong>CP (Consistent and Partition Tolerant) database:</strong> A CP database delivers consistency and partition tolerance at the expense of availability. When a partition occurs between any two nodes, the system has to shut down the non-consistent node (i.e., make it unavailable) until the partition is resolved. Partition refers to a communication break between nodes within a distributed system. Meaning if a node cannot receive any messages from another node in the system, there is a partition</p>
+<p><strong>AP (Available and Partition Tolerant) database</strong>: An AP database delivers availability and partition tolerance at the expense of consistency. When a partition occurs, all nodes remain available but those at the wrong end of a partition might return an older version of data than others. When the partition is resolved, the AP databases typically re-sync the nodes to repair all inconsistencies in the system.</p>
+<p><strong>CA (Consistent and Available) database:</strong> A CA delivers consistency and availability in the absence of any network partition. Often a single node&#8217;s DB servers are categorized as CA systems. Single node DB servers do not need to deal with partition tolerance and are thus considered CA systems. In any networked shared-data systems or distributed systems partition tolerance is a must. Network partitions and dropped messages are a fact of life and must be handled appropriately. Consequently, system designers must choose between consistency and availability.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is Big Data? What are its 3 V’s?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Big Data is a collection of data that is huge in volume, yet growing exponentially with time. It is data with such large size and complexity that none of traditional data management tools can store it or process it efficiently. Big data is also data but with huge size.</p>
+<p>Big data can be categorized as unstructured or structured. Structured data consists of information already managed by the organization in databases and spreadsheets; it is frequently numeric in nature. Unstructured data is information that is unorganized and does not fall into a predetermined model or format. It includes data gathered from social media sources. which help institutions gather information on customer needs.</p>
+<h3><strong>The 3 V&#8217;s of Big Data:</strong></h3>
+<ol style="list-style-type:decimal;">
+<li><strong>Volume<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Refers to the <strong>amount of data</strong> generated and stored.</li>
+<li>Data is collected from a wide range of sources, including business transactions, social media, IoT devices, and sensors.</li>
+<li>Examples: Terabytes to petabytes of data.</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Velocity<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Refers to the <strong>speed at which data is generated and processed</strong>.</li>
+<li>Big Data systems need to handle real-time or near real-time data streams.</li>
+<li>Example: Stock trading apps or live video feeds.</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Variety<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Refers to the <strong>different types of data</strong> (structured, semi-structured, and unstructured).</li>
+<li>Data comes in formats like text, images, audio, video, and more.</li>
+<li>Example: Tweets, emails, call logs, videos, and database records.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are triggers? What are the uses of triggers?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>trigger</strong> is a <strong>stored procedure</strong> in a database that is <strong>automatically executed (or &#8220;triggered&#8221;)</strong> by the DBMS <strong>in response to specific events</strong> on a particular table or view. These events are usually <strong>INSERT</strong>, <strong>UPDATE</strong>, or <strong>DELETE</strong> operations. Triggers are defined by the <strong>Database Administrator (DBA)</strong> and are used to enforce business rules, maintain data integrity, and automate system tasks.</p>
+<p>A database that uses triggers is known as an <strong>active database</strong>.</p>
+<h3><strong>Uses of Triggers:</strong></h3>
+<ol style="list-style-type:decimal;">
+<li><strong>Enforcing Business Rules<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Automatically validate or modify data before it is inserted or updated.</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Maintaining Data Integrity<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Ensure consistency across related tables (e.g., cascading updates or deletes).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Auditing and Logging<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Record changes made to data, including who made the change and when.</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Automating System Tasks<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Automatically generate values or take actions when specific events occur (e.g., creating backup entries or sending notifications).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Preventing Invalid Transactions<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Cancel or modify an operation if it violates specific conditions.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why do we need spatial databases? What are common types of analysis for spatial data?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A spatial database is a database that is enhanced to store and access spatial data or data that defines a geometric space. These data are often associated with geographic locations and features, or constructed features like cities. Data on spatial databases are stored as coordinates, points, lines, polygons and topology. Some spatial databases handle more complex data like three-dimensional objects, topological coverage and linear networks.</p>
+<h3><strong>Common Types of Analysis for Spatial Data:</strong></h3>
+<ol style="list-style-type:decimal;">
+<li><strong>Spatial Querying<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Finding features based on location (e.g., &#8220;Find all hospitals within 5 km of this point&#8221;).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Proximity Analysis<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Measuring distances between spatial features (e.g., nearest neighbor analysis).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Overlay Analysis<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Combining multiple layers of spatial data to identify relationships (e.g., land use over soil types).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Buffering<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Creating a zone around spatial features for impact analysis (e.g., flood zones around rivers).</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Topological Analysis</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Understanding spatial relationships like adjacency, connectivity, and containment.</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Network Analysis<br />
+</strong></li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Analyzing routes, shortest paths, and connectivity in road or utility networks.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:<br />
+a) Map Reduce<br />
+b) Multimedia database</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Map-Reduce:</strong></p>
+<p><strong>Map-Reduce </strong>is a programming model designed for processing large volumes of data in parallel by dividing the work into a set of independent tasks. Map-Reduce programs are written in a particular style influenced by functional programming constructs, specifically idioms for processing lists of data. This module explains the nature of this programming model and how it can be used to write programs which run in the Hadoop environment.</p>
+<p><strong>MapReduce </strong>is a Hadoop framework used for writing applications that can process vast amounts of data on large clusters. It can also be called a programming model in which we can process large datasets across computer clusters. This application allows data to be stored in a distributed form. It simplifies enormous volumes of data and large scale Computing.</p>
+<p>There are two primary tasks in MapReduce: map and reduce. We perform the former tas! before the latter. In the map job, we split the input dataset into chunks. Map tasks process these chunks in parallel. The map we use outputs as inputs for the reduced tasks. Reducer: process the intermediate data from the maps into smaller tuples, which reduces the tasks leading to the final output of the framework.</p>
+<p><strong>Multimedia database:</strong></p>
+<p>Multimedia database is the collection of the interrelated multimedia data that includes text, graphics (sketches, drawings), images, animations, video, audio etc. and has vast amounts of multi-source multimedia data. The framework that manages different types of multimedia data which can be stored, delivered and utilized in different ways is known as multimedia database management system.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-61159" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/05/12121212.jpg?resize=800%2C304&#038;ssl=1" alt="" width="800" height="304"></p>
+<p>Contents of multimedia database:</p>
+<ol style="list-style-type:decimal;">
+<li>Media data: It is actual data which represents an object.</li>
+<li>Media Format data: The information such as resolution, sampling rate, encoding system, etc.</li>
+<li>Media keyword data: Media keyword data are the keyword description related to the generation of data. Examples are: place, time, date of recording etc.</li>
+<li>Media Feature data: Media feature data contains data which is content dependent such as kind of texture, different shapes present in data etc.</li>
+</ol>
+</div>
+</body></html>

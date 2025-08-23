@@ -1,0 +1,781 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Model Question II 0</title>
+    </head>
+    <body>
+        <h1>STAT Model Question II - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>A study was conducted to IT students to complete a certain maze. The following data revels the time taken in seconds to complete the maze by eight students each BCA and Bcs. CSIT</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>BCA</td>
+<td>8</td>
+<td>12</td>
+<td>13</td>
+<td>9</td>
+<td>3</td>
+<td>8</td>
+<td>14</td>
+<td>11</td>
+</tr>
+<tr>
+<td>CSIT</td>
+<td>10</td>
+<td>15</td>
+<td>10</td>
+<td>11</td>
+<td>4</td>
+<td>7</td>
+<td>12</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Can it can be concluded that the Bsc students are more efficient than BCA student. Use 5% level of significant.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Let μ<sub>1</sub> and μ<sub>2</sub> be the average time to complete maze by BCA and CSIT students.</p>
+<p>Here, n<sub>1</sub> = n<sub>2</sub> = 8 and α = 5% = 0.05</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>BCA (X)</strong></td>
+<td style="width: 25%; text-align: center;"><strong>CSIT (Y)</strong></td>
+<td style="width: 25%; text-align: center;"><strong>X<sup>2</sup></strong></td>
+<td style="width: 25%; text-align: center;"><strong>Y<sup>2</sup></strong></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">8</td>
+<td style="width: 25%; text-align: center;">10</td>
+<td style="width: 25%; text-align: center;">64</td>
+<td style="width: 25%; text-align: center;">100</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">12</td>
+<td style="width: 25%; text-align: center;">15</td>
+<td style="width: 25%; text-align: center;">144</td>
+<td style="width: 25%; text-align: center;">225</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">13</td>
+<td style="width: 25%; text-align: center;">10</td>
+<td style="width: 25%; text-align: center;">169</td>
+<td style="width: 25%; text-align: center;">100</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">9</td>
+<td style="width: 25%; text-align: center;">11</td>
+<td style="width: 25%; text-align: center;">81</td>
+<td style="width: 25%; text-align: center;">121</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">3</td>
+<td style="width: 25%; text-align: center;">4</td>
+<td style="width: 25%; text-align: center;">9</td>
+<td style="width: 25%; text-align: center;">16</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">8</td>
+<td style="width: 25%; text-align: center;">7</td>
+<td style="width: 25%; text-align: center;">64</td>
+<td style="width: 25%; text-align: center;">49</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">14</td>
+<td style="width: 25%; text-align: center;">12</td>
+<td style="width: 25%; text-align: center;">196</td>
+<td style="width: 25%; text-align: center;">144</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">11</td>
+<td style="width: 25%; text-align: center;">10</td>
+<td style="width: 25%; text-align: center;">121</td>
+<td style="width: 25%; text-align: center;">100</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>ΣX = 78</strong></td>
+<td style="width: 25%; text-align: center;"><strong>ΣY = 79</strong></td>
+<td style="width: 25%; text-align: center;"><strong>ΣX<sup>2</sup> = 848</strong></td>
+<td style="width: 25%; text-align: center;"><strong>ΣY<sup>2</sup> = 855</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>\(\overline{X} = \frac{\sum{X}}{n_1} = \frac{78}{8}\) = 9.75</p>
+<p>\(\overline{Y} = \frac{\sum{Y}}{n_2} = \frac{78}{8}\) = 9.875</p>
+<p>and,</p>
+<p>\(S_p^2 = \frac{1}{n_1 + n_2 &#8211; 2}\left [ \sum{X^2} &#8211; \frac{(\sum{X})^2}{n_1} + \sum{Y^2} &#8211; \frac{(\sum{Y})^2}{n_1} \right ]\)</p>
+<p>\(= \frac{1}{8+8-2}\left [ 848 &#8211; \frac{(\sum{78})^2}{8} + 855 &#8211; \frac{(\sum{79})^2}{8} \right ]\)</p>
+<p>= 11.6</p>
+<p><b>Problem to test:</b></p>
+<p>H<sub>0</sub>: BCA and CSIT students are equally efficient.</p>
+<p>H<sub>1</sub>: CSIT students are more efficient than BCA students.</p>
+<p><strong>Test Statistics:</strong></p>
+<p>\(t = \frac{\overline{X} &#8211; \overline{Y}}{ \sqrt{s_2 \left ( \frac{1}{n_1} + \frac{1}{n_2} \right ) } }\)</p>
+<p>\( = \frac{78 &#8211; 79}{ \sqrt{11.6 \left ( \frac{1}{8} + \frac{1}{8} \right ) } }\)</p>
+<p>= &#8211; 0.345</p>
+<p>|t| = 0.345</p>
+<p><strong>Degree of Freedom:</strong></p>
+<p>d.f. = n<sub>1</sub> + n<sub>2</sub> &#8211; 2 = 14</p>
+<p><strong>Critical Value:</strong></p>
+<p>At α = 0.05 level of significance, the critical value is t<sub>tabulated</sub> = t<sub>(0.05, 14)</sub> = 1.761</p>
+<p><strong>Decision:</strong></p>
+<p>|t| = 0.345 &lt; t<sub>tabulated</sub> = 1.761, accept H<sub>0</sub> at 5% level of significance.</p>
+<p>Hence, BCA and CSIT students are equally efficient.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>The table shows the corresponding vales of the three variables Y, X1 and X2</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Y</td>
+<td>6</td>
+<td>11</td>
+<td>10</td>
+<td>7</td>
+<td>5</td>
+<td>12</td>
+</tr>
+<tr>
+<td>X1</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>-2</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>3</td>
+<td>-1</td>
+<td>2</td>
+<td>4</td>
+<td>7</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estimate the Y when X1 = -9 and X2 = 4</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;"><strong>Y</strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X1</strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X2</strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X1<sup>2</sup></strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X2<sup>2</sup></strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>Y<sup>2</sup></strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X1Y</strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X2Y</strong></td>
+<td style="width: 11.1111%; text-align: center;"><strong>X1X2</strong></td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">36</td>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">18</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">11</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">-1</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">121</td>
+<td style="width: 11.1111%; text-align: center;">33</td>
+<td style="width: 11.1111%; text-align: center;">-11</td>
+<td style="width: 11.1111%; text-align: center;">-3</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">10</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">100</td>
+<td style="width: 11.1111%; text-align: center;">20</td>
+<td style="width: 11.1111%; text-align: center;">22</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">-2</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+<td style="width: 11.1111%; text-align: center;">49</td>
+<td style="width: 11.1111%; text-align: center;">-14</td>
+<td style="width: 11.1111%; text-align: center;">28</td>
+<td style="width: 11.1111%; text-align: center;">-8</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">49</td>
+<td style="width: 11.1111%; text-align: center;">25</td>
+<td style="width: 11.1111%; text-align: center;">15</td>
+<td style="width: 11.1111%; text-align: center;">35</td>
+<td style="width: 11.1111%; text-align: center;">21</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">12</td>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">36</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">144</td>
+<td style="width: 11.1111%; text-align: center;">72</td>
+<td style="width: 11.1111%; text-align: center;">36</td>
+<td style="width: 11.1111%; text-align: center;">18</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">ΣY = 51</td>
+<td style="width: 11.1111%; text-align: center;">ΣX1 = 13</td>
+<td style="width: 11.1111%; text-align: center;">ΣX2 = 18</td>
+<td style="width: 11.1111%; text-align: center;">ΣX1<sup>2</sup> = 63</td>
+<td style="width: 11.1111%; text-align: center;">ΣX2<sup>2</sup> = 88</td>
+<td style="width: 11.1111%; text-align: center;">ΣY<sup>2</sup> = 475</td>
+<td style="width: 11.1111%; text-align: center;">ΣX1Y = 132</td>
+<td style="width: 11.1111%; text-align: center;">ΣX2Y = 128</td>
+<td style="width: 11.1111%; text-align: center;">ΣX1X2 = 35</td>
+</tr>
+</tbody>
+</table></div>
+<p>Y = a + b<sub>1</sub>X<sub>1</sub> + b<sub>2</sub>X<sub>2</sub>    …… (i)</p>
+<p>By using least square method, normal equations</p>
+<p>ΣY = na + b<sub>1</sub>ΣX<sub>1</sub> + b<sub>2</sub>ΣX<sub>2</sub>     …… (ii)</p>
+<p>ΣX<sub>1</sub>Y = aΣX<sub>1</sub> + b<sub>1</sub>ΣX<sub>1</sub><sup>2</sup> + b<sub>2</sub>ΣX<sub>1</sub>X<sub>2</sub>   ….. (iii)</p>
+<p>ΣX<sub>2</sub>Y = aΣX<sub>2</sub> + b<sub>1</sub>ΣX<sub>1</sub>X<sub>2</sub> + b<sub>2</sub>ΣX<sub>2</sub><sup>2</sup>   …..(iv)</p>
+<p>Now, substituting the values min equation in (ii), (iii) and (iv)</p>
+<p>51 = 6a + 13b<sub>1</sub> + 18b<sub>2</sub>   …… (a)</p>
+<p>132 = 13a + 63b<sub>1</sub> + 35b<sub>2</sub>   …… (b)</p>
+<p>128 = 18a+ 35b<sub>1</sub> + 88b<sub>2</sub>   ……. (c)</p>
+<p>Solving equation (a), (b) and (c), we get</p>
+<p>a = 9.35</p>
+<p>b<sub>1</sub> = 0.54</p>
+<p>b<sub>2</sub> = -0.67</p>
+<p>Putting the value of a, b<sub>1</sub>, b<sub>2</sub> in equation (1), We get</p>
+<p>Y = 9.35 + 0.54X1 &#8211; 0.67X2    …….. (d)</p>
+<p>If X1 = -9 and X2 = 4 then</p>
+<p>Y = 9.35 + 0.54 × (-9) &#8211; 0.67 × 4 = 1.81</p>
+<p>Therefore, The required value of Y is 1.81</p>
+<div style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 0.75rem 1.25rem; margin-top: 1rem;"><strong><span style="font-size: 10pt;">There may be error in calculation. Please follow the steps only. If you find any error then please report to us.</span></strong></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>The table given below are the yields of 4 varieties in a 4 replicate experiment in which one observation is missing. Analyze the data after finding missing value</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>A 12</td>
+<td>C 19</td>
+<td>B 10</td>
+<td>D 10</td>
+</tr>
+<tr>
+<td>C 17</td>
+<td>B 13</td>
+<td>D 7</td>
+<td>A ?</td>
+</tr>
+<tr>
+<td>B 21</td>
+<td>D 11</td>
+<td>A 6</td>
+<td>C 19</td>
+</tr>
+<tr>
+<td>D 12</td>
+<td>A 7</td>
+<td>C 27</td>
+<td>B 18</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-24286" src="https://hamrocsit.com/wp-content/uploads/2022/01/SmartSelect_20230829_161121_CamScanner.jpg" alt="" width="912" height="1078"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-24287" src="https://hamrocsit.com/wp-content/uploads/2022/01/SmartSelect_20230829_161149_CamScanner.jpg" alt="" width="908" height="1339"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-24288" src="https://hamrocsit.com/wp-content/uploads/2022/01/SmartSelect_20230829_161218_CamScanner.jpg" alt="" width="909" height="1242"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-24289" src="https://hamrocsit.com/wp-content/uploads/2022/01/SmartSelect_20230829_161245_CamScanner.jpg" alt="" width="914" height="498"></p>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>In random sample of 200 chips from a large consignment, 29 items were found to be defective, find the 95% confidence limits for the percentage of defective chips in the consignments.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Sample size (n) = 200</p>
+<p>Defective size(d) = 29</p>
+<p>The confidence interval is</p>
+<p style="text-align: center;">\(\left ( p \pm z_{\alpha / 2} \sqrt{ \frac{pq}{n} } \right )\)</p>
+<p>Here,</p>
+<p>p = \(\frac{29}{200}\) = 0.145</p>
+<p>q = 1 &#8211; p = 1 &#8211; 0.145 = 0.855</p>
+<p>For 95% confidence level, the error (α) = 5%, so \(1 &#8211; \frac{α}{2}\) = 0.975 and Z<sub>0.975</sub> = 1.96</p>
+<p>So confidence interval is</p>
+<p>C.I. = \(0.145 \pm 1.96 \times \frac{0.145 \times 0.855}{200}\)</p>
+<p>= 0.145 ± 0.0487</p>
+<p>= (0.058, 0.1937)</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>A manufacture claim that their widget is more reliable than their main competitors. In order to verify this a sample of 65 widget from manufacturer’s range was taken. This mean rate found to be 992 per 1000 with sd 15 per 1000. previous studies have shown that the mean pass rate of all weight on the market is 979 per 1000. Test the manufacturer’s claim at 5% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Sample Size (n) = 65</p>
+<p>Sample mean (x̄) = 992</p>
+<p>Sample standard deviation(σ) = 15</p>
+<p>Population mean(μ) = 979</p>
+<p>Level of significance(α) = 5% = 0.05</p>
+<p><strong>Problem to Test:</strong></p>
+<p><strong>H</strong><sub><strong>0</strong></sub><strong>: </strong>Average pass is 979 (μ = 979)</p>
+<p><strong>H</strong><sub><strong>1</strong></sub><strong>: </strong>Average pass is more than 979 (μ &gt; 979)</p>
+<p><strong>Test Statistics:</strong></p>
+<p>\(z = \frac{\overline{X} &#8211; μ}{\frac{σ}{\sqrt{n}}}\)</p>
+<p>\( = \frac{992 &#8211; 979}{\frac{15}{\sqrt{65}}}\)</p>
+<p>= 6.987</p>
+<p><strong>Critical Value:</strong></p>
+<p>At α = 5% = 0.05, the critical value (Z<sub>α</sub>) = Z<sub>0.05</sub> = 1.645</p>
+<p><strong>Decision:</strong></p>
+<p>Here, |z| = 6.987 &gt; Z<sub>tab</sub> = 1.645, reject H<sub>0</sub> at 5% level of significance.</p>
+<p><strong>Conclusion:</strong></p>
+<p>The claim of manufacture is correct.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What are parametric and non-parametric test? Write some advantage and disadvantage of non-parametric test.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="color: #202124;">Parametric statistics are based on assumptions about the distribution of population from which the sample was taken. It is used in testing of hypothesis and estimation of parameter. </span></p>
+<p><span style="color: #202124;">Non-parametric statistics are not based on assumptions, that is, the data can be collected from a sample that does not follow a specific distribution. It is also used in testing of hypothesis and but not in estimation of parameter.</span></p>
+<p><span style="color: #202124;">The advantage and Disadvantage of Non-parametric Test are:</span></p>
+<p><strong style="color: #202124;">Advantage:</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="color: #202124;">It is easier to explain and understand.</span></li>
+<li><span style="color: #202124;">In many of these tests, the computational burden is relatively lighter. So they remain quick and easy to apply.</span></li>
+<li><span style="color: #202124;">Since no assumption is made about the form of the parent population and the parameter so they may be used under very general conditions. In fact, the specification of the population may not be apply.</span></li>
+<li>It does not require complicated sampling theory.</li>
+<li>It has greater range of applicability because of milder assumptions.</li>
+</ul>
+<p><strong style="color: #202124;">Disadvantage:</strong></p>
+<ul style="list-style-type: square;">
+<li>This test cannot be used the parameter of population.</li>
+<li>These tests is less reliable, less consistent and less powerful than parametric test.</li>
+<li>Lot of table are needed for these tests.</li>
+<li>In these tests, many times lot of information are discarded or unused.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Life in years of two types of electronic motors used in irrigation of farms are given below</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>M1</td>
+<td>3</td>
+<td>6</td>
+<td>7</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>7</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Is there any significant different between two types of motors? Use Kolmogorov Smirnov test at 5% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Let x denotes M1 and y denotes M2</p>
+<p>Problem to test:</p>
+<p>H<sub>0</sub>: F(x) = F(y)</p>
+<p>H<sub>1</sub>: F(x) ≠ F(y)</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 216px;">
+<tbody>
+<tr style="height: 72px;">
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>Combined ordered life</strong></td>
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>Frequency for x</strong></td>
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>Frequency for y</strong></td>
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>F(x)</strong></td>
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>F(y)</strong></td>
+<td style="width: 16.6667%; text-align: center; height: 72px;"><strong>|F(x) &#8211; F(y)|</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">3</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">3</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">3/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">4</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">5</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">6</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">2/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">7</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">1/9</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test Statistics:</strong></p>
+<p>D<sub>0</sub> = maximum{|F(x) &#8211; F(y)|} = 1/9 = 0.11</p>
+<p><strong>Critical Value:</strong></p>
+<p>At α = 0.05 and n<sub>1</sub> = 9, n<sub>2</sub> = 9 from K-S table</p>
+<p>D<sub>α</sub> = D<sub>0.05</sub> = 0.43</p>
+<p><strong>Decision:</strong></p>
+<p>Since, D<sub>α</sub> &gt; D<sub>0</sub>, accept H<sub>0</sub> at 0.05 level of significance</p>
+<p><strong>Conclusion:</strong></p>
+<p>Two types of motors are significantly same.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Five laptop users were asked for the acceptability of four brands for daily use. The responses of acceptability (A) and rejection (R) are given below</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td rowspan="2">Users</td>
+<td colspan="4">Brands</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Beta</td>
+<td>Delta</td>
+<td>Gamma</td>
+</tr>
+<tr>
+<td>H1</td>
+<td>A</td>
+<td>R</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>R</td>
+<td>A</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>R</td>
+<td>A</td>
+<td>R</td>
+<td>A</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>A</td>
+<td>A</td>
+<td>R</td>
+<td>A</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test whether is any significance difference between brands with respect to acceptability, Use (Cochran Q test)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 12.5%; text-align: center;" rowspan="2">Lipstick Brands</td>
+<td style="width: 12.5%; text-align: center;" colspan="5">Users</td>
+<td style="width: 12.5%; text-align: center;" rowspan="2">R<sub>i</sub></td>
+<td style="width: 12.5%; text-align: center;" rowspan="2">R<sub>i</sub><sup>2</sup></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">H<sub>1</sub></td>
+<td style="width: 12.5%; text-align: center;">H<sub>2</sub></td>
+<td style="width: 12.5%; text-align: center;">H<sub>3</sub></td>
+<td style="width: 12.5%; text-align: center;">H<sub>4</sub></td>
+<td style="width: 12.5%; text-align: center;">H<sub>5</sub></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">Alpha</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">3</td>
+<td style="width: 12.5%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">Beta</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">3</td>
+<td style="width: 12.5%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">Gamma</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">Delta</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">R</td>
+<td style="width: 12.5%; text-align: center;">A</td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">C<sub>i</sub></td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;">2</td>
+<td style="width: 12.5%; text-align: center;">1</td>
+<td style="width: 12.5%; text-align: center;">3</td>
+<td style="width: 12.5%; text-align: center;">ΣR<sub>i</sub> = ΣC<sub>j</sub> = 10</td>
+<td style="width: 12.5%; text-align: center;">ΣR<sub>i</sub><sup>2</sup> = 26</td>
+</tr>
+<tr>
+<td style="width: 12.5%; text-align: center;">C<sub>i</sub><sup>2</sup></td>
+<td style="width: 12.5%; text-align: center;">4</td>
+<td style="width: 12.5%; text-align: center;">4</td>
+<td style="width: 12.5%; text-align: center;">4</td>
+<td style="width: 12.5%; text-align: center;">1</td>
+<td style="width: 12.5%; text-align: center;">9</td>
+<td style="width: 12.5%; text-align: center;">ΣC<sub>i</sub><sup>2</sup> = 22</td>
+<td style="width: 12.5%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Here,</p>
+<p>Number of brands (k) = 4</p>
+<p>Number of housewives (n) = 5</p>
+<p><strong>Problem to test:</strong></p>
+<p>H<sub>0</sub>: There is no significant difference between brands.</p>
+<p>H<sub>1</sub>: There is at least one significant difference between brands.</p>
+<p><strong>Test Statistic:</strong></p>
+<p>\(Q = \frac{ (k-1) \left [ k \sum_{i=1}^k R_i^2 &#8211; (\sum_{i=1}^k R_i)^2 \right ] }{ k \sum_{j=1}^n C_j &#8211; \sum_{j=1}^n C_j^2}\)</p>
+<p>\(= \frac{(4-1) (4 \times 26 &#8211; (10)^2)}{4 \times 10 &#8211; 22}\)</p>
+<p>\(= \frac{12}{18}\)</p>
+<p>= 0.666</p>
+<p><strong>Critical Value:</strong></p>
+<p>At 5% level of significance then critical value is X<sup>2</sup><sub>(0.05, 3)</sub> = 7.81</p>
+<p><strong>Decision:</strong></p>
+<p>Q = 0.666 &lt; X<sup>2</sup><sub>(0.05, 3)</sub> = 7.81, accept H<sub>0</sub> at 5% level of significance.</p>
+<p><strong>Conclusion:</strong></p>
+<p>There is no significant difference between brands according to acceptability.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>For the following data consists r12 = 0.8, r23 = 0.9 and r13 = 0.82 find the r23.1 and R1.23 interpreted the results.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>r<sub>12</sub> = 0.8</p>
+<p>r<sub>23</sub> = 0.9</p>
+<p>r<sub>13</sub> = 0.82</p>
+<p>r<sub>23.1</sub> = ?</p>
+<p>R<sub>1.23</sub> = ?</p>
+<p>We know</p>
+<p>\(r_{23.1} = \frac{r_{23} &#8211; r_{12} \times r_{13}}{ \sqrt{ (1-r_{12}^2) (1-r_{23}^2) } }\)</p>
+<p>\(= \frac{0.9 &#8211; 0.8 \times 0.82}{ \sqrt{ (1-0.8^2) (1-0.9^2) } }\)</p>
+<p>= 0.933</p>
+<p>\(R_{1.23} = \sqrt{\frac{ r_{12}^2 + r_{13}^2 &#8211; 2 \times r_{12} \times r_{23} \times r_{13} }{ 1 &#8211; r_{23}^2 }}\)</p>
+<p>\( = \sqrt{\frac{ 0.8^2 + 0.82^2 &#8211; 2 \times 0.8 \times 0.9 \times 0.82 }{ 1 &#8211; 0.82^2 }}\)</p>
+<p>= 0.634</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is Binomial and Poisson process?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>Binomial Process:</h3>
+<p>Binomial process is the number of successes in the first n independent Bernoulli trials, where n = 0,1,2, . . .</p>
+<p>It is a discrete-time discrete-space counting stochastic process.</p>
+<p>Let,</p>
+<p><span style="color: #202124;">λ = arrival rate</span></p>
+<p><span style="color: #202124;">Δ = frame size</span></p>
+<p><span style="color: #202124;">P = Probability of success during one frame trial</span></p>
+<p><span style="color: #202124;">x(t/Δ) = Number of arrivals by the time t</span></p>
+<p><span style="color: #202124;">T = inter arrival time</span></p>
+<p><span style="color: #202124;">The inter arrival period consists of a Geometric number of frames Y, each frame taking Δ seconds. Hence the inter arrival time can be computed as T = YΔ. It is rescaled Geometric random variable taking possible values, Δ, 2Δ, 3Δ . &#8230; </span></p>
+<p><span style="color: #202124;">λ = p/Δ</span></p>
+<p>n = t/<span style="color: #202124;">Δ</span></p>
+<p><span style="color: #202124;">X(n) = Binomial (n, p)</span></p>
+<p><span style="color: #202124;">Y = Geometric (p)</span></p>
+<p><span style="color: #202124;">T = YΔ</span></p>
+<p><span style="color: #202124;">E(t) = E(YΔ) = ΔE(Y) = Δ/p = 1/λ</span></p>
+<p><span style="color: #202124;">V(T) = V(YΔ) = Δ</span><sup style="color: #202124;">2</sup><span style="color: #202124;">V(Y) = \(</span>(1-p)\left ( \frac{Δ}{p} \right )^2 = \frac{1-p}{λ^2}\)</p>
+<h3>Poisson Process:</h3>
+<p>It is limiting case of Binomial process as binomial counting process <span style="color: #202124;">Δ tends to 0. Poisson process is a continuous time counting stochastic process obtained from Binomial counting process when its frame size Δ decreases to 0 while the arrival rate λ remains constant.</span></p>
+<p><span style="color: #202124;">Let X(t) = No. of arrivals occurring until time t</span></p>
+<p><span style="color: #202124;">T = inter arrival time</span></p>
+<p><span style="color: #202124;">T</span><sub style="color: #202124;">k</sub><span style="color: #202124;"> = time of K</span><sup style="color: #202124;">th</sup><span style="color: #202124;"> arrival</span></p>
+<p><span style="color: #202124;">X(t) = Exponential(λ)</span></p>
+<p><span style="color: #202124;">T</span><sub style="color: #202124;">k</sub><span style="color: #202124;"> = Gamma (k, λ)</span></p>
+<p><span style="color: #202124;">E X(t) = np = \(</span>\frac{t}{Δ}p\) = <span style="color: #202124;">λt</span></p>
+<p><span style="color: #202124;">V X(t) = λt</span></p>
+<p><span style="color: #202124;">F</span><sub style="color: #202124;">r</sub><span style="color: #202124;">(t) = 1-e</span><sup style="color: #202124;">λt</sup></p>
+<p>Probability of K<sup>th</sup> arrival before time t</p>
+<p>P(T<sub>k</sub> <span style="color: #202124;">≤ t) = P[X(t) ≥ k]</span></p>
+<p>P(Tk &gt;<span style="color: #202124;"> t) = P[X(t) &lt; k]</span></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>In computer network of a software company arrival of printing message follows poission law on  an average at every 10 minutes, printer prints message takes on an average 6 minutes to print following exponential law. Find</p>
+<ol>
+<li>average arrival rate and average service rate for 1 hour</li>
+<li>average arrival rate and average rate for 15 min</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>i) 1 message arrives in 10 minutes</p>
+<p>6 messages arrives in 60 minutes</p>
+<p>Hence λ = 6 per hour (average arrival rate)</p>
+<p>10 messages serve in 60 minutes</p>
+<p>Hence <span style="color: #202124;">μ = 10 per hour (average service rate)</span></p>
+<p>&nbsp;</p>
+<p>ii) 1 message arrives in 10 minutes</p>
+<p>1.5 messages arrives in 15 minutes</p>
+<p>Hence λ = 1.5 per 15 per 15 minutes (average arrival rate)</p>
+<p>1 messages serves in 6 minutes</p>
+<p>2.5 messages serve in 15 minutes</p>
+<p>Hence <span style="color: #202124;">μ = 2.5 per 15 minutes (average service rate)</span></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Complete the following table</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>SV</td>
+<td>Df</td>
+<td>SS</td>
+<td>MSS</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Blocks</td>
+<td>5</td>
+<td>27</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Treatment</td>
+<td>4</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>?</td>
+<td>?</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>?</td>
+<td>88</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p><span class="ql-cursor">The given is of Randomized Block Design(RBD).</span></p>
+<p>Numbers of blocks = r – 1 = 5 ⇒ r = 6</p>
+<p>Numbers of treatment = t – 1 = 4 ⇒ t = 5</p>
+<p>Error (for d.f) = (r-1)(t-1) = (6-1)(5-1) = 20</p>
+<p>Total(for d.f) = rt – 1 = 6.5 – 1 = 29         <span style="font-size: 10pt;"><em><strong>Note: You can also add DF for blocks, DF for treatment and error to get total DF.</strong></em></span></p>
+<p>Now,</p>
+<p>MSB = \(\frac{SSB}{df} = \frac{27}{5}\) = 5.4</p>
+<p>&nbsp;</p>
+<p>\(MSE = \frac{SSE}{df}\)</p>
+<p>\(4= \frac{SSE}{20}\)</p>
+<p>SSE = 80</p>
+<p>&nbsp;</p>
+<p>SST = TSS &#8211; SSE &#8211; SSB</p>
+<p>SST = 88 &#8211; 80 -29</p>
+<p>SST = -19</p>
+<p>&nbsp;</p>
+<p>MST = \(\frac{SST}{df} = \frac{-19}{4}\) = -4.75</p>
+<p>&nbsp;</p>
+<p>F<sub>block</sub> = \(\frac{MSB}{SST} = \frac{5.4}{27}\) = 0.2</p>
+<p>F<sub>treatment</sub> = \(\frac{MSB}{SST} = \frac{5.4}{27}\) = 0.25</p>
+<p>Hence, the table after filling missing value is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>S.V.</td>
+<td>d.f</td>
+<td>S.S</td>
+<td>MSS</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Blocks</td>
+<td>5</td>
+<td>27</td>
+<td>5.4</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>Treatments</td>
+<td>4</td>
+<td>-19</td>
+<td>-4.75</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>20</td>
+<td>80</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>29</td>
+<td>88</td>
+</tr>
+</tbody>
+</table></div>
+<div style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 0.75rem 1.25rem; margin: 1rem 0;"><strong><span style="font-size: 10pt;">There may be error in calculation. Please follow the steps only. If you find any error then please report to us. </span></strong></div>
+</div>
+</body></html>

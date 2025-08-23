@@ -1,0 +1,493 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mathematics II Question bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>Mathematics II Question bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 80</p>
+        <p><strong>Pass Marks:</strong> 32</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>What is a system of linear equations ? When the system is consistent ? Find the condition on g, h, k that makes the system consistent.</p>
+<p>x<sub>1</sub> – 4x<sub>2</sub> + 7x<sub>3</sub> = g</p>
+<p>3x<sub>2</sub> – 5x<sub>3</sub> = h</p>
+<p>-2x<sub>1</sub> + 5x<sub>2</sub> – 9x<sub>3</sub> = k</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A system of linear equations is a collection of one or more linear equations involving one or more variables. Each equation in the system is a linear combination of the variables, and the goal is to find values for the variables that satisfy all the equations simultaneously. In general, a system of linear equations can be represented as follows:</p>
+<p>a₁x₁ + a₂x₂ + a₃x₃ + … + aₙxₙ = b₁<br />
+a₁’x₁ + a₂’x₂ + a₃’x₃ + … + aₙ’xₙ = b₂<br />
+a₁”x₁ + a₂”x₂ + a₃”x₃ + … + aₙ”xₙ = b₃<br />
+…<br />
+a₁ᵤx₁ + a₂ᵤx₂ + a₃ᵤx₃ + … + aₙᵤxₙ = bᵤ</p>
+<p>Where:</p>
+<ul style="list-style-type: square;">
+<li>x₁, x₂, x₃, …, xₙ are the variables.</li>
+<li>a₁, a₂, a₃, …, aₙ are the coefficients of the variables in the first equation.</li>
+<li>b₁ is the constant on the right side of the first equation.</li>
+<li>Similarly, a₁’, a₂’, a₃’, …, aₙ’, b₂, a₁”, a₂”, a₃”, …, aₙ”, b₃, and so on represent the coefficients and constants in the subsequent equations.</li>
+</ul>
+<p>A system of linear equations is consistent when it has at least one solution, which means there is a set of values for the variables that satisfies all the equations in the system. In other words, a system of equations is consistent if there is at least one combination of values for the variables that makes all the equations true simultaneously.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>$$ Let A =\begin{bmatrix}<br />
+1 & -5 & -7 \\<br />
+-3 & 7 & 5 \\<br />
+\end{bmatrix} , u = \begin{bmatrix}<br />
+1 \\<br />
+2\\<br />
+3\\<br />
+\end{bmatrix}, b= \begin{bmatrix}<br />
+-2\\<br />
+-2\\<br />
+\end{bmatrix},$$</p>
+<p>and define a transformation T : R<sup>3</sup> → R² by T(x) = Ax then</p>
+<p>a. find T(u).</p>
+<p>b. Find x ∈ R<sup>3</sup> whose image under T is b.</p>
+<p>c. Is x unique ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>$$  A =\begin{bmatrix}<br />
+1 &amp; -5 &amp; -7 \\<br />
+-3 &amp; 7 &amp; 5 \\<br />
+\end{bmatrix} ,<br />
+u = \begin{bmatrix}<br />
+1 \\<br />
+2\\<br />
+3\\<br />
+\end{bmatrix},<br />
+b= \begin{bmatrix}<br />
+-2\\<br />
+-2\\<br />
+\end{bmatrix},$$</p>
+<p>T : R<sup>3</sup> → R² by T(x) = Ax then</p>
+<p>a.</p>
+<p style="text-align: center;">T(u) = Au</p>
+<p style="text-align: center;">$$=\begin{bmatrix}<br />
+1 &amp; -5 &amp; -7 \\<br />
+-3 &amp; 7 &amp; 5 \\<br />
+\end{bmatrix}<br />
+\begin{bmatrix}<br />
+1 \\<br />
+2\\<br />
+3\\<br />
+\end{bmatrix}$$</p>
+<p style="text-align: center;">$$=\begin{bmatrix}<br />
+-27\\<br />
+26\\<br />
+\end{bmatrix}$$</p>
+<p>b.</p>
+<p style="text-align: center;">T(x) = b</p>
+<p style="text-align: center;">$$let x = \begin{bmatrix}<br />
+x_{{1}}\\<br />
+x_{{2}}\\<br />
+x_{{3}}\\<br />
+\end{bmatrix}$$ then,</p>
+<p style="text-align: center;">or,  Ax = b</p>
+<p style="text-align: center;"> $$or, \begin{bmatrix}<br />
+1 &amp; -5 &amp; -7 \\<br />
+-3 &amp; 7 &amp; 5 \\<br />
+\end{bmatrix}<br />
+\begin{bmatrix}<br />
+1 \\<br />
+2\\<br />
+3\\<br />
+\end{bmatrix} = \begin{bmatrix}<br />
+x_{{1}}\\<br />
+x_{{2}}\\<br />
+x_{{3}}\\<br />
+\end{bmatrix}$$</p>
+<p>Multiply Equation 1 by 3 to eliminate <span class="katex"><span class="katex-mathml">x<sub>1</sub></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> when we add the two equations:</p>
+<p style="text-align: center;"><span class="base"><span class="mord">3</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">15</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">21</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">6</span></span><br />
+<span class="base"><span class="mord">−</span><span class="mord">3</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">7</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mbin">+ </span></span><span class="base"><span class="mord">5</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">2</span></span></p>
+<p>Adding these equations:</p>
+<p style="text-align: center;"><span class="base"><span class="mord">−</span><span class="mord">8</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mbin">− </span></span><span class="base"><span class="mord">16</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">8</span></span></p>
+<p>Simplifying, we find:</p>
+<p style="text-align: center;"><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mrel">= </span></span><span class="base"><span class="mord">1</span></span></p>
+<p>Now, using <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">1 </span><span class="mbin">− </span></span><span class="base"><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span></span></span></span>, substitute into Equation 1 to solve for <span class="katex"><span class="katex-mathml">x<sub>1</sub></span><sub><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></sub></span>:</p>
+<p style="text-align: center;"><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">5</span><span class="mopen">(</span><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mclose">) </span><span class="mbin">− </span></span><span class="base"><span class="mord">7</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">2</span></span><br />
+<span class="base"><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1 </span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mbin">− </span></span><span class="base"><span class="mord">5 </span><span class="mbin">+ </span></span><span class="base"><span class="mord">10</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mbin">− </span></span><span class="base"><span class="mord">7</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">2</span></span><br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml"> <span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">3</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mrel">= </span></span><span class="base"><span class="mord">3</span></span></span></span></span></p>
+<p>Thus, we can express the solution as:</p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" class="alignnone wp-image-43092" src="https://hamrocsit.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-3.03.05-PM.jpeg" alt="" width="131" height="80"></p>
+<p>where <span class="katex"><span class="katex-mathml">x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span></span></span></span> is a free variable. This represents the set of all <span class="katex"><span class="katex-mathml">x</span></span> in <span class="katex"><span class="katex-mathml">R<sup>3</sup></span></span> that satisfy <span class="katex"><span class="katex-mathml">T(x) </span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mrel">= </span></span><span class="base"><span class="mord mathnormal">b</span></span></span></span>.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Find the least square solution of Ax=b where</p>
+<p>$$ A=\begin{bmatrix}<br />
+1 & -3 & -3\\<br />
+1 & 5 & 1\\<br />
+1 & 7 & 2\\<br />
+\end{bmatrix}, b= \begin{bmatrix}<br />
+5\\<br />
+-3\\<br />
+-5\\<br />
+\end{bmatrix}$$</p>
+<p>and compute the associated least square error.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>$$A =\begin{bmatrix}<br />
+1 &amp; -3 &amp; -3\\<br />
+1 &amp; 5 &amp; 1\\<br />
+1 &amp; 7 &amp; 2\\<br />
+\end{bmatrix} and  b = \begin{bmatrix}<br />
+5\\<br />
+-3\\<br />
+-5\\<br />
+\end{bmatrix}$$</p>
+<p>now,</p>
+<p style="text-align: left;">x = (A<sup>T</sup> A)<sup>-1</sup> (A<sup>T</sup> b) _______(1)</p>
+<p style="text-align: left;">A<sup>T </sup>= \begin{bmatrix}<br />
+1 &amp; 1 &amp; 1\\<br />
+-3 &amp; 5 &amp; 7\\<br />
+-3 &amp; 1 &amp; 2\\<br />
+\end{bmatrix}</p>
+<p style="text-align: left;">A<sup>T</sup>A = \begin{bmatrix}<br />
+1 &amp; 1 &amp; 1\\<br />
+-3 &amp; 5 &amp; 7\\<br />
+-3 &amp; 1 &amp; 2\\<br />
+\end{bmatrix}<br />
+\begin{bmatrix}<br />
+1 &amp; -3 &amp; -3\\<br />
+1 &amp; 5 &amp; 1\\<br />
+1 &amp; 7 &amp; 2\\<br />
+\end{bmatrix}</p>
+<p style="text-align: left;">A<sup>T</sup>A = \begin{bmatrix}<br />
+3 &amp; 9 &amp; 0\\<br />
+9 &amp; 83 &amp; 28\\<br />
+0 &amp; 28 &amp; 14\\<br />
+\end{bmatrix}</p>
+<p style="text-align: left;">here,</p>
+<p style="text-align: left;">A<sup>T</sup>b = \begin{bmatrix}<br />
+1 &amp; 1 &amp; 1\\<br />
+-3 &amp; 5 &amp; 7\\<br />
+-3 &amp; 1 &amp; 2\\<br />
+\end{bmatrix}<br />
+\begin{bmatrix}<br />
+5\\<br />
+-3\\<br />
+-5\\<br />
+\end{bmatrix}</p>
+<p style="text-align: left;">A<sup>T</sup>b =\begin{bmatrix}<br />
+-3\\<br />
+-65\\<br />
+-28\\<br />
+\end{bmatrix}</p>
+<p>Since we have definition of least square; the set of least square solutions of Ax = b coincides with the non-empty set of solutions of A<sup>T</sup>Ax = A<sup>T</sup>b</p>
+<p>therefore,</p>
+<p><span id="MJXc-Node-860" class="mjx-texatom"><span id="MJXc-Node-861" class="mjx-mrow"><span id="MJXc-Node-862" class="mjx-munderover"><span class="mjx-stack"><span class="mjx-op"><span id="MJXc-Node-863" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I">x </span></span></span></span></span></span></span><span id="MJXc-Node-865" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R">= (A<sup>T</sup> A)<sup>-1</sup> (A<sup>T</sup> b)</span></span></p>
+<p style="text-align: left;">|A<sup>T</sup> A |= |\begin{bmatrix}<br />
+3 &amp; 9 &amp; 0\\<br />
+9 &amp; 83 &amp; 28\\<br />
+0 &amp; 28 &amp; 14\\<br />
+\end{bmatrix}| = 0</p>
+<p>Since, |A<sup>T</sup> A |<span id="MJXc-Node-873" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-874" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R"> = 0 </span></span></span></span><span id="MJXc-Node-873" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-874" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">so, inverse doesn&#8217;t exists. </span></span></span></span></p>
+<p><span id="MJXc-Node-873" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-874" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R">Hence, there is no solution.</span></span></span></span></p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Are vectors $$v_1=\begin{bmatrix}1\\4\\0\\ \end{bmatrix}, v_2=\begin{bmatrix}10\\2\\1\\ \end{bmatrix} and v_3=\begin{bmatrix}-5\\0\\6\\ \end{bmatrix}$$ linearly independent? Justify.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>$$v_1=\begin{bmatrix}<br />
+1\\<br />
+4\\<br />
+0\\<br />
+\end{bmatrix},<br />
+v_2=\begin{bmatrix}<br />
+10\\<br />
+2\\<br />
+1\\<br />
+\end{bmatrix} and<br />
+v_3=<br />
+\begin{bmatrix}<br />
+-5\\<br />
+0\\<br />
+6\\<br />
+\end{bmatrix}$$</p>
+<p>augmented matrix will be as,</p>
+<p>$$\begin{bmatrix}<br />
+1 &amp; 10 &amp; -5\\<br />
+4 &amp; 2 &amp;0\\<br />
+0 &amp; 1 &amp; 6\\<br />
+\end{bmatrix}$$</p>
+<p>Applying R<sub>2</sub> → R<sub>2 </sub>&#8211; 4R<sub>1</sub></p>
+<p>$$∼ \begin{bmatrix}<br />
+1 &amp; 10 &amp; -5\\<br />
+0 &amp; -38 &amp; 20\\<br />
+0 &amp; 1 &amp; 6\\<br />
+\end{bmatrix}$$</p>
+<p>Applying R<sub>2</sub> → R<sub>2</sub>/ (-38)</p>
+<p>$$∼ \begin{bmatrix}<br />
+1 &amp; 10 &amp; -5\\<br />
+0 &amp; -38 &amp; \frac{{-20}}{{38}}\\<br />
+0 &amp; 1 &amp; 6\\<br />
+\end{bmatrix}$$</p>
+<p>Applying R<sub>1</sub> → R<sub>1 </sub>&#8211; 10R<sub>2</sub> , R<sub>3</sub> → R<sub>3 </sub>&#8211; R<sub>2</sub></p>
+<p>$$∼ \begin{bmatrix}<br />
+1 &amp; 0 &amp; \frac{{5}}{{19}}\\<br />
+0 &amp; 1 &amp; \frac{{-20}}{{38}}\\<br />
+0 &amp; 0 &amp; \frac{{124}}{{19}}\\<br />
+\end{bmatrix}$$</p>
+<p>Applying R<sub>3</sub> → R<sub>3</sub>/ (19/124)</p>
+<p>$$∼ \begin{bmatrix}<br />
+1 &amp; 0 &amp; \frac{{5}}{{19}}\\<br />
+0 &amp; 1 &amp; \frac{{-20}}{{38}}\\<br />
+0 &amp; 0 &amp; 1\\<br />
+\end{bmatrix}$$</p>
+<p>Applying R<sub>1</sub> → R<sub>1 </sub>&#8211; (5/19)R<sub>3</sub> , R<sub>2</sub> → R<sub>2 </sub>+ (20/38)R<sub>3</sub></p>
+<p>$$∼ \begin{bmatrix}<br />
+1 &amp; 0 &amp; 0\\<br />
+0 &amp; 1 &amp; 0\\<br />
+0 &amp; 0 &amp; 1\\<br />
+\end{bmatrix}$$</p>
+<p>As the solution is non trival so, we can say that the soln is linearly independent.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Find LU Factorization. Given the matrix:<br />
+$$<br />
+\begin{bmatrix}<br />
+2 & 3 & 4 \\<br />
+4 & 5 & 10 \\<br />
+4 & 8 & 2<br />
+\end{bmatrix}<br />
+$$</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>$$\begin{bmatrix}<br />
+2 &amp; 3 &amp; 4 \\<br />
+4 &amp; 5 &amp; 10 \\<br />
+4 &amp; 8 &amp; 2<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Step 1: Perform row operations to simplify the matrix. R<sub>2</sub> → R<sub>2</sub> &#8211; 2R<sub>1</sub>,  R<sub>3</sub> → R<sub>3</sub> &#8211; 2R<sub>1</sub><br />
+$$<br />
+\begin{bmatrix}<br />
+2 &amp; 3 &amp; 4 \\<br />
+0 &amp; -1 &amp; 2 \\<br />
+0 &amp; 2 &amp; -6<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Step 1: Perform row operations to simplify the matrix. R<sub>3</sub> → R<sub>3</sub> + 2R<sub>2</sub></p>
+<p>$$<br />
+\begin{bmatrix}<br />
+2 &amp; 3 &amp; 4 \\<br />
+0 &amp; -1 &amp; 2 \\<br />
+0 &amp; 0 &amp; -2<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Pivot element of first column is 2</p>
+<p>$$<br />
+\begin{bmatrix}<br />
+2 \\<br />
+4 \\<br />
+4 \\<br />
+\end{bmatrix} / 2 = \begin{bmatrix}<br />
+1 \\<br />
+2 \\<br />
+2 \\<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Pivot element of second column is -1</p>
+<p>$$<br />
+\begin{bmatrix}<br />
+-1 \\<br />
+2 \\<br />
+\end{bmatrix} / -1 = \begin{bmatrix}<br />
+1 \\<br />
+-2 \\<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Pivot element of second column is -1</p>
+<p style="text-align: center;">[-2] / -2 = [1]</p>
+<p>LU Factorization:<br />
+$$<br />
+L = \begin{bmatrix}<br />
+1 &amp; 0 &amp; 0 \\<br />
+2 &amp; 1 &amp; 0 \\<br />
+2 &amp; -2 &amp; 1<br />
+\end{bmatrix}, \quad<br />
+U = \begin{bmatrix}<br />
+2 &amp; 3 &amp; 4 \\<br />
+0 &amp; -1 &amp; 2 \\<br />
+0 &amp; 0 &amp; -2<br />
+\end{bmatrix}<br />
+$$</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Compute Det of A where<br />
+$$<br />
+A = \begin{bmatrix}<br />
+2 & -8 & 6 & 8 \\<br />
+3 & -9 & 5 & 10 \\<br />
+-3 & 0 & 1 & -2 \\<br />
+1 & -4 & 0 & 6<br />
+\end{bmatrix}<br />
+$$</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given the matrix:<br />
+$$<br />
+A = \begin{bmatrix}<br />
+2 &amp; -8 &amp; 6 &amp; 8 \\<br />
+3 &amp; -9 &amp; 5 &amp; 10 \\<br />
+-3 &amp; 0 &amp; 1 &amp; -2 \\<br />
+1 &amp; -4 &amp; 0 &amp; 6<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Perform row operations to simplify the matrix. R<sub>4</sub> → R<sub>4</sub> &#8211; 1/3R<sub>2 </sub>, R<sub>3</sub> → R<sub>3</sub> + R<sub>2</sub></p>
+<p>$$<br />
+\begin{bmatrix}<br />
+2 &amp; -8 &amp; 6 &amp; 8 \\<br />
+3 &amp; -9 &amp; 5 &amp; 10 \\<br />
+0 &amp; -9 &amp; 6 &amp; 8 \\<br />
+0 &amp; -1 &amp; -5/3 &amp; 8/3<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Perform row operations to simplify the matrix. R<sub>2</sub> → R<sub>2</sub> &#8211; 3/2R<sub>1</sub>,  R<sub>4</sub> → R<sub>4</sub> + 1/3R<sub>2 </sub>, R<sub>3</sub> → R<sub>3</sub> + 3R<sub>2</sub><br />
+$$<br />
+\begin{bmatrix}<br />
+2 &amp; -8 &amp; 6 &amp; 8 \\<br />
+0 &amp; 3 &amp; -4 &amp; -2 \\<br />
+0 &amp; 0 &amp; -6 &amp; 2 \\<br />
+0 &amp; 0 &amp; -3 &amp; 2<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Continue simplifying to upper triangular form to compute the determinant:<br />
+$$<br />
+\begin{bmatrix}<br />
+2 &amp; -8 &amp; 6 &amp; 8 \\<br />
+0 &amp; 3 &amp; -4 &amp; -2 \\<br />
+0 &amp; 0 &amp; -6 &amp; 2 \\<br />
+0 &amp; 0 &amp; 0 &amp; 3/2<br />
+\end{bmatrix}<br />
+$$</p>
+<p>The determinant is calculated by multiplying the diagonal elements.<br />
+$$<br />
+\text{det}(A) = 2 \times 3 \times (-6) \times \frac{3}{2} = -54<br />
+$$</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Show that <span class="katex"><span class="katex-mathml">H = {(a−3b, b−a, a, b) : a, b ∈ R} </span></span>is a subspace of  <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathbb">R</span><sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></sup></span></span></span></span>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To show that <span class="katex"><span class="katex-mathml">H</span></span> is a subspace of <span class="katex"><span class="katex-mathml">R<sup>4</sup></span></span>, we need to verify the following conditions:</p>
+<ol style="list-style-type:decimal;">
+<li>The zero vector <span class="katex"><span class="katex-mathml">0 ∈ H</span></span>.</li>
+<li><span class="katex"><span class="katex-mathml">H</span></span> is closed under vector addition.</li>
+<li><span class="katex"><span class="katex-mathml">H</span></span> is closed under scalar multiplication.</li>
+</ol>
+<p>Let <span class="katex"><span class="katex-mathml">v = (a−3b, b−a, a, b)</span></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Zero Vector</strong>:<br />
+Set <span class="katex"><span class="katex-mathml">a = 0 </span></span>and <span class="katex"><span class="katex-mathml">b = 0</span></span>. Then:<br />
+<span class="base"><span class="mord mathbf">v </span><span class="mrel">= </span></span><span class="base"><span class="mopen">(</span><span class="mord">0 </span><span class="mbin">− </span></span><span class="base"><span class="mord">3</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mpunct">, </span><span class="mord">0 </span><span class="mbin">− </span></span><span class="base"><span class="mord">0</span><span class="mpunct">, </span><span class="mord">0</span><span class="mpunct">, </span><span class="mord">0</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">, </span><span class="mord">0</span><span class="mpunct">, </span><span class="mord">0</span><span class="mpunct">, </span><span class="mord">0</span><span class="mclose">)<br />
+So, the zero vector is in <span class="katex"><span class="katex-mathml">H</span></span>, i.e., <span class="katex"><span class="katex-mathml">0 ∈ H</span></span>.</span></span></li>
+<li><strong>Closed under Addition</strong>:<br />
+Let <span class="katex"><span class="katex-mathml">v1=(a<sub>1 </sub>− 3b<sub>1</sub>, b<sub>1 </sub>− a<sub>1</sub>, a<sub>1</sub>, b<sub>1</sub>)</span></span> and <span class="katex"><span class="katex-mathml">v2 = (a<sub>2 </sub>− 3b<sub>2</sub>, b<sub>2 </sub>− a<sub>2</sub>, a<sub>2</sub>, b<sub>2</sub>) </span></span>be two vectors in <span class="katex"><span class="katex-mathml">H</span></span>. The sum is:<br />
+<span class="base"><span class="mord"><span class="mord mathbf">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord"><span class="mord mathbf">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mopen">((</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">3</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mclose">) </span><span class="mbin">+ </span></span><span class="base"><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">3</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mclose">)</span><span class="mpunct">, </span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mclose">) </span><span class="mbin">+ </span></span><span class="base"><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mclose">)</span><span class="mpunct">, </span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">, </span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="base"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub></span></span></span></span><span class="mclose">)<br />
+</span></span></span>Simplifying:<span class="base"><span class="mclose"><span class="katex-display"><span class="katex"><span class="katex-mathml">= ((a<sub>1 </sub>+ a<sub>2</sub>) − 3(b<sub>1 </sub>+ b<sub>2</sub>), (b<sub>1 </sub>+ b<sub>2</sub>) − (a<sub>1 </sub>+ a<sub>2</sub>), a<sub>1 </sub>+ a<sub>2</sub>, b<sub>1 </sub>+ b<sub>2</sub>)<br />
+This is of the same form as (a − 3b, b − a, a, b), so v<sub>1</sub> + v<sub>2</sub> ∈ H.</span></span></span></span></span></li>
+<li><strong>Closed under Scalar Multiplication</strong>:<br />
+Let <span class="katex"><span class="katex-mathml">c ∈ R </span></span>and <span class="katex"><span class="katex-mathml">v = (a − 3b, b − a, a, b)</span></span>. Then:<br />
+<span class="base"><span class="mord mathnormal">c</span><span class="mord mathbf">v </span><span class="mrel">= </span></span><span class="base"><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">a </span><span class="mbin">− </span></span><span class="base"><span class="mord">3</span><span class="mord mathnormal">b</span><span class="mpunct">, </span><span class="mord mathnormal">b </span><span class="mbin">− </span></span><span class="base"><span class="mord mathnormal">a</span><span class="mpunct">, </span><span class="mord mathnormal">a</span><span class="mpunct">, </span><span class="mord mathnormal">b</span><span class="mclose">) </span><span class="mrel">= </span></span><span class="base"><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">a </span><span class="mbin">− </span></span><span class="base"><span class="mord">3</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mpunct">, </span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">b </span><span class="mbin">− </span></span><span class="base"><span class="base"><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mpunct">, </span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mpunct">, </span><span class="mord mathnormal">c</span><span class="mord mathnormal">b</span><span class="mclose">)<br />
+</span></span></span>Simplifying:<br />
+= (ca − 3cb, cb − ca, ca, cb)<br />
+This is also of the form <span class="katex"><span class="katex-mathml">(a − 3b, b − a, a, b)</span></span>, so <span class="katex"><span class="katex-mathml">cv ∈ H.</span></span></li>
+</ol>
+<p>Thus, <span class="katex"><span class="katex-mathml">H</span></span> is a subspace of <span class="katex"><span class="katex-mathml">R<sup>4</sup></span></span>.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Is $$\begin{bmatrix}3\\2\\ \end{bmatrix}$$ an eigen vector of  $$\begin{bmatrix}5&-3\\-4&9\\ \end{bmatrix}$$ ? If so, find eigenvalue.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>$$A =\begin{bmatrix} 5 &amp; -3\\ -4 &amp;9\\ \end{bmatrix}, X =\begin{bmatrix}3\\ 2\\ \end{bmatrix}$$</p>
+<p>$$AX = \begin{bmatrix} 5 &amp; -3\\ -4 &amp;9\\ \end{bmatrix} \begin{bmatrix} 3\\ 2\\ \end{bmatrix}$$</p>
+<p>$$AX = \begin{bmatrix} 9\\ 6\\ \end{bmatrix}$$</p>
+<p>$$AX = 3 \begin{bmatrix} 3\\ 2\\ \end{bmatrix}$$</p>
+<p>Hence, $$\begin{bmatrix} 3\\ 2\\ \end{bmatrix}$$ is eigen vector of $$\begin{bmatrix} 5 &amp; -3\\ -4 &amp;9\\ \end{bmatrix}$$.</p>
+<p>now,</p>
+<p>for eigen value charactristics equation is</p>
+<p>$$|A &#8211; λI| = 0$$</p>
+<p>$$|\begin{bmatrix} 5 &amp; -3\\ -4 &amp;9\\ \end{bmatrix}-λ\begin{bmatrix} 1 &amp; 0\\ 0 &amp;1\\ \end{bmatrix}| = 0$$</p>
+<p>$$|\begin{bmatrix} 5 &amp; -3\\ -4 &amp;9\\ \end{bmatrix}-\begin{bmatrix} λ &amp; 0\\ 0 &amp;λ\\ \end{bmatrix}| = 0$$</p>
+<p><img loading="lazy" decoding="async" class="wp-image-43100 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-3.41.52-PM.jpeg" alt="" width="187" height="194"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Let u = (1, -2, 2, 0). Find a unit vector of  v  in the same direction of u.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To find the unit vector in the same direction as a vector, we divide it by its magnitude.</p>
+<p>The magnitude of \( \vec{v} \) is<br />
+$$ \sqrt{1^2 + (-2)^2 + 2^2 + 0^2} = \sqrt{9} = 3 $$</p>
+<p>We will divide vector \( \vec{u} \) by the magnitude of vector \( \vec{v} \). So,</p>
+<p>$$ \left( \frac{1}{3}, \frac{-2}{3}, \frac{2}{3}, \frac{0}{3} \right) $$</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Find the basis and dimension of <span class="katex"><span class="katex-mathml">Nul A</span></span> where <span class="katex"><span class="katex-mathml">A = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 7 & 8 \end{bmatrix}</span></span>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To find the basis of the null space <span class="katex"><span class="katex-mathml">Nul A</span></span>, we need to solve the homogeneous system <span class="katex"><span class="katex-mathml">Ax = 0</span></span>, where :</p>
+<p>$$<br />
+A = \begin{bmatrix}<br />
+1 &amp; 2 &amp; 3 &amp; 4 \\<br />
+2 &amp; 4 &amp; 7 &amp; 8<br />
+\end{bmatrix}, \quad<br />
+\mathbf{x} = \begin{bmatrix}<br />
+x_1 \\<br />
+x_2 \\<br />
+x_3 \\<br />
+x_4<br />
+\end{bmatrix}<br />
+$$</p>
+<p>We write the augmented matrix for the system <span class="katex"><span class="katex-mathml">Ax = 0 :</span></span></p>
+<p>$$<br />
+\begin{bmatrix}<br />
+1 &amp; 2 &amp; 3 &amp; 4 &amp;| 0 \\<br />
+2 &amp; 4 &amp; 7 &amp; 8 &amp;| 0<br />
+\end{bmatrix}<br />
+$$</p>
+<p>Perform row reduction:</p>
+<p>Subtract 2 times the first row from the second row:</p>
+<p>$$<br />
+\begin{bmatrix}<br />
+1 &amp; 2 &amp; 3 &amp; 4 &amp;| 0 \\<br />
+0 &amp; 0 &amp; 1 &amp; 0 &amp;| 0<br />
+\end{bmatrix}<br />
+$$</p>
+<p>The system now becomes:</p>
+<p><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mbin">+ </span></span><span class="base"><span class="mord">3</span><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mbin">+ </span></span><span class="base"><span class="mord">4</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">0 </span><span class="mord text"><span class="mord">(Row 1)</span></span></span><br />
+<span class="base"><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3 </span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mrel">= </span></span><span class="base"><span class="mord">0 </span><span class="mord text"><span class="mord">(Row 2)</span></span></span></p>
+<p>From Row 2, we have <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mrel">=</span></span><span class="base"><span class="mord">0</span></span></span></span>. Substituting into Row 1:</p>
+<p><span class="base"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord">4</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mrel">= </span></span><span class="base"><span class="mord">0   </span><span class="mrel">⇒   </span></span><span class="base"><span class="mord"><span class="mord mathnormal">x</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​ </span></span></span></span></sub></span><span class="mrel">= </span></span><span class="base"><span class="mord">−</span><span class="mord">2</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">− </span></span><span class="base"><span class="mord">4</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span></span></p>
+<p>Thus, the solution is:</p>
+<p>$$<br />
+\begin{bmatrix} -2x_2 &#8211; 4x_4 \\ x_2 \\ 0 \\ x_4 \end{bmatrix} = x_2 \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -4 \\ 0 \\ 0 \\ 1 \end{bmatrix}<br />
+$$</p>
+<p>The null space basis is:</p>
+<p>$$<br />
+\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} -4 \\ 0 \\ 0 \\ 1 \end{bmatrix}<br />
+$$</p>
+<p>The dimension of \( \text{Nul } A \) is 2.</p>
+<p><span class="base"><span class="minner"><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define group. Show that (Ζ , .) doesn’t form a group.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A group is a fundamental algebraic structure in abstract algebra that consists of a set together with an operation that combines elements from the set and satisfies four key properties:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Closure</strong>: For any two elements, a and b, in the group, their combination under the group operation must also be in the group. In other words, a . b is an element of the group.</li>
+<li><strong>Associativity</strong>: The group operation is associative, which means that for any three elements a, b, and c in the group, the following equality holds: (a . b) . c = a . (b . c).</li>
+<li><strong>Identity Element</strong>: There exists an identity element, denoted as “e” or “1,” such that for any element “a” in the group, the following equation is true: a . e = e . a = a.</li>
+<li><strong>Inverse Element</strong>: For each element “a” in the group, there exists an inverse element “b” such that a . b = b . a = e, where “e” is the identity element.</li>
+</ol>
+<p>Now,</p>
+<p>The set of integers, denoted as Z, is checked if it form a group with respect to the multiplication operation (.) or not:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Closure</strong>: For any two integers “a” and “b,” their product “a . b” is also an integer. Therefore, closure is satisfied.</li>
+<li><strong>Associativity</strong>: Multiplication of integers is associative, meaning that for any integers “a,” “b,” and “c,” we have<br />
+(a . b) . c = a . (b . c)<br />
+This property holds.</li>
+<li><strong>Identity Element</strong>: The identity element for multiplication in the set of integers is “0”. For any integer “a,” we have<br />
+a . 1 = 1 . a = a<br />
+Therefore, the identity element is present.</li>
+<li><strong>Inverse Element</strong>: For every integer “a,” its inverse with respect to multiplication is “1/a”.<br />
+Here, the inverse 1/a isn&#8217;t an integer. So, group is not formed.</li>
+</ol>
+<p>Since, the set of integers doesn&#8217;t hold all four properties of a group with respect to multiplication, it is not a group under multiplication.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Show that every field is an integral domain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To show that every field is an integral domain, let&#8217;s recall the definitions:</p>
+<ul style="list-style-type: square;">
+<li>A <strong>field</strong> is a set with two operations (addition and multiplication) where every element (except 0) has a multiplicative inverse.</li>
+<li>An <strong>integral domain</strong> is a commutative ring with no zero divisors, meaning if <span class="katex"><span class="katex-mathml">ab = 0</span></span>, then either <span class="katex"><span class="katex-mathml">a = 0</span></span> or <span class="katex"><span class="katex-mathml">b = 0</span></span>.</li>
+</ul>
+<p>Now, let <span class="katex"><span class="katex-mathml">F</span></span> be a field, and consider two elements <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span> and <span class="katex"><span class="katex-mathml">b</span></span> in <span class="katex"><span class="katex-mathml">F</span></span> such that:</p>
+<p style="text-align: center;"><span class="katex-display"><span class="katex"><span class="katex-mathml">ab = 0</span></span></span></p>
+<p>We need to show that either <span class="katex"><span class="katex-mathml">a = 0 </span></span>or <span class="katex"><span class="katex-mathml">b = 0</span></span>.</p>
+<ol style="list-style-type:decimal;">
+<li>If <span class="katex"><span class="katex-mathml">a = 0</span></span>, the equation is trivially true.</li>
+<li>If <span class="katex"><span class="katex-mathml">a ≠ 0</span></span>, then since <span class="katex"><span class="katex-mathml">F</span></span> is a field, <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span> has a multiplicative inverse <span class="katex"><span class="katex-mathml">a<sup>−1</sup></span></span> in <span class="katex"><span class="katex-mathml">F</span></span>. Multiplying both sides of the equation <span class="katex"><span class="katex-mathml">ab = 0</span></span> by <span class="katex"><span class="katex-mathml">a<sup>−1</sup></span></span>:</li>
+</ol>
+<p style="text-align: center;"><span class="katex-display"><span class="katex"><span class="katex-mathml">a<sup>−1</sup>(ab) = a<sup>−1</sup>⋅0</span></span></span></p>
+<p>Simplifying:</p>
+<p style="text-align: center;"><span class="katex-display"><span class="katex"><span class="katex-mathml">b = 0</span></span></span></p>
+<p>Thus, in a field, if <span class="katex"><span class="katex-mathml">ab = 0</span></span>, then either <span class="katex"><span class="katex-mathml">a = 0 </span></span>or <span class="katex"><span class="katex-mathml">b = 0</span></span>. Therefore, a field has no zero divisors, which means every field is an integral domain.</p>
+</div>
+</body></html>

@@ -1,0 +1,270 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>Math Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 80 + 20</p>
+        <p><strong>Pass Marks:</strong> 32 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any THREE Questions</h2><h3>Question 1(a)</h3>
+<div><p><p>If \(f(x) = \sqrt{x}\) and \(g(x) = \sqrt{3 – x}\) then find f0g and its domain and range.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>f(x) = √x</p>
+<p>\(g(x) = \sqrt{3-x}\)</p>
+<p>fog(x) = ?</p>
+<p>We know,</p>
+<p>fog = f[g(x)] = f(\(\sqrt{3-x}\)</p>
+<p>\(= \sqrt{\sqrt{3-x}}\)</p>
+<p>\(= (3-x)^{\frac{1}{4}}\)</p>
+<p><strong>Domain:</strong></p>
+<p>To find domain of fog,</p>
+<p>First we have to find domain of \(g(x) = \sqrt{3-x}\)</p>
+<p>Domain of g(x) is</p>
+<p>3 &#8211; x ≥ 0</p>
+<p>i.e. x ≤ 3  i.e. A = (-∞, 3].</p>
+<p>and domain of \(f(g(x))  =  (3-x)^{\frac{1}{4}}\)</p>
+<p>3 &#8211; x ≥ 0</p>
+<p>i.e. x ≤ 3  i.e. B = (-∞, 3].</p>
+<p>Here, A∩B = (-∞, 3] is domain of fog.</p>
+<p><strong>Range:</strong></p>
+<p>\(y = (3-x)^{\frac{1}{4}}\)</p>
+<p><sup>4</sup>√y = 3 &#8211; x</p>
+<p>x  = 3 &#8211; <sup>4</sup>√y</p>
+<p>x exists for y &gt; 0 but domain limit is (-∞, 3]</p>
+<p>Range will be (0, 3]</p>
+</div>
+<h3>Question (b)</h3>
+<div><p><p>A rectangular storage container with an open top has a volume of 20m<sup>3</sup>. The length of its base is twice its width. Material for the base costs Rs.10 per square meter material for the sides costs Rs 4 per square meter. Express the cost of materials as a function of the width of the base.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let x = the width and  h = the height of the container.</p>
+<p>Volume V = 2x<sup>2</sup>h = 20</p>
+<p>y = 10/x<sup>2</sup></p>
+<p>Cost, C = 10 (2x<sup>2</sup>) + 4(2•2xy + 2xy)</p>
+<p>=20x<sup>2</sup>+24xy</p>
+<p>=20x<sup>2</sup>+24x(10/x<sup>2</sup>)</p>
+<p><strong>C(x) = 20x</strong><sup><strong>2</strong></sup><strong>+240/x</strong></p>
+</div>
+<h3>Question 2(a)</h3>
+<div><p><p>Using rectangular, estimate the area under the parabola y = x<sup>2</sup> from 0 to 1.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-17961" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/math.jpg?resize=250%2C384&#038;ssl=1" alt="" width="250" height="384"></p>
+</div>
+<h3>Question (b)</h3>
+<div><p><p>A particle moves along a line so that its velocity v at time t is</p>
+<p>v = t<sup>2</sup> – t + 6</p>
+<ol>
+<li>Find the displacement of the particle during the time period 1 ≤ t ≤ 4.</li>
+<li>Find the distance travelled during this time period.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given,</p>
+<p>v = t<sup>2</sup> &#8211; t + 6</p>
+<p><strong>a) </strong></p>
+<p>As we know,</p>
+<p>v = ds / dt</p>
+<p>ds = v . dt</p>
+<p>Integrating both side,</p>
+<p>\(\int ds = \int v \enspace dt\)</p>
+<p>Now, We will integrate in the interval  [1, 4]</p>
+<p>\(\int_{1}^{4} ds = \int_{1}^{4} v \enspace dt\)</p>
+<p>\( = \int_{1}^{4} (t^2 &#8211; t + 6) \enspace dt\)</p>
+<p>\( = \left [ \frac{t^3}{3} &#8211; \frac{t^2}{2} + 6t \right ]_{1}^{4}\)</p>
+<p>\(= \left [ \frac{64}{3} &#8211; 8 + 24 \right ] &#8211; \left [ \frac{1}{3} &#8211; \frac{1}{2} + 6 \right ]\)</p>
+<p>= 112/3 &#8211; 35/6</p>
+<p>= 63/2</p>
+<p>Therefore, displacement travelled by particle is -9/2 m</p>
+<p><strong>b)</strong></p>
+<p>Since, distance travelled so, V = 0</p>
+<p>then, t<sup>2</sup> &#8211; t + 6 = 0</p>
+<p>or, (t &#8211; 3)(t + 2) = 0</p>
+<p>or, t = 3, -2</p>
+</div>
+<h3>Question 3(a)</h3>
+<div><p><p>Find the area of the region bounded by y = x<sup>2</sup> and y = 2x – x<sup>2</sup></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-3779 alignright" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/graph.png?resize=252%2C194&#038;ssl=1" alt="" width="252" height="194"></p>
+<p>First we will sketch two curves in figure. The limit of integration are found by solving y = 2x &#8211; x<sup>2</sup> and  y = x<sup>2</sup> simultaneously for x.</p>
+<p style="text-align: center;">or, x<sup>2</sup> = 2x &#8211; x<sup>2</sup></p>
+<p style="text-align: center;">or, 2x<sup>2</sup> &#8211; 2x = 0</p>
+<p style="text-align: center;">or, x = 0,1</p>
+<p>The region runs from x = -1 and x =2. the limit of integration are n = -1, b = 2. The area between the curves is</p>
+<p style="text-align: left;">\(A = \int_{a}^{b} [f(x) &#8211; g(x)]dx\)</p>
+<p>\( = \int_{0}^{1} [2x &#8211; x^2 &#8211; x^2]dx\)</p>
+<p style="text-align: left;">\( = \int_{0}^{1} [2x &#8211; 2x^2]dx\)</p>
+<p style="text-align: left;">\(=\left [ \frac{2x^2}{2} &#8211; \frac{2x^3}{3} \right ]_{0}^{1}\)</p>
+<p>\(=\left [ x^2 &#8211; \frac{2x^3}{3} \right ]_{0}^{1}\)</p>
+<p>\(=1 &#8211; \frac{2}{3}\)</p>
+<p>\(= \frac{1}{3}\)</p>
+</div>
+<h3>Question (b)</h3>
+<div><p><p>Using trapezoidal rule, approximate \(\int_{1}^{2}\frac{1}{x}dx\) with n = 5</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>When n = 5, and b = 2, we have Δx = (2-1)/5 = 0.2, and so the Trapezoidal Rules gives</p>
+<p>\(\int^2_1\frac{1}{x}dx = T_{5}\)</p>
+<p>= 0.2 / 2 [f(1) + 2f(1.2) + 2f(1.4) + 2f(1.6) + 2f(1.8) + f(2)]</p>
+<p>\(= 0.1 \times \left ( \frac{1}{1} + \frac{2}{1.2} + \frac{2}{1.4} + \frac{2}{1.6} + \frac{2}{1.8} + \frac{1}{2} \right )\)</p>
+<p>= 0.0695635</p>
+</div>
+<h3>Question 4(a)</h3>
+<div><p><p>Solve y’ = x<sup>2</sup>/y<sup>2</sup>, y(0) = 2</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Given</p>
+<p>\(\frac{dy}{dx} = \frac{x^2}{y^2}\) and given condition y'(0) = 2</p>
+<p>\(y^2 \frac{dy}{dx} = x^2\) &#8212;&#8212; (i)</p>
+<p>let v = y<sup>3</sup></p>
+<p>Differentiating w.r.t x, we get</p>
+<p>\(\frac{dv}{dx} = 3y^2 \frac{dy}{dx}\)</p>
+<p>\(\frac{1}{3}\frac{dv}{dx} = y^2 \frac{dy}{dx}\)</p>
+<p>So, Eq<sup>n</sup> (i) becomes,</p>
+<p>\(or, \enspace \frac{1}{3}\frac{dv}{dx} = x^2\)</p>
+<p>\(or, \enspace \frac{dv}{dx} = 3x^2])</p>
+<p>comparing it with \(\frac{dy}{dx} + Py = Q\), we get</p>
+<p>P = 0 and Q = 3x<sup>2</sup></p>
+<p>Here, The integral factor (I.F.) is</p>
+<p>\(I.F. = e^{\int P dx} = 1\)</p>
+<p>Now, the solution of the given differential equation is</p>
+<p>y × I.F. = ∫ (Q × I.F.) dx + C</p>
+<p>v = ∫ 3x<sup>2 </sup>dx + c</p>
+<p>y<sup>3</sup> = x<sup>3</sup> + c</p>
+<p>Now,</p>
+<p>Given condition is y(0) = 2 so,</p>
+<p>2<sup>3</sup> = 0<sup>3</sup> + c</p>
+<p>c = 8</p>
+<p>Hence, the required solution is</p>
+<p style="text-align: center;">y<sup>3</sup> = x<sup>3</sup> + 8</p>
+</div>
+<h3>Question (b)</h3>
+<div><p><p>Solve the initial value problem: y” + y’ – 6y = 0,  y(0) = 1, y'(0) = 0</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3829" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?resize=1695%2C2200&#038;ssl=1" alt="" width="1695" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?w=1695&amp;ssl=1 1695w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?resize=789%2C1024&amp;ssl=1 789w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?resize=768%2C997&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?resize=1183%2C1536&amp;ssl=1 1183w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-5-min.jpg?resize=1578%2C2048&amp;ssl=1 1578w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-3830" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?resize=1668%2C2200&#038;ssl=1" alt="" width="1668" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?w=1668&amp;ssl=1 1668w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?resize=776%2C1024&amp;ssl=1 776w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?resize=768%2C1013&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?resize=1165%2C1536&amp;ssl=1 1165w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-6-min.jpg?resize=1553%2C2048&amp;ssl=1 1553w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h2>Group B: Attempt any TEN Questions</h2><h3>Question 5</h3>
+<div><p><p>Recent studies indicates that the average surface temperature of the earth has been rising rapidly. Some scientists have modeled the temperature by the linear function T = 0.03t + 8.50, where T is temperature in degree centigrade and t represents years since 1900.</p>
+<ol>
+<li>What do the slope and T-intercept represent?</li>
+<li>Use the equation to predict the average global surface temperature in 2100</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solution:</strong></p>
+<p>Given Linear function is</p>
+<p>T = 0.02t + 8.50</p>
+<p>&nbsp;</p>
+<p><strong>a) </strong>Comparing it with y = mx + c, we get</p>
+<p>m = 0.02 and c = 8.50</p>
+<p>So, the slope is 0.02 and T-intercept is 8.50</p>
+<p>&nbsp;</p>
+<p><strong>b) </strong>Since t = 0 represent years since 1900, then t = 2100 &#8211; 1900 = 200 represents 2100.</p>
+<p>So, T = 0.02 (200) + 8.5</p>
+<p>T = 12.5<sup>o</sup>c</p>
+<p>Therefore, The average global surface temperature in 2100 is 12.5<sup>o</sup>c</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Find the equation of tangent at (1, 2) to the curve y = 2x<sup>2</sup></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3828" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?resize=1467%2C2200&#038;ssl=1" alt="" width="1467" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?w=1467&amp;ssl=1 1467w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?resize=683%2C1024&amp;ssl=1 683w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?resize=768%2C1152&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?resize=1024%2C1536&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-4-1.jpg?resize=1366%2C2048&amp;ssl=1 1366w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>State Rolle’s theorem and verify the Rolle’s theorem for f(x) = x<sup>2</sup> – 3x + 2 in [0, 3]</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3826" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?resize=1633%2C2200&#038;ssl=1" alt="" width="1633" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?w=1633&amp;ssl=1 1633w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?resize=760%2C1024&amp;ssl=1 760w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?resize=768%2C1035&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?resize=1140%2C1536&amp;ssl=1 1140w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-2.jpg?resize=1520%2C2048&amp;ssl=1 1520w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3827" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?resize=1674%2C2200&#038;ssl=1" alt="" width="1674" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?w=1674&amp;ssl=1 1674w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?resize=779%2C1024&amp;ssl=1 779w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?resize=768%2C1009&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?resize=1169%2C1536&amp;ssl=1 1169w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-3.jpg?resize=1558%2C2048&amp;ssl=1 1558w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Use Newton’s method to find <sup>6</sup>√2 correct five decimal places.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-58629" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/491269581_1014159390209851_4333447583170328133_n.jpg?resize=480%2C821&#038;ssl=1" alt="" width="480" height="821"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Find the derivatives of <i>r(t) = (1 + t<sup>2</sup>)i – te<sup>-t</sup>j +</i> <i>sin 2tk</i> and find the unit tangent vector at <i>t=0</i>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Given:</p>
+<p>r(t) = (1 + t<sup>2</sup>)i – te<sup>-t</sup>j + sin 2tk</p>
+<p>To find the derivative, we will differentiate with respect to t. So derivative is</p>
+<p>r<sup>&#8216;</sup>(t) = 2ti &#8211; [e<sup>-t</sup> + te<sup>-t</sup>]j + 2cos 2tk</p>
+<p>= 2ti &#8211; e<sup>-t</sup>(1 + t) + 2cos 2tk</p>
+<p>&nbsp;</p>
+<p>The unit tangent vector is obtained using the formula r'(0)/|r(0)|. r(0) is the value of r'(t) at t = 0, and |r(0)| is the modulus of r(0).</p>
+<p>now,</p>
+<p>r'(0) = 2 . 0 . i &#8211; e<sup>0</sup> (1 + 0)j + 2 cos 2.0.t</p>
+<p>= -j + 2k</p>
+<p>&nbsp;</p>
+<p>r(0) = (1 + 0)i &#8211; 0 . e<sup>0</sup> . j + sin0 k</p>
+<p>= i</p>
+<p>|r(0)| = √(1)<sup>2</sup> = 1</p>
+<p>&nbsp;</p>
+<p>So, Unit vector is</p>
+<p>\(\frac{r'(0)}{|r(0)|} = \frac{-j + 2k}{1}\)</p>
+<p>= -i + 2k</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Find the volume of the solid obtained by rotating about the y-axis the region between y = x and y = x<sup>2</sup>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-3822 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/10/download.png?resize=253%2C185&#038;ssl=1" alt="" width="253" height="185"></p>
+<p>After Rotating to about y-axis</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-3823 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/10/download-1.png?resize=249%2C154&#038;ssl=1" alt="" width="249" height="154"></p>
+<p>The total volume of solid is</p>
+<p>\(V = \int dv = 2\pi \int_a^b x f(x) dx\)</p>
+<p>Then in this case, we have</p>
+<p>a = 0</p>
+<p>b = 1</p>
+<p>The volume of given solid is</p>
+<p>\(V = \int dv = 2\pi \int_a^b x (y_1 &#8211; y_2) dx\)</p>
+<p>\(V = 2\pi \int_{0}^{1}x(x &#8211; x^2) dx\)</p>
+<p>\(= 2\pi \int_{0}^{1}(x^2 &#8211; x^3)\)</p>
+<p>\(= 2\pi \left [ \frac{x^3}{3} &#8211; \frac{x^4}{4} \right ]_{0}^{1}\)</p>
+<p>\(= 2\pi \left ( \frac{1}{3} &#8211; \frac{1}{4} \right )\)</p>
+<p>\(= \frac{\pi}{6} units\)</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Solve: y’ + 2xy – 1 = 0</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3818" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?resize=1681%2C2200&#038;ssl=1" alt="" width="1681" height="2200" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?w=1681&amp;ssl=1 1681w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?resize=782%2C1024&amp;ssl=1 782w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?resize=768%2C1005&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?resize=1174%2C1536&amp;ssl=1 1174w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-1-1.jpg?resize=1565%2C2048&amp;ssl=1 1565w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is sequence? Is the sequence</p>
+<p>\(a_{n} = \frac{n}{\sqrt{5 + n}}\)</p>
+<p>convergent?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A sequence is an ordered list of things. Such thinks may finite or infinite. In a sequence, the terms are separated by commas(,).</p>
+<p><strong>Definition:</strong></p>
+<p>A sequence is a list of numbers which are written as a definite order:</p>
+<p class="ql-align-center">a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>4</sub>, &#8230;&#8230;.. a<sub>n</sub></p>
+<p>Here, a<sub>1</sub> is first term, a<sub>2</sub> is second term and likewise a<sub>n</sub> is the n<sup>th</sup> term of the series.</p>
+<p>For example:</p>
+<p>{1, 2, 3, 4, 5 &#8230;&#8230;} is a sequence</p>
+<p>&nbsp;</p>
+<p><strong>Problem Part:</strong></p>
+<p>The general form of the series is</p>
+<p>\(a_{n} = \frac{n}{\sqrt{5 + n}}\)</p>
+<p>Using D&#8217;Alembert&#8217;s Ratio Test,</p>
+<p>\(\lim_{n \to ∞} a_n = \lim_{n \to ∞} \frac{n}{\sqrt{5 + n}}\)</p>
+<p>\(= \lim_{n \to ∞} \frac{1}{ \frac{1}{n} \sqrt{5 + n}}\)</p>
+<p>\(= \lim_{n \to ∞} \frac{1}{ \sqrt{\frac{5}{n^2} + \frac{1}{n}}}\)</p>
+<p>\(= \lim_{n \to ∞} \frac{1}{ \sqrt{\frac{5}{∞} + \frac{1}{∞}}}\)</p>
+<p>\(= \frac{1}{∞}\)</p>
+<p>= 0</p>
+<p>So, The given sequence is convergent</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 13</h3>
+<div><p><p>Find a vector perpendicular to the plane that passes through the points:p(1, 4, 6), Q(-2, 5, -1) and R(1. -1, 1)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution</p>
+<p>First, We will find vector form of (1, 4, 6) (-2, 5, -1) and (1, 4, 6) (1, -1, 1). As all three points are in the plane, so will each of those vectors</p>
+<p>\(\vec{u_{1}}\) = (1, 4, 6) &#8211; (-2, 5, -1) = (3, -1, 7)</p>
+<p>\(\vec{u_{2}}\) = (1, 4, 6) &#8211; (1, -1, 1) = (0, 5, 5)</p>
+<p>If a vector is perpendicular to two vectors in a plane, it must be perpendicular to the plane itself. As the cross product of two vectors produces a vector perpendicular to both, we will use the cross product of \(\vec{u_{1}}\) and \(\vec{u_{2}}\) to find a vector \(\vec{u}\) perpendicular to the plane containing them.</p>
+<p style="text-align: left;">\(\Rightarrow \vec{u} = \vec{u_{2}} \times \vec{u_{2}}\)</p>
+<p>\(\Rightarrow \vec{u} = \begin{vmatrix}<br />
+\vec{i} &amp; \vec{j} &amp; \vec{k}\\<br />
+3 &amp; -1 &amp; 7\\<br />
+0 &amp; 5 &amp; 5<br />
+\end{vmatrix}\)</p>
+<p>\(\Rightarrow 40\vec{i} &#8211; 15\vec{j} + 15\vec{k}\)</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 14</h3>
+<div><p><p>Find the partial derivative of f(x, y) = x<sup>2</sup> + 2x<sup>3</sup>y<sup>2</sup> – 3y<sup>2</sup> + x + y at (1. 2)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-3819" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-1.jpg?resize=1700%2C1865&#038;ssl=1" alt="" width="1700" height="1865" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-1.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-1.jpg?resize=933%2C1024&amp;ssl=1 933w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-1.jpg?resize=768%2C843&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-2-1.jpg?resize=1400%2C1536&amp;ssl=1 1400w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-3820" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-2.jpg?resize=1700%2C865&#038;ssl=1" alt="" width="1700" height="865" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-2.jpg?w=1700&amp;ssl=1 1700w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-2.jpg?resize=1024%2C521&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-2.jpg?resize=768%2C391&amp;ssl=1 768w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/download-3-2.jpg?resize=1536%2C782&amp;ssl=1 1536w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+</div>
+<h3>Question 15</h3>
+<div><p><p>Find the local maximum and minimum values, saddle points of f(x,y) = x<sup>4</sup> + y<sup>4</sup> – 4xy + 1</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution</p>
+<p style="text-align: center;">f(x, y)  = x<sup>4</sup> + y<sup>4</sup> &#8211; 4xy + 1</p>
+<p>Then</p>
+<p style="text-align: center;">f<sub>x</sub> = 4x<sup>3</sup> &#8211; 4y</p>
+<p style="text-align: center;">f<sub>y</sub> = 4y<sup>3</sup> &#8211; 4x</p>
+<p>Also,</p>
+<p style="text-align: center;">f<sub>xx</sub> = 12x<sup>2       </sup>and        f<sub>yy</sub> = 12y<sup>2</sup></p>
+<p>For critical Point, set</p>
+<p style="text-align: center;">f<sub>x</sub> = 0      so, 4x<sup>3</sup> &#8211; 4y = 0</p>
+<p style="text-align: center;">f<sub>y</sub> = 0     so, 4y<sup>3</sup> &#8211; 4x = 0</p>
+<p>Solving these equations we get y = 0, -1, 1 and y = 0, -1, 1</p>
+<p>The Hessian is</p>
+<p>D = \(\begin{vmatrix}<br />
+f_{xx} &amp; f_{xy}\\<br />
+f_{yx} &amp; f_{yy}<br />
+\end{vmatrix}\)</p>
+<p>\(= \begin{vmatrix}<br />
+12x^2 &amp; -4\\<br />
+-4 &amp; 12y^2<br />
+\end{vmatrix}\)</p>
+<p>D = (12xy)<sup>2</sup> &#8211; 14</p>
+<p>At (0, 0) we have D = -14 &lt; 0    So, (0, 0) is a saddle point.</p>
+<p>At (-1, -1), We have D = 128 &gt; 0 and f<sub>xx</sub>(-1, -1) = 12 &gt; 0   So, (-1, -1) is a local minimum.</p>
+<p>At (1, 1) We have D = 128 &gt; 0 and f<sub>xx</sub>(1, 1) = 12  &gt; 0   So, (1, 1) is a local minimum.</p>
+</div>
+</body></html>

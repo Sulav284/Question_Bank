@@ -1,0 +1,1077 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>What are different methods of measuring dispersion. Sample of polythene bags from two manufactures, A, B, are tested by a prospective buyer for bursting pressure and the results are as follows.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Bursting Pressure</td>
+<td></td>
+<td>5-10</td>
+<td>10-15</td>
+<td>15-20</td>
+<td>20-25</td>
+<td>25-30</td>
+<td>30-35</td>
+</tr>
+<tr>
+<td>Number of bags manufactured by</td>
+<td>A</td>
+<td>2</td>
+<td>9</td>
+<td>29</td>
+<td>54</td>
+<td>11</td>
+<td>5</td>
+</tr>
+<tr>
+<td></td>
+<td>B</td>
+<td>9</td>
+<td>11</td>
+<td>18</td>
+<td>32</td>
+<td>27</td>
+<td>13</td>
+</tr>
+</tbody>
+</table></div>
+<p>Which set of bags has more uniform pressure? If price are the same, Which manufacture’s bags would be preferred by buyer? Use appropriate statistical tool</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Range, interquartile range, standard deviation. and variance</b> are the three commonly used measures of dispersion.</p>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>Let X be the mid value so that \(d^{&#8221;} = \frac{17.45}{5}\). Let f and f<sup>&#8216;</sup> be the number of bags of manufactures A and B respectively.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%;">Class</td>
+<td style="width: 11.1111%;">x</td>
+<td style="width: 11.1111%;">\(d^{&#8216;} = \frac{x &#8211; 17.45}{5}\)</td>
+<td style="width: 11.1111%;">f</td>
+<td style="width: 11.1111%;">f<sup>&#8216;</sup></td>
+<td style="width: 11.1111%;">fd<sup>&#8216;</sup></td>
+<td style="width: 11.1111%;">fd<sup>&#8216;2</sup></td>
+<td style="width: 11.1111%;">f<sup>&#8216;</sup>d<sup>&#8216;</sup></td>
+<td style="width: 11.1111%;">f<sup>&#8216;</sup>d<sup>&#8216;2</sup></td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">5-9.9</td>
+<td style="width: 11.1111%;">7.45</td>
+<td style="width: 11.1111%;">-2</td>
+<td style="width: 11.1111%;">2</td>
+<td style="width: 11.1111%;">9</td>
+<td style="width: 11.1111%;">-4</td>
+<td style="width: 11.1111%;">8</td>
+<td style="width: 11.1111%;">-18</td>
+<td style="width: 11.1111%;">36</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">10-14.9</td>
+<td style="width: 11.1111%;">12.45</td>
+<td style="width: 11.1111%;">-2</td>
+<td style="width: 11.1111%;">9</td>
+<td style="width: 11.1111%;">11</td>
+<td style="width: 11.1111%;">-9</td>
+<td style="width: 11.1111%;">9</td>
+<td style="width: 11.1111%;">-11</td>
+<td style="width: 11.1111%;">11</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">15-19.9</td>
+<td style="width: 11.1111%;">17.45</td>
+<td style="width: 11.1111%;">0</td>
+<td style="width: 11.1111%;">29</td>
+<td style="width: 11.1111%;">18</td>
+<td style="width: 11.1111%;">0</td>
+<td style="width: 11.1111%;">0</td>
+<td style="width: 11.1111%;">0</td>
+<td style="width: 11.1111%;">0</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">20-24.9</td>
+<td style="width: 11.1111%;">22.45</td>
+<td style="width: 11.1111%;">1</td>
+<td style="width: 11.1111%;">54</td>
+<td style="width: 11.1111%;">32</td>
+<td style="width: 11.1111%;">54</td>
+<td style="width: 11.1111%;">54</td>
+<td style="width: 11.1111%;">32</td>
+<td style="width: 11.1111%;">32</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">25-29.9</td>
+<td style="width: 11.1111%;">27.45</td>
+<td style="width: 11.1111%;">2</td>
+<td style="width: 11.1111%;">11</td>
+<td style="width: 11.1111%;">27</td>
+<td style="width: 11.1111%;">22</td>
+<td style="width: 11.1111%;">22</td>
+<td style="width: 11.1111%;">54</td>
+<td style="width: 11.1111%;">108</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;">30-34.9</td>
+<td style="width: 11.1111%;">32.45</td>
+<td style="width: 11.1111%;">3</td>
+<td style="width: 11.1111%;">5</td>
+<td style="width: 11.1111%;">13</td>
+<td style="width: 11.1111%;">15</td>
+<td style="width: 11.1111%;">15</td>
+<td style="width: 11.1111%;">39</td>
+<td style="width: 11.1111%;">117</td>
+</tr>
+<tr>
+<td style="width: 11.1111%;"></td>
+<td style="width: 11.1111%;"></td>
+<td style="width: 11.1111%;">Σd<sup>&#8216;</sup> = 3</td>
+<td style="width: 11.1111%;">N=10</td>
+<td style="width: 11.1111%;">N<sup>&#8216;</sup> = 110</td>
+<td style="width: 11.1111%;">Σfd<sup>&#8216;</sup>=78</td>
+<td style="width: 11.1111%;">Σfd<sup>&#8216;2</sup>=160</td>
+<td style="width: 11.1111%;">Σf<sup>&#8216;</sup>d<sup>&#8216;</sup> = 96</td>
+<td style="width: 11.1111%;">Σf<sup>&#8216;</sup>d<sup>&#8216;2</sup>=304</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;">For manufacture A:</span></p>
+<p>\(Mean(\bar{X}_A) = A + \frac{\sum fd^{&#8216;}}{N} \times h\)</p>
+<p>= \(17.45 + \frac{78}{100} \times 5\)</p>
+<p>= 21</p>
+<p>Standard Deviation(σ<sub>A</sub>) = \(h\sqrt{\frac{\sum fd^{&#8216;2}}{N} &#8211; \left ( \frac{\sum fd^{&#8216;}}{N} \right )^2}\)</p>
+<p>= \(5 \times \sqrt{\frac{160}{110} &#8211; \left ( \frac{78}{110} \right )^2}\)</p>
+<p>= 5 x 0.975</p>
+<p>= 4.875</p>
+<p>Covariance(A) = \(\frac{σ_{A}}{\bar{X}_{A}} \times 100%\)</p>
+<p>= \(\frac{4.875}{21} \times 100%\)</p>
+<p>= 23.2%</p>
+<p><span style="text-decoration: underline;">For manufacture B:</span></p>
+<p>\(Mean(\bar{X}_B) = A + \frac{\sum fd^{&#8216;}}{N} \times h\)</p>
+<p>= \(17.45 + \frac{96}{100} \times 5\)</p>
+<p>= 21.8</p>
+<p>Standard Deviation(σ<sub>A</sub>) = \(h\sqrt{\frac{\sum fd^{&#8216;2}}{N} &#8211; \left ( \frac{\sum fd^{&#8216;}}{N} \right )^2}\)</p>
+<p>= \(5 \times \sqrt{\frac{204}{110} &#8211; \left ( \frac{96}{110} \right )^2}\)</p>
+<p>= 5 x 1.41</p>
+<p>= 7.05</p>
+<p>Covariance(A) = \(\frac{σ_{A}}{\bar{X}_{A}} \times 100%\)</p>
+<p>= \(\frac{7.05}{21.8} \times 100%\)</p>
+<p>= 32.34%</p>
+<p>Since, the cofficient of variation for A is less than that for B, the set of bags manufactured by A has more uniform pressure.Hence, the buyer would perfer to buy bags manufactured by A.</p>
+<p><span style="text-decoration: underline;"><strong>Another Method:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: center;"><strong>Brusting Pressure</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>M</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>A</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>B</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>AM</strong></td>
+<td style="width: 16.6667%; text-align: center;"><strong>BM</strong></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">5-10</td>
+<td style="width: 16.6667%; text-align: center;">7.5</td>
+<td style="width: 16.6667%; text-align: center;">2</td>
+<td style="width: 16.6667%; text-align: center;">9</td>
+<td style="width: 16.6667%; text-align: center;">15</td>
+<td style="width: 16.6667%; text-align: center;">67.5</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">10-15</td>
+<td style="width: 16.6667%; text-align: center;">12.5</td>
+<td style="width: 16.6667%; text-align: center;">9</td>
+<td style="width: 16.6667%; text-align: center;">11</td>
+<td style="width: 16.6667%; text-align: center;">112.5</td>
+<td style="width: 16.6667%; text-align: center;">137.5</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">15-20</td>
+<td style="width: 16.6667%; text-align: center;">17.5</td>
+<td style="width: 16.6667%; text-align: center;">29</td>
+<td style="width: 16.6667%; text-align: center;">18</td>
+<td style="width: 16.6667%; text-align: center;">507.5</td>
+<td style="width: 16.6667%; text-align: center;">315</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">20-25</td>
+<td style="width: 16.6667%; text-align: center;">22.5</td>
+<td style="width: 16.6667%; text-align: center;">54</td>
+<td style="width: 16.6667%; text-align: center;">32</td>
+<td style="width: 16.6667%; text-align: center;">1215</td>
+<td style="width: 16.6667%; text-align: center;">720</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">ΣA = 94</td>
+<td style="width: 16.6667%; text-align: center;">ΣB = 70</td>
+<td style="width: 16.6667%; text-align: center;">ΣAM = 1850</td>
+<td style="width: 16.6667%; text-align: center;">ΣBM = 1240</td>
+</tr>
+</tbody>
+</table></div>
+<p>Brusting pressure of Polythene A = \(\frac{\sum AM}{\sum A}\)</p>
+<p>= \(\frac{1850}{94}\)</p>
+<p>= 19.68</p>
+<p>Brusting pressure of Polythene B = \(\frac{\sum BM}{\sum B}\)</p>
+<p>= \(\frac{1240}{70}\)</p>
+<p>= 17.68</p>
+<p>Since, the brusting pressure of polythene A is greater than of polythene B. So, Buyers perfers the polythene A.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write the properties of correlation coefficient. The time it takes to transmit a file always depends on the file size. Suppose you transmitted 30 files, with the average size of 126 Kbytes and the standard deviation of 35 Kbytes. The average transmitted time was 0.04 seconds with the standard deviation 0.01 seconds. The correlation coefficient between the time and size was 0.86. Based on these data, fit a linear regression model and predict the time it take to transmit a 400Kbyte file.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The properties of corelation cofficient are:</p>
+<ol style="list-style-type:decimal;">
+<li>Correlation cofficient liea between -1 to +1
+<div style="text-align: left;">i.e. -1 ≤ x ≤ +1</div>
+</li>
+<li>Correlation cofficient is symmetrical
+<div style="text-align: left;">i.e. r<sub>xy</sub> = r<sub>yx</sub> = r</div>
+</li>
+<li>Correlation cofficient is independent of change of origin and scale.</li>
+<li>Correlation cofficient is the geometric mean of the two regression cofficient \(r = \pm \sqrt{b_{yx} \times b_{xy}}\)</li>
+<li>Correlation cofficient has no unit because of relative measure.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>In the given problem we have two variables: the transmission time and average size of file.</p>
+<p>Y = transmission time</p>
+<p>X = average file size</p>
+<p>The linear regression model is given by</p>
+<p>Y = a + bX</p>
+<p>The slope b is given by</p>
+<p>b = correlation coefficient × \(\frac{SD_{y}}{SD_{x}}\)</p>
+<p>Where SD<sub>y</sub> is the standard deviation of average transmittance time and SD<sub>x</sub> is the standard deviation of average file size.</p>
+<p>b = \(0.86 \times \frac{0.01}{35}\)</p>
+<p>b = 0.0002457</p>
+<p>The y-intercept a is given by</p>
+<p>a = y &#8211; bx</p>
+<p>a =  0.04 &#8211; (0.0002457) × 126</p>
+<p>a = 0.04 &#8211; 0.030958</p>
+<p>a = 0.009042</p>
+<p>Therefore, the linear regression model is</p>
+<p><strong>Y = 0.009042 + 0.0002457X</strong></p>
+<p><span style="text-decoration: underline;"><strong>Part II:</strong></span></p>
+<p>Predict the time it will take to transmit a 400 Kbyte file.</p>
+<p>Substitute X = 400 in the regression model</p>
+<p>Y = 0.009042 + 0.0002457 × (400)</p>
+<p>Y = 0.009042 + 0.09828</p>
+<p><strong>Y = 0.1073 seconds</strong></p>
+<p>Therefore, the predicted time to transmit a 400 Kbyte file is 0.1073 seconds.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><ol>
+<li>What do you understand by Poisson distribution? What are its main features?</li>
+<li>What do you mean by joint probability distribution function? Write down its properties.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) Possion Distribution:</strong></span></p>
+<p>In Statistics, Poisson distribution is one of the important topics. It is used for calculating the possibilities for an event with the average rate of value.</p>
+<p>The Poisson distribution is a discrete probability function that means the variable can only take specific values in a given list of numbers, probably infinite. A Poisson distribution measures how many times an event is likely to occur within “x” period of time.</p>
+<p>The discrete random variable X is said to follow Poisson distribution if its probability mass function is given by</p>
+<p>P(X=x) = P(x) = \(\frac{e^{-λ} λ^{x}}{x!}\),  x=0,1,2,3,&#8230;&#8230;&#8230;.</p>
+<p>Here, λ is the parameter of poisson distribution and a random variable dollowing poisson distribution is denoted by X ~ P(λ).</p>
+<p>Some examples of Poisson Distribution are:</p>
+<ol style="list-style-type:decimal;">
+<li>Number of death from a disease</li>
+<li>Number of suicides in particular interval of time in particular locality.</li>
+<li>Number of misprints in a page of a book</li>
+<li>Number of telephone calls in given interval of time</li>
+</ol>
+<p><span style="text-decoration: underline;">Properties of Poisson Distribution:</span></p>
+<ol style="list-style-type: lower-roman;">
+<li>Poisson distribution is discrete distribution.</li>
+<li>It has only one parameter λ, hence it is also known as uni-parametric.</li>
+<li>Mean = λ</li>
+<li>Variance = λ</li>
+<li>Mean = Variance</li>
+<li>For non-integer λ, it is the largest integer less than λ. Fir integer λ, x = λ and x = λ &#8211; 1 are the two modes.</li>
+<li>Coefficient of Skewness β<sub>1</sub>=1/λ,  γ<sub>1</sub>=1/√λ</li>
+<li>Coefficient of Skewness β<sub>2</sub>=1/λ,  γ<sub>2</sub>=1/√λ</li>
+<li>Sum of two Poisson variate is Poisson variate i.e. if X ~ P(λ<sub>1</sub>), X<sub>2</sub> ~ P(λ<sub>2</sub>) then X<sub>1</sub> ± X<sub>2</sub> ~ P(λ<sub>1</sub> +  λ<sub>2</sub>).</li>
+<li>IT is used in the case of waiting time analysis where np &lt; 5 and probability of success is very low i.e. p → 0 and n → ∞.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>b) Probability Density Function:</strong></span></p>
+<p>Let x be a continuous random variable and f(x) is the continuous probability function of x and it is also known as probability density function.</p>
+<p><span style="text-decoration: underline;">Properties:</span></p>
+<p>Let x be the continuous random variable with density function f(x), and the probability density function should satisfy the following conditions:</p>
+<ul style="list-style-type: square;">
+<li aria-level="1">For a continuous random variable that takes some value between certain limits, say a and b, the PDF is calculated by finding the area under its curve and the X-axis within the lower limit (a) and upper limit (b). Thus, the PDF is given by\(P(x) = \int_a^b f(x) dx\)</li>
+<li aria-level="1">The probability density function is non-negative for all the possible values, i.e. <b>f(x)≥ 0</b>, for all x.</li>
+<li aria-level="1">The area between the density curve and horizontal X-axis is equal to 1, i.e.\(\int_{-∞}^{∞} f(x) dx = 1\)</li>
+<li aria-level="1">Due to the property of continuous random variables, the density function curve is <b>continued</b> for all over the given range. Also, this defines itself over a range of continuous values or the domain of the variable.</li>
+</ul>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>If 50 image of your website, 10 have black and white image, and their average scanned image occupies with 2.5 megabytes of memory. The total image occupies by the entire work 281 megabytes. Find the average occupies megabytes of those color images.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Total size/size of all images (Wa) = 281 megabytes</p>
+<p>Total images (N) = 50</p>
+<p>Size of black and white images (WBW) = 2.5 megabytes</p>
+<p>Number of black and white images (New) = 10</p>
+<p>Now,</p>
+<p>Total size of black and white images (Wt) = Wbw x Nbw = 2.5 x 10 = 25 megabytes</p>
+<p>For color images,</p>
+<p>Total number of color images (Nc) = N &#8211; New = 50 &#8211; 10 = 40</p>
+<p>Size of color images (Wc) = Wa &#8211; Wt = 281 &#8211; 25 = 256 megabytes</p>
+<p>Average store occupation (Xw) = Wc/Nc = 256/40 = 6.4 megabytes</p>
+<p>Hence, the average storage occupancy by color images is 6.4 megabytes.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Calculate Q<sub>1</sub>, D<sub>7</sub> and P<sub>58</sub> from the following data and interpret the results.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>0-10</td>
+<td>10-15</td>
+<td>20-25</td>
+<td>25-30</td>
+<td>30-35</td>
+<td>35-40</td>
+<td>40-45</td>
+<td>45-50</td>
+<td>50-60</td>
+</tr>
+<tr>
+<td>No, of person</td>
+<td>4</td>
+<td>8</td>
+<td>30</td>
+<td>15</td>
+<td>13</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Since the classes are unequal so adjustment is to be made before calculating.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Weight</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>No. of Person (f)</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>c.f.</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">0-5</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">5-10</td>
+<td style="width: 33.3333%; text-align: center;">2</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">10-15</td>
+<td style="width: 33.3333%; text-align: center;">8</td>
+<td style="width: 33.3333%; text-align: center;">12</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">15-20</td>
+<td style="width: 33.3333%; text-align: center;">15</td>
+<td style="width: 33.3333%; text-align: center;">27</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">20-25</td>
+<td style="width: 33.3333%; text-align: center;">15</td>
+<td style="width: 33.3333%; text-align: center;">42</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">25-30</td>
+<td style="width: 33.3333%; text-align: center;">15</td>
+<td style="width: 33.3333%; text-align: center;">57</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">30-35</td>
+<td style="width: 33.3333%; text-align: center;">13</td>
+<td style="width: 33.3333%; text-align: center;">70</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">35-40</td>
+<td style="width: 33.3333%; text-align: center;">6</td>
+<td style="width: 33.3333%; text-align: center;">76</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">40-45</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">80</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">45-50</td>
+<td style="width: 33.3333%; text-align: center;">4</td>
+<td style="width: 33.3333%; text-align: center;">84</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">50-55</td>
+<td style="width: 33.3333%; text-align: center;">0.5</td>
+<td style="width: 33.3333%; text-align: center;">84.5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">55-60</td>
+<td style="width: 33.3333%; text-align: center;">0.5</td>
+<td style="width: 33.3333%; text-align: center;">85</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">N = 85</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p><span style="text-decoration: underline;">For Q1:</span></p>
+<p>Q<sub>1</sub> = \(\left ( \frac{N}{4} \right )^{th} \enspace item\)</p>
+<p>= \(\left ( \frac{85}{4} \right )^{th} \enspace item\) = 21.25<sup>th</sup> item</p>
+<p>In c.f column, the value just greater than 25.25 is 27. so, class is 15 &#8211; 20</p>
+<p>Then,</p>
+<p>Q<sub>1</sub> = \(L + \frac{\frac{N}{4} &#8211; c.f.}{f} \times h\)</p>
+<p>= \(15 + \frac{21.25 &#8211; 12}{15} \times 5\)</p>
+<p>= 18.08</p>
+<p><span style="text-decoration: underline;">For D<sub>7</sub>:</span></p>
+<p>D<sub>7</sub> = \(\left ( 7 \times \frac{N}{10} \right )^{th} \enspace item\)</p>
+<p>= \(\left ( 7 \times \frac{85}{10} \right )^{th} \enspace item\) = 59.5<sup>th</sup> item</p>
+<p>In c.f column, the value just greater than 59.5 is 70. so, class is 30-35</p>
+<p>Then,</p>
+<p>D<sub>7</sub> = \(L + \frac{\frac{7N}{10} &#8211; c.f.}{f} \times h\)</p>
+<p>= \(30 + \frac{59.5 &#8211; 57}{13} \times 5\)</p>
+<p>= 30.96</p>
+<p><span style="text-decoration: underline;">For P<sub>58</sub>:</span></p>
+<p>P<sub>58</sub> = \(\left (\frac{58 N}{100} \right )^{th} \enspace item\)</p>
+<p>= \(\left ( 7 \times \frac{58 \times 85}{100} \right )^{th} \enspace item\) = 49.3<sup>th</sup> item</p>
+<p>In c.f column, the value just greater than 49.3 is 57. so, class is 25-30</p>
+<p>Then,</p>
+<p>P<sub>58</sub> = \(L + \frac{\frac{58N}{100} &#8211; c.f.}{f} \times h\)</p>
+<p>= \(25 + \frac{49.3 &#8211; 43}{15} \times 5\)</p>
+<p>= 26.43</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>The following join probability data apply to fatigue test to run on bronze strips. X represent to failure  (in 10<sup>5</sup>) when alternate strips are bent at a high level of deflection. Y represent the same at a lower deflection level.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>X/Y</td>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.01</td>
+<td>0.03</td>
+<td>0.05</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.03</td>
+<td>0.1</td>
+<td>0.08</td>
+<td>0.04</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.02</td>
+<td>0.08</td>
+<td>0.12</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.02</td>
+<td>0.04</td>
+<td>0.07</td>
+<td>0.18</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Find the marginal probability distribution for X and Y</li>
+<li>Determine the conditional probability distribution of Y gives X = 5</li>
+<li>Are x and Y independent</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>X/Y</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>20</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>30</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>40</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>50</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>P(X=x)</strong></td>
+</tr>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>4</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.01</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.03</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.05</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.02</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.11</td>
+</tr>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>5</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.03</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.1</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.08</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.04</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.25</td>
+</tr>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>6</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.02</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.08</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.12</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.11</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.33</td>
+</tr>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>7</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.02</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.04</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.07</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.18</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.31</td>
+</tr>
+<tr>
+<td style="width: 16.67%; height: 24px; text-align: center;"><strong>P(Y=y)</strong></td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.08</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.25</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.32</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">0.35</td>
+<td style="width: 16.67%; height: 24px; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>Marginal probability of X = p(X = x<sub>i</sub>) = \(\sum_{i=4}^n p(x_i y_i)\)</p>
+<p>∴P(X = 4) = P(X=4, Y=20) + P(X = 4, Y = 30) + P(X = 4, Y = 40) + P(X = 4, Y = 50)</p>
+<p>= 0.11</p>
+<p>∴P(X = 5) = P(X=5, Y=20) + P(X = 5, Y = 30) + P(X = 5, Y = 40) + P(X = 5, Y = 50)</p>
+<p>= 0.25</p>
+<p>∴P(X = 6) = P(X=6, Y=20) + P(X = 6, Y = 30) + P(X = 6, Y = 40) + P(X = 6, Y = 50)</p>
+<p>= 0.33</p>
+<p>∴P(X = 7) = P(X=7, Y=20) + P(X = 7, Y = 30) + P(X = 7, Y = 40) + P(X = 7, Y = 50)</p>
+<p>= 0.31</p>
+<p>Marginal probability of Y = p(Y = y<sub>i</sub>) = \(\sum_{i=4}^n p(x_i y_i)\)</p>
+<p>∴P(Y = 20) = P(X=4, Y=20) + P(X = 5, Y = 20) + P(X = 6, Y = 20) + P(X = 7, Y = 20)</p>
+<p>= 0.08</p>
+<p>Similarly,</p>
+<p>P(Y = 30) = 0.25</p>
+<p>P(Y = 40) = 0.32</p>
+<p>P(Y = 50) = 0.35</p>
+<p><span style="text-decoration: underline;"><strong>Answer b):</strong></span></p>
+<p>The conditional probablity function of Y given the value of X = 5 is designed as follow:</p>
+<p>P(X=5 / Y = 20) = \(\frac{P(X=5 \enspace / \enspace Y = 20)}{P(Y = 20)}\)</p>
+<p>=  \(\frac{0.03}{0.08} = \frac{3}{8}\)</p>
+<p>P(X=5 / Y = 30) = \(\frac{P(X=5 \enspace / \enspace Y = 30)}{P(Y = 30)}\)</p>
+<p>=  \(\frac{0.1}{0.25} = \frac{2}{5}\)</p>
+<p>P(X=5 / Y = 40) = \(\frac{P(X=5 \enspace / \enspace Y = 40)}{P(Y = 40)}\)</p>
+<p>=  \(\frac{0.08}{0.32} = \frac{1}{4}\)</p>
+<p>P(X=5 / Y = 50) = \(\frac{P(X=5 \enspace / \enspace Y = 50)}{P(Y = 50)}\)</p>
+<p>=  \(\frac{0.04}{0.35} = \frac{4}{35}\)\</p>
+<p><span style="text-decoration: underline;"><strong>Answer c):</strong></span></p>
+<p>Y is independent variable.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Fit a binomial distribution of the following data</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>X</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>f</td>
+<td>5</td>
+<td>8</td>
+<td>15</td>
+<td>14</td>
+<td>10</td>
+<td>6</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>Let x be the random variable following Binomial distribution with parameter n = 6</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;">x</td>
+<td style="width: 33.3333%;">f</td>
+<td style="width: 33.3333%;">fx</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">0</td>
+<td style="width: 33.3333%;">5</td>
+<td style="width: 33.3333%;">0</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">8</td>
+<td style="width: 33.3333%;">8</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">15</td>
+<td style="width: 33.3333%;">30</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">3</td>
+<td style="width: 33.3333%;">14</td>
+<td style="width: 33.3333%;">42</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">4</td>
+<td style="width: 33.3333%;">10</td>
+<td style="width: 33.3333%;">40</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">5</td>
+<td style="width: 33.3333%;">6</td>
+<td style="width: 33.3333%;">30</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">6</td>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">12</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;"></td>
+<td style="width: 33.3333%;">N = Σf = 60</td>
+<td style="width: 33.3333%;">Σfx = 162</td>
+</tr>
+</tbody>
+</table></div>
+<p>N = 60 = total frequency</p>
+<p>Then mean of observed data (x̄) = \(\frac{\sum fx}{\sum f}\)</p>
+<p>= \(\frac{162}{60}\) = \(\frac{27}{10}\) = 2.7</p>
+<p>Then np = \(\frac{27}{10}\)</p>
+<p>or, 6 × p = \(\frac{27}{10}\)</p>
+<p>or, p = \(\frac{27}{6 \times 10}\) = \(\frac{9}{20}\)</p>
+<p>And</p>
+<p>q = 1 &#8211; p = 1 &#8211; \(\frac{9}{20}\) = \(\frac{11}{20}\)</p>
+<p>Then the probability mass function becomes</p>
+<p>P(X=x) = p(x) = \(C(6, x)\left ( \frac{9}{20} \right )^x \left ( \frac{11}{20} \right )^{6-x}\)</p>
+<p>The expected frequency is obtained by substituting the values of x = 0, 1, 2, 3, . . . . . .</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>x</strong></td>
+<td style="width: 25%; text-align: center;"><strong>\(p(x) = C(6, x)\left ( \frac{9}{20} \right )^x \left ( \frac{11}{20} \right )^{6-x}\)</strong></td>
+<td style="width: 25%; text-align: center;" colspan="2"><strong>Expected frequency = N × p(x)</strong></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;">0.277</td>
+<td style="width: 25%; text-align: center;">1.662</td>
+<td style="width: 25%; text-align: center;">2</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">1</td>
+<td style="width: 25%; text-align: center;">0.1359</td>
+<td style="width: 25%; text-align: center;">8.154</td>
+<td style="width: 25%; text-align: center;">8</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">2</td>
+<td style="width: 25%; text-align: center;">0.2708</td>
+<td style="width: 25%; text-align: center;">16.248</td>
+<td style="width: 25%; text-align: center;">16</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">3</td>
+<td style="width: 25%; text-align: center;">0.3032</td>
+<td style="width: 25%; text-align: center;">18.192</td>
+<td style="width: 25%; text-align: center;">18</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">4</td>
+<td style="width: 25%; text-align: center;">0.186</td>
+<td style="width: 25%; text-align: center;">11.166</td>
+<td style="width: 25%; text-align: center;">11</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">5</td>
+<td style="width: 25%; text-align: center;">0.0608</td>
+<td style="width: 25%; text-align: center;">3.654</td>
+<td style="width: 25%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">6</td>
+<td style="width: 25%; text-align: center;">0.0083</td>
+<td style="width: 25%; text-align: center;">0.492</td>
+<td style="width: 25%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;"></td>
+<td style="width: 25%; text-align: center;">1</td>
+<td style="width: 25%; text-align: center;">60</td>
+<td style="width: 25%; text-align: center;">60</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>If two random variables have the joint probability density function</p>
+<p>\(f(x, y) = \left\{\begin{matrix}k(2x + 3y), \enspace for \enspace 0 \leq x \leq 1, \enspace 0 \leq y \leq 1 \\ 0, otherwise\end{matrix}\right.\)</p>
+<p>Find (i) constant k (ii) conditional probability density function of X (iii) Identify whether X and Y are independent.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>f(x, y) = \(\left\{\begin{matrix}k(2x + 3y) \enspace for \enspace 0 ≤ x ≤ 1, \enspace 0 ≤ y ≤ 1\\ 0, otherwise\end{matrix}\right.\)</p>
+<p><strong><span style="text-decoration: underline;">Solution i):</span></strong></p>
+<p>We know,</p>
+<p>\(\int \int f(x, y) dx dy = 1\)</p>
+<p>\(\int_0^1 \int_0^1 k(2x + 3y) dx dy = 1\)</p>
+<p>\(k \int_0^1 \left [ \int_0^1 2xdx + 3ydx \right ] dy = 1\)</p>
+<p>\(k \int_0^1 \left [ \left [ \frac{2x^2}{2} \right ]_0^1 + 3y [x]_0^1 \right ] dy = 1\)</p>
+<p>\(k \int_0^1 (1 + 3y) dy = 1\)</p>
+<p>\(k\left [ \int_0^1dy + \int_0^1 3y dy \right ] = 1\)</p>
+<p>\(k . \left [ 1 + \frac{3}{2} \right ] = 1\)</p>
+<p>∴ k = 2/5</p>
+<p><strong><span style="text-decoration: underline;">Solution ii):</span></strong></p>
+<p>Conditional probability of x given y is</p>
+<p>\(f(\frac{x}{y}) = \frac{f(x, y)}{f(y)}\)</p>
+<p>1st, f(y) = \(\int f(x, y) dx\)</p>
+<p>\(= \int_0^1 \frac{2}{5} (2x + 3y) dx\)</p>
+<p>\(= \frac{2}{5} \left [ \int_0^1 2x dx + 3y \int_0^1dx \right ]\)</p>
+<p>\(= \frac{2}{5} \left [ \left [ \frac{2x^2}{2} \right ]_0^1 + 3y[x]_0^1 \right ]\)</p>
+<p>\(= \frac{2}{5} (1 + 3y)\)</p>
+<p>= \(\frac{2(1 + 3y)}{5}\)</p>
+<p>Also, f(x) = \(\int_0^1 f(x, y) dy\)</p>
+<p>\(= \int_0^1 \frac{2}{5} (2x + 3y) dy\)</p>
+<p>\(= \frac{2}{5} \left [ 2x \int_0^1 dy + \int_0^1 3y dy \right ]\)</p>
+<p>\(= = \frac{2}{5} \left [ 2x [y]_0^1 + \left [ \frac{3y^2}{2} \right ]_0^1 \right ]\)</p>
+<p>\(= \frac{2}{5} \left ( 2x + \frac{3}{2} \right )\)</p>
+<p>∴  \(f\left ( \frac{x}{y} \right ) = \frac{f(x, y)}{f(y)}\)</p>
+<p>\(= \frac{k(2x + 3y)}{\frac{2(1 + 3y)}{5}}\)</p>
+<p>\(= \frac{2x + 3y}{1 + 3y}\)</p>
+<p><span style="text-decoration: underline;"><strong>Solution iii):</strong></span></p>
+<p>Here, f(x, y) = \(\frac{2}{5} (2x + 3y)\)</p>
+<p>\(f(x) = \frac{2}{5} (2x + \frac{3}{2})\)</p>
+<p>\(f(y) = \frac{2}{5} (1 + 3y)\)</p>
+<p>Now,</p>
+<p>f(x) . f(y) = \(\frac{2}{5} (2x + \frac{3}{2})\) . \(\frac{2}{5} (1 + 3y)\)</p>
+<p>\(= \left ( \frac{4x}{3} + \frac{6}{10} \right ) . \left ( \frac{2}{5} + \frac{6y}{5} \right )\)</p>
+<p>\(= \frac{8x}{25} + \frac{24xy}{25} + \frac{12}{50} + \frac{36y}{50}\)</p>
+<p>Since, f(x, y) ≠ f(x) . f(y)</p>
+<p>So, x and y are not independent.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Compute first four moments about arbitrary point 4 from following distribution and describe the characteristics of data</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>X</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>f</td>
+<td>1</td>
+<td>3</td>
+<td>7</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img decoding="async" src="https://hamrocsit.com/wp-content/uploads/users/91/1679392304-arbitary.png" alt=""> </p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>The lifetime of a certain electronic component is a normal random variate with the expectation of 5000 hours and a standard deviation of 100 hours. Compute the probabilities under the following conditions</p>
+<ol>
+<li>Lifetime of components between 3000 to 6500 hours</li>
+<li>Lifetime of components between 3000 t0 6500 hours</li>
+<li>Lifetime of components more than 6000 hours</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We can use the properties of the normal distribution to calculate the probabilities under the given conditions.</p>
+<p>Let X be the lifetime of the electronic component, where X ~ N(5000, 100^2).</p>
+<p><span style="text-decoration: underline;"><strong>a) Probability of the lifetime of components between 3000 to 6500 hours:</strong></span></p>
+<p>We need to find P(3000 &lt; X &lt; 6500). We can standardize X as follows:</p>
+<p>Z = (X &#8211; μ) / σ = (X &#8211; 5000) / 100</p>
+<p>Now, we need to find P((-2 &lt; Z &lt; 1.5)).</p>
+<p>Using a standard normal distribution table or a calculator, we find that P((-2 &lt; Z &lt; 1.5)) is approximately 0.9332.</p>
+<p>Therefore, P(3000 &lt; X &lt; 6500) is approximately 0.9332.</p>
+<p><span style="text-decoration: underline;"><strong>b) Probability of the lifetime of components less than 3000 hours:</strong></span></p>
+<p>We need to find P(X &lt; 3000). We can standardize X as follows:</p>
+<p>Z = (X &#8211; μ) / σ = (X &#8211; 5000) / 100</p>
+<p>Now, we need to find P(Z &lt; -2).</p>
+<p>Using a standard normal distribution table or a calculator, we find that P(Z &lt; -2) is approximately 0.0228.</p>
+<p>Therefore, P(X &lt; 3000) is approximately 0.0228.</p>
+<p><span style="text-decoration: underline;"><strong>c) Probability of the lifetime of components more than 6000 hours:</strong></span></p>
+<p>We need to find P(X &gt; 6000). We can standardize X as follows:</p>
+<p>Z = (X &#8211; μ) / σ = (X &#8211; 5000) / 100</p>
+<p>Now, we need to find P(Z &gt; 1).</p>
+<p>Using a standard normal distribution table or a calculator, we find that P(Z &gt; 1) is approximately 0.1587.</p>
+<p>Therefore, P(X &gt; 6000) is approximately 0.1587.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Calculate Spearman’s rank correlation coefficient for the following ranks given by three judges in a music contest.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>1<sup>st</sup>Judge</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>5</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2<sup>nd</sup> Judge</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+<td>1</td>
+<td>6</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3<sup>rd</sup> Judge</td>
+<td>5</td>
+<td>8</td>
+<td>4</td>
+<td>7</td>
+<td>10</td>
+<td>2</td>
+<td>1</td>
+<td>6</td>
+<td>9</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Indicate which pair of judges has the nearest approaches to music</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution:</p>
+<p>We know,</p>
+<p>\(r_{12} = 1 &#8211; \frac{6 \sum d_1^2}{n(n^2 &#8211; 1)}\)</p>
+<p>\(r_{13} = 1 &#8211; \frac{6 \sum d_2^2}{n(n^2 &#8211; 1)}\)</p>
+<p>\(r_{23} = 1 &#8211; \frac{6 \sum d_3^2}{n(n^2 &#8211; 1)}\)</p>
+<p>Now,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">x</td>
+<td style="width: 11.1111%; text-align: center;">y</td>
+<td style="width: 11.1111%; text-align: center;">z</td>
+<td style="width: 11.1111%; text-align: center;">d<sub>1</sub> = x &#8211; y</td>
+<td style="width: 11.1111%; text-align: center;">d<sub>2</sub> = y &#8211; z</td>
+<td style="width: 11.1111%; text-align: center;">d<sub>3</sub> = z &#8211; x</td>
+<td style="width: 11.1111%; text-align: center;">d<sub>1</sub><sup>2</sup></td>
+<td style="width: 11.1111%; text-align: center;">d<sub>2</sub><sup>2</sup></td>
+<td style="width: 11.1111%; text-align: center;">d<sub>3</sub><sup>2</sup></td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">-2</td>
+<td style="width: 11.1111%; text-align: center;">-1</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">8</td>
+<td style="width: 11.1111%; text-align: center;">-2</td>
+<td style="width: 11.1111%; text-align: center;">-5</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">25</td>
+<td style="width: 11.1111%; text-align: center;">49</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">-2</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">-2</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">10</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">-9</td>
+<td style="width: 11.1111%; text-align: center;">5</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+<td style="width: 11.1111%; text-align: center;">81</td>
+<td style="width: 11.1111%; text-align: center;">25</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">8</td>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">-6</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+<td style="width: 11.1111%; text-align: center;">36</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">8</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">-8</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">49</td>
+<td style="width: 11.1111%; text-align: center;">64</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">10</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">6</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">-4</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">10</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">-3</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">2</td>
+<td style="width: 11.1111%; text-align: center;">9</td>
+<td style="width: 11.1111%; text-align: center;">1</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">7</td>
+<td style="width: 11.1111%; text-align: center;">3</td>
+<td style="width: 11.1111%; text-align: center;">-4</td>
+<td style="width: 11.1111%; text-align: center;">4</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+<td style="width: 11.1111%; text-align: center;">16</td>
+<td style="width: 11.1111%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;"></td>
+<td style="width: 11.1111%; text-align: center;"></td>
+<td style="width: 11.1111%; text-align: center;"></td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>1</sub> = 0</td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>2</sub> = 0</td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>3</sub> = 0</td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>1</sub><sup>2</sup> = 60</td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>2</sub><sup>2</sup> = 206</td>
+<td style="width: 11.1111%; text-align: center;">Σd<sub>3</sub><sup>2</sup> = 204</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>r<sub>12</sub> = \(1 &#8211; \frac{6 \times 60}{10 \times 99}\) = 0.636</p>
+<p>r<sub>13</sub> = \(1 &#8211; \frac{6 \times 206}{10 \times 99}\) = -0.248</p>
+<p>r<sub>23</sub> = \(1 &#8211; \frac{6 \times 204}{10 \times 99}\) = -0.236</p>
+<p>Since, r<sub>12</sub> &gt; r<sub>13</sub> and r<sub>23</sub>. so, 1st and 2nd judge has nearest approaches to music.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What do you mean by sampling? Explain the difference between stratified sampling and cluster sampling.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When one by one study of all units of a population is not possible due to some factors like time, cost, manpower, resources and destructive nature of study, we take a small representative part from the population for the study. This small represenatative part selected for the study from the population is called sample.</p>
+<p>The process of selecteding a sample from a population is called sampling.</p>
+<p>For Example: A pathologist takes a syringe of blood as a sample to find out a disease.</p>
+<p><span style="text-decoration: underline;"><strong>Difference between strtified and cluster sampling:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table id="tablepress-366" class="tablepress tablepress-id-366">
+<thead>
+<tr class="row-1 odd">
+<th class="column-1">BASIS</th>
+<th class="column-2">STRATIFIED SAMPLING</th>
+<th class="column-3">CLUSTER SAMPLING</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+<td class="column-1">Meaning</td>
+<td class="column-2">Stratified sampling is one, in which the population is divided into homogeneous segments, and then the sample is randomly taken from the segments.</td>
+<td class="column-3">Cluster sampling refers to a sampling method wherein the members of the population are selected at random, from naturally occurring groups called &#8216;cluster&#8217;.</td>
+</tr>
+<tr class="row-3 odd">
+<td class="column-1">Sample</td>
+<td class="column-2">Randomly selected individuals are taken from all the strata.</td>
+<td class="column-3">All the individuals are taken from randomly selected clusters.</td>
+</tr>
+<tr class="row-4 even">
+<td class="column-1">Selection of population elements</td>
+<td class="column-2">Individually</td>
+<td class="column-3">Collectively</td>
+</tr>
+<tr class="row-5 odd">
+<td class="column-1">Homogeneity</td>
+<td class="column-2">Within group</td>
+<td class="column-3">Between groups</td>
+</tr>
+<tr class="row-6 even">
+<td class="column-1">Heterogeneity</td>
+<td class="column-2">Between groups</td>
+<td class="column-3">Within group</td>
+</tr>
+<tr class="row-7 odd">
+<td class="column-1">Bifurcation</td>
+<td class="column-2">Imposed by the researcher</td>
+<td class="column-3">Naturally occurring groups</td>
+</tr>
+<tr class="row-8 even">
+<td class="column-1">Objective</td>
+<td class="column-2">To increase precision and representation.</td>
+<td class="column-3">To reduce cost and improve efficiency.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 13</h3>
+<div><p><p>State with suitable examples the role played by computer technology in applied statistics and the role of statistics in information technology.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Computer technology plays a critical role in applied statistics by enabling the efficient storage, management, analysis, and visualization of large and complex datasets. Some specific examples of the role of computer technology in applied statistics are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data collection and management:</strong> Computer technology allows for the automated collection, storage, and management of large amounts of data. For example, online surveys and data logging systems are commonly used to collect and store data in various fields such as marketing, healthcare, and social sciences.</li>
+<li><strong>Data analysis and modeling:</strong> Statistical software packages such as R, Python, and SAS provide powerful tools for analyzing and modeling complex datasets. These software packages allow for the use of a wide range of statistical techniques, including regression analysis, hypothesis testing, and data visualization.</li>
+<li><strong>Machine learning and data mining:</strong> Machine learning algorithms and data mining techniques are increasingly used to analyze and extract insights from large and complex datasets. These techniques can be used in a variety of fields, including finance, healthcare, and marketing.</li>
+</ol>
+<p>On the other hand, statistics plays a critical role in information technology by providing tools and techniques for analyzing and making decisions based on data. Some specific examples of the role of statistics in information technology are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Quality control:</strong> Statistical quality control techniques are commonly used in manufacturing and software development to ensure that products meet certain quality standards.</li>
+<li><strong>Data analysis and decision-making:</strong> Statistical techniques are used to analyze and make decisions based on data in a variety of fields, including finance, marketing, and healthcare. For example, statistical models are used to predict customer behavior, identify market trends, and evaluate the effectiveness of medical treatments.</li>
+<li><strong>Experimental design:</strong> Statistical experimental design techniques are used to design experiments and evaluate the impact of various factors on the outcome of the experiment. This is important in fields such as engineering, where experiments are often conducted to test the performance of products and systems.</li>
+</ol>
+</div>
+</body></html>

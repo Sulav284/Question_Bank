@@ -1,0 +1,352 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cloud Computing Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>Cloud Computing Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 160 + 40</p>
+        <p><strong>Pass Marks:</strong> 64 + 16</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Define cloud computing. Discuss various cloud deployment models.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud computing is the on demand delivery of computing services such as servers, networking software etc ovet the internet. Rather thn keeping the files on a physical storage device, cloud computing makes it possible to save remotely. Various cloud deployment models are discussed below:</p>
+<p><strong>Public cloud</strong></p>
+<ul style="list-style-type: square;">
+<li>They are owned and operated bu 3rd party cloud service providers, such as AWS, Microsoft Azure and Google cloud.</li>
+<li>These cloud services are accessible to general public over the internet, allowing multiple organization or individual to share computing resources, such as server, storage and networks.</li>
+<li>They offer scalability, flexibility, and cost effectivness as user can pay for resources on a pay-as-you-go basis.</li>
+</ul>
+<p><em>Advantages</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Cost effective : Resources are shared with large number of user.</li>
+<li>Flexibility : Easy to integrate public cloud with private.</li>
+<li>Location independence : Services are delivered through internet.</li>
+<li>High scalability</li>
+</ol>
+<p><em>Disadvantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Low security and less customizable.</li>
+</ol>
+<p><strong>Private cloud</strong></p>
+<ul style="list-style-type: square;">
+<li>They are dedicated cloud environments exclusively used by a single orginization. They can be hosted either on physical location within an org&#8217;s data centeror by a third party provider.</li>
+<li>It offers greater control, security and customization compared to public cloud.</li>
+</ul>
+<p><em>Advantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Higher security and privacy, more control, cost efficiency</li>
+</ol>
+<p><em>Disadvantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Restricted, limited scalability.</li>
+</ol>
+<p><strong>Hybrid cloud</strong></p>
+<ul style="list-style-type: square;">
+<li>It combines public and private cloud environment allowing orgs to get the benefits of both. They can run certain workloads or application on-premises in private cloud while utilizing public cloud service for others.</li>
+</ul>
+<p><em>Advantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Scalability offers features of both, more security for private cloud.</li>
+</ol>
+<p><em>Disadvantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Networking issue due to presence of both clouds.</li>
+</ol>
+<p><strong>Community cloud</strong></p>
+<ul style="list-style-type: square;">
+<li>They are shared cloud environments that are tailored to the specific needs of a particular community or group of orgs with shared intrest or requirements.</li>
+<li>They are managed and operated by 3rd party provides and offer collaberative capabilities, cost-sharing benefits and specialized features or services to meet the needs of the community members.</li>
+</ul>
+<p><em>Advantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Cost effective and security.</li>
+</ol>
+<p><em>Disadvantage</em>:</p>
+<ol style="list-style-type:decimal;">
+<li>Since all data is housed at one location, it might be accessible by others.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is parallel efficiency of map-reduce means? Compare between thread, task and map-reduce.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Parallel efficiency of map reduce means the effectivness of utilizing computational resources and achieving speedup when executing a mapreduce job on a distributed computing system. It measures how well the system scales and utilizes available resources to perform the required computation in parallel.</p>
+<p>$$Parallel Efficiency = \frac{{Actual Speedup}}{{number of processor}}*100$$</p>
+<p>Here, SpeedUp represents the improvement in performance achieved by parallel execution compared to a sequential execution. A parallel efficiency of 100% indicates that parallel execution is utilizing all available resources effictively. However, in practice achieving 100% is challenging.</p>
+<p>Let us assume that the data produced sfter the map phase is σ D data (postmap). Further we assume that there are P processors. Assume WD is useful work needed to be done.</p>
+<p>Now agter the map operation, each mapper writes $$\frac{{σ D}}{{P}}$$</p>
+<p>data to their local disk.</p>
+<p>Overheads: $$\frac{{σ D}}{{P}}$$</p>
+<p>Next, this data has to be read by each reduces before it can begin &#8216;reduce operationsso each reduce has to read $$\frac{{σ D}}{{P^2}}$$ i.e one path of data from particular mapper. Since, there are P different reduces, the communication time that a reducer spends getting the data it requires from different mappers as: $$\frac{{σ D}}{{P}}$$</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-36943" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-31-at-6.34.56-PM.jpeg?resize=474%2C130&#038;ssl=1" alt="" width="474" height="130"></p>
+<p>The different thread, task and map-reduce are given below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 102.503%; height: 215px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;">Feature</td>
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Thread</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Task</strong></td>
+<td style="width: 27.5048%; text-align: center; height: 24px;"><strong>Map-Reduce</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Parallelism</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Enables concurrent execution.</td>
+<td style="width: 25%; text-align: center; height: 24px;">Enables concurrent execution.</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">Enables distributed execution.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Communication</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Shared memory</td>
+<td style="width: 25%; text-align: center; height: 24px;">Message passing</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">Message passing</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 25%; text-align: center; height: 23px;"><strong>Synchronization</strong></td>
+<td style="width: 25%; text-align: center; height: 23px;">Require explicit synchronization</td>
+<td style="width: 25%; text-align: center; height: 23px;">Require implicit synchronization</td>
+<td style="width: 27.5048%; text-align: center; height: 23px;">Require implicit synchronization</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Programming Model</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Low-Level</td>
+<td style="width: 25%; text-align: center; height: 24px;">High-Level</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">High-Level</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Fault Tolerance</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">No built-in fault tolerance</td>
+<td style="width: 25%; text-align: center; height: 24px;">No built-in fault tolerance</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">Built-in fault tolerance</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Scalability</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Limited-Scalability</td>
+<td style="width: 25%; text-align: center; height: 24px;">Moderate-Scalability</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">High-Scalability</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Data Processing</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Suitable for small scale task</td>
+<td style="width: 25%; text-align: center; height: 24px;">Suitable for moderate scale task</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">Suitable for large scale task</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;"><strong>Use cases</strong></td>
+<td style="width: 25%; text-align: center; height: 24px;">Multiheaded Application</td>
+<td style="width: 25%; text-align: center; height: 24px;">Asynchronous programming</td>
+<td style="width: 27.5048%; text-align: center; height: 24px;">Big data processing</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is virtualization? Why is virtualization perefect of cloud computing? Discuss different types of virtualization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Virtualization refers to the technique of creating virtual version on representation of various computing resources such as servers, storage devices, networks and operating systems.</p>
+<p>It involves abstracting the physical infrastructure and dividing it into multiple virtual environments that can be used independentely by different users or applications.</p>
+<p>The virtualization process utilizes specialized software called hypervisor or virtual machine monitors (VMMs) to create and manage  virtual machines(VMs). the virtualised entities aperated as self-contained units complete with their own OS and applications, while sharing the underlying physical resources.</p>
+<p>Virualization is perfect for cloud computing because virtualization allows multiple virtual machines (VMs) to run on a singl physical machine, which leads to more efficient use of hardware resources. This resduces the number of physical servers needen, leading to cost savings and reduced energy consumption. Virtual machines can be easily created, cloned, and resized, allowing cloud providers to quickly scale services up or down in response to changing workloads.</p>
+<p>Types of Virtualization:</p>
+<p><strong>Server Virtualization/ Machine virtual</strong></p>
+<ul style="list-style-type: square;">
+<li>It is the process of dividing a physical server into several virtual servers, called virtual private server. Each VPS cab run independently with its qwn OS and application</li>
+<li>This enables efficient utilization of server resources ans allows multiome users or application to store the same physical server.</li>
+<li>For small to medium scale application, virtualizing servers is frequently a good choice. It is commonly used to provide low cost web hosting services as well.</li>
+<li>Benefits: Higher server availability, Cheaper operating costs, eliminate server complexity, increased application performances.</li>
+</ul>
+<p><strong>Network Virtualization:</strong></p>
+<ul style="list-style-type: square;">
+<li>It refers to the management and monitoring of an entire computer network as a single administrative entity.</li>
+<li>It allows the creation of virtual networks that can be allocated, managed and configured independently.</li>
+<li>Admins can monitor diverse network infrastructure parts such as routers and switches from a single software based admin panel</li>
+<li>It contributes to the network optimization in terms of data trsnsmission speeds, flexibility, dependability, security and scalability.</li>
+<li>It is espically usful in networks that experiences sudden or inexpected spikes in consumption.</li>
+</ul>
+<p>Types:</p>
+<ol style="list-style-type:decimal;">
+<li>Software Defined Networking(SDN) virtualizes hardware that controls network traffic routing.</li>
+<li>Network Function Virtualization (NFV) virtualizes hardware apploances that provide network specific functions easier to configure and manage eg: firewall etc</li>
+</ol>
+<p><strong>Desktop virtualization:</strong></p>
+<ul style="list-style-type: square;">
+<li>Desktop virtualization provides a way for user to maintain their individual desktops on a single, central server. the user may be connected to the central server through a WAN, LAN or over the internet.</li>
+<li>It has many benefits including a lower total cost of ownership(TCO) increased security, reduced cost and downtime and centralized management.</li>
+</ul>
+<p><strong>Sofiware/Application Virtualization</strong></p>
+<ul style="list-style-type: square;">
+<li>It refers to the process of placing an application on a central server and that application can be run virtually on many platforms. The virtualization program behaves precisely like a native program installed on a real workstation for end users. eg: Docker</li>
+<li>It makes it easier for enterprise to ntrool update, manage and repair applications . Admin may alter and control program access rights without signing into the the users desktop</li>
+</ul>
+<p><strong>Data Virtualization:</strong></p>
+<ul style="list-style-type: square;">
+<li>it invovels creating a unfied view of data from multiple sources, such as databases, files, or web services , without physically moving or copying the data</li>
+<li>It provides a larger of abstraction that allows application to access and muniplate data from different sources as if it were in a single location</li>
+<li>Ex : Denodo,oralle data virtuaication</li>
+<li>Advantages : Easy data integration and access , reduce data duplication and redundancy, relatime data access and analyst.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question</h2><h3>Question 4</h3>
+<div><p><p>What is cloud adoption? What factor lead organization to adopt cloud?</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud adoption refers to the process of an organization moving its data, applications, and other business processes to a cloud computing environment. This transition involves using cloud services, which can include public, private, or hybrid cloud models, to gain various business benefits. Cloud adoption can be partial (where only certain applications or services are moved to the cloud) or complete (where an organization’s entire IT infrastructure is migrated to the cloud).<br />
+Several factors lead organizations to adopt cloud computing. Some of them are:</p>
+<p>1.<strong>Cost Efficiency:</strong><br />
+Cloud computing operates on a pay-as-you-go model. This reduces the need for large<br />
+investments. They also often come with lower operational costs due to reduced requirements for in-house IT maintenance and management.</p>
+<p>2. <strong>Scalability and Flexibility</strong>:<br />
+Cloud platforms provide the ability to scale resources up or down based on demand, ensuring<br />
+that organizations can handle peak loads without any downtimes.</p>
+<p>3.<strong> Performance and Reliability</strong>:<br />
+Cloud providers typically offer robust disaster recovery solutions and ensure high availability<br />
+through various data centers.</p>
+<p>4. <strong>Security</strong>:<br />
+Cloud providers invest heavily in security technologies and offer features such as data encryption, identity and access management, and compliance certifications. They are regularly updated with the latest security patches and updates, reducing vulnerabilities.</p>
+<p>5. <strong>Isolation</strong>:<br />
+VMs are isolated from each other, which enhances security and stability. If one VM experiences issues or a security breach, it does not affect other VMs on the same physical host.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe the services provided under Platform-as-a-service?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Platform as a service (PaaS) is a cloud computing model where a third-party provider delivers hardware and software tools to users over the internet. Usually, these tools are needed for application development. A PaaS provider hosts the hardware and software on its own infrastructure. As a result, PaaS frees developers from having to install in-house hardware and software to develop or run a new application. The key services provided under PaaS are:</p>
+<p>1. <strong>Development Tools</strong>:</p>
+<ul style="list-style-type: square;">
+<li> Integrated Development Environments (IDEs): Cloud-based IDEs for coding, debugging, and testing applications.</li>
+<li>Version Control Systems: Tools like Git for managing source code and versioning.</li>
+</ul>
+<p>2. <strong>Application Hosting</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Web Servers: Environments to host web applications, such as Apache, Nginx, etc</li>
+<li>Application Servers: Platforms for running specific types of applications, such as Java<br />
+EE application servers.</li>
+</ul>
+<p>3. <strong>Database Services</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Managed Databases: Relational databases (SQL) like MySQL, PostgreSQL, or Oracle<br />
+Database, and NoSQL databases like MongoDB.</li>
+<li>Database Management Tools: Tools for database administration, backups, and<br />
+performance monitoring.</li>
+</ul>
+<p>4. <strong>Development Frameworks</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Programming Languages and Frameworks: Support for various languages (Java,<br />
+Python, Ruby, PHP, Node.js) and their associated frameworks (Spring, Django, etc.).</li>
+</ul>
+<p>5. <strong>APIs and Services</strong>: Tools for creating, managing, and securing APIs.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is load balancing? How is load balancing done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Load balancing refers to the process of disturbing a set of task over a set of resources with the arm of making their overall processing more efficient. Load blancing can optimize the response time and avoid unevenly overloading some computed nodes while other nodes are left idle. It refers to the disturbing incomming network traffic across a group of backend servers.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36948" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/cloud-computing.drawio.png?resize=880%2C312&#038;ssl=1" alt="" width="880" height="312"></p>
+<p>In cloud computing, load balancing can be implemented at various levels, including the network layer, application layer, and database layer. The most common load balancing techniques used in cloud computing are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Network Load Balancing</strong>: This technique is used to balance the network traffic across multiple servers or instances. It is implemented at the network layer and ensures that the incoming traffic is distributed evenly across the available servers.</li>
+<li><strong>Application Load Balancing</strong>: This technique is used to balance the workload across multiple instances of an application. It is implemented at the application layer and ensures that each instance receives an equal share of the incoming requests.</li>
+<li><strong>Database Load Balancing</strong>: This technique is used to balance the workload across multiple database servers. It is implemented at the database layer and ensures that the incoming queries are distributed evenly across the available database servers.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Discuss the features provided under Security-as-a-service in the cloud?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Security-as-a-Service (SECaaS) is a cloud-based service model that delivers security services and solutions through the cloud, providing organizations with robust security measures without the need to manage and maintain the underlying infrastructure. The features provided under security as a service are given below:</p>
+<p>1. <strong>Identity and Access Management</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>User Authentication</em></span>: Provides multi-factor authentication (MFA) to ensure secure access.</li>
+<li><span style="text-decoration: underline;"><em>Access Control</em></span>: Manages user permissions and roles to ensure that only authorized users can access sensitive data and applications.</li>
+</ul>
+<p>2. <strong>Data Loss Prevention</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Content Inspection</em></span>: Monitors and inspects data in transit and at rest to detect and prevent unauthorized data transfers.</li>
+<li><span style="text-decoration: underline;"><em>Policy Enforcement</em></span>: Implements policies to control the movement, sharing, and use of sensitive data.</li>
+</ul>
+<p>3.<strong> Email Security</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Spam Filtering</em></span>: Identifies and filters out spam emails to reduce the risk of phishing attacks.</li>
+<li><em><span style="text-decoration: underline;">Email Encryption</span></em>: Ensures that email content is encrypted during transmission to protect against interception.</li>
+<li><em><span style="text-decoration: underline;">Malware Protection</span></em>: Scans email attachments for malware and viruses.</li>
+</ul>
+<p>4. <strong>Network Security</strong>:</p>
+<ul style="list-style-type: square;">
+<li><em><span style="text-decoration: underline;">Firewall as a Service</span></em>: Provides virtual firewalls to control traffic between network segments.</li>
+<li><span style="text-decoration: underline;"><em>Intrusion Detection and Prevention Systems (IDPS)</em></span>: Monitors network traffic for suspicious activity and takes action to prevent attacks.</li>
+<li><span style="text-decoration: underline;"><em>Virtual Private Network (VPN)</em></span>: Offers secure remote access to the corporate network.</li>
+</ul>
+<p>5. <strong>Encryption</strong>:</p>
+<ul style="list-style-type: square;">
+<li><em><span style="text-decoration: underline;">Data Encryption</span></em>: Encrypts data at rest and in transit to protect against unauthorized access.</li>
+<li><em><span style="text-decoration: underline;">Key Management</span></em>: Manages encryption keys securely, ensuring that they are stored and<br />
+used correctly.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Describe the guidelines and principles to be followed while designing cloud security architecture ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A security architecture design in cloud should be established with consideration of processes such authentication and authorization, access control, confidentiality, integrity, accountability, privacy, availability etc.</p>
+<p>The developnemt of secure architecture gives engineers, data cinters operations staff, and network operations staff a standarized blueprint for designing , building and testing the security of applications and systems. Following are the principles to be ensured during cloud security architecture design:</p>
+<ol style="list-style-type:decimal;">
+<li>Vulnerability Assessment : Vulnerability assessment categorized network to better priorities vunerability- mitigation initatives such as patching and system upgeades. It assesses the sucess of risk mitigatio by establishing objectives sucha sd reduced vulnerability exposure and faster mitigation.</li>
+<li>Data privacy : A risk assessment, aw well as a gap analysis og controls and processes, must be conducted. Formal privacy processes and activities must be defined and maintained based in this data. Privacy controls and protection, like security must be incorporated into the secure architectural design.</li>
+<li>Application Security : The security features and requirements are defined here, and thhe application security test results sre examined. Application security methods, secure codeing rules, trining etc are often developed together by the security and development teams.</li>
+<li>Virtual Machine Security: Firewalls. intrusion detection and prevention, integrity monitoring , log inspection may all be implemented as software on virtual machines to boost server and  application protection. By applying this conventional line of protection to the virtual machine itself, we can safeguard the migration of essential programs and data to the cloud.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is bucket in Amazon Web Service (AWS). How bucket is created?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In Amazon Web Services (AWS), a bucket is a fundamental container in Amazon Simple Storage Service (Amazon S3) used to store objects, which consist of data and metadata. Buckets serve as the top-level containers in S3 and are used to organize and manage the storage of data, such as files, images, videos, backups, and other forms of digital content.</p>
+<p>Creating a bucket in Amazon S3 can be done through the AWS Management Console, AWS Command Line Interface (CLI), AWS SDKs, or Infrastructure as Code (IaC) tools like AWS CloudFormation.<br />
+We can create bucket in AWS Using the AWS Management Console as follows:</p>
+<p>1.<strong> Sign in to the AWS Management Console</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Navigate to the AWS Management Console and log in with your AWS credentials.</li>
+</ul>
+<p>2. <strong>Open the Amazon S3 Console</strong>:</p>
+<ul style="list-style-type: square;">
+<li>From the AWS Management Console, click on &#8220;Services&#8221; in the top left corner and select &#8220;S3&#8221; under the &#8220;Storage&#8221; category.</li>
+</ul>
+<p>3. <strong>Create a Bucket</strong>:</p>
+<ul style="list-style-type: square;">
+<li>In the S3 console, click on the &#8220;Create bucket&#8221; button.</li>
+</ul>
+<p>4. <strong>Configure Bucket Settings</strong>:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em> Bucket Name</em></span>: Enter a unique name for your bucket.</li>
+<li><span style="text-decoration: underline;"><em> Region</em></span>: Select the AWS region where you want to create the bucket.</li>
+<li><span style="text-decoration: underline;"><em>Bucket Options</em></span>: (Optional) Configure additional settings such as versioning, logging, tags, and default encryption.</li>
+<li><em><span style="text-decoration: underline;">Permissions</span></em>: (Optional) Set bucket permissions, including public access settings and access control lists (ACLs).</li>
+</ul>
+<p>5. <strong>Create the Bucket</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Review your settings and click the &#8220;Create bucket&#8221; button to create the bucket.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How developers can use Google AppEngine for development and hosting services?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Google App Engine (GAE) is a Platform as a Service (PaaS) offered by Google Cloud that enables developers to build, deploy, and scale applications without worrying about managing the underlying infrastructure. Developers can use Google App Engine for development and hosting services by following these steps:</p>
+<p>1. <strong>Setting Up Google Cloud Account</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Create an Account</em></span>: Sign up for Google Clouf account at the Google Cloud Platform (GCP).</li>
+<li><span style="text-decoration: underline;"><em>Enable Billing</em></span>: Enable billing for your GCP project, as some resources may incur costs. Google offers a free tier and credits for new users.</li>
+</ul>
+<p>2.<strong> Installing Google Cloud SDK</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Download and Install</em></span>: Download and install the Google Cloud SDK from the Google Cloud SDK page. Initialize the SDK: Run the following command to initialize the SDK and authenticate with your Google account: gcloud init</li>
+</ul>
+<p>3. <strong>Creating a Project</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Create a New Project</em></span>: In the GCP Console, create a new project or use an existing one.</li>
+</ul>
+<p><em>Set Project ID</em>: Set your project ID for use with the gcloud command:<br />
+gcloud config set project [YOUR_PROJECT_ID]</p>
+<p>4. <strong>Developing Your Application</strong></p>
+<p>Google App Engine supports multiple programming languages, including Python, Java, Node.js, Go, Ruby, PHP, and .NET. You can develop the application using any of these languages.</p>
+<p>5. <strong>Deploying Your Application</strong></p>
+<p>You can use the gcloud command to deploy your application to the google App Engine: gcloud app deploy</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain the various services provided under Azure platform?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Microsoft Azure platform (MAP) originally known as windows Azure, is a public cloud computing platform developed by Microsoft. It provides solution such as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). These services can be used for analytics, virtual computing, storage, networking and much more. Users can select among these services to create and grow new applications as well as run existing apps on public cloud.</p>
+<p>Running virtual machines or containers in the cloud is one of the Azure&#8217;s most common users. Azure is also extensively utilized as a platform for cloud-based database hosting. This platform is also commonly used for disaster recovery and backup.</p>
+<p>The various services provided under Azure platform are:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><em>Compute Services </em></span>: On-demand, scalable computing resources with support for a variety of operating systems, including Windows and Linux. A fully managed platform for building, deploying, and scaling web apps, APIs, and mobile backends.</li>
+<li><span style="text-decoration: underline;"><em>Storage Services </em></span>: Object storage service for unstructured data such as images, videos, and backups.</li>
+<li><span style="text-decoration: underline;"><em>Database Services </em></span>: Fully managed relational database service based on the SQL Server engine.</li>
+<li><span style="text-decoration: underline;"><em>Networking Services </em></span>: Creates isolated network environments in Azure for securely connecting Virtual Machines and other resources.</li>
+<li><span style="text-decoration: underline;"><em>Developer and DevOps Services</em></span>: Development tools for planning, developing, delivering, and maintaining applications.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Describe how cloud computing technology can be applied to support remote ECG monitoring as part of scientific application?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The ECG machine is a health monitoring device that measures the human body&#8217;s heartbeat and prints the results on graph paper. The ECG measures the electrical activity of the heart&#8217;s Cardium. A waveform is created as a result of this action, which is repeated throughout time and symbolizes the heartbeat. The analysis of the shape is used to identify arrhythmias, and it is the most common way of detecting heart diseases.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37018" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/ECG.png?resize=1200%2C745&#038;ssl=1" alt="" width="1200" height="745"></p>
+<p>Cloud computing technology can significantly enhance remote ECG monitoring, making it more efficient, scalable, and accessible. By using cloud capabilities, healthcare providers can monitor patients&#8217; heart conditions remotely in real-time, leading to better diagnosis and continuous monitoring. This way, the patient at risk can be constantly monitored without going to the hospital for ECG analysis. At the same time, the Doctors can instantly be notified of cases that need their attention.<br />
+In this figure, there are different types of computing devices equipped with ECG sensors to constantly monitor the patient&#8217;s heartbeat. The respective information is transmitted to the patient&#8217;s mobile device that will immediately be forwarded to the cloud-hosted web services for<br />
+analysis. Results are visualized on dashboards accessible to healthcare providers. Doctors can access and review the data remotely, providing timely intervention if needed. In this way, cloud computing technology can be utilized in ECG monitoring.</p>
+</div>
+</body></html>

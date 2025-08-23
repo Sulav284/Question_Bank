@@ -1,0 +1,460 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>CA Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is cache memory? Explain the mapping process. Differentiate between direct mapping and associate mapping.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2 style="text-align: center;">Cache Memory</h2>
+<p>An extremely fast small memory placed between the CPU and the main memory that is used to significantly reduce the average memory access time and hence, the total execution time of the program is known as <strong>cache memory</strong>.</p>
+<p>When the CPU needs to access memory,  the cache is examined. If the word is found in the cache, it is read from the fast memory.  If the word addressed by the CPU is not found in the cache, the main memory is accessed to read the word. A block of words containing the one just accessed is then transferred from the main memory to the cache memory. The performance of cache memory is frequently measured in terms of a quantity called <strong><em>hit ratio. </em></strong>When the CPU refers to memory and finds the word in the cache, it is said to produce a <strong><em>hit</em></strong><em>. </em>If the word is not found in the cache, it is in the main memory and it counts as a <strong><em>miss</em></strong><em>. </em>The ratio of the number of hits divided by the total CPU references to memory  (hits plus misses) is the hit ratio.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23090 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/cache-1.png?resize=482%2C133&#038;ssl=1" alt="" width="482" height="133"></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>Figure: Cache Memory</strong></span></p>
+<p>&nbsp;</p>
+<h2 style="text-align: center;">Mapping Process</h2>
+<p>The transformation of data from main memory to cache memory is called <strong>mapping process</strong>. There are three types of mapping processes:</p>
+<p>1. Associative mapping</p>
+<p>2. Direct mapping</p>
+<p>3. Set-associative mapping</p>
+<p>&nbsp;</p>
+<p><strong>Associative Mapping</strong></p>
+<ul style="list-style-type: square;">
+<li>The fastest and most flexible cache organization uses an associative memory.</li>
+<li>This organization is illustrated in Fig. below.</li>
+<li>The associative memory stores both the address and content  (data) of the memory.</li>
+<li>The diagram shows three words presently stored in the cache.</li>
+<li>The address value of 15 bits is shown as a five-digit octal number and its corresponding 12-bit word is shown as a four-digit octal number. A CPU address of 15 bits is placed in the argument register and the associative memory is searched for a matching address.</li>
+<li>If the address is found,  the corresponding 12-bit  data is read and sent to the CPU.</li>
+<li>If no match occurs, the main memory is accessed for the word. The address data pair is then transferred to the associative cache memory. <strong> </strong></li>
+<li>If the cache is full, an address data pair must be displaced to make room for a pair that is needed and not presently in the cache.</li>
+<li>The decision as to what pair is replaced is determined by the replacement algorithm that the designer chooses for the cache.</li>
+<li>A simple procedure is to replace cells of the cache in <strong>round-robin</strong> order whenever a new word is requested from the main memory. This constitutes a <strong>first-in-first-out (FIFO)</strong> replacement policy.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23091 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/assoc.jpg?resize=496%2C364&#038;ssl=1" alt="" width="496" height="364"></p>
+<p>&nbsp;</p>
+<p><strong>Direct Mapping: </strong><strong> </strong></p>
+<ul style="list-style-type: square;">
+<li>Associative memories are expensive compared to random-access memories because of the added logic associated with each cell.</li>
+<li>The CPU address of 15 bits is divided into two fields: <strong>index </strong>and <strong>tag.</strong></li>
+<li>The number of bits in the index field is equal to the number of address bits required to access the cache memory.</li>
+<li>In the general case, there are 2k words in cache memory and 2n words in main memory.</li>
+<li>The n-bit memory address is divided into two fields: k bits for the index field and n  &#8211; k bits for the tag field. <strong> </strong></li>
+<li>When the  CPU  generates a memory request,  the index field is used for the address to access the cache. <strong> </strong></li>
+<li>The tag field of the CPU address is compared with the tag in the word read from the cache.</li>
+<li>If the two tags match, there is a hit and the desired data word is in the cache.</li>
+<li>If there is no match, there is a miss and the required word is read from main memory.  <strong> </strong></li>
+<li>It is then stored in the cache together with the new tag, replacing the previous value. <strong> </strong></li>
+<li>The disadvantage of direct mapping is that the hit ratio can drop considerably if two or more words whose addresses have the same index but different tags are accessed repeatedly. <strong> </strong></li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23092 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/in.png?resize=553%2C283&#038;ssl=1" alt="" width="553" height="283"></p>
+<p><strong>Set Associative Mapping</strong></p>
+<ul style="list-style-type: square;">
+<li>A third type of cache organization, called set-associative mapping,  is an improvement over the direct-mapping organization in that each word of cache can store two or more words of memory under the same index address.  <strong> </strong></li>
+<li>Each data word is stored together with its tag and the number of tag—data items in one word of cache is said to form a set. An example of a set-associative cache organization for a set size of two is shown in Fig. below. <strong> </strong></li>
+<li>Each index address refers to two data words and their associated tags. Each tag requires six bits and each data word has 12 bits, so the word length is 2(6  + 12) =    36 bits. <strong> </strong></li>
+<li>An index address of nine bits can accommodate 512 words. Thus the size of cache memory is 512  X 36. <strong> </strong></li>
+<li>It can accommodate 1024 words of main memory since each word of the cache contains two data words.</li>
+<li>In general, a set-associative cache of set size <em>k </em>will accommodate <em>k </em>words of main memory in each word of the cache.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-23093 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/set.jpg?resize=438%2C283&#038;ssl=1" alt="" width="438" height="283"></p>
+<h2></h2>
+<h2 style="text-align: center;">Direct vs Associate</h2>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 288px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Direct</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Associate</strong></td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 50%; height: 120px;">Needs only one comparison because of using a direct formula to get the effective cache address.</td>
+<td style="width: 50%; height: 120px;">Needs comparison with all tag bits, i.e., the cache control logic must examine every block’s tag for a match at the same time in order to determine whether a block is in the cache/not.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">There is one possible location in the cache organization for each block from the main memory because we have a fixed formula.</td>
+<td style="width: 50%; height: 48px;">The mapping of the main memory block can be done with any of the cache blocks.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">If the processor needs to access the same memory location from 2 different main memory pages frequently, the cache hit ratio decreases.</td>
+<td style="width: 50%; height: 24px;">If the processor needs to access the same memory location from 2 different main memory pages frequently, the cache hit ratio has no effect.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Search time is less here because there is one possible location in the cache organization for each block from the main memory.</td>
+<td style="width: 50%; height: 24px;">Search time is more as the cache control logic examines every block’s tag for a match.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">The index is given by the number of blocks in the cache.</td>
+<td style="width: 50%; height: 24px;">The index is zero for associative mapping.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It has the least number of tag bits.</td>
+<td style="width: 50%; height: 24px;">It has the greatest number of tag bits.</td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Advantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>The simplest type of mapping</li>
+<li>Fast as only tag field matching is required while searching for a word.</li>
+<li>It is comparatively less expensive than associative mapping.</li>
+</ul>
+</td>
+<td style="width: 50%;"><strong>Advantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>It is fast.</li>
+<li>Easy to implement</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Disadvantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>It gives low performance because of the replacement for data-tag value.</li>
+</ul>
+</td>
+<td style="width: 50%;"><strong>Disadvantages-</strong></p>
+<ul style="list-style-type: square;">
+<li>Expensive because it needs to store addresses along with the data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Describe micro-programmed control unit. Explain different types of addressing modes with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2 style="text-align: center;"><strong>Micro-programmed CU</strong></h2>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-23096 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/cuuu.jpg?resize=725%2C196&#038;ssl=1" alt="" width="725" height="196"></p>
+<ul style="list-style-type: square;">
+<li>The problem with hardwired control organization is that it isn&#8217;t flexible i.e. for certain modifications, it requires changes in the wiring.</li>
+<li>The alternative to hardwired control organization is microprogrammed control organization.</li>
+<li>In microprogrammed control organization, microoperations a stored in a memory known as control memory.</li>
+<li>The control unit initiates a series of sequential steps of microoperation.</li>
+<li>The control variables at any given time can be represented by the strings of 1&#8217;s and 0&#8217;s known as control unit.</li>
+<li>A control word can be programmed to perform various operations on the components of a system.</li>
+<li>A control unit whose binary control variables are stored in memory is called a microprogrammed control unit.</li>
+<li>Each word in a control memory contains within it a micro instruction that specifies one or more microoperations for the system.</li>
+<li>The general block diagram is already shown above.</li>
+<li>The control memory is assumed to be a ROM within which all control information is permanently stored.</li>
+<li>The control address register specifies the address of microinstruction. And, control data register holds microinstruction read from memory.</li>
+<li>The microinstruction contains a control word that specifies one or more microoperations.</li>
+<li>Once these operations are executed, the control must determine the next address which may be: one in sequence, or located somewhere else in the control memory.</li>
+<li>For this reason, it&#8217;s necessary to use some bits of present microinstruction to control the generation of the address of the next microinstruction.</li>
+<li>The next address may also be the function of the external input condition.</li>
+<li>When microoperation is executed, the next address is computed in the next address generator circuit and transferred to the control address register to read the next microinstruction.</li>
+<li>The control data register holds present microinstruction while the next address is computed and read from control memory. That&#8217;s why it&#8217;s also called pipeline register.</li>
+<li>The next address register is called the sequencer as it determines the address sequence read from control memory.</li>
+</ul>
+<p>&nbsp;</p>
+<h2 style="text-align: center;">Addressing modes</h2>
+<p><strong>Addressing modes</strong> specifies the way, the effective address of an operand is represented in the instruction.</p>
+<p><strong>Types of Addressing Modes</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Register Addressing Mode</li>
+<li>Direct Addressing Mode</li>
+<li>Immediate Addressing Mode</li>
+<li>Register Indirect Addressing Mode</li>
+<li>Index Addressing Mode</li>
+<li>Auto Increment Addressing Mode</li>
+<li>Auto Decrement Addressing Mode</li>
+<li>Relative Addressing Mode</li>
+</ol>
+<h3>1. Register Addressing Mode</h3>
+<p>Every instruction includes operands; the operands can be a memory location, a processor register or an I/O device. The instruction which uses processor <strong>registers</strong> to represent operands is the instruction in <strong>register addressing mode</strong>.</p>
+<p>Here, the effective address is a register where the value of the operand is present.</p>
+<p><strong>EA=R</strong></p>
+<p>Below we have two instructions as our examples for register addressing mode.</p>
+<p><strong>Add R4, R3</strong></p>
+<p><strong>Load R3, R2</strong></p>
+<p>In the examples above, the Add instruction uses registers to represent both of its operands. Similarly, the Load instruction also uses registers to represent both of its operands. So, the instruction above uses register addressing mode to describe the address of the operand. Below, we have a figure showing the Add instruction in the example above.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-364" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Register-Mode.jpg?resize=600%2C253&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Register-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Register-Mode-300x127.jpg 300w" alt="Register Mode" width="600" height="253" /></p>
+<p><strong>Advantage:</strong> In the register addressing mode there are no memory references as the value to be operated is present in the register.<br />
+<strong>Disadvantage:</strong> Registers have limited address space. So, it has a limit on the size of value that can be stored.</p>
+<h3>2. Direct Addressing Mode</h3>
+<p>The direct addressing mode is also known as <strong>Absolute Addressing mode</strong>. Here, the instruction contains the address of the <strong>location in memory</strong> where the value of the operand is stored.</p>
+<p>Here, the effective address is the address of memory location.</p>
+<p><strong>EA = A</strong></p>
+<p>For example, observe the examples below:</p>
+<p><strong>Add R2, A</strong></p>
+<p><strong>Store R2, B</strong></p>
+<p>The Add instruction includes the memory location A which has the value to be added to the content of register R2. Similarly, the Store instruction has the address of memory location B where the content of register R2 will be stored. Below we have a figure showing the direct addressing of the operand A in the Add instruction of the example above.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-365" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Direct-Mode.jpg?resize=600%2C411&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Direct-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Direct-Mode-300x206.jpg 300w" alt="Direct Mode" width="600" height="411" /></p>
+<p><strong>Advantage:</strong> Direct addressing mode is the simplest of all addressing mode.<br />
+<strong>Disadvantage:</strong> Direct addressing mode provides a limited address space.</p>
+<h3>3. Immediate Addressing Mode</h3>
+<p>In immediate addressing mode, the value of the operand is <strong>explicitly mentioned</strong> in the instruction. Here, effective address is not required as the operand is explicitly defined in instruction.</p>
+<p>Let us see the example of immediate addressing mode:</p>
+<p><strong>Add R2, #100</strong></p>
+<p><strong>Store R2, 100H</strong></p>
+<p>The Add instruction, adds 100 to R2’s content . The <strong>#</strong> sign in front of the value indicates the immediate value to be operated. If a value does not have # sign in front of it then it is the address of a memory location.</p>
+<p>The next instruction Store considers the immediate value 100H as address as it does not have # sign in front of it. The Store instruction stores the content of R2 at memory location 100H. In the figure below we have shown the Store instruction of the above examples.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-373" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1.jpg?resize=600%2C414&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Immediate-Addressing-Mode-1-300x207.jpg 300w" alt="Immediate Addressing Mode 1" width="600" height="414" /></p>
+<p><strong>Advantage:</strong> In the immediate addressing mode the memory reference is not required as the value is explicitly present in the instruction</p>
+<p><strong>Disadvantage:</strong> The instruction format provides a limited size for the operand. So, the immediate addressing mode has limited space for immediate value.</p>
+<h2>4. Register Indirect Addressing mode</h2>
+<p>A <strong>processor register</strong> is used to hold the <strong>address of a memory location</strong> where the operand is placed. This addressing mode allows executing the same set of instructions for the different memory location. This can be done by incrementing the content of register thereby pointing the new location each time.</p>
+<p>In higher-level language, it is referred to as pointers. The indirect mode is denoted by placing the register inside the parenthesis.</p>
+<p>Here the effective address is the content of memory location present in the register.<br />
+<strong>EA=(R)</strong></p>
+<p>Now, for example:</p>
+<p><strong>Load R3, (R2)   // </strong><em>Load R2, A</em></p>
+<p>The Load instruction above will load the value present at the memory location contained by register R2 in the register R3. The figure below shows how the register R3 gets loaded with the value stored in the memory location held by register R2.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-367" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode.jpg?resize=600%2C490&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Indirect-Addressing-Mode-300x245.jpg 300w" alt="Indirect Addressing Mode" width="600" height="490" /></p>
+<p><strong>Advantage:</strong> In the register indirect addressing mode the same set of instructions can be used multiple times.</p>
+<p><strong>Disadvantage:</strong> In the register indirect addressing mode the number of memory reference is more.</p>
+<h3>5. Index Addressing Mode</h3>
+<p>Index addressing mode is helpful when the instructions in the program are accessing the <strong>array or the large range of memory addresses</strong>. In this mode, the effective address is generated by <strong>adding a constant to the register’s content</strong>. The content of the register does not change.</p>
+<p>The symbolic representation of index addressing mode is denoted as:</p>
+<p><strong>X(R)</strong></p>
+<p>And the effective address is denoted by</p>
+<p><strong>EA = X + (R)</strong></p>
+<p>For example, consider the instruction below:</p>
+<p><strong>Load R2, A</strong></p>
+<p><strong>Load R3, (R2)</strong></p>
+<p><strong>Load R4, 4(R2)</strong></p>
+<p><strong>Load R5, 8(R2)</strong></p>
+<p><strong>Load R6, 12(R2)</strong></p>
+<p>The above instructions will load the register R3, R4, R5, R6 with the contents, present at the successive memory addresses from memory location A correspondingly.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-368" src="https://i0.wp.com/binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode.jpg?resize=600%2C475&#038;ssl=1" sizes="auto, (max-width: 600px) 100vw, 600px" srcset="https://binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode.jpg 600w, https://binaryterms.com/wp-content/uploads/2019/09/Index-Addressing-Mode-300x238.jpg 300w" alt="Index Addressing Mode" width="600" height="475" /></p>
+<p><strong>Advantage:</strong> The index addressing mode provides flexibility to specify memory locations.</p>
+<p><strong>Disadvantage:</strong> The index addressing mode is complex to implement.</p>
+<h3>6. Auto Increment Addressing Mode</h3>
+<p>In auto-increment addressing mode once the content of the register is <strong>accessed</strong> by the instruction the register’s content is <strong>incremented</strong> to refer the next operand.</p>
+<p>Symbolically it is represented as below:</p>
+<p><strong>(R)+</strong></p>
+<p>Here, the effective address is content of the register as it is enclosed by parenthesis. The content of register which is referring to a memory location is incremented so that it could point the next memory location where the next operand is stored.</p>
+<h3>7. Auto Decrement Addressing Mode</h3>
+<p>It is just opposite of auto-increment mode. In auto decrement mode the content of the register is <strong>decremented initially</strong> and then the decremented content of the register is used as effective address.</p>
+<p>Symbolically it is presented as:</p>
+<p><strong>-(R)</strong></p>
+<p>The auto-increment and decrement mode help to implement the <strong>stack structure</strong>.</p>
+<h3>8. Relative Addressing Mode</h3>
+<p>In the content above we have discussed the <strong>index addressing mode</strong>. There we were adding a constant to the register content to refer the next operand address. In some computer instead of a register, the <strong>program counter</strong> is used.</p>
+<p>The symbolic representation of relative address mode is</p>
+<p><strong>X(PC)</strong></p>
+<p>The effective address for it would be:</p>
+<p><strong>EA = X + (PC)</strong></p>
+<p>As here the operand addresses are found relative to the program counter. That’s why it is referred to as relative address mode.</p>
+<p><strong>Advantage: </strong>Relative addressing mode doesn’t require memory references.</p>
+<p><strong>Disadvantage:</strong> Relative addressing mode doesn’t have any disadvantage as such.</p>
+<p>This is all about addressing modes in computer architecture. It provides us with a flexible method to specify the address of the operands used in instruction.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate between floating point representation and fixed point representation. Divide 23 by 9 using restoring division algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 576px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Fixed Point representation</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Floating Point representation</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">A representation of real data type for a number that has a fixed number of digits after the radix point.</td>
+<td style="width: 50%; height: 96px;">A formulae representation of real numbers as an approximation so as to support a tradeoff between range and precision.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It has limited dynamic range.</td>
+<td style="width: 50%; height: 24px;">It has large dynamic range.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Difference between two successive number whether it is small valued or large valued remains same.</td>
+<td style="width: 50%; height: 72px;">The difference between two successive small valued number large valued number is different.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Error due to rounding and truncation are large; so it has less precision</td>
+<td style="width: 50%; height: 48px;">Floating point representation gives larger precision.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Output of multiply and add stage produces error in the algorithm.</td>
+<td style="width: 50%; height: 48px;">Due to large dynamic range such errors are not produced.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Software implementation is complicated.</td>
+<td style="width: 50%; height: 48px;">Software implementation is easy.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Less computational power.</td>
+<td style="width: 50%; height: 24px;">More computational power.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Addition of two numbers does not affect the precision.</td>
+<td style="width: 50%; height: 48px;">Addition of two number, usually affect the precision.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Rounding and truncation must be a part of program.</td>
+<td style="width: 50%; height: 48px;">It is not necessary to specify rounding and truncation.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Overflow error occurs because the size of intermediate register is comparatively small.</td>
+<td style="width: 50%; height: 72px;">The size of intermediate register is around 80-Bits, so overflow error does not occur.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Requires less registers and less number of input-output pins.</td>
+<td style="width: 50%; height: 24px;">Requires large registers and more number of input-output pins.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><strong>23/9 using restoring division</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23128" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_051608_CamScanner.jpg?resize=930%2C1270&#038;ssl=1" alt="" width="930" height="1270"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What are different methods for representing signed numbers? Represent (-71) in those formats.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A signed integer is an integer with a positive ‘+’ or negative sign ‘-‘ associated with it. Since the computer only understands binary, it is necessary to represent these signed integers in binary form.</p>
+<p>In binary, a signed integer can be represented in three ways:</p>
+<p>1. Signed bit<br />
+2. 1’s Complement<br />
+3. 2’s Complement</p>
+<p>&nbsp;</p>
+<p><strong>Signed bit</strong></p>
+<p>In the signed integer representation method, the MSB (Most Significant Bit) represents the sign of the Integer. Magnitude is represented by other bits other than MSB i.e. (n-1) bits where n is the no. of bits. If the number is positive, MSB is 0 else 1.</p>
+<p>Example:</p>
+<p>+5 : <strong>0</strong>101</p>
+<p>-5 : <strong>1</strong>101</p>
+<p><strong>1&#8217;s complement</strong></p>
+<p>Here, the representation remains the same for the positive numbers as the signed bit. However, for negative numbers, the signed bit representation is calculated and its 1&#8217;s complement is calculated.</p>
+<p>Example:</p>
+<p>+5 : 0101</p>
+<p>-5 : 1010</p>
+<p><strong>2&#8217;s complement</strong></p>
+<p>Here, the representation remains the same for the positive numbers as the signed bit. However, for negative numbers, the signed bit representation is calculated and its 2&#8217;s complement is calculated.</p>
+<p>+5 : 0101</p>
+<p>-5 : 1011</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Representation of (-71)</strong></span></p>
+<p><strong>Signed bit: 1</strong>1000111</p>
+<p><strong>1&#8217;s complement:</strong> 10111000</p>
+<p><strong>2&#8217;s complement:</strong> 10111001</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain Direct Memory Acess with suitable diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Direct Memory Access: </strong></p>
+<p>This technique of I/O operation has a separate module called DMA module. The DMA module takes control over the system Bus and transfer data between memory and I/O device directly.</p>
+<p><strong><u>Steps in DMA</u> </strong></p>
+<ol style="list-style-type:decimal;">
+<li>DMA sends bus request(BR) to CPU.</li>
+<li>CPU disables all its address bus, data bus, read control, and write control.</li>
+<li>CPU gives control to DMA by enabling the Bus Grant (BG)</li>
+<li>Until the BG is enabled CPU remains idle and the data transfer between memory and I/O device takes place.</li>
+<li>When the transfer is over the DMA disables the Bus Grant, and CPU again takes the control over system bus.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-23100 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/dma.jpg?resize=1123%2C160&#038;ssl=1" alt="" width="1123" height="160"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the data transfer and manipulation instruction with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Data Transfer Instruction</strong></p>
+<ul style="list-style-type: square;">
+<li>They are used to move data from one place in a computer to another without changing the data content.</li>
+<li>The transfer of data is between the processor register and memory, processor register and I/O and processor register themselves.</li>
+<li>Example: LOAD (LD), STORE (ST), MOVE(MOV), EXCHANGE(XCHG), INPUT(IN), OUTPUT(OUT), PUSH(PUSH), POP(POP)</li>
+</ul>
+<p><strong>Data Manipulation Instruction</strong></p>
+<ul style="list-style-type: square;">
+<li>They are used to perform operations on data and provide the computational capabilities for computer.</li>
+<li>They are divided into 3 types:</li>
+</ul>
+<p><strong>1. Arithmetic Instruction</strong></p>
+<p>Examples:</p>
+<p>Increment, Decrement, Add, Subtract, Multiply, Divide, Divide with carry, Subtract with borrow.</p>
+<p><strong>2. Logical Instruction</strong></p>
+<p>Examples:</p>
+<p>AND, OR, COMPLEMENT, CLEAR XOR</p>
+<p><strong>3. Shift Instruction</strong></p>
+<p>Examples:</p>
+<p>Logical Shift Right, Logical Shift Left, Circular Shift Right, Circular Shift Left, Arithmetic Shift Right, Arithmetic Shift Left, Rotate Right, Rotate Left</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain common bus system for basic computer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18586" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/SmartSelect_20230606_105017_CamScanner.jpg?resize=922%2C792&#038;ssl=1" alt="" width="922" height="792"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18587" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Screenshot_20230606_105336_CamScanner.jpg?resize=944%2C1181&#038;ssl=1" alt="" width="944" height="1181"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-18588" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/03/Screenshot_20230606_105156_CamScanner.jpg?resize=923%2C1089&#038;ssl=1" alt="" width="923" height="1089"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain the binary adder-subtractor circuit with suitable diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23106" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_033906_CamScanner.jpg?resize=928%2C942&#038;ssl=1" alt="" width="928" height="942"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23107" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_033929_CamScanner.jpg?resize=931%2C426&#038;ssl=1" alt="" width="931" height="426"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What do you mean by Register Transfer Language? Explain the use of Register Transfer Language control function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>It is used to describe the micro-operations transfer among registers. It is a kind of intermediate representation (IR) that is very close to assembly language, such as that which is used in a compiler. The term “Register Transfer” can perform micro-operations and transfer the result of the operation to the same or another register.</p>
+<p>There are various methods of RTL –</p>
+<p>1. General way of representing a register is by the name of the register enclosed in a rectangular box as shown in (a).</p>
+<p>2. Register is numbered in a sequence of 0 to (n-1) as shown in (b).</p>
+<p>3. The numbering of bits in a register can be marked on the top of the box as shown in (c).</p>
+<p>4. A 16-bit register PC is divided into 2 parts- Bits (0 to 7) are assigned with lower byte of 16-bit address and bits (8 to 15) are assigned with higher bytes of 16-bit address as shown in (d).</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23108" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/rtlll.jpg?resize=561%2C288&#038;ssl=1" alt="" width="561" height="288"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What do you mean by sequencer? Explain with microprogram sequencer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A sequencer or microsequencer generates the addresses used to step through the microprogram of a control store. It is used as a part of the control unit of a CPU or as a stand-alone generator for address ranges.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23111 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/seqqq-1.jpg?resize=556%2C408&#038;ssl=1" alt="" width="556" height="408"></p>
+<p><strong>Steps in micro-sequencer</strong></p>
+<ul style="list-style-type: square;">
+<li>Initial address is loaded into control address register (CAR) when instruction is executed and it is the address of 1st microinstruction that activates the instruction fetch routine which may be sequenced by incrementing the content of CAR.</li>
+<li>At the end of fetch routine, instruction is available at instruction register.</li>
+<li>The control memory next must go through the routine that determines the effective address of operand which will be available in memory address register once this routine is complete.</li>
+<li>Next step is to generate microoperation that executes the instruction fetched from memory. Each instruction has its own microprogram routine stored in a given location of control memory.</li>
+<li>The transformation from instruction code bit to an address in control memory where routine is located is referred to as mapping process.</li>
+<li>A microprogram that employs subroutine will require an external register for storing the return address which is stored in external register known as subroutine register (SBR).</li>
+</ul>
+<p>In summary, the address sequencing capabilities required in control memory are:</p>
+<p>1. Incrementing of CAR.</p>
+<p>2. Unconditional or conditional branch depending on status bit condition.</p>
+<p>3. A mapping process from bits of an instruction to an address for control memory.</p>
+<p>4. A facility for subroutine call and return.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write the program for the following statement using three, single, zero address instructions.</p>
+<p>X = (A*B+C-D) / (E+F*G)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Three Address Instruction</strong></p>
+<p>MUL R1, A, B</p>
+<p>SUB R2, C, D</p>
+<p>ADD R3, R1, R2</p>
+<p>MUL R4, F, G</p>
+<p>ADD R5, E, R4</p>
+<p>DIV X, R3, R5</p>
+<p><strong>Single Address Instruction</strong></p>
+<p>LOAD A</p>
+<p>MUL B</p>
+<p>ADD C</p>
+<p>SUB D</p>
+<p>STORE T</p>
+<p>LOAD F</p>
+<p>MUL G</p>
+<p>STORE U</p>
+<p>LOAD E</p>
+<p>ADD U</p>
+<p>STORE V</p>
+<p>LOAD T</p>
+<p>DIV V</p>
+<p>STORE X</p>
+<p><strong>Zero Address Instruction</strong></p>
+<p>PUSH A</p>
+<p>PUSH B</p>
+<p>MUL</p>
+<p>PUSH C</p>
+<p>ADD</p>
+<p>PUSH D</p>
+<p>SUB</p>
+<p>PUSH E</p>
+<p>PUSH F</p>
+<p>PUSH G</p>
+<p>MUL</p>
+<p>ADD</p>
+<p>DIV</p>
+<p>POP X</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):</p>
+<p>a. CISC</p>
+<p>b. Overlapped register</p>
+<p>c. Pipelining hazards</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. CISC</strong></p>
+<p>Stands for Complex Instruction Set Architecture.<br />
+The main idea is that a single instruction will do all loading, evaluating, and storing operations just like a multiplication command will do stuff like loading data, evaluating, and storing it, hence it’s complex.</p>
+<p><strong>Characteristics:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Complex instruction, hence complex instruction decoding.</li>
+<li>Instructions are larger than one-word size.</li>
+<li>Instruction may take more than a single clock cycle to get executed.</li>
+<li>Less number of general-purpose registers as operations get performed in memory itself.</li>
+<li>Complex Addressing Modes.</li>
+<li>More Data types.</li>
+</ol>
+<p><strong>b. Overlapped Register</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-23114 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/1-1.jpg?resize=448%2C558&#038;ssl=1" alt="" width="448" height="558"></p>
+<p>In the Reduced Instruction Set Computing (RISC) architecture, a register window is a set of registers that are used to hold temporary values during the execution of a program. The register window concept is used to improve the performance of the processor by reducing the time it takes to access registers. Overlapping register windows refer to a design feature in some RISC architectures where multiple register windows overlap in memory, allowing the processor to switch between them quickly. This can be useful for implementing functions and procedures, as it allows the processor to quickly switch between the registers used by different functions or procedures without having to save and restore them from the main memory.</p>
+<p><strong>c. Pipeline Hazards</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23116" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041505_CamScanner.jpg?resize=927%2C1030&#038;ssl=1" alt="" width="927" height="1030"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-23117" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041527_CamScanner.jpg?resize=930%2C1452&#038;ssl=1" alt="" width="930" height="1452"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23115" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041547_CamScanner.jpg?resize=916%2C1350&#038;ssl=1" alt="" width="916" height="1350"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23123" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041609_CamScanner-1.jpg?resize=918%2C1374&#038;ssl=1" alt="" width="918" height="1374"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23120" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041626_CamScanner.jpg?resize=916%2C1378&#038;ssl=1" alt="" width="916" height="1378"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-23119" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230811_041643_CamScanner.jpg?resize=930%2C460&#038;ssl=1" alt="" width="930" height="460"></p>
+</div>
+</body></html>

@@ -1,0 +1,562 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MP Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>MP Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempts any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Explain instruction cycle, machine cycle and T-states. Draw timing diagram of IN instruction with brief description.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img decoding="async" style="width: 100%; height: auto;" src="data:image/jpeg;base64,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" alt="User Loaded Image | CSIT Guide" /></p>
+<p><strong>Instruction cycle:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The time a microprocessor needs to fetch and execute one entire instruction is known as an instruction cycle.</li>
+<li>There are typically four stages of an instruction cycle that the CPU carries out-</li>
+<li><strong>Fetching the instruction:</strong> The next instruction is fetched from the memory address that is currently stored in the program counter (PC) and stored in the instruction register (IR). At the end of the fetch operation, the PC points to the next instruction that will be read at the next cycle.</li>
+<li><strong>Decode the instruction:</strong> During this cycle the encoded instruction present in the IR (instruction register) is interpreted by the decoder.</li>
+<li><strong>Read the effective address:</strong> In case of a memory instruction (direct or indirect) the execution phase will be in the next clock pulse. If the instruction has an indirect address, the effective address is read from main memory and any required data is fetched from main memory to be processed and then placed into data registers (Clock Pulse: T3). If the instruction is direct, nothing is done at this clock pulse. If this is an I/O instruction or a Register instruction, the operation is performed (executed) at clock Pulse.</li>
+<li><strong>Execute the instruction:</strong> The control unit of the CPU passes the decoded information as a sequence of control signals to the relevant function units of the CPU to perform the actions required by the instruction such as reading values from registers, passing them to the ALU to perform mathematical or logic functions on them and writing the result back to a register. If the ALU is involved, it sends a condition signal back to the CU. The result generated by the operation is stored in the main memory or sent to an output device. Based on the condition of any feedback from the ALU, Program Counter may be updated to a different address from which the next instruction will be fetched.</li>
+</ol>
+<p><strong>Machine cycle:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The basic microprocessor operation such as reading a byte from I/O port or writing a byte to memory is called as machine cycle.</li>
+<li>The time TCY in the above figure is called as the machine cycle. Thus a machine cycle consists of several T-states.</li>
+</ol>
+<p><strong>T-state:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>One complete cycle of clock is called as T-state as shown in the above figure. The time intervals <span id="MathJax-Element-1-Frame" class="MathJax" style="box-sizing: border-box; display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 16px; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;"><span id="MathJax-Span-1" class="math"><span id="MathJax-Span-2" class="mrow"><span id="MathJax-Span-3" class="msubsup"><span id="MathJax-Span-4" class="mi">T</span><span id="MathJax-Span-5" class="mn">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation">T1</span></span> or<span id="MathJax-Element-2-Frame" class="MathJax" style="box-sizing: border-box; display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 16px; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;"><span id="MathJax-Span-6" class="math"><span id="MathJax-Span-7" class="mrow"><span id="MathJax-Span-8" class="msubsup"><span id="MathJax-Span-9" class="mi">T</span><span id="MathJax-Span-10" class="mn">2</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation">T2</span></span> are the examples of T-state.</li>
+<li>A T-state is measured from the falling edge of one clock pulse to the falling edge of the next clock pulse.</li>
+</ol>
+<p>Various versions of 8086 have maximum clock frequency from 5MHz to 10MHz. Hence the minimum time for one T-state is between 100 to 200 n sec.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Draw block diagram of 80286 microprocessor and explain its main four functional sub-units. Differentiate between Real Address Mode and Protected Virtual address mode.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The functional block diagram of 80286 microprocessor is as given below.</p>
+<p><img loading="lazy" decoding="async" class="wp-image-6196 size-full aligncenter" src="https://hamrocsit.com/wp-content/uploads/2022/04/80c286_0.png" alt="Block diagram of 80286 and explain its functional units" width="1000" height="547" srcset="https://hamrocsit.com/wp-content/uploads/2022/04/80c286_0.png 1000w, https://hamrocsit.com/wp-content/uploads/2022/04/80c286_0-768x420.png 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+<p style="font-weight: 400;">The CPU contain four functional blocks</p>
+<ol style="list-style-type:decimal;">
+<li>Address Unit (AU)</li>
+<li>Bus Init (BU)</li>
+<li>Instruction Unit (IU)</li>
+<li>Execution Unit (EU)</li>
+</ol>
+<p>The address unit is responsible for calculating the physical address of instructions and data that the CPU wants to access. Also the address lines derived by this unit may be used to address different peripherals. The physical address computed by the address unit is handed over to the bus unit (BU) of the CPU.</p>
+<p>Major function of the bus unit is to fetch instruction bytes from the memory. Instructions are fetched in advance and stored in a queue to enable faster execution of the instructions. The bus unit also contains a bus control module that controls the prefetcher module. These prefetched instructions are arranged in a 6-byte instructions queue. The 6-byte prefetch queue forwards the instructions arranged in it to the <b><strong>instruction unit </strong></b>(IU).</p>
+<p>The instruction unit accepts instructions from the prefetch queue and<b><strong> </strong></b>an instruction decoder decodes them one by one. The decoded instructions are latched onto a decoded instruction queue. The output of the decoding circuit drives a control circuit in the <b><strong>execution unit,</strong></b> which is responsible for executing the instructions received from decoded instruction queue.</p>
+<p>The decoded instruction queue sends the data part of the instruction over the data bus. The EU contains the register bank used for storing the data as scratch pad, or used as special purpose registers. The ALU, the heart of the EU, carries out all the arithmetic and logical operations and sends the results over the data bus or back to the register bank.</p>
+<p><span style="text-decoration: underline;"><strong>Difference between Real and Protected Virtual Addressing Mode:</strong></span></p>
+<p>The difference between real mode and protected virtual address mode are the following:</p>
+<p><em><u>Real Address mode:</u></em><br />
+If the 80286 is operating in the real address mode, the address unit computer address using a segment base and an offset. The maximum physical address space n this mode is 1 Mbyte, Just as it is for the 8086.</p>
+<p>After the 80286 is reset, it starts executing in its real address mode. Due to the extenments, the 80286 will execute most programs several times faster than an 8086 with the same frequency clock signal. When operating in real address mode, the interrupt vector table of the 80286 is located in the first 1 kbyte of memory.</p>
+<p><span style="text-decoration: underline;"><em>Protected virtual address mode(PVAM):-</em></span></p>
+<p>If the 80286 is operating in its protected virtual address mode (Protected mode) the address unit functions as a complete MMu. In this address mode the 80286 uses all 24 address lines to access up to 16 Mbytes of physical memory. If an 80286- based system is running an operating system such as Microsoft’s Os/2, which uses the protected mode. Switching an 80286 to protected mode enables the integrated MMu to provide virtual memory and protection.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain LXI and CMP instruction. Write an assembly language program for 8-bit microprocessor to divide 8 bit data stored in memory location 8050 by 8 bit data stored in 8051 and store the quotient in 8052 and remainder in 8053.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><span style="font-size: 24pt;">   LXI Instruction</span></strong></p>
+<p>In the 8085 Instruction set there are four instructions, which belong to the type <b>LXI rp, d16</b>. These instructions are used to load the <b>16-bit</b> address into the register pair. We can use this instruction to load data from memory location using the memory address, which is stored in the register pair <b>rp</b>.</p>
+<p>The rp can be BC, DE, HL or SP.</p>
+<p>The LXI instructions and their Hex-codes are as follows.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<th>Mnemonics, Operand</th>
+<th>Opcode (in HEX)</th>
+<th>Bytes</th>
+</tr>
+<tr>
+<td>LXI B</td>
+<td>01</td>
+<td>3</td>
+</tr>
+<tr>
+<td>LXI D</td>
+<td>11</td>
+<td>3</td>
+</tr>
+<tr>
+<td>LXI H</td>
+<td>21</td>
+<td>3</td>
+</tr>
+<tr>
+<td>LXI SP</td>
+<td>31</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><b>COMPARE</b> is an important instruction widely used in 8085 microprocessor. The 8085 instruction set has two types of Compare operations: Compare with accumulator (CMP) and Compare immediate with accumulator (CPI).</p>
+<p>The microprocessor compares a data byte (or register/memory contents) with the contents of the accumulator by subtracting the data byte from (A), and indicates whether the data byte is less than, greater than or equals to the content of accumulator by modifying the flags. However, the contents are not modified. The two types of COMPARE instructions are explained briefly in the following section:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Compare (register or memory) with accumulator (CMP R/M) –</strong><br />
+This is a 1-byte instruction. It compares the data byte in the register or memory with the contents of accumulator.</p>
+<ol style="list-style-type:decimal;">
+<li>If A less than (R/M), the CY flag is set and Zero flag is reset.</li>
+<li>If A equals to (R/M), the Zero flag is set and CY flag is reset.</li>
+<li>If A greater than (R/M), the CY and Zero flag are reset.</li>
+</ol>
+<p>When memory is an operand, its address is specified by HL Pair. No contents are modified; however all remaining flags (S, P, AC) are affected according to the result of subtraction.</p>
+<p><strong>Example:</strong><br />
+Let register B contains data byte 62H and the accumulator A contains 57H. Then,</p>
+<div id="AP_G4GR_5"></div>
+<pre>Instruction- CMP B
+Before execution: A = 57, B = 62
+After execution: A = 57, B = 62</pre>
+<p>Flags: As A less than B, thus CY is set and Z flag is reset.</p>
+<pre>CY=1, Z=0 
+
+
+</pre>
+</li>
+</ol>
+</div>
+<h2>Group B: Attempts any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>What are the different modes of parallel communication? Construct a control word for 8255 PPI for following configuration:</p>
+<p>Port A and Port C<sub>upper</sub> – mode 0</p>
+<p>Port B and Port C<sub>lower </sub> – mode 0</p>
+<p>Port A and Port C<sub>upper</sub> as input port</p>
+<p>Port B and Port C<sub>lower </sub>as output port</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3 class="post-title entry-title">Parallel Communication</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div id="post-body-4978760870551583689" class="post-body entry-content">
+<div dir="ltr">
+<div>
+<ul style="list-style-type: square;">
+<li>It is a method of conveying multiple binary digits (bits) simultaneously i.e. all bits of word are transferred at a time.</li>
+<li>It is faster.</li>
+<li>Hardware requirement is complex.</li>
+<li>E.g. 8255A PPI</li>
+</ul>
+</div>
+<div><b>Methods of parallel data transfer</b></div>
+<div><b>i) Simple I/O</b></div>
+<div>
+<ul style="list-style-type: square;">
+<li>When you need to get digital data from simple switch, such as thermostat, into microprocessor, all you have to do is connect the switch to an I/O port line and read the port.</li>
+<li>Likewise, when you need to output data to simple display device, such as LED, all you have to do is connect the input of the LED buffer on an output port pin and output the logical level required to turn on the light.</li>
+</ul>
+</div>
+<div class="separator"><a href="https://1.bp.blogspot.com/-71K08gk7w7M/VmG4gjnxdvI/AAAAAAAAAsw/NA-baiRYerI/s1600/1.JPG" rel="nofollow noopener" target="_blank"><img loading="lazy" decoding="async" src="https://1.bp.blogspot.com/-71K08gk7w7M/VmG4gjnxdvI/AAAAAAAAAsw/NA-baiRYerI/s640/1.JPG" width="640" height="92" border="0" alt=""></a></div>
+<div class="separator"></div>
+<div></div>
+<div>Fig: Simple I/O</div>
+<div>
+<ul style="list-style-type: square;">
+<li>The timing waveform represents the situation.</li>
+<li>The crossed lines on the waveform represent the time at which a new data byte becomes valid on the output lines of the port.</li>
+<li>The absence of other waveforms indicates that this output operation is not directly dependant on any other signal.</li>
+</ul>
+</div>
+<div><b>ii) Strobe I/O</b></div>
+<div>
+<ul style="list-style-type: square;">
+<li>In many applications, valid data is present on an external device only at a certain time, so it must be read in at that time.</li>
+<li>E.g. the ASCII-encoded keyboard. When a key is pressed, circuitry on the keyboard sends out the ASCII code for the pressed key on eight parallel data lines, and then sends out a strobe signal on another line to indicate that valid data is present on the eight data lines.</li>
+</ul>
+</div>
+<div class="separator"><a href="https://2.bp.blogspot.com/-txGav2tR_EU/VmG4yZkLoXI/AAAAAAAAAs4/K-kiij_Oo5w/s1600/2.JPG" rel="nofollow noopener" target="_blank"><img loading="lazy" decoding="async" src="https://2.bp.blogspot.com/-txGav2tR_EU/VmG4yZkLoXI/AAAAAAAAAs4/K-kiij_Oo5w/s640/2.JPG" width="640" height="156" border="0" alt=""></a></div>
+<div class="separator">Fig: Strobe I/O</div>
+<div>
+<ul style="list-style-type: square;">
+<li>This timing waveform represents strobe I/O.</li>
+<li>The sending device, such as a keyboard, outputs a parallel data on the data lines, and then outputs an STB signal to let you know that valid data is present.</li>
+<li>For low rates of data transfer, such as from a keyboard to a MP, a simple strobe transfer works well.</li>
+<li>However, for higher speed data transfer, this method does not work because there is no signal which tells the sending device when it is safe to send the next data byte.</li>
+<li>In other words, the sending system might send data bytes faster than the receiving system could read them.</li>
+<li>To prevent this problem, a handshake data transfer scheme is used.</li>
+</ul>
+</div>
+<div><b>iii) Single handshake I/O</b></div>
+<div class="separator"><a href="https://3.bp.blogspot.com/-qqHPYQG9REg/VmG48zx1NRI/AAAAAAAAAtA/awdhIJDQbFM/s1600/3.JPG" rel="nofollow noopener" target="_blank"><img loading="lazy" decoding="async" src="https://3.bp.blogspot.com/-qqHPYQG9REg/VmG48zx1NRI/AAAAAAAAAtA/awdhIJDQbFM/s640/3.JPG" width="640" height="224" border="0" alt=""></a></div>
+<div class="separator">Fig: Single Handshake I/O</div>
+<div>
+<ul style="list-style-type: square;">
+<li>It shows the timing waveform for a handshake data transfer from a peripheral device to a MP.</li>
+<li>The peripheral outputs some parallel data and sends an STB signal to the MP.</li>
+<li>The MP detects the asserted STB signal on a polled or interrupts basis and reads in the bytes of data.</li>
+<li>Then, the MP sends ACK (acknowledge) signal to the peripheral to indicate that the data has been read and that the peripheral can send next byte of data.</li>
+<li>The point of this method is that the sending device or system is designed so that it does not send the next byte until the receiving device or system indicates with an ACK signal that it is ready to receive the next byte.</li>
+</ul>
+</div>
+<div><b>iv) Double handshake I/O</b></div>
+<div class="separator"><a href="https://4.bp.blogspot.com/-hUYh88LwkWA/VmG5HjHMoCI/AAAAAAAAAtI/fbN-m9fXVlU/s1600/4.JPG" rel="nofollow noopener" target="_blank"><img loading="lazy" decoding="async" src="https://4.bp.blogspot.com/-hUYh88LwkWA/VmG5HjHMoCI/AAAAAAAAAtI/fbN-m9fXVlU/s640/4.JPG" width="640" height="222" border="0" alt=""></a></div>
+<div class="separator">Fig: Double Handshake I/O</div>
+<div>
+<ul style="list-style-type: square;">
+<li>For data transfer where even more coordination is required between the sending system and the receiving system, a double handshake is used.</li>
+<li>The sending (peripheral) device asserts its STB line low to ask the receiving device whether it is ready or not for data reception.</li>
+<li>The receiving system raises its ACK line high to indicate that it is ready.</li>
+<li>The peripheral device then sends the byte of data and raises its STB line high to assure that the valid data is available for the receiving device (MP).</li>
+<li>When MP reads the data, it drops its ACK line low to indicate that it has received the data and requests the sending system to send next byte of data.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h1>Programmable peripheral interface 8255</h1>
+<p>PPI 8255 is a general purpose programmable I/O device designed to interface the CPU with its outside world such as ADC, DAC, keyboard etc. We can program it according to the given condition. It can be used with almost any microprocessor.</p>
+<p>It consists of three 8-bit bidirectional I/O ports i.e. PORT A, PORT B and PORT C. We can assign different ports as input or output functions.</p>
+<p>It consists of 40 pins and operates in +5V regulated power supply. Port C is further divided into two 4-bit ports i.e. port C lower and port C upper and port C can work in either BSR (bit set rest) mode or in mode 0 of input-output mode of 8255. Port B can work in either mode 0 or in mode 1 of input-output mode. Port A can work either in mode 0, mode 1 or mode 2 of input-output mode.</p>
+<div id="AP_G4GR_5"></div>
+<p>It has two control groups, control group A and control group B. Control group A consist of port A and port C upper. Control group B consists of port C lower and port B.</p>
+<p>Depending upon the value if CS’, A1 and A0 we can select different ports in different modes as input-output function or BSR. This is done by writing a suitable word in control register (control word D0-D7).</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table width="100%">
+<thead>
+<tr>
+<th>CS’</th>
+<th>A1</th>
+<th>A0</th>
+<th>Selection</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>PORT A</td>
+<td>80 H</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>PORT B</td>
+<td>81 H</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>PORT C</td>
+<td>82 H</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>Control Register</td>
+<td>83 H</td>
+</tr>
+<tr>
+<td>1</td>
+<td>X</td>
+<td>X</td>
+<td>No Seletion</td>
+<td>X</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Differentiate between interrupt based I/O and DMA based I/O. Explain based DMA operation in brief</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The DMA module transfers the entire block of data, one word at time, directly to or from memory, without going through the processor. Whereas in Interrupt-driven I/O, device itself inform the CPU by generating an interrupt signal. If the data rate of the I/O is too fast. Data may be lost.</p>
+<p><strong>Direct Memory Access</strong>: The data transfer between a fast storage media such as magnetic disk and memory unit is limited by the speed of the CPU. Thus we can allow the peripherals directly communicate with each other using the memory buses, removing the intervention of the CPU. This type of data transfer technique is known as DMA or direct memory access. During DMA the CPU is idle and it has no control over the memory buses. The DMA controller takes over the buses to manage the transfer directly between the I/O devices and the memory unit.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full" src="https://media.geeksforgeeks.org/wp-content/uploads/99-1.png" alt="" width="411" height="251"></p>
+<p><strong>Bus Request :</strong> It is used by the DMA controller to request the CPU to relinquish the control of the buses.</p>
+<p><strong>Bus Grant :</strong> It is activated by the CPU to Inform the external DMA controller that the buses are in high impedance state and the requesting DMA can take control of the buses. Once the DMA has taken the control of the buses it transfers the data. This transfer can take place in many ways.</p>
+<p><strong>Types of DMA transfer using DMA controller:</strong></p>
+<p><strong>Burst Transfer :</strong><br />
+DMA returns the bus after complete data transfer. A register is used as a byte count,<br />
+being decremented for each byte transfer, and upon the byte count reaching zero, the DMAC will<br />
+release the bus. When the DMAC operates in burst mode, the CPU is halted for the duration of the data<br />
+transfer.<br />
+Steps involved are:</p>
+<ol style="list-style-type:decimal;">
+<li>Bus grant request time.</li>
+<li>Transfer the entire block of data at transfer rate of device because the device is usually slow than the<br />
+speed at which the data can be transferred to CPU.</li>
+<li>Release the control of the bus back to CPU<br />
+So, total time taken to transfer the N bytes<br />
+= Bus grant request time + (N) * (memory transfer rate) + Bus release control time.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between PUSH and POP instruction with example illustrating the use of these instruction.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between PUSH and POP instruction is described below:</p>
+<p><strong><span style="text-decoration: underline;">PUSH Instruction:</span></strong></p>
+<p>Push is used to store register pair data into stack.</p>
+<p><em>Syntax:</em></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">PUSH Register_Pair</pre>
+<p>The content of register pair designated in the operand are copied onto the stack in the following sequence.</p>
+<p>The stack pointer register is decremented and the content of the high order register (B, D, H, A) are copied into that location.</p>
+<p>The stack pointer register is decremented again and the content of lower-order register (C, E, L, flags) are copied to that location.</p>
+<p>Example: PUSH B</p>
+<p>Suppose B contains 34 and C contains 56 and Top of the Stack (i.e. SP) = 2000</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-6441 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2022/05/Capture.png" alt="" width="303" height="40"></p>
+<p>The PUSH B instruction makes the following changes in memory as shown and top of stack is decremented by 2.<br />
+i.e. Top Of Stack = SP – 2 = 2000 – 2 = 1998</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-6442 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2022/05/Capture1.png" alt="" width="822" height="114" srcset="https://hamrocsit.com/wp-content/uploads/2022/05/Capture1.png 822w, https://hamrocsit.com/wp-content/uploads/2022/05/Capture1-768x107.png 768w" sizes="auto, (max-width: 822px) 100vw, 822px" /></p>
+<p><strong><span style="text-decoration: underline;">POP Instruction:</span></strong></p>
+<p>POP is used to extract data off stack and to store in register pair.</p>
+<p><em>Syntax</em></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">POP Register_Pair</pre>
+<p>The contents of the memory location pointed out by the stack pointer register are copied to the low-order register (C, E, L, status flags) of the operand.</p>
+<p>The stack pointer is incremented by 1 and the contents of that memory location are copied to the high-order register (B, D, H, A) of the operand.</p>
+<p>The stack pointer register is again incremented by 1.</p>
+<p>Example: POP B</p>
+<p>Suppose B contains 00 and C contains 00 and Stack pointer=1998</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-6443 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2022/05/Capture2.png" alt="" width="313" height="46"></p>
+<p>The POP B instruction makes the following changes in Register as shown and top of stack is incremented by 2.</p>
+<p>I.e. new top of stack = SP + 2 = 1998 + 2 = 2000</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-6444 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2022/05/Capture3.png" alt="" width="814" height="138" srcset="https://hamrocsit.com/wp-content/uploads/2022/05/Capture3.png 814w, https://hamrocsit.com/wp-content/uploads/2022/05/Capture3-768x130.png 768w" sizes="auto, (max-width: 814px) 100vw, 814px" /></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write an assembly language program for 16 bit microprocessor to reverse the string “This is  Microprocessor”</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The assembly language program for 16 bit microprocessor to reverse the string “This is  Microprocessor” is given below:</p>
+<div style="color: #0c5460; background-color: #d1ecf1; border-color: #bee5eb; position: relative; padding: 0.75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: 0.25rem;">The line starts with <strong>;</strong> is the comments. You don&#8217;t need to write in exam.</div>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">.MODEL SMALL
+.STACK 100H
+.DATA
+
+; The string to be printed
+STRING DB 'This is Microprocessor', '$'
+
+.CODE
+MAIN PROC FAR
+MOV AX,@DATA
+MOV DS,AX
+
+; call reverse function
+CALL REVERSE
+
+; load address of the string
+LEA DX,STRING
+
+; output the string
+; loaded in dx
+MOV AH, 09H
+INT 21H
+
+; interrupt to exit
+MOV AH, 4CH
+INT 21H
+
+MAIN ENDP
+REVERSE PROC
+    ; load the offset of
+    ; the string
+    MOV SI, OFFSET STRING
+
+    ; count of characters of the;
+    ;string
+    MOV CX, 0H
+
+    LOOP1:
+    ; compare if this is;
+    ;the last character
+    MOV AX, [SI]
+    CMP AL, '$'
+    JE LABEL1
+
+    ; else push it in the;
+    ;stack
+    PUSH [SI]
+
+    ; increment the pointer;
+    ;and count
+    INC SI
+    INC CX
+
+    JMP LOOP1
+
+    LABEL1:
+    ; again load the starting;
+    ;address of the string
+    MOV SI, OFFSET STRING
+
+        LOOP2:
+        ;if count not equal to zero
+        CMP CX,0
+        JE EXIT
+
+        ; pop the top of stack
+        POP DX
+
+        ; make dh, 0
+        XOR DH, DH
+
+        ; put the character of the;
+        ;reversed string
+        MOV [SI], DX
+
+        ; increment si and;
+        ;decrement count
+        INC SI
+        DEC CX
+
+        JMP LOOP2
+
+                
+    EXIT:
+    ; add $ to the end of string
+    MOV [SI],'$ '
+    RET
+        
+REVERSE ENDP
+END MAIN
+</pre>
+<p>The output of above code is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">rossecorporciM si sihT</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is the use of AD<sub>7</sub> – AD<sub>0</sub> in 8085 microprocessor? Explain address de-multiplexing process in 8085 microprocessor with suitable diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>AD7 &#8211; AD0 in the 8085 microprocessor are the address lines that are used to transfer the memory address to the memory or input/output (I/O) devices. The address lines are 8-bit wide, which allows the 8085 to access up to 256 KB of memory.</p>
+<p>Address de-multiplexing in the 8085 microprocessor is the process of separating the address and data signals for efficient transfer of information between the processor and its peripheral devices. The following is the process of address de-multiplexing in the 8085 microprocessor:</p>
+<ol style="list-style-type:decimal;">
+<li>The 8085 microprocessor sends the address and data on the same bus, using the same set of lines.</li>
+<li>A device called the address latch is used to separate the address from the data.</li>
+<li>The address latch is triggered by a control signal called ALE (Address Latch Enable) which is generated by the 8085.</li>
+<li>When ALE goes high, the address latch latches the address onto a separate set of lines and holds it there until the next ALE pulse.</li>
+<li>After the address is latched, the 8085 sends the data on the bus.</li>
+<li>The peripheral device that is addressed by the latched address, reads the data and performs the required operation.</li>
+<li>The address and data signals are multiplexed again for the next cycle, and the process repeats.</li>
+</ol>
+<p>The following diagram illustrates the process of address de-multiplexing in the 8085 microprocessor:</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-11778 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2021/12/images.png" alt="" width="310" height="163"></p>
+<p>The DE-multiplexed address/data bus allows the 8085 to send both address and data signals in a single cycle, thus increasing the efficiency and speed of the data transfer.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is mean by addressing mode? Explain all the addressing mode available in 8085 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The different ways in which a source operand is denoted in an instruction is known as addressing modes.</p>
+<p>In 8085 microprocessor there are 5 types of addressing modes:</p>
+<p><strong>1. Immediate Addressing Mode –</strong></p>
+<p>In immediate addressing mode the source operand is always data. If the data is 8-bit, then the instruction will be of 2 bytes, if the data is of 16-bit then the instruction will be of 3 bytes.</p>
+<p><em><span style="text-decoration: underline;">Examples:</span></em></p>
+<ul style="list-style-type: square;">
+<li>MVI B 45 (move the data 45H immediately to register B)</li>
+<li>LXI H 3050 (load the H-L pair with the operand 3050H immediately)</li>
+<li>JMP address (jump to the operand address immediately)</li>
+</ul>
+<p><strong>2. Register Addressing Mode –</strong></p>
+<p>In register addressing mode, the data to be operated is available inside the register(s) and register(s) is(are) operands. Therefore the operation is performed within various registers of the microprocessor.</p>
+<p><em><span style="text-decoration: underline;">Examples:</span></em></p>
+<ul style="list-style-type: square;">
+<li>MOV A, B (move the contents of register B to register A)</li>
+<li>ADD B (add contents of registers A and B and store the result in register A)</li>
+<li>INR A (increment the contents of register A by one)</li>
+</ul>
+<p><strong>3. Direct Addressing Mode –</strong></p>
+<p>In direct addressing mode, the data to be operated is available inside a memory location and that memory location is directly specified as an operand. The operand is directly available in the instruction itself.</p>
+<p><em><span style="text-decoration: underline;">Examples:</span></em></p>
+<ul style="list-style-type: square;">
+<li>LDA 2050 (load the contents of memory location into accumulator A)</li>
+<li>LHLD address (load contents of 16-bit memory location into H-L register pair)</li>
+<li>IN 35 (read the data from port whose address is 35)</li>
+</ul>
+<p><strong>4. Register Indirect Addressing Mode –</strong></p>
+<p>In register indirect addressing mode, the data to be operated is available inside a memory location and that memory location is indirectly specified by a register pair.</p>
+<p><em><span style="text-decoration: underline;">Examples:</span></em></p>
+<ul style="list-style-type: square;">
+<li>MOV A, M (move the contents of the memory location pointed by the H-L pair to the accumulator)</li>
+<li>LDAX B (move contents of B-C register to the accumulator)</li>
+<li>LXIH 9570 (load immediate the H-L pair with the address of the location 9570)</li>
+</ul>
+<p><strong>5. Implied/Implicit Addressing Mode –</strong></p>
+<p>In implied/implicit addressing mode the operand is hidden and the data to be operated is available in the instruction itself.</p>
+<p><em><span style="text-decoration: underline;">Examples:</span></em></p>
+<ul style="list-style-type: square;">
+<li>CMA (finds and stores the 1’s complement of the contents of accumulator A in A)</li>
+<li>RRC (rotate accumulator A right by one bit)</li>
+<li>RLC (rotate accumulator A left by one bit)</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain Register Organization in 80386 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li>The 80386 microprocessor has eight 32 &#8211; bit general purposr registers which may be used as either 8 bit or 16 bit register.</li>
+<li>A 32 bit register known as an extended register is represented by the register name with prefix E. example : A 32 bit register correspondingto AX is EAX, similarly BX is EBX etc.</li>
+<li>The 16 bit registers BP, SP, SI and DI in 8086 are now available with thwir extended size of 32 bit and are named as EBP, ESP, ESI and EDI.</li>
+<li>AX represents the lower 16 bit of the 32 bit register EAX.</li>
+<li>BP, SP, SI and DI represents the lower 16 bit of their 32 bit counterparts and can be used as independent 16 bit registers.</li>
+<li>The six segment register available in 80386 are CS, SS, DS, ES, FS and GS.</li>
+<li>The CS and SS are the code and the stack segment registers respectively , while DS, ES, FS, GS are 4 data segment registers.</li>
+<li>A 16 bit instruction pointer IP is available along with 32 bit counterpart EIP.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Draw a logic diagram showing generation of memory and I/O read/write control signals in 8085 microprocessor</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (Any two):</p>
+<ol>
+<li>Program Counter</li>
+<li>Von-Neumann Architecture</li>
+<li>Interrupt Masking</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Program Counter (PC)</strong></p>
+<p>This 16-bit register deals with sequencing the execution of instructions. This register is a memory pointer. The microprocessor uses this register to sequence the execution of the instructions. The function of the program counter is to point to the memory address from which the next byte is to be fetched. When a byte is being fetched, the program counter is automatically incremented by one to point to the next memory location. For example, when your computer is turned on, a signal places the decimal number F000 into the CPU. This action tells the computer to look at the first instruction on the <a href="https://www.computerhope.com/jargon/m/mothboar.htm" rel="nofollow noopener" target="_blank">motherboards</a> <a href="https://www.computerhope.com/jargon/f/flashmem.htm" rel="nofollow noopener" target="_blank">flash memory</a> chip.</p>
+<h1>Von Neumann Architecture</h1>
+<p>Von Neumann architecture was first published by John von Neumann in 1945.</p>
+<p>His computer architecture design consists of a Control Unit, <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/arithmetic-logic-unit" rel="nofollow noopener" target="_blank">Arithmetic and Logic Unit</a> (<a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/arithmetic-logic-unit" rel="nofollow noopener" target="_blank">ALU</a>), Memory Unit, <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/register" rel="nofollow noopener" target="_blank">Registers</a> and Inputs/Outputs.</p>
+<p>Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.  This design is still used in most computers produced today.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-649 lazyloaded" src="http://computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg" sizes="auto, (max-width: 700px) 100vw, 700px" srcset="https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg 700w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-600x420.jpg 600w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-350x245.jpg 350w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-255x179.jpg 255w" alt="Von Neumann Architecture Diagram - Computer Science GCSE" width="700" height="490" data-src="http://computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg" data-srcset="https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg 700w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-600x420.jpg 600w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-350x245.jpg 350w, https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram-255x179.jpg 255w" /></p>
+<h2>Central Processing Unit (CPU)</h2>
+<p>The <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/central-processing-unit" rel="nofollow noopener" target="_blank">Central Processing Unit</a> (<a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/central-processing-unit" rel="nofollow noopener" target="_blank">CPU</a>) is the electronic circuit responsible for executing the instructions of a computer program.</p>
+<p>It is sometimes referred to as the microprocessor or processor.</p>
+<p>The CPU contains the ALU, CU and a variety of <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/register" rel="nofollow noopener" target="_blank">registers</a>.</p>
+<h3>Registers</h3>
+<p>Registers are high speed storage areas in the CPU.  All data must be stored in a <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/register" rel="nofollow noopener" target="_blank">register</a> before it can be processed.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/memory-address-register" rel="nofollow noopener" target="_blank">MAR</a></th>
+<td><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/memory-address-register" rel="nofollow noopener" target="_blank">Memory Address Register</a></td>
+<td>Holds the memory location of data that needs to be accessed</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/memory-data-register" rel="nofollow noopener" target="_blank">MDR</a></th>
+<td><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/memory-data-register" rel="nofollow noopener" target="_blank">Memory Data Register</a></td>
+<td>Holds data that is being transferred to or from memory</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/accumulator" rel="nofollow noopener" target="_blank">AC</a></th>
+<td><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/accumulator" rel="nofollow noopener" target="_blank">Accumulator</a></td>
+<td>Where intermediate arithmetic and logic results are stored</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/program-counter" rel="nofollow noopener" target="_blank">PC</a></th>
+<td><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/program-counter" rel="nofollow noopener" target="_blank">Program Counter</a></td>
+<td>Contains the address of the next instruction to be executed</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/current-instruction-register" rel="nofollow noopener" target="_blank">CIR</a></th>
+<td><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/current-instruction-register" rel="nofollow noopener" target="_blank">Current Instruction Register</a></td>
+<td>Contains the current instruction during processing</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Arithmetic and Logic Unit (ALU)</h3>
+<p>The ALU allows arithmetic (add, subtract etc) and logic (AND, OR, NOT etc) operations to be carried out.</p>
+<h3>Control Unit (CU)</h3>
+<p>The control unit controls the operation of the computer’s ALU, memory and input/<a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/output-devices" rel="nofollow noopener" target="_blank">output devices</a>, telling them how to respond to the program instructions it has just read and interpreted from the memory unit.</p>
+<p>The control unit also provides the timing and control signals required by other computer components.</p>
+<hr />
+<h2>Buses</h2>
+<p><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/bus" rel="nofollow noopener" target="_blank">Buses</a> are the means by which data is transmitted from one part of a computer to another, connecting all major internal components to the CPU and memory.</p>
+<p>A standard CPU system <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/bus" rel="nofollow noopener" target="_blank">bus</a> is comprised of a <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/control-bus" rel="nofollow noopener" target="_blank">control bus</a>, <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/data-bus" rel="nofollow noopener" target="_blank">data bus</a> and <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/address-bus" rel="nofollow noopener" target="_blank">address bus</a>.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/address-bus" rel="nofollow noopener" target="_blank">Address Bus</a></th>
+<td>Carries the addresses of data (but not the data) between the processor and memory</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/data-bus" rel="nofollow noopener" target="_blank">Data Bus</a></th>
+<td>Carries data between the processor, the memory unit and the input/output devices</td>
+</tr>
+<tr>
+<th><a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/control-bus" rel="nofollow noopener" target="_blank">Control Bus</a></th>
+<td>Carries control signals/commands from the CPU (and status signals from other devices) in order to control and coordinate all the activities within the computer</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Memory Unit</h2>
+<p>The memory unit consists of <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/random-access-memory" rel="nofollow noopener" target="_blank">RAM</a>, sometimes referred to as primary or main memory.  Unlike a hard drive (secondary memory), this memory is fast and also directly accessible by the CPU.</p>
+<p>RAM is split into partitions.  Each partition consists of an address and its contents (both in <a class="glossaryLink" href="https://www.computerscience.gcse.guru/glossary/binary" rel="nofollow noopener" target="_blank">binary</a> form).</p>
+<p>The address will uniquely identify every location in the memory.</p>
+<p>Loading data from permanent memory (hard drive), into the faster and directly accessible temporary memory (RAM), allows the CPU to operate much quicker.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

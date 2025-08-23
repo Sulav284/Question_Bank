@@ -1,0 +1,368 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technology Model Question 0</title>
+    </head>
+    <body>
+        <h1>Web Technology Model Question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Write the structure of XML file with example. Write XML and DTD to describe “weather report” as an element and ” date, location, city, state and temperature range” as its attribute.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The basic structure of XML is :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;root&gt;
+  &lt;element  attribute=" " &gt;
+     &lt;element  attribute=" " &gt;..&lt;/element&gt;
+  &lt;/element&gt;
+  &lt;element  attribute=" " &gt;
+     &lt;element  attribute=" " &gt;..&lt;/element&gt;
+  &lt;/element&gt;
+&lt;/root&gt;</pre>
+<p>Example of XML is shown as:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;data&gt;
+        &lt;name&gt;Ram Bahadur&lt;/name&gt;
+        &lt;age&gt;100&lt;/age&gt;
+        &lt;email&gt;rambahadur@gmail.com&lt;/email&gt;
+&lt;/data&gt;</pre>
+<p><strong>Other part:</strong></p>
+<p>From the given question we get following XML:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;weatherReport date="2024-08-05"  location="Baneshwor"  city="Kathmandu"  state="Bagmati"  temperatureRange="24-32 ºC"&gt;
+&lt;/weatherReport&gt;</pre>
+<p>Equivalent DTD for above XML is :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!ELEMENT weatherReport EMPTY&gt;
+&lt;!ATTLIST weatherReport date CDATA #REQUIRED
+location CDATA #REQUIRED
+city CDATA #REQUIRED
+state CDATA #REQUIRED
+temperatureRange CDATA #REQUIRED&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write HTML script to create HTML form and perform validation using javascript. Validate for username to be empty, password should be of length at least 5, and the check box should be checked.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Form Validation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form id="myForm" onsubmit="return validateForm()"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="hobbies"&gt;Hobbies:&lt;/label&gt;
+    &lt;input type="checkbox" id="hobbies" name="hobbies"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var hobbies = document.getElementById('hobbies').checked;
+
+      if (username === '') {
+        alert('Username cannot be empty');
+        return false;
+      }
+
+      if (password.length &lt; 5) {
+        alert('Password should be at least 5 characters long');
+        return false;
+      }
+
+      if (!hobbies) {
+        alert('Please check the hobbies checkbox');
+        return false;
+      }
+
+      return true;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Write a PHP program to insert and select value to and from database.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+
+// Database connection details
+$servername = “localhost”;
+$username = “root”;
+$password = “”;
+$dbname = “webTech”;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn-&gt;connect_error) {
+die(“Connection failed: ” . $conn-&gt;connect_error);
+}
+
+// Insert values into the database
+$usernameToInsert = “JohnDoe”;
+$emailToInsert = “john@example.com”;
+
+$sqlInsert = “INSERT INTO users (username, email) VALUES (‘$usernameToInsert’, ‘$emailToInsert’)”;
+
+if ($conn-&gt;query($sqlInsert) === TRUE) {
+echo “Record inserted successfully.&lt;br&gt;”;
+} else {
+echo “Error inserting record: ” . $conn-&gt;error . “&lt;br&gt;”;
+}
+
+// Select values from the database
+$sqlSelect = “SELECT id, username, email FROM users”;
+$result = $conn-&gt;query($sqlSelect);
+
+if ($result-&gt;num_rows &gt; 0) {
+// Output data of each row
+while ($row = $result-&gt;fetch_assoc()) {
+echo “ID: ” . $row[“id”] . ” – Username: ” . $row[“username”] . ” – Email: ” . $row[“email”] . “&lt;br&gt;”;
+}
+} else {
+echo “0 results&lt;br&gt;”;
+}
+
+// Close the database connection
+$conn-&gt;close();
+
+?&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Difference between Static and Dynamic website.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%; height: 442px;" data-sourcepos="1:1-12:57">
+<tbody>
+<tr style="height: 24px;" data-sourcepos="1:1-1:31">
+<th style="text-align: center; width: 21.9653%; height: 24px;" data-sourcepos="1:1-1:9"><strong>Feature</strong></th>
+<th style="text-align: center; width: 41.2331%; height: 24px;" data-sourcepos="1:11-1:19"><strong>Static website</strong></th>
+<th style="text-align: center; width: 35.0674%; height: 24px;" data-sourcepos="1:21-1:29"><strong>Dynamic website</strong></th>
+</tr>
+<tr style="height: 96px;" data-sourcepos="3:1-3:62">
+<td style="text-align: center; width: 21.9653%; height: 96px;" data-sourcepos="3:1-3:15"><strong>Introduction</strong></td>
+<td style="text-align: center; width: 41.2331%; height: 96px;" data-sourcepos="3:17-3:38">The content of the website remains same at the runtime and need to be changed manually.</td>
+<td style="text-align: center; width: 35.0674%; height: 96px;" data-sourcepos="3:40-3:60">Those website whose content changes st the runtime.</td>
+</tr>
+<tr style="height: 72px;" data-sourcepos="4:1-4:69">
+<td style="text-align: center; width: 21.9653%; height: 72px;" data-sourcepos="4:1-4:9"><strong>Loading speed</strong></td>
+<td style="text-align: center; width: 41.2331%; height: 72px;" data-sourcepos="4:11-4:38">It load faster thsn dynamic website as they are pre-rendred.</td>
+<td style="text-align: center; width: 35.0674%; height: 72px;" data-sourcepos="4:40-4:67">It is slower than the static website in context of loading.</td>
+</tr>
+<tr style="height: 72px;" data-sourcepos="5:1-5:71">
+<td style="text-align: center; width: 21.9653%; height: 72px;" data-sourcepos="5:1-5:13"><strong>Interaction</strong></td>
+<td style="text-align: center; width: 41.2331%; height: 72px;" data-sourcepos="5:15-5:23">It has limited or no interaction of user with website.</td>
+<td style="text-align: center; width: 35.0674%; height: 72px;" data-sourcepos="5:25-5:69">High level of interaction and collaboration of user with website.</td>
+</tr>
+<tr style="height: 120px;" data-sourcepos="6:1-6:82">
+<td style="text-align: center; width: 21.9653%; height: 120px;" data-sourcepos="6:1-6:17"><strong>Technologies used</strong></td>
+<td style="text-align: center; width: 41.2331%; height: 120px;" data-sourcepos="6:19-6:38">Only HTML, CSS and JS are used for building static website.</td>
+<td style="text-align: center; width: 35.0674%; height: 120px;" data-sourcepos="6:40-6:80">Dynamic websites uses all the technologies used in the static website as well as it includes Server side scripting.</td>
+</tr>
+<tr style="height: 58px;" data-sourcepos="7:1-7:85">
+<td style="text-align: center; width: 21.9653%; height: 58px;" data-sourcepos="7:1-7:10"><strong>Cost</strong></td>
+<td style="text-align: center; width: 41.2331%; height: 58px;" data-sourcepos="7:12-7:54">It is cheap to develop a static website.</td>
+<td style="text-align: center; width: 35.0674%; height: 58px;" data-sourcepos="7:56-7:83">It is expensive to develop a dynamic website.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Create a registration form with the elements Name, Country, Gender and a submit button which display a message “Registered” on keypress event.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;User Registration Form&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form&gt;
+&lt;label for=”name”&gt;Name&lt;/label&gt;
+&lt;input type=”text” id=”name” name=”name”&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=”country”&gt;Country&lt;/label&gt;
+&lt;select id=”country” name=”country”&gt;
+&lt;option value=”Nepal”&gt;Nepal&lt;/option&gt;
+&lt;option value=”India”&gt;India&lt;/option&gt;
+&lt;option value=”Others”&gt;Others&lt;/option&gt;
+&lt;/select&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=”gender”&gt;Gender&lt;/label&gt;
+&lt;input type=”radio” id=”male” name=”gender”&gt;M
+&lt;input type=”radio” id=”female” name=”gender”&gt;F&lt;br&gt;&lt;br&gt;
+&lt;input type=”submit” value=”Submit” onclick=”displayMessage();”&gt;
+&lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+function displayMessage() {
+alert(“Form Registred”);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain CSS box model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>CSS box model</strong> is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-39642" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/css-model.drawio.png?resize=676%2C382&#038;ssl=1" alt="" width="676" height="382"></p>
+<p>&nbsp;</p>
+<p>Box-Model has multiple properties in CSS. Some of them are given below:</p>
+<ul class="points">
+<li><b>Content</b> – The content of the box, where text and images appear</li>
+<li><b>Padding</b> – Clears an area around the content. The padding is transparent</li>
+<li><b>Border</b> – A border that goes around the padding and content</li>
+<li><b>Margin</b> – Clears an area outside the border. The margin is transparent</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="css">div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a client side script to display the array  [ “Cherry”, “Mango”, “Watermelon”, “Strawberry”] in the body of HTML.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt; Displaying the array in body &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div Id = "htmlBody"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var fruits = [ "Cherry", "Mango", "Watermelon", "Strawberry"];
+document.getElementById("htmlBody").innerHTML = fruits;
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How can you define class and objects in PHP? Write a PHP script to create class and its object.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h2><span style="font-size: 12pt;">Defining a PHP Class</span></h2>
+<p>To define a class in PHP, use the <code>class</code> keyword followed by the name of the class. The class name should be in CamelCase (i.e., the first letter of each word is capitalized) and should be a noun that describes the purpose of the class.</p>
+<p>Syntax:</p>
+<pre class="language-php" tabindex="0"><code class="language-php"><span class="token keyword">class</span> <span class="token class-name-definition class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Properties and methods go here</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><span style="font-size: 12pt;">Defining an Object</span></h2>
+<p>To define  an object from a class, use the <code>new</code> keyword followed by the class name and a pair of parentheses.</p>
+<p>Syntax:<code><br />
+$object1 = new MyClass();<br />
+</code></p>
+<p>For example:</p>
+<p>We have created PHP class <code>Person</code> with object <code>$person1</code></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">class Person {
+    public $firstName;
+    public $lastName;
+
+    public function getFullName() {
+        return $this-&gt;firstName . ' ' . $this-&gt;lastName;
+    }
+
+    public function sayHello() {
+        echo "Hello, my name is " . $this-&gt;getFullName() . ".";
+    }
+}
+
+$person1 = new Person();
+$person1-&gt;firstName = "John";
+$person1-&gt;lastName = "Doe";
+$person1-&gt;sayHello(); // Output: Hello, my name is John Doe.
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Compare XML Schema with DTD.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We can compare XML Schema and DTD in following points:</p>
+<ul style="list-style-type: square;">
+<li>XML Schemas are written in XML while DTD are derived from SGML syntax.</li>
+<li>XML Schemas define datatypes for elements and attributes while DTD doesn&#8217;t support datatypes.</li>
+<li>XML Schema allow support for namespace while DTD doesn&#8217;t.</li>
+<li>XML Schema define number of child elements, while DTD doesn&#8217;t.</li>
+<li>XML Schemas can be manipulated with XML DOM but it is not possible in case of DTD.</li>
+<li>XML Schemas are extensible whereas DTD is not extensible.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is JQuery animate? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The jQuery Animate() method is a built-in method in jQuery that is used to create custom animations for elements. It allows you to gradually change the CSS properties of an element over time, creating a smooth animation effect. The Animate() method takes three parameters:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>CSS Properties:</strong> An object specifying the CSS properties to animate.</li>
+<li><strong>Speed:</strong> This can be a string representing a pre-defined speed (“slow”, “medium”, “fast”), a number indicating the animation duration in milliseconds, or a custom easing function.</li>
+<li><strong>Callback Function:</strong> An optional callback function to be executed after the animation completes.</li>
+</ol>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+$("button").click(function(){
+$("div").animate({left: '250px'});
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;button&gt;Start Animation&lt;/button&gt;
+
+&lt;div style="background:#98bf21; height:100px; width:100px; position:absolute;"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Create a PHP array of string type and concatnate them to form a sentence and display it.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+
+function concatenateStrings($Array) {
+foreach ($Array as $element) {
+$result = $result . $element; 
+}
+return $result;
+}
+
+$Array = ["This ", "is ", "a ", "sentence"]
+$concatenatedString = concatenateStrings($Array);
+echo “Concatenated String: ” . $concatenatedString;
+
+?&gt;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Create a HTML page with a link containing mail to info@iost.edu.np in the footer tag. Set the keywords “iost”, “csit” using Meta tag in the page.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="keywords" content="iost, csit"&gt;
+    &lt;title&gt;IOST&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;IOST&lt;/h1&gt;
+    &lt;p&gt;This is a webpage for IOST.&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;a href="info@iost.edu.np"&gt;Send Email&lt;/a&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+</body></html>

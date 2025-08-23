@@ -1,0 +1,201 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-commerce Question 2079 2079</title>
+    </head>
+    <body>
+        <h1>E-commerce Question 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain different types of B2C business models with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>B2C Business Models:</strong></p>
+<p><strong>i. E-tailer:</strong> It is an online retailer that sells products directly to consumers. It operates an online store where customers can browse and purchase products and electronically pay. They typically maintain their inventory, handle order fulfillment and manage customer service. Examples: Amazon, Walmart, and Best Buy.</p>
+<p><strong>ii. Community Provider:</strong> It creates an online environment where people with similar interests can buy and sell goods, share interests, interact with each other, send photos, videos, etc. Examples include social media platforms like Facebook and Instagram.</p>
+<p><strong>iii. Content Provider:</strong> A content provider focuses on delivering digital content, such as articles, music, videos, or ebooks to consumers. They can make money via a variety of different revenue models including advertising, subscriptions, and sales of digital goods. Examples: Spotify, Youtube Premium, etc.</p>
+<p><strong>iv. Portal:</strong> A portal is a website or platform that serves as a gateway to various resources, services, and information on the Internet. Portals often generate revenue through advertising, partnerships, or by offering premium services. Examples: Google, Bing.</p>
+<p><strong>v. Transaction Broker:</strong> A transaction broker facilitates between buyers and sellers and earns a commission or fee for each successful transaction. It connects buyers with sellers and provides a platform for secure transactions. Example: eBay.</p>
+<p><strong>vi. Market Creator:</strong> A market creator is a platform that creates a market by bringing together buyers and sellers in a specific industry. Market creator often generates revenue through transaction fees or commissions or sales. Example: Airbnb, which connects hostels with travelers.</p>
+<p><strong>vii. Service Provider:</strong> A service provider offers digital services to consumers such as online banking, streaming platforms, cloud storage, etc. They provide access to services or tools that customers can utilize remotely. They generate revenue through subscriptions, usage fees.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why it is essential to enforce security in e-commerce? Discuss the different dimensions of e-commerce security from consumer and merchant perspectives.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Enforcing security in e-commerce is crucial for multiple reasons. It protects customer data, including personal information and payment details, from unauthorized access and potential misuse. By implementing robust security measures, businesses can maintain the trust of their customers, preventing identity theft and fraud. Strong security practices help preserve a business&#8217;s brand reputation by ensuring that customers perceive it as trustworthy and reliable. Additionally, adherence to data protection regulations is vital to avoid penalties and legal consequences. Finally, maintaining security measures ensures the continuity of operations, preventing disruptions, downtime, and loss of revenue. Overall, enforcing security in e-commerce is vital for protecting customer data, financial well-being, brand reputation, regulatory compliance, and business continuity.</p>
+<p>&nbsp;</p>
+<p><strong>Dimensions of E-commerce Security:</strong></p>
+<p>There are six key dimensions to e-commerce security:</p>
+<p><strong>a. Integrity:</strong> Integrity means correctness. It refers to the ability to ensure that any information being displayed online is correct and has not been altered in any way by an unauthorized party.</p>
+<p><strong>b. Non-repudiation:</strong> Repudiation means denying one&#8217;s own actions. Non-repudiation refers to the ability to ensure that e-commerce participants do not deny their online actions. For instance, a person can post comments or send a message and later they can deny doing so.</p>
+<p><strong>c. Authenticity:</strong> Authenticity refers to the ability to identify the identity of a person or entity with whom we are dealing on the Internet. Authenticity ensures that someone who claims to be someone they are not is spoofing or misrepresenting themselves.</p>
+<p><strong>d. Confidentiality:</strong> It refers to the ability to ensure that messages and data are available only to those who are authorized to view them.</p>
+<p><strong>e. Privacy:</strong> It refers to the ability to control the use of information a customer provides of themselves to an e-commerce merchant. E-commerce merchants have two concerns related to privacy:</p>
+<ol style="list-style-type:decimal;">
+<li>They must establish internal policies that govern their own use of customer information.</li>
+<li>They must protect that information from unauthorized use.</li>
+</ol>
+<p><strong>f. Availability:</strong> It refers to the ability to ensure that an e-commerce site continues to function as intended. It means that e-commerce services must be available to customers without interruption.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Describe how electronic payments are done using digital cash, e-checks, and electronic billing presentment and payment systems. List their advantages and disadvantages.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Electronic payments are conducted using various methods such as digital cash, e-checks, and electronic billing presentment and payment systems.</p>
+<p><strong>1. Digital Cash:</strong><br />
+Digital cash refers to electronic money that allows users to make online transactions. Digital cash operates by creating a digital representation of physical currency that can be used for online transactions. When a user wants to make a payment, their digital cash is transferred from their digital wallet to the recipient&#8217;s account. This transfer occurs through secure digital channels, with encryption and authentication mechanisms to ensure the integrity and security of the transaction. Digital cash is stored on devices like smart cards or digital wallets, and its value is maintained electronically.</p>
+<p><strong>Advantages:</strong><br />
+&#8211; Digital cash offers quick and easy transactions without the need for physical currency or checks.<br />
+&#8211; It provides a secure method of payment with encryption and authentication measures to protect transactions.<br />
+&#8211; Digital cash transactions can be conducted anonymously, preserving user privacy.</p>
+<p><strong>Disadvantages:</strong><br />
+&#8211; Digital cash requires access to electronic devices and internet connectivity, which can be a limitation in certain situations or regions.<br />
+&#8211; There is a risk of cybercriminals attempting to hack into digital cash systems or steal user information.<br />
+&#8211; The acceptance of digital cash may vary across merchants and platforms.</p>
+<p>&nbsp;</p>
+<p><strong>2. E-Checks:</strong><br />
+E-checks are electronic versions of traditional paper checks, used for online transactions. They involve transferring funds electronically from a customer&#8217;s bank account to the recipient.</p>
+<p><strong>Advantages:</strong><br />
+&#8211; E-checks eliminate the need for physical checks, reducing paperwork and saving time.<br />
+&#8211; E-checks typically have lower processing fees compared to physical checks.<br />
+&#8211; They utilize encryption and authentication protocols, making more secure than traditional checks.</p>
+<p><strong>Disadvantages:</strong><br />
+&#8211; E-checks require a bank account and online banking access, limiting their usability for individuals without these resources.<br />
+&#8211; E-check transactions may take longer to process compared to other electronic payment methods.<br />
+&#8211; Electronic banking systems must be available, which may vary across banks and financial institutions.</p>
+<p>&nbsp;</p>
+<p><strong>3. Electronic Billing Presentment and Payment Systems:</strong><br />
+Electronic billing presentment and payment (EBPP) systems enable businesses to send bills electronically to customers and facilitate their online payment.</p>
+<p><strong>Advantages:</strong><br />
+&#8211; Customers can view and pay bills online in real-time, eliminating the need for paper bills and manual payment.<br />
+&#8211; Electronic billing reduces printing, and administrative costs associated with paper bills.<br />
+&#8211; EBPP systems offer self-service options, allowing customers to manage their bills and payments conveniently.</p>
+<p><strong>Disadvantages:</strong><br />
+&#8211; Customers need internet access and familiarity with online payment systems to use EBPP effectively.<br />
+&#8211; Encouraging customers to adopt and trust electronic billing and payment systems may be a challenge, especially for those accustomed to traditional paper-based methods.</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>How pure e-commerce differs from partial e-commerce? Support your answer with proper examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pure e-commerce and partial e-commerce represent two different models of online business</p>
+<p><strong>1. Pure E-commerce:</strong><br />
+Pure e-commerce refers to businesses that operate only online, without any physical presence. These businesses conduct all their transactions and interactions exclusively through digital channels. They typically offer products or services directly to customers through their website or online marketplace.</p>
+<p>Examples of pure e-commerce include:</p>
+<p>&#8211; <strong>Online Retailers:</strong> Companies like Amazon and Alibaba operate purely online, selling a wide range of products through their e-commerce platforms.</p>
+<p>&#8211; <strong>Digital Services:</strong> Streaming platforms like Netflix and Spotify offer digital content and services accessible only through their online platforms.</p>
+<p>&#8211; <strong>Online Travel Agencies:</strong> Platforms like Booking.com enable users to book flights, hotels, and other travel services exclusively online.</p>
+<p><strong>2. Partial E-commerce:</strong><br />
+Partial e-commerce refers to businesses that have both an online presence and a physical presence. These businesses incorporate e-commerce elements alongside their traditional operations. They may offer online shopping options, online reservations, or other digital features to complement their physical offerings.</p>
+<p>Examples of partial e-commerce include:</p>
+<p>&#8211; Businesses like <strong>Daraz</strong> offer both Online shopping and physical delivery of products with cash on delivery.</p>
+<p>&#8211; <strong>Retailers:</strong> Traditional retailers like Walmart have physical stores but also offer online shopping options through their websites or mobile apps.</p>
+<p>&#8211; Businesses in sectors such as <strong>food delivery</strong> (e.g., Domino&#8217;s Pizza) or <strong>ride-sharing</strong> (e.g., Pathao) provide digital platforms for ordering or booking services alongside their physical operations.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe firm value chain and form value web. Mention their significance in e-commerce.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The firm value chain and firm value web are two frameworks that help describe the activities and interactions within a business ecosystem.</p>
+<p><strong>1. Firm Value Chain:</strong><br />
+The firm value chain is a concept that describes a series of interconnected activities performed by a business to create value for its customers. It consists of primary activities and support activities. The primary activities include inbound logistics, outbound logistics, operations, marketing and sales, and service. The support activities include infrastructure, human resources, and technology development. The firm value chain illustrates how value is added at each step of the business process, from sourcing raw materials to delivering the final product or service to customers. In e-commerce, online retailers, for example, can manage activities such as managing inventory, optimizing website functionality, online marketing, and customer service. Understanding and optimizing the digital value chain is important for e-commerce businesses to ensure efficient operations, enhance customer experience, and deliver value to customers.</p>
+<p><strong>2. Firm Value Web:</strong><br />
+The firm value web expands on the idea of the value chain by emphasizing relationships among various players within the business ecosystem. It explains that businesses do not operate independently but rather as part of a broader network of suppliers, distributors, partners, and customers. The firm value web highlights the collaborative and interactive nature of value creation. It emphasizes the importance of building strong relationships, sharing information, and utilizing partnerships to enhance competitiveness and deliver value to customers. In the context of e-commerce, the firm value web includes online marketplaces, logistics providers, payment gateways, digital marketing agencies, customer review platforms, and other entities that contribute to the overall value delivered to customers. E-commerce businesses need to effectively collaborate with these partners to ensure seamless operations, reliable supply chains, secure transactions, and targeted marketing efforts.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why it is important to build catalogs in e-commerce systems? How static catalog differs from dynamic catalog?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Building catalogs in e-commerce systems is important for several reasons:</p>
+<p>a. Catalogs provide a structured way to organize and categorize products. They help customers navigate and browse through available items, making it easier for them to find what they are looking for.</p>
+<p>b. Catalogs serve as a repository of product information. They contain details such as product names, descriptions, images, prices, availability, and other relevant attributes.</p>
+<p>c. Catalogs are essential for search functionality. Customers can search for specific products or browse through categories to discover new items.</p>
+<p>d. By grouping related products together within the catalog, businesses can encourage customers to explore additional items and make more purchases.</p>
+<p>&nbsp;</p>
+<p>1. Static Catalog:-A static catalog is a fixed collection of products and information that remains unchanged unless manually updated. Once created, a static catalog retains the same content until it is manually modified. Updates may include adding new products, removing discontinued items, or adjusting product information.</p>
+<p>2. Dynamic Catalog: A dynamic catalog, on the other hand, is a catalog that is generated or modified in real-time based on various factors. It is influenced by factors such as inventory levels, pricing changes, product availability, or personalized recommendations. For example, if a product goes out of stock, a dynamic catalog can automatically remove it from the listings until it becomes available again.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is identity theft? How spoofing and pharming can impact e-commerce trades?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Identity theft refers to the use of someone else&#8217;s personal information, typically for financial gain. It involves stealing sensitive data such as credit card details, or login credentials to impersonate the victim and engage in fraud activities. Identity theft can lead to severe consequences, including financial loss, damage to credit history, and reputational harm.</p>
+<p><strong>1. Spoofing:</strong> Spoofing involves the creation of fake or scam websites, emails, or other communications that mimic legitimate ones to confuse users. In the context of e-commerce, spoofing can exist in different forms:-</p>
+<p><strong>-Website Spoofing:</strong> Attackers create websites similar to that of e-commerce sites. Users may unknowingly visit these fake websites and enter their personal and financial information, thinking they are on a trustworthy platform. The attackers can then use the stolen data for identity theft or unauthorized transactions.</p>
+<p>&#8211;<strong>Email Spoofing:</strong> Attackers send phishing emails that appear to be from official e-commerce companies. These emails often contain fraud links or attachments, tricking recipients into providing their personal information or login credentials. Attackers gain access to sensitive data.</p>
+<p>&nbsp;</p>
+<p><strong>2. Pharming:</strong> Pharming involves the manipulation of the Domain Name System (DNS) to redirect users to malicious websites without their knowledge or consent. Unlike spoofing, where users actively visit fake websites, in pharming attacks, users are redirected to malicious sites automatically, even if they enter the correct website URL. Pharming attacks can impact e-commerce trades in several ways:</p>
+<p>&#8211; Attackers <strong>redirect</strong> users to fake login pages that look like legitimate e-commerce platforms. When users enter their credentials, attackers capture the information, enabling them to gain unauthorized access to user accounts and conduct fraudulent transactions.</p>
+<p>&#8211; <strong>Payment Redirection:</strong> In some cases, pharming attacks modify the payment process during e-commerce transactions. Users may be redirected to fraud payment gateways where their payment information is captured.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Describe how rich pins, promoted pins and cinematic pins are used in Pinterest Marketing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Rich pins, promoted pins, and cinematic pins are different features and formats used in Pinterest marketing to enhance engagement, reach a wider audience, and promote products or content.</p>
+<p><strong>1. Rich Pins:</strong><br />
+Rich pins are an enhanced pin format that provides additional information directly within the pin itself.<br />
+There are different types of rich pins available:</p>
+<p><strong>&#8211; Product Pins:</strong> These pins display real-time pricing, availability, and direct links to purchase the product.</p>
+<p><strong>&#8211; Recipe Pins:</strong> Recipe pins include ingredients, cooking times, and serving sizes. They help food bloggers, chefs, and cooking enthusiasts.</p>
+<p><strong>&#8211; Article Pins:</strong> Article pins display the headline, author, and story description. They are useful for publishers, bloggers, and content.</p>
+<p><strong>&#8211; App Pins:</strong> App pins include an install button, which allows users to download apps directly from Pinterest.</p>
+<p>&nbsp;</p>
+<p><strong>2. Promoted Pins:</strong><br />
+Promoted pins are paid advertisements on Pinterest that businesses can use to reach a wider audience and promote their products or services.</p>
+<p><strong>&#8211; Targeting Options:</strong> Advertisers can target specific demographics, interests, keywords, locations, or customer segments to reach their desired audience effectively.</p>
+<p><strong>&#8211; Analytics and Insights:</strong> Promoted pins provide detailed analytics and insights, allowing businesses to track performance, measure engagement, and optimize their advertising campaigns.</p>
+<p><strong>&#8211; Engagement Features:</strong> Promoted pins can include engagement features like saving the pin, visiting a website, or making a purchase, encouraging users to take action directly from the pin.</p>
+<p>&nbsp;</p>
+<p><strong>3. Cinematic Pins:</strong><br />
+Cinematic pins, also known as video pins, are immersive and interactive video advertisements on Pinterest. Key features of cinematic pins include:</p>
+<p><strong>&#8211; Autoplay:</strong> Cinematic pins start playing as the user scrolls through their feed, gaining attention and increasing engagement.</p>
+<p><strong>&#8211; Cinematic Motion:</strong> The pins feature motion effects, with the video stopping when the user stops scrolling, creating an interactive and engaging experience.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Discuss the concepts behind the online marketing metrics like impressions, Click-through rate, and page views.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>1. Impressions:</strong><br />
+Impressions refer to the number of times an advertisement or piece of content is displayed or shown to users. It represents the potential reach of an ad or content. Impressions count each time the content is loaded or served, regardless of whether the user actively engages with it For example, if an advertisement is displayed 1,000 times to users, it generates 1,000 impressions. Impressions are commonly used in metrics like cost per thousand impressions (CPM), which calculates the cost of reaching a thousand impressions.</p>
+<p>&nbsp;</p>
+<p><strong>2. Click-through Rate (CTR):</strong><br />
+Click-through rate (CTR) is a metric that measures the percentage of users who click on a specific link or advertisement out of the total number of impressions. CTR is a valuable indicator of user engagement and the effectiveness of an ad or call-to-action in capturing user interest. CTR is calculated by dividing the number of clicks on an ad by the number of impressions and multiplying by 100 to get the percentage. A higher CTR indicates a higher level of engagement and interest from users. For example, if an ad receives 100 clicks out of 1,000 impressions, the CTR would be 10% (100/1,000 * 100).</p>
+<p>&nbsp;</p>
+<p><strong>3. Page Views:</strong><br />
+Page views represent the number of times a webpage or a specific page within a website is viewed by users. Each time a page is loaded or refreshed, it counts as a page view. Page views help in evaluating website traffic and user engagement. Page views can be analyzed for individual pages, allowing marketers to understand which pages are attracting the most views and engagement. It helps in measuring the popularity and effectiveness of specific content or landing pages.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Why it is essential to perform Search Engine Optimization (SEO)? How off page SEO can be done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SEO is an essential tool that helps improve a website&#8217;s visibility in search engine results pages like Google, Bing, etc. When your website ranks higher in search results, it is more likely to be seen by users, leading to increased organic traffic. It involves optimizing various aspects of a website, such as site structure, page load speed, mobile responsiveness, and user-friendly navigation. These optimizations result in an improved user experience, making it easier for visitors to navigate and find the information they need. SEO focuses on optimizing keywords and content to align with user search intent. By targeting relevant keywords and providing valuable content, you attract users who are actively searching for products, services, or information related to your business. Off-page SEO refers to the optimization efforts performed outside of your website to improve its search engine ranking. Here are some off-page SEO techniques:</p>
+<p><strong>1. Link Building:</strong> Acquire high-quality backlinks from reputable websites. This can be done through guest blogging, partnerships, or creating valuable content that naturally attracts links.</p>
+<p><strong>2. Social Media Marketing:</strong> Promote your content and engage with your audience on social media platforms. Sharing and liking your content on social media can increase visibility, drive traffic, and potentially generate backlinks.</p>
+<p><strong>3. Influencer Marketing:</strong> Collaborate with influencers or industry experts who can promote your brand or content, helping you reach a wider audience.</p>
+<p><strong>4. Online Reputation Management:</strong> Monitor and manage your online reputation by actively responding to customer reviews, addressing complaints, and maintaining a positive online presence.</p>
+<p><strong>5. Content Marketing:</strong> Create valuable, shareable content that naturally attracts links and social shares. This can include blog posts, infographics, videos, or other forms of content that provide value to your target audience.</p>
+<p><strong>6. Online PR and Brand Mentions:</strong> Engage with media outlets, bloggers, and journalists to get your brand featured in relevant articles or news publications, which can result in brand mentions and backlinks.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is the significance of doing Google analytics and social media analytics in e-commerce? How they are done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Google Analytics and social media analytics are essential tools in e-commerce for gaining insights into website performance, customer behavior, and marketing effectiveness.</p>
+<p><strong>1. Google Analytics in E-commerce:</strong></p>
+<p>Google Analytics provides in-depth data and analytics on website traffic, user behavior, conversions, and more. To utilize Google Analytics, you need to create an account, install the tracking code on your ecommerce website, and configure relevant goals and events for tracking. You can then access the data and reports through the Google Analytics dashboard. Its significance in e-commerce includes:</p>
+<p><strong>&#8211; Performance Measurement</strong>: Google Analytics helps track key metrics like website traffic, page views, bounce rate, conversion rate, and revenue. It provides an overview of how your e-commerce website is performing and helps identify areas for improvement.</p>
+<p><strong>&#8211; User Behavior Analysis:</strong> Google Analytics offers valuable insights into user behavior, such as the pages they visit, their journey through the website, and the actions they take.</p>
+<p><strong>&#8211; Segmentation and Audience Analysis:</strong> Google Analytics enables you to segment your audience based on various criteria such as demographics, traffic sources, device type, or behavior.</p>
+<p>&nbsp;</p>
+<p><strong>2. Social Media Analytics in E-commerce:</strong></p>
+<p>Social media analytics involves tracking and analyzing data related to your social media presence, engagement, and performance. Social media analytics can be done using built-in analytics tools provided by social media platforms (e.g., Facebook &amp; Instagram(meta) Insights, Twitter Analytics) or third-party social media management tools that offer various analytics capabilities. Its significance in e-commerce includes (almost similar to google analytics significance):</p>
+<p><strong>&#8211; Audience Insights:</strong> Social media analytics provides data on your audience demographics, interests, and engagement patterns. This information helps you understand your target market.</p>
+<p><strong>&#8211; Content Performance:</strong> Social media analytics allows you to assess the performance of your social media content, including metrics such as post reach, impressions, engagement rate, clicks, and shares.</p>
+<p><strong>&#8211; Competitive Analysis:</strong> Social media analytics allows you to monitor and compare your performance against competitors. You can benchmark your metrics, identify industry trends, and gain insights into effective strategies employed by your competitors.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>How auctioning is done In e-commerce? Discuss different types of auctioning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Auctioning in E-commerce:</strong></p>
+<p>Auction means to increase. Auctioning is the process of conducting an auction to sell assets, natural resources, or other goods through online competitive bidding. Auction or e-auction takes place in the online marketplace. It can occur business to business, business to consumer, or consumer to consumer, and allows suppliers to bid online against each other.</p>
+<p>&nbsp;</p>
+<p><strong>Types of Auctioning:</strong></p>
+<p><strong>i. English Auction:</strong></p>
+<p>It is the most general form of auction. The opening price of an asset is low and the price goes on increasing in the bidding process. With this type of auction, the seller gets the highest possible price for the asset. The major points about this type of auction are:</p>
+<ul style="list-style-type: square;">
+<li>Public ascending price.</li>
+<li>A single unit is sold at auction.</li>
+<li>The highest bidder wins the auction.</li>
+<li>It is used when the seller is unaware of the price of the asset.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>ii. Dutch Auction:</strong></p>
+<p>It is opposite in nature to the English Auction. In this type of auction, the seller starts with an opening high price and keeps on lowering the price until a buyer bids on it. The first person to bid wins the auction. Major points about this auction are:</p>
+<ul style="list-style-type: square;">
+<li>Seller/Auctitoner descending price.</li>
+<li>Single or multiple units may be sold with an auction.</li>
+<li>The first bidder wins the auction.</li>
+<li>It is used when a seller has the expected price for an asset.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>iii. Double Auction</strong></p>
+<p>The double auction system is what we see in the stock market. Buyers place bids and sellers place offers throughout the trading day. The major points are:</p>
+<ul style="list-style-type: square;">
+<li>The seller starts with a higher price and the bidder starts with a lower price.</li>
+<li>Single or multiple units may be sold at auction.</li>
+<li>A bidder with the first match wins the auction.</li>
+<li>It is used when there are multiple sellers and multiple bidders, such as the share market.</li>
+</ul>
+</div>
+</body></html>

@@ -1,0 +1,403 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crypto Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>Crypto Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Let us consider the 4 bits key set as {1100, 1010, 0000, 1111, 0101, 1001} and input text as {1011, 1110, 1011, 1000}. Now trace the first full round operation of IDEA algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-59948" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/CamScanner-04-30-2025-12.04n_1-scaled.jpg?resize=1840%2C2560&#038;ssl=1" alt="" width="1840" height="2560"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-medium wp-image-59949" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/CamScanner-04-30-2025-12.04n_2-scaled.jpg?resize=1797%2C2560&#038;ssl=1" alt="" width="1797" height="2560"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is Message Authentication Code? List the operation of computing digest value in different passes of MD4. Describe about Needhom-Schroeder protocol.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Message Authentication Code is a function of the message and a secret key that produce a fixed-length value that serves as the authenticator. This technique assumethat the sender has a message to send receiver it caculates the MAC as a function of message and key.</p>
+<p>The MD4 function is a cryptographic algorithm that takes a message of srbitrary length as input and produce a 128-bit message digest or hash value as output<br />
+Suppose a b-bit message as input and we need to find its message digest. It is assumed that the bits of the message are m<sub>0</sub>, m<sub>1</sub>, m<sub>2</sub>, &#8230;&#8230;.., m<sub>b-1</sub>.</p>
+<ul style="list-style-type: square;">
+<li><strong>Step-1 : Append padded bits</strong> :<br />
+The message is padded so that its length is congurent to 448 modulo 512. A single &#8216;1&#8217; bit is appended so that the length in bits equals 448 modulo 512.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-44091 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/md4.drawio.png?resize=322%2C28&#038;ssl=1" alt="" width="322" height="28">(Message length + padded bits) % 512 = 448</li>
+<li><strong>Step-2 : Append length</strong> :<br />
+A 64-bit representation of b is appended to the result of the previous step. The resulting message has a length that is an exact multiple of 512 bits.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44092 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/md4-2.drawio.png?resize=287%2C25&#038;ssl=1" alt="" width="287" height="25">(Message length + padded bits + 64 bits) % 512 = 0</li>
+<li><strong>Step-3 : Initialize MD buffer</strong> :<br />
+A 4- word buffer (A, B, C, D) is used to compute the message digest. Here, each of A, B, C, D is 32-bit register. These are initialized to the following values in hexadecimal, low &#8211; order byte first:<br />
+A : 01 23 45 67<br />
+B : 89 ab cd ef<br />
+C : fe dc  ba 98<br />
+D : 76 54 32 10</li>
+<li><strong>Step 4 : Process message in 16-word blocks</strong> :<br />
+It contains three passes (rounds) with 16 steps or operation each. We first define three auxiliary functions that each takes as input three 32-bit words and produce as output one 32-bit word.<br />
+Pass 1: F(x, y, z) = (x ∧ y)∨(¬x ∧ z)  (step 0 to 15)<br />
+Pass 2: F(x, y, z) = (x ∧ y)∨(x ∧ z)∨(y ∧ z)  (step 16 to 31)<br />
+Pass 3: F(x, y, z) = x⊕y⊕z  (step 32 to 47)</li>
+<li><strong>Step 5 : Output</strong> :<br />
+After all rounds have performed the buffer A, B, C, D contains the MD4 output starting with lower bit A and ending with higher bit D.</li>
+</ul>
+<p>Roger Needham and Michael Schroeder proposed the Needham-Schroeder protocol in 1978. It is a pair of cryptographic protocols that are used for safe authentication between two parties via a network. It is a shared key authentication protocol designed to generate and propagate a session key. It includes the Symmetric key protocol and asymmetric key protocol.</p>
+<ul style="list-style-type: square;">
+<li>Symmetric key protocol establishes a session key to protect further communication.</li>
+<li>Asymmetric key protocol provides mutual authentication between two parties communicating on a network.</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why do we need discrete logarithm? Illustrate with an example. Consider a Diffie-Hellman scheme with a common prime p = 13 between user A and user B. Suppose public key of A is 10 and public key of B is 8. Now determine their private keys and shared secret key. Select any valid primitive root of 13.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Discrete logarithms are vital in cryptography because of the discrete logarithm problem&#8217;s complexity. This complexity ensures that the public keys can be safely shared over insecure channels while keeping the private keys and shared secret secure, forming the foundation of many secure communication protocols.</p>
+<p>Discrete logarithms play a crucial role in modern cryptography, particularly in securing communication protocols such as Diffie-Hellman key exchange, ElGamal encryption, and Digital Signature Algorithms (DSA). The security of these systems relies on the difficulty of solving the discrete logarithm problem.</p>
+<p>Given the Diffie-Hellman scheme with the following information:</p>
+<ul style="list-style-type: square;">
+<li>Common prime <span class="katex"><span class="katex-mathml">p = 13</span></span></li>
+<li>Public key of A, <span class="katex"><span class="katex-mathml">A<sub>pub </sub>= 10</span></span></li>
+<li>Public key of B, <span class="katex"><span class="katex-mathml">B<sub>pub </sub>= 8</span></span></li>
+<li>We need to determine their private keys and shared secret key using a valid primitive root of 13.</li>
+</ul>
+<h4><strong> Select a primitive root of 13</strong></h4>
+<p>Primitive roots of 13 are integers that can generate all the numbers from 1 to <span class="katex"><span class="katex-mathml">p−1 = 12</span></span> using modular exponentiation. For <span class="katex"><span class="katex-mathml">p = 13</span></span>, a known primitive root is <strong>2</strong>.</p>
+<h4><strong>Determine Private Keys of A and B</strong></h4>
+<p>The private keys of users A and B, denoted as <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span> and <span class="katex"><span class="katex-mathml">b</span></span> respectively, are determined as follows:</p>
+<ul style="list-style-type: square;">
+<li>User A&#8217;s public key is calculated using the formula:<span class="katex-display"><span class="katex"><span class="katex-mathml">A<sub>pub </sub>= g<sup>a </sup>mod  p</span></span></span>where <span class="katex"><span class="katex-mathml">g = 2 </span></span>is the primitive root, <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span> is A&#8217;s private key, and <span class="katex"><span class="katex-mathml">p = 13</span></span>.</li>
+<li>User B&#8217;s public key is similarly calculated:<span class="katex-display"><span class="katex"><span class="katex-mathml">B<sub>pub </sub>= g<sup>b </sup>mod  p</span></span></span>where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">b</span></span></span></span> is B&#8217;s private key.</li>
+</ul>
+<p>We need to find <span class="katex"><span class="katex-mathml">a</span></span> and <span class="katex"><span class="katex-mathml">b</span></span> such that the equations hold.</p>
+<h5>For A:</h5>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">10 = 2<sup>a </sup>mod  13</span></span></span></p>
+<p>We test powers of 2 modulo 13 to find <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span>:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">2<sup>1 </sup>= 2, 2<sup>2 </sup>= 4, 2<sup>3 </sup>= 8, 2<sup>4 </sup>= 3, 2<sup>5 </sup>= 6, 2<sup>6 </sup>= 12, 2<sup>7 </sup>= 11, 2<sup>8 </sup>= 9, 2<sup>9 </sup>= 5, 2<sup>10 </sup>= 10</span></span></span></p>
+<p>Thus, <span class="katex"><span class="katex-mathml">a = 10</span></span> satisfies the equation <span class="katex"><span class="katex-mathml">2<sup>10 </sup>mod  13 = 10</span></span>.</p>
+<h5>For B:</h5>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">8 = 2<sup>b </sup>mod  13</span></span></span></p>
+<p>Testing the same powers of 2 modulo 13:</p>
+<p><span class="katex"><span class="katex-mathml">2<sup>3 </sup>= 8</span></span></p>
+<p>Thus, <span class="katex"><span class="katex-mathml">b = 3</span></span> satisfies the equation <span class="katex"><span class="katex-mathml">2<sup>3 </sup>mod  13 = 8</span></span></p>
+<h4><strong>Compute Shared Secret Key</strong></h4>
+<p>The shared secret key <span class="katex"><span class="katex-mathml">K</span></span> is calculated by both A and B as follows:</p>
+<ul style="list-style-type: square;">
+<li>A computes <span class="katex"><span class="katex-mathml">K =  B<sub>a</sub><sup>pub</sup>mod  p</span></span></li>
+<li>B computes <span class="katex"><span class="katex-mathml">K =  A<sub>b</sub><sup>pub</sup>mod  p</span></span></li>
+</ul>
+<p>These should result in the same value.</p>
+<h5>A&#8217;s computation:</h5>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">K = 8<sup>10 </sup>mod  13</span></span></span></p>
+<p>We break down the exponentiation:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">8<sup>2 </sup>= 64 ⇒ 64 mod  13 = 12<br />
+</span></span></span><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">8<sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4 </span></span></span></span></span></span></sup></span><span class="mrel">= </span></span><span class="base"><span class="mord">1</span><span class="mord">2<sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></span></span></span></sup></span><span class="mrel">= </span></span><span class="base"><span class="mord">144 </span><span class="mrel">⇒ </span></span><span class="base"><span class="mord">144 </span></span><span class="base"><span class="mord"><span class="mord mathrm">mod </span></span><span class="mord">13 </span><span class="mrel">= </span></span><span class="base"><span class="mord">1</span></span></span></span></span><br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml">8<sup>8 </sup>= 1<sup>2</sup> = 1 ⇒ 8<sup>10 </sup>= 1×12 = 12</span></span></span></p>
+<p>Thus, <span class="katex"><span class="katex-mathml">K=12</span></span>.</p>
+<h5>B&#8217;s computation:</h5>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">K = 10<sup>3</sup>mod  13<br />
+</span></span></span><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">1</span><span class="mord">0<sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></span></span></span></sup></span><span class="mrel">= </span></span><span class="base"><span class="mord">100 </span><span class="mrel">⇒ </span></span><span class="base"><span class="mord">100 </span></span><span class="base"><span class="mord"><span class="mord mathrm">mod </span></span><span class="mord">13 </span><span class="mrel">= </span></span><span class="base"><span class="mord">9</span></span></span></span></span><br />
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">1</span><span class="mord">0<sup><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3 </span></span></span></span></span></span></sup></span><span class="mrel">= </span></span><span class="base"><span class="mord">10</span><span class="mbin">⋅</span></span><span class="base"><span class="mord">9 </span><span class="mrel">= </span></span><span class="base"><span class="mord">90 </span><span class="mrel">⇒</span></span><span class="base"><span class="mord">90 </span></span><span class="base"><span class="mord"><span class="mord mathrm">mod </span></span><span class="mord">13 </span><span class="mrel">= </span></span><span class="base"><span class="mord">12</span></span></span></span></span></p>
+<p>Thus, <span class="katex"><span class="katex-mathml">K=12</span></span>.</p>
+<p><span style="font-size: 12pt;">Hence, The private keys are:</span></p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">a=10</span></span> (for A)</li>
+<li><span class="katex"><span class="katex-mathml">b=3</span></span> (for B)</li>
+</ul>
+<p>The shared secret key is:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">K=12</span></span>.</li>
+</ul>
+<p>This shared secret key is now known only to users A and B, even though the exchange occurred over a public channel, thanks to the difficulty of solving the discrete logarithm problem.</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Show the encryption of plain text “ALGORITHM” using the key “PSEUDOCODE” using playfair cipher.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>Message = ALGORITHM</p>
+<p>Keyword = PSEUDOCODE</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class=" alignleft" style="border-collapse: collapse; width: 29.4367%; height: 170px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>P</strong></td>
+<td style="width: 20%; text-align: center;"><strong>S</strong></td>
+<td style="width: 20%; text-align: center;"><strong>E</strong></td>
+<td style="width: 20%; text-align: center;"><strong>U</strong></td>
+<td style="width: 20%; text-align: center;"><strong>D</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>O</strong></td>
+<td style="width: 20%; text-align: center;"><strong>C</strong></td>
+<td style="width: 20%; text-align: center;"><strong>A</strong></td>
+<td style="width: 20%; text-align: center;"><strong>B</strong></td>
+<td style="width: 20%; text-align: center;"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>G</strong></td>
+<td style="width: 20%; text-align: center;"><strong>H</strong></td>
+<td style="width: 20%; text-align: center;"><strong>I/J</strong></td>
+<td style="width: 20%; text-align: center;"><strong>K</strong></td>
+<td style="width: 20%; text-align: center;"><strong>L</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>M</strong></td>
+<td style="width: 20%; text-align: center;"><strong>N</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q</strong></td>
+<td style="width: 20%; text-align: center;"><strong>R</strong></td>
+<td style="width: 20%; text-align: center;"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>V</strong></td>
+<td style="width: 20%; text-align: center;"><strong>W</strong></td>
+<td style="width: 20%; text-align: center;"><strong>X</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Y</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Z</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>From above we can encrypt the message INFORMATION,</p>
+<p>AL GO  RI  TH  MX</p>
+<p>FI  OM  KQ NL QV</p>
+<p>Hence, for message ALGORITHM the cipher text will be FIOMKQNLQV .</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Discuss the working mechanism of kerberos protocol.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>Kerberos authentication protocol</strong> is one that aids in user authentication prior to communication. It is an authentication system that safely confirms users&#8217; and services&#8217; identities over an insecure network using secret-key cryptography.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-43957 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/Kerbrose.drawio.png?resize=507%2C196&#038;ssl=1" alt="" width="507" height="196"></p>
+<p style="text-align: center;">fig. Kerberos Authentication Protocol</p>
+<p>The components of Kerberos are as follows:</p>
+<p><strong>KDS</strong>: Key Distribution System is what KDS stands for. This is in charge of user authentication and ticket or key issuance. AS, or Authentication Service, and TGS, or Ticket Grant System, are the two components that make up KDS. The user is verified by the authentication service before being able to submit a ticket request. TGS offers both a scession and a ticket for interacting with the server.</p>
+<p><strong>User</strong>: A user is an entity that attempts to access resources from another location and requires authorization to do so.</p>
+<p><strong>Server</strong>: The location, organization, or source from which the user receives resources for usage is known as the server.</p>
+<p><strong><span style="text-decoration: underline;">Working of Kerberos authentication protocol</span></strong></p>
+<ul style="list-style-type: square;">
+<li>User request KDS i.e Key Distribution System for access to the ticket from TGS.</li>
+<li>KDS in response grants it the permission to access ticket from TGS, by authenticating it with help of AS.</li>
+<li>User again request TGS i.e Ticket Grant System for a ticket to communicate with the server.</li>
+<li>TGS grants a ticket and a session for the communication with the server.</li>
+<li>User then request for the resource from the server in the particular session using the ticket.</li>
+<li>Server recognizing the ticket grants the access to the resource for that particular session.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the use of firewall? How circuit level gateway differs from stateful inspection firewall?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A “firewall”, is a tool that provides a filter of both incoming and outgoing packets. Thus, the use of the firewall is to monitor and control all incoming or outgoing access to network connections based on predetermined security rules. Most firewalls perform two basic use.</p>
+<ul style="list-style-type: square;">
+<li>Packet filtering is based on accept or deny policy that is itself based on the rules of the security policy.</li>
+<li>Application proxy gateways provide services to the inside users and at the same time protect each individual host from the “bad” outside users.</li>
+</ul>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 199px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Feature</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Circuit-Level Gateway</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Stateful Inspection Firewall</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Operation Level</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Session Layer (Layer 5)</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Network Layer (Layer 3) and Transport Layer (Layer 4)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Working Mechanism</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Monitors the TCP handshake to validate session legitimacy</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Monitors each packet and tracks the state of connections</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Packet Inspection</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Does not inspect individual packets</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Inspects individual packets and remembers connection states</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Security Focus</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Ensures the validity of connections</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"> Provides detailed security by inspecting packets and connections</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Inspection Depth</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Limited to verifying sessions</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Deep inspection of both packets and session states</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Use Case</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Suitable for session management (e.g., external access)</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Protects against a wide range of threats, including packet-level attacks</td>
+</tr>
+<tr style="height: 31px;">
+<td style="width: 33.3333%; height: 31px; text-align: center;">Security Level</td>
+<td style="width: 33.3333%; height: 31px; text-align: center;">Basic security</td>
+<td style="width: 33.3333%; height: 31px; text-align: center;">Advanced security</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is intrusion ? Explain any two types of intrusion detection system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Intrusion are the set of action that on being performed harms the confidentiality, integrity, availability an security policy. The one who perform the action are usually unauthhorized and they try to access the data and information.<br />
+It is any unapproved action, attack, or access to a computer system or network with the goal of stealing, destroying, or interfering with data and resources. From straightforward illegal access to complex attacks by malevolent individuals seeking to jeopardize system security, privacy, or integrity, intrusions can take many different forms.</p>
+<h3>Types of Intrusion Detection Systems</h3>
+<ul style="list-style-type: square;">
+<li><strong>Network-based Intrusion Detection System (NIDS)</strong>: In order to identify questionable activity occurring throughout the network, NIDS continuously analyzes network traffic. To examine incoming and outgoing packets, it is typically installed at particular network nodes, such gateways or routers.<br />
+Both anomaly-based detection (finding departures from typical traffic patterns) and signature-based detection (matching patterns of known attack signatures) are used by NIDS.</li>
+<li><strong>Host-based Intrusion Detection System (HIDS)</strong>: Individual hosts or devices have HIDS installed, which keeps an eye on things like user activity, system logs, and file integrity. It is intended to spot questionable activity on the particular device it is watching.<br />
+HIDS frequently uses file integrity checks and log analysis to find any illegal changes, such as adjustments to system files or configuration settings.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Find the multiplicative inverse of polynomial {95} using extended euclidean Algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We first compute ϕ(95), where ϕ stands for Euler&#8217;s Totient Function. In order to determine the multiplicative inverse of 95 we are here using its totient value. After obtaining ϕ(95), we may get the inverse of 95 modulo ϕ(95) using the Extended Euclidean Algorithm.</p>
+<p>Since <span class="katex"><span class="katex-mathml">95 = 5 × 19</span></span>, we can use the property of Euler’s Totient Function:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">ϕ(95) = ϕ(5) × ϕ(19)</span></span></span></p>
+<p>where:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">ϕ(5) = 5 − 1 = 4 and ϕ(19) = 19 − 1 = 18</span></span></span></p>
+<p>Thus,</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">ϕ(95) = 4 × 18 = 72</span></span></span></p>
+<p>now, we calculate the multiplicative inverse of <span class="katex"><span class="katex-mathml">95</span></span> modulo <span class="katex"><span class="katex-mathml">72</span></span> using the Extended Euclidean Algorithm where x = x<sub>1</sub> &#8211; qx<sub>2</sub></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 27px;">
+<td style="width: 14.2857%; text-align: center; height: 27px;">q</td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">a</td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">b</td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">r</td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">x<sub>1</sub></td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">x<sub>2</sub></td>
+<td style="width: 14.2857%; text-align: center; height: 27px;">x</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">95</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">72</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">23</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">0</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; text-align: center; height: 24px;">3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">72</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">23</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">0</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">-3</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; text-align: center; height: 24px;">7</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">23</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">2</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">-3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">22</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">2</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">-3</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">22</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">-25</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; text-align: center; height: 24px;">2</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">2</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">1</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">&#8211;</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">22</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">-25</td>
+<td style="width: 14.2857%; text-align: center; height: 24px;">72</td>
+</tr>
+<tr>
+<td style="width: 14.2857%; text-align: center;">&#8211;</td>
+<td style="width: 14.2857%; text-align: center;">1</td>
+<td style="width: 14.2857%; text-align: center;">0</td>
+<td style="width: 14.2857%; text-align: center;">&#8211;</td>
+<td style="width: 14.2857%; text-align: center;">-25</td>
+<td style="width: 14.2857%; text-align: center;">72</td>
+<td style="width: 14.2857%; text-align: center;">&#8211;</td>
+</tr>
+</tbody>
+</table></div>
+<p>hence from table we get multiplicative inverse as -25.</p>
+<p>-25 ≡ 95 mod 72</p>
+<p>47 ≡ 95 mod 72</p>
+<p>so we finally conclude that 47 is the multiplicative inverse of 95 mod 72.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is DoS attack ? Discuss about PKI trust model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When coordinated from multiple sources, it is known as a Distributed Denial of Service (DDoS) attack. A Denial of Service (DoS) attack is a type of cyberattack that aim to disrupt the normal functioning of a targeted server, network, or service by flooding it with a flood of illegitimate requests, exhausting the resources (e.g., bandwidth, memory, CPU) of the target system, rendering it unavailable to legitimate users.</p>
+<p><strong>Important Features of DoS Attacks</strong></p>
+<ul style="list-style-type: square;">
+<li>Resource Exhaustion: To deplete the target&#8217;s resources, the attacker bombards it with requests.</li>
+<li>Network Disruption: An attack can affect not only one server but the entire network.</li>
+<li>Service Unavailability: Causes downtime and prevents authorized users from accessing services.</li>
+</ul>
+<p>Digital keys and certificates that protect data exchanges and identity verification in online settings are managed by the <strong>Public Key Infrastructure (PKI) architecture</strong>. To provide safe communication and authentication, the PKI trust model creates a network of connections and trust between things (such people, gadgets, and organizations).</p>
+<p>The validity of digital certificates and secure communication are guaranteed by a PKI trust model, which establishes the connections between the various components of a security system. Unlike the Web of Trust architecture, which offers decentralized, peer-based validation, the hierarchical approach offers centralized, widely trusted administration. Every model takes certain organizational and security requirements into account.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Using Vignere cipher with key = “worlds”, encrypt the plain text “hello everyone”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>key = &#8220;worlds&#8221;</p>
+<p>plain text = &#8220;hello everyone&#8221;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-43974" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/vig.drawio.png?resize=1681%2C1141&#038;ssl=1" alt="" width="1681" height="1141"></p>
+<p>&nbsp;</p>
+<p style="text-align: center;">W O R L D S W O R L D S W<br />
+H E L L O E V E R Y O N E</p>
+<p style="text-align: center;">D S C W R W R S I J R F A</p>
+<p>Hence the encrypted text is DSCWRWRSIJRFA.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Describe the different modes of block cipher.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Modes of Block Cipher Encryptions</strong> :</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Electronic Code Book</strong> : It is the simplest mode in which plaintext is handled one block at a time and each block of plain text is encrpted using the same key. The term codebook is used because, for a given key, there is a unique ciphertext for every b-bit block of plaintext.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44061 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/ECB.jpg?resize=228%2C181&#038;ssl=1" alt="" width="228" height="181"></li>
+<li><strong>Cipher Block Chaining Mode</strong> : In this technique, the input to the encryption algorithm is the XOR of the current plaintext block and the preceeding ciphertext block; the same key is used for each block. In effect, we have chained together the processing of the sequence of the plaintext blocks.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44062 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/CBC.drawio.png?resize=252%2C238&#038;ssl=1" alt="" width="252" height="238"></li>
+<li><strong>Cipher Feedback Mode</strong> : In this mode, each cipher text block gets feedback into the encryption process, inorder to encrypt the next plaintext block. The CFB mode requiresan iniialization vector (IV) as the initial random b bir block.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44065 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/CFM.drawio.png?resize=252%2C161&#038;ssl=1" alt="" width="252" height="161"></li>
+<li><strong>Output Feedback Mode</strong> : The output feedback mode (OFB) is similar in structure to that of CFB. The only difference is that the output of the encryption function that is fed back to the shift register in OFB, where in CFB the ciphertext unit is fed back to the shift register.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44066 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/OFM.drawio.png?resize=238%2C152&#038;ssl=1" alt="" width="238" height="152"></li>
+<li><strong>Counter Mode</strong> : A counter equal to the plaintext blocksize is used in this mode. The counter is initialized to some value and then increment by 1 for each block. The counter is encrypted with the key K and XOR the output of the plaintext block to produce the cipher text block.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-44073 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/counter.drawio.png?resize=180%2C166&#038;ssl=1" alt="" width="180" height="166"></li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two)</p>
+<ol>
+<li>Totient value of any positive integer.</li>
+<li>Properties of hash function.</li>
+<li>Virus or Worms.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;"><strong>Totient value of any positive integer</strong></span>: It is defined as the number of positive integer less than n, which are relatively prime to n. It is denoted by Φ(n).<br />
+If n is the prime number then, Φ(n) = n-1.for eg: Φ(10) = ?<br />
+Number less than 10 are {1, 2, 3, 4, 5, 6, 7, 8, 9}<br />
+now,<br />
+Number relatively prime to 10 are {1, 3, 7, 9}<br />
+Φ(10) =4</li>
+<li><span style="text-decoration: underline;"><strong>Properties of hash function</strong></span> : It is a function that maps a message of any length into a fixed length hash value, which serves as an authenticator. Its properties are:<br />
+<strong>i.</strong> One way i.e a hash code can be generated from the message but a message can&#8217;t be extracted from the code.<br />
+<strong>ii.</strong> Strong collision resistence i.e for any input m<sub>1</sub>, it is computationally hard to find a different input m<sub>2</sub> such that H(m<sub>1</sub>)=H(m<sub>2</sub>).<br />
+<strong>iii.</strong> A message m<sub>1</sub> will have same hash code as m<sub>2 </sub>i.e H(m<sub>1</sub>)=H(m<sub>2</sub>) when m<sub>1</sub> = m<sub>2 </sub>.<br />
+<strong>iv.</strong> It produce a fixed length output for any length input.</li>
+<li><span style="text-decoration: underline;"><strong>Virus or Worms</strong></span>:<br />
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Virus</td>
+<td style="width: 50%; text-align: center; height: 24px;">Worm</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">A computer virus is a program that inserts itself into one more files and then performs some action.</td>
+<td style="width: 50%; text-align: center; height: 24px;">A computer worm is self replicating program that copies itself from one computer to another.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It cannot be controlled remotely.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It can be controlled remotely.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Its spreading rate is moderate.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Its spreading rate is faster than virus.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It is used to modify the information.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It is used to halt the CPU and memory.</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ol>
+</div>
+</body></html>

@@ -1,0 +1,374 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MP Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>MP Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain instruction cycle, machine cycle and T-states. Draw timing diagram of fetch and execute of LDA instruction with brief description.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Instruction cycle </strong></p>
+<p>Time required to execute and fetch an entire instruction is called instruction cycle.</p>
+<p>It consists:</p>
+<ul style="list-style-type: square;">
+<li><strong>Fetch cycle:</strong> The next instruction is fetched by the address stored in program counter (PC) and then stored in the instruction register.</li>
+<li><strong> Decode instruction:</strong> Decoder interprets the encoded instruction from instruction register.</li>
+<li><strong> Reading effective address:</strong> The address given in instruction is read from main memory and required data is fetched. The effective address depends on direct addressing mode or indirect addressing mode.</li>
+<li><strong>Execution cycle:</strong> Consists memory read (MR), memory write (MW), input output read (IOR) and input output write (IOW) . In the normal process of operation, the microprocessor fetches (receives or reads) and executes one instruction at a time in the sequence until it executes the halt (HLT) instruction.</li>
+</ul>
+<p><strong>Machine cycle </strong></p>
+<p>The time required by the micro processor to complete the operation of accessing memory or I/O device .  Each Read/Write operation constitutes one machine cycle.</p>
+<p>Operations like :</p>
+<ul style="list-style-type: square;">
+<li>Opcode fetch</li>
+<li>Memory read</li>
+<li>Memory write</li>
+<li>I/O read</li>
+<li>I/O write</li>
+</ul>
+<p><strong>T &#8211; states </strong></p>
+<ul style="list-style-type: square;">
+<li>Microprocessor performs an operation in specific clock cycles.</li>
+<li>Each clock cycle is called as T –States.</li>
+<li>The number of T – states required to perform an operation is called Machine Cycle .</li>
+<li>One-time period of frequency of microprocessor is called T-state.</li>
+<li>A t-state is measured from the falling edge of one clock pulse to the falling edge of the next clock pulse.</li>
+<li>Fetch cycle takes four t-states and execution cycle takes three t-states.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>TIMING DIAGRAM FOR LDA</strong></p>
+<ul style="list-style-type: square;">
+<li>LDA is a mnemonic that stands for Load Accumulator with the contents from memory.</li>
+<li>3 Byte Instruction.</li>
+<li>Syntax: LDA 16 bit memory Address</li>
+<li>Suppose the instruction LDA 3000h (3 byte instruction) is stored from memory location.</li>
+<li>8000 =3A</li>
+<li>8001= 00</li>
+<li>8002= 30</li>
+<li>IC=OF(4-T State) + MR(3-T State) + MR(3-T State) + MR(3-T State)</li>
+</ul>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25347" src="https://hamrocsit.com/wp-content/uploads/2023/09/lda.jpg" alt="" width="637" height="358"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Draw a well-labeled block diagram of 8086 microprocessor. Explain its Register organization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25349" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135443_CamScanner.jpg" alt="" width="901" height="1323"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25350" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135358_CamScanner.jpg" alt="" width="915" height="1350"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25351" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135601_CamScanner.jpg" alt="" width="912" height="1358"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25352" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135651_CamScanner.jpg" alt="" width="916" height="1264"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25353" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135724_CamScanner.jpg" alt="" width="911" height="1261"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25354" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_135822_CamScanner.jpg" alt="" width="908" height="1510"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the working of LHLD and DAA instruction of 8085. An array containing 5 elements is stored from memory location 4000h to 4000h; write an assembly language program for 8085 microprocessor to find largest element of array and store in memory location 4005h.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>LHLD (Load HL from Memory):</strong> The LHLD instruction is used to load the 16-bit content of a memory location into the HL register pair. It expects two memory operands, and it loads the lower byte of the HL register (L) from the first memory location and the higher byte (H) from the second memory location.</p>
+<p><strong>DAA (Decimal Adjust Accumulator):</strong> The DAA instruction is used to adjust the contents of the accumulator (A) after performing binary-coded decimal (BCD) arithmetic operations. It ensures that the result in the accumulator is in proper BCD format. The DAA instruction can be used to convert binary results into their equivalent BCD representation. It works by adjusting the accumulator&#8217;s contents based on the condition of the flags (carry, auxiliary carry, etc.).</p>
+<p>&nbsp;</p>
+<p><strong>Assembly Language Program</strong></p>
+<p>ORG 0000h ; Origin of the program</p>
+<p>; Initialize HL to point to the start of the array (4000h)<br />
+LXI H, 4000h</p>
+<p>; Initialize the largest element with 00 (assuming values are positive)<br />
+MVI A, 00<br />
+MOV B, A ; Initialize B register to store the largest element</p>
+<p>; Loop through the array to find the largest element<br />
+LOOP:<br />
+LHLD ; Load 16-bit data from memory into HL<br />
+MOV C, L ; Copy the lower byte (element) to register C<br />
+MOV D, H ; Copy the higher byte (element) to register D</p>
+<p>; Compare the current element with the largest element<br />
+CMP B<br />
+JNC NOT_LARGER ; If not larger, skip the update</p>
+<p>; Update the largest element<br />
+MOV B, A</p>
+<p>NOT_LARGER:<br />
+INX H ; Move to the next element in the array<br />
+DCR C ; Decrement the loop counter (assuming elements are 8-bit)<br />
+JNZ LOOP ; Continue looping until all elements are checked</p>
+<p>; Store the largest element in memory location 4005h<br />
+STAX D ; Store A register (largest element) at the address in DE pair<br />
+HLT ; Halt the program</p>
+<p>; Data section (assuming the array is stored from 4000h to 4004h)<br />
+DB 10, 25, 15, 30, 5</p>
+<p>END ; End of the program</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is ALE? Explain the role of ALE in address/data bus De-multiplexing in 8085 with suitable diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>ALE, which stands for Address Latch Enable, is a control signal used in the Intel 8085 microprocessor and similar microprocessors to facilitate the demultiplexing of the address and data buses. The 8085 microprocessor uses a multiplexed address/data bus, which means that the same set of lines is used to transmit both address and data information. ALE plays a crucial role in this demultiplexing process.</p>
+<p>Here&#8217;s how ALE works and its role in address/data bus demultiplexing in the 8085 microprocessor:</p>
+<p><strong>Multiplexed Address/Data Bus</strong>: In the 8085 microprocessor, the address bus and data bus are multiplexed. This means that a single set of lines carries both address and data information during different phases of the machine cycle.</p>
+<p><strong>Address Latch Enable (ALE)</strong>: ALE is a control signal generated by the 8085 microprocessor. It is active during the first clock cycle (T1) of the machine cycle. ALE goes high (active) for a brief duration during T1.</p>
+<p><strong>Demultiplexing Role</strong>: ALE is used to demultiplex (separate) the address and data information from the multiplexed bus lines. During the T1 state, the address information is present on the bus, and ALE is used to inform external devices that the address lines are valid and stable. This allows external memory and I/O devices to latch or capture the address.</p>
+<p><strong>Timing Diagram:</strong> ALE goes high (↑) at the beginning of T1 and goes low (↓) at the end of T1. During T1, the multiplexed address (A15-A8) is present on the bus. After ALE goes low, during T2 and subsequent clock cycles, the multiplexed data (AD7-AD0) is present on the same bus.</p>
+<p>By using ALE to demultiplex the address and data information during the appropriate machine cycle states, external devices can accurately capture the address and data from the 8085 microprocessor&#8217;s bus. This allows for proper memory and I/O operations to be performed in synchronization with the microprocessor&#8217;s operations.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What do you mean by Isolated I/O? Explain basic DMA operation in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="group w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-9">
+<div class="p-4 justify-center text-base md:gap-6 md:py-6 m-auto">
+<div class="flex flex-1 gap-4 text-base mx-auto md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl }">
+<div class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]">
+<div class="flex flex-grow flex-col gap-3 max-w-full">
+<div class="min-h-[20px] flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p><strong>Isolated I/O</strong>:</p>
+<p>Isolated I/O, also known as Isolated Input/Output, is a method used in computer systems to separate the data and control signals for input and output operations from the main data bus. In isolated I/O, there are separate address and data buses for I/O devices, distinct from the system&#8217;s primary address and data buses used for memory operations. This isolation ensures that I/O operations do not interfere with memory operations and vice versa. It offers several advantages, including:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Improved Reliability</strong>: Isolating I/O operations helps prevent glitches or electrical noise generated by I/O devices from affecting the integrity of data in memory.</li>
+<li><strong>Simplified Timing</strong>: Separate control lines for I/O operations simplify the timing requirements and coordination between the CPU and I/O devices.</li>
+<li><strong>Enhanced Security</strong>: Isolating I/O operations can improve system security by isolating memory access from direct I/O device access, reducing the risk of unauthorized data modification.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>DMA operation</strong></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25361" src="https://hamrocsit.com/wp-content/uploads/2023/09/dma-operation.jpg" alt="" width="562" height="311"></p>
+<p>During a block input byte transfer, the following sequence occurs as the data byte is sent from the interface to the memory:</p>
+<ol style="list-style-type:decimal;">
+<li>The interface sends the DMA controller a request for DMA service.</li>
+<li>A Bus request is made to the HOLD pin (active High) on the 8086 microprocessor and the controller gains control of the bus.</li>
+<li>3. A Bus grant is returned to the DMA controller from the Hold Acknowledge (HLDA) pin (active High) on the 8086 microprocessor.</li>
+<li>The DMA controller places the contents of the address register onto the address bus.</li>
+<li>The controller sends the interface a DMA acknowledgment, which tells the interface to put data on the data bus. (For an output it signals the interface to latch the next data placed on the bus.)</li>
+<li>The data byte is transferred to the memory location indicated by the address bus.</li>
+<li>The interface latches the data.</li>
+<li>The Bus request is dropped, the HOLD pin goes Low, and the controller relinquishes the bus.</li>
+<li>The Bus grant from the 8086 microprocessor is dropped and the HLDA pin goes Low.</li>
+<li>The address register is incremented by 1.</li>
+<li>The byte count is decremented by 1.</li>
+<li>If the byte count is non-zero, return to step 1, otherwise stop.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is flag? Explain all the flags present in 8085 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25358" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_142221_CamScanner.jpg" alt="" width="913" height="1319"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-25359" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_142251_CamScanner.jpg" alt="" width="893" height="283"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write an assembly language program for 16 bit microprocessor to count and display number of occurrence of letter ‘o’ in string “Microprocessor organization”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>ORG 1000h ; Set the origin address</p>
+<p>MOV CX, 0 ; Initialize CX register to count occurrences<br />
+MOV SI, 0 ; Initialize SI register as a pointer to the string</p>
+<p>MOV AL, &#8216;o&#8217; ; Load AL with the character to search for<br />
+MOV BX, 0 ; Initialize BX register for counting</p>
+<p>SEARCH_LOOP:<br />
+MOV AH, [SI] ; Load the next character from the string into AH<br />
+CMP AH, 0 ; Check if it&#8217;s the null terminator (end of the string)<br />
+JE END_SEARCH ; If it is, exit the loop</p>
+<p>CMP AH, AL ; Compare the character in AH with &#8216;o&#8217;<br />
+JNE NOT_FOUND ; If not equal, continue searching</p>
+<p>INC BX ; Increment the count in BX if &#8216;o&#8217; is found</p>
+<p>NOT_FOUND:<br />
+INC SI ; Move to the next character in the string<br />
+JMP SEARCH_LOOP</p>
+<p>END_SEARCH:<br />
+; Display the count in BX (number of &#8216;o&#8217; occurrences)<br />
+MOV DL, BL ; Load DL with the count (convert to ASCII)<br />
+ADD DL, &#8216;0&#8217; ; Convert the count to ASCII</p>
+<p>; Display the result on the screen (you may need to adjust this part)<br />
+MOV AH, 2 ; Function code for displaying a character<br />
+MOV AH, DL ; Character to display<br />
+INT 21h ; Call DOS interrupt for displaying</p>
+<p>HLT ; Halt the program</p>
+<p>; Data section<br />
+DB &#8220;Microprocessor organization&#8221;, 0 ; Null-terminated string</p>
+<p>ORG 0100h ; Start of program memory address (adjust as needed)</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is Descriptor? Explain the use of descriptor in logical to physical address conversion in 80286 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="group w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-13">
+<div class="p-4 justify-center text-base md:gap-6 md:py-6 m-auto">
+<div class="flex flex-1 gap-4 text-base mx-auto md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl }">
+<div class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]">
+<div class="flex flex-grow flex-col gap-3 max-w-full">
+<div class="min-h-[20px] flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>In the context of the Intel 80286 microprocessor and other x86 processors, a descriptor is a data structure used in memory management to define and manage memory segments. Descriptors play a crucial role in the logical to physical address translation and access control for memory segments in the protected mode of the x86 architecture.</p>
+<p>Here&#8217;s an explanation of how descriptors are used for logical to physical address conversion in the 80286 microprocessor:</p>
+<p><strong>Descriptor Types</strong>: In the 80286 and later x86 processors, there are different types of descriptors, including:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Segment Descriptors</strong>: These descriptors define memory segments such as code segments, data segments, and stack segments. They specify the base address of the segment and its limit, along with various attributes like segment type, privilege level, and access rights.</li>
+<li><strong>Gate Descriptors</strong>: These descriptors are used for defining gates, such as task gates, call gates, and interrupt gates. They control transitions between privilege levels and are used for task switching and handling interrupts.</li>
+</ol>
+<p><strong>Logical to Physical Address Conversion</strong>: In the 80286 microprocessor&#8217;s protected mode, logical addresses generated by the CPU are converted to physical addresses using descriptors. Here&#8217;s how the conversion process works:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Segment Selection</strong>:
+<ul style="list-style-type: square;">
+<li>When a program executes in protected mode, it uses segment registers (e.g., CS, DS, SS) to store segment selectors.</li>
+<li>The segment selector is an index or pointer to a descriptor table called the Global Descriptor Table (GDT) or the Local Descriptor Table (LDT).</li>
+<li>The CPU uses the segment selector to access a descriptor in the GDT or LDT.</li>
+</ul>
+</li>
+<li><strong>Descriptor Lookup</strong>:
+<ul style="list-style-type: square;">
+<li>The selected descriptor contains information about the memory segment, including its base address, limit, privilege level, and access rights.</li>
+<li>The base address specifies where the segment starts in physical memory.</li>
+</ul>
+</li>
+<li><strong>Logical to Linear Address Conversion</strong>:
+<ul style="list-style-type: square;">
+<li>The logical address generated by the CPU consists of an offset within the segment and the segment selector.</li>
+<li>The CPU adds the offset to the base address from the descriptor to calculate the linear address (also known as the &#8220;effective address&#8221;).</li>
+</ul>
+</li>
+<li><strong>Access Rights and Privilege Checking</strong>:
+<ul style="list-style-type: square;">
+<li>Before granting access to the memory location, the CPU checks the access rights specified in the descriptor (e.g., read, write, execute permissions).</li>
+<li>The CPU also checks the privilege level of the current code segment and the privilege level specified in the descriptor to ensure that the access is allowed.</li>
+</ul>
+</li>
+<li><strong>Linear to Physical Address Conversion</strong>:
+<ul style="list-style-type: square;">
+<li>The linear address is converted to a physical address using the Memory Management Unit (MMU).</li>
+<li>The MMU handles tasks such as paging (if enabled), address translation, and memory protection checks.</li>
+<li>The result is the physical address used for actual memory access.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, descriptors in the 80286 microprocessor (and later x86 processors) define memory segments and contain the necessary information for logical to physical address translation and access control. They play a critical role in memory management and protection in the protected mode of the x86 architecture.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is mean by addressing mode? Explain different addressing modes in 8085 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25365" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_145927_CamScanner.jpg" alt="" width="910" height="1224"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25366" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_150004_CamScanner.jpg" alt="" width="912" height="1433"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25367" src="https://hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230925_150047_CamScanner.jpg" alt="" width="921" height="421"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are various functional units of 80386 microprocessor? Explain function of each unit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-25369" src="https://hamrocsit.com/wp-content/uploads/2023/09/ar.jpg" alt="" width="511" height="273"></p>
+<p>Basically, it has 5 functional units which are as follows:<br />
+1. Bus Interface Unit<br />
+2. Code Fetch Unit<br />
+3. Instruction Decode Unit<br />
+4. Execution Unit<br />
+5. Memory Management Unit</p>
+<p><strong>1. Bus Interface Unit</strong></p>
+<p>The bus interface unit or BIU holds a 32-bit bidirectional data bus as well as a 32- bit address bus. Whenever a need for instruction or a data fetch is generated by the system then the BIU generates signals (according to the priority) for activating the data and address bus in order to fetch the data from the desired address. The BIU connects the peripheral devices through the memory unit and also controls the interfacing of external buses with the coprocessors.</p>
+<p><strong>2. Code Prefetch Unit</strong></p>
+<p>This unit fetches the instructions stored in the memory by making use of system buses. Whenever the system generates a need for instruction then the code prefetch unit fetches that instruction from the memory and stores it in a 16-byte prefetch queue. So to speed up the operation this unit fetches the instructions in advance and the queue stores these instructions. The sequence in which the instructions are fetched and gets stored in the queue depends on the order they exist in the memory. As this unit fetches one double word in a single access. So, in such a case, it is not necessary that each time only a single instruction will be fetched, as the fetched instruction can be parts of two different instructions. It is to be noted here that, code prefetching holds lower priority than data transferring. As whenever a need for data transfer is generated by the system then immediately the code prefetcher leaves control over the buses. So that the BIU can transfer the required data. But prefetching of instruction and storing it in the queue reduces the wait for the upcoming instruction to almost zero.</p>
+<p><strong>3. Instruction Decode Unit</strong></p>
+<p>We know that instructions in the memory are stored in the form of bits. So, this unit decodes the instructions stored in the prefetch queue. Basically the decoder changes the machine language code into assembly language and transfers it to the processor for further execution.</p>
+<p><strong>4. Execution Unit</strong></p>
+<p>The decoded instructions are stored in the decoded instruction queue. So, these instructions are provided to the execution unit in order to execute the instructions.The execution unit controls the execution of the decoded instructions. This unit has a 32-bit ALU, that performs the operation over 32 bit data in one cycle. Also, it consists of 8 general purpose as well as 8 special purpose registers. These are used for data handling and calculation of offset address.</p>
+<p><strong>5. Memory Management Unit</strong></p>
+<p>This unit has two separate units within it. These are</p>
+<p>1. Segmentation Unit and</p>
+<p>2. Paging Unit</p>
+<p><strong>Segmentation unit:</strong> The segmentation unit plays a vital role in the 80836 microprocessor. It offers a protection mechanism in order to protect the code or data present in the memory from application programs. It gives 4 level protection to the data or code present in the memory. Every information in the memory is assigned a privilege level from PL0 to PL3. Here, PL0 holds the highest priority and PL3 holds the lowest priority. Suppose a file (either data or code) is needed to be accessed is stored in the memory at PL0. Then only those programs which are working at PL0 would be able to access that file. While other programs will not be able to access the same. Also, if a file is present at PL1, then programs of PL0 and PL1 both can access it. As PL0 has a higher priority than PL1. So, for protection purposes, the main part of the OS is stored in PL0 while PL3 holds the user programs. Providing protection to the data or code inside the system is the most advantageous factor that was first given by the 80386 microprocessor.</p>
+<p><strong>Paging Unit:</strong> The paging unit operates only in protected mode and it changes the linear address into a physical address. As the programmer only provides the virtual address and not the physical address. The segmentation unit controls the action of the paging unit, as the segmentation unit has the ability to convert the logical address into the linear address at the time of executing an instruction. Basically, it changes the overall task map into pages and each page has a size of 4K. This allows the handling of tasks in the form of pages rather than segments. The paging unit supports multitasking. This is so because the physical memory is not required to hold the whole segment of any task. Despite this, only that part of the segment which is needed to be currently executed must be stored in that memory whose physical address is calculated by the paging unit. This resultantly reduces the memory requirement and hence this frees the memory for other tasks. Thus by this we get an effective way for managing the memory to support multitasking.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are different modes of parallel I/O? Differentiate between synchronous serial communication and asynchronous serial communication.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Modes of Parallel I/O</strong>:</p>
+<p>Parallel I/O refers to the transfer of multiple bits of data simultaneously over multiple data lines. There are several modes of parallel I/O, each with its own characteristics:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Simplex Mode</strong>:
+<ul style="list-style-type: square;">
+<li>In simplex mode, data flows in one direction only, from the sender to the receiver.</li>
+<li>This mode is suitable for applications where data transmission is unidirectional, such as broadcasting.</li>
+</ul>
+</li>
+<li><strong>Half-Duplex Mode</strong>:
+<ul style="list-style-type: square;">
+<li>Half-duplex mode allows data transmission in both directions, but not simultaneously.</li>
+<li>Communication alternates between transmitting and receiving, like a walkie-talkie.</li>
+</ul>
+</li>
+<li><strong>Full-Duplex Mode</strong>:
+<ul style="list-style-type: square;">
+<li>Full-duplex mode enables simultaneous data transmission in both directions.</li>
+<li>This mode is commonly used in two-way communication systems, such as telephone lines and computer networks.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Synchronous Serial Communication vs. Asynchronous Serial Communication</strong>:</p>
+<p><strong>Synchronous Serial Communication</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Clock Signal</strong>:
+<ul style="list-style-type: square;">
+<li>Synchronous communication relies on a shared clock signal between the sender and receiver.</li>
+<li>Data is transmitted and sampled at specific clock edges, ensuring precise timing.</li>
+</ul>
+</li>
+<li><strong>Timing and Synchronization</strong>:
+<ul style="list-style-type: square;">
+<li>Data is synchronized using the clock signal, ensuring that sender and receiver are in sync.</li>
+<li>Precise timing is crucial for reliable data transmission.</li>
+</ul>
+</li>
+<li><strong>Data Rate</strong>:
+<ul style="list-style-type: square;">
+<li>The data rate is predetermined and consistent, as it is synchronized with the clock.</li>
+<li>High data rates are achievable in synchronous communication.</li>
+</ul>
+</li>
+<li><strong>Complexity</strong>:
+<ul style="list-style-type: square;">
+<li>Implementing synchronous communication requires more complex hardware and software due to the need for clock synchronization.</li>
+</ul>
+</li>
+<li><strong>Examples</strong>:
+<ul style="list-style-type: square;">
+<li>Examples of synchronous communication include SPI (Serial Peripheral Interface) and I2C (Inter-Integrated Circuit) communication protocols.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Asynchronous Serial Communication</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>No Shared Clock</strong>:
+<ul style="list-style-type: square;">
+<li>Asynchronous communication does not require a shared clock signal.</li>
+<li>Data is transmitted character by character, with start and stop bits framing each character.</li>
+</ul>
+</li>
+<li><strong>Timing and Synchronization</strong>:
+<ul style="list-style-type: square;">
+<li>Data is not synchronized by a shared clock but relies on the sender and receiver using the same baud rate (bits per second).</li>
+<li>Start and stop bits provide synchronization at the character level.</li>
+</ul>
+</li>
+<li><strong>Data Rate</strong>:
+<ul style="list-style-type: square;">
+<li>The data rate is variable and can be set independently by the sender and receiver.</li>
+<li>Typically used for lower-speed communication.</li>
+</ul>
+</li>
+<li><strong>Simplicity</strong>:
+<ul style="list-style-type: square;">
+<li>Asynchronous communication is simpler to implement, both in hardware and software, compared to synchronous communication.</li>
+</ul>
+</li>
+<li><strong>Examples</strong>:
+<ul style="list-style-type: square;">
+<li>Examples of asynchronous communication include UART (Universal Asynchronous Receiver-Transmitter) communication often used for serial ports on computers and microcontrollers.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. RS-232</p>
+<p>b. Interrupts</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. RS-232 (Recommended Standard 232)</strong>:</p>
+<p>RS-232, also known as RS-232C or EIA-232, is a standard for serial communication that was introduced by the Electronic Industries Association (EIA) in the 1960s. It defines the electrical and mechanical characteristics of a serial communication interface, primarily used for connecting devices like computers, modems, printers, and other peripherals.</p>
+<p>Key characteristics and features of RS-232 include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Voltage Levels</strong>: RS-232 defines voltage levels for logic 0 and logic 1. Traditionally, a positive voltage represents a logic 0, while a negative voltage represents a logic 1.</li>
+<li><strong>DTE and DCE</strong>: Devices connected via RS-232 are classified into Data Terminal Equipment (DTE) and Data Communication Equipment (DCE). DTE devices, such as computers, are typically the data source or destination, while DCE devices, like modems, serve as intermediaries for data transmission.</li>
+<li><strong>Connectors</strong>: RS-232 connectors often use a 9-pin or 25-pin D-sub connector. The 9-pin version is more common for modern equipment.</li>
+<li><strong>Baud Rate</strong>: RS-232 specifies a range of baud rates (data rates) for communication. Common baud rates include 9600, 19200, and 115200 bits per second (bps).</li>
+<li><strong>Asynchronous Communication</strong>: RS-232 is commonly used for asynchronous serial communication, where start and stop bits are used to frame each data byte.</li>
+<li><strong>Flow Control</strong>: RS-232 supports hardware flow control (RTS/CTS) and software flow control (XON/XOFF) to manage the flow of data between devices.</li>
+</ul>
+<p>Despite its age and limitations (limited range, susceptibility to noise, and voltage levels), RS-232 remains in use in some applications, especially for connecting legacy equipment and configuring or debugging electronic devices.</p>
+<p><strong>b. Interrupts</strong>:</p>
+<p>Interrupts are a fundamental concept in computer architecture and operating systems. They are a mechanism that allows a hardware device or a software process to interrupt the normal flow of program execution and request the CPU&#8217;s attention to handle a specific event or condition. Interrupts are essential for multitasking, I/O handling, and real-time processing in modern computer systems.</p>
+<p>Key points about interrupts include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Types of Interrupts</strong>: There are several types of interrupts, including hardware interrupts (triggered by external devices), software interrupts (triggered by software instructions), and exceptions (triggered by exceptional conditions like divide-by-zero or invalid memory access).</li>
+<li><strong>Interrupt Vector</strong>: Each interrupt is associated with a unique interrupt vector or interrupt service routine (ISR). When an interrupt occurs, the CPU looks up the corresponding ISR in a table and transfers control to that routine.</li>
+<li><strong>Priority</strong>: Some systems support interrupt priorities, allowing higher-priority interrupts to preempt lower-priority ones.</li>
+<li><strong>Interrupt Handling</strong>: When an interrupt occurs, the CPU saves its current state, including the program counter and register values, before executing the ISR. After handling the interrupt, the CPU restores its previous state and resumes normal program execution.</li>
+<li><strong>Interrupt Controllers</strong>: Complex systems often use interrupt controllers (e.g., PIC or APIC) to manage multiple interrupt sources and prioritize them.</li>
+<li><strong>Interrupt Latency</strong>: Interrupt latency is the time it takes for the CPU to respond to an interrupt. Minimizing interrupt latency is crucial for real-time systems.</li>
+<li><strong>Masking and Disabling Interrupts</strong>: Interrupts can be masked or disabled to prevent them from being serviced temporarily. This is useful in critical sections of code or when certain conditions must be met before allowing interrupts.</li>
+</ul>
+<p>Interrupts are a powerful tool for handling asynchronous events in computer systems, ensuring efficient and responsive interaction with external devices and managing concurrent execution of multiple processes or tasks.</p>
+</div>
+</body></html>

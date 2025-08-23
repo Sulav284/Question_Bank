@@ -1,0 +1,286 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions:</h2><h3>Question 1</h3>
+<div><p><p>What do you understand by measures of dispersion? What are the different measures of depression? The following table shows the data of time taken (in seconds) for completing each one of the series of 80 similar chemical experiments.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Time(s)</td>
+<td>50-60</td>
+<td>61-65</td>
+<td>66-70</td>
+<td>71-75</td>
+<td>76-78</td>
+</tr>
+<tr>
+<td>Number of experiments</td>
+<td>8</td>
+<td>12</td>
+<td>28</td>
+<td>22</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calculate mean time experiments, standard deviation, and variance and comment on your result.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Measures of dispersion are statistical measures that describe the spread or variability of a set of data values. Dispersion is the degree to which data is scattered or spread out around its central tendency (mean, median or mode). Measures of dispersion provide information about the degree of variation in a dataset and can help in comparing different datasets.</p>
+<p>Some common measures of dispersion include:</p>
+<p>Range: The difference between the maximum and minimum values in a dataset.<br />
+Variance: A measure of how far the values in a dataset are from the mean.<br />
+Standard deviation: The square root of the variance, and another measure of how far the values in a dataset are from the mean.<br />
+Interquartile range: The range between the 25th and 75th percentiles in a dataset, which contains the middle 50% of the data.<br />
+Mean absolute deviation: The average distance of each data point from the mean.<br />
+These measures of dispersion can be useful in providing a more complete picture of a dataset and can be used in conjunction with measures of central tendency to provide a more comprehensive analysis of the data.<br />
+<img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/1_11.jpg" alt="" width="1502" height="2200" class="alignnone size-full wp-image-12837"></p>
+<p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/1_21.jpg" alt="" width="1469" height="2200" class="alignnone size-full wp-image-12838"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the assumptions of Pearson’s correlation? Bradford Electric Illuminating is studying the relationship between kilowatt-hours (thousands) used and the number of rooms in private single-family residences. A random sample of 5 houses yields the following.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Number of rooms</td>
+<td>11</td>
+<td>10</td>
+<td>14</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Kilowatts-hours(thousands) used</td>
+<td>9</td>
+<td>8</td>
+<td>11</td>
+<td>5</td>
+<td>9</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Find the correlation coefficient between the number of rooms and kilowatts-hours used. Interpret the result.</li>
+<li>Determine the regression equation of kilowatts hours used on the number of rooms. Interpret the value of the regression coefficient.</li>
+<li>Estimate the kilowatts-hours used for an 8 rooms house.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pearson&#8217;s correlation coefficient measures the linear relationship between two continuous variables. The assumptions of Pearson&#8217;s correlation include:</p>
+<p>Linearity: The relationship between the two variables is linear. In other words, the scatterplot of the two variables should show a roughly straight-line pattern.</p>
+<p>Normality: Both variables are normally distributed. This means that the distribution of scores for each variable follows a normal distribution.</p>
+<p>Homoscedasticity: The variance of scores for each variable is equal across all levels of the other variable. In other words, the spread of scores should be roughly the same for all levels of the other variable.</p>
+<p>Independence: The observations of each variable are independent of one another. This means that the value of one observation should not be influenced by the value of another observation.</p>
+<p>Interval or ratio measurement: Both variables are measured on an interval or ratio scale. This means that the difference between any two values is meaningful and consistent across the range of possible values.</p>
+<p>Violations of these assumptions can lead to inaccurate results when calculating the Pearson correlation coefficient.<br />
+<img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q__2_11.jpg" alt="" width="1678" height="2200" class="alignnone size-full wp-image-12844"></p>
+<p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q__2_21.jpg" alt="" width="1499" height="2200" class="alignnone size-medium wp-image-12845"></p>
+<p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q__2_31.jpg" alt="" width="1700" height="1423" class="alignnone size-medium wp-image-12846"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Under what conditions Binomial distribution tends to Poisson distribution? The number of telephone calls received during the month of May is summarized in the following table.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Number of telephone calls per day</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Number of days</td>
+<td>8</td>
+<td>12</td>
+<td>18</td>
+<td>13</td>
+<td>9</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fit the Poisson distribution.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Binomial distribution tends to the Poisson distribution under the following conditions:</p>
+<p>The number of trials in the Binomial distribution is very large (n → ∞).<br />
+The probability of success in each trial (p) is very small (p → 0).<br />
+The product of n and p remains constant (np = λ).<br />
+Under these conditions, the Binomial distribution becomes increasingly difficult to compute, and the Poisson distribution provides a simpler and more convenient approximation.</p>
+<p>The Poisson distribution is a limiting case of the Binomial distribution, where the number of trials becomes very large and the probability of success becomes very small, such that the expected number of successes remains constant. The Poisson distribution describes the probability of a given number of events occurring in a fixed interval of time, when the events occur independently and at a constant rate.</p>
+<p>In practice, the Poisson distribution is often used as an approximation of the Binomial distribution in situations where the conditions above are satisfied, such as in rare events or in the analysis of large datasets. However, it is important to note that the Poisson distribution may not be an accurate approximation if these conditions are not met.</p>
+<p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q_3_11.jpg" alt="" width="1520" height="2200" class="alignnone size-full wp-image-12842"></p>
+<p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q_3_21.jpg" alt="" width="1700" height="1289" class="alignnone size-medium wp-image-12843"></p>
+</div>
+<h2>Group B: Attempt any EIGHT questions:</h2><h3>Question 4</h3>
+<div><p><p>The following table shows the marks obtained by 130 students in computer science.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Marks</td>
+<td>less than 40</td>
+<td>40-50</td>
+<td>50-60</td>
+<td>60-70</td>
+<td>70-80</td>
+<td>80 or above</td>
+</tr>
+<tr>
+<td>No. of students</td>
+<td>14</td>
+<td>24</td>
+<td>36</td>
+<td>25</td>
+<td>20</td>
+<td>11</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Find the appropriate measure of central tendency.</li>
+<li>Compute the minimum marks obtained by the top 20% of students.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/q_4_11.jpg" alt="" width="1566" height="2200" class="alignnone size-full wp-image-12841"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Two batsmen A and B made the following runs in a series of cricket matches.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>A</td>
+<td>10</td>
+<td>0</td>
+<td>56</td>
+<td>80</td>
+<td>24</td>
+</tr>
+<tr>
+<td>B</td>
+<td>36</td>
+<td>37</td>
+<td>45</td>
+<td>28</td>
+<td>29</td>
+</tr>
+</tbody>
+</table></div>
+<p>Who is a more consistent player, and why?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" src="https://hamrocsit.com/wp-content/uploads/2023/03/5_11.jpg" alt="" width="1645" height="2200" class="alignnone size-full wp-image-12839"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define conditional probability. A problem of statistics is given to three students. A, B, and C whose chances of solving the problem are in a ratio of 2:3:5. Find the probability that (i) non of them solve the problem (ii) the problem will be solved.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Conditional probability is the probability of an event occurring given that another event has occurred. It is denoted by P(A | B), where A and B are events.</p>
+<p>In the given problem, let the probability of solving the problem by students A, B, and C be P(A), P(B), and P(C) respectively. It is given that their chances of solving the problem are in a ratio of 2:3:5, which means:</p>
+<p>P(A) : P(B) : P(C) = 2 : 3 : 5</p>
+<p>We can find the probability of each student not solving the problem by subtracting their probabilities of solving the problem from 1, as follows:</p>
+<p>P(not A) = 1 &#8211; P(A) = 1 &#8211; (2 / 10) = 0.8 P(not B) = 1 &#8211; P(B) = 1 &#8211; (3 / 10) = 0.7 P(not C) = 1 &#8211; P(C) = 1 &#8211; (5 / 10) = 0.5</p>
+<p><span style="text-decoration: underline;"><strong>(i) To find the probability that none of them solve the problem:</strong></span></p>
+<p>we can use the multiplication rule of probability, which states that the probability of two or more independent events occurring together is the product of their individual probabilities. Since the probabilities of the three students solving the problem are independent of each other, we can find the probability that none of them solve the problem by multiplying their probabilities of not solving the problem, as follows:</p>
+<p>P(none of them solve the problem) = P(not A) * P(not B) * P(not C) = 0.8 * 0.7 * 0.5 = 0.28</p>
+<p>Therefore, the probability that none of them solve the problem is 0.28.</p>
+<p><span style="text-decoration: underline;"><strong>(ii) To find the probability that the problem will be solved:</strong></span></p>
+<p>we can use the complement rule of probability, which states that the probability of an event occurring is equal to 1 minus the probability of the event not occurring. In this case, the event of the problem being solved is the complement of the event of none of them solving the problem. Therefore, we can find the probability that the problem will be solved as follows:</p>
+<p>P(the problem will be solved) = 1 &#8211; P(none of them solve the problem) = 1 &#8211; 0.28 = 0.72</p>
+<p>Therefore, the probability that the problem will be solved is 0.72.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>A factory has three machines M1, M2, and M3 producing a large number of computer chips. Of the total daily production of items, 50% is produced on M1, 20% on M2, and 30% on M3. Records show that 4% of chips produced on M1 are defective. 2% produced of chips produced on M2 are defective and 2.5% of chips produced on M3 are defective. The occurrence of a defective chip is independent of all other chips. One chip is chosen at random from a day’s total production.</p>
+<ol>
+<li>Show that the probability of being defective is 0.0315</li>
+<li>Given that it is defective, find the probability that was produced on machine M1.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>To find the probability of a randomly chosen chip being defective, we can use the law of total probability, which states that the probability of an event can be found by summing the probabilities of the event occurring under each possible condition or scenario. In this case, we can consider the three machines as the conditions, and calculate the probability of a chip being defective under each machine.</p>
+<p>Let D be the event that the chip is defective, and let M1, M2, and M3 be the events that the chip was produced on machines M1, M2, and M3 respectively. Then, we have:</p>
+<p>P(M1) = 0.5, P(M2) = 0.2, P(M3) = 0.3 P(D|M1) = 0.04, P(D|M2) = 0.02, P(D|M3) = 0.025</p>
+<p>Using the law of total probability, the probability of a randomly chosen chip being defective is:</p>
+<p>P(D) = P(D|M1)P(M1) + P(D|M2)P(M2) + P(D|M3)P(M3) = 0.04 x 0.5 + 0.02 x 0.2 + 0.025 x 0.3 = 0.0315</p>
+<p>Therefore, the probability of a randomly chosen chip being defective is 0.0315.</p>
+<p>To find the probability that the defective chip was produced on machine M1, we can use Bayes&#8217; theorem, which states that the probability of an event given another event can be found by multiplying the probability of the second event given the first event by the probability of the first event, and dividing the result by the probability of the second event. In this case, we want to find the probability of the chip being produced on machine M1 given that it is defective, which can be written as P(M1|D).</p>
+<p>Using Bayes&#8217; theorem, we have:</p>
+<p>P(M1|D) = P(D|M1)P(M1) / P(D) = 0.04 x 0.5 / 0.0315 = 0.6349</p>
+<p>Therefore, the probability that the defective chip was produced on machine M1 is 0.6349 or approximately 0.635.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>A coin is tossed two times and if X denotes the number of heads obtained, find (i) E(x) (ii) E(X<sup>2</sup>) (iii) V(X) (iv) E(2X<sup>2</sup> + 3x – 5)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When a coin is tossed two times, the possible outcomes are: {HH, HT, TH, TT}, where H represents heads and T represents tails.</p>
+<p>We can represent the number of heads obtained as a random variable X, where X can take on the values 0, 1, or 2.</p>
+<p><strong>(i) To find the expected value E(X), we use the formula:</strong></p>
+<p>E(X) = ∑x P(X=x) x</p>
+<p>where the summation is taken over all possible values of X and P(X=x) is the probability of X taking on the value x.</p>
+<p>In this case, we have:</p>
+<p>P(X=0) = P(TT) = 1/4 P(X=1) = P(HT or TH) = 2/4 P(X=2) = P(HH) = 1/4</p>
+<p>Therefore, we have:</p>
+<p>E(X) = (1/4)×0 + (2/4)×1 + (1/4)×2 = 1</p>
+<p>So, the expected number of heads obtained is 1.</p>
+<p><strong>(ii) To find the second moment E(X^2), we use the formula:</strong></p>
+<p>E(X^2) = ∑x P(X=x) x^2</p>
+<p>In this case, we have:</p>
+<p>E(X^2) = (1/4)×0^2 + (2/4)×1^2 + (1/4)×2^2 = 3/2</p>
+<p><strong>(iii) To find the variance V(X), we use the formula:</strong></p>
+<p>V(X) = E(X^2) &#8211; [E(X)]^2</p>
+<p>In this case, we have:</p>
+<p>V(X) = (3/2) &#8211; 1^2 = 1/2</p>
+<p>So, the variance of the number of heads obtained is 1/2.</p>
+<p><strong>(iv) To find E(2X^2 + 3X &#8211; 5), we use the linearity of expectation:</strong></p>
+<p>E(2X^2 + 3X &#8211; 5) = 2E(X^2) + 3E(X) &#8211; 5</p>
+<p>Plugging in the values we found earlier, we get:</p>
+<p>E(2X^2 + 3X &#8211; 5) = 2×(3/2) + 3×1 &#8211; 5 = 2</p>
+<p>So, the expected value of 2X^2 + 3X &#8211; 5 is 2.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>The mean and variance of the number of flights arriving late in a day are 2 and 1.6 respectively. Assuming binomial distribution, are those values consistent? If yes, find the probability that (i) none of the flights are late today and (ii) at least one flight is late today.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the number of flights arriving late in a day follows a binomial distribution, the mean and variance can be expressed as:</p>
+<p>mean = np variance = np(1-p)</p>
+<p>where n is the number of trials (number of flights in this case), and p is the probability of a flight arriving late.</p>
+<p>From the given information, we have:</p>
+<p>mean = 2 variance = 1.6</p>
+<p>Using the formulas above, we can solve for n and p:</p>
+<p>np = 2 np(1-p) = 1.6</p>
+<p>From the first equation, we get:</p>
+<p>p = 2/n</p>
+<p>Substituting this into the second equation, we get:</p>
+<p>2(1-2/n) = 1.6</p>
+<p>Simplifying, we get:</p>
+<p>n = 10 p = 0.2</p>
+<p>Therefore, the values are consistent with a binomial distribution.</p>
+<p>Now, using the binomial distribution with n = 10 and p = 0.2, we can find the probabilities:</p>
+<p>(i) P(X=0) = (10 choose 0) (0.2)^0 (0.8)^10 = 0.1074 Therefore, the probability that none of the flights are late today is 0.1074.</p>
+<p>(ii) P(X&gt;=1) = 1 &#8211; P(X=0) = 1 &#8211; 0.1074 = 0.8926 Therefore, the probability that at least one flight is late today is 0.8926.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What do you mean by normal distribution? From a batch of 10000, the lifetime of laptop batteries has a normal distribution with a mean of 40 months and a standard deviation of 8 months. What is the probability that a laptop selected at random will have life time (i) more than 50 months? (ii) between 40 and 50 months?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Normal distribution is a continuous probability distribution that describes the probability of a random variable taking on a range of values, usually represented by a bell-shaped curve.</p>
+<p>In the case of laptop batteries, if the lifetime of batteries follows a normal distribution with a mean of 40 months and a standard deviation of 8 months, we can use the properties of the normal distribution to answer the following questions:</p>
+<p>(i) The probability that a laptop selected at random will have a lifetime of more than 50 months can be calculated as follows:</p>
+<p>Z = (X &#8211; μ) / σ where X is the random variable (lifetime of a laptop battery), μ is the mean, σ is the standard deviation, and Z is the standard normal score.</p>
+<p>Z = (50 &#8211; 40) / 8 = 1.25</p>
+<p>Using a standard normal table or calculator, we can find the probability that Z is greater than 1.25, which is approximately 0.1056.</p>
+<p>Therefore, the probability that a laptop selected at random will have a lifetime of more than 50 months is 0.1056.</p>
+<p>(ii) The probability that a laptop selected at random will have a lifetime between 40 and 50 months can be calculated as follows:</p>
+<p>Z1 = (40 &#8211; 40) / 8 = 0 Z2 = (50 &#8211; 40) / 8 = 1.25</p>
+<p>Using a standard normal table or calculator, we can find the probability that Z is between 0 and 1.25, which is approximately 0.3944.</p>
+<p>Therefore, the probability that a laptop selected at random will have a lifetime between 40 and 50 months is 0.3944.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What do you understand by sampling? Differentiate between a simple random variable and stratified random sampling.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When one by one study of all units of a population is not possible due to some factors like time, cost, manpower, resources, and the destructive nature of the study, we take a small representative part of the population for the study. This small representative part selected for the study from the population is called a sample.</p>
+<p>The process of selecting a sample from a population is called sampling.</p>
+<p>For Example, A pathologist takes a syringe of blood as a sample to find out a disease.</p>
+<p><span style="text-decoration: underline;"><strong>Differentiate between a simple random variable and stratified random sampling:</strong></span></p>
+<p>A simple random variable and stratified random sampling are two different concepts in statistics that are used for different purposes.</p>
+<p>A simple random variable is a random variable that represents the value of a particular characteristic in a random sample of data. In other words, it is a random variable that is derived from a simple random sample, where every element in the population has an equal chance of being selected. The simple random variable represents a summary of the data and is used to make inferences about the population.</p>
+<p>On the other hand, stratified random sampling is a sampling technique where the population is divided into strata or subgroups based on some characteristic (such as age, gender, income, etc.), and then a simple random sample is selected from each stratum. Stratified random sampling ensures that each subgroup in the population is represented in the sample, which can help to reduce sampling error and increase the precision of estimates.</p>
+<p>The key difference between a simple random variable and stratified random sampling is that the former is a summary statistic derived from a simple random sample, while the latter is a sampling technique used to select a representative sample from subgroups or strata of the population.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write notes on any two:</p>
+<ol>
+<li>Nominal and ordinal scale</li>
+<li>Kurtosis</li>
+<li>Five number summary</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>(i) Nominal and ordinal scale:</strong></span></p>
+<p>Nominal and ordinal scales are two types of categorical scales used in statistics.</p>
+<p>Nominal scale: This is the simplest type of scale where data are grouped into categories that do not have any inherent order or ranking. Examples include gender, race, religion, etc. Nominal data can only be described using frequency counts and percentages.</p>
+<p>Ordinal scale: This type of scale has categories that are ordered or ranked, but the differences between categories are not equal. Examples include ratings of satisfaction, degree of agreement, etc. Ordinal data can be described using frequency counts and percentages, as well as measures of central tendency like the median.</p>
+<p><span style="text-decoration: underline;"><strong>(ii) Kurtosis:</strong></span></p>
+<p>Kurtosis is a measure of the shape of the distribution of a random variable. It measures the degree to which the distribution is peaked or flat compared to the normal distribution. A distribution with a high kurtosis value has a sharp peak and heavy tails, while a distribution with a low kurtosis value has a flat peak and light tails. There are three types of kurtosis:</p>
+<ul style="list-style-type: square;">
+<li>Mesokurtic: This is the normal distribution, where the kurtosis value is 0.</li>
+<li>Leptokurtic: This is a distribution with a high kurtosis value, where the peak is sharp and the tails are heavy.</li>
+<li>Platykurtic: This is a distribution with a low kurtosis value, where the peak is flat and the tails are light.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>(iii) Five-number summary:</strong></span></p>
+<p>The five-number summary is a descriptive statistic used to summarize the distribution of a dataset. It consists of five values: minimum, maximum, median, and the first and third quartiles. The first quartile (Q1) is the value below which 25% of the data fall, while the third quartile (Q3) is the value below which 75% of the data fall. The interquartile range (IQR) is the difference between Q3 and Q1, and it gives a measure of the spread of the middle 50% of the data. The five-number summary is particularly useful in identifying outliers and for comparing distributions of different datasets.</p>
+</div>
+</body></html>

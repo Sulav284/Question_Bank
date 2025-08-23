@@ -1,0 +1,458 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CDC Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>CDC Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Differentiate between one-pass and multi-pass compiler. Construct the LL(1) parsing table for the following grammar.</p>
+<p>S → ABCD</p>
+<p>A → a | ε</p>
+<p>B → b</p>
+<p>C → 0 | ε</p>
+<p>D → d | ε</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>One-pass Compiler</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Multi-pass Compiler</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">A one-pass compiler reads the source code linearly from start to finish in a single pass.</td>
+<td style="width: 50%; text-align: center; height: 24px;">A multi-pass compiler reads the source code multiple times, performing different tasks in each pass such as lexical analysis, parsing, semantic analysis, optimization, and code generation.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Due to the single pass nature, one-pass compilers have limited abilities to resolve forward references or handle complex language constructs. For example, if a function is called before it is declared, a one-pass compiler may raise an error.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Multi-pass compilers can handle complex language constructs and resolve references across the entire program because they have a broader view of the codebase.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">One-pass compilers typically require less memory since they don&#8217;t need to store intermediate representations of the entire program.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Multi-pass compilers often require more memory since they store intermediate representations and symbol tables for the entire program.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Since there&#8217;s only one pass, one-pass compilers are generally faster than multi-pass compilers.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Due to multiple passes and potentially more complex analysis and optimization phases, multi-pass compilers may take longer to compile compared to one-pass compilers.</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-32845" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240401_103440_CamScanner.jpg?resize=400%2C609&#038;ssl=1" alt="" width="400" height="609"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How does Lexical Analyzer recognize a token? Give an example to make it clear. Convert the regular expression a(a+b)(b+c)<sup>*</sup>a# to DFA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A lexical analyzer, also known as a lexer or scanner, is the first phase of a compiler or interpreter that converts a sequence of characters into a sequence of tokens. Here&#8217;s how a lexical analyzer recognizes tokens:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Input Buffering:</strong> The lexical analyzer reads the source code character by character from the input file or source buffer.</li>
+<li><strong>Lexical Rules:</strong> It applies lexical rules or regular expressions defined for the language being processed. These rules define the syntax of tokens, such as identifiers, keywords, literals (e.g., numbers, strings), operators, and punctuation.</li>
+<li><strong>Tokenization:</strong> The lexical analyzer matches the input characters against the lexical rules to identify tokens. When a match is found, the corresponding token is formed. For example:
+<ul style="list-style-type: square;">
+<li>If the characters match an identifier rule, the lexer forms an identifier token.</li>
+<li>If the characters match a keyword rule, the lexer forms a keyword token.</li>
+<li>If the characters match a number rule, the lexer forms a number token.</li>
+<li>If the characters match a string rule, the lexer forms a string token.</li>
+<li>If the characters match an operator rule, the lexer forms an operator token.</li>
+<li>If the characters match a punctuation rule, the lexer forms a punctuation token.</li>
+<li>If the characters don&#8217;t match any lexical rule, an error may be generated, or the lexer may skip or classify the characters as an unknown token.</li>
+</ul>
+</li>
+<li><strong>Token Output:</strong> As tokens are recognized, they are emitted to the parser or intermediate representation for further processing.</li>
+<li><strong>Ignoring Whitespace and Comments:</strong> The lexer typically ignores whitespace characters (spaces, tabs, newlines) and comments (if defined in the language) since they don&#8217;t contribute to the meaning of the program. However, some tokens may depend on whitespace (e.g., distinguishing between &#8220;x&#8221; as an identifier and &#8220;x&#8221; as a multiplication operator followed by another token).</li>
+<li><strong>Error Handling:</strong> If the lexer encounters invalid input or cannot match input characters to any defined token, it may report an error, recover from the error by skipping characters until it finds a valid token, or emit a special token representing an error.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-32846" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240401_103510_CamScanner.jpg?resize=400%2C641&#038;ssl=1" alt="" width="400" height="641"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Construct the LR(1) parsing table for the following grammar.</p>
+<p>S → AaAb</p>
+<p>A → BbBa</p>
+<p>A → ε</p>
+<p>B → ε</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37748" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/448441354_450906680979738_7372484858304007746_n.jpg?resize=1536%2C2048&#038;ssl=1" alt="" width="1536" height="2048"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-37751" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/448502317_1184000326354212_7512794746643738456_n-1.jpg?resize=1536%2C2048&#038;ssl=1" alt="" width="1536" height="2048"></p>
+<p>In case LR(0) was asked:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33055" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240402_124746_CamScanner.jpg?resize=348%2C365&#038;ssl=1" alt="" width="348" height="365"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33056" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240402_124813_CamScanner.jpg?resize=350%2C470&#038;ssl=1" alt="" width="350" height="470"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-33057" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240402_124832_CamScanner.jpg?resize=351%2C222&#038;ssl=1" alt="" width="351" height="222"></p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Why code optimization is needed? Describe any two techniques for loop optimization.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Code optimization</strong> is crucial for improving the performance of programs by reducing execution time, memory usage, and energy consumption while preserving or enhancing the functionality of the code.</p>
+<p>Here are two techniques for loop optimization:</p>
+<p><span style="text-decoration: underline;"><strong>Loop Unrolling</strong></span></p>
+<p>Loop unrolling is a technique that aims to reduce loop overhead by executing multiple loop iterations within a single iteration. This reduces the number of loop control instructions and improves instruction-level parallelism. Instead of executing the loop body once per iteration, loop unrolling executes multiple copies of the loop body in each iteration. For example, if the loop unrolling factor is 2, the loop body is executed twice in each iteration. This reduces the overhead of loop control instructions and loop branch conditions.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Reduces loop overhead and improves performance by increasing instruction-level parallelism.</li>
+<li>Can expose additional optimization opportunities, such as better instruction scheduling and register allocation.</li>
+</ul>
+<p><strong>Considerations:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Increased code size:</strong> Unrolling loops can increase the size of the generated code, which may impact cache performance and memory usage.</li>
+<li><strong>Unrolling factor:</strong> Choosing the optimal unrolling factor requires balancing between reduced loop overhead and increased code size.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Loop Fusion</strong></span></p>
+<p>Loop fusion is a technique that combines multiple loops into a single loop to reduce loop overhead and improve cache utilization by reducing memory access patterns. Loop fusion merges two or more consecutive loops that iterate over the same data into a single loop. This eliminates redundant loop overhead, such as loop initialization and termination, and enables better cache locality by accessing data sequentially.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Reduces loop overhead and improves cache utilization by accessing data sequentially.</li>
+<li>Eliminates redundant computations and memory accesses, leading to better performance.</li>
+</ul>
+<p><strong>Considerations:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Data dependencies:</strong> Merging loops may introduce data dependencies that restrict parallelism or require additional synchronization.</li>
+<li><strong>Loop termination conditions:</strong> Merging loops with different termination conditions may require careful adjustment to ensure correct program behavior.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is three-address code? How high level code is converted to three address code? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Three-address code</strong> is an intermediate representation of code that simplifies the process of code generation and optimization in compilers. In three-address code, each instruction has at most three operands, making it easier to analyze and manipulate during subsequent compiler phases.</p>
+<p>In three-address code, instructions typically follow the format:</p>
+<p>x = y op z</p>
+<p>where x, y, and z are operands, and op is an operator. The operands can be variables, constants, or temporary values, and the operator can be any arithmetic, logical, or assignment operation.</p>
+<p>The conversion from high-level code to three-address code involves breaking down complex expressions and statements into simpler instructions. This process often involves several steps, including:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Expression Parsing:</strong> Parse the high-level code to identify expressions and statements.</li>
+<li><strong>Building Expression Trees:</strong> Convert expressions into expression trees or abstract syntax trees (ASTs) to represent the structure of the expressions.</li>
+<li><strong>Tree Traversal:</strong> Traverse the expression trees in a suitable order (e.g., post-order traversal) to generate three-address code instructions.</li>
+<li><strong>Assignment of Temporary Variables:</strong> Introduce temporary variables to hold intermediate results of expressions.</li>
+<li><strong>Translation of Control Structures:</strong> Translate control structures such as loops and conditionals into equivalent three-address code.</li>
+</ol>
+<p>Here&#8217;s an example illustrating the conversion of a high-level expression into three-address code:</p>
+<p>High-level code:</p>
+<p>a = (b + c) * (d &#8211; e)</p>
+<p>Step 1: Parse the expression and build the AST:</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">*<br />
+/ \<br />
++ &#8211;<br />
+/ \ / \<br />
+b c d e</div>
+<div>
+<p>Step 2: Traverse the AST and generate three-address code:</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">t1 = b + c<br />
+t2 = d &#8211; e<br />
+t3 = t1 * t2<br />
+a = t3</div>
+<div>
+<p>In the three-address code:</p>
+<ul style="list-style-type: square;">
+<li>t1, t2, and t3 are temporary variables.</li>
+<li>+, -, and * are operators.</li>
+<li>b, c, d, and e are operands.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is activation tree? Define type checking system with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An activation record  is a data structure used to manage information about a single invocation of a function or procedure. When a function or procedure is called, an activation record is created to store parameters, local variables, return addresses, and other relevant information. The activation records are typically organized in a stack-like manner, with each record pointing to its caller&#8217;s activation record. An <strong>activation tree</strong> can be viewed as a hierarchical representation of the call stack, where each node represents an activation record and its associated function or procedure call.</p>
+<p>A type checking system is a fundamental component of compilers and interpreters that verifies the compatibility of types used in a program according to the rules of the programming language. The goal of type checking is to ensure that operations are performed only on operands of compatible types, thereby preventing type-related errors at runtime.</p>
+<p>A type checking system typically involves the following components:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Type Definitions:</strong> Define the types supported by the programming language, including primitive types (e.g., integers, floats, booleans) and user-defined types (e.g., structs, classes).</li>
+<li><strong>Type Inference:</strong> Determine the types of expressions and variables based on their usage in the program. Type inference can often automatically deduce the types of variables and expressions without explicit type declarations.</li>
+<li><strong>Type Compatibility Rules:</strong> Define rules for determining whether two types are compatible for a given operation or assignment. For example, addition is typically only allowed between numeric types, and assignment requires compatible types.</li>
+<li><strong>Type Promotion and Conversion:</strong> Define rules for automatically promoting or converting types to facilitate operations. For example, if an integer and a float are used in an arithmetic operation, the integer might be automatically promoted to a float.</li>
+<li><strong>Type Annotations:</strong> Optionally, allow programmers to provide explicit type annotations to enforce type constraints or improve code readability.</li>
+</ol>
+<p>Here&#8217;s an example of a type checking system in a simple programming language:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic"># Type Definitions
+int: integer
+float: floating-point number
+
+# Type Inference
+x = 5       # x has type int
+y = 3.14    # y has type float
+
+# Type Compatibility Rules
+result = x + y  # Addition requires compatible types (int and float)
+
+# Type Promotion and Conversion
+z = x + 2.0     # x is automatically promoted to a float for addition
+
+# Type Annotations
+sum: float = x + y   # Explicitly annotate sum as a float
+</pre>
+<p>In this example, the type checking system ensures that operations are performed only on compatible types and that type conversions or promotions are applied when necessary. This helps catch type-related errors early in the development process and promotes safer and more reliable code.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are the advantages of intermediate code? What types of information are provided by symbol table?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Intermediate code serves as a bridge between the high-level source code and the low-level machine code or assembly language. It offers several advantages in the compilation process:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Portability:</strong> Intermediate code is typically platform-independent, allowing the compiler to generate code for different target architectures from the same intermediate representation. This simplifies the process of cross-compilation and enables the development of language implementations that can run on various platforms without modification.</li>
+<li><strong>Optimization:</strong> Intermediate code provides a convenient and structured representation of the program, making it easier to apply optimization techniques. Compiler optimizations can be performed on the intermediate code level, such as loop optimization, constant folding, and dead code elimination, before generating the final machine code.</li>
+<li><strong>Abstraction:</strong> Intermediate code abstracts away language-specific constructs and implementation details, providing a uniform representation that simplifies subsequent compilation phases. This separation of concerns makes the compiler more modular and facilitates the addition of new language features or optimization passes.</li>
+<li><strong>Debugging:</strong> Intermediate code can aid in debugging by providing a human-readable representation of the program&#8217;s behavior. Debugging tools can analyze and manipulate the intermediate code to track program state, identify errors, and optimize performance.</li>
+<li><strong>Language Interoperability:</strong> Intermediate code can facilitate interoperability between different programming languages. For example, a compiler frontend might translate source code from multiple languages into a common intermediate representation, enabling code reuse and integration across language boundaries.</li>
+</ol>
+<p>Symbol tables are data structures used by compilers and interpreters to store information about identifiers (e.g., variables, functions, classes) encountered during the compilation or interpretation process. They provide various types of information, including:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Identifier Names:</strong> The symbol table stores the names of all identifiers declared or used in the program.</li>
+<li><strong>Data Types:</strong> For each identifier, the symbol table records its data type or type signature. This information is essential for type checking, type inference, and code generation.</li>
+<li><strong>Scopes and Visibility:</strong> Symbol tables track the scopes of identifiers and their visibility within the program. This includes information about local variables, global variables, and nested scopes.</li>
+<li><strong>Memory Locations:</strong> In compiled languages, symbol tables may store information about the memory locations or addresses associated with variables and functions. This information is crucial for generating machine code or assembly language instructions.</li>
+<li><strong>Declaration Information:</strong> For each identifier, the symbol table stores metadata about its declaration, such as the file location, line number, and scope of declaration.</li>
+<li><strong>Usage Information:</strong> Symbol tables may track how identifiers are used in the program, such as whether they are assigned values, passed as arguments to functions, or accessed in expressions.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is annotated parse tree? Define S-attributed grammar with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An <strong>annotated parse tree</strong>, also known as a syntax-directed translation scheme or attributed parse tree, is a tree-like data structure that represents the syntactic structure of a program along with additional semantic information attached to each node. In an annotated parse tree, each node corresponds to a symbol in the grammar, and the edges represent the hierarchical relationships between symbols. Additionally, annotations or attributes associated with each node provide additional information about the program&#8217;s semantics.</p>
+<p>An <strong>S-attributed grammar</strong> is a type of context-free grammar where attributes or annotations can be associated with symbols (terminals and non-terminals) and productions, and these attributes can be evaluated in a bottom-up (post-order) traversal of the parse tree. In S-attributed grammars, attributes can only depend on attributes of the node&#8217;s children and the node itself (synthesized attributes) or attributes of the node&#8217;s descendants (inherited attributes).</p>
+<p>In an S-attributed grammar, attribute evaluation can be performed during the parsing process, typically using a bottom-up parsing technique such as LR parsing. This allows for the efficient calculation of attribute values as the parse tree is constructed.</p>
+<p>Example:</p>
+<p>Consider the following grammar for simple arithmetic expressions:</p>
+<p>E -&gt; E + T | T<br />
+T -&gt; T * F | F<br />
+F -&gt; (E) | id</p>
+<p>Suppose we want to associate type information with each node in the parse tree to represent the type of the expression. We can define synthesized attributes type for non-terminals E, T, and F. The rules for computing these attributes could be as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>For non-terminal E, the type is synthesized from the types of its children:
+<ul style="list-style-type: square;">
+<li>E.type = T1.type if the production is E -&gt; E1 + T or E -&gt; T</li>
+</ul>
+</li>
+<li>For non-terminal T, the type is synthesized from the types of its children:
+<ul style="list-style-type: square;">
+<li>T.type = T1.type if the production is T -&gt; T1 * F or T -&gt; F</li>
+</ul>
+</li>
+<li>For non-terminal F, the type is directly determined based on its production:
+<ul style="list-style-type: square;">
+<li>F.type = integer if the production is F -&gt; id</li>
+<li>F.type = E.type if the production is F -&gt; (E)</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe about syntax directed translation with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Syntax-directed translation</strong> is a method used in compilers to generate intermediate code or perform other transformations based on the syntactic structure of the source code. In syntax-directed translation, translation rules or semantic actions are associated with grammar productions, allowing for the generation of code or other actions during parsing. These rules are typically specified using attributes associated with the grammar symbols and productions.</p>
+<p>Consider a simple expression grammar:</p>
+<p>E → E + T | T<br />
+T → T * F | F<br />
+F → (E) | id</p>
+<p>Now, let&#8217;s associate translation rules with each production to generate three-address code for arithmetic expressions:</p>
+<p>1. For the production E → E + T, we generate code to add the values of E and T, storing the result in a temporary variable:</p>
+<p>E.gen = new_temp() E1_code || T_code || E.gen = E1.gen + T.gen</p>
+<p>2. For the production E → T, we simply propagate the code generated for T:</p>
+<p>E.gen = T.gen</p>
+<p>3. For the production T → T * F, we generate code to multiply the values of T and F, storing the result in a temporary variable:</p>
+<p>T.gen = new_temp() T1_code || F_code || T.gen = T1.gen * F.gen</p>
+<p>4. For the production T → F, we simply propagate the code generated for F:</p>
+<p>T.gen = F.gen</p>
+<p>5. For the production F → (E), we propagate the code generated for E, as parentheses don&#8217;t affect code generation:</p>
+<p>F.gen = E.gen</p>
+<p>6. For the production F → id, we generate code to load the value of the identifier id into a temporary variable:</p>
+<p>F.gen = new_temp()<br />
+F.gen = id.value</p>
+<p>Using these translation rules, we can now generate three-address code for any arithmetic expression by parsing it using the given grammar and applying the associated semantic actions or translation rules.</p>
+<p>For example, consider the expression a + b * (c + d):</p>
+<p>Parsing the expression using the given grammar produces the following derivation:</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">E → E + T<br />
+→ T + T<br />
+→ F + T<br />
+→ id + T<br />
+→ a + T<br />
+→ a + T * F<br />
+→ a + F * F<br />
+→ a + b * F<br />
+→ a + b * (E)<br />
+→ a + b * (T + F)<br />
+→ a + b * (c + F)<br />
+→ a + b * (c + id)<br />
+→ a + b * (c + d)</div>
+<div></div>
+<div>Applying the translation rules associated with each production yields the corresponding three-address code:</div>
+<div></div>
+</div>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">t1 = b * c<br />
+t2 = t1 + d<br />
+t3 = a + t2</div>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Given the following grammar with SLR parsing table, test whether the string “int * (int + int)” will be accepted or rejected.</p>
+<p>E -> T + E……….(1)</p>
+<p>E -> T……….(2)</p>
+<p>T -> int*T……….(3)</p>
+<p>T -> int……….(4)</p>
+<p>T -> (E)……….(5)</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>STATE</td>
+<td colspan="6">ACTION</td>
+<td colspan="2">GOTO</td>
+</tr>
+<tr>
+<td></td>
+<td>int</td>
+<td>*</td>
+<td>+</td>
+<td>(</td>
+<td>)</td>
+<td>$</td>
+<td>E</td>
+<td>T</td>
+</tr>
+<tr>
+<td>1</td>
+<td>S5</td>
+<td></td>
+<td></td>
+<td>S4</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ACC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>S6</td>
+<td></td>
+<td>R2</td>
+<td>R2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>S5</td>
+<td></td>
+<td></td>
+<td>S4</td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>S8</td>
+<td>R4</td>
+<td></td>
+<td>R4</td>
+<td>R4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>S5</td>
+<td></td>
+<td></td>
+<td>S4</td>
+<td></td>
+<td></td>
+<td>9</td>
+<td>3</td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>S10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>S5</td>
+<td></td>
+<td></td>
+<td>S4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>11</td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>R1</td>
+<td>R1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>R5</td>
+<td></td>
+<td>R5</td>
+<td>R5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td></td>
+<td>R3</td>
+<td></td>
+<td>R3</td>
+<td>R3</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-32860" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/04/SmartSelect_20240401_103609_CamScanner.jpg?resize=400%2C423&#038;ssl=1" alt="" width="400" height="423"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How do you recognize basic block? Discuss about the factors that affect code generator.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Recognizing basic blocks is a crucial step in code generation and optimization within compilers. A basic block is a sequence of consecutive instructions in a program&#8217;s control flow graph that has a single entry point (the first instruction) and a single exit point (the last instruction).</p>
+<p>Several factors influence the design and efficiency of a code generator within a compiler:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Target Architecture:</strong> The architecture of the target platform significantly affects code generation. Different architectures have different instruction sets, addressing modes, and performance characteristics. The code generator needs to generate code that effectively utilizes the features of the target architecture to achieve optimal performance.</li>
+<li><strong>Optimization Goals:</strong> The optimization goals of the compiler influence the code generation strategy. Common optimization goals include minimizing code size, reducing execution time, optimizing for specific hardware features, and improving cache locality. The code generator needs to balance these goals while generating efficient code.</li>
+<li><strong>Intermediate Representation:</strong> The choice of intermediate representation (IR) impacts code generation. A well-designed IR simplifies the code generation process and enables effective optimization. Common IRs include abstract syntax trees (ASTs), three-address code, and control flow graphs (CFGs).</li>
+<li><strong>Register Allocation:</strong> Register allocation plays a crucial role in code generation, especially for architectures with limited registers. The code generator needs to allocate registers efficiently to minimize memory accesses and maximize performance. Advanced register allocation techniques such as graph coloring and linear scan can be employed to optimize register allocation.</li>
+<li><strong>Instruction Selection:</strong> Instruction selection involves choosing the appropriate machine instructions to implement high-level language constructs. This process requires matching IR patterns to sequences of machine instructions efficiently. Techniques such as pattern matching, tree rewriting, and table-driven approaches are commonly used for instruction selection.</li>
+<li><strong>Code Layout:</strong> The layout of generated code can significantly impact performance due to factors such as instruction cache behavior, branch prediction, and memory access patterns. The code generator needs to generate code with optimized layout to minimize branch penalties and improve cache utilization.</li>
+<li><strong>Target Language Features:</strong> The features and semantics of the target programming language influence code generation. Support for features such as exceptions, garbage collection, and runtime checks may require additional code generation logic and runtime support.</li>
+<li><strong>Compiler Passes:</strong> The organization and sequence of compiler passes affect code generation. Compiler passes such as optimization, scheduling, and code generation need to be coordinated to achieve optimal results. Iterative compilation techniques may be employed to refine code generation iteratively.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Find the FIRST and FOLLOW of all the non terminals in following grammar.</p>
+<p>S → aAbCD | ε</p>
+<p>A → SD | ε</p>
+<p>C → Sa</p>
+<p>D → aBD | ε</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Computing FIRST as:</p>
+<p>FIRST(S)={a,ε}</p>
+<p>FIRST(A)={a,ε}</p>
+<p>FIRST(C)={a,ε}</p>
+<p>FIRST(D)={a,ε}</p>
+<p>Computing FOLLOW as:</p>
+<p>FOLLOW(S)={a,b,$}</p>
+<p>FOLLOW(A)={b}</p>
+<p>FOLLOW(C)={a,b,$}</p>
+<p>FOLLOW(D)={a,b,$}</p>
+</div>
+</body></html>

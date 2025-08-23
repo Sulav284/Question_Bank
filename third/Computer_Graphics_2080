@@ -1,0 +1,369 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CG Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>CG Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is a Digital Differential Analyzer (DDA)? How can you draw the line using this algorithm? Trace the points on the line path between A (1,3) and B (6,7) using Bresenham’s line drawing algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Digital Differential Analyzer (DDA) is a simple and efficient algorithm used for drawing straight lines in computer graphics. It is one of the fundamental methods for line rasterization. The DDA algorithm calculates the coordinates of the points on a line segment between two given endpoints. It works by calculating the change in the x and y coordinates (the differentials) and using these to determine the next point on the line.</p>
+<p>Here&#8217;s how the DDA algorithm works for drawing a line:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Input:</strong> The two endpoints of the line segment, (x1, y1) and (x2, y2).</li>
+<li><strong>Calculate Differentials:</strong>
+<ul style="list-style-type: square;">
+<li>Calculate the change in x and y between the endpoints:
+<ul style="list-style-type: square;">
+<li>dx = x2 &#8211; x1</li>
+<li>dy = y2 &#8211; y1</li>
+</ul>
+</li>
+<li>Calculate the absolute values of dx and dy:
+<ul style="list-style-type: square;">
+<li>adx = |dx|</li>
+<li>ady = |dy|</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Determine the Number of Steps:</strong> Determine the number of steps needed to traverse the longer of the two axes (either x or y). You can use adx or ady as the basis for the number of steps. Let&#8217;s denote this as N.</li>
+<li><strong>Calculate Increment Values:</strong>
+<ul style="list-style-type: square;">
+<li>Calculate the increment values for x and y:
+<ul style="list-style-type: square;">
+<li>increment_x = dx / N</li>
+<li>increment_y = dy / N</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Plot the Points:</strong>
+<ul style="list-style-type: square;">
+<li>Start with the initial point (x1, y1).</li>
+<li>Use a loop to iterate N times. In each iteration, update the current point&#8217;s coordinates:
+<ul style="list-style-type: square;">
+<li>x = x + increment_x</li>
+<li>y = y + increment_y</li>
+</ul>
+</li>
+<li>Round the values of x and y to the nearest integer to plot the actual pixel on the screen.</li>
+</ul>
+</li>
+<li><strong>Plot the Final Point:</strong>
+<ul style="list-style-type: square;">
+<li>After the loop, you will have plotted all the points on the line between the two endpoints. The final point should be (x2, y2).</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Bresenham&#8217;s line drawing numeric</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26354" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231018_092947_CamScanner.jpg?resize=459%2C578&#038;ssl=1" alt="" width="459" height="578"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Differentiate between parallel and perspective projection with suitable diagram. Illustrate the window to viewport transformation with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 326px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Parallel Projection</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Perspective Projection</strong></td>
+</tr>
+<tr style="height: 122px;">
+<td style="width: 50%; height: 122px;">Coordinate positions are transformed to view plane along parallel lines (projection lines).</td>
+<td style="width: 50%; height: 122px;">Coordinate positions are transformed to view plane along lines (projection lines) that converges to a point called projection reference point (center of projection).</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Accurate views of various sides of an object are obtained.</td>
+<td style="width: 50%; height: 72px;">Equal sized object appears in different size according as distance from view plane.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Doesn’t give realistic representation of the appearance of the 3-D object.</td>
+<td style="width: 50%; height: 72px;">Produce realistic view.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Preserves relative proportions.</td>
+<td style="width: 50%; height: 24px;">Does not preserve relative proportions</td>
+</tr>
+<tr style="height: 12px;">
+<td style="width: 50%; height: 12px;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26336" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/par.jpg?resize=229%2C189&#038;ssl=1" alt="" width="229" height="189"></td>
+<td style="width: 50%; height: 12px;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26337" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/per.jpg?resize=606%2C198&#038;ssl=1" alt="" width="606" height="198"></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><strong>Window to viewport transformation</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26338" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/w.jpg?resize=441%2C173&#038;ssl=1" alt="" width="441" height="173"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26339" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/1-1.jpg?resize=195%2C132&#038;ssl=1" alt="" width="195" height="132"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26340" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/2-1.jpg?resize=425%2C321&#038;ssl=1" alt="" width="425" height="321"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why Liang Barsky Line Clipping Algorithm is efficient than Cohen Sutherland Algorithm? Explain the clipping procedure of Liang Barsky algorithm with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Reason for efficiency:</strong></p>
+<p>1. Cohen-Sutherland requires multiple intersection calculations: In the Cohen-Sutherland algorithm, a line is divided into several segments by identifying its endpoints as being inside or outside the clipping region. Each segment may require intersection calculations to find the points where it enters and exits the clipping region. This can lead to multiple intersection checks for a single line.</p>
+<p>2. Liang-Barsky performs fewer calculations: The Liang-Barsky algorithm uses a parameterization of the line and checks for intersections with the clipping region only once for the entire line. It calculates the values of t (parameters that define the position of points along the line) where the line intersects the boundaries of the clipping region. This reduces the number of intersection calculations compared to Cohen-Sutherland.</p>
+<p>&nbsp;</p>
+<p><strong>Liang Barsky algorithm</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Calculate the differences in x and y coordinates: dx = x2 &#8211; x1 dy = y2 &#8211; y1</li>
+<li>Initialize four parameters:
+<ul style="list-style-type: square;">
+<li>P1: t1 = 0 (corresponding to the start of the line segment)</li>
+<li>P2: t2 = 1 (corresponding to the end of the line segment)</li>
+<li>P3: p = -dx (change in x when moving from inside to outside)</li>
+<li>P4: q = x1 &#8211; xmin (change in x when moving from outside to inside)</li>
+</ul>
+</li>
+<li>Check if dx is zero. If dx is zero, it means the line is vertical. In such a case, you can apply similar calculations to y coordinates instead.</li>
+<li>Calculate the parameters for the left, right, bottom, and top edges of the clipping region, respectively:
+<ul style="list-style-type: square;">
+<li>P5: r1 = -dx (change in x when moving from inside to outside on the left edge)</li>
+<li>P6: r2 = dx (change in x when moving from inside to outside on the right edge)</li>
+<li>P7: s1 = -dy (change in y when moving from inside to outside on the bottom edge)</li>
+<li>P8: s2 = dy (change in y when moving from inside to outside on the top edge)</li>
+</ul>
+</li>
+<li>Check for intersections with the left, right, bottom, and top edges of the clipping region by finding parameter values for t1 and t2. Calculate t1 and t2 as follows:
+<p>t1 = max(t1, p / r1) t2 = min(t2, p / r2) t1 = max(t1, q / r1) t2 = min(t2, q / r2) t1 = max(t1, s / s1) t2 = min(t2, s / s2) t1 = max(t1, (1 &#8211; q) / r1) t2 = min(t2, (1 &#8211; q) / r2)</li>
+<li>After these calculations, you have the parameter values t1 and t2. If t1 &gt; t2, the line is completely outside the clipping region, and you can discard it. If t1 &lt;= t2, you can use these values to find the clipped endpoints of the line:
+<p>x1_clip = x1 + t1 * dx y1_clip = y1 + t1 * dy x2_clip = x1 + t2 * dx y2_clip = y1 + t2 * dy</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26342" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/liang-bar.jpg?resize=474%2C413&#038;ssl=1" alt="" width="474" height="413"></p>
+</div>
+<h2>Section B: Attempt any eight questions</h2><h3>Question 4</h3>
+<div><p><p>Write down algorithm steps of mid-point ellipse drawing algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li>Input the parameters of the ellipse:
+<ul style="list-style-type: square;">
+<li>Center coordinates (h, k)</li>
+<li>Major and minor axis lengths (a and b)</li>
+</ul>
+</li>
+<li>Calculate the initial values:
+<ul style="list-style-type: square;">
+<li>Calculate the squares of a and b, i.e., a^2 and b^2.</li>
+<li>Initialize two variables:
+<ul style="list-style-type: square;">
+<li>x = 0</li>
+<li>y = b</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Calculate the initial decision parameter:
+<ul style="list-style-type: square;">
+<li>Calculate the decision parameter for the first region:
+<ul style="list-style-type: square;">
+<li>P1 = b^2 &#8211; (a^2 * b) + (0.25 * a^2)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Plot the initial point:
+<ul style="list-style-type: square;">
+<li>Plot the point (x, y) with respect to the center (h, k).</li>
+</ul>
+</li>
+<li>Region 1:
+<ul style="list-style-type: square;">
+<li>For the first region (where 0 &lt;= x &lt; 2 * a^2 * b), do the following:
+<ul style="list-style-type: square;">
+<li>Increment x by 1.</li>
+<li>If P1 &lt; 0, update P1:
+<ul style="list-style-type: square;">
+<li>P1 = P1 + (b^2 * (2 * x + 1))</li>
+</ul>
+</li>
+<li>Otherwise, update both x and y, and then update P1:
+<ul style="list-style-type: square;">
+<li>Decrement y by 1.</li>
+<li>P1 = P1 + (b^2 * (2 * x + 1)) &#8211; (a^2 * 2 * y)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Region 2:
+<ul style="list-style-type: square;">
+<li>For the second region (where 2 * a^2 * b &lt;= x), do the following:
+<ul style="list-style-type: square;">
+<li>Decrement y by 1.</li>
+<li>If P2 &gt; 0, update P2:
+<ul style="list-style-type: square;">
+<li>P2 = P2 &#8211; (a^2 * 2 * y + 1)</li>
+</ul>
+</li>
+<li>Increment x by 1.</li>
+<li>Update P2:
+<ul style="list-style-type: square;">
+<li>P2 = P2 + (b^2 * (2 * x + 1))</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Repeat steps 5 and 6 until x becomes equal to or greater than a.</li>
+<li>Region 3:
+<ul style="list-style-type: square;">
+<li>Once x becomes greater than or equal to a, complete the ellipse in the third region, as follows:
+<ul style="list-style-type: square;">
+<li>Increment y by 1.</li>
+<li>Decrement x by 1.</li>
+<li>Update P1:
+<ul style="list-style-type: square;">
+<li>P1 = P1 &#8211; (a^2 * 2 * x + 1)</li>
+</ul>
+</li>
+<li>If P1 &gt; 0, update P1:
+<ul style="list-style-type: square;">
+<li>P1 = P1 + (b^2 * (1 &#8211; 2 * y))</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Repeat the third region until y becomes less than or equal to 0.</li>
+<li>When the algorithm completes, you will have plotted the entire ellipse based on the given parameters (h, k, a, and b). The algorithm leverages the symmetry properties of ellipses to efficiently calculate points in each region, ensuring that only a fraction of the points is computed and plotted.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the importance of filling algorithms in graphics applications. Differentiate between boundary and flood fill algorithm with algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The importance of filling algorithms in graphics applications includes:</p>
+<ol style="list-style-type:decimal;">
+<li>Rendering: Filling algorithms are crucial for rendering shapes, figures, and objects, as they provide the capability to create solid, colorful regions within those shapes. Without filling algorithms, graphics would be limited to only drawing outlines.</li>
+<li>Image Editing: In image editing software, filling algorithms allow users to apply color, gradients, and textures to selected areas. They are vital for tasks like colorizing, masking, and retouching.</li>
+<li>User Interface: User interface elements often require filled shapes, such as buttons, checkboxes, and text boxes. Filling algorithms are used to give these elements a solid, interactive appearance.</li>
+<li>Art and Design: Graphic designers use filling algorithms to apply colors and textures to digital artwork, creating detailed and visually appealing compositions.</li>
+</ol>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 51.8998%; text-align: center;"><strong>Boundary fill</strong></td>
+<td style="width: 48.1002%; text-align: center;"><strong>Flood fill</strong></td>
+</tr>
+<tr>
+<td style="width: 51.8998%;">Area filling is started inside a point with in a boundary region and fill the region with in the specified color until it reaches the boundary.</td>
+<td style="width: 48.1002%;">Area filling is started from a point and it replaces the old color with the new color.</td>
+</tr>
+<tr>
+<td style="width: 51.8998%;">Used in interactive packages where we can specify the region boundary.</td>
+<td style="width: 48.1002%;">Used when we cannot specify the region boundary.</td>
+</tr>
+<tr>
+<td style="width: 51.8998%;">Less time consuming.</td>
+<td style="width: 48.1002%;">Consumes more time.</td>
+</tr>
+<tr>
+<td style="width: 51.8998%;">Searches for boundary.</td>
+<td style="width: 48.1002%;">Searches for old color.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is virtual reality? Explain some form of virtual reality.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Virtual Reality (VR) is a technology that creates a simulated, immersive, and interactive three-dimensional environment, often using computer-generated graphics, sounds, and sometimes haptic feedback, to provide users with a sense of presence in a virtual world. VR is designed to make users feel like they are physically present in a different place or environment, even though they may be in the real world. It is typically experienced through specialized headsets and input devices that track and respond to the user&#8217;s movements, creating a highly immersive and interactive experience.</p>
+<p><strong>Fully Immersive VR:</strong> In fully immersive VR, users are completely surrounded by a virtual environment. They wear headsets that cover their field of vision, often combined with motion tracking and handheld controllers for interaction. These headsets are capable of providing a highly immersive experience that can make users feel like they are in a different world. High-end examples of fully immersive VR systems include the Oculus Rift and HTC Vive.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Reflect a line segment having end points (9,3) and (12,10) about a line X=7. Draw initial and final result graph as well.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26353" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/SmartSelect_20231018_091756_CamScanner.jpg?resize=869%2C1133&#038;ssl=1" alt="" width="869" height="1133"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain polygon surface representation using Polygon table and polygon meshes.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong>Polygon Table:</strong>
+<ul style="list-style-type: square;">
+<li>In a Polygon Table representation, each polygon (such as triangles, quadrilaterals, or other n-sided polygons) is individually stored with attributes like vertices, normals, colors, and texture coordinates.</li>
+<li>Typically, the table contains an entry for each polygon in the scene, and each entry lists the polygon&#8217;s characteristics.</li>
+<li>A basic polygon table may include the following attributes for each polygon:
+<ul style="list-style-type: square;">
+<li>Vertex Coordinates: The coordinates of the vertices that define the polygon.</li>
+<li>Normal Vector: The normal vector to the polygon&#8217;s plane, used for shading and lighting calculations.</li>
+<li>Color: The color or material properties of the polygon.</li>
+<li>Texture Coordinates: If textures are applied, the mapping from the polygon to the texture.</li>
+</ul>
+</li>
+<li>The Polygon Table structure allows for easy access to individual polygons and their attributes. It&#8217;s useful for maintaining and editing polygon properties.</li>
+</ul>
+</li>
+<li><strong>Polygon Meshes:</strong>
+<ul style="list-style-type: square;">
+<li>Polygon meshes are a compact representation of a 3D object&#8217;s surface, made up of vertices and edges that define the connectivity between these vertices.</li>
+<li>A mesh consists of vertices, edges, and faces (polygons). Each vertex is shared by several edges, and each edge is shared by two vertices. Likewise, each face (polygon) is defined by a list of vertices connected by edges.</li>
+<li>A polygon mesh representation is highly efficient for real-time rendering and is commonly used in computer graphics software. It&#8217;s a fundamental structure in 3D modeling and rendering.</li>
+<li>Polygon meshes can represent complex 3D objects with a relatively small number of vertices, making them suitable for real-time applications and 3D graphics engines.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Calculate the total memory required to store a 5 minute video in SVGA system with 24 bit true color and 30 fps.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>SVGA means 800 * 600 pixels.</p>
+<p>i.e. Total number of pixels = 480000</p>
+<p>At 24-bit per pixel,</p>
+<p>size of a frame</p>
+<p>= 24 * 480000 bits</p>
+<p>= ( 24 * 480000 ) / ( 8 * 1024 * 1024) MB</p>
+<p>= 1.37 MB</p>
+<p>frame rate = 30 fps</p>
+<p>This means that,</p>
+<p>at each second ( 1 second), 30 frames are required.</p>
+<p>i.e. for 1 second, 30 * 1.37 MB is required</p>
+<p>We know, 5 minutes = 5 * 60 = 300 seconds.</p>
+<p>So, for 5 minutes ( 300 seconds), 30 * 1.37 * 300 MB is required</p>
+<p>i.e. 12,330 MB is required.</p>
+<p>i.e. 12.04 GB is required.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What do you understand by solid modeling? Explain binary space partition method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Solid modeling</strong> is a method for representing three-dimensional objects in computer graphics and computer-aided design (CAD) with a focus on the physical properties and spatial relationships of the objects. Unlike surface modeling, which primarily deals with the outer surfaces of objects, solid modeling aims to create a comprehensive representation of the entire volume and structure of 3D objects.</p>
+<p><strong>The Binary Space Partition (BSP)</strong> method is a technique used for efficiently representing and rendering complex 3D scenes, particularly in computer graphics and video game development. The BSP method divides a 3D space into smaller regions or nodes and uses a binary tree structure to organize these regions. Each node of the tree contains a reference to a plane that divides space into two parts: in front and behind the plane.</p>
+<p>The BSP tree structure is constructed by following these steps:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Choose a Splitting Plane:</strong> Select a splitting plane that divides the space into two subspaces, one containing objects in front of the plane and the other containing objects behind the plane. The choice of the splitting plane can impact the efficiency of the tree.</li>
+<li><strong>Divide Objects:</strong> Partition the objects in the scene based on their positions with respect to the splitting plane.</li>
+<li><strong>Create Tree Nodes:</strong> Create a tree node representing the splitting plane, and assign the objects to the front and behind regions.</li>
+<li><strong>Recursion:</strong> Recursively apply the above steps to the regions on both sides of the splitting plane, building a binary tree structure. Continue subdividing until you have divided the entire space into regions.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How a realistic image can be generated in computer graphics? Explain fast phong shading.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Generating Realistic Images in Computer Graphics:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Geometry:</strong> The first step in creating a realistic image is to define the 3D geometry of the scene. This includes specifying the positions and shapes of objects and their interactions with the environment.</li>
+<li><strong>Lighting Model:</strong> To achieve realism, a lighting model is used to simulate how light interacts with the objects in the scene. This includes how light is reflected, absorbed, or refracted by various materials. Common lighting models include the Phong model and the Cook-Torrance model.</li>
+<li><strong>Shading:</strong> Shading is the process of determining the color of each pixel on the screen. It involves evaluating the lighting model at each pixel to calculate the intensity and color. This is where shading models like Phong come into play.</li>
+<li><strong>Texturing:</strong> To add surface details, textures are applied to objects. Textures include color maps, normal maps, and displacement maps that enhance the appearance of the surfaces.</li>
+<li><strong>Shadow and Reflection:</strong> Realistic images often involve casting shadows and rendering reflections, which can be computationally intensive. Techniques like ray tracing are used to handle these effects accurately.</li>
+<li><strong>Anti-aliasing:</strong> To reduce aliasing artifacts and create smoother edges, anti-aliasing methods are applied.</li>
+<li><strong>Post-processing:</strong> After rendering, post-processing techniques like tone mapping, color correction, and depth of field effects are applied to enhance the final image.</li>
+</ol>
+<p><strong>Fast Phong Shading:</strong></p>
+<p>Phong shading is a widely used shading model in computer graphics for simulating the reflection of light on surfaces. It calculates the color and intensity of each pixel based on the surface&#8217;s normal vector, the direction of the light source, and the viewer&#8217;s direction. However, Phong shading can be computationally expensive because it requires multiple calculations for each pixel.</p>
+<p>Fast Phong shading is an optimization of the original Phong shading model. It reduces the computational overhead by approximating the shading model while maintaining a good level of realism. Here&#8217;s an overview of the steps involved in fast Phong shading:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Per-Vertex Lighting:</strong> Instead of performing lighting calculations for each pixel, fast Phong shading calculates lighting per vertex. It computes the color and intensity of the vertex based on the vertex&#8217;s normal and the direction to the light source.</li>
+<li><strong>Interpolation:</strong> Once per-vertex lighting is computed, the values are interpolated across the polygon&#8217;s surface to determine pixel colors. This is faster than calculating lighting for each pixel.</li>
+<li><strong>Normal Vector Interpolation:</strong> The normal vectors at vertices are also interpolated across the polygon&#8217;s surface. This ensures that the shading appears smooth and continuous across the polygon.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on</p>
+<p>a. OpenGL</p>
+<p>b. Flynn’s Classification</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>OpenGL (Open Graphics Library):</strong></p>
+<p>OpenGL is a cross-platform, open-source graphics library that provides a set of APIs for rendering 2D and 3D graphics. It is widely used in computer graphics, simulation, and game development. Some key points about OpenGL:</p>
+<ul style="list-style-type: square;">
+<li>Platform Independence: OpenGL is platform-independent, making it suitable for developing graphics applications on various operating systems, including Windows, macOS, Linux, and mobile platforms.</li>
+<li>Graphics Rendering Pipeline: OpenGL follows a programmable graphics rendering pipeline. It allows developers to create shaders (vertex and fragment shaders) that define how vertices and fragments (pixels) are processed and rendered.</li>
+<li>Hardware Acceleration: OpenGL takes advantage of graphics hardware, which means it can efficiently leverage the power of modern GPUs to accelerate rendering tasks.</li>
+<li>Extensibility: OpenGL supports extensions and is frequently updated to include new features and capabilities.</li>
+<li>Ecosystem: OpenGL has a rich ecosystem, with numerous libraries and tools available for tasks like window management (GLFW), texture loading (SOIL), and mathematics (GLM).</li>
+<li>Cross-Platform Support: With modern versions like OpenGL ES (for embedded systems) and WebGL (for web applications), OpenGL&#8217;s reach extends to mobile devices and web browsers.</li>
+</ul>
+<p>b. <strong>Flynn&#8217;s Classification:</strong></p>
+<p>Flynn&#8217;s classification is a well-known taxonomy used to categorize computer architectures based on the number of instruction streams and data streams that a computer&#8217;s processing units can operate on simultaneously. The classification was proposed by Michael J. Flynn in 1966 and distinguishes four main categories:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Single Instruction, Single Data (SISD):</strong> In SISD architectures, a single instruction stream is processed by a single processing unit, and it operates on a single data stream at a time. This is the traditional von Neumann architecture, typical of most general-purpose computers.</li>
+<li><strong>Single Instruction, Multiple Data (SIMD):</strong> In SIMD architectures, a single instruction stream controls multiple processing units, which operate on multiple data streams in parallel. SIMD is commonly used in vector processors and GPUs, where the same operation is applied to multiple data elements simultaneously.</li>
+<li><strong>Multiple Instruction, Single Data (MISD):</strong> MISD architectures have multiple instruction streams operating on the same data stream. MISD machines are rare and often used for specific purposes like fault-tolerant systems or some experimental setups.</li>
+<li><strong>Multiple Instruction, Multiple Data (MIMD):</strong> MIMD architectures feature multiple instruction streams and multiple data streams, and each processing unit operates independently. MIMD is common in multiprocessor and multicore systems, where different threads or processes can execute different instructions on different sets of data.</li>
+</ol>
+</div>
+</body></html>

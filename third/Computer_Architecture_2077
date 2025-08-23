@@ -1,0 +1,527 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA Question Bank 2077 2077</title>
+    </head>
+    <body>
+        <h1>CA Question Bank 2077 - 2077</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempts any two Questions</h2><h3>Question 1</h3>
+<div><p><p>What do you mean by pipeline? Explain with space time diagram for a six segmented pipeline showing the time it takes to process eight tasks.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pipelining is a technique of decomposing a sequential process into sub-operations, with each sub-operation being executed in a special dedicated segments that operates concurrently with all other segments.</p>
+<ul style="list-style-type: square;">
+<li>Each segment performs partial processing dictated by the way task is partitioned</li>
+<li>The result obtained from each segment is transferred to next segment.</li>
+<li>The final result is obtained when data have passed through all segments.</li>
+</ul>
+<p>Below table shows, there are 4-segments pipeline with eight tasks.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 312px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Clock 🠒<br />
+Segment ↓</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">T1</td>
+<td style="text-align: center;">T2</td>
+<td style="text-align: center;">T3</td>
+<td style="text-align: center;">T4</td>
+<td style="text-align: center;">T5</td>
+<td style="text-align: center;">T6</td>
+<td style="text-align: center;">T7</td>
+<td style="text-align: center;">T8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">T1</td>
+<td style="text-align: center;">T2</td>
+<td style="text-align: center;">T3</td>
+<td style="text-align: center;">T4</td>
+<td style="text-align: center;">T5</td>
+<td style="text-align: center;">T6</td>
+<td style="text-align: center;">T7</td>
+<td style="text-align: center;">T8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">T1</td>
+<td style="text-align: center;">T2</td>
+<td style="text-align: center;">T3</td>
+<td style="text-align: center;">T4</td>
+<td style="text-align: center;">T5</td>
+<td style="text-align: center;">T6</td>
+<td style="text-align: center;">T7</td>
+<td style="text-align: center;">T8</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">T1</td>
+<td style="text-align: center;">T2</td>
+<td style="text-align: center;">T3</td>
+<td style="text-align: center;">T4</td>
+<td style="text-align: center;">T5</td>
+<td style="text-align: center;">T6</td>
+<td style="text-align: center;">T7</td>
+<td style="text-align: center;">T8</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Explanation:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>At clock pulse 1, First task (T1) will be loaded to segment 1</li>
+<li>At clock pulse 2, First task will move to second segment and second task (T2) will be loaded on first task</li>
+<li>At clock pulse 3, First task (T1) will move to 3rd segment and Second task move to 2nd segment and first segment will be empty. On that segment, Third task (T3) will be loaded.</li>
+<li>At clock pulse 4, T1 move to fourth segment, T2 move to move to third segment, T3 move to second segment and 1st segment become empty. Now Fourth task (T4) is loaded to the segment first.</li>
+<li>Now. T1 will completed on clock pulse 4</li>
+<li>At clock pulse 5, T2 move to 4th segment, T3 moved to 3rd segment, T5 move to second segment and T5 is loaded on 1st segment.</li>
+<li>Now, Second Task (T2) is also completed on cycle 5</li>
+<li>At clock pulse 6, T3 moves to 4th, T4 moves to 3rd, T5 moved to 2nd segment and T6 is loaded on first segment</li>
+<li>At clock pulse 7, T4 moves to 4th segment, T5 moves to 3rd segment and T6 moves to 2nd segment and T7 is loaded on first segment</li>
+<li>Fourth Task (T4) is completed on 7 cycle</li>
+<li>At clock pulse 8, T5 moves to 4th segment, T6 moves to 3rd segment and T7 moves to 2nd segment and T8 is loaded on first segment and also T5 will be completed on this cycle.</li>
+<li>At clock pulse 9, T6 moves to 4th segment, T7 moves to 3rd segment and T8 moves to 2nd segment and first segment is empty and also T6 will be completed on this cycle.</li>
+<li>At clock pulse 10, T7 moves to 4th segment, T8 moves to 3rd segment and also T7 will be completed on this cycle.</li>
+<li>At clock pulse 11, T8 moves to 4th segment and also T8 will be completed on this cycle.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain Booth multiplication algorithm with hardware implementation diagram. Multiply (-4) x (-3) using Booth multiplication algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Booth algorithm gives a procedure for multiplying binary integers in signed 2&#8217;s complement notation</p>
+<p><u>Hardware Implementation:</u></p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-3921 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/booth2.jpg?resize=360%2C189&#038;ssl=1" alt="" width="360" height="189"></p>
+<ul style="list-style-type: square;">
+<li>Here, sign bit are not separated</li>
+<li>Registers A, B and Q are renamed to AC, BR and QR</li>
+<li>Extra flip-flop Q<sub>n+1</sub> is appended to QR which stores almost lost right shifted bit of the multiplier.</li>
+<li>Pair Q<sub>n</sub>Q<sub>n+1</sub> inspect double bits of the multiplier</li>
+</ul>
+<p><b>Problem</b><strong>:</strong></p>
+<p>Solution:</p>
+<p>Multiplication (M) = (-4)<sub>10</sub> = 1100</p>
+<p>Multiplication (-M) = (+4)<sub>10</sub> = 0100</p>
+<p>Q = (-3)<sub>10</sub> = 1101</p>
+<p>Now,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.8619%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>Steps</strong></td>
+<td style="width: 20%; text-align: center;"><strong>AC</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Q<sub>n-1</sub></strong></td>
+<td style="width: 19.8647%; text-align: center;"><strong>Operation</strong></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;">0000</td>
+<td style="width: 20%; text-align: center;">1101</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 19.8647%; text-align: center;">Initial</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 19.8647%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">1<sup>st</sup></td>
+<td style="width: 20%; text-align: center;">0100</td>
+<td style="width: 20%; text-align: center;">1100</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 19.8647%; text-align: center;">AC = AC &#8211; M</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;">0010</td>
+<td style="width: 20%; text-align: center;">0110</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 19.8647%; text-align: center;">Right Shift</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 19.8647%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">2<sup>nd</sup></td>
+<td style="width: 20%; text-align: center;">1110</td>
+<td style="width: 20%; text-align: center;">0110</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 19.8647%; text-align: center;">AC = Ac + M</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;">1111</td>
+<td style="width: 20%; text-align: center;">0011</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 19.8647%; text-align: center;">Right Shift</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 19.8647%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">3<sup>rd</sup></td>
+<td style="width: 20%; text-align: center;">0011</td>
+<td style="width: 20%; text-align: center;">0011</td>
+<td style="width: 20%; text-align: center;">0</td>
+<td style="width: 19.8647%; text-align: center;">AC = AC &#8211; M</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;">0001</td>
+<td style="width: 20%; text-align: center;">1001</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 19.8647%; text-align: center;">Right Shift</td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 19.8647%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 20%; text-align: center;">4<sup>th</sup></td>
+<td style="width: 20%; text-align: center;">0000</td>
+<td style="width: 20%; text-align: center;">1100</td>
+<td style="width: 20%; text-align: center;">1</td>
+<td style="width: 19.8647%; text-align: center;">Right Shift</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence,</p>
+<p>Result = AC and Q</p>
+<p>i.e. 0000 1100</p>
+<p>Therefore, Result = (-4)<sub>10</sub> x (-3)<sub>10</sub> = (12)<sub>10</sub></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define I/O interface. Comparison between programmed I/O, Interrupt driven I/O and direct memory access (DMA).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Input-Output Interface is used as an method which helps in transferring of information between the internal storage devices i.e. memory and the external peripheral device. A peripheral device is that which provide input and output for the computer, it is also called Input-Output devices.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-3913 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/imgonline-com-ua-ReplaceColor-sVO85W7xGLInobg-min.jpg?resize=400%2C158&#038;ssl=1" alt="" width="400" height="158"></p>
+<p>The comparison between programmed I/O, Interrupt driven I/O and direct memory access (DMA) are</p>
+<p>&nbsp;</p>
+</div>
+<h2>Short Answer Questions: Attempts any eight Questions</h2><h3>Question 4</h3>
+<div><p><p>Draw an instruction cycle state diagram with interrupt and explain it</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Instruction Cycle:</strong></p>
+<p>Instruction cycle is basically related with the execution of the instruction. A program residing in the memory unit of a computer consists of sequence of instructions. In the basic computer, each instruction cycle consists of following phases:</p>
+<ol style="list-style-type:decimal;">
+<li>Fetch an instruction from memory</li>
+<li>Decode the instruction</li>
+<li>Read the effective address for memory if the instruction has an indirect addresses.</li>
+<li>Execute the instruction</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Instruction Cycle with interrupts:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-4680 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/interrupt-cycle-flowchart-min.jpg?resize=570%2C555&#038;ssl=1" alt="Instruction Cycle Flowchart with interrupts:" width="570" height="555" /></p>
+<p>For this, we have one flip-flop R. This flip flop R will decide whether it is interrupt or it is normal execution of our program.</p>
+<p><span style="text-decoration: underline;"><strong>When R = 0:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>If R is set to 0 then it is our normal execution cycle, in which we will do fetching and decoding of instructions and executing the instructions.</li>
+<li>But during fetch and decode, if we encounter IEN flag then, following condition occur:
+<ul style="list-style-type: square;">
+<li>If IEN is set to 1 then we check FGI</li>
+<li>If IEN is 1 then interrupt is occurred. At that time, We have to set flip flop R to 1</li>
+<li>If IEN is 0 then we go to FGO. If FGO is 1 then interrupt is occurred we need to set flip-flop R to 1.</li>
+</ul>
+</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>When R = 1</strong></span></p>
+<p>If R is set to 1 then the interrupt is occurred. Now in this case, we store return address in the location O (free location) i.e. return address always in PC. so it is stored from PC to memory location pointed by zero. After that we jump branch to location 1. Finally we set IEN to 0 and R to 0</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain register transfer language with example</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The symbolic notation used to describe the microoperation transfer among register is called <strong>register transfer language</strong>.</p>
+<p><u>Example:</u></p>
+<div style="display: flex; justify-content: space-around; align-items: baseline;">
+<div>R<sub>1</sub> = R<sub>2</sub> + R<sub>3</sub></div>
+<div>⇒</div>
+<div style="width:50%;">
+<p>R<sub style="color: #111111;">1</sub> ← R<sub>1</sub> + R<sub>3</sub></p>
+<p>microoperation Register Transfer Language (RTL)</p>
+</div>
+</div>
+<p>We designated computer registers by capital letters to denote its function. For example program counter register is designated by PC and instruction register by IR.</p>
+<p>The individual flip-flops in an register are numbered in sequence from 0 to n-1 as shown in figure below:-</p>
+<div style="display: flex; align-items: center; justify-content: space-around;">
+<div style="border: 1px solid; padding: 5px 10px;">Register R<sub>1</sub></div>
+<div>
+<div style="border: 1px solid; padding: 5px 10px;">7 6 5 4 3 2 1 0</div>
+<p>Showing Individual bits</p>
+</div>
+</div>
+<ul style="list-style-type: square;">
+<li>We designate information transfer from one register to another by R<sub>2</sub> ← R<sub>1</sub></li>
+<li>This implies that the outputs of source must have a path to the inputs of the destination.</li>
+<li>The destination register has a parallel load capability.</li>
+<li>It is assumed that all the transfer occurs during a clock edge transmission</li>
+<li>All the microoperations written on a single line are to be executed at the same time.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write codes using 3, 2 and 1 address instruction formats to perform the given operations.</p>
+<p>X = A/B + C × D/C</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given operation is:</p>
+<p>X = A/B + C ×&nbsp;D/C</p>
+<p></p>
+<p><strong><u>Three Address Instruction format</u></strong></p>
+<pre class="ql-syntax" spellcheck="false">DIV R1, A, B
+ADD R1, R1, C
+DIV R2, D, C
+MUL R2, R2, C
+ADD x, R1, R2
+</pre>
+<p><strong><u>Two Address Instruction format</u></strong></p>
+<pre class="ql-syntax" spellcheck="false">MOV R1, A
+DIV R1, B
+ADD R1, B
+MOV R2, D
+DIV R2, C
+MUL R1, R2
+MOV x, R1
+</pre>
+<p><strong><u>One Address Instruction format</u></strong></p>
+<pre class="ql-syntax" spellcheck="false">LOAD A
+DIV B
+STORE T
+LOAD C
+ADD T
+STORE T
+LOAD D
+DIV C
+MUL T
+STORE X
+</pre>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the various addressing modes with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The way in which the operand of an instruction specified are called addressing modes.</p>
+<p><strong>Types of Addressing Modes:</strong></p>
+<p><u>a) Implied mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Address of the operands are specified implicitly, in the definition of the instruction.</li>
+<li>No need to specify address in the instruction</li>
+</ul>
+<p><u>b) Immediate mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Operands is specified in the instruction itself</li>
+<li>No need to specify address in the instruction</li>
+<li>However operand itself needs to be specified</li>
+<li>Fast to acquire an operand</li>
+</ul>
+<p><u>c) Register Mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Operand is specified in the instruction itself.</li>
+<li>No need to specify address in the instruction</li>
+<li>However operand itself needs to be specified</li>
+<li>Fast to acquire an operand</li>
+</ul>
+<p><u>d) Register mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Operands are within registers the reside within the CPU</li>
+<li>Shorter address field in the instruction</li>
+<li>Saving address field in the instruction</li>
+<li>Faster to acquire an operand than the memory addressing</li>
+<li>EAA = IR(R) (IR(R) denotes register field of IR)</li>
+</ul>
+<p><u>d) Register Indirect mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Instruction specifies a register which contains the memory address of the operand.</li>
+<li>EA = [IR(r)]</li>
+</ul>
+<p><u>e) Auto Increment or Auto decrement mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Is is same as the Register Indirect, but When the address in the register is used to access memory, the value in the register is incremented or decremented by 1</li>
+</ul>
+<p><u>f) Direct address mode:</u></p>
+<ul style="list-style-type: square;">
+<li>Instruction specifies the memory address which can be used directly to the physical memory</li>
+<li>Faster than the other memory addressing mode</li>
+</ul>
+<p><u>g) Indirect addressing mode:</u></p>
+<ul style="list-style-type: square;">
+<li>The addressing field of an instruction specifies the address of a memory location that contains address of the operands</li>
+</ul>
+<p><u>h) Relative addressing mode:</u></p>
+<ul style="list-style-type: square;">
+<li>The address fields of an instructions specifies the part of the address which can be used along with designated register to calculate address of operand</li>
+<li>Address field of instruction is short</li>
+</ul>
+<p><u>i) Indexed addressing mode</u></p>
+<ul style="list-style-type: square;">
+<li>EA = XR + IR</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between hardwired control unit and microprogrammed control unit</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between Hardwired and Microprogrammed Control Unit are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table width="100%">
+<thead>
+<tr>
+<th>Hardwired Control Unit</th>
+<th>Microprogrammed Control Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardwired control unit generates the control signals needed for the processor using logic circuits</td>
+<td>Microprogrammed control unit generates the control signals with the help of micro instructions stored in control memory</td>
+</tr>
+<tr>
+<td>Hardwired control unit is faster when compared to microprogrammed control unit as the required control signals are generated with the help of hardwires</td>
+<td>This is slower than the other as micro instructions are used for generating signals here</td>
+</tr>
+<tr>
+<td>Difficult to modify as the control signals that need to be generated are hard wired</td>
+<td>Easy to modify as the modification need to be done only at the instruction level</td>
+</tr>
+<tr>
+<td>More costlier as everything has to be realized in terms of logic gates</td>
+<td>Less costlier than hardwired control as only micro instructions are used for generating control signals</td>
+</tr>
+<tr>
+<td>It cannot handle complex instructions as the circuit design for it becomes complex</td>
+<td>It can handle complex instructions</td>
+</tr>
+<tr>
+<td>Only limited number of instructions are used due to the hardware implementation</td>
+<td>Control signals for many instructions can be generated</td>
+</tr>
+<tr>
+<td>Used in computer that makes use of Reduced Instruction Set Computers(RISC)</td>
+<td>Used in computer that makes use of Complex Instruction Set Computers(CISC)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How performance of computer is increased using pipeline? Explain with practical example</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Pipelining is a technique where multiple instructions are overlapped during execution.</p>
+<p><span style="background-color: initial;">Pipelining provides great flexibility. That’s why it’s used.</span></p>
+<p><span style="background-color: initial;">It improves performance by reducing the amount of RAM required to do the analysis:</span></p>
+<ul style="list-style-type: square;">
+<li><span style="background-color: initial;">One way it does this is by sharing the code loaded into RAM if a utility is used more than once in the pipeline.</span></li>
+<li><span style="background-color: initial;">Another and more important way, is that only the buffers in the pipeline have to be in RAM at any one time. Data is fed into the pipeline one buffer at a time. The output of one command (via stdout) is fed to the input (via stdin) of the next command in the pipeline. So if your pipeline consists of 5 commands you really have only 6 buffers in RAM at one time. Buffers are small (512 bytes to 4096 bytes usually). This breaks down if you use a utility like ‘sort’ which has to look at all of the data at once. Knowing this, delay sorting until you have pared the data down as far as you can.</span></li>
+</ul>
+<p></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between restoring division and non-restoring division</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The following are the differences between restoring division and non-restoring division:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Restoring division</td>
+<td style="width: 50%;">Non-restoring division</td>
+</tr>
+<tr>
+<td style="width: 50%;">1.In restoring division, the divisor is repeatedly subtracted from the dividend, and the remainder is updated until the remainder becomes less than the divisor.</td>
+<td style="width: 50%;">1.In non-restoring division, the divisor is repeatedly added to or subtracted from the remainder until the remainder becomes less than the divisor.</td>
+</tr>
+<tr>
+<td style="width: 50%;">2. In restoring division, a borrow bit is used to determine whether a borrow operation is required during the subtraction step.</td>
+<td style="width: 50%;">2. In non-restoring division, a borrow bit is not used, and the remainder is simply updated based on the addition or subtraction operation performed.</td>
+</tr>
+<tr>
+<td style="width: 50%;">3. Restoring division generally requires more iterations than non-restoring division to compute the quotient and remainder.</td>
+<td style="width: 50%;">3. Non-restoring division may add or subtract the divisor from the remainder depending on its value.</td>
+</tr>
+<tr>
+<td style="width: 50%;">4. It is more complex than non-restoring division due to the use of the borrow bit and the need to handle cases where the dividend is negative.</td>
+<td style="width: 50%;">4. It is simpler and faster than restoring division but may require more hardware resources.</td>
+</tr>
+<tr>
+<td style="width: 50%;">5.  It can handle division with signed numbers but requires additional steps to handle negative dividends and divisors.</td>
+<td style="width: 50%;">5. It is not well-suited for division with signed numbers and may require additional steps to handle negative dividends and divisors.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Give the appropriate reasons why replacement algorithm is required in associative mapping?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In associative mapping,</p>
+<ul style="list-style-type: square;">
+<li>A block of main memory can map to any line of the cache that is freely available at that moment.</li>
+<li>This makes fully associative mapping more flexible than direct mapping.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18801" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/replacement-algo.jpg?resize=481%2C324&#038;ssl=1" alt="" width="481" height="324"></p>
+<p>&nbsp;</p>
+<p>Here,</p>
+<ul style="list-style-type: square;">
+<li>All the lines of cache are freely available.</li>
+<li>Thus, any block of main memory can map to any line of the cache.</li>
+<li>Had all the cache lines been occupied, then one of the existing blocks will have to be replaced.</li>
+</ul>
+<p>In associative mapping,</p>
+<ul style="list-style-type: square;">
+<li>A replacement algorithm is required.</li>
+<li>Replacement algorithm suggests the block to be replaced if all the cache lines are occupied.</li>
+<li>Thus, replacement algorithm like FCFS Algorithm, LRU Algorithm etc is employed.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Differentiate between isolated versus memory mapped I/O</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between Isolated and Memory mapped I/O are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Isolated I/O</th>
+<th>Memory Mapped I/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory and I/O have separate address space</td>
+<td>Both have same address space</td>
+</tr>
+<tr>
+<td>All address can be used by the memory</td>
+<td>Due to addition of I/O addressable memory become less for memory</td>
+</tr>
+<tr>
+<td>Separate instruction control read and write operation in I/O and Memory</td>
+<td>Same instructions can control both I/O and Memory</td>
+</tr>
+<tr>
+<td>In this I/O address are called ports.</td>
+<td>Normal memory address are for both</td>
+</tr>
+<tr>
+<td>More efficient due to separate buses</td>
+<td>Lesser efficient</td>
+</tr>
+<tr>
+<td>Larger in size due to more buses</td>
+<td>Smaller in size</td>
+</tr>
+<tr>
+<td>It is complex due to separate separate logic is used to control both.</td>
+<td>Simpler logic is used as I/O is also treated as memory only.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</body></html>

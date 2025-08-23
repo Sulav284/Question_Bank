@@ -1,0 +1,289 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAM Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>SAM Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Two Questions</h2><h3>Question 1</h3>
+<div><p><p>Define queuing system. Explain the Kendall’s notation for queuing system? What are the various performance measures in single server queuing System? Explain which of them determine system stability and how?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The line where the entities or customer wait is generally known as a queue. The combination of all entities in the system being served and waiting for service will be called a queueing system.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10960 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-4.png?resize=416%2C191&#038;ssl=1" alt="" width="416" height="191"></p>
+<p><span style="text-decoration: underline;"><strong>Kendall&#8217;s Notation:</strong></span></p>
+<p>Different notations are frequently used in the queuing system and are called Kendall Notations. Kendall Notation is the standard system used to describe and classify a queueing node. The Kendall Notation can be represented in the form A/B/C/N/K.</p>
+<p>where A indicates arrival pattern, B indicates service pattern, c indicates the number of servers, D indicates queuing discipline, N indicates system capacity, and K indicates calling population.</p>
+<p>The symbols used for the probability distribution for inter-arrival time,  and service time are, D for deterministic, M for exponential, and E<sub>k</sub> for Erlang distribution.</p>
+<p>If parameters D, N &amp; K are not specified then, N = ∞ (infinity), K = ∞ (infinity), D = FIFO</p>
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p>M/D/2/FIFO/5/∞, queuing system having exponential arrival pattern, deterministic service time, 2 servers, FIFO queuing discipline, the capacity of 5 customers, and infinite population.</p>
+<p><span style="text-decoration: underline;"><strong>Performance measured in Single Server Queuing System:</strong></span></p>
+<p style="font-weight: 400;">The various performance measures in a single server queuing system simulation are discussed below:</p>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;">If Ta and Ts be the inter-arrival time and the mean service time then</li>
+</ol>
+<ul style="font-weight: 400;">
+<li><b><strong>Arrival rate </strong></b>λ=1/Ta</li>
+<li><b><strong>Service rate</strong></b> μ=1/Ts</li>
+</ul>
+<ol start="2">
+<li style="font-weight: 400;">The ratio of the mean service time to the mean inter-arrival time is called traffic<b><strong> </strong></b><b><strong>intensity</strong></b>. i.e.  u=Ts/Ta</li>
+<li style="font-weight: 400;"><b><strong>Server utilization: </strong></b>It consists of only the arrival that gets served. It is denoted by and defined as</li>
+</ol>
+<p style="font-weight: 400;">        ρ= λTs= λ/ μ (server utilization for a single server).</p>
+<ol start="4">
+<li style="font-weight: 400;">The probability of finding the service counter free is (1 – ρ) i.e there are zero customers in the service facility.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define true random numbers and pseudo random numbers with its properties . The sequence of numbers 0.64, 0.50, 0.25, 0.58,0.72, 0.90 has been generated. Use KS Test with Da=0.050 => 0512 to determine if the hypothesis that they are uniformly distributed on interval [o, 1] can be rejected.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>True Random Numbers:</h3>
+<p>True random numbers are generated from inherently unpredictable physical processes or sources, such as radioactive decay, atmospheric noise, or the unpredictable nature of quantum phenomena.</p>
+<p><strong>Properties:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Unpredictability:</strong> True random numbers are fundamentally unpredictable due to their source being natural processes or phenomena.</li>
+<li><strong>Uniformity:</strong> They exhibit uniform distribution, with each number having an equal probability of occurring.</li>
+<li><strong>Independence:</strong> Each number generated is independent of the previous or subsequent numbers, as they are derived from inherently random processes.</li>
+<li><strong>Non-repeatability:</strong> The sequence of numbers cannot be replicated or reproduced. There&#8217;s no pattern or algorithm to recreate the sequence.</li>
+</ol>
+<h3>Pseudo-Random Numbers:</h3>
+<p>Pseudo-random numbers are generated using algorithms that produce sequences of numbers that simulate the properties of true random numbers, but are deterministically derived from an initial value.</p>
+<p><strong>Properties:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Deterministic:</strong> Generated from known algorithms and an initial value (seed), which means the sequence can be reproduced if the algorithm and seed are known.</li>
+<li><strong>Uniformity:</strong> A good pseudo-random number generator produces numbers that are uniformly distributed within the range [0,1].</li>
+<li><strong>Independence:</strong> Each number is usually independent of others in the sequence, mimicking independence like true random numbers.</li>
+<li><strong>Repeatability:</strong> The sequence of numbers can be reproduced if the initial seed and algorithm are known, leading to possible repetition.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Second part:<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28379" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/43298cb0-2e5a-4c84-b0f2-daf7e5a5bf21.jpg?resize=910%2C1070&#038;ssl=1" alt="" width="910" height="1070"><br />
+</strong></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you understand by dynamic mathematical model? Explain with example. Differentiate it with static mathematical model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Mathematical model is the model which is composed of a symbols and logic. It describes the system using mathematical concepts. The mathematical model is used to explain the system and to study the effects of different components, and to make predictions about the behavior of the system.</p>
+<p>Dynamic mathematical model allows change to system attributes with time or as a function of time.</p>
+<p>They are time-variant and are represented by using differential equations.</p>
+<p><strong>Example:</strong></p>
+<p>For instance, consider the<strong> simple harmonic oscillator</strong>—a mass attached to a spring. Its motion is described by a second-order differential equation:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28227" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/Screenshot-2023-12-07-at-13.25.34.png?resize=314%2C92&#038;ssl=1" alt="" width="314" height="92"></p>
+<p>This equation showcases how the position of the mass (<span class="math math-inline"><span class="katex"><span class="katex-mathml">x</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span>) changes over time, depicting the relationship between the mass&#8217;s acceleration and its displacement from equilibrium. Solving this equation provides functions for <span class="math math-inline"><span class="katex"><span class="katex-mathml">x(t)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-mathml">dxdt</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">t</span></span></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> (position and velocity, respectively), enabling us to precisely anticipate where the mass will be and how fast it will be moving at any given time during its oscillation.</p>
+<p>In essence, dynamic mathematical models provide a mathematical framework to comprehend and predict the behavior of systems that evolve or change with time, offering insights into how various components interact and evolve over a continuum rather than at a single, static instance.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table data-sourcepos="3:1-13:95">
+<tbody>
+<tr data-sourcepos="3:1-3:42">
+<th data-sourcepos="3:1-3:9">Feature</th>
+<th data-sourcepos="3:11-3:25">Dynamic Model</th>
+<th data-sourcepos="3:27-3:40">Static Model</th>
+</tr>
+<tr data-sourcepos="5:1-5:34">
+<td data-sourcepos="5:1-5:21"><strong>Time Dependence</strong></td>
+<td data-sourcepos="5:23-5:27">Yes</td>
+<td data-sourcepos="5:29-5:32">No</td>
+</tr>
+<tr data-sourcepos="6:1-6:110">
+<td data-sourcepos="6:1-6:29"><strong>Changes in System State</strong></td>
+<td data-sourcepos="6:31-6:67">Accounts for time-dependent changes</td>
+<td data-sourcepos="6:69-6:108">Represents system in equilibrium state</td>
+</tr>
+<tr data-sourcepos="7:1-7:94">
+<td data-sourcepos="7:1-7:23"><strong>Type of Equations</strong></td>
+<td data-sourcepos="7:25-7:70">Differential equations, difference equations</td>
+<td data-sourcepos="7:72-7:92">Algebraic equations</td>
+</tr>
+<tr data-sourcepos="8:1-8:126">
+<td data-sourcepos="8:1-8:21"><strong>Example Systems</strong></td>
+<td data-sourcepos="8:23-8:78">Population growth, chemical reactions, economic models</td>
+<td data-sourcepos="8:80-8:124">Bridge design, circuit analysis, fluid flow</td>
+</tr>
+<tr data-sourcepos="9:1-9:99">
+<td data-sourcepos="9:1-9:13"><strong>Purpose</strong></td>
+<td data-sourcepos="9:15-9:52">Analyze how system evolves over time</td>
+<td data-sourcepos="9:54-9:97">Predict system behavior at a specific time</td>
+</tr>
+<tr data-sourcepos="10:1-10:101">
+<td data-sourcepos="10:1-10:18"><strong>Applications</strong></td>
+<td data-sourcepos="10:20-10:63">Forecasting, control systems, optimization</td>
+<td data-sourcepos="10:65-10:99">Design, analysis, troubleshooting</td>
+</tr>
+<tr data-sourcepos="11:1-11:48">
+<td data-sourcepos="11:1-11:16"><strong>Complexity</strong></td>
+<td data-sourcepos="11:18-11:31">More complex</td>
+<td data-sourcepos="11:33-11:46">Less complex</td>
+</tr>
+<tr data-sourcepos="12:1-12:43">
+<td data-sourcepos="12:1-12:24"><strong>Computational Cost</strong></td>
+<td data-sourcepos="12:26-12:33">Higher</td>
+<td data-sourcepos="12:35-12:41">Lower</td>
+</tr>
+<tr data-sourcepos="13:1-13:95">
+<td data-sourcepos="13:1-13:22"><strong>Predictive Power</strong></td>
+<td data-sourcepos="13:24-13:57">Better for long-term predictions</td>
+<td data-sourcepos="13:59-13:93">Better for short-term predictions</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt Eight Questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe the phases in simulation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The various phases of simulation are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation:</strong> Clearly state the problem</li>
+<li><strong>Setting Objectives and overall project plan</strong>: See how should approach the problem.</li>
+<li><strong>Model Conceptualization:</strong> Establish a reasonable model using appropriate modeling approach.</li>
+<li><strong>Data Collection:</strong> Collect relevant data about the system being modeled such are arrival rate, service rate, arrival process and more.</li>
+<li><strong>Model translation:</strong> Convert the model into a programming language</li>
+<li><strong>Verification:</strong> Verify that the implemented model behaves as intended and matches the conceptual model.</li>
+<li><strong>Validation:</strong> Validate the model by comparing its output with real-world data or known results.</li>
+<li><strong>Experimental Designs:</strong> Design experiments to explore various scenarios and conditions. For example: How many runs? How long are the runs?</li>
+<li><strong>Production rule and analysis:</strong> Now run the simulation and collect and analyze the output.</li>
+<li><strong>Repetition:</strong> If necessary, repeat some required steps.</li>
+<li><strong>Document and Report:</strong> Document the simulation model, noting assumptions, limitations, and methodology. Also, create reports or presentations to share findings and suggestions.</li>
+<li><strong>Implementation:</strong> Implement the simulated system in real world real-world scenarios if applicable and deploy the simulation for ongoing use or refinement</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the concept of discrete event simulation. Explain poisson’s arrival pattern.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Discrete event simulation is a computational method used to model and analyze the behavior of complex systems where events occur at specific points in time. It involves modeling the system as a sequence of discrete events, each of which causes a change in the system&#8217;s state. These events occur at distinct, separate points in time, and the system&#8217;s state evolves based on these occurrences.</p>
+<p data-sourcepos="15:1-15:34">Let us see a real world<strong> example: </strong></p>
+<p data-sourcepos="15:1-15:34">Imagine a grocery store checkout.</p>
+<ul data-sourcepos="17:1-21:0">
+<li data-sourcepos="17:1-17:40">Each <strong>customer arrival</strong> is an event.</li>
+<li data-sourcepos="18:1-18:69">The <strong>time between customer arrivals</strong> determines the time advance.</li>
+<li data-sourcepos="19:1-19:69">As customers arrive, the <strong>queue length changes</strong> (state variable).</li>
+<li data-sourcepos="20:1-21:0">When a cashier becomes available, a <strong>service completion event</strong> occurs, and the customer leaves the queue (state change).</li>
+</ul>
+<p data-sourcepos="22:1-22:43"><strong>By simulating this system with DES, we can:</strong></p>
+<ul data-sourcepos="24:1-27:0">
+<li data-sourcepos="24:1-24:49">Analyze the average waiting time for customers.</li>
+<li data-sourcepos="25:1-25:44">Identify the need for additional cashiers.</li>
+<li data-sourcepos="26:1-27:0">Optimize the checkout layout to improve efficiency.</li>
+</ul>
+<p data-sourcepos="3:1-3:139"><strong>Second part:</strong></p>
+<p data-sourcepos="3:1-3:139"><strong>Poisson arrival pattern</strong> describes a random process where events occur independently and at a constant average rate. This means that:</p>
+<ul data-sourcepos="5:1-5:124">
+<li data-sourcepos="5:1-5:124"><strong>Events occur independently:</strong> The occurrence of one event does not influence the probability of another event occurring.</li>
+<li data-sourcepos="6:1-6:171"><strong>Events occur at a constant average rate:</strong> The average number of events occurring in a given interval is constant, regardless of the specific location of the interval.</li>
+<li data-sourcepos="6:1-6:171"></li>
+</ul>
+<p data-sourcepos="3:1-3:3">The probability of observing <strong>k</strong> arrivals in a time interval of length <strong>t</strong> is given by the following equation:</p>
+<p data-sourcepos="5:1-5:20"><strong>P(k arrivals in t) = (λt)^k * e^(-λt) / k!</strong></p>
+<p data-sourcepos="7:1-7:6">where:</p>
+<ul data-sourcepos="9:1-9:46">
+<li data-sourcepos="9:1-9:46"><strong>λ</strong> is the arrival rate (average number of arrivals per unit time).</li>
+<li data-sourcepos="10:1-10:36"><strong>t</strong> is the time interval length.</li>
+<li data-sourcepos="11:1-11:34"><strong>k</strong> is the number of arrivals.</li>
+<li data-sourcepos="12:1-12:7"><strong>e</strong> is the base of the natural logarithm</li>
+<li data-sourcepos="13:1-14:0"><strong>k!</strong> is the factorial of k</li>
+</ul>
+<p>&nbsp;</p>
+<p>Some applications of Poisson&#8217;s arrival pattern are :</p>
+<ul style="list-style-type: square;">
+<li><strong>Telecommunications:</strong> Modeling the arrival of packets in a computer network.</li>
+<li><strong>Queuing Theory:</strong> Analyzing waiting times in queues such as customer arrivals at service centers, call centers, or queues in traffic systems.</li>
+<li><strong>Probability and Statistics:</strong> Describing the occurrence of rare events, like accidents in a specific region over time.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain Monte Carlo simulation method with an example?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Monte Carlo simulation is a computational technique that uses random sampling to model and analyze complex systems or processes. It relies on the generation of random inputs to explore the behavior of a system, allowing for the estimation of outcomes and the assessment of associated uncertainties. The method is named after the Monte Carlo Casino in Monaco, known for its games of chance and randomness.</p>
+<p>&nbsp;</p>
+<p>Following are the three important characteristics of Monte-Carlo method:</p>
+<ul style="list-style-type: square;">
+<li>Its output must generate random samples.</li>
+<li> Its input distribution must be known.</li>
+<li>Its result must be known while performing an experiment.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28141" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/12/IMG_2845.jpg?resize=2048%2C1749&#038;ssl=1" alt="" width="2048" height="1749"></p>
+<p>We use random number generation method to determine the sample points that lie inside or outside the curve.</p>
+<p>Let (x0, y0) be an initial guess for the sample point than from a linear congruential method of random number generation:</p>
+<p><strong>Xi+1 = (axi+c) mod m </strong></p>
+<p><strong>Yi+1 = (ayi+c) mod m </strong></p>
+<p>Where a &amp; c are constants, m is the upper limit of generated random number.</p>
+<p>If y&lt;=yi then increment n.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define the terms verification, calibration, validation and accreditation of models.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Verification, Validation, and Accreditation (VV&amp;A) are three interrelated but distinct processes that gather and evaluate evidence to determine whether a model or simulation should be used in a given situation and establishing its credibility.</p>
+<ul style="list-style-type: square;">
+<li><strong>Verification:</strong> This process aims to establish that the simulation has been correctly implemented according to its design and specifications.Verification focuses on the correctness of the simulation&#8217;s construction, evaluating its capabilities, algorithms, and structure. It assesses whether the software or model performs as intended and is free from programming errors or implementation mistakes.</li>
+<li><strong>Validation:</strong> Validation examines whether the simulation realistically represents the real-world system it intends to emulate. It involves comparing the simulation&#8217;s outputs or behavior with empirical data, observations, or experimental results from the actual system.It ensures that the simulation meets the required degree of accuracy for its intended purpose.</li>
+<li><strong>Accreditation:</strong> Accreditation involves providing formal assurance or certification of a simulation&#8217;s credibility and suitability for specific applications or uses.  This process evaluates the simulation&#8217;s correctness, ensuring that its data and algorithms are sound, robust, and properly implemented. Accreditation also considers usability factors like the training and experience of the users, the quality and appropriateness of the data used, and the control procedures applied to the simulation.</li>
+<li><strong>Calibration:</strong> Calibration is the iterative process of comparing the model with real system, revising the model if necessary, comparing again, until a model is accepted (validated). It often involves modifying or setting parameters, measurements, or characteristics to achieve greater accuracy, reliability, or alignment with established references or empirical data.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Use Multiplicative congruential method to generate a sequence of random numbers with X=7,a=11 m=16.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-28231" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/IMG_2873.png?resize=600%2C800&#038;ssl=1" alt="" width="600" height="800"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Why is estimation methods used in simulation? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Estimation methods in simulation are vital because they allow us to derive meaningful insights and predictions even in scenarios where conventional assumptions, like stationary and mutually independent observations, don&#8217;t hold true. For instance, in queuing systems where observations are not stationary and mutually independent, using estimation methods becomes crucial.</p>
+<p>In such cases, where correlations among observations are necessary for analysis, a technique called simulation run statistics is employed. For instance, consider a queuing system denoted by Kendall’s notation M/M/1/FIFO, aiming to measure the mean waiting time. Estimating this mean waiting time involves accumulating waiting times of successive entities and dividing the sum by the number of entities. However, in such systems, data can be autocorrelated, meaning one value affects subsequent values.</p>
+<p>The challenge arises because the distribution in these systems might not remain stationary initially. For instance, when a simulation starts with the system in an initial idle state, early arrivals might receive quick service, causing deviations from the expected normal distribution. This initial bias impacts the sample means of early arrivals. However, as the simulation continues and the sample size increases while the run lengthens, the effects of this bias diminish, and the distribution tends towards a normal distribution again.</p>
+<p>Estimation methods help manage these complexities by allowing us to approximate parameters despite non-stationary distributions and initial biases. They enable us to make informed decisions and draw conclusions from simulations, even in scenarios where traditional assumptions do not hold.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain the importance of elimination of initial bias during simulation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:109">Initial bias, the mismatch between a simulation&#8217;s starting state and reality, can distort results, leading to misleading conclusions. Eliminating it is crucial for obtaining <strong>reliable and unbiased results</strong>.</p>
+<p data-sourcepos="5:1-5:24"><strong>Why is it important?</strong></p>
+<ul data-sourcepos="7:1-7:34">
+<li data-sourcepos="7:1-7:34"><strong>Accuracy:</strong> Biased simulations lead to inaccurate estimates of crucial metrics, potentially leading to poor decisions and inefficient operations.</li>
+<li data-sourcepos="8:1-8:61"><strong>Clear Insights:</strong> Initial bias can mask the system&#8217;s true behavior, hindering the identification of genuine patterns and relationships.</li>
+<li data-sourcepos="9:1-9:114"><strong>Generalizability:</strong> Biased simulations are specific to their starting state and cannot be applied to different operating conditions, limiting their usefulness.</li>
+</ul>
+<p data-sourcepos="11:1-11:28"><strong>How can we eliminate it?</strong></p>
+<ul data-sourcepos="13:1-16:0">
+<li data-sourcepos="13:1-13:137"><strong>Set Unbiased Initial Conditions:</strong> Start the system in a state reflecting its real-world conditions, not an empty or arbitrary state.</li>
+<li data-sourcepos="14:1-14:146"><strong>Identify and Eliminate Model Bias:</strong> Thoroughly examine the simulation model&#8217;s assumptions and algorithms to ensure they don&#8217;t introduce bias.</li>
+<li data-sourcepos="15:1-16:0"><strong>Run Multiple Simulations:</strong> Explore a range of starting points to identify patterns and trends independent of initial bias, providing a comprehensive understanding of the system.</li>
+</ul>
+<p data-sourcepos="17:1-17:95">By eliminating initial bias, we ensure simulations accurately reflect reality, leading to:</p>
+<ul data-sourcepos="19:1-19:20">
+<li data-sourcepos="19:1-19:20"><strong>Reliable Results:</strong> Better-informed decisions in various fields.</li>
+<li data-sourcepos="20:1-20:72"><strong>Clearer Insights:</strong> A deeper understanding of the system&#8217;s dynamics.</li>
+<li data-sourcepos="21:1-22:0"><strong>Improved Efficiency:</strong> Optimized resource allocation and improved performance.</li>
+</ul>
+<p data-sourcepos="23:1-23:228">Eliminating initial bias is not just a technical detail; it&#8217;s essential for ensuring the validity and usefulness of simulations. It unlocks their true potential to improve our understanding and management of complex systems.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Workers come to a supply store at the rate of one every 6(+-) 2 minute. Their requisitions are processed by one of the two clerks who take 8 (+-) 2 minutes for each requisition. The requisitions are then passed to a single storekeeper who fills them one at a time, taking 6(+-)3 minutes for each. Draw GPSS Block diagram to simulate The above problem for 100 requisitions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here is the GPSS block diagram</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-42565 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/gpss.drawio.png?resize=149%2C773&#038;ssl=1" alt="" width="149" height="773"></p>
+<p>&nbsp;</p>
+<p>GENERATE 6,2<br />
+QUEUE ClerkQueue(1)<br />
+SEIZE Clerk(1)<br />
+ADVANCE 8,2<br />
+RELEASE Clerk(1)<br />
+DEPART ClerkQueue(1)<br />
+QUEUE StorekeeperQueue(2)<br />
+SEIZE Storekeeper(2)<br />
+ADVANCE 6,3<br />
+RELEASE Storekeeper(2)<br />
+DEPART StorekeeperQueue(2)<br />
+TERMINATE 1<br />
+GENERATE 100</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):<br />
+a. Digital analog simulator<br />
+b. Simulation tools</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Digital analog simulator</strong></p>
+<p>It is a tool used  in simulation and modeling to comprehensively study systems that blend digital and analog components. It indicate the use of programming language in digital computers to simulate the continuous system.</p>
+<p>The language is composed of macro-instructions which are able to act as added, integrator and sign changer. A program is written to link these macro instructions as per the necessity.</p>
+<p>It allows users to create virtual models of electronic circuits or systems that consist of elements such as resistors, capacitors, transistors, digital logic gates, and more.Users can analyze the simulated circuits using various tools provided by the simulator.</p>
+<p>&nbsp;</p>
+<p><strong>b. Simulation tools</strong></p>
+<p>&nbsp;</p>
+<p>Simulation tool is a software which is used for simulating the hardware, software and network. It is a type of software based on the process of modeling a real world phenomenon with mathematical formula. This program allows the users to observe the operation without actually performing the operation. Its main importance is : how it actually supports the model building.</p>
+<p>&nbsp;</p>
+<p>The tools commonly used in simulation are :</p>
+<ul style="list-style-type: square;">
+<li>Processor simulation</li>
+<li>Memory Simulation</li>
+<li>ALU simulation</li>
+<li>Logic Network simulation</li>
+<li>CPU Network simulation</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+</body></html>

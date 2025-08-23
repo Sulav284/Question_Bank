@@ -1,0 +1,517 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Advanced Java Programming 2078 2078</title>
+    </head>
+    <body>
+        <h1>Advanced Java Programming 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Compare AWT with Swing. Write a GUI program using components to find sum and difference of two numbers. Use two text fields for giving input and a label for output. The program should display sum if user presses mouse and difference if user release mouse.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>AWT</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Swing</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT components are heavyweight components.</td>
+<td style="width: 50%; text-align: center;">swing components are lightweight components.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT doesn&#8217;t support pluggable look and feel.</td>
+<td style="width: 50%; text-align: center;">swing supports pluggable look and feel.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT programs are not portable.</td>
+<td style="width: 50%; text-align: center;">swing programs are portable.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT is old framework for creating GUIs.</td>
+<td style="width: 50%; text-align: center;">swing is new framework for creating GUIs</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT components require java.awt package.</td>
+<td style="width: 50%; text-align: center;">swing components require javax.swing package</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT supports limited number of GUI controls.</td>
+<td style="width: 50%; text-align: center;">swing provides advanced GUI controls like jtable, jtabbedpane etc.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">AWT doesn&#8217;t follow MVC.</td>
+<td style="width: 50%; text-align: center;">swing follows MVC.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Program</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javax.swing.*;
+import java.awt.event.*;
+public class SimpleMathGUI extends JFrame {
+private JTextField numberField1, numberField2;
+private JLabel resultLabel;
+private JButton calculateButton;
+public SimpleMathGUI() {
+numberField1 = new JTextField(5);
+numberField2 = new JTextField(5);
+resultLabel = new JLabel("Result: ");
+calculateButton = new JButton("Click for sum, release for difference");
+
+calculateButton.addMouseListener(new MouseAdapter() {
+public void mousePressed(MouseEvent e) {
+int sum = Integer.parseInt(numberField1.getText()) + Integer.parseInt(numberField2.getText());
+resultLabel.setText("Sum: " + sum);
+}
+public void mouseReleased(MouseEvent e) {
+int difference = Integer.parseInt(numberField1.getText()) -
+Integer.parseInt(numberField2.getText());
+resultLabel.setText("Difference: " + difference);
+}
+});
+
+add(numberField1); add(numberField2); add(calculateButton); add(resultLabel);
+setLayout(new FlowLayout());
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+pack();
+setVisible(true);
+}
+public static void main(String[] args) {
+new SimpleMathGUI();
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain life-cycle of servlet in detail. Create a simple servlet that reads and displays data from HTML form. Assume form with two fields username and password.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:3-3:99">A servlet life cycle can be defined as the entire process from its creation till the destruction.</p>
+<p data-sourcepos="3:3-3:99">The following are the stages followed by a servlet lifecycle:</p>
+<ul style="list-style-type: square;">
+<li style="list-style-type: none;">
+<ul data-sourcepos="6:5-11:0">
+<li data-sourcepos="6:5-6:29">Loaded and Instantiated</li>
+<li data-sourcepos="7:5-7:46">Initialized by calling the init() method</li>
+<li data-sourcepos="8:5-8:61">Process a client&#8217;s request by invoking service() method</li>
+<li data-sourcepos="9:5-9:48">Terminated by calling the destroy() method</li>
+<li data-sourcepos="10:5-11:0">Garbage collected by the JVM</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-48452 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/servlet-lifecycle.drawio.png?resize=239%2C463&#038;ssl=1" alt="" width="239" height="463"></p>
+<p style="text-align: center;"><strong>fig: Servlet Life Cycle</strong></p>
+<ol style="list-style-type:decimal;">
+<li data-sourcepos="6:4-6:300"><strong>Loaded and Instantiated</strong>: The class loader is responsible to load the server class when the first request for the server class is received by the web container. Then it creates the instance of the server after loading the server class. The server class is loaded only once in the server life cycle.</li>
+<li data-sourcepos="8:4-8:227"><span class="citation-0 animating"><strong>Initialized by calling the init () method</strong>: The web container </span><span class="citation-0 citation-1 citation-end-0 animating">calls the init() method only once after creating the servlet instance. The init method is used to</span><span class="citation-1 animating"> initialize the servlet. Syntax of the init method is given below:<br />
+</span>public void init(ServletConfig config) throws ServletException</li>
+<li data-sourcepos="8:4-8:227"><strong>Process a client&#8217;s request by invoking service() method</strong>: The web container calls the service method each time when request for the servlet is received. After servlet is initialized, it calls the service method. <span class="citation-2 animating">The syntax of the service method of the Servlet interface is given below:<br />
+</span><span class="citation-2 citation-end-2 animating">public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException<br />
+</span>The doGet() and doPost() are most frequently used methods within each service request.</li>
+<li><span class="animating"><strong>Terminated by calling the destroy() method</strong>:</span><span class="animating"> </span><span class="citation-3 animating">The web container calls the destroy method before removing the servlet instance from the service. It gives the servlet an opportunity to clean up any resource for example memory, thread etc. The syntax of the destroy method of the Servlet interface is given below:<br />
+</span>public void destroy()</li>
+<li><strong>Garbage collected by the JVM</strong>: Once the servlet is destroyed, garbage collector component of JVM is responsible collecting the garbage&#8217;s.</li>
+</ol>
+<p><strong>HTML form:</strong></p>
+<div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;form action="LoginServlet" method="POST"&gt;
+Username:&lt;input type="text" name="username" required&gt;&lt;br&gt;
+Password: &lt;inputtype="password"name="password"required&gt;&lt;br&gt;
+&lt;input type="submit" value="Login"&gt;
+&lt;/form&gt;
+
+
+Servlet:
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class LoginServlet extends HttpServlet {
+public void doPost(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException {
+ // Set the response content type to be HTML
+response.setContentType("text/html");
+PrintWriter out = response.getWriter();
+ // Retrieve the username and password from the request
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+ // Generate the HTML content
+out.println("&lt;p&gt;Username: " + username + "&lt;/p&gt;");
+out.println("&lt;p&gt;Password: " + password + "&lt;/p&gt;");
+ }
+ public void doGet(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException {
+ // Call doPost to handle GET requests the same way as POST requests
+doPost(request, response);
+ }
+}</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain RMI architecture layers in detail. Write a Java programs using RMI to find product of two numbers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Remote Method Invocation (RMI) is a mechanism that allows an object running in one java virtual machine (JVM) to invoke methods on an object running in another java virtual machine (JVM). It provides remote communication between java programs. Objects with methods that can be invoked across JVMs are called remote objects. The remote object is called the server object. In an RMI application, we write two programs, a server program (resides on the server) and a client program (resides on the client).</p>
+<ul style="list-style-type: square;">
+<li>Inside the server program, a remote object is created and reference of that object is made available for the client (using the registry).</li>
+<li>The client program requests the remote objects on the server and tries to invoke its methods.</li>
+</ul>
+<p>The RMI architecture consists of four layers:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48455 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/RMI.drawio.png?resize=370%2C239&#038;ssl=1" alt="" width="370" height="239"></p>
+<p style="text-align: center;"><strong>fig: The RMI Layer</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Application Layer</strong>: This layer is the actual systems i.e. client and server which are involved in communication. The java program on the client side communicates with the java program on the server-side.</li>
+<li><strong>Proxy Layer</strong>: This layer contains the client stub and server skeleton objects.<br />
+<strong>i.</strong>  Stub is an object that resides on the client machine and it acts as a proxy for the remote object. It is like a gateway for the client program. When the client calls on the stub object, the stub forwards this request to a remote object (Skeleton) via RMI infrastructure which is then executed on the server.<br />
+<strong>ii.</strong> The server object which resides in a server machine is known as skeleton. Stub communicates with server application with the help of an intermediate Skeleton object. The responsibility of the skeleton object is to send parameters to method implementation and send the return values back to the client.</li>
+<li><strong>Remote Reference Layer</strong>: This layer is responsible to maintain the session during the method call. i.e. It manages the references<br />
+made by the client to the remote server object. This layer is also responsible for handling duplicated objects. The invocation semantics<br />
+of the RMI connection is defined and supported by this layer.</li>
+<li><strong>Transport Layer</strong>: The transport layer is responsible for setting up communication between the two machines. This layer uses standard TCP/IP Protocol for connection. The actual transportation of data is performed through this layer.</li>
+</ol>
+<div>
+<div><strong>Program:</strong></div>
+<div></div>
+<div><strong>Step 1: Define a remote interface</strong></div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.rmi.Remote;
+import java.rmi.RemoteException;
+public interface Multiply extends Remote {
+int product(int a, int b) throws RemoteException; }</pre>
+</div>
+<div><strong>Step 2: Implement the remote interface</strong></div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+public class MultiplyImpl extends UnicastRemoteObject implements Multiply {
+public MultiplyImpl() throws RemoteException {
+super();
+}
+@Override
+public int product(int a, int b) throws RemoteException {
+return a * b
+ } }</pre>
+</div>
+<div><strong>Step 3: Create a server program</strong></div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+public class MultiplyServer {
+ public static void main(String[] args) {
+ try {
+ // Instantiate the implementation class
+ MultiplyImpl obj = new MultiplyImpl();
+ // Bind the remote object in the registry
+ Registry registry = LocateRegistry.createRegistry(1099); // default RMI registry port
+ registry.bind("Multiply", obj);
+ System.out.println("Server ready");
+ } catch (Exception e) {
+ System.err.println("Server exception: " + e.toString());
+ e.printStackTrace();
+ }
+ }
+}</pre>
+</div>
+<div><strong>Step 4: Create a client program</strong></div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+public class MultiplyClient {
+ private MultiplyClient() {}
+ public static void main(String[] args) {
+ try {
+ // Getting the registry
+ Registry registry = LocateRegistry.getRegistry("localhost");
+ // Looking up the registry for the remote object
+ Multiply stub = (Multiply) registry.lookup("Multiply");
+ // Calling the remote method using the obtained object
+ int product = stub.product(5, 6);
+ System.out.println("Product is: " + product);
+ } catch (Exception e) {
+ System.err.println("Client exception: " + e.toString());
+ e.printStackTrace();
+ }
+ }
+}</pre>
+</div>
+</div>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is package? How can you create your own package in Java? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Packages are used in Java in order to prevent naming conflicts, to control access, to make searching/locating and usage of classes, interfaces, enumerations and annotations easier, etc. A Package can defined as a grouping of related types (classes, interfaces, enumerations and annotations) providing access protection and name space management. Some of the existing packages in Java are:<br />
+&#8211; java.lang &#8211; bundles the fundamental classes<br />
+&#8211; java.io &#8211; classes for input , output functions are bundled in this package<br />
+Programmers can define their own packages using user defined packages.</p>
+<p>The package which is defined by the user is called User-defined package. It contains user-defined classes and interfaces. Java supports a keyword called &#8220;package&#8221; which is used to create user-defined packages in java programming. It has the following general form:</p>
+<p>package packageName;</p>
+<p>Example</p>
+<p>//AddOperation.java</p>
+<p>package myFirstPackage;</p>
+<p>public class AddOperation{</p>
+<p>public double add(double x, double y){</p>
+<p>return(x+y);</p>
+<p>}</p>
+<p>}</p>
+<p>Using package myFirstPackage in program which we define above:</p>
+<p>//SumTwoNum.java</p>
+<p>import myFirstPackage.AddOperation //importing package</p>
+<p>class SumTwoNum{</p>
+<p>public static void main(string[]args){</p>
+<p>AddOperation obj = new AddOperation();</p>
+<p>system.out.println(&#8220;sum is = &#8221; + obj.add(30,20));</p>
+<p>}</p>
+<p>}</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Why do we need swing components ? Explain the uses of check boxes and radio buttons in GUI programming.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Swing components are a part of Java&#8217;s Swing library, which provides a set of lightweight components that work the same on all platforms. The main use of Swing components is to create graphical user interfaces (GUIs) for Java applications. They are an enhancement over the older Abstract Window Toolkit (AWT) because they have a richer set of components and allow for a more flexible and customizable UI.<br />
+Check Boxes:<br />
+Check boxes are used when you want to allow the user to make multiple selections out of a set of options. Each checkbox is independent of the others, so the user can select any combination of options.<br />
+Radio Buttons:<br />
+Radio buttons are used when you want to allow the user to select only one option from a set of choices. Radio buttons are mutually exclusive; when one is selected, any previously selected button is deselected.</p>
+<div>
+<div>example:</div>
+<div>public class CheckboxRadioButtonExample {</div>
+<div> public static void main(String[] args) {</div>
+<div> JFrame frame = new JFrame(&#8220;Checkbox and Radio Button Example&#8221;);</div>
+<div> frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</div>
+<div> frame.setSize(new Dimension(300, 200));</div>
+<div> frame.setLayout(new FlowLayout());</div>
+<div></div>
+<div> // Checkbox</div>
+<div> JCheckBox checkBox1 = new JCheckBox(&#8220;Option 1&#8221;);</div>
+<div> JCheckBox checkBox2 = new JCheckBox(&#8220;Option 2&#8221;);</div>
+<div> // Radio buttons</div>
+<div> JRadioButton radioButton1 = new JRadioButton(&#8220;Choice A&#8221;);</div>
+<div> JRadioButton radioButton2 = new JRadioButton(&#8220;Choice B&#8221;);</div>
+<div>}</div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How can we use listener interface to handle events? Compare listener interface with adapter class.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Listener interfaces in Java are a fundamental part of the event-handling model, which follows the Observer design pattern. When an event occurs, such as a user clicking a button or moving the mouse, the corresponding listener that has been registered with the source of the event is notified and its callback method is invoked to handle the event. To use a listener<br />
+interface follow the following steps:<br />
+&#8211; Implement the listener interface in your class.<br />
+&#8211; Override the methods defined by the listener to provide specific event-handling code.<br />
+&#8211; Register the listener with the component that generates the event.</p>
+<p>example:<br />
+import javax.swing.*;<br />
+import java.awt.event.ActionEvent;<br />
+import java.awt.event.ActionListener;<br />
+public class ButtonClickListener implements ActionListener {<br />
+public void actionPerformed(ActionEvent e) {<br />
+System.out.println(&#8220;Button clicked!&#8221;);<br />
+}<br />
+public static void main(String[] args) {<br />
+JButton button = new JButton(&#8220;Click Me&#8221;);<br />
+button.addActionListener(new ButtonClickListener());<br />
+// Rest of the GUI setup code&#8230;<br />
+}<br />
+}</p>
+<p>Listener interfaces and adapter classes are both used in Java&#8217;s event-handling mechanism, but they serve different purposes and have different use cases:<br />
+Listener Interface:<br />
+&#8211; Each method in the interface must be implemented, even if you don&#8217;t need all of them. This can sometimes lead to &#8220;empty&#8221; method implementations in your code.<br />
+&#8211; Good for situations where you are going to handle most or all of the events that the interface provides.<br />
+&#8211; Encourages handling multiple events within the same listener, which can be both an advantage (for related actions) or a disadvantage (for unrelated actions, leading to less cohesive code).<br />
+Adapter Class:<br />
+&#8211; Adapter classes are abstract classes that provide empty implementations of listener interfaces.<br />
+&#8211; You only override the methods for events you care about, resulting in cleaner code and less boilerplate.<br />
+&#8211; Good for situations where you need to handle only one or a few events of the listener interface.<br />
+&#8211; Reduces the need for empty implementations and can make the code more readable.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is row set? Explain cached row set in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:12">Row Set:</p>
+<ul data-sourcepos="5:1-5:28">
+<li data-sourcepos="5:1-5:28">It&#8217;s like a container that holds a set of rows from a database, similar to a ResultSet.</li>
+<li data-sourcepos="6:1-6:72">It&#8217;s more flexible than a ResultSet because it can work with data even when you&#8217;re not connected to the database.</li>
+<li data-sourcepos="7:1-9:4">It offers features like:
+<ul data-sourcepos="8:5-9:4">
+<li data-sourcepos="8:5-9:4">Being able to move forward and backward through the rows</li>
+<li data-sourcepos="9:5-9:23">Updating the data</li>
+<li data-sourcepos="10:5-11:0">Creating a new row set from a subset of the existing rows</li>
+</ul>
+</li>
+</ul>
+<p data-sourcepos="12:1-12:19">Cached Row Set:</p>
+<ul data-sourcepos="14:1-14:3">
+<li data-sourcepos="14:1-14:3">A special type of row set that stores the data in memory (caches it).</li>
+<li data-sourcepos="15:1-15:99">This means you can work with the data even when you&#8217;re offline or disconnected from the database.</li>
+<li data-sourcepos="16:1-20:0">Key benefits:
+<ul data-sourcepos="17:5-20:0">
+<li data-sourcepos="17:5-17:120">Improved performance: Accessing data from memory is often faster than fetching it from the database each time.</li>
+<li data-sourcepos="18:5-18:121">Reduced database load: It minimizes the number of connections needed to the database, making it more efficient.</li>
+<li data-sourcepos="19:5-20:0">Offline capabilities: You can work with the data even when you&#8217;re not connected to the network.</li>
+</ul>
+</li>
+</ul>
+<p>Creating a CachedRowSet</p>
+<p>You can create a chaced RowSet object using the ctreateCachedRowSet() method of the RowSetFactory.</p>
+<p>You can create a RowSetFactory object using the newFactory() method of the RowSetProvider method.</p>
+<p>Create a CachedRowSet object using the above-mentioned methods as shown below:</p>
+<p>//Creating the RowSet object</p>
+<p>RowSetFactory factory = RowSetProvider.newFactory();</p>
+<p>CachedRowSet rowSet = facctory.createCachedRowSet();</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is Java Mail API ? How can you use this API to send email messages?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Java Mail API is a set of abstract APIs that provide a protocol-independent framework to build mail and messaging applications. It is part of the Java Enterprise Edition (Java EE), but it can also be used in Java Standard Edition (Java SE) applications. The API provides a platform-independent and protocol-independent framework to build mail and messaging applications.<br />
+To use the Java Mail API to send email messages, you typically need to do the following:<br />
+&#8211; Include Java Mail API in Your Project: If you&#8217;re using Maven, you can include it in your pom.xml. For standalone projects, download the jar file from the Java Mail API website.<br />
+&#8211; Set Up Mail Session: Configure the mail session with properties like SMTP server, port, and whether to use authentication and SSL.<br />
+&#8211; Create a Message: Use the Message class to create a new message. This involves setting the sender, recipient, subject, and content of the email.<br />
+&#8211; Send the Email: Use the Transport class to send the message.</p>
+<p>mport javax.mail.*;<br />
+import javax.mail.internet.*;<br />
+import java.util.Properties;<br />
+public class EmailSender {<br />
+public static void sendEmail(String to, String from, String host, String subject, String text) {<br />
+// Set up properties for the mail session<br />
+Properties properties = System.getProperties();<br />
+properties.setProperty(&#8220;mail.smtp.host&#8221;, host);<br />
+properties.setProperty(&#8220;mail.smtp.port&#8221;, &#8220;25&#8221;);<br />
+// Get the default Session object<br />
+Session session = Session.getDefaultInstance(properties);<br />
+try {<br />
+// Create a default MimeMessage object<br />
+MimeMessage message = new MimeMessage(session);<br />
+// Set From: header field<br />
+message.setFrom(new InternetAddress(from));<br />
+// Set To: header field<br />
+message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));<br />
+// Set Subject: header field<br />
+message.setSubject(subject);</p>
+<p>// Set the actual message<br />
+message.setText(text);<br />
+// Send message<br />
+Transport.send(message);<br />
+System.out.println(&#8220;Sent message successfully&#8230;.&#8221;);<br />
+} catch (MessagingException mex) {<br />
+mex.printStackTrace();<br />
+}<br />
+}<br />
+public static void main(String[] args) {<br />
+// Sender&#8217;s email ID and recipient&#8217;s email ID need to be provided<br />
+String from = &#8220;mail@hamrocsit.com&#8221;;<br />
+String to = &#8220;mail@ankitpangeni.com.np&#8221;;<br />
+String host = &#8220;smtp.example.com&#8221;; // SMTP host<br />
+// Subject and content of the email<br />
+String subject = &#8220;Thank you&#8221;;<br />
+String text = &#8220;Thank you for solving the old questions.&#8221;;<br />
+sendEmail(to, from, host, subject, text);<br />
+}<br />
+}</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Compare JavaFX with swing. Explain HBox and BBox layouts of JavaFX.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 264px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">Swing</td>
+<td style="width: 50%; height: 24px;">JavaFX</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Swing is the standard toolkit for java developer in creating GUI.</td>
+<td style="width: 50%; height: 48px;">JavaFX provides platform support for creating desktop applications.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Swing has a more sophisticated set of GUI components.</td>
+<td style="width: 50%; height: 48px;">JavaFX has a decent number of UI components available but lesser than what swing provides.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Swing is a legacy library that fully features and provide pluggable UI components.</td>
+<td style="width: 50%; height: 48px;">JavaFX has UI components that are still evolving with a more advanced look and feel.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Swing has a UI component library and act as a legacy.</td>
+<td style="width: 50%; height: 48px;">JavaFX has several components built over swing.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">Swing does not have support for customization using CSS and XML.</td>
+<td style="width: 50%; height: 48px;">JavaFX has a support for customization using CSS and XML.</td>
+</tr>
+</tbody>
+</table></div>
+<p>In JavaFX, layout panes are used to manage the layout of nodes (like buttons, labels, text fields,<br />
+etc.) in a scene graph. Two of the commonly used layout panes are `HBox` and `VBox`.</p>
+<p>HBox<br />
+`HBox` lays out its children in a single horizontal row. If you add multiple nodes to an `HBox`,<br />
+they will be arranged next to each other in the order they were added. This is useful when you<br />
+want to align elements horizontally. For instance, you might use an `HBox` to create a toolbar<br />
+with buttons aligned horizontally.</p>
+<p>Example:<br />
+HBox hbox = new HBox();<br />
+hbox.setSpacing(10); // space between children nodes<br />
+hbox.setAlignment(Pos.CENTER); // align children to the center<br />
+hbox.getChildren().addAll(new Button(&#8220;Button 1&#8221;), new Button(&#8220;Button 2&#8221;), new Button(&#8220;Button 3&#8221;));</p>
+<p>VBox<br />
+`VBox` lays out its children in a single vertical column. If you add multiple nodes to a `VBox`,<br />
+they will be stacked vertically in the order they were added. This is useful for aligning elements<br />
+vertically, such as a form with labels and text fields.</p>
+<p>Example:</p>
+<p>VBox vbox = new VBox();<br />
+vbox.setSpacing(5); // space between children nodes<br />
+vbox.setAlignment(Pos.CENTER_LEFT); // align children to the center-left<br />
+vbox.getChildren().addAll(new Label(&#8220;Name:&#8221;), new TextField(), new Label(&#8220;Email:&#8221;), new TextField());</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is servlet? Write a simple JSP file to display “Tribhuwan University” five times.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A servlet is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Essentially, a servlet can respond to any type of request but they are commonly used to extend the applications hosted by web servers.<br />
+For such applications, Java Servlet technology defines HTTP-specific servlet classes. The javax.servlet and javax.servlet.http packages provide interfaces and classes for writing servlets. Servlets are platform-independent because they are written in Java.</p>
+<div>
+<div>Simple JSP file</div>
+<div>&lt;%@ page contentType=&#8221;text/html;charset=UTF-8&#8243; language=&#8221;java&#8221; %&gt;</div>
+<div>&lt;html&gt;</div>
+<div>&lt;head&gt;</div>
+<div> &lt;title&gt;Simple JSP Example&lt;/title&gt;</div>
+<div>&lt;/head&gt;</div>
+<div>&lt;body&gt;</div>
+<div> &lt;h2&gt;Printing TU five times&lt;/h2&gt;</div>
+<div> &lt;%</div>
+<div> for (int i = 0; i &lt; 5; i++) {</div>
+<div> out.println(&#8220;Tribhuvan University&lt;br&gt;&#8221;);</div>
+<div> }</div>
+<div> %&gt;</div>
+<div>&lt;/body&gt;</div>
+<div>&lt;/html&gt;</div>
+</div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why CORBA is important? Compare CORBA with RMI.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Common Object request broker is used for communication between distributed and heterogeneous objects that are written by in java language are any other language. CORBA is developed by Object Management Group(OMG). This was followed by many revisions of CORBA architecture.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29285" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-142056.png?resize=312%2C217&#038;ssl=1" alt="" width="312" height="217"></p>
+<p>Major differences between RMI and CORBA are listed below.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">RMI</td>
+<td style="width: 50%;">CORBA</td>
+</tr>
+<tr>
+<td style="width: 50%;">RMI stand for Remote Method Invocation.</td>
+<td style="width: 50%;">CORBA stands for Common Object Request Broker Architecture.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It uses java interface for implementation.</td>
+<td style="width: 50%;">It uses interface Definition Language(IDL) to separate interface from implementation.</td>
+</tr>
+<tr>
+<td style="width: 50%;">RMI passes objects by value.</td>
+<td style="width: 50%;">CORBA passes objects by reference.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Java RMI is a server-centric model.</td>
+<td style="width: 50%;">CORBA is a peer-to-peer system.</td>
+</tr>
+<tr>
+<td style="width: 50%;">RMI is slow in execution than CORBA.</td>
+<td style="width: 50%;">CORBA is fast in execution than RMI.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. JDBC drivers<br />
+b. Java server pages</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. JDBC Drivers<br />
+JDBC (Java Database Connectivity) drivers are a key component of the JDBC API, which provides a standard interface for connecting Java applications to a wide range of databases. The JDBC driver acts as a bridge between the Java application and the database server.</p>
+<p>The JDBC API supports both two-tier and three-tier processing models for database access bbu in general JDBC Architecture consists of two layers:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29286" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-142926.png?resize=476%2C332&#038;ssl=1" alt="" width="476" height="332"></p>
+<p>b. Java server pages (Unit 7)<br />
+Java Server Pages (JSP) is a technology for developing web pages that support dynamic content. JSP allows Java code and certain predefined actions to be intermixed with static web markup content, like HTML and XML. Java Server Pages (JSP) is a server-side programming technology that enables the creation of dynamic, platform-independent method for building Web- based applications. JSP have access to the entire family of Java APIs, including the JDBC API to access enterprise databases. It can be thought of as an extension to servlet because it provides more functionality than servlet. A JSP page consists of HTML tags and JSP tags.<br />
+The JSP pages are easier to maintain than servlet because we can separate designing and development. Web developers write JSPs as text files that combine HTML or XHTML code, XML elements, and embedded JSP actions and commands. JSP tags can be used for a variety of purposes, such as retrieving information from a database or registering user preferences, accessing JavaBeans components, passing control between pages and sharing information between requests, pages etc.</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

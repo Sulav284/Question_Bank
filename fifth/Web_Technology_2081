@@ -1,0 +1,494 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Tech Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>Web Tech Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Describe the rules for creating XML document. Create a XML file with simple type and elements with attribute and nested elements. Write its equivalent XSD.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Following certain guidelines is necessary when creating an XML document to guarantee that it is valid and well-formed. The main guidelines for producing an XML document are as follows:</p>
+<ul style="list-style-type: square;">
+<li>All other components must be contained in a single root element, which is required for every XML document.</li>
+<li>XML elements need to have start and end tags that match precisely (case-sensitively).</li>
+<li>Elements need to be nestled correctly. The sequence of a closing tag must match that of its matching starting tag.</li>
+<li>Values for attributes must be enclosed in single or double quotations.</li>
+<li>There can be no duplicate characteristics in an element.</li>
+<li>Such characters as &lt;, &gt;, &amp;, &#8216;, and &#8221; (e.g., &lt;, &gt;, &amp;), must be evaded.</li>
+<li>Being case-sensitive, and would be regarded as distinct elements in XML.</li>
+<li>To add comments, use &lt;!&#8211; Comment &#8211;&gt; grammar.</li>
+</ul>
+<p><strong>XML document</strong> :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;BookStore&gt;
+    &lt;Book id="B001"&gt;
+        &lt;Title&gt;Learning XML&lt;/Title&gt;
+        &lt;Author&gt;John Doe&lt;/Author&gt;
+        &lt;Price currency="USD"&gt;29.99&lt;/Price&gt;
+        &lt;Publisher&gt;
+            &lt;Name&gt;XML Books Inc.&lt;/Name&gt;
+            &lt;Address&gt;123 XML Street, Web City&lt;/Address&gt;
+        &lt;/Publisher&gt;
+    &lt;/Book&gt;
+    &lt;Book id="B002"&gt;
+        &lt;Title&gt;XSLT for Beginners&lt;/Title&gt;
+        &lt;Author&gt;Jane Smith&lt;/Author&gt;
+        &lt;Price currency="USD"&gt;35.50&lt;/Price&gt;
+        &lt;Publisher&gt;
+            &lt;Name&gt;Web Tech Press&lt;/Name&gt;
+            &lt;Address&gt;456 Tech Avenue, Code Town&lt;/Address&gt;
+        &lt;/Publisher&gt;
+    &lt;/Book&gt;
+&lt;/BookStore&gt;
+</pre>
+<p><strong>Equivalent XSD</strong> :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+
+  &lt;xs:element name="BookStore"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="Book" maxOccurs="unbounded"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="Title" type="xs:string"/&gt;
+              &lt;xs:element name="Author" type="xs:string"/&gt;
+              &lt;xs:element name="Price"&gt;
+                &lt;xs:complexType&gt;
+                  &lt;xs:simpleContent&gt;
+                    &lt;xs:extension base="xs:decimal"&gt;
+                      &lt;xs:attribute name="currency" type="xs:string" use="required"/&gt;
+                    &lt;/xs:extension&gt;
+                  &lt;/xs:simpleContent&gt;
+                &lt;/xs:complexType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Publisher"&gt;
+                &lt;xs:complexType&gt;
+                  &lt;xs:sequence&gt;
+                    &lt;xs:element name="Name" type="xs:string"/&gt;
+                    &lt;xs:element name="Address" type="xs:string"/&gt;
+                  &lt;/xs:sequence&gt;
+                &lt;/xs:complexType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:attribute name="id" type="xs:string" use="required"/&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+
+&lt;/xs:schema&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Create an HTML file containing form with textbox, select and radio button. Now write a javascript function for validating the form elements. Validate textbox for required, select field should have some value selected and radio button should be checked.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="js">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Form Validation&lt;/title&gt;
+    &lt;style&gt;
+        .error { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Sample Form with Validation&lt;/h2&gt;
+&lt;form id="sampleForm" onsubmit="return validateForm()"&gt;
+
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;span id="nameError" class="error"&gt;&lt;/span&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="country"&gt;Country:&lt;/label&gt;
+    &lt;select id="country" name="country"&gt;
+        &lt;option value=""&gt;--Select a country--&lt;/option&gt;
+        &lt;option value="USA"&gt;USA&lt;/option&gt;
+        &lt;option value="Canada"&gt;Canada&lt;/option&gt;
+        &lt;option value="UK"&gt;UK&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span id="countryError" class="error"&gt;&lt;/span&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Gender:&lt;/label&gt;
+    &lt;input type="radio" id="male" name="gender" value="Male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;
+    &lt;input type="radio" id="female" name="gender" value="Female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;
+    &lt;span id="genderError" class="error"&gt;&lt;/span&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+    function validateForm() {
+        let isValid = true;
+
+        const name = document.getElementById("name").value;
+        const nameError = document.getElementById("nameError");
+        if (name.trim() === "") {
+            nameError.textContent = "Name is required.";
+            isValid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        const country = document.getElementById("country").value;
+        const countryError = document.getElementById("countryError");
+        if (country === "") {
+            countryError.textContent = "Please select a country.";
+            isValid = false;
+        } else {
+            countryError.textContent = "";
+        }
+
+        const genderMale = document.getElementById("male").checked;
+        const genderFemale = document.getElementById("female").checked;
+        const genderError = document.getElementById("genderError");
+        if (!genderMale &amp;&amp; !genderFemale) {
+            genderError.textContent = "Please select a gender.";
+            isValid = false;
+        } else {
+            genderError.textContent = "";
+        }
+
+        return isValid; 
+    }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Write a PHP program to create a form. Create an insertdb() method to insert the form vlaues into a database table and display() to display the database table value.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+
+$host = 'localhost';
+$dbname = 'form_db';
+$username = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e-&gt;getMessage());
+}
+
+function insertdb($name, $email, $age) {
+    global $pdo;
+    $sql = "INSERT INTO users (name, email, age) VALUES (:name, :email, :age)";
+    $stmt = $pdo-&gt;prepare($sql);
+    $stmt-&gt;execute(['name' =&gt; $name, 'email' =&gt; $email, 'age' =&gt; $age]);
+    echo "Record inserted successfully!&lt;br&gt;";
+}
+
+function display() {
+    global $pdo;
+    $sql = "SELECT * FROM users";
+    $stmt = $pdo-&gt;query($sql);
+
+    echo "&lt;h2&gt;Users List&lt;/h2&gt;";
+    echo "&lt;table border='1'&gt;
+            &lt;tr&gt;
+                &lt;th&gt;ID&lt;/th&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+                &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;";
+
+    while ($row = $stmt-&gt;fetch(PDO::FETCH_ASSOC)) {
+        echo "&lt;tr&gt;
+                &lt;td&gt;{$row['id']}&lt;/td&gt;
+                &lt;td&gt;{$row['name']}&lt;/td&gt;
+                &lt;td&gt;{$row['email']}&lt;/td&gt;
+                &lt;td&gt;{$row['age']}&lt;/td&gt;
+              &lt;/tr&gt;";
+    }
+
+    echo "&lt;/table&gt;";
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+
+    if (!empty($name) &amp;&amp; !empty($email) &amp;&amp; !empty($age)) {
+        insertdb($name, $email, $age);
+    } else {
+        echo "Please fill in all fields.&lt;br&gt;";
+    }
+}
+
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;PHP Form with Database&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Insert User Data&lt;/h2&gt;
+&lt;form method="POST" action=""&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="age"&gt;Age:&lt;/label&gt;
+    &lt;input type="number" id="age" name="age" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;br&gt;
+
+&lt;?php
+display();
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Describe client server architecture with its types.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Client-Server Architecture is a network architecture concept that distributes services among a group of clients and a server. In this concept, clients are devices that request services (such as computers, cellphones, or apps), whereas servers are centralized computers or programs that deliver such services. Clients and servers often communicate over a network, allowing them to access resources such as files, data, or programs located on the server.</p>
+<p><strong>Two-Tier Architecture:<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-44247 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/2tier.drawio.png?resize=347%2C173&#038;ssl=1" alt="" width="347" height="173"></strong></p>
+<p>In a two-tier architecture, clients connect directly with servers. The server is responsible for both business logic (processing requests and completing activities) and data management (storing and retrieving data). They are easy to build, with quick reaction times for small systems.It has limited scalability; as the number of clients grows, the server may get overwhelmed.</p>
+<p>Examples: Basic database applications are those in which a client communicates directly with a database server (such as MySQL) without the need of intermediary layers.</p>
+<p><strong>Three -Tier Architecture:<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-44248 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/3-tier.drawio.png?resize=322%2C118&#038;ssl=1" alt="" width="322" height="118"></strong></p>
+<p>In a three-tier design, an additional layer (the middleware or application server) is introduced between the client and server. It has mproved scalability and maintainability since business logic is isolated from data management. This architecture is more difficult and may need additional resources. The layers are normally as follows:<br />
+The presentation layer is the client-side interface (such as a web browser or app).<br />
+The application layer is the intermediate layer or server that holds and processes business logic.<br />
+Data Layer: The database server that handles data storage and retrieval.</p>
+<p>Examples include web applications in which the client (browser) communicates with a web server (application layer) that processes and retrieves data from a database (data layer).</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Write a HTML script to create a table with three rows and three columns. The second row third column should contain a text “TU” with link set to <span>www.tu.edu.np</span>  . The hieght of second row should be set to 200px.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Table with Link&lt;/title&gt;
+
+    &lt;style&gt;
+        .second-row {
+            height: 200px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;table border="1"&gt;
+       
+        &lt;tr&gt;
+            &lt;td&gt;Row 1, Col 1&lt;/td&gt;
+            &lt;td&gt;Row 1, Col 2&lt;/td&gt;
+            &lt;td&gt;Row 1, Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+        
+        
+        &lt;tr class="second-row"&gt;
+            &lt;td&gt;Row 2, Col 1&lt;/td&gt;
+            &lt;td&gt;Row 2, Col 2&lt;/td&gt;
+            &lt;td&gt;&lt;a href="https://www.tu.edu.np" target="_blank"&gt;TU&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        
+        
+        &lt;tr&gt;
+            &lt;td&gt;Row 3, Col 1&lt;/td&gt;
+            &lt;td&gt;Row 3, Col 2&lt;/td&gt;
+            &lt;td&gt;Row 3, Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is onload event in HTML? Write an HTML script that displays alert message “Hello Nepal” in onload event.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In HTML, the onload event is fired after an element has finished loading. This is typically used with the &lt;body&gt; element to run JavaScript code once the entire page is fully loaded (including pictures, scripts, and other resources). It is commonly used to initialize scripts, establish default settings, and display alerts when the page is ready.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Onload Event Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onload="showMessage()"&gt;
+
+    &lt;script&gt;
+        function showMessage() {
+            alert("Hello Nepal");
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How internal and external CSS differ from each other. Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Internal CSS and External CSS are two techniques for applying styles to HTML texts, each with its own set of benefits and applications.</p>
+<p><strong>Internal CSS : </strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Internal CSS Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            color: navy;
+            font-family: Arial, sans-serif;
+        }
+        p {
+            color: darkslategray;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Welcome to Internal CSS Example&lt;/h1&gt;
+    &lt;p&gt;This page uses internal CSS to apply styles.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+<p>Internal CSS is placed directly within an HTML document. It is defined inside the &lt;style&gt; tag within the &lt;head&gt; section. Internal CSS is useful for styling a single HTML page specifically, without affecting other pages.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How can you define array in javascript ? Create an array Fruit with its elements “apple”, “banana”, “mango”, “grape” and print the array.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In JavaScript, arrays are defined with square brackets [ ]. Arrays are used to hold several values in the same variable.  Arrays are helpful for storing collections of linked data, such as a list of objects or a set of numerical values. It is of two type:</p>
+<ul style="list-style-type: square;">
+<li><strong>Indexed array</strong> : Here each item in an array has an index, which begins at 0 with the first item.</li>
+<li><strong>Associative array</strong> : Here each item in an array has a key and value pair.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="js">var Fruit = ["apple", "banana", "mango", "grape"];
+
+console.log(Fruit);
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How can you transform XML document into HTML using XSLT. Support your answer with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>XSLT (eXtensible Stylesheet Language Transformations)</strong> can be used to convert an XML document to HTML. XSLT is a language that defines a collection of transformation rules for converting XML data into other forms, including HTML. Following steps can be done to transform XML to HTML using XSLT :</p>
+<ul style="list-style-type: square;">
+<li><strong>Create an XML file</strong> : Make a file in XML that contains the information you wish to show in HTML.</li>
+<li><strong>Create an XSLT file</strong> : The transformation rules to turn the XML structure into HTML are defined in an XSLT file.</li>
+<li><strong>Connect XML with XSLT</strong> : Applying the transformation requires referring to the XSLT file inside the XML file.</li>
+</ul>
+<p><strong>Example</strong> :<br />
+XML file</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="transform.xsl"?&gt;
+&lt;library&gt;
+    &lt;book&gt;
+        &lt;title&gt;Introduction to XML&lt;/title&gt;
+        &lt;author&gt;John Doe&lt;/author&gt;
+        &lt;year&gt;2023&lt;/year&gt;
+    &lt;/book&gt;
+    &lt;book&gt;
+        &lt;title&gt;Learning XSLT&lt;/title&gt;
+        &lt;author&gt;Jane Smith&lt;/author&gt;
+        &lt;year&gt;2022&lt;/year&gt;
+    &lt;/book&gt;
+&lt;/library&gt;
+</pre>
+<p>XSLT file that transforms the XML document into HTML:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:output method="html" encoding="UTF-8"/&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Library Books&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Library Book List&lt;/h1&gt;
+        &lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Title&lt;/th&gt;
+            &lt;th&gt;Author&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+          &lt;/tr&gt;
+          
+          &lt;xsl:for-each select="library/book"&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;xsl:value-of select="title"/&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;xsl:value-of select="author"/&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;xsl:value-of select="year"/&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/xsl:for-each&gt;
+        &lt;/table&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+  
+&lt;/xsl:stylesheet&gt;
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Write a PHP function add that takes two arguments as an input and return their sum.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+$result = add(5, 10);
+echo "The sum is: " . $result; 
+?&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define cookie. Write a PHP program to create and retrive a cookie.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A cookie is a little piece of data that is kept in the client&#8217;s browser. Cookies are used to store user information between visits, such as preferences, session tokens, and other data that the server may retrieve later. Cookies are normally set by the server and remain between HTTP requests.</p>
+<p>Cookies may be generated in PHP by calling the setcookie() method before any HTML output. To get a cookie, utilize the $_COOKIE superglobal array.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+
+setcookie("user", "John Doe", time() + 3600, "/"); 
+
+if(isset($_COOKIE["user"])) {
+    echo "User cookie is set. Value: " . $_COOKIE["user"];
+} else {
+    echo "User cookie is not set.";
+}
+?&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is text-overflow property in CSS ? How can you use clip and ellipseis in text-overflow ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The text-overflow property in CSS governs how text that exceeds the bounds of a container is displayed. It is typically used in conjunction with <strong>white-space: nowrap</strong> and <strong>overflow: hidden</strong> to keep content from wrapping to a new line and to properly handle overflow.</p>
+<p><strong>Clip</strong> : This value just clips off the text at the border, without adding any further characters. This is helpful if we need a &#8220;hard cutoff&#8221; for content and don&#8217;t need to indicate that more material has been concealed. for eg :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="css">text-overflow: clip;
+</pre>
+<p><strong>Ellipsis </strong>: To show that there is more content concealed, this value truncates the text and adds an ellipsis (&#8230;). This is frequently used in user interfaces if you want to show that there is more material, such in preview text or abbreviated article headlines. for eg:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="css">text-overflow: ellipsis;
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

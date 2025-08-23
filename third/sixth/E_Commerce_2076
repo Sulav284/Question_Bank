@@ -1,0 +1,149 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-commerce Question 2076 2076</title>
+    </head>
+    <body>
+        <h1>E-commerce Question 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt all the questions.</h2><h3>Question 1</h3>
+<div><p><p>What is media convergence in ecommerce? How it influence ecommerce? Discuss technological and market factors that drive media convergence.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Media convergence in e-commerce refers to the merging or integration of different forms of media, technologies, and platforms to deliver content and services to consumers in a unified and seamless way. In the context of e-commerce, media convergence involves the blending of traditional media (such as television, radio, and print) with digital media (such as websites, social media, and mobile apps) to create a holistic and interconnected user experience.</p>
+<p><strong>Influence on E-commerce: </strong></p>
+<ul style="list-style-type: square;">
+<li>Media convergence allows e-commerce businesses to provide a consistent and immersive shopping experience across various channels. Customers can seamlessly transition from one platform to another, such as browsing products on a website and then making a purchase through a mobile app.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Through media convergence, e-commerce companies can deliver engaging and interactive content to consumers. This can include video demonstrations, virtual reality experiences, or personalized product recommendations based on user preferences and browsing behavior.</li>
+</ul>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li>Media convergence enables e-commerce businesses to engage with customers through multiple platforms. They can leverage social media, live chat, email marketing, and other digital channels to interact with consumers and address their queries and concerns in real-time.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Technological Factors Driving Media Convergence: </strong></p>
+<ol style="list-style-type:decimal;">
+<li>Internet and Connectivity: The widespread availability of high-speed internet and advancements in connectivity have facilitated seamless data transmission across various devices and platforms.</li>
+<li>Mobile Technology: The use of smartphones and mobile apps has enabled consumers to access ecommerce services on the go, blurring the lines between traditional and digital media.</li>
+<li>Cloud Computing: Cloud technology allows businesses to store and access vast amounts of data and content from anywhere, making it easier to integrate and share information across different channels.</li>
+<li>Big Data and Analytics: The ability to collect and analyze large volumes of data enables e-commerce companies to understand customer behavior and preferences, leading to better-targeted marketing efforts.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong> </strong></p>
+<p><strong>Market Factors Driving Media Convergence: </strong></p>
+<ol style="list-style-type:decimal;">
+<li>Consumer Expectations: Consumers now expect a seamless and personalized shopping experience across all platforms. E-commerce businesses need to meet these expectations to remain competitive.</li>
+<li>Competitive Landscape: To stand out in a crowded market, e-commerce companies are embracing media convergence to offer innovative and immersive shopping experiences that differentiate them from their competitors.</li>
+<li>Changing Media Consumption Habits: As consumers increasingly shift from traditional media to digital platforms, e-commerce businesses must adapt their strategies to reach customers where they are spending their time.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is digital wallet? How it can be used in ecommerce? What issues need to be considered while designing electronic payment system?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A digital wallet is an electronic payment tool that enables users to store funds, typically linked to their bank account, and make digital payments conveniently and securely.</p>
+<p>In e-commerce, digital wallets play a significant role in simplifying and streamlining the payment process for both customers and merchants. Here&#8217;s how digital wallets are used in e-commerce:</p>
+<ul style="list-style-type: square;">
+<li>Digital wallets enable one-click or one-tap payments, reducing the checkout process&#8217;s friction and making it easy for customers to complete transactions swiftly.</li>
+<li>Digital wallets use encryption and tokenization to protect users&#8217; financial information. This adds an extra layer of security, reducing the risk of exposing sensitive data during transactions.</li>
+<li>Mobile wallets, a type of digital wallet, are especially popular for mobile commerce. Customers can make purchases directly from their smartphones or tablets, providing a seamless shopping experience.</li>
+<li>Digital wallets can integrate loyalty cards and rewards programs, encouraging customers to use the wallet for recurring purchases and driving customer loyalty.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Issues to Consider While Designing Electronic Payment Systems: </strong></p>
+<ol style="list-style-type:decimal;">
+<li>Security: Security is the most important issue in electronic payment systems. Implementing strong encryption, authentication measures, and fraud detection mechanisms are crucial to protect users&#8217; sensitive data.</li>
+<li>Privacy: User privacy should be respected and protected. Payment systems should adhere to data protection regulations and provide clear policies on data usage and sharing.</li>
+<li>User Experience: A smooth and intuitive user experience is essential to encourage adoption. Payment systems should be user-friendly, with minimal steps required to complete transactions.</li>
+<li>Compatibility: Payment systems should be compatible with various devices and operating systems to cater to a broader audience, including desktop users, mobile users, and users from different regions.</li>
+<li>Reliability and Availability: Payment systems must be highly reliable and available, as any downtime or technical issues can lead to customer dissatisfaction and lost sales opportunities.</li>
+<li>Integration with E-commerce Platforms: Payment systems need to integrate seamlessly with e-commerce platforms, enabling merchants to accept payments without extensive development efforts.</li>
+</ol>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is EDI? How EDI is used in ecommerce. How EDI has influenced information flow in international trade?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>EDI stands for Electronic Data Interchange. It is a technology and communication protocol that allows the electronic exchange of structured business documents and information between different computer systems, organizations, and trading partners. EDI replaces the need for paper-based documents, such as purchase orders, invoices, shipping notices, and acknowledgments, with electronic formats, making business transactions faster, more accurate, and more efficient.</p>
+<p><strong>EDI in E-commerce: </strong></p>
+<p>In e-commerce, EDI is used to streamline and automate the exchange of business data between online retailers, suppliers, manufacturers, logistics providers, and other trading partners. By using standardized electronic formats, such as EDI X12 or EDIFACT, e-commerce businesses can seamlessly integrate their back-end systems with those of their trading partners. This enables real-time data sharing, reduces manual data entry errors, and improves supply chain efficiency.</p>
+<p>EDI facilitates various e-commerce processes, such as order processing, inventory management, shipping and tracking, invoicing, and payment reconciliation. For example, when a customer places an online order, the EDI system can automatically send the purchase order to the supplier, update inventory levels, generate shipping labels, and trigger invoice creation and payment processing.</p>
+<p><strong>EDI and Information Flow in International Trade: </strong></p>
+<p>EDI has had a significant impact on information flow in international trade, bringing several benefits:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Speed and Efficiency:</strong> EDI allows for instant data exchange, eliminating the delays associated with physical document handling and postal services. This accelerates the entire trade process, reducing lead times and improving supply chain responsiveness.</li>
+<li><strong>Accuracy and Reliability:</strong> Electronic data exchange minimizes the risk of human errors, as information is automatically transmitted and processed by computer systems. This enhances data accuracy and reliability in international transactions.</li>
+<li><strong>Standardization:</strong> EDI relies on standardized message formats, ensuring consistency and compatibility across international borders and between diverse trading partners. This fosters smooth communication and collaboration.</li>
+<li><strong>Cost Savings:</strong> By eliminating paper-based processes, businesses can save on printing, postage, and document storage costs. Additionally, streamlined operations and reduced errors lead to overall cost savings.</li>
+<li><strong>Compliance and Regulatory Requirements:</strong> EDI facilitates compliance with customs regulations, trade laws, and other international standards, ensuring that the necessary documentation is accurately and timely exchanged.</li>
+<li><strong>Global Connectivity:</strong> EDI enables businesses to connect with trading partners around the world, transcending geographical boundaries and time zones.</li>
+</ol>
+</div>
+<h2>Section B: Attempt all the questions.</h2><h3>Question 4</h3>
+<div><p><p>What are the different types of digital documents used in corporate library?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In a corporate library, various types of digital documents are used to organize, manage, and store information efficiently. Here are some common types of digital documents found in a corporate library:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Word Processing Documents:</strong> These are standard text documents created using word processing software such as Microsoft Word or Google Docs. They may include reports, memos, and meeting minutes.</li>
+<li><strong>Spreadsheets</strong>: Spreadsheets, created with software like Microsoft Excel or Google Sheets, are used for organizing and analyzing data. They are commonly used for financial data, budgeting, project planning, and data analysis.</li>
+<li><strong>Presentations</strong>: Presentation documents, created using software like Microsoft PowerPoint or Google Slides, are used to convey information visually. They are used for internal and external presentations, training materials, and business proposals.</li>
+<li><strong>PDFs:</strong> PDFs are widely used for sharing documents in a read-only format that preserves the layout and formatting. They are commonly used for manuals, guides, whitepapers, and other types of documentation.</li>
+<li><strong>Reports and Research Papers</strong>: Digital documents containing research findings, market reports, industry analysis, and academic papers may be stored in the corporate library.</li>
+<li><strong>Contracts and Legal Documents:</strong> Digital copies of contracts, agreements, and legal documents are crucial for record-keeping and reference in a corporate library.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is I-way? What market forces influence the I-way?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&#8220;I-way&#8221; is a term that refers to the &#8220;Information Highway,&#8221; which represents the global network of interconnected electronic communication systems and infrastructure, particularly the Internet. The Iway serves as the backbone for the digital age, enabling the exchange and dissemination of information, data, and services on a global scale. It encompasses various technologies, including the Internet, intranets, extranets, telecommunications networks, and other digital communication channels.</p>
+<p>Market forces that influence the I-way:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Technological Advancements</strong>: Rapid advancements in technology drive the development and expansion of the I-way. Innovations in networking, cloud computing, broadband internet, wireless connectivity, and data transmission capabilities continuously shape the I-way&#8217;s infrastructure and capacity.</li>
+<li><strong>Globalization:</strong> The increasing globalization of businesses and markets demands a robust and interconnected I-way. International trade, cross-border communication, and supply chain integration rely heavily on the I-way for seamless global connectivity.</li>
+<li><strong>E-commerce and Digital Business</strong>: The rise of e-commerce and digital business models requires a reliable and efficient I-way to facilitate online transactions, payment gateways, and secure data exchanges between businesses and customers.</li>
+<li><strong>Internet of Things (IoT):</strong> The IoT connects various devices and objects to the I-way, enabling data sharing and real-time communication between smart devices, sensors, and machines. IoT applications rely on a robust I-way infrastructure to function effectively.</li>
+<li><strong>Social Media and Digital Marketing:</strong> Social media platforms and digital marketing campaigns rely on the I-way to reach a broad audience, engage customers, and build a brand presence in the digital space.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Discuss the post-purchase interaction involved in mercantile process from customers perspective.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Post-purchase interaction in the mercantile process occurs after a customer has made a purchase from a merchant. From the customer&#8217;s perspective, this interaction is vital as it shapes their overall experience and perception of the merchant and the product/service they have acquired. Here are some key aspects of post-purchase interaction:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Order Confirmation:</strong> Customers expect to receive an order confirmation immediately after completing their purchase. This confirmation reassures them that their transaction was successful and provides essential details like order number, item purchased, quantity, and delivery address.</li>
+<li><strong>Shipping and Delivery Updates:</strong> Customers appreciate timely updates on the status of their order, including shipping and delivery information.</li>
+<li><strong>Customer Support:</strong> Accessible and responsive customer support is essential for post-purchase interactions. Customers may have questions, concerns, or issues with their purchases, and a helpful support team can address their inquiries promptly.</li>
+<li><strong>Product/Service Feedback</strong>: Merchants often request customer feedback on the purchased product or service. Providing a platform for customers to share their opinions allows them to feel valued and helps the merchant gather insights to improve their offerings.</li>
+<li><strong>Loyalty and Rewards:</strong> Recognizing and rewarding customer loyalty can significantly impact postpurchase interactions. Loyalty programs, discounts, or exclusive offers for repeat customers can foster a positive relationship and encourage future purchases.</li>
+<li><strong>Handling Returns and Refunds</strong>: An efficient and hassle-free return and refund process is essential if customers encounter issues with their purchases.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How WWW architecture encompasses the global hypertext publishing, universal reader, and client-server concepts?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type:decimal;">
+<li><strong> Global Hypertext Publishing: </strong>The concept of global hypertext publishing refers to the ability to publish and link information across the internet using hypertext. Hypertext allows content creators to create documents that contain hyperlinks, which are clickable references that connect one document to another. These hyperlinks enable users to navigate seamlessly between different web pages, websites, and online resources, regardless of their physical location. Content published on the WWW becomes accessible to a global audience, and information can be linked, shared, and disseminated across the internet on a massive scale.</li>
+<li><strong>Universal Reader: </strong>The universal reader concept in WWW architecture refers to the idea that any user with internet access and a web browser can access and read the published content. The WWW is designed to be platform-independent, meaning it can be accessed from various devices, including computers, smartphones, tablets, and even specialized devices for people with disabilities. Web browsers serve as universal readers, providing a standardized way to interpret and display hypertext content, ensuring that users can consume information from diverse sources without compatibility issues.</li>
+<li><strong>Client-Server Concept: </strong>The client-server concept is fundamental to the functioning of the WWW. It involves two primary components: clients and servers. Clients, typically web browsers, send requests to web servers, which host and serve the web content. When a user enters a URL in their web browser, the browser acts as the client and sends a request to the corresponding web server. The server processes the request and returns the requested web page or resource back to the client, which then displays it to the user. This client-server interaction is the backbone of the WWW, enabling users to access and interact with web content hosted on servers worldwide.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is cryptography? How cryptography can be used to ensure data and message transaction security in ecommerce?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cryptography is the method of securing communication and data by converting plain text into an unreadable format, known as ciphertext, using mathematical algorithms and keys. It ensures that only authorized parties can access and understand the original information while protecting it from unauthorized access or tampering.</p>
+<p>In e-commerce, cryptography plays a crucial role in ensuring data and message transaction security. Here&#8217;s how cryptography is used in e-commerce to safeguard sensitive information:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Secure Data Transmission:</strong> When sensitive data, such as credit card information or personal details, is transmitted between the customer&#8217;s device and the e-commerce server, cryptography is used to encrypt this data. This process ensures that even if the data is intercepted during transmission, it remains unreadable and protected from unauthorized access.</li>
+<li><strong>SSL/TLS Encryption</strong>: Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols use cryptographic techniques to encrypt data during internet communication. SSL/TLS certificates are used to authenticate websites and establish a secure encrypted connection between the customer&#8217;s web browser and the e-commerce server, protecting data during online transactions.</li>
+<li><strong>Public Key Infrastructure (PKI):</strong> PKI is a system that uses a pair of cryptographic keys, a public key for encryption, and a private key for decryption. PKI is used in digital certificates, digital signatures, and secure email communication, providing authenticity, integrity, and confidentiality to e-commerce transactions.</li>
+<li><strong>Digital Signatures:</strong> Digital signatures are used to verify the authenticity and integrity of electronic documents, such as purchase orders and invoices, in e-commerce. The sender&#8217;s private key is used to sign the document, and the recipient can use the sender&#8217;s public key to verify the signature and ensure the document&#8217;s origin.</li>
+<li><strong>One-Time Passwords (OTP</strong>): OTPs are used as an additional layer of security for user authentication during e-commerce transactions. OTPs are generated using cryptographic algorithms and are valid for single use, reducing the risk of unauthorized access even if the password is intercepted.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What do the properties like ubiquitous, richness, and information density in e-commerce means? Support your answer with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the context of e-commerce, the properties of ubiquity, richness, and information density refer to specific characteristics that define the nature and capabilities of digital platforms and their impact on business transactions and customer interactions.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Ubiquity: </strong></li>
+</ol>
+<p>Ubiquity in e-commerce refers to the widespread and universal availability of digital platforms and internet connectivity, allowing businesses to reach and engage with customers anywhere and anytime. It means that e-commerce platforms can be accessed from various devices, such as computers, smartphones, and tablets, irrespective of the user&#8217;s physical location.</p>
+<p>Example: An online retail store that sells clothing and accessories has a website and a mobile app. Customers can access the store&#8217;s offerings from their desktops at home, or while on the go using their smartphones.</p>
+<ol start="2">
+<li><strong>Richness: </strong></li>
+</ol>
+<p>Richness in e-commerce refers to the ability of digital platforms to provide detailed and immersive information, experiences, and interactions to customers. It goes beyond basic text and images, incorporating multimedia elements like videos, product demos, customer reviews, and interactive features.</p>
+<p>Example: A high-end electronics store offers rich product pages for its gadgets. Each product page includes detailed specifications, high-resolution images, 360-degree product views, demonstration videos, and customer reviews.</p>
+<ol start="3">
+<li><strong>Information Density: </strong></li>
+</ol>
+<p>Information density in e-commerce refers to the volume and variety of information that can be processed and presented in digital formats. It involves conveying a large amount of data and details within a relatively small space or time.</p>
+<p>Example: A travel booking website provides information about various flight options for a specific route, including different airlines, departure times, durations, layovers, and prices, all on a single page.</p>
+</div>
+</body></html>

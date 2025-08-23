@@ -1,0 +1,438 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>SAD Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What activities are at the heart of systems development process? List and explain some of the problems with the traditional waterfall SDLC. Explain Agile development in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The core activities in the <strong>systems development</strong> process are often categorized as follows:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Planning</strong>: Involves defining the scope, objectives, and resources needed for the project. It includes activities such as project initiation, feasibility analysis, and project planning.</li>
+<li><strong>Analysis</strong>: In this phase, the requirements of the system are gathered and analyzed. This includes understanding the needs of users and stakeholders, defining system functionalities, and creating a detailed requirement specification.</li>
+<li><strong>Design</strong>: Based on the analysis, the system architecture and components are designed. This phase includes creating detailed technical specifications, data models, and system architecture plans.</li>
+<li><strong>Implementation</strong>: This is the actual coding and development phase where the system is built based on the design specifications. It involves programming, testing, and debugging.</li>
+<li><strong>Maintenance</strong>: After the system is deployed, ongoing maintenance is required to address issues, fix bugs, implement updates, and make enhancements. This phase ensures the system continues to meet user needs and evolves with changing requirements.</li>
+</ol>
+<p>These activities collectively form the backbone of the <strong>systems development life cycle (SDLC)</strong>.</p>
+<div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-tflfx-79elbk h-full">
+<div class="react-scroll-to-bottom--css-tflfx-1n7m0yu">
+<div class="flex flex-col pb-9 text-sm">
+<div class="w-full text-token-text-primary" data-testid="conversation-turn-7">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+<div class="relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="1e57e4c2-8592-4831-a529-8ccf22130bc0">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p><span style="text-decoration: underline;"><strong>Problems with the Traditional Waterfall SDLC</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Rigidity</strong>: The waterfall model follows a strict, linear sequence where each phase must be completed before moving to the next. This rigidity makes it challenging to accommodate changes in requirements or address issues discovered late in the development process.</li>
+<li><strong>Limited Customer Involvement</strong>: Stakeholder feedback is typically gathered only at the beginning and end of the project, leading to potential misunderstandings or misalignments with user needs. This lack of continuous customer involvement can result in a product that doesn&#8217;t fully meet user expectations.</li>
+<li><strong>Long Delivery Time</strong>: Due to its sequential nature, the waterfall model often leads to long delivery times. Projects may not deliver any tangible value until the final phase is complete, which can result in delayed benefits realization.</li>
+<li><strong>High Risk of Failure</strong>: If there are errors or misunderstandings in the early stages, they may not be identified until the testing phase or even later. This increases the risk of delivering a product that doesn&#8217;t meet user requirements or expectations.</li>
+<li><strong>Inefficient Resource Utilization</strong>: Resources, such as time and money, are committed to each phase before the overall success of the project is known. If problems arise late in the process, significant resources may have already been expended.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Agile Development</strong></span></p>
+<p>Agile is an iterative and incremental approach to software development that emphasizes flexibility, collaboration, and customer feedback. Some key principles of Agile development include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Iterative Development</strong>: Agile projects are divided into small iterations or sprints, typically lasting 2-4 weeks, where a small set of features or user stories are developed, tested, and delivered.</li>
+<li><strong>Customer Collaboration</strong>: Agile teams work closely with stakeholders, frequently gathering feedback and adjusting priorities based on changing requirements or emerging insights.</li>
+<li><strong>Adaptability</strong>: Agile methodologies embrace change, allowing teams to adapt to evolving requirements and market conditions throughout the development process.</li>
+<li><strong>Continuous Improvement</strong>: Agile teams regularly reflect on their processes and seek ways to improve efficiency, quality, and collaboration.</li>
+<li><strong>Cross-Functional Teams</strong>: Agile encourages the formation of cross-functional teams with members possessing diverse skills. This facilitates collaboration and allows teams to work more autonomously.</li>
+</ol>
+<p>Agile methodologies aim to address the limitations of traditional waterfall development by focusing on delivering working software in short iterations, involving stakeholders throughout the process, and being adaptable to changes in requirements. The goal is to provide faster delivery times, increased customer satisfaction, and higher-quality products.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What do you mean by balancing DFDs? Draw context diagram and data flow diagrams for online movie rental system that allows its users to watch movies online.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Balancing DFDs</strong></span></p>
+<p>Balancing in the context of DFDs refers to ensuring that the input and output data flows are correctly represented across various levels of the DFD hierarchy. Each process should have a balanced set of input and output data flows to maintain consistency and accuracy in the representation of the system. When constructing DFDs, it&#8217;s essential to maintain the conservation of information, meaning that the input to a process should be sufficient to produce the output, and no data should be lost or added without proper representation.</p>
+<p><span style="text-decoration: underline;"><strong>Online movie rental system</strong></span></p>
+<p><strong>Context Diagram (Level 0 DFD):</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29528" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/context.png?resize=521%2C72&#038;ssl=1" alt="" width="521" height="72"></p>
+<p><strong>Level 1 DFD:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29530" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/level-1-1.jpg?resize=521%2C292&#038;ssl=1" alt="" width="521" height="292"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain physical database design. Why is physical database design important? Differentiate logical database design with physical database design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Physical Database Design</strong></span></p>
+<p>Physical database design is the process of translating a logical data model into a physical structure that can be implemented and optimized for performance and storage. It involves decisions about how data will be stored, indexed, partitioned, and accessed at the storage level. The goal is to maximize the efficiency and effectiveness of data retrieval and storage operations.</p>
+<p>Key aspects of physical database design include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Storage Structures</strong>: Deciding how tables, indexes, and other database objects will be stored on the physical storage devices, considering factors like file organization and clustering.</li>
+<li><strong>Indexing</strong>: Determining which columns will be indexed to speed up data retrieval. This involves choosing the type of indexes (e.g., B-trees, hash indexes) and optimizing their usage.</li>
+<li><strong>Partitioning</strong>: Breaking large tables into smaller, more manageable pieces called partitions. This can improve query performance by allowing the database to scan only relevant partitions.</li>
+<li><strong>Caching and Buffering</strong>: Configuring database cache and buffer settings to optimize memory usage and reduce the need for frequent disk access.</li>
+<li><strong>Normalization and Denormalization</strong>: Deciding the level of normalization for tables, balancing it against the need for performance. In some cases, denormalization may be applied for faster query performance.</li>
+<li><strong>Clustering</strong>: Grouping related data together physically on a disk to reduce the number of disk I/O operations.</li>
+<li><strong>Concurrency Control</strong>: Implementing mechanisms to handle concurrent access to the database by multiple users or transactions, ensuring data consistency.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Importance of Physical Database Design</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Optimization</strong>: Physical database design directly impacts the performance of data retrieval and storage operations. Well-designed physical structures and indexing can significantly improve query response times.</li>
+<li><strong>Resource Utilization</strong>: Efficient use of storage and memory resources is crucial for optimal database performance. Proper design decisions can help minimize resource contention and maximize utilization.</li>
+<li><strong>Scalability</strong>: A well-designed physical database can scale more effectively as the volume of data and the number of concurrent users grows.</li>
+<li><strong>Maintainability and Administration</strong>: Physical design choices influence the ease of maintenance and administration. For example, well-organized storage structures make it easier to manage and troubleshoot the database.</li>
+<li><strong>Cost Efficiency</strong>: Optimized physical database design can lead to reduced storage costs, as well as decreased hardware and maintenance expenses.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Difference between Logical Database Design and Physical Database Design</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 96.4103%;">
+<tbody>
+<tr>
+<td style="width: 46.2821%; text-align: center;"><strong>Logical Database Design</strong></td>
+<td style="width: 50.1282%; text-align: center;"><strong>Physical Database Design</strong></td>
+</tr>
+<tr>
+<td style="width: 46.2821%; text-align: center;">Focuses on defining the database schema, entities, relationships, and attributes.</td>
+<td style="width: 50.1282%; text-align: center;">Focuses on implementing the logical data model in a specific database management system (DBMS) and hardware environment.</td>
+</tr>
+<tr>
+<td style="width: 46.2821%; text-align: center;">Aims to represent the data model in a way that accurately reflects the business requirements.</td>
+<td style="width: 50.1282%; text-align: center;">Involves decisions related to storage structures, indexing, partitioning, and optimization for performance.</td>
+</tr>
+<tr>
+<td style="width: 46.2821%; text-align: center;">Results in a logical data model, are often depicted using entity-relationship diagrams (ERD).</td>
+<td style="width: 50.1282%; text-align: center;">Results in a physical schema detailing how data will be stored and accessed at the storage level.</td>
+</tr>
+<tr>
+<td style="width: 46.2821%; text-align: center;">Emphasizes data integrity, normalization, and adherence to business rules.</td>
+<td style="width: 50.1282%; text-align: center;">Emphasizes performance, resource utilization, and scalability.</td>
+</tr>
+<tr>
+<td style="width: 46.2821%; text-align: center;">Independent of the specific technology or platform.</td>
+<td style="width: 50.1282%; text-align: center;">Dependent on the chosen DBMS and hardware characteristics.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Describe different activities performed by the project manager during project planning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Project planning</strong> is a crucial phase in the project management life cycle, and the project manager plays a key role in coordinating and overseeing various activities. Project manager is someone who is responsible for initiating, planning, executing, and closing project. Here are different activities performed by the project manager during project planning:</p>
+<ul style="list-style-type: square;">
+<li><strong>Initiating the project :</strong> Initiating the project includes defining the scope and objectives of the project and this is done by project manager. In this stage, studying the feasibility of project based on the operation, technical, economical feasibility.</li>
+<li><strong>Customer relation :</strong>  Project manager is responsible for building strong relationships with customers, understanding their needs and helping them achieve their business objectives. Interactions with customers, helps in data analysis to study large amounts of information.</li>
+<li><strong>Determine and plan resources :</strong> Estimation of resources required for each task based on historical data, expert judgment, and input from team members are collected by the projevt manager. Based on the collected data they determine the feasibility of the resources and manpowers.</li>
+<li><strong>Set timelines : </strong>Project manager defines the timeline or deadline for the project. They visually represents the schedule and details the sequence and duration of tasks.</li>
+<li><strong>Estimate costs : </strong>Project manager focuses on evaluating the financial viability of a project. It involves analyzing the costs and benefits associated with the project and determining whether the investment is justified.</li>
+<li><b>Risk and change management : </b>Project manager forsees the upcomming risk by accessing and  identifying the risk. It is the process of identifying, assessing and controlling financial, legal, strategic and security risks to an organization&#8217;s capital and earnings. Project manager checks all the possible risk and identify the possible way to solve them .</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe the steps involved in corporate strategic planning.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-tflfx-79elbk h-full">
+<div class="react-scroll-to-bottom--css-tflfx-1n7m0yu">
+<div class="flex flex-col pb-9 text-sm">
+<div class="w-full text-token-text-primary" data-testid="conversation-turn-19">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+<div class="relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="8d5afa6a-b059-49c0-b161-2484192b1e31">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>Corporate strategic planning is a three-step process—current enterprise, future enterprise, and strategic planning.</p>
+<p><strong>1. Current Enterprise:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Mission and Vision:</strong>
+<ul style="list-style-type: square;">
+<li>Define the current mission, specifying the organization&#8217;s present purpose and goals.</li>
+<li>Establish a clear vision of the organization&#8217;s current desired future state.</li>
+</ul>
+</li>
+<li><strong>SWOT Analysis:</strong>
+<ul style="list-style-type: square;">
+<li>Analyze the current internal strengths and weaknesses.</li>
+<li>Evaluate the external opportunities and threats facing the organization.</li>
+</ul>
+</li>
+<li><strong>Objectives and Goals:</strong>
+<ul style="list-style-type: square;">
+<li>Set objectives and goals that align with the current mission and vision.</li>
+<li>Ensure that these objectives are specific, measurable, achievable, relevant, and time-bound (SMART).</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Future Enterprise:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Vision for the Future:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a vision for the future enterprise, describing the desired state the organization aims to achieve.</li>
+</ul>
+</li>
+<li><strong>Strategic Gap Analysis:</strong>
+<ul style="list-style-type: square;">
+<li>Identify the gap between the current state and the envisioned future state.</li>
+<li>Understand the areas that need improvement or transformation to achieve the future vision.</li>
+</ul>
+</li>
+<li><strong>Long-Term Objectives:</strong>
+<ul style="list-style-type: square;">
+<li>Establish long-term objectives and goals that bridge the gap between the current and future states.</li>
+<li>Consider the changes required in areas such as technology, market presence, or organizational capabilities.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Strategic Planning:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Action Plans:</strong>
+<ul style="list-style-type: square;">
+<li>Develop detailed strategies and action plans based on the long-term objectives.</li>
+<li>Specify tasks, timelines, responsibilities, and resource requirements for successful implementation.</li>
+</ul>
+</li>
+<li><strong>Resource Allocation:</strong>
+<ul style="list-style-type: square;">
+<li>Allocate resources, including financial, human, and technological, to support the implementation of the action plans.</li>
+<li>Prioritize resource allocation based on the criticality of achieving long-term objectives.</li>
+</ul>
+</li>
+<li><strong>Monitoring and Measurement:</strong>
+<ul style="list-style-type: square;">
+<li>Establish key performance indicators (KPIs) to monitor and measure progress.</li>
+<li>Implement monitoring systems to assess performance regularly and make necessary adjustments.</li>
+</ul>
+</li>
+<li><strong>Evaluation and Adjustment:</strong>
+<ul style="list-style-type: square;">
+<li>Periodically review the effectiveness of the implemented strategies.</li>
+<li>Adjust action plans, resource allocation, or goals based on the ongoing evaluation and changing circumstances.</li>
+</ul>
+</li>
+<li><strong>Communication and Implementation:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a communication plan to share the strategic plan with stakeholders.</li>
+<li>Implement the strategies and action plans across the organization.</li>
+</ul>
+</li>
+<li><strong>Risk Management:</strong>
+<ul style="list-style-type: square;">
+<li>Identify potential risks and uncertainties that may impact the achievement of goals.</li>
+<li>Develop risk mitigation strategies to address and manage these risks.</li>
+</ul>
+</li>
+<li><strong>Long-Term Review and Update:</strong>
+<ul style="list-style-type: square;">
+<li>Conduct a comprehensive review of the strategic plan periodically to ensure its relevance.</li>
+<li>Update the plan based on changes in the internal and external environment.</li>
+</ul>
+</li>
+</ul>
+<p>This three-step approach ensures that the organization first understands its current state, envisions a desired future state, and then systematically plans and implements strategies to bridge the gap and achieve its long-term objectives.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define feasibility study. Explain economic and schedule feasibility in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Feasibility Study</strong></span></p>
+<p>A feasibility study is an analysis and evaluation of the practicality, viability, and potential success of a proposed project or business venture. It assesses various aspects, including technical, economic, legal, operational, and scheduling factors, to determine whether the project is worth pursuing.</p>
+<p><span style="text-decoration: underline;"><strong>Economic Feasibility</strong></span></p>
+<p>Economic feasibility focuses on evaluating the financial viability of a project. It involves analyzing the costs and benefits associated with the project and determining whether the investment is justified. Key components of economic feasibility include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Cost-Benefit Analysis (CBA):</strong> Evaluate the total costs of implementing the project against the anticipated benefits. This analysis helps in understanding the return on investment (ROI) and whether the benefits outweigh the costs.</li>
+<li><strong>Return on Investment (ROI):</strong> Calculate the expected financial return in relation to the amount invested. A positive ROI indicates that the project is financially feasible.</li>
+<li><strong>Breakeven Analysis:</strong> Determine the point at which the project&#8217;s revenues cover its costs. This analysis helps identify the minimum level of performance needed for the project to be financially viable.</li>
+<li><strong>Risk Assessment:</strong> Consider potential risks and uncertainties that may impact the financial outcomes of the project. Assess the sensitivity of financial projections to changes in assumptions.</li>
+<li><strong>Payback Period:</strong> Evaluate the time it takes for the project to generate sufficient cash flows to recover the initial investment. A shorter payback period is generally considered more favorable.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Schedule Feasibility</strong></span></p>
+<p>Schedule feasibility assesses whether the project can be completed within a reasonable timeframe. It involves evaluating the project timeline, milestones, and deadlines to ensure they align with business objectives and market demands. Key considerations for schedule feasibility include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Project Timeline:</strong> Define the overall timeline for the project, including start and end dates, as well as key milestones and phases.</li>
+<li><strong>Resource Availability:</strong> Assess the availability of necessary resources, including human resources, equipment, and materials, to determine if they can be acquired within the required timeframe.</li>
+<li><strong>Dependencies and Constraints:</strong> Identify any dependencies between project activities and external factors that may impact the project schedule. Evaluate potential constraints that could lead to delays.</li>
+<li><strong>Critical Path Analysis:</strong> Identify the critical path, which is the sequence of activities that determines the shortest possible duration for the project. Understanding the critical path helps in managing and optimizing the schedule.</li>
+<li><strong>Feasibility of Meeting Deadlines:</strong> Evaluate the feasibility of meeting project deadlines and objectives within the specified timeframe. Consider potential risks and uncertainties that may impact the schedule.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>List traditional methods for determining system requirements. Explain advantages and pitfalls of observing workers to determine system requirements.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Traditional Methods for Determining System Requirements</strong></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Interviews:</strong>
+<p>Direct interaction with stakeholders, users, and subject matter experts to gather information about their needs and expectations.</li>
+<li><strong>Surveys and Questionnaires:</strong>
+<p>Distributing structured surveys or questionnaires to collect information from a large number of stakeholders.</li>
+<li><strong>Document Analysis:</strong>
+<p>Reviewing existing documents such as manuals, reports, forms, and procedures to extract relevant information.</li>
+<li><strong>Observation:</strong>
+<p>Directly observing users and system activities to understand how tasks are performed and identify potential areas for improvement.</li>
+<li><strong>Use Cases and Scenarios:</strong>
+<p>Developing use cases and scenarios to describe interactions between users and the system, helping to identify functional requirements.</li>
+<li><strong>Benchmarking:</strong>
+<p>Comparing the organization&#8217;s processes and systems with industry best practices to identify areas for improvement.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Observing Workers to Determine System Requirements</strong></span></p>
+<p><strong>Advantages:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Real-World Insights:</strong>
+<p>Observing workers provides firsthand insights into how tasks are performed in the actual work environment, offering a realistic understanding of workflow.</li>
+<li><strong>Identifying Pain Points:</strong>
+<p>Observations help in identifying pain points, bottlenecks, and inefficiencies that might be overlooked through other data collection methods.</li>
+<li><strong>Behavioral Patterns:</strong>
+<p>Understanding user behavior patterns can lead to more accurate and context-specific requirements, ensuring the system meets actual user needs.</li>
+<li><strong>Non-Verbal Cues:</strong>
+<p>Observations allow capturing non-verbal cues, such as body language and facial expressions, providing additional context to user feedback.</li>
+</ol>
+<p><strong>Pitfalls:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Intrusiveness:</strong>
+<p>Workers may feel uncomfortable or change their behavior when being observed, leading to altered work patterns and potentially inaccurate information.</li>
+<li><strong>Limited Perspective:</strong>
+<p>Observations may provide a limited perspective and may not capture the complete picture, especially if certain activities are infrequent or seasonal.</li>
+<li><strong>Bias:</strong>
+<p>The observer&#8217;s interpretation may introduce bias. Different observers might perceive the same situation differently, leading to subjective findings.</li>
+<li><strong>Incomplete Understanding:</strong>
+<p>Observations might not capture the underlying reasons or motivations behind certain behaviors, making it challenging to address root causes.</li>
+<li><strong>Time-Consuming:</strong>
+<p>Observational studies can be time-consuming, particularly in large organizations or for complex processes, which may not be practical in all situations.</li>
+<li><strong>Selection of Subjects:</strong>
+<p>Selecting a representative sample for observation is crucial. If subjects are not chosen appropriately, the findings may not accurately reflect the broader user base.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Draw ER diagram to store data about students, programs, and courses at your college.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-29542" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/er.png?resize=629%2C462&#038;ssl=1" alt="" width="629" height="462"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe several methods for interacting with the system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><span style="text-decoration: underline;">Methods for interacting with the system</span></strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Command Language Interaction :</strong>
+<ul style="list-style-type: square;">
+<li><strong>Description:</strong> In Command Language Interaction, users communicate with the system by entering text commands into a command-line interface. The system interprets these commands and executes corresponding actions. CLI is known for its efficiency and is often favored by power users and administrators.</li>
+<li><strong>Examples:</strong> Command prompt in Windows, Terminal in Linux, PowerShell.</li>
+<li><strong>Advantages:</strong> Efficient for users familiar with commands, precise control over system functions, scriptability for automation.</li>
+<li><strong>Challenges:</strong> Steeper learning curve for beginners, less intuitive for those not comfortable with text-based commands.</li>
+</ul>
+</li>
+<li><strong>Menu Interaction:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Description:</strong> Menu Interaction involves users selecting options from a predefined list of choices presented in a menu. Menus are organized hierarchically, and users navigate through them to perform specific tasks or access features.</li>
+<li><strong>Examples:</strong> Dropdown menus in software applications, and navigation menus on websites.</li>
+<li><strong>Advantages:</strong> Intuitive for users, reduces the need to remember specific commands, and provides a structured and guided experience.</li>
+<li><strong>Challenges:</strong> Limited space for options, may require multiple levels of nesting for complex systems.</li>
+</ul>
+</li>
+<li><strong>Form Interaction:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Description:</strong> Form Interaction requires users to enter information into predefined fields or forms. Forms consist of various input elements such as text fields, checkboxes, radio buttons, and dropdown lists.</li>
+<li><strong>Examples:</strong> Online registration forms, search forms on websites, and data entry forms in business applications.</li>
+<li><strong>Advantages:</strong> Structured data input, validation of user inputs, standardization of information.</li>
+<li><strong>Challenges:</strong> The potential for information overload in complex forms, may feel rigid for more open-ended interactions.</li>
+</ul>
+</li>
+<li><strong>Natural Language Interaction:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Description:</strong> Natural Language Interaction allows users to communicate with the system using everyday language. Natural Language Processing (NLP) is employed to understand and interpret user input, providing a more conversational interaction.</li>
+<li><strong>Examples:</strong> Chatbots, virtual assistants (e.g., Siri, Google Assistant), voice-activated devices.</li>
+<li><strong>Advantages:</strong> User-friendly, feels more natural and conversational, accessible for a broader audience.</li>
+<li><strong>Challenges:</strong> NLP accuracy challenges, potential misinterpretation of ambiguous queries, limited to specific domains.</li>
+</ul>
+</li>
+<li><strong>Object-Based Interaction:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Description:</strong> Object-based interaction involves users interacting with graphical objects or elements on the screen. Users manipulate visual elements through actions like clicking, dragging, and dropping to perform tasks.</li>
+<li><strong>Examples:</strong> Drag-and-drop functionality in file managers, and interactive graphical interfaces in design software.</li>
+<li><strong>Advantages:</strong> Intuitive for visually oriented users, direct manipulation of objects, engaging user experience.</li>
+<li><strong>Challenges:</strong> Complexity in handling a large number of objects, may require precision in certain tasks.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are the major activities of system maintenance? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>System maintenance</strong> involves the ongoing activities and processes performed to keep a computer-based system running efficiently and effectively throughout its operational life. Four major activities are involved in maintenance:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Obtaining maintenance requests :</strong> Users, customers, or system administrators identify issues or potential improvements in the system. These issues or improvement suggestions are formally submitted as maintenance requests. The maintenance requests are logged, reviewed, and prioritized based on factors such as urgency, impact, and resources required.</li>
+<li><strong>Transforming requests into changes :</strong> Each maintenance request is analyzed to understand its nature and scope. This involves determining whether the request is for corrective, adaptive, perfective, or preventive maintenance. Based on the analysis and feasibility study, a decision is made to approve, modify, or reject the maintenance request.</li>
+<li><strong>Designing changes :</strong> Detailed requirements for the changes are gathered from stakeholders, ensuring that all aspects of the request are understood. This includes designing new functionalities, modifications to existing components, and ensuring compatibility with the rest of the system. This helps in planning for mitigation strategies.</li>
+<li><strong>Implementing changes :</strong> Making the actual changes to the system based on the design specifications. This involves coding, configuring, and setting up new or modified components. The new added features and codes are tested to ensure they work as intended and do not introduce new issues. Once testing is successfully completed, the changes are deployed to the live environment.</li>
+</ol>
+<p>These activities ensure that the system is maintained effectively, addressing issues and implementing improvements systematically and efficiently.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain class diagram with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>class diagram</strong> is a type of UML (Unified Modeling Language) diagram that represents the structure and relationships of the classes in a system. It provides a static view of a system by depicting classes, their attributes, methods, and the associations between them. Class diagrams are widely used in software engineering for visualizing and designing object-oriented systems.</p>
+<p><strong>Components:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Class: </strong>Represents a blueprint or template for creating objects. It encapsulates data (attributes) and behavior (methods).</li>
+<li><strong>Attributes: </strong>Represents the properties or characteristics of a class. Attributes are often associated with data fields.</li>
+<li><strong>Methods: </strong>Represents the operations or functions that a class can perform. Methods define the behavior of the class.</li>
+<li><strong>Associations: </strong>Represents relationships between classes. Associations can have multiplicities indicating how many instances of one class are related to instances of another class.</li>
+<li><strong>Multiplicity: </strong>Specifies the number of instances participating in a relationship. It is denoted using numbers or &#8216;*&#8217; to indicate zero or more.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-29541" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/class.png?resize=555%2C393&#038;ssl=1" alt="" width="555" height="393"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. Network Diagram</p>
+<p>b. Structural and Behavioral Diagrams</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Network Diagram:</strong></p>
+<p>A network diagram is a visual representation of the relationships and connections between components in a network. It is commonly used in project management and network design to illustrate the flow and dependencies of tasks, activities, or elements within a system. Network diagrams provide a graphical view of project schedules, workflows, or the structure of computer networks.</p>
+<p><strong>Key Components:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Nodes:</strong> Represent individual elements or activities.</li>
+<li><strong>Edges (Lines):</strong> Represent relationships or dependencies between nodes.</li>
+<li><strong>Critical Path:</strong> The longest path in the network, indicating the minimum time needed to complete a project.</li>
+</ol>
+<p><strong>Types of Network Diagrams:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>PERT (Program Evaluation and Review Technique):</strong> Represents activities and their dependencies using nodes and arrows.</li>
+<li><strong>CPM (Critical Path Method):</strong> Focuses on the critical path and emphasizes time estimates for each activity.</li>
+<li><strong>Gantt Chart:</strong> Combines a timeline with a graphical representation of tasks and dependencies.</li>
+</ol>
+<p><strong>Benefits:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Visualization:</strong> Provides a clear visual representation of the project or network structure.</li>
+<li><strong>Dependency Analysis:</strong> Helps identify critical paths and dependencies.</li>
+<li><strong>Resource Allocation:</strong> Aids in allocating resources effectively.</li>
+</ul>
+<p><strong>b. Structural and Behavioral Diagrams:</strong></p>
+<p><strong>Structural Diagrams:</strong> Structural diagrams in UML (Unified Modeling Language) depict the static structure of a system, emphasizing the components and their relationships. They provide a blueprint for the system&#8217;s architecture.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Class Diagram:</strong> Represents classes, attributes, and relationships between classes.</li>
+<li><strong>Object Diagram:</strong> Shows instances of classes and their relationships at a specific point in time.</li>
+<li><strong>Package Diagram:</strong> Organizes elements into packages to illustrate the overall system structure.</li>
+<li><strong>Component Diagram:</strong> Focuses on system components and their dependencies.</li>
+<li><strong>Composite Structure Diagram:</strong> Describes the internal structure of a class or component.</li>
+</ol>
+<p><strong>Behavioral Diagrams:</strong> Behavioral diagrams in UML capture the dynamic aspects of a system, emphasizing how the system responds to stimuli and changes over time.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Use Case Diagram:</strong> Illustrates how users interact with a system by defining use cases and actors.</li>
+<li><strong>Activity Diagram:</strong> Models the flow of activities and actions within a system.</li>
+<li><strong>State Machine Diagram:</strong> Represents the states and transitions of an object or system.</li>
+<li><strong>Sequence Diagram:</strong> Depicts interactions between objects in a sequential manner.</li>
+<li><strong>Communication Diagram:</strong> Focuses on the interactions between objects over time.</li>
+</ol>
+<p><strong>Purpose:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Structural Diagrams:</strong> Provide a static view of the system&#8217;s components and their relationships.</li>
+<li><strong>Behavioral Diagrams:</strong> Illustrate how the system behaves and responds to various stimuli or events.</li>
+</ul>
+</div>
+</body></html>

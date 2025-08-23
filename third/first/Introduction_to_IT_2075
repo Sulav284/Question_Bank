@@ -1,0 +1,457 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IIT Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>IIT Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A (3 x 10): Attempt any two questions</h2><h3>Question 1</h3>
+<div><p><p>Discuss the concept behind the fixed point number representation. What can be the fixed point representation of a signed number 8? Convert (14.14)<sub>10</sub> into binary and octal.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Fixed point representation</strong> is a method of representing numerical values using a fixed number of bits. In this representation, the number of bits allocated to represent the integer and fractional parts of a number is predetermined. The fixed number of bits for each part of the number is referred to as the fixed-point format. This format allows for a greater range of values to be represented compared to floating-point representation while requiring fewer bits. The fixed-point format is used in many applications where high accuracy is required and floating-point arithmetic is not practical or efficient. For example, the fixed point is used in digital signal processing, image processing, and embedded systems. In these applications, fixed-point arithmetic can be performed faster and with less memory than floating-point arithmetic.</p>
+<p>Types:</p>
+<ol style="list-style-type:decimal;">
+<li>Unsigned Fixed Point</li>
+<li>Signed Fixed Point</li>
+</ol>
+<ol style="list-style-type: lower-roman;">
+<li>Sign Magnitude</li>
+<li>1&#8217;s complement</li>
+<li>2&#8217;s complement</li>
+</ol>
+<p>&nbsp;</p>
+<p>For signed number 8, fixed point representation:</p>
+<p>i. Signed Magnitude:</p>
+<p>(+8)= 01000</p>
+<p>(-8)=11000</p>
+<p>ii. 1&#8217;s complement:</p>
+<p>(+8)=10111</p>
+<p>(-8)=00111</p>
+<p>iii. 2&#8217;s complement:</p>
+<p>(+8)=11000</p>
+<p>(-8)=01000</p>
+<p>&nbsp;</p>
+<p>Converting (14.14)<sub>10</sub> into binary and octal.</p>
+<p>Firstly into binary,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-17657 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/09/conv-1.jpg?resize=458%2C218&#038;ssl=1" alt="" width="458" height="218"></p>
+<p>Result: (1110.001000&#8230;)<sub>2</sub></p>
+<p>Now into octal,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-17658 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/09/conv-2.jpg?resize=458%2C176&#038;ssl=1" alt="" width="458" height="176"></p>
+<p>Result: (16.10753&#8230;)<sub>8</sub></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is switching? How can you differentiate packet switching from circuit switching? What are the advantages of using optical fibers?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Switching is the mechanism in computer networks that helps in deciding the best route for data transmission if there are multiple paths in a larger network.</p>
+<p>Larger networks may have multiple routes to link the sender and receiver. So whenever we send any information between the sender and receiver then the information switches through multiple routes.</p>
+<p>The difference between packet switching and circuit switching are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th><strong>Circuit Switching</strong></th>
+<th><strong>Packet Switching</strong></th>
+</tr>
+<tr>
+<td>In circuit switching there are 3 phases:<br />
+i) Connection Establishment.<br />
+ii) Data Transfer.<br />
+iii) Connection Released.</td>
+<td>In Packet switching directly data transfer takes place.</td>
+</tr>
+<tr>
+<td>In circuit switching, each data unit know the entire path address which is provided by the source.</td>
+<td>In Packet switching, each data unit just know the final destination address intermediate path is decided by the routers.</td>
+</tr>
+<tr>
+<td>In Circuit switching, data is processed at source system only</td>
+<td>In Packet switching, data is processed at all intermediate node including source system.</td>
+</tr>
+<tr>
+<td>Delay between data units in circuit switching is uniform.</td>
+<td>Delay between data units in packet switching is not uniform.</td>
+</tr>
+<tr>
+<td>Resource reservation is the feature of circuit switching because path is fixed for data transmission.</td>
+<td>There is no resource reservation because bandwidth is shared among users.</td>
+</tr>
+<tr>
+<td>Circuit switching is more reliable.</td>
+<td>Packet switching is less reliable.</td>
+</tr>
+<tr>
+<td>Wastage of resources are more in Circuit Switching</td>
+<td>Less wastage of resources as compared to Circuit Switching</td>
+</tr>
+<tr>
+<td>It is not a store and forward technique.</td>
+<td>It is a store and forward technique.</td>
+</tr>
+<tr>
+<td>Transmission of the data is done by the source.</td>
+<td>Transmission of the data is done not only by the source, but also by the intermediate routers.</td>
+</tr>
+<tr>
+<td>Congestion can occur during the connection establishment phase, because there might be a case where a request is being made for a channel but the channel is already occupied.</td>
+<td>Congestion can occur during data transfer phase, large number of packets comes in no time.</td>
+</tr>
+<tr>
+<td>Circuit switching is not convenient for handling bilateral traffic.</td>
+<td>Packet switching is suitable for handling bilateral traffic.</td>
+</tr>
+<tr>
+<td>In Circuit switching, charge depend on time and distance, not on traffic in the network.</td>
+<td>In Packet switching, charge is based on the number of bytes and connection time.</td>
+</tr>
+<tr>
+<td>Recording of packet is never possible in circuit switching.</td>
+<td>Recording of packet is possible in packet switching.</td>
+</tr>
+<tr>
+<td>In Circuit Switching there is a physical path between the source and the destination</td>
+<td>In Packet Switching there is no physical path between the source and the destination</td>
+</tr>
+<tr>
+<td>Circuit Switching does not support store and forward transmission</td>
+<td>Packet Switching supports store and forward transmission</td>
+</tr>
+</tbody>
+</table></div>
+<p>The major advantage of using optic fibers are</p>
+<p><strong>1. Bandwidth</strong></p>
+<p>Fiber optic cables have a much greater bandwidth than metal cables. The amount of information that can be transmitted per unit time of fiber over other transmission media is its most significant advantage.</p>
+<p><strong>2. Low Power Loss</strong></p>
+<p>An optical fiber offers low power loss, which allows for longer transmission distances. In comparison to copper, in a network, the longest recommended copper distance is 100m while with fiber, it is 2km.</p>
+<p><strong>3. Interference</strong></p>
+<p>Fiber optic cables are immune to electromagnetic interference. It can also be run in electrically noisy environments without concern as electrical noise will not affect fiber.</p>
+<p><strong>4. Size</strong></p>
+<p>In comparison to copper, a fiber optic cable has nearly 4.5 times as much capacity as the wire cable has and a cross sectional area that is 30 times less.</p>
+<p><strong>5. Weight</strong></p>
+<p>Fiber optic cables are much thinner and lighter than metal wires. They also occupy less space with cables of the same information capacity. Lighter weight makes fiber easier to install.</p>
+<p><strong>6. Security</strong></p>
+<p>Optical fibers are difficult to tap. As they do not radiate electromagnetic energy, emissions cannot be intercepted. As physically tapping the fiber takes great skill to do undetected, fiber is the most secure medium available for carrying sensitive data.</p>
+<p><strong>7. Flexibility</strong></p>
+<p>An optical fiber has greater tensile strength than copper or steel fibers of the same diameter. It is flexible, bends easily and resists most corrosive elements that attack copper cable.</p>
+<p><strong>8. Cost</strong></p>
+<p>The raw materials for glass are plentiful, unlike copper. This means glass can be made more cheaply than copper.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why system software is needed in computers? Discuss various types of operating system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System software is <b>used to manage the computer itself</b>. It runs in the background, maintaining the computer&#8217;s basic functions so users can run higher-level application software to perform certain tasks. Essentially, system software provides a platform for application software to be run on top of.</p>
+<h2><span id="types_of_operating_system">Types of Operating System (OS)</span></h2>
+<p>Following are the popular types of OS (Operating System):</p>
+<ul style="list-style-type: square;">
+<li>Batch Operating System</li>
+<li>Multitasking/Time Sharing OS</li>
+<li>Multiprocessing OS</li>
+<li>Real Time OS</li>
+<li>Distributed OS</li>
+<li>Network OS</li>
+<li>Mobile OS</li>
+</ul>
+<h3>1. Batch Operating System</h3>
+<p>Some computer processes are very lengthy and time-consuming. To speed the same process, a job with a similar type of needs are batched together and run as a group.</p>
+<p>The user of a batch operating system never directly interacts with the computer. In this type of OS, every user prepares his or her job on an offline device like a punch card and submit it to the computer operator.</p>
+<h3>2. Multi-Tasking/Time-sharing Operating systems</h3>
+<p>Time-sharing operating system enables people located at a different terminal(shell) to use a single computer system at the same time. The processor time (CPU) which is shared among multiple users is termed as time sharing.</p>
+<h3>3. Real time OS</h3>
+<p>A real time operating system time interval to process and respond to inputs is very small. Examples: Military Software Systems, Space Software Systems are the Real time OS example.</p>
+<h3>4. Distributed Operating System</h3>
+<p>Distributed systems use many processors located in different machines to provide very fast computation to its users.</p>
+<h3>5. Network Operating System</h3>
+<p>Network Operating System runs on a server. It provides the capability to serve to manage data, user, groups, security, application, and other networking functions.</p>
+<h3>6. Mobile OS</h3>
+<p>Mobile operating systems are those OS which is especially that are designed to power smartphones, tablets, and wearables devices.</p>
+<p>Some most famous mobile operating systems are Android and iOS, but others include BlackBerry, Web, and watchOS.</p>
+</div>
+<h2>Group B (8 x 5): Attempt any eight questions</h2><h3>Question 4</h3>
+<div><p><p>What is the role of Control Unit in CPU? How analog computer differs from digital?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Roles of the <strong>control unit </strong>in CPU are:</p>
+<ul style="list-style-type: square;">
+<li>It directs the flow of data sequence between the processor and other devices.</li>
+<li>It can interpret the instructions and controls the flow of data in the processor.</li>
+<li>It generates the sequence of control signals from the received instructions or commands from the instruction register.</li>
+<li>It has the responsibility to control the execution units such as ALU, data buffers, and registers in the CPU of a computer.</li>
+<li>It has the ability to fetch, decode, handle the execution, and store results.</li>
+<li>It cannot process and store the data</li>
+<li>To transfer the data, it communicates with the input and output devices and controls all the units of the computer.</li>
+</ul>
+<p><strong>Analog v. Digital computer</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%; height: 543px;">
+<tbody>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;"><strong>ANALOG COMPUTER</strong></th>
+<th style="height: 24px; width: 53.0769%;">DIGITAL COMPUTER</th>
+</tr>
+<tr style="height: 41px;">
+<th style="height: 41px; width: 45.8974%;"><strong>Works with continuous values</strong></th>
+<th style="height: 41px; width: 53.0769%;"><strong>Works with discrete values</strong></th>
+</tr>
+<tr style="height: 28px;">
+<th style="height: 28px; width: 45.8974%;">Less speed</th>
+<th style="height: 28px; width: 53.0769%;">More speed</th>
+</tr>
+<tr style="height: 40px;">
+<th style="height: 40px; width: 45.8974%;">Low or limited storage</th>
+<th style="height: 40px; width: 53.0769%;">High storage</th>
+</tr>
+<tr style="height: 31px;">
+<th style="height: 31px; width: 45.8974%;">No states</th>
+<th style="height: 31px; width: 53.0769%;">2 states: ON &amp; OFF</th>
+</tr>
+<tr style="height: 34px;">
+<th style="height: 34px; width: 45.8974%;">Less reliable</th>
+<th style="height: 34px; width: 53.0769%;">More reliable</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">Low performance</th>
+<th style="height: 24px; width: 53.0769%;">High performance</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">Low speed of processing</th>
+<th style="height: 24px; width: 53.0769%;">High speed of processing</th>
+</tr>
+<tr style="height: 30px;">
+<th style="height: 30px; width: 45.8974%;">Depends upon physical variations</th>
+<th style="height: 30px; width: 53.0769%;">Does not depend upon physical variations</th>
+</tr>
+<tr style="height: 17px;">
+<th style="height: 17px; width: 45.8974%;">Less accuracy</th>
+<th style="height: 17px; width: 53.0769%;">High Accuracy</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">Difficult to use</th>
+<th style="height: 24px; width: 53.0769%;">Not so difficult to use</th>
+</tr>
+<tr style="height: 31px;">
+<th style="height: 31px; width: 45.8974%;">Complex architecture.</th>
+<th style="height: 31px; width: 53.0769%;">Not-so-complex architecture</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">Low readability</th>
+<th style="height: 24px; width: 53.0769%;">High readability</th>
+</tr>
+<tr style="height: 27px;">
+<th style="height: 27px; width: 45.8974%;">Shows the result in terms of signals.</th>
+<th style="height: 27px; width: 53.0769%;">Shows the result on the display screen</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">High power consumption</th>
+<th style="height: 24px; width: 53.0769%;">Low power consumption</th>
+</tr>
+<tr style="height: 24px;">
+<th style="height: 24px; width: 45.8974%;">Special purpose devices</th>
+<th style="height: 24px; width: 53.0769%;">General purpose devices</th>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How RISC architecture differs from CISC architecture?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between RISC and CISC are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>RISC</th>
+<th>CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focus on software</td>
+<td>Focus on hardware</td>
+</tr>
+<tr>
+<td>Uses only Hardwired control unit</td>
+<td>Uses both hardwired and micro programmed control unit</td>
+</tr>
+<tr>
+<td>Transistors are used for more registers</td>
+<td>Transistors are used for storing complex <br />Instructions</td>
+</tr>
+<tr>
+<td>Fixed sized instructions</td>
+<td>Variable sized instructions</td>
+</tr>
+<tr>
+<td>Can perform only Register to Register Arithmetic operations</td>
+<td>Can perform REG to REG or REG to MEM or MEM to MEM</td>
+</tr>
+<tr>
+<td>Requires more number of registers</td>
+<td>Requires less number of registers</td>
+</tr>
+<tr>
+<td>Code size is large</td>
+<td>Code size is small</td>
+</tr>
+<tr>
+<td>An instruction execute in a single clock cycle</td>
+<td>Instruction takes more than one clock cycle</td>
+</tr>
+<tr>
+<td>An instruction fit in one word</td>
+<td>Instructions are larger than the size of one word</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the purpose of cache memory? How sequential access differs from direct access?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The basic purpose is to store program instructions that are frequently re-referenced by software during operation. </p>
+<p>The difference between sequential access and direct access are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Sequential Access</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Direct Access</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">In sequential access data is stored at random locations</td>
+<td style="width: 33.3333%; height: 24px;">In direct access data is stored at sequential locations</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">In sequential access addition of data is fast but retrieval of data is slow.</td>
+<td style="width: 33.3333%; height: 24px;">In direct access addition of data is slow as reordering of data blocks may be needed to put current data block after the last used data block for the file. But retrieval of data is fast.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">Data structure implementing Sequential access is linked list</td>
+<td style="width: 33.3333%; height: 24px;">Data structure implementing Direct access is an Array</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px;">Audio and Video Cassette uses sequential access method.</td>
+<td style="width: 33.3333%; height: 24px;">Magnetic Disk and Optical Disk uses Direct access method.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the working mechanism of a keyboard.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img decoding="async" class="aligncenter" style="width: 664px; height: 390px;" src="data:image/png;base64,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" alt="User Loaded Image | CSIT Guide" /></p>
+<p>Inside the keyboard, there are metallic plate, circuit board and processor, which are responsible for transferring information from the keyboard to the computer. Depending upon the working principle, there are two main types of keys, namely, capacitive and hard-contact. Let&#8217;s discuss in brief about the functioning of capacitive and hard contact key. When a capacitive key is pressed, the metal plunger applies a gentle pressure to the circuit board. The pressure is identified by the computer and the circuit flow is initiated, resulting in the transfer of information from the circuit to the currently installed software.<br />The key identifying to computer is identified using a keyboard driver and finding the preferred key called source code.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why IP address is used in internet? Mention the significance of domain names in internet</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>IP address</b> is very important in TCP/IP networking. It’s the address that recognized and understood by computers and networking devices, so that they can communicate with each other. This 32bits IP address is also called IPv4.</p>
+<p>IP address contains 4 octets, each octet can be represented by number 0-255 and separated by periods. For example, 192.168.100.2 is an IP address.</p>
+<p><img decoding="async" class="aligncenter" style="width: 293px; height: 108px;" src="data:image/jpeg;base64,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" alt="User Loaded Image | CSIT Guide" /></p>
+<p>The significance of domain names are</p>
+<ul style="list-style-type: square;">
+<li>Domain names can be used to establish a unique identity in cyberspace.</li>
+<li>Domain names build credibility on the Web.</li>
+<li>Domain names improve your promotion chances and therefore your site&#8217;s &#8220;visibility&#8221; on the Web.</li>
+<li>Domain names produce a feeling of professionalism.</li>
+<li>Generic domain names are popular.</li>
+<li>Domain names can be resold, leased and bartered.</li>
+<li>Domain names are portable.</li>
+<li>Domain names can be used to give you a unique, permanent email address.</li>
+<li>Domain names can be used to improve a site&#8217;s ranking in certain search engines.</li>
+</ul>
+<p> </p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define computer network. Suppose you have a two story building having 15 computers in each of two floors. Now if you are asked to create a network of these computers, what type of network will you create? Give proper justification to your answer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Computer network is defined as <span class="rcolor5" data-name="a set|a group|a collection">a collection</span> of interconnected autonomous systems that facilitate distributed processing <span class="rcolor6" data-name="of information|of data|of knowledge">of information</span>. It <span class="rcolor1" data-name="results in|leads to|ends up in">leads to </span>better performance with high speed of processing.</p>
+<p>The main advantage of computer network are</p>
+<p><strong>1. Central Storage of Unit </strong></p>
+<p>File can be stored in center hub and access by every network in  the organization.</p>
+<p><strong>2. Enhance Communication</strong></p>
+<p>Network users in the organization can communicate with each others and can share files and data.</p>
+<p><strong>3. Security</strong></p>
+<p>Network users cannot access other user&#8217;s files unlike on stand-alone machines.</p>
+<p><strong>4. Problem Solving</strong></p>
+<p>Computer network makes possible to solved complex program by connecting the network users of the organizations. This helps to solve the program quickly and easily.</p>
+<p><strong>5. Cost</strong></p>
+<p>Although, the cost for setup is high for the computer network but there are hidden cost that we can get benefits. If there is not connected network the we have to spend more on software to connect the computers separately. It means there is not need to by software to connect each and every user.</p>
+<p>&nbsp;</p>
+<p>Suppose we have a two story building having 15 computers in each of two floors and If we were ask to create a network of these computers then we will choose <strong>One <span class="rcolor4" data-name="star topology|star|topology|network topology">star topology</span> <span class="rcolor5" data-name="for each|for every">for every </span>floor where all the computers of <span class="rcolor6" data-name="the floor|the ground">the ground </span><span class="rcolor1" data-name="connect to|hook up with|connect with">hook up with </span>a switch</strong>.</p>
+<p>I&#8217;d probably choose 24 port switches and would bridge each one&#8217;s 22 or 23 ports on which the terminal devices (i.e. computers and possibly later printers etc) would connect. Those 2 switches <span class="rcolor2" data-name="connect to|hook up with|connect with">hook up with </span>the router. So on each switch <span class="rcolor3" data-name="we have|we've|we've got">we&#8217;ve </span>one interface for all the terminal ports and another one for the <span class="rcolor4" data-name="connection with|reference to">reference to </span>the gateway.</p>
+<p>Reason to choose this network</p>
+<p><strong>1. Simplicity</strong></p>
+<p>All the 30 computers on 2 floor can able to communicate easily, and with other network connected with that router. Connecting on a switch can something cause unexpected problem. In this case, You must not have that. And also this network is easy to troubleshoot problems.</p>
+<p><strong>2. Redundancy</strong></p>
+<p>In case, something went wrong on the one switch of any floor the all the computer connected with that switch will got affected but other others computers and switch will work perfecting fine.</p>
+<p><strong>3. Affordability</strong></p>
+<p>Only a router and 2 switch are required to connect the 30 computer. so, It will be affordable compare to other network setup cost.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is malicious software? How virus differs from worms?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Malicious software is <b>any type of software that is intended to harm or hack the user</b>. They might be attempting to steal your information, or they might simply do it for malicious reasons.</p>
+<p>The major difference between Virus and Worms</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>S.No.</th>
+<th>WORMS</th>
+<th>VIRUS</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>A Worm is a form of malware that replicates itself and can spread to different computers via Network.</td>
+<td>A Virus is a malicious executable code attached to another executable file which can be harmless or can modify or delete data.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>The main objective of worms is to eat the system resources.</td>
+<td>The main objective of viruses is to modify the information.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>It doesn’t need a host to replicate from one computer to another.</td>
+<td>It requires a host is needed for spreading.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>It is less harmful as compared.</td>
+<td>It is more harmful.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Worms can be detected and removed by the Antivirus and firewall.</td>
+<td>Antivirus software is used for protection against viruses.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Worms can be controlled by remote.</td>
+<td>Viruses can’t be controlled by remote.</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Worms are executed via weaknesses in the system.</td>
+<td>Viruses are executed via executable files.</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>Internet worms, Instant messaging worms, Email worms, File sharing worms, Internet relay chat (IRC) worms are different types of worms.</td>
+<td>Boot sector virus, Direct Action virus, Polymorphic virus, Macro virus, Overwrite virus, File Infector virus are different types of viruses</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>Examples of worms include Morris worm, storm worm, etc.</td>
+<td>Examples of viruses include Creeper, Blaster, Slammer, etc.</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>It does not need human action to replicate.a that</td>
+<td>It needs human action to replicate.</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>Its spreading speed is faster.</td>
+<td>Its spreading speed is slower as compared.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Discuss the characteristics of multimedia.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Multimedia system has four basic characteristics:</p>
+<ul style="list-style-type: square;">
+<li>Multimedia systems must be <em>computer controlled</em>.</li>
+<li>Multimedia systems are <em>integrated</em>.</li>
+<li>The information they handle must be represented <em>digitally</em>.</li>
+<li>The interface to the final presentation of media is usually <em>interactive</em>.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is database system? How data can be stored using relational model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Database system is the software package for managing the databases. There are several database systems on the basis of how they manage the database.</p>
+<p>There are mainly two types of database forms</p>
+<ol style="list-style-type:decimal;">
+<li>Single-file Database</li>
+<li>Relational Database</li>
+</ol>
+</div>
+</body></html>

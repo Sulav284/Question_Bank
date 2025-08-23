@@ -1,0 +1,878 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DSA Model Set 2081 2081</title>
+    </head>
+    <body>
+        <h1>DSA Model Set 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Define circular queue. How queue differ from stack. Write a program to implement linear queue.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Circular queue is a type of queue which has the concept to connect the end position of the queue to the first position forming circular structure at time of traversal espically designed for reducing the wastage of the memory allocated by the static method in linear queue. According to the working of this queue when the rear reaches the maximum size of the queue then it is again sent back to the first position which make the linear queue seem like a circular ring structure at time of traversal.</p>
+<p>Queue and stack both are linear data structure commonly used for organize, process, retrive, manipulate and store data in storage device but the differ in the methods they use to perform these operations and they are listed below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><span style="font-size: 14pt;"><strong>Stack</strong></span></td>
+<td style="width: 50%; text-align: center; height: 24px;"><span style="font-size: 14pt;"><strong>Queue</strong></span></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: left; height: 48px;"> A linear data structure with only one end where insertion and deletion of data from the data structure takes place from same end.</td>
+<td style="width: 50%; text-align: left; height: 48px;"> A linear data structure with two ends where one end is for data insertion and other end is for data retrival.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: left; height: 24px;">Data enter from the end which is called top and the data is deleted from the same end i.e top of stack.</td>
+<td style="width: 50%; text-align: left; height: 24px;">Here, data enters from rear end and is deleted from the other end called front.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: left; height: 24px;">Its working concept is FILO i.e First In Last Out.</td>
+<td style="width: 50%; text-align: left; height: 24px;">Its working concept is FIFO i.e First In First Out.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: left; height: 24px;">Basic operations performed are PUSH and POP.</td>
+<td style="width: 50%; text-align: left; height: 24px;">Basic operations performed are ENQUEUE and DEQUEUE.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: left; height: 24px;">Data is inserted when:  top = top + 1.</p>
+<p>Data is deleted when:   top = top &#8211; 1.</td>
+<td style="width: 50%; text-align: left; height: 24px;">Data is inserted when:  rear = rear + 1.</p>
+<p>Data is deleted when:   front = front + 1.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline; font-size: 14pt;"><strong>PROGRAM PART:</strong></span></p>
+<p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define MAX_SIZE 10
+
+// Structure to represent the linear queue
+struct Queue {
+int items[MAX_SIZE];
+int front;
+int rear;
+};
+
+// Function to initialize the queue
+void initialize(struct Queue* q) {
+q-&gt;front = -1;
+q-&gt;rear = -1;
+}
+
+// Function to check if the queue is empty
+int isEmpty(struct Queue* q) {
+return (q-&gt;front == -1);
+}
+
+// Function to check if the queue is full
+int isFull(struct Queue* q) {
+return (q-&gt;rear == MAX_SIZE – 1);
+}
+
+// Function to add an element to the rear of the queue (enqueue)
+void enqueue(struct Queue* q, int value) {
+if (isFull(q)) {
+printf(“Queue is full. Cannot enqueue.\n”);
+return;
+}
+
+if (isEmpty(q)) {
+q-&gt;front = 0;
+}
+
+q-&gt;rear++;
+q-&gt;items[q-&gt;rear] = value;
+printf(“Enqueued: %d\n”, value);
+}
+
+// Function to remove and return an element from the front of the queue (dequeue)
+int dequeue(struct Queue* q) {
+int item;
+if (isEmpty(q)) {
+printf(“Queue is empty. Cannot dequeue.\n”);
+return -1;
+}
+
+item = q-&gt;items[q-&gt;front];
+
+if (q-&gt;front == q-&gt;rear) {
+q-&gt;front = -1;
+q-&gt;rear = -1;
+} else {
+q-&gt;front++;
+}
+
+return item;
+}
+
+int main() {
+struct Queue q;
+initialize(&amp;q);
+
+enqueue(&amp;q, 1);
+enqueue(&amp;q, 2);
+enqueue(&amp;q, 3);
+
+printf(“Dequeued: %d\n”, dequeue(&amp;q));
+printf(“Dequeued: %d\n”, dequeue(&amp;q));
+
+enqueue(&amp;q, 4);
+
+printf(“Dequeued: %d\n”, dequeue(&amp;q));
+printf(“Dequeued: %d\n”, dequeue(&amp;q));
+
+return 0;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is AVL tree? How heap differ from tree? Construct an AVL tree for data 24,12,8,15,35,30,57,40,45 and 78.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The first balanced binary tree is the AVL tree. AVL tree checks the height of the left and right sub-trees and assures that the difference is not more than 1. The difference is called the balance factor. An AVL tree is a binary search tree where the balance number at each node is -1, 0, or 1. For an AVL tree of height H, we find that it must contain at least F<sub>H+3</sub> – 1 nodes.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Heap</td>
+<td style="width: 50%; text-align: center;">Tree</td>
+</tr>
+<tr>
+<td style="width: 50%;">1. Heap just guarantees that elements on higher levels are greater i.e max-heap or smaller i.e min-heap than elements on lower level.</td>
+<td style="width: 50%;">1. Binary Search Tree guarantees order of the element on the tree i.e from &#8220;left&#8221; to &#8220;right&#8221;.</td>
+</tr>
+<tr>
+<td style="width: 50%;">2. Heap is ordered</td>
+<td style="width: 50%;">2. BST isn&#8217;t ordered.</td>
+</tr>
+<tr>
+<td style="width: 50%;">3. Heap is a binary tree based data structure.</td>
+<td style="width: 50%;">3. Not all trees are binary search trees.</td>
+</tr>
+<tr>
+<td style="width: 50%;">4. Average time insertion into a heap is O(1).</td>
+<td style="width: 50%;">4. Average time insertion into a binary search tree is O(log(n)).</td>
+</tr>
+<tr>
+<td style="width: 50%;">5.  Heap is represented as an array of numbers that allows duplication within itself.</td>
+<td style="width: 50%;">5. BST is an ordered data structure that does not allow duplicates.</td>
+</tr>
+</tbody>
+</table></div>
+<p>for given data set,</p>
+<p>24,12,8,15,35,30,57,40,45 and 78 AVL tree will be as:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35436" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/AVL-tree.drawio.png?resize=914%2C941&#038;ssl=1" alt="" width="914" height="941"></p>
+<p>Hence, it is the required AVL tree.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define list. How can you use linked list to implement stack? Explain circular linked list.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A list is an ordered data structure with elements separated by a comma and enclosed within square brackets. It can be defined as an abstract data type in which the elements are stored in an ordered manner for easier and efficient retrieval of the elements. It can be called Dynamic size arrays, which means their size increased as we go on adding data in them and we need not to pre-define a static size for the list.</p>
+<p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Define a structure for a singly linked list node
+struct Node {
+int data;
+struct Node* next;
+};
+
+// Define a structure for the stack, which includes a pointer to the top node
+struct Stack {
+struct Node* top;
+};
+
+// Function to create a new node with the given data
+struct Node* createNode(int data) {
+struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+newNode-&gt;data = data;
+newNode-&gt;next = NULL;
+return newNode;
+}
+
+// Function to initialize a stack
+void initializeStack(struct Stack* stack) {
+stack-&gt;top = NULL;
+}
+
+// Function to check if the stack is empty
+int isEmpty(struct Stack* stack) {
+return stack-&gt;top == NULL;
+}
+
+// Function to push an element onto the stack
+void push(struct Stack* stack, int data) {
+struct Node* newNode = createNode(data);
+newNode-&gt;next = stack-&gt;top;
+stack-&gt;top = newNode;
+printf(“Pushed: %d\n”, data);
+}
+
+// Function to pop an element from the stack
+int pop(struct Stack* stack) {
+if (isEmpty(stack)) {
+printf(“Stack is empty. Cannot pop.\n”);
+return -1; // Return a sentinel value or handle as needed
+}
+struct Node* poppedNode = stack-&gt;top;
+int data = poppedNode-&gt;data;
+stack-&gt;top = poppedNode-&gt;next;
+free(poppedNode);
+return data;
+}
+
+// Function to display the elements in the stack
+void displayStack(struct Stack* stack) {
+if (isEmpty(stack)) {
+printf(“Stack is empty.\n”);
+return;
+}
+
+struct Node* current = stack-&gt;top;
+printf(“Stack: “);
+while (current != NULL) {
+printf(“%d “, current-&gt;data);
+current = current-&gt;next;
+}
+printf(“\n”);
+}
+
+int main() {
+struct Stack stack;
+initializeStack(&amp;stack);
+
+push(&amp;stack, 10);
+push(&amp;stack, 20);
+push(&amp;stack, 30);
+
+displayStack(&amp;stack);
+
+int popped = pop(&amp;stack);
+if (popped != -1) {
+printf(“Popped: %d\n”, popped);
+}
+
+displayStack(&amp;stack);
+
+return 0;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;">A circular linked list is a variation of a singly linked</span> list where the last node in the list points back to the first node, creating a closed loop. In a traditional singly linked list, the last node’s “next” pointer is typically set to NULL, indicating the end of the list. However, in a circular linked list, this pointer connects back to the first node. Circular linked lists have several applications, such as representing a round-robin scheduling algorithm, managing items in a circular buffer, and implementing certain data structures like circular queues. Traversing a circular linked list involves iterating through nodes until you reach the starting point again. It’s essential to handle circular linked lists carefully to avoid infinite loops during traversal or manipulation.</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Explain big oh notation in brief. Find big oh of the following function:</p>
+<p>f(x) = 5x<sup>4</sup> + 9x<sup>2</sup> + 7x + 9.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Big O notation is a mathematical notation that describe the limiting behavior of a function when the argument tends toward a particular value or infinity. When we have only asymptotic upper bound then we use O notation. It classify algorithms according to how their running time or space requirement grows as the input size grows.</p>
+<p>If f and g are any two functions from set of integers to set of integer then function f(x) is said to be oh of g(x) i.e f(x) = O (g(x)) if and only if there exist two positive constants c and x<sub>0 </sub>such that for all x&gt;=x<sub>0</sub></p>
+<p><sub> </sub>f(x)= c*(g(x))</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35431" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/big-oh.drawio.png?resize=879%2C361&#038;ssl=1" alt="" width="879" height="361"></p>
+<p><span style="text-decoration: underline;"><strong>Numerical part :</strong></span></p>
+<p>given,</p>
+<p>f(x) = 5x<sup>4</sup> + 9x<sup>2</sup> + 7x + 9</p>
+<p>Let c*g(x) be the big oh f(x) then,</p>
+<p>f(x) ≤ c*g(x)</p>
+<p>5x<sup>4</sup> + 9x<sup>2</sup> + 7x + 9 ≤ c*x<sup>4</sup></p>
+<p>5x<sup>4</sup> + 9x<sup>2</sup> + 7x + 9 ≤ 30*x<sup>4</sup></p>
+<p>where, c= 14 and g(x)= x<sup>2</sup>, thus</p>
+<p>f(x) = O (g(x)) = O(x<sup>2</sup>).</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Convert the infix expression</p>
+<p>A+(((B-C)*(D-E)+F)/G)$(H-I)   into post expression using stack.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>A+(((B-C)*(D-E)+F)/G)$(H-I)</p>
+<p>then, the postfix using stack will be obtained as shown below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-35288 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/STACK2.drawio.png?resize=701%2C1317&#038;ssl=1" alt="" width="701" height="1317"></p>
+<p>Hence, the required postfix is ABC-DE-+*FG/$+HI-</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write a program to find GCD of two numbers using recursion.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Recursion is the function which calls itself directly or indirectly. C program to find GCD of two number using recursion.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+
+int hcf(int n1, int n2);
+
+int main() {
+    int n1, n2;
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &amp;n1, &amp;n2);
+    printf("G.C.D of %d and %d is %d.", n1, n2, hcf(n1, n2));
+    return 0;
+}
+
+int hcf(int n1, int n2) {
+    if (n2 != 0)
+        return hcf(n2, n1 % n2);
+    else
+        return n1;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is the application of spanning tree? Draw a MST of a graph containing any 8 vertices and 11 edges with arbitrary edge costs.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A subgraph of un-directed edge that connects all of the vertices of the graph with the minimum possible number of edges is called a spanning tree. Some of the application of graph are:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;"><strong>Designing communication network:</strong></span>  We can use spanning tree for designing networks for communucation purpose. It is also used for designing the architecture and topologies.</li>
+<li><span style="text-decoration: underline;"><strong>Building road network </strong></span>: It can be used by engineerings to design the road network with minimum cost. Before construction it is used for desigining so that the cost would be effective while construction.</li>
+<li><span style="text-decoration: underline;"><strong>Maps</strong></span> : Maps use this for finding the shortest path to their destination with least distance.</li>
+<li><span style="text-decoration: underline;"><strong>To solve travelling salesman problem</strong></span>: It is used for solving the salesman problem i.e the path with minimum cost and fast is determined to reach a place is calculated.</li>
+<li><span style="text-decoration: underline;"><strong>Electronic circuit board</strong></span>: It is used in designing the electric boards and circuits before implementing it or bringing it to use.</li>
+</ol>
+<p>A minimum spanning tree with eight vertices, eleven edges each with arbitrary minimum edge cost is as:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-35292" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/MST.drawio.png?resize=461%2C220&#038;ssl=1" alt="" width="461" height="220"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Sort the number {82, 73, 12, 39, 26, 88, 2, 9, 60, 41} using shell sort.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>N=10</p>
+<p>let us consider,</p>
+<p>$$ gap= \frac{{N}}{{2}} $$</p>
+<p>$$ gap= \frac{{10}}{{2}} $$</p>
+<p>$$ gap= 5 $$</p>
+<p>then,</p>
+<p>Pass 1:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Pass 2:</p>
+<p>$$ gap= \frac{{N}}{{4}} $$</p>
+<p>$$ gap= \frac{{10}}{{4}} $$</p>
+<p>$$ gap= 2 $$</p>
+<p>then,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">88</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">41</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Pass 3:</p>
+<p>$$ gap= \frac{{N}}{{6}} $$</p>
+<p>$$ gap= \frac{{10}}{{6}} $$</p>
+<p>$$ gap= 1 $$</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Pass 4:</p>
+<p>$$ gap= 1 $$</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Pass 4:</p>
+<p>$$ gap= 1 $$</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 73.2174%; height: 51px;">
+<tbody>
+<tr>
+<td style="width: 10%; text-align: center;">2</td>
+<td style="width: 10%; text-align: center;">9</td>
+<td style="width: 10%; text-align: center;">12</td>
+<td style="width: 10%; text-align: center;">26</td>
+<td style="width: 10%; text-align: center;">39</td>
+<td style="width: 10%; text-align: center;">41</td>
+<td style="width: 10%; text-align: center;">60</td>
+<td style="width: 10%; text-align: center;">73</td>
+<td style="width: 10%; text-align: center;">82</td>
+<td style="width: 10%; text-align: center;">88</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hence, it is the final required sorted number.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is hashing? how do you apply linear probing and rehashing explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Hashing is a well-known technique to search any particular element among several elements. It minimizes the number of comparisons while performing the search.</p>
+<p>In hashing, an array data structure called as Hash table is used to store the data items. Hash table is a data structure used for storing and retrieving data very quickly. Insertion of data in the hash table is based on the key value. Hence every entry in the hash table is associated with some key. Using the hash key the required piece of data can be searched in the hash table by few or more key comparisons.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-35304 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/hashing.drawio.png?resize=482%2C187&#038;ssl=1" alt="" width="482" height="187"></p>
+<p>Linear probing  is a technique in which a collision is resolved by placing the item to the next empty space within the occoupied array space. This is the most basic method used but has cons i.e clustering problem.</p>
+<p>Consider we have to insert the elements 35, 90, 17, 44, and 88. the table size is 5 and will use hash function:</p>
+<p><i><b>H(key) = key mod tablesize</b></i></p>
+<p>37 % 5 = 2</p>
+<p>90 % 5= 0</p>
+<p>17 % 5 = 2 (collision)</p>
+<p>44 % 5 = 4</p>
+<p>88% 5 = 3</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 78.5287%; height: 24px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">90</td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;">37</td>
+<td style="width: 20%; text-align: center;">88</td>
+<td style="width: 20.3839%; text-align: center;">44</td>
+</tr>
+</tbody>
+</table></div>
+<p><b>Rehashing </b>is a technique in which the table is resized, i.e., the size of table is doubled by creating a new table. It is preferable is the total size of table is a prime number. There are situations in which the rehashing is required.</p>
+<p>Consider we have to insert the elements 35, 90, 17, 44, and 88. the table size is 5 and will use hash function:</p>
+<p><i><b>H(key) = key mod tablesize</b></i></p>
+<p>37 % 5 = 2</p>
+<p>90 % 5= 0</p>
+<p>17 % 5 = 2 (collision)</p>
+<p>so, we will place the value to the net empty place through out the table and  in this way we will get the hash value as 1</p>
+<p>44 % 5 = 4</p>
+<p>88% 5 = 3</p>
+<p>Hence, finally the values are placed as:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 78.5287%; height: 24px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">90</td>
+<td style="width: 20%; text-align: center;">17</td>
+<td style="width: 20%; text-align: center;">37</td>
+<td style="width: 20%; text-align: center;">88</td>
+<td style="width: 20.3839%; text-align: center;">44</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now this table is almost full and if we try to insert more elements collisions will occur and eventually further insertions will fail. Hence we will rehash by doubling the table size. The old table size is 5 then we should double this size for new table, that becomes 10. But 10 is not a prime number, we will prefer to make the table size as 11. And new hash function will be</p>
+<p><b><i>H(key) key mod 23 </i></b></p>
+<p>37 % 11= 4</p>
+<p>90 % 11= 2</p>
+<p>17 % 11 = 6</p>
+<p>44 % 11= 0</p>
+<p>84 % 11= 7</p>
+<p>We see that the values are placed as:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 101.503%; height: 34px;">
+<tbody>
+<tr>
+<td style="width: 9.41935%; text-align: center;">44</td>
+<td style="width: 9.72729%; text-align: center;"></td>
+<td style="width: 10.6657%; text-align: center;">90</td>
+<td style="width: 9.34989%; text-align: center;"></td>
+<td style="width: 10.2758%; text-align: center;">37</td>
+<td style="width: 8.20271%; text-align: center;"></td>
+<td style="width: 10.2108%; text-align: center;">17</td>
+<td style="width: 10.6585%; text-align: center;">84</td>
+<td style="width: 7.46036%; text-align: center;"></td>
+<td style="width: 7.72248%; text-align: center;"></td>
+<td style="width: 23.1283%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Now the hash table is sufficiently large to accommodate new insertions.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the algorithm for node insertion and deletion from specified position from doubly linked list.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Algorithm for inserting a node in the doubly linked list is as :</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35308" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/insert.drawio.png?resize=427%2C145&#038;ssl=1" alt="" width="427" height="145"></p>
+<p>Algorithm:</p>
+<ol style="list-style-type:decimal;">
+<li>start</li>
+<li>Get the data to be inserted and place it in a variable say n.</li>
+<li>Create a new node as:     newnode = (struct *) malloc (sizeof (struct node))</li>
+<li>Assign the data to the new node and initialize left and right pointer as NULL           newnode →data = n        newnode →Left_addr = newnode →Right_addr = NULL</li>
+<li>Get the k<sup>th</sup> position from the user and assign start = NULL.</li>
+<li>Initialize a loop until the i = k<sup>th </sup>position.</li>
+<li>Repeat until the k<sup>th</sup> position             prev= temp         increase the temp pointer as temp→Right_addr i.e temp = temp→Right_addr</li>
+<li>When i = k<sup>th</sup> position   next= temp→Right_addr</li>
+<li>Link the previous node Left_addr to new node and link the new node Right_addr to next    prev→Left_addr = newnode         newnode →Right_addr = next</li>
+<li>stop</li>
+</ol>
+<p>&nbsp;</p>
+<p>Algorithm for deleting a node in the doubly linked list is as :</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35309" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/delete.drawio.png?resize=338%2C108&#038;ssl=1" alt="" width="338" height="108"></p>
+<p>Algorithm:</p>
+<ol style="list-style-type:decimal;">
+<li>start</li>
+<li>Get the k<sup>th</sup> position from the user and assign  temp= start.</li>
+<li>Initialize the loop with i = 1</li>
+<li>Move the pointer of temp as temp→Right_addr      prev = temp     temp = temp→Right_addr</li>
+<li>When i = k<sup>th</sup> position         next= temp→Right_addr</li>
+<li>Point the previous node to the next node and point the Left_addr of next node to previous node    prev→Right_addr= next        next→Right_addr = prev</li>
+<li>Delete the temp value using free        free(temp)</li>
+<li>Stop.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is linear queue? Why do we need circular queue? Explain.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Queue is the linear and restricted data structure as there are two fixed ends from which data are inserted and deleted. In queue, the two ends are named as rear and front where rear is the end for inserting data to the queue where as front is the end which is responsible for only deleting the data from the queue. It works on the concept FIFO (First In First Out) i.e the element entered first is deleted first.</p>
+<p>Basic operation that a queue performs are :</p>
+<ul style="list-style-type: square;">
+<li value="1"><span style="text-decoration: underline;">Enqueue (Insert):</span> Adds an element to the rear of the queue.</li>
+<li value="2"><span style="text-decoration: underline;">Dequeue (Delete):</span> Removes and returns the element from the front of the queue.</li>
+<li value="3"><span style="text-decoration: underline;">Peek:</span> Returns the element at the front of the queue without removing it.</li>
+<li value="4"><span style="text-decoration: underline;">isEmpty:</span> Checks if the queue is empty.</li>
+<li value="5"><span style="text-decoration: underline;">isFull:</span> Checks if the queue is full.</li>
+</ul>
+<p>We need circular queue espically to solve the problem that arises in linear queue. In linear queue, when the rear reaches the maximum size then we can&#8217;t insert any element even if we delete some of the elements i.e in a linear queue, the traversal through the queue is possible only oncewhich mean that once an element is deleted, we cannot insert another element in its position.  This situation causes improper utilization of memory. This situation can be depicted below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 81.4028%; height: 37px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">100</td>
+<td style="width: 20%; text-align: center;">50</td>
+<td style="width: 20%; text-align: center;">10</td>
+<td style="width: 20%; text-align: center;">500</td>
+<td style="width: 20%; text-align: center;">70</td>
+</tr>
+</tbody>
+</table></div>
+<p>front= 0  rear= 4</p>
+<p>In above queue if we delete some of the elements then the queue will be as</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 81.4028%; height: 37px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">100</td>
+<td style="width: 20%; text-align: center;">50</td>
+<td style="width: 20%; text-align: center;"><del>10</del></td>
+<td style="width: 20%; text-align: center;"><del>500</del></td>
+<td style="width: 20%; text-align: center;"><del>70</del></td>
+</tr>
+</tbody>
+</table></div>
+<p>front= 3  rear= 4</p>
+<p>then we will be left with some vacant space,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 81.4028%; height: 37px;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;">100</td>
+<td style="width: 20%; text-align: center;">50</td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 20%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>front= 3  rear= 4</p>
+<p>now, if we try to fill the spaces then we won&#8217;t be able to as the condition rear == maxsize-1 is still true i.e front= 3  rear= 4. Hence, to solve the problem of improper utilization of memory we need circular queue.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Breadth First traversal of graph</li>
+<li>TOH</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. <span style="text-decoration: underline;">Breadth First Traversal of a graph</span></strong></p>
+<p>Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search, when a dead end occurs in any iteration.</p>
+<p><img decoding="async" src="https://i0.wp.com/www.tutorialspoint.com/data_structures_algorithms/images/breadth_first_traversal.jpg?ssl=1" alt="Breadth First Traversal" data-recalc-dims="1" /></p>
+<p>As in the example given above, BFS algorithm traverses from A to B to E to F first then to C and G lastly to D. It employs the following rules.</p>
+<ul class="list">
+<li><b>Rule 1</b> − Visit the adjacent unvisited vertex. Mark it as visited. Display it. Insert it in a queue.</li>
+<li><b>Rule 2</b> − If no adjacent vertex is found, remove the first vertex from the queue.</li>
+<li><b>Rule 3</b> − Repeat Rule 1 and Rule 2 until the queue is empty.</li>
+</ul>
+<p><strong>Steps:</strong></p>
+<p>1. Initialize the queue.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23325" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/1-2.jpg?resize=300%2C177&amp;ssl=1" alt="- Hamro CSIT" width="300" height="177" data-recalc-dims="1" /><br />
+2 Breadth First Search Step Two We start from visiting S (starting node), and mark it as visited.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23326" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/2-1.jpg?resize=300%2C177&amp;ssl=1" alt="- Hamro CSIT" width="300" height="177" data-recalc-dims="1" /><br />
+3 Breadth First Search Step Three We then see an unvisited adjacent node from S. In this example, we have three nodes but alphabetically we choose A, mark it as visited and enqueue it.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23327" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/3-1.jpg?resize=300%2C178&amp;ssl=1" alt="- Hamro CSIT" width="300" height="178" data-recalc-dims="1" /><br />
+4 Breadth First Search Step Four Next, the unvisited adjacent node from S is B. We mark it as visited and enqueue it.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23328" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/4.jpg?resize=300%2C178&amp;ssl=1" alt="- Hamro CSIT" width="300" height="178" data-recalc-dims="1" /><br />
+5 Breadth First Search Step Five Next, the unvisited adjacent node from S is C. We mark it as visited and enqueue it.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23329" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/5.jpg?resize=300%2C178&amp;ssl=1" alt="- Hamro CSIT" width="300" height="178" data-recalc-dims="1" /><br />
+6 Breadth First Search Step Six Now, S is left with no unvisited adjacent nodes. So, we dequeue and find A.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23330" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/6.jpg?resize=300%2C178&amp;ssl=1" alt="- Hamro CSIT" width="300" height="178" data-recalc-dims="1" /><br />
+7 Breadth First Search Step Seven From A we have D as unvisited adjacent node. We mark it as visited and enqueue it.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-23331" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/08/7.jpg?resize=300%2C178&amp;ssl=1" alt="- Hamro CSIT" width="300" height="178" data-recalc-dims="1" /></p>
+<p>&nbsp;</p>
+<p><strong>b. <span style="text-decoration: underline;">TOH</span></strong></p>
+<p>Tower of Hanoi (TOH) is a mathematical puzzle which consists of three pegs named as origin, intermediate and destination and more than one disks. These disks are of different sizes and the smaller one sits over the larger one.</p>
+<p>In this problem we transfer all disks from origin peg to destination peg using intermediate peg for temporary storage and move only one disk at a time.</p>
+<p><img loading="lazy" decoding="async" class="wp-image-4708 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/01/The-tower-of-Hanoi-puzzle-problem-min.png?resize=350%2C246&amp;ssl=1" alt="The tower of Hanoi puzzle problem" width="350" height="246" data-recalc-dims="1" /></p>
+<p><strong>Algorithm:</strong></p>
+<p>To move a tower of n disks from <strong>source to destination</strong></p>
+<ol style="list-style-type:decimal;">
+<li>If n == 1:
+<ol style="list-style-type:decimal;">
+<li>Move a single disk from source to destination</li>
+</ol>
+</li>
+<li>If n &gt; 1:
+<ol style="list-style-type:decimal;">
+<li>Let temp be the remaining pole other than source and destination</li>
+<li>Move a tower of (n-1) disks from source to temp</li>
+<li>Move a single disk from source to destination</li>
+<li>Move a tower of (n-1) disks from temp to destination</li>
+</ol>
+</li>
+<li>Stop</li>
+</ol>
+</div>
+</body></html>

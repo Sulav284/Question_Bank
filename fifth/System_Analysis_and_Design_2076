@@ -1,0 +1,320 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>SAD Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO Questions</h2><h3>Question 1</h3>
+<div><p><p>What is the waterfall model? Explain the prototyping model for developing information systems along with merits and demerits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Waterfall Model</strong> is a sequential model that divides software development into pre-defined phases. Each phase must be completed before the next phase can begin with no overlap between the phases. Each phase is designed for performing specific activity during the SDLC phase. It was introduced in 1970 by Winston Royce.</p>
+<p>The following illustration is a representation of the different phases of the Waterfall Model.</p>
+<p><img data-recalc-dims="1" decoding="async" class="aligncenter" src="https://i0.wp.com/www.tutorialspoint.com/sdlc/images/sdlc_waterfall_model.jpg?ssl=1" alt="SDLC Waterfall Model" /></p>
+<div>
+<p><strong>The prototyping Model</strong> is a software development model in which a prototype is built, tested, and reworked until an acceptable prototype is achieved. It also creates a base to produce the final system or software. It works best in scenarios where the project’s requirements are not known in detail. It is an iterative, trial-and-error method that takes place between the developer and the client.</p>
+</div>
+<p>Prototyping Model has following six SDLC phases as follow:</p>
+<p><span style="text-decoration: underline;"><strong>Step 1: Requirements gathering and analysis:</strong></span></p>
+<p>A prototyping model starts with requirement analysis. In this phase, the requirements of the system are defined in detail. During the process, the users of the system are interviewed to know what is their expectation from the system.</p>
+<p><strong><span style="text-decoration: underline;">Step 2: Quick design:</span></strong></p>
+<p>The second phase is a preliminary design or a quick design. In this stage, a simple design of the system is created. However, it is not a complete design. It gives a brief idea of the system to the user. The quick design helps in developing the prototype.</p>
+<p><span style="text-decoration: underline;"><strong>Step 3: Build a Prototype:</strong></span></p>
+<p>In this phase, an actual prototype is designed based on the information gathered from quick design. It is a small working model of the required system.</p>
+<p><strong><span style="text-decoration: underline;">Step 4: Initial user evaluation:</span></strong></p>
+<p>In this stage, the proposed system is presented to the client for an initial evaluation. It helps to find out the strength and weaknesses of the working model. Comments and suggestions are collected from the customer and provided to the developer.</p>
+<p><span style="text-decoration: underline;"><strong>Step 5: Refining prototype:</strong></span></p>
+<p>If the user is not happy with the current prototype, you need to refine the prototype according to the user’s feedback and suggestions.</p>
+<p>This phase will not be over until all the requirements specified by the user are met. Once the user is satisfied with the developed prototype, a final system is developed based on the approved final prototype.</p>
+<p><span style="text-decoration: underline;"><strong>Step 6: Implement Product and Maintain:</strong></span></p>
+<p>Once the final system is developed based on the final prototype, it is thoroughly tested and deployed to production. The system undergoes routine maintenance for minimizing downtime and prevents large-scale failures.</p>
+<h4><b>Advantages of using the Prototype Model :</b></h4>
+<ol style="list-style-type:decimal;">
+<li>This model is flexible in design.</li>
+<li>It is easy to detect errors.</li>
+<li>We can find missing functionality easily.</li>
+<li>There is a scope for refinement, which means new requirements can be easily accommodated.</li>
+<li>It can be reused by the developer for more complicated projects in the future.</li>
+</ol>
+<h4><b>Disadvantages of using the Prototype Model :</b></h4>
+<ol style="list-style-type:decimal;">
+<li>This model is costly.</li>
+<li>It has poor documentation because of continuously changing customer requirements.</li>
+<li>There may be too much variation in requirements.</li>
+<li>Customers sometimes demand the actual product to be delivered soon after seeing an early prototype.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define feasibility. Explain different categories of feasibility. How do you measure economic feasibility?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A feasibility study is <b>a preliminary exploration of a proposed project or undertaking to determine its merits and viability</b>. A feasibility study aims to provide an independent assessment that examines all aspects of a proposed project, including technical, economic, financial, legal, and environmental considerations.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Technical Feasibility –</strong><br />
+In Technical Feasibility current resources both hardware software along with required technology are analyzed/assessed to develop project. This technical feasibility study gives report whether there exists correct required resources and technologies which will be used for project development. Along with this, feasibility study also analyzes technical skills and capabilities of technical team, existing technology can be used or not, maintenance and up-gradation is easy or not for chosen technology etc.</li>
+<li><strong>Operational Feasibility –</strong><br />
+In Operational Feasibility degree of providing service to requirements is analyzed along with how much easy product will be to operate and maintenance after deployment. Along with this other operational scopes are determining usability of product, Determining suggested solution by software development team is acceptable or not etc.</li>
+<li><strong>Economic Feasibility –</strong><br />
+In Economic Feasibility study cost and benefit of the project is analyzed. Means under this feasibility study a detail analysis is carried out what will be cost of the project for development which includes all required cost for final development like hardware and software resource required, design and development cost and operational cost and so on. After that it is analyzed whether project will be beneficial in terms of finance for organization or not.</li>
+<li><strong>Legal Feasibility –</strong><br />
+In Legal Feasibility study project is analyzed in legality point of view. This includes analyzing barriers of legal implementation of project, data protection acts or social media laws, project certificate, license, copyright etc. Overall it can be said that Legal Feasibility Study is study to know if proposed project conform legal and ethical requirements.</li>
+<li><strong>Schedule Feasibility –</strong><br />
+In Schedule Feasibility Study mainly timelines/deadlines is analyzed for proposed project which includes how many times teams will take to complete final project which has a great impact on the organization as purpose of project may fail if it can’t be completed on time.</li>
+</ol>
+<p>&nbsp;</p>
+<p>In Economic Feasibility study cost and benefit of the project is analyzed. Means under this feasibility study a detail analysis is carried out what will be cost of the project for development which includes all required cost for final development like hardware and software resource required, design and development cost and operational cost and so on. After that it is analyzed whether project will be beneficial in terms of finance for organization or not.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Assuming a retail clothing store in a mall, draw a context diagram and a level-0 diagram that represent the selling system at the store.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-11315" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Untitled-1.jpg?resize=807%2C364&#038;ssl=1" alt="" width="807" height="364"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-11317" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Screenshot-148.png?resize=978%2C974&#038;ssl=1" alt="" width="978" height="974"></p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Explain the modern approach to system analysis and design.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System analysis and design are the complex, challenging, and simulating organization processes that a team of business and system professionals uses to develop and maintain computer-based information systems. It is an organizational improvement process. Information systems are built and rebuilt for their benefit.</p>
+<p>1. <strong><span style="text-decoration: underline;">Joint Application Design (JAD)</span> :</strong></p>
+<p>JAD is a structured process in which users, managers and analysts work together for several days in a series of intensive meetings to specify or review system requirements. It is a management process &#8211; a people process &#8211; which allows IS to work more effectively with users in a shorter time frame. Because of bringing the people directly affected by the system in one place and time, time and organizational resources are better managed. Also, group members develop a shared understanding of what the system is supposed to do. The JAD process also includes approaches for enhancing user participation, expediting development, and improving the quality of specifications.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-39058 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/jad.drawio.png?resize=436%2C257&#038;ssl=1" alt="" width="436" height="257"></p>
+<p style="text-align: center;">fig : Joint Application Design</p>
+<p><strong>Advantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>JAD decreases time and costs associated with requirements elicitation process.</li>
+<li>Creative idea production and improved user ownership of the system.</li>
+<li>Rapid development of systems.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>JAD requires a large block of time to be available for all session participants.</li>
+<li>Requires significant planning, scheduling effort and stakeholder commitment of time and effort.</li>
+<li>Requires trained and experienced personnel for facilitation and recording.</li>
+</ul>
+<p>2. <span style="text-decoration: underline;"><strong>Agile model</strong></span> :</p>
+<p>This model is an intuitive approach to the waterfall model. Multiple development cycles take place here, making the life cycle a “multi-waterfall” cycle. Cycles are divided up into smaller, more easily managed iterations. Each iteration passes through the requirements, design, implementation and testing phases. A working version ofsoftware is produced during the first iteration,so you have working software early on during the software life cycle. Subsequent iterations build on the initial software produced during the first iteration.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-39062" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Agile.drawio.png?resize=262%2C225&#038;ssl=1" alt="" width="262" height="225"></p>
+<p style="text-align: center;">fig : Agile development Model</p>
+<p><strong>Advantages : </strong></p>
+<ul style="list-style-type: square;">
+<li>In this model customer can respond to each built.</li>
+<li>More flexible – less costly to change scope and requirements.</li>
+<li>Easier to test and debug during a smaller iteration and manage risk because risky pieces are identified and handled during it’s iteration.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Total cost is higher than waterfall.</li>
+<li>Needs a clear and complete definition of the whole system before it can be broken down and built incrementally.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Prototyping</strong></span> <strong>: </strong></p>
+<p>Prototyping is an iterative process of systems development in which requirements are converted to a working system that is continually revised through close work between an analyst and users. Designing and building a scaled-down but functional version of a desired system is the process known as prototyping. Prototyping is part of the analysis phase of the systems development life cycle. It is the process of building a model of a system.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-39059" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/prototype.drawio.png?resize=293%2C252&#038;ssl=1" alt="" width="293" height="252"></p>
+<p style="text-align: center;">fig : Prototype Development Model</p>
+<p><strong>Advantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Useful for projects in which user requirements are uncertain or imprecise.</li>
+<li>It encourages active user and management participation.</li>
+<li>Projects have higher visibility and support because of the extensive user involvement.</li>
+</ul>
+<p><strong>Disadvantages :</strong></p>
+<ul style="list-style-type: square;">
+<li>Incomplete or inadequate problem analysis.</li>
+<li>It increases lifetime cost to operate, support and maintain the system.</li>
+<li>Practically, this methodology may increase the complexity of the system as scope of the system may expand beyond original plans.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is rapid application development? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <b>RAD (Rapid Application Development)</b> model is based on prototyping and iterative development with no specific planning involved. The process of writing the software itself involves the planning required for developing the product. Rapid Application Development focuses on gathering customer requirements through workshops or focus groups, early testing of the prototypes by the customer using iterative concept, reuse of the existing prototypes (components), continuous integration and rapid delivery.</p>
+<p>&nbsp;</p>
+<p><center>&nbsp;</p>
+<figure><img data-recalc-dims="1" loading="lazy" decoding="async" class="lazyloaded" src="https://i0.wp.com/www.guru99.com/images/6-2015/052615_1128_WhatisRADRa1.png?resize=388%2C397&#038;ssl=1" alt="Rapid Application Development Model" width="388" height="397" data-ll-status="loaded" /></figure>
+<p></center>There are following five major phases of Rapid Application Development Model</p>
+<div>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-striped">
+<thead>
+<tr>
+<th>RAD Model Phases</th>
+<th>Activities performed in RAD Modeling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Modeling</strong></td>
+<td>
+<ul style="list-style-type: square;">
+<li>On basis of the flow of information and distribution between various business channels, the product is designed</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Data Modeling</strong></td>
+<td>
+<ul style="list-style-type: square;">
+<li>The information collected from business modeling is refined into a set of data objects that are significant for the business</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Process Modeling</strong></td>
+<td>
+<ul style="list-style-type: square;">
+<li>The data object that is declared in the data modeling phase is transformed to achieve the information flow necessary to implement a business function</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Application Generation</strong></td>
+<td>
+<ul style="list-style-type: square;">
+<li>Automated tools are used for the construction of the software, to convert process and data models into prototypes</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Testing and Turnover</strong></td>
+<td>
+<ul style="list-style-type: square;">
+<li>As prototypes are individually tested during every iteration, the overall testing time is reduced in RAD.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is project initiation? Explain different activities you will perform during project initiation phase.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Project initiation is the first phase of the project management life cycle and in this stage, companies decide if the project is needed and how beneficial it will be for them. The two metrics that are used to judge a proposed project and determine the expectations from it are the business case and feasibility study.</p>
+<ul style="list-style-type: square;">
+<li>To define the purpose and the expectations of the project.</li>
+<li>To define the project scope to ensure that the project covers all the required aspects and full addresses them.</li>
+<li>To define clear milestones and timeline for the project to ensure a smooth flow of events throughout the project.</li>
+<li>To devise the project’s deliverables that are in line with the goals and the clients expectations.</li>
+<li>To identify all the stakeholders that are to be directly or indirectly affected by the project.</li>
+<li>To come up with an enough budget – at this stage, a budget estimation is made for running the project.</li>
+<li>To establish the risks, issues and interdependencies connected to the project – this would help the team prepare and plan beforehand to avert the risks and tackle the issues.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is the process of identifying and selecting information system development project in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>The Process of Identifying and Selecting Information Systems Development Projects</strong></p>
+<p><strong>1. Identifying potential development projects.</strong> Organizations vary as to how they identify projects. This process can be performed by:</p>
+<ul style="list-style-type: square;">
+<li>A key member of top management, either the CEO of a small or medium-size organization or a senior executive in a larger organization</li>
+<li>A steering committee, composed of a cross section of managers with an interest in systems</li>
+<li>User departments, in which either the head of the requesting unit or a committee from the requesting department decides which projects to submit (as a systems analyst, you will help users prepare such requests)</li>
+<li>The development group or a senior IS manager</li>
+</ul>
+<p><strong>2. Classifying and ranking IS development projects.</strong> Assessing the merit of potential projects is the second major activity in the project identification and selection phase. As with project identification, classifying and ranking projects can be performed by top managers, a steering committee, business units, or the IS development group. The criteria used to assign the merit of a given project can vary based on the size of the organization. In any given organization, one or several criteria might be used during the classifying and ranking process</p>
+<p><strong>3. Selecting IS development projects.</strong> The selection of projects is the final activity in the project identification and selection phase. The short- and long-term projects most likely to achieve business objectives are considered. As business conditions change over time, the relative importance of any single project may substantially change. Thus, the identification and selection of projects is an important and ongoing activity.</p>
+<p><strong> Deliverables and Outcomes</strong></p>
+<p>The primary deliverable, or end product, from the project identification and selection phase is a schedule of specific IS development projects. These projects come from both top-down and bottom-up sources, and once selected they move into the second activity within this SDLC phase—project initiation and planning.  An outcome of this activity is the assurance that people in the organization gave careful</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is a group interview? What are the benefits and drawbacks of group interviews?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Group Interview</b> − In this type of interview, all the candidates or a group of candidates are interviewed together. Group interviews are conducted to save time when there is a large number of applications for a few job vacancies. A topic will be given to discuss among the candidates and the interviewer judges the innovativeness and behavior of each candidate in the group.</p>
+<p>The benefits of group interviews are given below:</p>
+<ol style="list-style-type:decimal;">
+<li>Reduces both time and cost of hiring</li>
+<li>Opportunity to see candidate teamwork in action</li>
+<li>Gains a good understanding of candidates</li>
+</ol>
+<p>The drawbacks of group interviews are given below:</p>
+<ol style="list-style-type:decimal;">
+<li>Conflict between candidates</li>
+<li>Not every personality type will thrive</li>
+<li>Only suitable for certain jobs</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>How do you format forms and reports? Explain general guidelines for formatting forms and reports.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Forms and reports are common ways to display and present data in a structured and organized manner. Proper formatting of forms and reports can improve readability, usability, and the overall user experience.</p>
+<p>Here are some general guidelines for formatting forms and reports:</p>
+<ol style="list-style-type:decimal;">
+<li>Use consistent formatting: Consistency in formatting makes forms and reports look more professional and easier to read. Use the same font type, font size, and color scheme throughout the document.</li>
+<li>Align data: Aligning data elements such as labels and fields helps to organize the information and make it easier to read. Use a grid or table to align the data.</li>
+<li>Use white space: Use white space, or the empty space between data elements, to visually separate different sections of the form or report. This can make the document easier to read and less cluttered.</li>
+<li>Use headings: Use headings to break up the form or report into sections. This can help the user find the information they need more easily and quickly.</li>
+<li>Use color and graphics sparingly: Use color and graphics to highlight important information or to add visual interest to the form or report. However, use them sparingly as they can distract the user and make the document harder to read.</li>
+<li>Use clear and concise language: Use language that is clear, concise, and easy to understand. Avoid using technical jargon or complex words that the user may not understand.</li>
+<li>Consider the user: Design the form or report with the user in mind. Consider their needs and preferences and make sure the document is easy to navigate and use.</li>
+</ol>
+<p>In summary, formatting forms and reports is an important aspect of presenting data in a clear and organized way. Use consistent formatting, align data, use white space, use headings, use color and graphics sparingly, use clear and concise language, and consider the user when designing the document.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>List major activities of maintenance. Explain different types of maintenance activities.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Maintenance means restoring something to its original conditions. Enhancement means adding, modifying the code to support the changes in the user specification. System maintenance conforms the system to its original requirements and enhancement adds to system capability by incorporating new requirements.</p>
+<p>Thus, maintenance changes the existing system, enhancement adds features to the existing system, and development replaces the existing system. It is an important part of system development that includes the activities which corrects errors in system design and implementation, updates the documents, and tests the data. For the purpose of convenience, maintenance may be categorized into three classes, namely:<br />
+i) <strong>Corrective Maintenance</strong>: This type of maintenance implies removing errors in a program, which might have crept in the system due to faulty design or wrong assumptions. Thus, in corrective maintenance, processing or performance failures are repaired.<br />
+ii) <strong>Adaptive Maintenance</strong>: In adaptive maintenance, program functions are changed to enable the information system to satisfy the information needs of the user. This type of maintenance may become necessary because of organizational changes which may include:<br />
+a) Change in the organizational procedures,<br />
+b) Change in organizational objectives, goals, policies, etc.<br />
+c) Change in forms,<br />
+d) Change in information needs of managers.<br />
+e) Change in system controls and security needs, etc.<br />
+iii)<strong>Perfective Maintenance</strong>: Perfective maintenance means adding new programs or modifying the existing programs to enhance the performance of the information system. This type of maintenance undertaken to respond to user’s additional needs which may be due to the changes within or outside of the organization. Outside changes are primarily environmental changes, which may in the absence of system maintenance, render the information system ineffective and inefficient. These environmental changes include:<br />
+a) Changes in governmental policies, laws, etc.,<br />
+b) Economic and competitive conditions, and<br />
+c) New technology.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What is object-oriented development? How is it different from structured development?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We know that the Object-Oriented Modelling (OOM) technique visualizes things in an application by using models organized around objects. Any software development approach goes through the following stages −</p>
+<ul class="list">
+<li>Analysis,</li>
+<li>Design, and</li>
+<li>Implementation.</li>
+</ul>
+<p>In object-oriented software engineering, the software developer identifies and organizes the application in terms of object-oriented concepts, prior to their final representation in any specific programming language or software tools.</p>
+<p><strong>Difference Between Structured and Object-oriented analysis :</strong></p>
+<figure class="table">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th><strong>Structured Analysis</strong></th>
+<th><strong>Object-Oriented Analysis</strong></th>
+</tr>
+<tr>
+<th>The main focus is on the process and procedures of the system.</th>
+<th>The main focus is on data structure and real-world objects that are important.</th>
+</tr>
+<tr>
+<th>It uses System Development Life Cycle (SDLC) methodology for different purposes like planning, analyzing, designing, implementing, and supporting an information system.</th>
+<th>It uses Incremental or Iterative methodology to refine and extend our design.</th>
+</tr>
+<tr>
+<th>It is suitable for well-defined projects with stable user requirements.</th>
+<th>It is suitable for large projects with changing user requirements.</th>
+</tr>
+<tr>
+<th>Risk while using this analysis technique is high and reusability is also low.</th>
+<th>Risk while using this analysis technique is low and reusability is also high.</th>
+</tr>
+<tr>
+<th>Structuring requirements include DFDs (Data Flow Diagram), Structured Analysis, ER (Entity Relationship) diagram, CFD (Control Flow Diagram), Data Dictionary, Decision table/tree, and the State transition diagram.</th>
+<th>Requirement engineering includes the Use case model (find Use cases, Flow of events, Activity Diagram), the Object model (find Classes and class relations, Object interaction, Object to ER mapping), Statechart Diagram, and deployment diagram.</th>
+</tr>
+<tr>
+<th>This technique is old and is not preferred usually.</th>
+<th>This technique is new and is mostly preferred.</th>
+</tr>
+</tbody>
+</table></div>
+</figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on</p>
+<ol>
+<li>Spiral model</li>
+<li>Decision table</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a)</p>
+<p><strong>Spiral model</strong> is one of the most important Software Development Life Cycle models, which provides support for <strong>Risk Handling</strong>. In its diagrammatic representation, it looks like a spiral with many loops. The exact number of loops of the spiral is unknown and can vary from project to project. Each loop of the spiral is called a <strong>Phase of the software development process.</strong> The exact number of phases needed to develop the product can be varied by the project manager depending upon the project risks. As the project manager dynamically determines the number of phases, so the project manager has an important role to develop a product using the spiral model.</p>
+<p>The Radius of the spiral at any point represents the expenses(cost) of the project so far, and the angular dimension represents the progress made so far in the current phase.</p>
+<p><strong>The below diagram shows the different phases of the Spiral Model: –</strong></p>
+<p><img data-recalc-dims="1" height="945" width="1024" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/spiral-1-1024x945.jpg?resize=1024%2C945&#038;ssl=1" alt=""></p>
+<p>b)</p>
+<p>A decision table is a brief visual representation for specifying which actions to perform depending on given conditions. The information represented in decision tables can also be represented as decision trees or in a programming language using if-then-else and switch-case statements.</p>
+<p>A decision table is a good way to settle with different combination inputs with their corresponding outputs and is also called a cause-effect table. The reason to call cause-effect table is a related logical diagramming technique called cause-effect graphing that is basically used to obtain the decision table.</p>
+<p><strong>Importance of Decision Table:</strong></p>
+<ul style="list-style-type: square;">
+<li>Decision tables are very much helpful in test design techniques.</li>
+<li>It helps testers to search the effects of combinations of different inputs and other software states that must correctly implement business rules.</li>
+<li>It provides a regular way of starting complex business rules, that is helpful for developers as well as for testers.</li>
+<li>It assists in the development process with the developer to do a better job. Testing with all combinations might be impractical.</li>
+<li>A decision table is basically an outstanding technique used in both testing and requirements management.</li>
+</ul>
+</div>
+</body></html>

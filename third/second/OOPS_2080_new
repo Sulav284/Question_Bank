@@ -1,0 +1,624 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OOPS Question Bank 2080(new) 2080</title>
+    </head>
+    <body>
+        <h1>OOPS Question Bank 2080(new) - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>What is destructor? List its characteristics. Explain the use of default copy constructor with an appropriate example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Destructors</strong> are members functions in a class that delete an object. They are called when the class object goes out of scope such as when the function ends, the program ends, a delete variable is called etc.</p>
+<p>Destructors are different from normal member functions as they don’t take any argument and don’t return anything. Also, destructors have the same name as their class and their name is preceded by a tilde(~).</p>
+<p dir="ltr">The syntax for defining the destructor within the class:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">~ &lt;class-name&gt;() {
+// some instructions
+}</pre>
+<p>The below code demonstrates the automatic execution of constructors and destructors when objects are created and destroyed, respectively.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">// C++ program to demonstrate the execution of constructor
+// and destructor
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Test {
+public:
+    // User-Defined Constructor
+    Test() { cout &lt;&lt; "\n Constructor executed"; }
+
+    // User-Defined Destructor
+    ~Test() { cout &lt;&lt; "\nDestructor executed"; }
+};
+main()
+{
+    Test t;
+
+    return 0;
+}</pre>
+<p>&nbsp;</p>
+<h2>Characteristics of a Destructor</h2>
+<ul style="list-style-type: square;">
+<li value="1">A destructor is also a special member function like a constructor. Destructor destroys the class objects created by the constructor.</li>
+<li value="2">Destructor has the same name as their class name preceded by a tilde (~) symbol.</li>
+<li value="3">It is not possible to define more than one destructor.</li>
+<li value="4">The destructor is only one way to destroy the object created by the constructor. Hence, destructor cannot be overloaded.</li>
+<li value="5">It cannot be declared static or const.</li>
+<li value="6">Destructor neither requires any argument nor returns any value.</li>
+</ul>
+<p>A <strong>default copy constructor</strong> in C++ is a constructor that initializes a new object as a copy of an existing object of the same class.</p>
+<ul style="list-style-type: square;">
+<li>Default copy constructor is needed if we don’t define our own copy constructor, in the C++ for each class which works fine in general.</li>
+<li>They are used to initialize member objects.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">// Implicit copy constructor Calling
+#include &lt;iostream&gt;
+using namespace std;
+
+class Sample {
+    int id;
+
+public:
+    void init(int x) { id = x; }
+    void display() { cout &lt;&lt; endl &lt;&lt; "ID=" &lt;&lt; id; }
+};
+
+int main()
+{
+    Sample obj1;
+    obj1.init(10);
+    obj1.display();
+
+    // Implicit Copy Constructor Calling
+    Sample obj2(obj1); // or obj2=obj1;
+    obj2.display();
+    return 0;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write a program to create a class named height with data members meter(int) and centimeter(int). Overload the binary + operator using friend function to add two heights.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class Height {
+public:
+    int meter, centimeter;
+
+    // Default constructor
+    Height() {
+        this-&gt;meter = 0;
+        this-&gt;centimeter = 0;
+    }
+
+    // Parameterized constructor
+    Height(int m, int cm) {
+        this-&gt;meter = m;
+        this-&gt;centimeter = cm;
+    }
+
+    // Friend function to overload + operator
+    // This is called by value
+    friend Height operator+(Height h1, Height h2) {
+        Height result;
+
+        // Add meters and centimeters separately
+        result.meter = h1.meter + h2.meter;
+        result.centimeter = h1.centimeter + h2.centimeter;
+
+        // If the centimeters exceed 100, convert to meters
+        if (result.centimeter &gt;= 100) {
+            result.meter += result.centimeter / 100;
+            result.centimeter = result.centimeter % 100;
+        }
+
+        return result;
+    }
+};
+
+// Driver Code
+int main() {
+    Height h1(2, 75);  // 2 meters 75 centimeters
+    Height h2(3, 50);  // 3 meters 50 centimeters
+    Height h3;
+
+    // Use overloaded operator
+    h3 = h1 + h2;
+
+    cout &lt;&lt; "\nTotal Height: " &lt;&lt; h3.meter &lt;&lt; " meters and " &lt;&lt; h3.centimeter &lt;&lt; " centimeters." &lt;&lt; endl;
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-43273 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/qn.drawio.png?resize=188%2C168&ssl=1" alt="" width="188" height="168"></p>
+<p>Write a program to realize the above hierarchy. Create necessary member functions (constructor) to initialize and diaplay necessary information.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+
+class Person {
+protected:
+    string name;  
+    int age;      
+
+public:
+
+    Person(string n, int a) : name(n), age(a) {}
+
+    virtual void displayInfo() {
+        cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; ", Age: " &lt;&lt; age &lt;&lt; endl;
+    }
+};
+
+class Employee : public Person {
+protected:
+    string employeeID;  // Employee ID
+
+public:
+
+    Employee(string n, int a, string id) : Person(n, a), employeeID(id) {}
+
+    void displayInfo() override {
+        Person::displayInfo();  
+        cout &lt;&lt; "Employee ID: " &lt;&lt; employeeID &lt;&lt; endl;
+    }
+};
+
+
+class Manager : public Employee {
+private:
+    string department;
+
+public:
+
+    Manager(string n, int a, string id, string dept) 
+        : Employee(n, a, id), department(dept) {}
+
+    void displayInfo() override {
+        Employee::displayInfo(); 
+        cout &lt;&lt; "Department: " &lt;&lt; department &lt;&lt; endl;
+    }
+};
+
+int main() {
+
+    Person person("Alice", 30);
+    Employee employee("Bob", 28, "E123");
+    Manager manager("Charlie", 35, "M456", "Sales");
+
+    cout &lt;&lt; "Person Info:" &lt;&lt; endl;
+    person.displayInfo();
+
+    cout &lt;&lt; "\nEmployee Info:" &lt;&lt; endl;
+    employee.displayInfo();
+
+    cout &lt;&lt; "\nManager Info:" &lt;&lt; endl;
+    manager.displayInfo();
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Define object. What are the benefits of Object Oriented Programming Language?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An object is an instance of a class. They are allocated memory space whenever they are created. An object is created many times as per requirement. It can be manipulated. An object is a physical entity. Objects are like a variable of the class. Each object has its own values, which are associated with it.</p>
+<p dir="ltr"><b><strong>Syntax:</strong></b> Instantiating an object for a Class in C++ is as follows:<u><b><strong class="GFGEditorTheme__textUnderline"> </strong></b></u></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">class Student {
+
+   public:
+
+      void put(){
+
+          cout&lt;&lt;“Function Called”&lt;&lt;endl;
+
+      }
+
+};   // The class is declared here
+
+int main(){
+
+         Student s1;   // Object created
+
+         s1.put();
+
+}</pre>
+<p>The benefits of Object Oriented Programming Language are:</p>
+<ul style="list-style-type: square;">
+<li>OOP language allows to break the program into the bit-sized problems that can be solved easily (one object at a time).</li>
+<li>The new technology promises greater programmer productivity, better quality of software and lesser maintenance cost.</li>
+<li>OOP systems can be easily upgraded from small to large systems.</li>
+<li>It is possible that multiple instances of objects co-exist without any interference,</li>
+<li>It is very easy to partition the work in a project based on objects.</li>
+<li>By using inheritance, we can eliminate redundant code and extend the use of existing classes.</li>
+<li>The principle of data hiding helps the programmer to build secure programs which cannot be invaded by the code in other parts of the program.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the significance of type conversion. How do we achieve dynamic memory allocation in C++? Explain with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Type casting</strong>, also known as type conversion, is an important concept that allows us to convert one data type into another. It is useful when we need to perform operations on different data types or when you want to store a value of one data type into a variable of another data type.</p>
+<p>Type casting is the process of converting the value of a single data type  into another data type. This conversion is done either automatically or manually. The compiler performs the automatic conversion, and a programmer does the manual conversion. To use a variable in a particular way in automatic conversion, we need to explicitly tell the Java compiler to convert a variable from one data type to another data type.</p>
+<p>Dynamic memory allocation in C++ refers to performing memory allocation manually by a programmer. C++ has two operators new, that perform the task of allocating the memory in a better and easier way.</p>
+<p>The new operator denotes a request for memory allocation. If sufficient memory is available, a new operator initializes the memory and returns the address of the newly allocated and initialized memory to the pointer variable.</p>
+<p dir="ltr"><b><strong>Syntax to use new operator</strong></b></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">pointer-variable = new data-type;</pre>
+<p><strong>Example of new operator</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">using namespace std;
+
+int main()
+{
+    // pointer to store the address returned by the new
+    int* ptr;
+    // allocating memory for integer
+    ptr = new int;
+
+    // assigning value using dereference operator
+    *ptr = 10;
+
+    // printing value and address
+    cout &lt;&lt; "Address: " &lt;&lt; ptr &lt;&lt; endl;
+    cout &lt;&lt; "Value: " &lt;&lt; *ptr;
+
+    return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the benefit of passing object as arguments? Write a program to create a class named actor with data members name and rating. Initialize the data members and display those names whose rating is greater than 5 using the concept of constant object.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Passing objects as arguments in C++ offers several benefits that enhance both the flexibility and functionality of the program. Some benefits are:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Encapsulation of Data</li>
+<li>Supports Abstraction</li>
+<li>Reusability</li>
+<li>Flexible</li>
+<li>Polymorphism</li>
+</ol>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Actor {
+    string name;
+    int rating;
+
+public:
+   
+    Actor(string n, int r) {
+        name = n;
+        rating = r;
+    }
+
+    
+    int getRating(){
+        return rating;
+    }
+
+
+    string getName(){
+        return name;
+    }
+};
+
+int main() {
+
+    actor1 = Actor("Actor One", 6);
+    actor2 = Actor("Actor Two", 4);
+    actor3 = Actor("Actor Three", 
+
+    if (actor1.getRating() &gt; 5) {
+        cout &lt;&lt; actor1.getName() &lt;&lt; " has a rating greater than 5." &lt;&lt; endl;
+    }
+    if (actor2.getRating() &gt; 5) {
+        cout &lt;&lt; actor2.getName() &lt;&lt; " has a rating greater than 5." &lt;&lt; endl;
+    }
+    if (actor3.getRating() &gt; 5) {
+        cout &lt;&lt; actor3.getName() &lt;&lt; " has a rating greater than 5." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Create two classesRupee and Dollar respectively. Write conversion operator to convert between Rupee and Dollar assuming that 1 dollar equals 133 rupees. Write a main program that allows the user to enter an amount in either currncy and then converts it to other currency and displays the result.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class Rupee {
+private:
+    float amount; 
+
+public:
+
+    Rupee(float amt) : amount(amt) {}
+
+
+    operator Dollar();
+
+
+    void display() const {
+        cout &lt;&lt; amount &lt;&lt; " Rupees" &lt;&lt; endl;
+    }
+};
+
+class Dollar {
+private:
+    float amount;
+
+public:
+
+    Dollar(float amt) : amount(amt) {}
+
+   
+    operator Rupee() {
+        return Rupee(amount * 133); 
+    }
+
+    
+    void display() const {
+        cout &lt;&lt; amount &lt;&lt; " Dollars" &lt;&lt; endl;
+    }
+};
+
+
+Rupee::operator Dollar() {
+    return Dollar(amount / 133); 
+}
+
+int main() {
+    char choice;
+    cout &lt;&lt; "Enter 'R' for Rupees to Dollars or 'D' for Dollars to Rupees: ";
+    cin &gt;&gt; choice;
+
+    if (choice == 'R' || choice == 'r') {
+        float amount;
+        cout &lt;&lt; "Enter amount in Rupees: ";
+        cin &gt;&gt; amount;
+        Rupee rupee(amount);
+        Dollar dollar = rupee;
+        rupee.display();
+        dollar.display();
+    } else if (choice == 'D' || choice == 'd') {
+        float amount;
+        cout &lt;&lt; "Enter amount in Dollars: ";
+        cin &gt;&gt; amount;
+        Dollar dollar(amount);
+        Rupee rupee = dollar; 
+        dollar.display();
+        rupee.display();
+    } else {
+        cout &lt;&lt; "Invalid choice! Please enter 'R' or 'D'." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain the practical implication of protected specifier in inheritance. list advantages and disadvantages of inheritance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><article class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]" dir="auto" data-testid="conversation-turn-2" data-scroll-anchor="false">
+<div class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5">
+<div class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+<div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="user" data-message-id="aaa21869-d766-4780-b796-42fbcbba7547">
+<div class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start">
+<div class="relative max-w-[70%] rounded-3xl px-5 py-2.5 bg-[#f4f4f4] dark:bg-token-main-surface-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]" dir="auto" data-testid="conversation-turn-3" data-scroll-anchor="true">
+<div class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5">
+<div class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+<div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="assistant" data-message-id="966faa5b-04a1-40af-aef2-1c6adfdbe677" data-message-model-slug="gpt-4o-mini">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>practical implications of using the protected specifier in inheritance:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Members declared as protected in a parent class are accessible within the subclass. This allows subclasses to use and modify these members, enabling them to inherit common behavior and state from the parent class.</li>
+<li>It allows subclasses to have access to critical information and functionality without exposing these members to the world outside the class hierarchy.</li>
+<li>Subclasses can directly access and utilize the protected members to implement specific behaviors without needing to redefine or duplicate the code in the parent class.</li>
+<li>Using protected can lead to better design practices by encouraging developers to think about which members should be part of the class interface and which should be hidden from the outside world.</li>
+<li>While protected members can be beneficial, overusing them can lead to complex class hierarchies and tight coupling between classes.</li>
+</ol>
+<p>The advantages and disadvantages of inheritance in object-oriented programming are as followed.</p>
+<p><strong>Advantage:</strong></p>
+<ol style="list-style-type: lower-alpha;">
+<li>Inheritance allows classes to reuse code from existing classes, reducing redundancy and saving development time.</li>
+<li>Subclasses can override methods of the parent class to provide specific implementations, allowing for more customized behavior.</li>
+<li>It helps in organizing classes in a hierarchical manner, making the code easier to understand and maintain.</li>
+<li>Inheritance supports polymorphism, allowing objects of different classes to be treated as objects of a common superclass, which enhances flexibility.</li>
+<li>Inheritance provides a clear structure for the program, making it easier to navigate and manage.</li>
+</ol>
+<p><strong>Disadvantage:</strong></p>
+<ol style="list-style-type: lower-alpha;">
+<li>A deep inheritance hierarchy can lead to complexity, making the code harder to understand and maintain.</li>
+<li>Inheritance can lead to a rigid structure where classes are forced to adhere to the hierarchy, limiting design flexibility.</li>
+<li>In some cases, inheritance can introduce performance overhead due to the additional method resolution and look-up time.</li>
+<li>In some cases, using composition might be more appropriate than inheritance, leading to better flexibility and maintainability.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Difference between compile time and run time polymorphism.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="width: 49.8069%; text-align: center;">Compile Time Polymorphism</th>
+<th style="width: 50%; text-align: center;">Run time Polymorphism</th>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">In Compile time Polymorphism, the call is resolved by the compiler.</td>
+<td style="width: 50%; text-align: center;">In Run time Polymorphism, the call is not resolved by the compiler.</td>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">It is also known as Static binding, Early binding and overloading as well.</td>
+<td style="width: 50%; text-align: center;">It is also known as Dynamic binding, Late binding and overriding as well.</td>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">It is achieved by method overloading.</td>
+<td style="width: 50%; text-align: center;">It is achieved by virtual functions and pointers.</td>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">It provides fast execution because the method that needs to be executed is known early at the compile time.</td>
+<td style="width: 50%; text-align: center;">It provides slow execution as compare to early binding because the method that needs to be executed is known at the runtime.</td>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">Compile time polymorphism is less flexible as all things execute at compile time.</td>
+<td style="width: 50%; text-align: center;">Run time polymorphism is more flexible as all things execute at run time.</td>
+</tr>
+<tr>
+<td style="width: 49.8069%; text-align: center;">Inheritance is not involved.</td>
+<td style="width: 50%; text-align: center;">Inheritance is involved.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain function template overloading with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Function template overloading</strong> allows us to define multiple function templates with the same name but different parameter lists. This is similar to regular function overloading, where multiple functions with the same name but different signatures can coexist.</p>
+<p>Function templates can be overloaded just like normal functions, based on the number or type of parameters. The compiler selects the appropriate template based on the arguments passed to the function call. You can have both normal function overloads and template overloads with the same name, and the most appropriate version is chosen based on the arguments.</p>
+<p><span style="text-decoration: underline;"><strong>Example of Function template overloading</strong></span><strong> :</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;iostream&gt;
+using namespace std;
+
+// Template function for adding two same-type variables
+template &lt;typename T&gt;
+T add(T a, T b) {
+    cout &lt;&lt; "Adding two variables of the same type: ";
+    return a + b;
+}
+
+// Template function for adding two different types of variables
+template &lt;typename T1, typename T2&gt;
+auto add(T1 a, T2 b) -&gt; decltype(a + b) {
+    cout &lt;&lt; "Adding two variables of different types: ";
+    return a + b;
+}
+
+int main() {
+    // Calling the same-type template
+    int x = 10, y = 20;
+    cout &lt;&lt; add(x, y) &lt;&lt; endl; // Matches the first template
+
+    // Calling the different-type template
+    int a = 5;
+    double b = 4.5;
+    cout &lt;&lt; add(a, b) &lt;&lt; endl; // Matches the second template
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write a program that stores information of employees in a file and displays the file’s content in ascending order of their salary.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// Structure to store employee data
+struct Employee {
+    string name;
+    int id;
+    float salary;
+};
+
+int main() {
+    fstream file;
+    Employee emp[100]; // Array to store multiple employees
+    int n;
+
+    // Write to file
+    file.open("employees.txt", ios::out);
+    
+    if (!file) {
+        cout &lt;&lt; "Error in opening file!" &lt;&lt; endl;
+        return 0;
+    }
+    
+    cout &lt;&lt; "Enter the number of employees: ";
+    cin &gt;&gt; n;
+    
+    for (int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; "Enter name of employee " &lt;&lt; i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; emp[i].name;
+        cout &lt;&lt; "Enter ID of employee " &lt;&lt; i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; emp[i].id;
+        cout &lt;&lt; "Enter salary of employee " &lt;&lt; i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; emp[i].salary;
+        
+        // Write employee data to the file
+        file &lt;&lt; emp[i].name &lt;&lt; " " &lt;&lt; emp[i].id &lt;&lt; " " &lt;&lt; emp[i].salary &lt;&lt; endl;
+    }
+    
+    file.close();
+    
+    // Read from file and display sorted by salary
+    file.open("employees.txt", ios::in);
+    
+    if (!file) {
+        cout &lt;&lt; "Error in opening file!" &lt;&lt; endl;
+        return 0;
+    }
+    
+    // Reading employee data back from the file
+    int i = 0;
+    while (file &gt;&gt; emp[i].name &gt;&gt; emp[i].id &gt;&gt; emp[i].salary) {
+        i++;
+    }
+    file.close();
+    
+    // Sort employees by salary
+    for (int j = 0; j &lt; i - 1; j++) {
+        for (int k = j + 1; k &lt; i; k++) {
+            if (emp[j].salary &gt; emp[k].salary) {
+                Employee temp = emp[j];
+                emp[j] = emp[k];
+                emp[k] = temp;
+            }
+        }
+    }
+    
+    // Display sorted employee data
+    cout &lt;&lt; "\nEmployees sorted by salary:\n";
+    for (int j = 0; j &lt; i; j++) {
+        cout &lt;&lt; "Name: " &lt;&lt; emp[j].name &lt;&lt; ", ID: " &lt;&lt; emp[j].id &lt;&lt; ", Salary: " &lt;&lt; emp[j].salary &lt;&lt; endl;
+    }
+    
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on :</p>
+<ol>
+<li>This pointer</li>
+<li>ios member function</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong><span style="text-decoration: underline;">this pointer</span> :<br />
+</strong>&#8220;this pointer&#8221; is a special pointer available within all non-static member functions of a class in C++. It points to the object for which the member function is called. It is automatically passed to all non-static member functions and does not need to be declared explicitly. Inside a member function, it refers to the address of the object that invoked the function, allowing access to the object’s data members and member functions.<br />
+It is used to distinguish between local variables and class data members when they have the same name. It is useful in method chaining, where multiple calls are linked together. It is a fundamental feature of C++ that helps in accessing the members of an object, especially when there is ambiguity, and enables method chaining for cleaner, more expressive code.</li>
+<li><span style="text-decoration: underline;"><strong>ios member function</strong></span> :<br />
+The ios member functions in C++ are part of the Input/Output Stream (I/O stream) class hierarchy, which includes classes like iostream, ifstream, ofstream, and others. The class ios is the base class that provides common functionality to input and output streams.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+</body></html>

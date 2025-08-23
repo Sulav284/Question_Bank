@@ -1,0 +1,379 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What are the required conditions for error variable in multiple regression analysis? The Internal Revenue Service (IRS) is trying to estimate the monthly amount of unpaid taxes discovered by its auditing division. The IRS estimated this figure on the basis of field auditing labor hours and number of hours of its computers used. The table given below presents these data for the last ten months.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Month</strong></td>
+<td><strong>(X<sub>1</sub>) Field Audit Labor Hours in 100</strong></td>
+<td><strong>(X<sub>2</sub>) Computer Hours in 100</strong></td>
+<td><strong>(Y) Actual Unpaid Taxes Discovered million of dollars</strong></td>
+</tr>
+<tr>
+<td>Jan</td>
+<td>45</td>
+<td>16</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Feb</td>
+<td>42</td>
+<td>14</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Mar</td>
+<td>44</td>
+<td>15</td>
+<td>27</td>
+</tr>
+<tr>
+<td>April</td>
+<td>45</td>
+<td>13</td>
+<td>25</td>
+</tr>
+<tr>
+<td>May</td>
+<td>43</td>
+<td>13</td>
+<td>26</td>
+</tr>
+<tr>
+<td>June</td>
+<td>46</td>
+<td>14</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Jul</td>
+<td>44</td>
+<td>16</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Aug</td>
+<td>45</td>
+<td>16</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Sep</td>
+<td>44</td>
+<td>15</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Oct</td>
+<td>43</td>
+<td>15</td>
+<td>27</td>
+</tr>
+</tbody>
+</table></div>
+<p>Given ∑YX<sub>1</sub>=12005, ∑YX<sub>2</sub>=4013, ∑X<sub>1</sub>X<sub>2</sub>=6485, ∑Y<sup>2</sup>=7428, ∑X<sub>1</sub><sup>2</sup>=19461, ∑X<sub>2</sub><sup>2</sup>=2173</p>
+<p>i. Develop the estimating equation best describing these data.</p>
+<p>ii. Interpret the value of regression coefficients.</p>
+<p>iii. Estimate the actual unpaid tax for field if audit labour hours is 4200 and computer hours is 1600 hours.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 98.6009%; height: 291px;">
+<tbody>
+<tr style="height: 27px;">
+<td style="width: 27.2507%; text-align: center; height: 27px;"><strong>Month</strong></td>
+<td style="width: 25.9232%; text-align: center; height: 27px;"><strong>X<sub>1</sub></strong></td>
+<td style="width: 25.7157%; text-align: center; height: 27px;"><strong>X<sub>2</sub></strong></td>
+<td style="width: 184.588%; text-align: center; height: 27px;"><strong>Y</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Jan</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">45</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">16</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">29</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Feb</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">42</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">14</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">24</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Mar</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">44</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">15</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">27</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">April</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">45</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">13</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">25</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">May</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">43</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">13</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">26</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">June</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">46</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">14</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">28</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Jul</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">44</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">16</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">30</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Aug</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">45</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">16</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">28</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Sep</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">44</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">15</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">28</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;">Oct</td>
+<td style="width: 25.9232%; text-align: center; height: 24px;">43</td>
+<td style="width: 25.7157%; text-align: center; height: 24px;">15</td>
+<td style="width: 184.588%; text-align: center; height: 24px;">27</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2507%; text-align: center; height: 24px;"><strong>Total</strong></td>
+<td style="width: 25.9232%; text-align: center; height: 24px;"><strong>441</strong></td>
+<td style="width: 25.7157%; text-align: center; height: 24px;"><strong>147</strong></td>
+<td style="width: 184.588%; text-align: center; height: 24px;"><strong>272</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22655" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223545_CamScanner.jpg" alt="" width="925" height="1009"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22656" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223628_CamScanner.jpg" alt="" width="933" height="1176"></p>
+<p>ii.</p>
+<p>b<sub>1</sub>= 0.563. This means that the value of the dependent variable, Y increases by 0.563 when the value of X<sub>1</sub> increases by unity and the effect of X<sub>2</sub> is ignored.</p>
+<p>b<sub>2</sub>=1.099. This means that the value of the dependent variable, Y increases by 1.099 when the value of X<sub>2</sub> increases by unity and the effect of X<sub>1</sub> is ignored.</p>
+<p>iii.</p>
+<p>X<sub>1</sub>=4200 and X<sub>2</sub>=1600 then,</p>
+<p>Y=4109.181</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What do you understand by “Design of an Experiment”? Physicians depend the laboratory test results when managing the medical problems such as diabetes or epilepsy. In an uniformity test glucose tolerance, three different laboratories were sent n<sub>t</sub>=5 identical blood samples from a person who had drunk 50 mg. of glucose dissolved in water. The laboratory results are listed below:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Lab 1</strong></td>
+<td><strong>Lab 2</strong></td>
+<td><strong>Lab 3</strong></td>
+</tr>
+<tr>
+<td>12.1</td>
+<td>9.3</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>11.7</td>
+<td>11.1</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>10.9</td>
+<td>10.7</td>
+<td>10.1</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>10.9</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>10.6</td>
+<td>9.0</td>
+<td>10.4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do data indicate a difference in the average readings for three laboratories? Use α=.05</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Design of experiments (DOE) is defined as a branch of applied statistics that deals with planning, conducting, analyzing, and interpreting controlled tests to evaluate the factors that control the value of a parameter or group of parameters. Key concepts in creating a designed experiment include blocking, randomization, and replication.</p>
+<p><strong>Blocking:</strong> When randomizing a factor is impossible or too costly, blocking lets you restrict randomization by carrying out all of the trials with one setting of the factor and then all the trials with the other setting.</p>
+<p><strong>Randomization:</strong> Refers to the order in which the trials of an experiment are performed. A randomized sequence helps eliminate the effects of unknown or uncontrolled variables.</p>
+<p><strong>Replication:</strong> Repetition of a complete experimental treatment, including the setup.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22659" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223755_CamScanner.jpg" alt="" width="933" height="1221"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22660" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223831_CamScanner.jpg" alt="" width="918" height="1140"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Type I and Type II error in testing of hypothesis. A psychologist wishes to verify that a certain drug increases the reaction time to given stimulus. The following reaction times (in tenth of seconds) were recorded before and after injection of the drug for each of four subjects:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td colspan="2"><strong>Subject</strong></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Reaction Time</strong></td>
+<td><strong>Before</strong></td>
+<td>7</td>
+<td>2</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>After</strong></td>
+<td>13</td>
+<td>3</td>
+<td>18</td>
+<td>13</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test at 5% level of significance to determine whether the drug significantly increases the reaction time.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Type I error</strong></p>
+<p>The error committed in rejecting null hypothesis even when it is true.</p>
+<p><strong>Type II error</strong></p>
+<p>The error committed in accepting null hypothesis even when it is false.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22663" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223918_CamScanner.jpg" alt="" width="927" height="1253"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22662" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_223951_CamScanner.jpg" alt="" width="931" height="1128"></p>
+</div>
+<h2>Group B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>The following ANOVA summary table was obtained from a multiple regression model with two independent variables:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Souce of variation</strong></td>
+<td><strong>Sum of square</strong></td>
+<td><strong>Degree of freedom</strong></td>
+<td><strong>Mean sum of square</strong></td>
+<td><strong>F-value</strong></td>
+</tr>
+<tr>
+<td><strong>Regression</strong></td>
+<td>12.62</td>
+<td>2</td>
+<td>?</td>
+<td rowspan="2">?</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td>0.78</td>
+<td>12</td>
+<td>?</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>13.40</td>
+<td>14</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>i. Determine the mean sum square due to regression, the mean sum square due to error and F-value.</p>
+<p>ii. Test the significance of overall model at 5% level of significance.</p>
+<p>iii. Compute coeff of determination and interpret its value.</p>
+<p>iv. Find standard error of estimate.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22667" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224027_CamScanner.jpg" alt="" width="907" height="1191"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22666" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224058_CamScanner.jpg" alt="" width="919" height="973"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What do you mean by non parametric test? Write down advantages of non parametric test over parametric tests?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Non-parametric tests</strong> are experiments that do not require the underlying population for assumptions. It does not rely on any data referring to any particular parametric group of probability distributions. Non-parametric methods are also called distribution-free tests since they do not have any underlying population. In this article, we will discuss what a non-parametric test is, different methods, merits, demerits, and examples of non-parametric testing methods.</p>
+<p>The advantages of nonparametric tests are</p>
+<p>(i) They may be the only alternative when sample sizes are very small unless the population distribution is known exactly.</p>
+<p>(ii) They make fewer assumptions about the data.</p>
+<p>(iii) They are useful in analyzing data that are inherently in ranks or categories.</p>
+<p>(iv) They often have simpler computations and interpretations than parametric tests.</p>
+<p>(v) They are more robust and flexible than parametric tests, meaning that they can handle data that are skewed, have outliers, or have different scales or units.</p>
+<p>(vi) They also do not require large sample sizes or random sampling to be valid.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Bank of Nepal recorded the sex of first 30 customers who appeared last Monday with notation M M F M M F M F F M M M F F M F F M F F M F F F M F M M M F F. At the 0.005 level of significance, test the randomness of this sequence.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22670" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224123_CamScanner.jpg" alt="" width="930" height="1298"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Social media users use a variety of devices to access social networking; mobile phones are increasingly popular. However is there a difference in the various age groups in the proportions of social media users who use their mobile phone to access social networking? A study showed the following results for the different age groups.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Use mobile phones to access social networking?</strong></td>
+<td colspan="3"><strong>Age</strong></td>
+</tr>
+<tr>
+<td><strong>18-34</strong></td>
+<td><strong>35-64</strong></td>
+<td><strong>65+</strong></td>
+</tr>
+<tr>
+<td><strong>Yes</strong></td>
+<td>60</td>
+<td>37</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>No</strong></td>
+<td>40</td>
+<td>63</td>
+<td>86</td>
+</tr>
+</tbody>
+</table></div>
+<p>At the 0.05 level of significance, is there evidence of a difference among the age groups with respect to use of mobile phones for accessing social networking?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22673" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224209_CamScanner.jpg" alt="" width="920" height="1339"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22674" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224237_CamScanner.jpg" alt="" width="922" height="889"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>It is claimed that Samsung and Redmi mobiles are equally popular in Kathmandu. A random sample of 500 people from Kathmandu showed 300 have Samsung mobile. Test the claim at 5% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22676" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224320_CamScanner.jpg" alt="" width="910" height="1382"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>An effort to estimate the mean amount per customer for dinner at a major Atlanta restaurant, data were collected for a sample of 49 customers and sample mean is found at $24.80. Assume population standard deviation is $5.</p>
+<p>a. Compute standard error of mean.</p>
+<p>b. Find 95% confidence interval estimate for the population mean.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22678" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224348_CamScanner.jpg" alt="" width="924" height="946"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define Markov chain and its characteristics.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>MARKOV CHAIN:</strong></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-18924" src="https://hamrocsit.com/wp-content/uploads/2022/12/markov.jpg" alt="" width="456" height="132"></p>
+<p><strong>CHARACTERISTICS:</strong></p>
+<p>i. It is a mathematical system experiences transitions from one state to another according to certain probabilistic rules.</p>
+<p>ii. No matter how the process arrived at its present state, the possible future states are fixed i.e. the probability of transitioning to any particular state is dependent solely on the current state and time elapsed.</p>
+<p>iii. The state space, or set of all possible states, can be anything: letters, numbers, weather conditions, baseball scores, or stock performances.</p>
+<p>iv. Markov chains may be modeled by finite state machines, and random walks provide a prolific example of their usefulness in mathematics.</p>
+<p>v. They arise broadly in statistical and information-theoretical contexts and are widely employed in economics, game theory, queueing (communication) theory, genetics, and finance.</p>
+<p>vi. While it is possible to discuss Markov chains with any size of state space, the initial theory and most applications are focused on cases with a finite (or countably infinite) number of states.</p>
+<p>vii. Many uses of Markov chains require proficiency with common matrix methods.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the basic concepts of queuing theory? In a super market, the average arrivals rate of customer is 10 per every 30 minutes following Poisson process. The average time taken by the cashier to list and calculate the customers purchase is 2.5 minutes following exponential distribution. What is the probability that queue length exceeds 6? What is the expected time spent by customer in the system?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Queuing Theory</strong></p>
+<p>A queue is a line or a list of customers who remain waiting for getting certain goods or services from a service center. A queue is formed if the arrival rate of customers is greater than the service rate. The main objective of queuing theory is to minimize two important costs:</p>
+<p>i. Waiting time cost of customers.</p>
+<p>ii. The service idle cost of the service counters.</p>
+<p><strong>Basic Terms used in the queuing theory</strong></p>
+<p>i. Customers: a person or unit that comes to the service centre fo getting service.</p>
+<p>ii. Waiting line: the time spent by the customer on queue.</p>
+<p>iii. No. of customers in queue: total number of customers in the line in front of service counter.</p>
+<p>iv. No. of customes in system: total number of customers (in the queue plus being served)</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22681" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224410_CamScanner.jpg" alt="" width="928" height="1124"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22682" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230804_224439_CamScanner.jpg" alt="" width="1079" height="366"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on the following.</p>
+<p>i. Partial and multiple correlation coefficient.</p>
+<p>ii. Properties of good estimator.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>i. Partial and multiple correlation coefficient.</strong></p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-22684" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230805_001125_CamScanner.jpg" alt="" width="928" height="1102"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-22685" src="https://hamrocsit.com/wp-content/uploads/2023/08/SmartSelect_20230805_001150_CamScanner.jpg" alt="" width="928" height="906"></p>
+<p><strong>ii. </strong><strong>Properties of a good estimator</strong></p>
+<p><strong>1. Unbiasedness.</strong></p>
+<p>An estimator is said to be unbiased if its expected value is identical with the population parameter being estimated. That is if θ is an unbiased estimate of θ, then we must have E (θ) = θ. Many estimators are “Asymptotically unbiased” in the sense that the biases reduce to practically insignificant value (Zero) when n becomes sufficiently large. The estimator S<sub>2</sub> is an example.<br />
+It should be noted that bias is estimation is not necessarily undesirable. It may turn out to be an asset in some situations.</p>
+<p><strong>2. Consistency.</strong></p>
+<p>If an estimator, say θ, approaches the parameter θ closer and closer as the sample size n increases, θ is said to be a consistent estimator of θ. Stating somewhat more rigorously, the estimator θ is said is be a consistent estimator of θ if, as n approaches infinity, the probability approaches 1 that θ will differ from the parameter θ by no more than an arbitrary constant.<br />
+The sample mean is an unbiased estimator of µ no matter what form the population distribution assumes, while the sample median is an unbiased estimate of µ only if the population distribution is symmetrical. The sample mean is better than the sample median as an estimate of µ in terms of both unbiasedness and consistency.</p>
+<p><strong>3. Efficiency.</strong></p>
+<p>The concept of efficiency refers to the sampling variability of an estimator. If two competing estimators are both unbiased, the one with the smaller variance (for a given sample size) is said to be relatively more efficient. Stated in a somewhat different language, an estimator θ is said to be more efficient than another estimator θ<sub>2</sub> for θ if the variance of the first is less than the variance of the second. The smaller the variance of the estimator, the more concentrated is the distribution of the estimator around the parameter being estimated and, therefore, the better this estimator is.</p>
+<p><strong>4. Sufficiency.</strong></p>
+<p>An estimator is said to be sufficient if it conveys much information as is possible about the parameter which is contained in the sample. The significance of sufficiency lies in the fact that if a sufficient estimator exists, it is absolutely unnecessary to considered any other estimator; a sufficient estimator ensures that all information a sample a sample can furnished with respect to the estimation of a parameter is being utilized.<br />
+Many methods have been devised for estimating parameters that may provide estimators satisfying these properties. The two important methods are the least square method and the method of maximum likelihood.</p>
+<p>&nbsp;</p>
+</div>
+</body></html>

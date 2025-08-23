@@ -1,0 +1,548 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DWDM Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>DWDM Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>State Apriori property. Find frequent item sets and association rules from the transaction database given below using Apriori algorithm. Assume min. support is 50% and min confidence is 75%.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Transaction ID</td>
+<td>Items Purchased</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bread, Cheese, Egg, Juice</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bread, Cheese, Juice</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bread, Milk, Yogurt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bread, Juice, Milk</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cheese, Juice, Milk</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Apriori property states that if an item set is frequent, all its subsets must also be frequent. The Apriori principle holds due to the following property of the support measure:</p>
+<p style="text-align: center;">∀ X, Y : (X ⊆ Y) ⇒ s(X) ≥ s(Y)</p>
+<p>Where, X and Y are item sets, that is, Support of an item set never exceeds the support of its subsets.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<iframe loading="lazy" allowfullscreen webkitallowfullscreen width="100%" height="800px" src="https://hamrocsit.com/wp-content/plugins/pdfjs-viewer-hamrocsit/pdfjs/web/viewer.php?file=https://hamrocsit.com/wp-content/uploads/2024/12/DWDM-2080-Q1.pdf&#038;attachment_id=49115&#038;dButton=false&#038;pButton=false&#038;oButton=false&#038;sButton=false#zoom=auto&#038;pagemode=none&#038;_wpnonce=cd9fbd3433" title="Embedded PDF | Hamro CSIT" class="pdfjs-iframe"></iframe>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How classification differs from regression. Train ID3 classifierusing the dataset given below. Then predict class label for the data [Age=Mid, Competition=Yes, Type=HW].</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-48068 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/table.drawio.png?resize=399%2C392&ssl=1" alt="" width="399" height="392"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution: The differences between classification and regression is given below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 504px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Aspect</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Classification</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Regression </strong></td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; height: 72px; text-align: center;"><strong>Output Type </strong></td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Predicts categorical class labels or discrete categories (e.g., Yes/No, A/B/C).</td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Predicts continuous numerical values (e.g., house prices, temperatures).</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; height: 72px; text-align: center;"><strong>Example </strong></td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Organizing houses into categories like &#8220;high walkability,&#8221; &#8220;low crime<br />
+rate,&#8221; or &#8220;large lot size.&#8221;</td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Predicting the exact price of a house based on location, square footage, or previous sale price.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; height: 72px; text-align: center;"><strong>Goal </strong></td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Assigns data points to specific predefined groups or categories.</td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Identifies the relationship between variables to predict continuous numeric outcomes.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; height: 72px; text-align: center;"><strong>Nature of Output </strong></td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Outputs are discrete (limited, finite values), like class labels or categories.</td>
+<td style="width: 33.3333%; height: 72px; text-align: center;">Outputs are continuous (infinite possible values), representing numeric quantities.</td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 33.3333%; height: 120px; text-align: center;"><strong>Underlying Approach </strong></td>
+<td style="width: 33.3333%; height: 120px; text-align: center;">Focuses on separating data into distinct classes using classification boundaries.</td>
+<td style="width: 33.3333%; height: 120px; text-align: center;">Focuses on establishing a relationship between independent variables and a continuous dependent variable.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Mathematical Model </strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Often uses decision boundaries, e.g., logistic regression, decision trees, or SVMs.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Uses continuous mathematical functions, e.g., linear regression<br />
+(y=b+wx) or polynomial models.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Evaluation Metrics</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Accuracy, precision, recall, F1-score.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Mean Squared Error (MSE), Mean Absolute Error (MAE), R-squared.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Typical Use Cases </strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Spam email detection, image classification, sentiment analysis, medical diagnosis.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Stock price prediction, weather forecasting, sales trend analysis.</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48235 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-671.png?resize=552%2C686&#038;ssl=1" alt="" width="552" height="686"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48236 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-672.png?resize=541%2C620&#038;ssl=1" alt="" width="541" height="620"><br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48237 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-673.png?resize=534%2C734&#038;ssl=1" alt="" width="534" height="734"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48238 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-674.png?resize=502%2C251&#038;ssl=1" alt="" width="502" height="251"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why the concept of data mart is important? Discuss different data warehouse schema with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The concept of a data mart is important because it:</p>
+<ul style="list-style-type: square;">
+<li>Enhances response time by reducing data volume.</li>
+<li>Provides easy access to frequently requested data.</li>
+<li>Cost-effective and simpler to implement than a data warehouse.</li>
+<li>Agile and adaptable to model changes due to smaller size.</li>
+<li>Allows granular access control privileges.</li>
+<li>Focused on specific business lines or domains.</li>
+<li>Enables efficient data segmentation and storage.</li>
+</ul>
+<p>Three different data warehouse scheme are:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Star Schema</li>
+<li>Snowflake Schema</li>
+<li>Fact Constellation Schema (Galaxy Schema)</li>
+</ol>
+<p><strong>Star Schema: </strong>In this schema a central fact table is surrounded by dimension tables. Fact table contains keys referencing the dimension tables and measures, while dimension tables hold descriptive<br />
+attributes.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Simplified design, easy to understand.</li>
+<li>Faster query performance due to denormalized dimension tables.</li>
+<li> Ideal for simple reporting and analysis.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Redundancy in dimension tables due to denormalization.</li>
+<li>Higher storage requirements compared to normalized schemas.</li>
+</ul>
+<p>Example:</p>
+<p>A star schema for sales data is shown in figure below. Sales are considered along three dimensions: product, time and location. The schema contains a central fact table for sales that contains key to each of the three dimensions, along with two measures: rupees_sold and units_sold. To minimize the size of the fact table, dimension identifiers (e.g., time_key and product_key) are system-generated identifiers.&#8221;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-48074 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/database.drawio.png?resize=422%2C300&#038;ssl=1" alt="" width="422" height="300"></p>
+<p><strong>Snowflake Schema : </strong>Similar to the star schema, but dimension tables are normalized into multiple related tables to remove redundancy.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Saves storage by reducing redundancy in dimension tables.</li>
+<li>Easier maintenance and updates of dimensions.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Complex queries due to additional joins.</li>
+<li>Slower query performance compared to the star schema.</li>
+</ul>
+<p>Example:</p>
+<p>A snowflake schema for sales data is shown in figure below. Sales are considered along three dimensions: product, time and location. The fact table is identical to star schema. The main difference between the two schemas is in the definition of dimension tables. The single dimension table for location in the star schema can be normalized into two new tables: location and city. The city key in the new location table links to the city dimension as shown in figure below.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48075 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/db2.drawio.png?resize=398%2C240&#038;ssl=1" alt="" width="398" height="240"></p>
+<p><strong>Fact Constellation Schema (Galaxy Schema)</strong>: Multiple fact tables share common dimension tables. It’s a collection of star schemas.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Suitable for complex applications requiring multiple perspectives.</li>
+<li>Efficient for sharing common dimensions across multiple processes.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Increased complexity in design and maintenance.</li>
+<li>Higher query processing time due to multiple fact tables.</li>
+</ul>
+<p>Example</p>
+<p>A fact constellation schema is shown in figure below. This schema specifies two fact tables, sales and shipping. The sales table definition is identical to that of the star schema. The shipping table has five dimensions, or keys: product_key, time_key, shipper_key, from location, and to location and two measures: rupees_cost, and units_shipped. A fact constellation schema allows dimension tables to be shared between fact tables. For example, the dimensions tables for time, product, and location are shared between the sales and shipping fact tables.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48076 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/db3.drawio.png?resize=365%2C212&#038;ssl=1" alt="" width="365" height="212"></p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>How KDD differs from data mining? Explain various stages of KDD with suitable block diagram.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differences between KDD and data mining are as:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Aspect</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>KDD (Knowledge Discovery in Databases) </strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Data Mining</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Definition</strong></td>
+<td style="width: 33.3333%; text-align: center;">KDD refers to a process of identifying valid, novel, potentially useful, and ultimately understandable patterns and relationships in data.</td>
+<td style="width: 33.3333%; text-align: center;">Data Mining refers to a<br />
+process of extracting useful and valuable information or patterns from large data sets.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Scope</strong></td>
+<td style="width: 33.3333%; text-align: center;">Includes data preprocessing, transformation, mining, and evaluation</td>
+<td style="width: 33.3333%; text-align: center;">Limited to applying algorithms to find patterns.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Objective</strong></td>
+<td style="width: 33.3333%; text-align: center;">To discover meaningful knowledge from raw data.</td>
+<td style="width: 33.3333%; text-align: center;">To uncover specific patterns or insights.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Steps</strong></td>
+<td style="width: 33.3333%; text-align: center;">Involves multiple steps: data selection, cleaning,<br />
+transformation, etc.</td>
+<td style="width: 33.3333%; text-align: center;">Focuses solely on pattern extraction algorithms.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Output</strong></td>
+<td style="width: 33.3333%; text-align: center;">Provides actionable knowledge or insights.</td>
+<td style="width: 33.3333%; text-align: center;">Provides raw patterns or trends.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Focus</strong></td>
+<td style="width: 33.3333%; text-align: center;">Holistic process involving context and interpretation.</td>
+<td style="width: 33.3333%; text-align: center;">Technical aspect of applying algorithms</td>
+</tr>
+</tbody>
+</table></div>
+<p>Stages of KDD (Knowledge Discovery in Databases):</p>
+<p>Data Cleaning</p>
+<ul style="list-style-type: square;">
+<li>This step focuses on removing noisy, irrelevant, and inconsistent data to ensure data quality.</li>
+<li>Missing values are addressed by imputation or removal, while noisy data (random errors or variances) are corrected using smoothing techniques.</li>
+<li>Discrepancies in data are resolved through detection and transformation tools, ensuring the dataset is accurate and reliable for analysis.</li>
+</ul>
+<p>Data Integration</p>
+<ul style="list-style-type: square;">
+<li>Data from multiple heterogeneous sources is combined into a common format or repository, such as a Data Warehouse.</li>
+<li>Tools like ETL (Extract, Transform, Load), data migration, and synchronization systems are used to ensure seamless integration.</li>
+<li>This step ensures that all relevant data is unified, eliminating redundancy and inconsistencies.</li>
+</ul>
+<p>Data Selection</p>
+<ul style="list-style-type: square;">
+<li>Relevant data is identified and extracted from the integrated dataset to focus only on the required information for the analysis.</li>
+<li>Selection methods include advanced techniques such as neural networks, decision trees, clustering, regression, and Naïve Bayes to isolate pertinent data efficiently.</li>
+<li>This step ensures that only meaningful data is used for mining, reducing complexity and improving accuracy.</li>
+</ul>
+<p>Data Transformation</p>
+<p>The selected data is transformed into a suitable format for the data mining process.</p>
+<p>This involves two main tasks:</p>
+<ul style="list-style-type: square;">
+<li><strong>Data Mapping</strong>: Aligns elements from the source database with the target structure to capture required transformations.</li>
+<li><strong>Code Generation</strong>: Implements the actual transformation process using programs to prepare the data for mining algorithms.</li>
+</ul>
+<p>This step ensures the data is standardized and optimized for analysis.</p>
+<p>Data Mining</p>
+<ul style="list-style-type: square;">
+<li>Advanced algorithms and techniques are applied to the transformed data to uncover patterns and insights.</li>
+<li>Common methods include classification (assigning categories), clustering (grouping similar items), and characterization (summarizing data trends).</li>
+<li>This stage is the core of the KDD process, transforming data into meaningful patterns.</li>
+</ul>
+<p>Pattern Evaluation</p>
+<ul style="list-style-type: square;">
+<li>Extracted patterns are evaluated to identify the most interesting and useful ones based on predefined measures.</li>
+<li>Patterns are assigned an interestingness score, and techniques like visualization and summarization are used to make them comprehensible.</li>
+<li>This step ensures that the identified patterns provide actionable knowledge rather than irrelevant information.</li>
+</ul>
+<p>Knowledge Representation</p>
+<ul style="list-style-type: square;">
+<li>The final stage involves presenting the discovered knowledge in a meaningful way to enable decision-making.</li>
+<li>Results can be shared through visualizations, dashboards, reports, or summaries, making them accessible and actionable for users.</li>
+<li>This step ensures the insights derived from data mining are effectively communicated and utilized.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48082 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/bd-of-KKD.drawio.png?resize=397%2C351&#038;ssl=1" alt="" width="397" height="351"></p>
+<p style="text-align: center;">Fig : Block Diagram of Stages of KDD</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Discuss different ways of smoothing noisy data along with suitable examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Ways of Smoothing Noisy Data</p>
+<p><strong>1. Binning</strong>: Divides sorted data into bins and smooths the values in<br />
+each bin based on the values&#8217; proximity to their neighbors.</p>
+<p><strong>          Techniques</strong>:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>Mean Smoothing</strong>: Replace each value in a bin with the mean of the bin.</li>
+<li><strong>Median Smoothing</strong>: Replace each value in a bin with the median of the bin.</li>
+<li><strong>Boundary Smoothing</strong>: Replace values with the closest boundary value of the bin.</li>
+</ol>
+<p><strong>Example</strong>: In the dataset [22, 24, 25, 28, 30, 32], binning into bins [22-25] and [28-32] and applying mean smoothing results in [24, 24, 24, 30, 30, 30].</p>
+<p><strong>2. Regression</strong>: Uses statistical methods to find relationships between dependent attributes, enabling predictions to reduce noise.</p>
+<p><strong>Techniques</strong>:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>Linear Regression</strong>: Models the relationship between two variables using a straight line.</li>
+<li><strong>Polynomial Regression</strong>: Fits a curve for non-linear data relationships.</li>
+<li><strong>Multivariate Regression</strong>: Handles relationships involving multiple variables.</li>
+</ol>
+<p><strong>Example</strong>: For a dataset of house prices and sizes, linear regression predicts prices based on size, smoothing inconsistencies in price data.</p>
+<p><strong>3. Clustering</strong>: Groups similar data values into clusters and identifies noise as outliers that do not belong to any cluster.</p>
+<p><strong>Techniques</strong>:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>K-Means Clustering</strong>: Divides data into k clusters based on proximity.</li>
+<li><strong>Hierarchical Clustering</strong>: Forms nested clusters using a tree structure.</li>
+<li><strong>DBSCAN</strong>: Identifies clusters and marks isolated points as noise.</li>
+</ol>
+<p><strong>Example</strong>: In customer age data, clustering groups ages into clusters like teens (13–19), adults (20–50), and seniors (50+), flagging ages like 150 as outliers.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How many cuboids are possible from 5-dimensional data? Discuss the concept of full cube and iceberg cube.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For a data cube with n dimensions, the total number of possible cuboids is 2ⁿ. For 5 dimensions, the total number of cuboids = 2⁵ = 32 cuboids</p>
+<p><strong>Full Cube</strong>: A full cube involves precomputing all possible cuboids for a given n-dimensional data cube. This means all possible combinations of dimensions are calculated, from the most detailed level (base cuboid with n dimensions) to the most summarized level (apex cuboid with 0 dimensions, which aggregates all data).</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Fast query performance as all possible combinations of dimensions are readily available.</li>
+<li>No need for on-the-fly computation during query processing.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Requires vast amounts of storage, which may become infeasible for high-dimensional datasets.</li>
+<li>High computational cost during the precomputation phase.</li>
+</ul>
+<p><strong>Iceberg Cube</strong>: An iceberg cube computes only those cuboid cells that meet a specific aggregate condition (e.g., a threshold on sum, average, minimum, or count). It focuses on meaningful data and ignores less significant or irrelevant data, resembling the tip of an iceberg.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Saves storage space by ignoring less important data.</li>
+<li>Reduces computation and storage costs compared to a full cube.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Slower query response for data not materialized in the cube.</li>
+<li>May miss certain data combinations that could later become relevant.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How K-medoids clustering differs from K-means clustering? Divide the following data points into two clusters using kmedoids algorithm. Show computation up to 3 iterations. {(70,85), (65,80), (72,88), (75,90), (60,50), (64,55), (62,52), (63,58)}.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differences between K-means clustering and K-medoids clustering are as:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Aspect </strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>K-Means Clustering</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>K-Medoids Clustering</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Definition </strong></td>
+<td style="width: 33.3333%; text-align: center;">Partitions data into k<br />
+clusters by minimizing the sum of squared distances between data points and their cluster centroid.</td>
+<td style="width: 33.3333%; text-align: center;">Partitions data into k<br />
+clusters by minimizing<br />
+the sum of dissimilarities<br />
+between data points and a chosen representative<br />
+(medoid).</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Centroid/Medoid</strong></td>
+<td style="width: 33.3333%; text-align: center;">Uses the mean of data<br />
+points as the centroid of each cluster.</td>
+<td style="width: 33.3333%; text-align: center;">Uses an actual data point (medoid) as the cluster representative.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Sensitivity to Outliers </strong></td>
+<td style="width: 33.3333%; text-align: center;">Highly sensitive to outliers, as centroids can be skewed by extreme values.</td>
+<td style="width: 33.3333%; text-align: center;">Less sensitive to outliers, as medoids are actual data points.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Computation </strong></td>
+<td style="width: 33.3333%; text-align: center;">Faster due to simple mean calculations.</td>
+<td style="width: 33.3333%; text-align: center;">Slower due to pairwise distance computations and medoid selection</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Data Types </strong></td>
+<td style="width: 33.3333%; text-align: center;">Works best with numerical data.</td>
+<td style="width: 33.3333%; text-align: center;">Can handle both numerical and categorical data.</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48241 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-675.png?resize=480%2C574&#038;ssl=1" alt="" width="480" height="574"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48242 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-676.png?resize=492%2C436&#038;ssl=1" alt="" width="492" height="436"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48243 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-677.png?resize=499%2C640&#038;ssl=1" alt="" width="499" height="640"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Discuss working of DBSCAN algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Algorithm of DBSCAN</strong></p>
+<p>1. Mark all objects as unvisited.</p>
+<p>2. Repeat until all objects are visited:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Randomly select an unvisited object p.</li>
+<li>Mark p as visited.</li>
+<li>If the ε-neighborhood of p has at least MinPts objects:<br />
+i. Create a new cluster C, and add p to C.<br />
+ii. Let N be the set of objects in the ε-neighborhood of p.<br />
+iii. For each point p&#8217; in N:</li>
+</ol>
+<p style="text-align: center;">                   If p&#8217; is unvisited:</p>
+<p style="text-align: center;">                 Mark p&#8217; as visited.</p>
+<p style="text-align: center;">                If the ε-neighborhood of p&#8217; has at least<br />
+MinPts points, add these points to N.</p>
+<p style="text-align: center;">                        If p&#8217; is not yet part of any cluster, add p&#8217; to C.</p>
+<p>                iv. Output C.</p>
+<p>d. Else, mark p as noise.</p>
+<p>3. End the process.</p>
+<p><strong>Working of algorithm</strong>:</p>
+<p>DBSCAN (Density-Based Spatial Clustering of Applications with Noise) identifies clusters based on dense regions of data points and can handle noise effectively. Here&#8217;s how the algorithm works step by step:</p>
+<p>1. <strong>Initialization</strong>: The algorithm starts by marking all points in the dataset as unvisited.</p>
+<p>Two parameters are set:</p>
+<ul style="list-style-type: circle;">
+<li>ε (epsilon): The radius of the neighborhood for clustering.</li>
+<li>MinPts: The minimum number of points required in an ε-neighborhood to form a dense region.</li>
+</ul>
+<p>2. <strong>Cluster Formation</strong>: A random unvisited point ppp is selected and marked as visited.<br />
+The ε-neighborhood of ppp is calculated:</p>
+<ul style="list-style-type: circle;">
+<li>If the neighborhood contains at least MinPts points, p is marked as a core point and a new cluster C is created.</li>
+<li>If not, ppp is classified as noise.</li>
+</ul>
+<p>3. <strong>Expanding the Cluster</strong>: For every point p&#8217; in the ε-neighborhood of p:</p>
+<p>If p&#8217; is unvisited:</p>
+<ul style="list-style-type: circle;">
+<li>Mark p′p&#8217;p′ as visited.</li>
+<li>Calculate its ε-neighborhood. If it contains at least MinPts points, add these points to the neighborhood N for further expansion.</li>
+</ul>
+<p>If p&#8217; is not part of any cluster, add it to C.</p>
+<p>The cluster expansion continues recursively for all points in N until no more points can be added to C.</p>
+<p>4. <strong>Handle Noise</strong>: Points that fail to meet the MinPts threshold and are not reachable from any core point are classified as noise.</p>
+<p>5. <strong>Repeat</strong>: The algorithm continues until all points in the dataset are marked as visited, forming clusters and identifying noise.</p>
+<p><strong>Example</strong>: Suppose we have a dataset with the following parameters:</p>
+<ul style="list-style-type: square;">
+<li>ε = 2, MinPts = 4.</li>
+<li>For a point A:</li>
+</ul>
+<ul style="list-style-type: circle;">
+<li>If there are 4 or more points within a radius of 2 units, A is a core point and starts forming a cluster.</li>
+<li>A point B within A’s ε-neighborhood with fewer than 4 points in its own neighborhood is a border point.</li>
+<li>A point C outside the ε-neighborhood of all core points is marked as noise.</li>
+</ul>
+<p>Clusters are expanded by connecting core points and their neighbors, while noise points remain unclustered.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Which algorithm is used for training multi-layer perceptron? Discuss the algorithm in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Backpropagation Algorithm is used for training a MultiLayer Perceptron (MLP). It adjusts the weights of the neural network to minimize the error between predicted and actual outputs by propagating the error backward through the network.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48103 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/perceptron.drawio.png?resize=409%2C393&#038;ssl=1" alt="" width="409" height="393"></p>
+<p style="text-align: center;">fig : Multi-Layer Perceptron (MLP)</p>
+<p><strong>Backpropagation Algorithm</strong>:</p>
+<ul style="list-style-type: circle;">
+<li><strong>Step 1</strong>: Inputs X, arrive through the preconnected path.</li>
+<li><strong>Step 2</strong>: The input is modeled using true weights W. Weights are usually<br />
+chosen randomly.</li>
+<li><strong>Step 3</strong>: Calculate the output of each neuron from the input layer to the hidden layer to the output layer.</li>
+<li><strong>Step 4</strong>: Calculate the error in the outputs<br />
+Backpropagation Error= Actual Output – Desired Output</li>
+<li><strong>Step 5</strong>: From the output layer, go back to the hidden layer to                           adjust the weights to reduce the error.</li>
+<li><strong>Step 6</strong>: Repeat the process until the desired output is achieved.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Working of Backpropagation</strong>:</p>
+<p>The Backpropagation Algorithm trains a Multi-Layer Perceptron (MLP) by iteratively adjusting the network&#8217;s weights and biases to minimize prediction errors. Initially, the algorithm performs a feedforward pass, where input data flows through the network, layer by layer, to generate output predictions. The algorithm then computes the error by comparing the predicted output with the actual target using a loss function. This error is propagated backward through the network, layer by layer, in the backpropagation phase.</p>
+<p>During backpropagation phase, the algorithm calculates the gradients of the error with respect to the weights and biases using the chain rule of calculus. These gradients are then used to update the weights and biases via optimization techniques like Gradient Descent. The process repeats iteratively, reducing the error with each step, until the network&#8217;s output closely matches the desired result or a stopping criterion is reached. This mechanism enables the network to learn complex patterns from the data efficiently.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain the OLAP operations with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>OLAP (Online Analytical Processing) operations are used to analyze multi-dimensional data stored in data warehouses. These operations enable users to interact with data dynamically, perform complex queries, and gain insights.</p>
+<p>Types of OLAP Operations</p>
+<p><strong>Roll-up</strong>: Summarizes data by moving up in a hierarchy or reducing dimensions.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48105 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-660.png?resize=387%2C309&#038;ssl=1" alt="" width="387" height="309"></p>
+<ul style="list-style-type: circle;">
+<li>Roll-up is performed by climbing up a concept hierarchy for the dimension location.</li>
+<li>Initially the concept hierarchy was &#8220;street &lt; city &lt; province<br />
+&lt; country&#8221;.</li>
+<li>On rolling up, the data is aggregated by ascending the location hierarchy from the level of city to the level of country.</li>
+<li>The data is grouped into cities rather than countries.</li>
+<li>When roll-up is performed, one or more dimensions from the data cube are removed.</li>
+</ul>
+<p>2. <strong>Drill-down</strong>: Explores finer-grained data by moving down in a hierarchy.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48106 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-661.png?resize=436%2C333&#038;ssl=1" alt="" width="436" height="333"></p>
+<ul style="list-style-type: circle;">
+<li>Drill-down is performed by stepping down a concept hierarchy for the dimension time.</li>
+<li>Initially the concept hierarchy was &#8220;day &lt; month &lt; quarter &lt; year.&#8221;</li>
+<li>On drilling down, the time dimension is descended from the level of quarter to the level of month.</li>
+<li>When drill-down is performed, one or more dimensions from the data cube are added.</li>
+<li>It navigates the data from less detailed data to highly detailed data.</li>
+</ul>
+<p>3. <strong>Slice and dice</strong>:<br />
+Slice: Fixes a specific dimension value to create a sub-cube.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48107 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-662.png?resize=274%2C256&#038;ssl=1" alt="" width="274" height="256"></p>
+<ul style="list-style-type: circle;">
+<li>Here Slice is performed for the dimension &#8220;time&#8221; using the criterion time = &#8220;Q1&#8221;.</li>
+<li>It will form a new sub-cube by selecting one or more dimensions.</li>
+</ul>
+<p>Dice: Applies conditions across multiple dimensions to select<br />
+a specific data subset.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48108 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-664.png?resize=289%2C314&#038;ssl=1" alt="" width="289" height="314"></p>
+<p>The dice operation on the cube based on the following selection criteria involves three dimensions.</p>
+<ul style="list-style-type: circle;">
+<li>(location = &#8220;Toronto&#8221; or &#8220;Vancouver&#8221;)</li>
+<li>(time = &#8220;Q1&#8221; or &#8220;Q2&#8221;)</li>
+<li>(item =&#8221; Mobile&#8221; or &#8220;Modem&#8221;)</li>
+</ul>
+<p>4. <strong>Pivot (rotate)</strong>: Rotates data to view it from different perspectives.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48111 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-665-1.png?resize=251%2C285&#038;ssl=1" alt="" width="251" height="285"></p>
+<ul style="list-style-type: circle;">
+<li>It rotates the data axes in view in order to provide an alternative presentation of data.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Discuss the concept of multimedia data mining along with the concept of similarity search.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Multimedia Data Mining: Multimedia data mining is the process of extracting meaningful patterns, knowledge, and insights from multimedia content, including images, videos, audio, and text. It combines traditional data mining with specialized techniques to handle the unique complexities of multimedia data, such as high dimensionality, large file sizes, and diverse formats.</p>
+<p><strong>Key Components:</strong></p>
+<p>1. Data Preprocessing:</p>
+<ul style="list-style-type: square;">
+<li>Prepares raw multimedia data by cleaning, normalizing, and converting it into a usable format.</li>
+<li>Includes tasks like noise reduction, format transformation, and quality enhancement.</li>
+</ul>
+<p>2. Feature Extraction:</p>
+<ul style="list-style-type: square;">
+<li>Identifies relevant characteristics from multimedia data.</li>
+</ul>
+<p>3. Pattern Recognition:</p>
+<ul style="list-style-type: square;">
+<li>Uses algorithms like clustering, classification, or association rule mining to find meaningful patterns or relationships.</li>
+</ul>
+<p>4. Knowledge Representation:</p>
+<ul style="list-style-type: square;">
+<li>Discovered patterns are presented in an interpretable form, enabling end-users to make informed decisions.</li>
+</ul>
+<p>Example:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Image Mining: Analyzing medical images to detect patterns related to specific diseases.</li>
+<li>Audio Mining: Identifying emotional tones or speaker characteristics from speech recordings.</li>
+</ol>
+<p><strong>Similarity Search</strong>: Similarity search in multimedia data mining involves retrieving objects from a database that are similar to a given query object based on specific criteria. The process can focus on either data description or data content.</p>
+<p>For similarity searching in multimedia data, two main families of multimedia indexing and retrieval systems are considered:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Description-based retrieval systems</span>: The system which build indices and perform object retrieval based on image descriptions, such as keywords, captions, size, and time of creation.</li>
+<li><span style="text-decoration: underline;">Content-based retrieval systems</span>: The system which support retrieval based on the image content, such as color histogram, texture, pattern, image topology, and the shape of objects and their layouts and locations within the image.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write down short notes on:</p>
+<ol>
+<li>Support Vector Machine</li>
+<li>Multi-dimensional Data Model</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>Support Vector Machine (SVM)</strong>: SVM is a supervised machine learning algorithm used for classification and regression tasks. It works by finding the optimal hyperplane that separates data into different classes in a high-dimensional space. The goal is to maximize the margin between the classes, ensuring better generalization on unseen data. SVM can also handle non-linear data using kernel functions like radial basis function (RBF) and polynomial kernels.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Works well with high-dimensional data.</li>
+<li>Effective for both linear and non-linear classification.</li>
+<li>Robust to over fitting, especially in high-dimensional spaces.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Computationally expensive for large datasets.</li>
+<li>Choosing the right kernel and hyper parameters is challenging.</li>
+<li>Sensitive to noise and outliers.</li>
+</ul>
+<p>b. <strong>Multi-dimensional Data Model</strong>: The multi-dimensional data model is commonly used in OLAP systems for data analysis. It organizes data into dimensions and facts, representing it in the form of data cubes. Dimensions (e.g., time, product) describe the perspectives for analysis, while facts (e.g., sales, profit) are the numerical data being analyzed. This model enables slicing, dicing, roll-up, and drill-down operations for intuitive and flexible data exploration.</p>
+<p><strong>Advantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Facilitates complex analytical queries.</li>
+<li>Provides intuitive representation for decision-making.</li>
+<li>Enables efficient aggregation and summarization of data.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul style="list-style-type: square;">
+<li>Storage requirements increase with the addition of dimensions.</li>
+<li>Performance can degrade with very high-dimensional data.</li>
+<li>Requires careful design to avoid redundancy and inconsistency.</li>
+</ul>
+</div>
+</body></html>

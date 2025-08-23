@@ -1,0 +1,244 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>DS Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain strong induction in detail. What is recursively defined function? Use mathematical induction to prove 7<sup>n+2</sup> + 8<sup>2</sup><sup>n+1</sup>  is divisible by 5</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Strong induction</strong> is a type of proof closely related to simple induction.</p>
+<p>As in simple induction, we have a statement P(n) about the whole number n, and we want to prove that P(n) is true for every value of n. To prove this using strong induction, we do the following:</p>
+<p><strong>The base case:</strong></p>
+<p>We prove that P(1) is true (or occasionally P(0) or some other P(n) , depending on the problem).</p>
+<p><strong>The induction step:</strong></p>
+<p>We prove that if P(1) , P(2) , …, P(k) are all true, then P(k+1) must also be true. In this step, the assumption that P(1) , …, P(k) are true is called the inductive hypothesis. Together, these imply that P(n) is true for all whole numbers n . (The proof is the same as with simple induction.) The critical difference between this and simple induction is that in step 2, we do not assume that only P(k) is true, but P(k) and all earlier P(i) for i&lt;k.</p>
+<p>It is convenient if the proof of P(k+1) might depend on not only the previous P(k) but on any earlier P(i). It turns out that this form of induction is actually equivalent to simple induction: anything one can prove with one of them, one can also prove with the other.</p>
+<p>&nbsp;</p>
+<p><strong>Recursively defined function</strong> is a function that repeats or uses its own previous term to calculate subsequent terms and thus forms a sequence of terms.</p>
+<p>Example: For a fibonacci series, recursively defined function is as:</p>
+<p>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n&gt;1 and</p>
+<p>F<sub>n</sub> = n for n=0,1.</p>
+<p>&nbsp;</p>
+<p><strong>Proof by mathematical induction:</strong></p>
+<p>&nbsp;</p>
+<p>To prove:</p>
+<p>P(n): 7<sup>n+2</sup> + 8<sup>2</sup><sup>n+1</sup>  is divisible by 57 for every nonnegative integer n.</p>
+<p>&nbsp;</p>
+<p><strong>Base case:</strong></p>
+<p>for n=0,</p>
+<p>P(0) = 7<sup>0+2</sup> + 8<sup>2*0+1</sup> = 57 = divisible by 57.</p>
+<p>Hence P(0) is true for n=0.</p>
+<p>&nbsp;</p>
+<p><strong>Inductive case:</strong></p>
+<p>Let us assume P(k) is true where k∈n i.e.</p>
+<p>P(k): 7<sup>k+2</sup> + 8<sup>2k</sup><sup>+1</sup>  is divisible by 57 ; k∈n</p>
+<p>i.e 7<sup>k+2</sup> + 8<sup>2k</sup><sup>+1</sup> = 57*a ; a=integer value.</p>
+<p>Now, under this assumption, we show that P(k+1) is true i.e.</p>
+<p>To prove:</p>
+<p>P(k+1): 7<sup>(k+1)+2</sup> + 8<sup>2(k</sup><sup>+1)+1</sup>  is divisible by 57 ; k∈n</p>
+<p>We have:</p>
+<p>P(k+1) = 7<sup>(k+1)+2</sup> + 8<sup>2(k</sup><sup>+1)+1</sup></p>
+<p>= 7<sup>k+2+1</sup> + 8<sup>2k</sup><sup>+1+2</sup></p>
+<p>=7<sup>k+2</sup> .  7 + 8<sup>2k</sup><sup>+1</sup> . 64</p>
+<p>=(57a &#8211; 8<sup>2k</sup><sup>+1</sup>) .  7 + 8<sup>2k</sup><sup>+1</sup> . 64 [from inductive hypothesis]</p>
+<p>= 57 * 7a + 8<sup>2k</sup><sup>+1 </sup>(64 &#8211; 7)</p>
+<p>= 57 * 7a + 8<sup>2k</sup><sup>+1</sup> * 57</p>
+<p>= 57 ( 7a + 8<sup>2k</sup><sup>+1</sup>)</p>
+<p>= divisible by 57.</p>
+<p>&nbsp;</p>
+<p>Therefore, P(k+1) is true whenever P(k) is true.</p>
+<p>Hence, P(n) is true i.e.</p>
+<p>7<sup>n+2</sup> + 8<sup>2</sup><sup>n+1</sup>  is divisible by 57 for every nonnegative integer n.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>State pigeonhole principle. Solve the recurrence relation a<sub>n</sub> = 5a<sub>n-1</sub> – 6a<sub>n-2</sub> with initial conditions a<sub>0</sub> = 1 and a<sub>1</sub> = 3.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Pigeonhole Principle</strong></p>
+<p>If k+1 or more pigeons are placed into k pigeonholes then there is at least one pigeonhole containing two or more pigeons.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24948" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230920_172003_CamScanner.jpg?resize=911%2C1794&#038;ssl=1" alt="" width="911" height="1794"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>State max flow min cut theorem. Find the value of maximal flow in the graph below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24955" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/max-2.jpg?resize=299%2C154&ssl=1" alt="" width="299" height="154"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Here,</p>
+<p>Number assigned to the edges show their capacities. The initial flow is assigned already so saturating it.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39331 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/maxflow1.drawio.png?resize=314%2C153&#038;ssl=1" alt="" width="314" height="153"></p>
+<p>Augmenting path x → a → b → z</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39332 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/step-1.drawio.png?resize=352%2C182&#038;ssl=1" alt="" width="352" height="182"></p>
+<p>Augmenting path x → c → d → z</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39333 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/step-2.drawio.png?resize=340%2C185&#038;ssl=1" alt="" width="340" height="185"></p>
+<p>Augmenting path x → a → d → z</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39336 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/step-3.drawio.png?resize=375%2C203&#038;ssl=1" alt="" width="375" height="203"></p>
+<p>so,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">Path</td>
+<td style="width: 50%; text-align: center;">Maximal flow</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">x → a → b → z</td>
+<td style="width: 50%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">x → c → d → z</td>
+<td style="width: 50%; text-align: center;">3</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">x → a → d → z</td>
+<td style="width: 50%; text-align: center;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>we already have initial flow 3 and 6.</p>
+<p>Hence, the maximal flow of the diagram is 18.</p>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain the principle of inclusion and exclusion. How many integers from 1 to 30 are multiples of 2 or 3?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Principle of Inclusion and Exclusion</strong> is an approach which derives the method of finding the number of elements in the union of two finite sets. This is used to solve combinations and probability problems when it is necessary to find a counting method, which makes sure that an object is not counted twice.</p>
+<p>Consider two finite sets, A and B. We can denote the Principle of Inclusion and Exclusion formula as follows:</p>
+<p>n(A⋃B) = n(A) + n(B) – n(A⋂B)</p>
+<p>&nbsp;</p>
+<p>From 1 to 30,</p>
+<p>let A be the multiples of 2 and B be the multiples of 3 then,</p>
+<p>n(A)=15 {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30}</p>
+<p>n(B)=10{3,6,9,12,15,18,21,24,27,30}</p>
+<p>n(A⋂B)=5{6,12,18,24,3o}</p>
+<p>Now, according to the principle,</p>
+<p>n(A⋃B)=15+10-5=20</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Give the example of ceiling, floor and boolean function. How do you plot the graph of the function?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>ceiling function</strong> returns the smallest integer value which is greater than or equal to the specified number, whereas the <strong>floor function</strong> returns the largest integer value which is less than or equal to the specified number.</p>
+<p>Example: If 5.6 is a specified value, then the floor value is 5 (which is less than 5.6), and the ceiling value is 6 (which is greater than 5.6).</p>
+<p>A <strong>b</strong><strong>oolean function</strong> refers to a function having n number of entries or variables, so it has 2n number of possible combinations of the given variables. Such functions would only assume 0 or 1 in their output.</p>
+<p>Example: f(p,q,r) = p.q + r</p>
+<p>Another example: f(2+2=7) = False.</p>
+<p>&nbsp;</p>
+<p><strong>Plotting the graph of function</strong></p>
+<p>To plot a graph of a function, you typically follow these steps:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Define the Function:</strong> Start by having a clear understanding of the function you want to graph. Write down the function&#8217;s formula or equation.</li>
+<li><strong>Choose a Range:</strong> Determine the range of values for the independent variable (usually denoted as &#8216;x&#8217;) that you want to plot. This defines the domain of your function.</li>
+<li><strong>Select Data Points:</strong> Choose a set of x-values within the chosen range and calculate the corresponding y-values using the function&#8217;s formula. You can create a table of values if necessary.</li>
+<li><strong>Plot Points:</strong> On a coordinate system (usually Cartesian), create a set of axes with labeled scales. Typically, the horizontal axis is for x-values, and the vertical axis is for y-values.</li>
+<li><strong>Plot the Data:</strong> Place a point on the graph for each pair of (x, y) values you calculated in step 3. You can use dots or other markers for these points.</li>
+<li><strong>Connect the Dots:</strong> In most cases, you&#8217;ll want to connect the points with lines to show the continuous nature of the function. If the function is not continuous, you may use discrete points without connecting lines.</li>
+<li><strong>Add Labels and Titles:</strong> Label your axes with their respective variables (e.g., &#8220;x&#8221; and &#8220;y&#8221;). Add a title to your graph that describes the function or the context of the graph.</li>
+<li><strong>Add Additional Information:</strong> If needed, you can include key information such as asymptotes, intercepts, critical points, or other relevant details.</li>
+<li><strong>Adjust the Plot:</strong> Make sure the graph is clear and easy to read. Adjust the scales on the axes if necessary to ensure all data points are visible.</li>
+<li><strong>Finalize and Analyze:</strong> Review your graph to ensure it accurately represents the function. Analyze the graph to identify key features like peaks, valleys, intercepts, and trends.</li>
+</ol>
+<p>Here&#8217;s an example using the function f(x) = x^2:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Define the Function:</strong> f(x) = x^2</li>
+<li><strong>Choose a Range:</strong> Let&#8217;s say we want to plot the function for -2 to 2.</li>
+<li><strong>Select Data Points:</strong> Choose some x-values, calculate the corresponding y-values:
+<ul style="list-style-type: square;">
+<li>x = -2, y = 4</li>
+<li>x = -1, y = 1</li>
+<li>x = 0, y = 0</li>
+<li>x = 1, y = 1</li>
+<li>x = 2, y = 4</li>
+</ul>
+</li>
+<li><strong>Plot Points:</strong> On a graph, you&#8217;ll place points at (-2, 4), (-1, 1), (0, 0), (1, 1), and (2, 4).</li>
+<li><strong>Connect the Dots:</strong> Draw a smooth curve through these points to represent the function.</li>
+<li><strong>Add Labels and Titles:</strong> Label the axes as &#8220;x&#8221; and &#8220;y&#8221; and provide a title like &#8220;Graph of f(x) = x^2.&#8221;</li>
+<li><strong>Adjust the Plot:</strong> Make sure the graph is clear and all points are visible.</li>
+<li><strong>Finalize and Analyze:</strong> You now have a graph of the function f(x) = x^2, which shows a parabolic shape opening upward.</li>
+</ol>
+<p>Remember, the details may vary depending on the complexity of the function and the software/tools you&#8217;re using to create the graph. You can also use graphing calculators or software like Excel, Google Sheets, or dedicated graphing tools to automate this process.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Using Chinese remainder theorem solve the following congruences.</p>
+<p>x = 1 (MOD 3)</p>
+<p>x = 3 (MOD 5)</p>
+<p>x = 6 (MOD 7)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24961" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/SmartSelect_20230920_182007_CamScanner.jpg?resize=1071%2C1709&#038;ssl=1" alt="" width="1071" height="1709"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Find the multiplicative inverse of 4 in Z<sub>11</sub> using extended euclidean algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Z<sub>11</sub>={0,1,2,3,4,5,6,7,8,9,10}</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24963" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/inverse.png?resize=608%2C255&#038;ssl=1" alt="" width="608" height="255"></p>
+<p>From table, the multiplicative inverse of 4 is 3 because 4.3 = 1</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Express the following sentences using quantifier.</p>
+<p>a. Not all people are loyal.</p>
+<p>b. Everybody loves somebody.</p>
+<p>c. Someone has passed the exam.</p>
+<p>d. Aquatic animals can’t live without water.</p>
+<p>e. Some subjects are not interesting.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Not all people are loyal.</strong></p>
+<p>=&gt;</p>
+<p>People(x): x is a person.</p>
+<p>Loyal(x): x is loyal.</p>
+<p>∃x People(x) ∧ ¬Loyal(x)</p>
+<p><strong>b. Everybody loves somebody.</strong></p>
+<p>=&gt; ∀x ∃y Loves(x,y)</p>
+<p><strong>c. Someone has passed the exam.</strong></p>
+<p>=&gt;</p>
+<p>Exam(x): x has given the exam.</p>
+<p>Passed(x): x has passed the exam.</p>
+<p>∃x Exam(x) ∧ Passed(x)</p>
+<p><strong>d. Aquatic animals can&#8217;t live without water.</strong></p>
+<p>=&gt;</p>
+<p>Animal(x): x is an animal.</p>
+<p>Aquatic(x): x is aquatic.</p>
+<p>Live(x): x can live without water.</p>
+<p>∀x ( Animal(x) ∧ Aquatic(x) ) → ¬Live(x)</p>
+<p><strong>e. Some subjects are not interesting.</strong></p>
+<p>=&gt;</p>
+<p>Subject(x): x is a subject.</p>
+<p>Interesting(x): x is interesting.</p>
+<p>∃x Subject(x) ∧ ¬Interesting(x)</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is proof by contradiction? Give a proof by contradiction to show that if 3n+2 is odd then n is odd.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Proof by contradiction</strong></p>
+<p>We use negation of statement to be true.</p>
+<p>Using rules and facts, we reach to contradiction.</p>
+<p>Then, we conclude that our assumption is false and statement is true.</p>
+<p>In case of implication, we assume hypothesis to be true and conclusion to be false.</p>
+<p>&nbsp;</p>
+<p><strong>To prove: If 3n+2 is odd, then n is odd.</strong></p>
+<p><strong>Proof:</strong></p>
+<p>We assume 3n+2 is odd and n is even.</p>
+<p>then,</p>
+<p>if n is even, n=2k ; k is any integer.</p>
+<p>3n + 2 = 3*2k + 2 = 6k + 2 = 2(3k+1) = even</p>
+<p>This means 3n + 2 is even i.e. our assumption is false and the given statement is false.</p>
+<p>i.e. If 3n+2 is odd, n is odd.</p>
+<p><strong>PROVED!!!</strong></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>State the necessary conditions for two graphs to be isomorphic. How many different words from “MANAGER” can be generated with or without meaning?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If two graphs are isomorphic, they must have:<br />
+&#8211; the same number of vertices<br />
+&#8211; the same number of edges<br />
+&#8211; the same degrees for corresponding vertices<br />
+&#8211; the same number of connected components<br />
+&#8211; the same number of loops<br />
+&#8211; the same number of parallel edges.</p>
+<p>&nbsp;</p>
+<p>The word &#8220;MANAGER&#8221; can be arranged in (7! / 2!) i.e. 2520 ways</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Define symmetric closure. What is the symmetric closure of the relation R = {(1,1), (1,2), (2,2), (2,3), (3,1), (3,2)} on the set A = {1,2,3}?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In set theory, the symmetric closure of a binary relation R on a set A is a new binary relation that contains all pairs (a, b) for which (b, a) is already in R. In other words, if (a, b) is in R, then (b, a) is also added to the symmetric closure of R. The symmetric closure makes the relation symmetric, meaning it works in both directions.</p>
+<p>Mathematically, if R is a binary relation on A, then the symmetric closure of R, denoted as R<sup>s</sup>, is defined as:</p>
+<p>R<sup>s</sup> = R ∪ {(b, a) | (a, b) ∈ R}</p>
+<p>&nbsp;</p>
+<p>Given:</p>
+<p>R={(1,1) , (1,2) , (2,2) , (2,3) , (3,1) , (3,2)}</p>
+<p>then,</p>
+<p>R<sup>s </sup>= {(1,1) , (1,2) , (1,3) , (2,1) , (2,2) , (2,3) , (3,1) , (3,2) }</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Represent following graph using adjacency matrix.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24988" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/graph.jpg?resize=374%2C166&ssl=1" alt="" width="374" height="166"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Let us define the edges as follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-24989" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/graph-1.jpg?resize=377%2C166&#038;ssl=1" alt="" width="377" height="166"></p>
+<p>Now,</p>
+<p>Adjacency matrix, A is given as:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-41135 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/adjacency-matrix.drawio.png?resize=372%2C316&#038;ssl=1" alt="" width="372" height="316"></p>
+<p>&nbsp;</p>
+</div>
+</body></html>

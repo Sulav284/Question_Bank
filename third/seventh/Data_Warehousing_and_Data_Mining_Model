@@ -1,0 +1,264 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DWDM Model Set 0</title>
+    </head>
+    <body>
+        <h1>DWDM Model Set - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the different components of data warehouse. How data cube precomputation is performed? Describe.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The major four components of data warehouse are explained below:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Central database</strong>: A database serves as the foundation of your data warehouse. Traditionally, these have been standard relational databases running on premise or in the cloud. But because of Big Data, the need for true, real-time performance, and a drastic reduction in the cost of RAM, in-memory databases are rapidly gaining in popularity.</li>
+<li><strong>Data integration</strong>: Data is pulled from source systems and modified to align the information for rapid analytical consumption using a variety of data integration approaches such as ETL (extract, transform, load) and ELT as well as real-time data replication, bulk-load processing, data transformation, and data quality and enrichment services.</li>
+<li><strong>Metadata</strong>: Metadata is data about your data. It specifies the source, usage, values, and other features of the datasets in your data warehouse. There is business metadata, which adds context to your data, and<br />
+technical metadata, which describes how to access data including where it resides and how it is structured.</li>
+<li><strong>Data warehouse access tools</strong>: Access tools allow users to interact with the data in your data warehouse. Examples of access tools include: query and reporting tools, application development tools, data mining tools, and OLAP tools.</li>
+</ol>
+<p><span style="text-decoration: underline;">Data cube computation</span> is an essential task in data warehouseimplementation. The precomputation of all or part of a datacube can greatly reduce the response time and enhance theperformance of on-line analytical processing. In order to ensure fast on-line analytical processing, it is sometimes desirable to precompute cubes. The different kinds of cubes that can be precomputed are given below.</p>
+<ul style="list-style-type: square;">
+<li><strong>Full Cube</strong>: Full cube is the data cube in which all cells or cuboids for the data cube are precomputed. This, however, is exponential to the number of dimensions. That is, a data cube of n dimensions contains 2ncuboids. There are even more cuboids if we consider concept hierarchies foreach dimension. Thus, precomputation of the full cube can require huge and often excessive amounts of memory.</li>
+<li><strong>Iceberg Cube</strong>: Instead of computing the full cube, we can compute only a subset of the data cube’s cuboids. In many situations, it is useful to materialize only those cells in a cuboid (group-by) whose measure value is above some minimum threshold. For example, in a data cube for sales, we may wish to materialize only those cells for which count&gt;10, or only those cells representing sales&gt;$100. Such partially materialized cubes are known as iceberg cubes.</li>
+<li><strong>Close Cube</strong>: A cell, c, is a closed cell if there exists no cell, d, such that d is a specialization (descendant) of cell c, and d has the same measure value as c. A closed cube is a data cube consisting of only closed cells.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter" src="https://i0.wp.com/html.scribdassets.com/29poudh37k9js96o/images/13-08142d8631.jpg?resize=397%2C224&#038;ssl=1" width="397" height="224" alt=""></p>
+<ul style="list-style-type: square;">
+<li><strong>Shell Cube</strong>: Another strategy for partial materialization is to precompute only the cuboids involving a small number of dimensions, such as 3 to 5. These cuboids form a shell cube. Queries on additional combinations of the dimensions will have to be computed on the fly. For example, we could compute all cuboids with 3 dimensions or less in an n-dimensional data cube, resulting in a Shell cube of size 3.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write the limitation of Apriori algorithm. Given the objects P1(2,3), P2(4,5), P3(10,40), P4(60,55), P5(70,80), apply K-means algorithm (K = 2) to show the final clusters after 2 iterations. Assume P1 and P3 as initial cluster centroids.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The limitations of Apriori algorithm are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Repeated Scanning of the Dataset</strong>: The Apriori algorithm requires multiple passes over the entire dataset to find frequent itemsets. This can be computationally expensive, especially for large datasets.</li>
+<li><strong>Memory Consumption</strong>: The algorithm needs to store a large number of candidate itemsets, especially when the dataset is large or contains many distinct items. This can quickly exhaust available memory.</li>
+<li><strong>Inefficient for Large Datasets</strong>: The time complexity of the Apriori algorithm increases with the number of transactions and the size of the dataset, making it less scalable for very large datasets. The multiple scans required for each iteration become increasingly costly as the dataset grows.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-45610 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/dm1-scaled.jpg?resize=573%2C803&#038;ssl=1" alt="" width="573" height="803"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Consider the following training data set.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48918" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-2024-12-20-at-15.06.37.png?resize=1446%2C386&ssl=1" alt="" width="1446" height="386"></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><iframe loading="lazy" allowfullscreen webkitallowfullscreen width="100%" height="800px" src="https://hamrocsit.com/wp-content/plugins/pdfjs-viewer-hamrocsit/pdfjs/web/viewer.php?file=https://hamrocsit.com/wp-content/uploads/2024/12/ModelQuestion3Ans-2.pdf&#038;attachment_id=49004&#038;dButton=false&#038;pButton=false&#038;oButton=false&#038;sButton=false#zoom=auto&#038;pagemode=none&#038;_wpnonce=cd9fbd3433" title="Embedded PDF | Hamro CSIT" class="pdfjs-iframe"></iframe>
+</div>
+<h2>Group B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>List any two challenge of multimedia mining. Differentiate between web usage mining and web content mining.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Two major challenges of multimedia mining are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>High Dimensionality</strong>: Multimedia data (such as images, audio, and video) often consist of high-dimensional feature spaces. For example, an image can have thousands or even millions of pixels, each with multiple color channels (RGB), and a video contains a large number of frames, each with its own set of features. This high-dimensionality makes it computationally expensive to process and analyze multimedia data, requiring specialized algorithms and techniques to handle it effectively.</li>
+<li><strong>Semantic Gap</strong>: The semantic gap refers to the difference between the low-level features extracted from multimedia content (e.g., pixel values, audio frequencies) and the high-level meaning or context that humans associate with the content (e.g., recognizing objects or emotions). Bridging this gap is a major challenge, as current algorithms often struggle to fully understand or interpret the context, leading to inaccurate or incomplete results in multimedia mining tasks like image recognition or sentiment analysis.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-45612" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/11/Screenshot-2024-11-14-at-20.06.34.png?resize=1206%2C774&#038;ssl=1" alt="" width="1206" height="774"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How trust and distrust propagate in social network Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In a social network, trust and distrust are crucial factors influencing how information, behaviors, and relationships evolve among individuals or entities. The propagation of trust and distrust within a social network follows dynamic patterns, largely governed by the interactions, relationships, and influences between network nodes (e.g., users, organizations, or communities). Here’s how trust and distrust propagate:</p>
+<p><strong>Propagation of Trust in Social Networks:</strong><br />
+Trust in a social network often propagates through a concept known as transitivity. If A trusts B, and B trusts C, then A is likely to trust C, assuming there is a relational connection between A and C. This process can occur over multiple links in a social chain, creating clusters or communities of trust within the network. As trust propagates, it strengthens the bond between individuals, leading to cooperative behaviors, information sharing, and collaboration. For example, in a recommendation system, if User X trusts User Y, and User Y recommends a product or service to User Z, User Z is more likely to trust the recommendation, even if User Z has no prior relationship with User X or User Y. Over time, as more individuals form trust-based relationships and act as &#8220;trust brokers,&#8221; the trustworthiness of individuals or entities spreads, often creating a positive feedback loop that encourages more trust and cooperation.</p>
+<p><strong>Propagation of Distrust in Social Networks:<br />
+</strong>Distrust, on the other hand, can also propagate through a similar process but with a negative direction. If A distrusts B, and B distrusts C, there is a high probability that A will also distrust C. This can occur due to perceived threats, betrayal, or negative information shared between nodes in the network. Distrust often spreads more quickly and widely than trust because it tends to be more salient and emotionally charged. When an individual’s trust is broken—such as in the case of online fraud, misinformation, or a breach of privacy—distrust can cascade rapidly through the network. This is why rumors, scandals, or negative experiences tend to go viral much faster than positive news. Individuals who are distrusted may find it increasingly difficult to rebuild relationships, as the ripple effect of distrust can lead to social ostracism or a decline in their reputation within the network.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why data preprocessing is mandatory? Justify.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data preprocessing is a critical step in the data analysis and machine learning pipeline, and it is often considered mandatory for the following key reasons:</p>
+<h3>1. <strong>Improving Model Accuracy</strong></h3>
+<p>Raw data is rarely in a form suitable for direct use in machine learning models. Data often contains inconsistencies, missing values, or errors. Preprocessing helps clean the data, remove outliers, handle missing values, and transform data into formats that models can work with more effectively. Clean data leads to better accuracy and performance of machine learning models.</p>
+<h3>2. <strong>Ensuring Consistency</strong></h3>
+<p>Real-world data is often noisy, inconsistent, and may come from different sources with varying formats. Standardizing the data ensures consistency, making it easier for algorithms to process. For example, categorical variables may need to be encoded numerically, or date-time fields may need to be normalized.</p>
+<h3>3. <strong>Dealing with Missing Values</strong></h3>
+<p>Datasets often contain missing values due to incomplete records, data collection errors, or other reasons. These missing values can lead to biased or incorrect model predictions. Preprocessing helps to fill in or impute missing values, or in some cases, remove records with excessive missing data, ensuring that the model is trained on complete data.</p>
+<h3>4. <strong>Feature Scaling and Transformation</strong></h3>
+<p>Many machine learning algorithms, particularly those based on distance (like k-NN, SVM, or gradient descent-based algorithms), perform poorly when the data features have different scales. Feature scaling (e.g., normalization or standardization) ensures that all features contribute equally to the model&#8217;s predictions and prevents certain features from dominating due to their larger numerical scale.</p>
+<h3>5. <strong>Handling Outliers</strong></h3>
+<p>Outliers—values that are significantly different from the rest of the data—can skew the results of many machine learning models, especially linear models and distance-based algorithms. Preprocessing helps to identify and deal with outliers, either by removing or transforming them to reduce their impact.</p>
+<h3>6. <strong>Encoding Categorical Variables</strong></h3>
+<p>Most machine learning algorithms require numerical input, so categorical variables (e.g., color, gender, or product type) must be encoded into numerical values. Methods such as one-hot encoding or label encoding are commonly used. Without this step, the algorithm cannot properly interpret categorical features.</p>
+<h3>7. <strong>Reducing Dimensionality</strong></h3>
+<p>Data can sometimes have too many features (high dimensionality), which can lead to overfitting and longer training times. Dimensionality reduction techniques such as Principal Component Analysis (PCA) or feature selection can be used during preprocessing to reduce the number of features while retaining essential information, making the model more efficient and reducing computational complexity.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Describe any five types of OLAP operations.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The five important types of OLAP operations are:</p>
+<h3>1. <strong>Roll-up (Aggregation)</strong></h3>
+<p><strong>Definition</strong>: The roll-up operation summarizes data by climbing up the hierarchy in a dimension, typically by reducing the level of detail (i.e., aggregating data).</p>
+<ul style="list-style-type: square;">
+<li><strong>Example</strong>: If you have a sales dataset with a &#8220;time&#8221; dimension that includes daily sales, you can use a roll-up operation to aggregate sales by month or year.</li>
+<li><strong>Purpose</strong>: Roll-up is used to perform higher-level data aggregation, often useful for summarizing large datasets for overview reporting.</li>
+</ul>
+<p><strong>Example Query</strong>: Summing total sales from daily data to monthly data.</p>
+<h3>2. <strong>Drill-down (Detail)</strong></h3>
+<p><strong>Definition</strong>: Drill-down is the opposite of roll-up. It involves navigating from summary data to more detailed data by moving down the hierarchy within a dimension.</p>
+<ul style="list-style-type: square;">
+<li><strong>Example</strong>: If you have sales data by year, you can drill down to see the sales by quarter, month, or even day.</li>
+<li><strong>Purpose</strong>: Drill-down allows users to explore more granular details and gain insights at a more specific level.</li>
+</ul>
+<p><strong>Example Query</strong>: Displaying sales data from yearly totals to monthly or daily data.</p>
+<h3>3. <strong>Slice</strong></h3>
+<p><strong>Definition</strong>: The slice operation refers to selecting a single value for one dimension of the data, essentially creating a sub-cube or subset of the multidimensional dataset.</p>
+<ul style="list-style-type: square;">
+<li><strong>Example</strong>: If you have a cube with dimensions like &#8220;Product,&#8221; &#8220;Region,&#8221; and &#8220;Time,&#8221; slicing the data by selecting a particular product (e.g., &#8220;Product A&#8221;) results in a two-dimensional view for &#8220;Region&#8221; and &#8220;Time.&#8221;</li>
+<li><strong>Purpose</strong>: Slicing helps narrow down a large dataset to focus on a specific segment, providing a more targeted analysis.</li>
+</ul>
+<p><strong>Example Query</strong>: Slice the sales data for &#8220;Product A&#8221; over all regions, showing sales by time.</p>
+<h3>4. <strong>Dice</strong></h3>
+<p><strong>Definition</strong>: The dice operation is similar to slicing but involves selecting specific values for two or more dimensions to create a sub-cube. It’s like slicing along multiple dimensions simultaneously.</p>
+<ul style="list-style-type: square;">
+<li><strong>Example</strong>: In a sales dataset with dimensions &#8220;Product,&#8221; &#8220;Region,&#8221; and &#8220;Time,&#8221; you could dice the data by selecting specific &#8220;Products&#8221; and &#8220;Regions&#8221; for analysis over a particular time period.</li>
+<li><strong>Purpose</strong>: Dicing enables users to focus on a specific subset of the data across multiple dimensions, allowing for a more detailed and complex analysis.</li>
+</ul>
+<p><strong>Example Query</strong>: Dicing the sales data to analyze &#8220;Product A&#8221; and &#8220;Product B&#8221; in &#8220;North America&#8221; for the months of January and February.</p>
+<h3>5. <strong>Pivot (Rotate)</strong></h3>
+<p><strong>Definition</strong>: The pivot operation involves rotating the data to view it from a different perspective. This operation changes the orientation of the data in the result set, such as swapping rows and columns.</p>
+<ul style="list-style-type: square;">
+<li><strong>Example</strong>: If you have a report showing sales data by &#8220;Region&#8221; in rows and by &#8220;Time&#8221; in columns, you can pivot the data to have &#8220;Time&#8221; in rows and &#8220;Region&#8221; in columns, changing the way data is viewed.</li>
+<li><strong>Purpose</strong>: Pivoting helps in analyzing the data from different perspectives, making it easier to identify trends or patterns.</li>
+</ul>
+</div>
+<h3>Question 8</h3>
+<div><p><p class="p1">Given the following data set, find the frequent itemset using Apriori algorithm with minimum</p>
+<p class="p1">support 3. (5)</p>
+<p class="p2">T1 {A, B, C, D, E, F}</p>
+<p class="p2">T2 {B, C, D, E, F, G}</p>
+<p class="p2">T3 {A, D, E, H}</p>
+<p class="p2">T4 {A, D, F, I, J}</p>
+<p class="p2">T5 {B, D, E, K}</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48845" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/dm2-scaled.jpg?resize=1861%2C2560&#038;ssl=1" alt="" width="1861" height="2560"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Illustrate the hierarchical clustering with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Hierarchical clustering is a method used to build a hierarchy of clusters, often represented as a tree-like structure called a <strong>dendrogram</strong>. There are two main approaches to hierarchical clustering:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Agglomerative Approach (Bottom-Up)</strong>: This method starts with each data point as a separate cluster and merges the closest clusters iteratively until all the data points are in one cluster.</li>
+<li><strong>Divisive Approach (Top-Down)</strong>: This method starts with all data points in a single cluster and splits the cluster into smaller clusters iteratively until each data point is in its own cluster.</li>
+</ol>
+<h3>Example with Five Data Points:</h3>
+<p>Let&#8217;s assume we have five points, labeled 1, 2, 3, 4, and 5. The initial step is to calculate the distances between each pair of points. For simplicity, let’s assume the distance matrix (measuring the dissimilarity between each pair of points) is given below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 68.7868%; height: 166px;">
+<thead>
+<tr>
+<th>Point</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>5</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>6</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Step 1: Start with Each Point as a Separate Cluster</h3>
+<p>Initially, each point is its own cluster. So we have:</p>
+<ul style="list-style-type: square;">
+<li>Cluster 1 = {1}</li>
+<li>Cluster 2 = {2}</li>
+<li>Cluster 3 = {3}</li>
+<li>Cluster 4 = {4}</li>
+<li>Cluster 5 = {5}</li>
+</ul>
+<h3>Step 2: Calculate the Pairwise Distances Between Clusters</h3>
+<p>We need to compute the distance between every pair of clusters. Since initially, each cluster contains only one data point, the distance between two clusters is just the distance between the points that belong to those clusters. From the table, we see that the closest clusters are:</p>
+<ul style="list-style-type: square;">
+<li>Cluster 1 (point 1) and Cluster 2 (point 2) have the distance of 3.</li>
+<li>Cluster 2 (point 2) and Cluster 4 (point 4) have the distance of 3.</li>
+<li>Cluster 1 (point 1) and Cluster 4 (point 4) have the distance of 4.</li>
+<li>Cluster 3 (point 3) and Cluster 5 (point 5) have the distance of 5.</li>
+</ul>
+<p>We merge the closest clusters first.</p>
+<h3>Step 3: Merge the Closest Clusters</h3>
+<p>We merge Cluster 1 and Cluster 2 because they are the closest (distance = 3).</p>
+<ul style="list-style-type: square;">
+<li>New Cluster = {1, 2}</li>
+</ul>
+<p>Now, we update the distances to the new cluster:</p>
+<ul style="list-style-type: square;">
+<li>Distance between Cluster {1, 2} and Cluster 3 = Average of the distances between points in {1, 2} and point 3:<br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml">(d(1,3)+d(2,3) )/ 2= (5+4) / 2=4.5</span></span></span></li>
+<li>Distance between Cluster {1, 2} and Cluster 4 = Average of the distances between points in {1, 2} and point 4:<br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml">(d(1,4)+d(2,4) ) / 2=(4+ 3) / 2=3.5</span></span></span></li>
+<li>Distance between Cluster {1, 2} and Cluster 5 = Average of the distances between points in {1, 2} and point 5:<br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml">(d(1,5)+d(2,5) ) / 2=(6+5 ) / 2=5.5</span></span></span></li>
+</ul>
+<h3>Step 4: Repeat the Process</h3>
+<p>Next, we find the closest clusters among the remaining clusters. Cluster {1, 2} and Cluster 4 have the smallest distance (3.5), so we merge them.</p>
+<ul style="list-style-type: square;">
+<li>New Cluster = {1, 2, 4}</li>
+</ul>
+<p>We now update the distances:</p>
+<ul style="list-style-type: square;">
+<li>Distance between Cluster {1, 2, 4} and Cluster 3 = Average of the distances between points in {1, 2, 4} and point 3:<br />
+(<span class="katex-display"><span class="katex"><span class="katex-mathml">d(1,3)+d(2,3)+d(4,3) )/ 3=(5+4+4 ) / 3=4.33</span></span></span></li>
+<li>Distance between Cluster {1, 2, 4} and Cluster 5 = Average of the distances between points in {1, 2, 4} and point 5:<br />
+<span class="katex-display"><span class="katex"><span class="katex-mathml">(d(1,5)+d(2,5)+d(4,5) ) / 3=6+5+4 / 3=5</span></span></span></li>
+</ul>
+<h3>Step 5: Final Merge</h3>
+<p>The closest remaining clusters are Cluster {1, 2, 4} and Cluster 3 (distance = 4.33). We merge them.</p>
+<ul style="list-style-type: square;">
+<li>New Cluster = {1, 2, 3, 4}</li>
+</ul>
+<p>Finally, we merge Cluster {1, 2, 3, 4} with Cluster 5, the only remaining cluster.</p>
+<ul style="list-style-type: square;">
+<li>Final Cluster = {1, 2, 3, 4, 5}</li>
+</ul>
+<h3></h3>
+</div>
+<h3>Question 10</h3>
+<div><p><p class="p1">Discuss about overfitting and underfitting. How precision and recall is used to evaluate classifier.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Overfitting</strong>: Occurs when a model learns the noise and details of the training data too well, making it perform well on the training set but poorly on unseen data. It results from using overly complex models or insufficient data.</p>
+<p>Solution: Use regularization, cross-validation, or simplify the model.</p>
+<p><strong>Underfitting</strong>: Happens when the model is too simple and cannot capture the underlying patterns in the data. It results in poor performance on both training and test data.</p>
+<p>Solution: Use more complex models, increase training time, or add more relevant features.</p>
+<p>Precision and Recall is used to evaluate classifier as:</p>
+<ul style="list-style-type: square;">
+<li><strong>Precision</strong>: Measures the accuracy of positive predictions. It is the ratio of true positives (TP) to the total predicted positives (TP + FP). High precision means fewer false positives.
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">Precision= (TP) / (TP+FP)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></li>
+<li><strong>Recall</strong>: Measures how many actual positives were correctly identified. It is the ratio of true positives (TP) to the total actual positives (TP + FN). High recall means fewer false negatives.
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">Recall=(TP) / (TP + FN)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p class="p1">What is the concept mini batch k-means? How DBSCAN works?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Mini-Batch K-Means</strong><br />
+Mini-Batch K-Means is a variant of the traditional K-Means algorithm designed to handle large datasets efficiently. Instead of using the entire dataset to update centroids, it uses small random subsets of the data, called mini-batches, for each update. This significantly speeds up the convergence process and reduces computational costs. The algorithm works by randomly selecting a mini-batch of data points in each iteration, updating the centroids based on the average of these points. This method is faster than the traditional K-Means, especially for large datasets, but may lead to slightly less accurate results.</p>
+<p><strong>DBSCAN</strong> is a density-based clustering algorithm that can identify clusters of arbitrary shapes and handle noise (outliers). It works by grouping points that are densely packed together and marking points in low-density regions as noise. The algorithm requires two parameters: ε (epsilon), which defines the maximum distance for points to be considered neighbors, and MinPts, the minimum number of points required to form a dense region. DBSCAN is especially useful when the number of clusters is not known in advance and can handle clusters of varying shapes and sizes. However, it is sensitive to the choice of ε and MinPts.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p class="p1">How beam search and logic programming is used to mine graph? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Beam search</strong> is a heuristic search algorithm that explores possible solutions in a graph by maintaining a limited set of the most promising candidate solutions at each step. Instead of exploring every possible path exhaustively (which can be computationally expensive), beam search keeps only the top &#8220;k&#8221; candidates based on a scoring function (e.g., likelihood, relevance, or other heuristic measures). This makes the search process more efficient, as it narrows the exploration to the most promising parts of the graph. In the context of graph mining, beam search can be used to identify interesting subgraphs, motifs, or communities by iteratively expanding and evaluating potential candidates and pruning the search space to focus on high-value patterns.</p>
+<p><strong>Logic programming,</strong> particularly languages like Prolog, allows for declarative representation of relationships and rules. It uses logical rules to infer new information from the existing graph structure based on logical constraints. In graph mining, logic programming can be used to express complex patterns, relationships, or constraints that should hold within the graph. For example, logic rules can be used to identify specific subgraph structures (like cliques, paths, or cycles) or to enforce constraints (e.g., connectivity or node degrees).</p>
+</div>
+</body></html>

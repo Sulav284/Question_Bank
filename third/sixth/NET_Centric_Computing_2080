@@ -1,0 +1,521 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NET Centric Question 2080 2080</title>
+    </head>
+    <body>
+        <h1>NET Centric Question 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>How do you cache the information of the client and what are its uses? Create a table named BAG(ID, Brand, Price, Date). Perform the following operations using Entity Framework Core.</p>
+<ol>
+<li>Update the Price of those Book to 2000 which are published on 2022.</li>
+<li>Delete the Book which are published in 1981</li>
+<li>Retrieve the Brand of Book having price greater than 500</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>How to Cache Client Information:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Client-Side Caching</strong>: The client stores data locally in memory or storage for quick access. This can be achieved using web storage mechanisms like local storage or session storage in web browsers.</li>
+<li><strong>Server-Side Caching</strong>: The server stores data in memory or disk for quick retrieval. This can be implemented using caching libraries or frameworks like Redis or Memcached.</li>
+<li><strong>Content Delivery Networks (CDNs)</strong>: CDNs cache static content like images, CSS, and JavaScript files closer to the client&#8217;s location, reducing latency and improving performance.</li>
+<li><strong>Browser Caching</strong>: HTTP headers like Cache-Control and Expires allow servers to instruct web browsers to cache resources locally, reducing the need for repeated requests.</li>
+</ol>
+<p>Uses of Client Information Caching:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Improved Performance</strong>: Caching reduces the time and resources required to fetch data from servers, resulting in faster response times and improved user experience.</li>
+<li><strong>Reduced Server Load</strong>: By serving cached content directly from the client or intermediate cache servers, the load on origin servers is reduced, leading to better scalability and resource utilization.</li>
+<li><strong>Bandwidth Savings</strong>: Caching reduces the amount of data transferred over the network, resulting in lower bandwidth usage and cost savings, particularly in bandwidth-constrained environments.</li>
+<li><strong>Offline Access</strong>: Client-side caching allows users to access previously visited content even when offline, enhancing accessibility and usability, especially in mobile applications.</li>
+<li><strong>Conservation of Resources</strong>: Caching reduces the need for repeated data fetching and processing, conserving server resources and reducing infrastructure costs.</li>
+<li><strong>Mitigation of Network Latency</strong>: Caching reduces the round-trip time for fetching data over the network, mitigating the impact of network latency and improving application responsiveness.</li>
+</ol>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
+// Define your entity class
+public class Book
+{
+    public int ID { get; set; }
+    public string Brand { get; set; }
+    public double Price { get; set; }
+    public DateTime Date { get; set; }
+}
+
+// Define your DbContext class
+public class BookContext : DbContext
+{
+    public DbSet&lt;Book&gt; BAG { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+        =&gt; options.UseSqlite("Data Source=books.db"); // Replace with your database connection string
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        // Perform operations using Entity Framework Core
+        using (var context = new BookContext())
+        {
+            // Update the Price of books published in 2022 to 2000
+            var books2022 = context.BAG.Where(b =&gt; b.Date.Year == 2022);
+            foreach (var book in books2022)
+            {
+                book.Price = 2000;
+            }
+
+            // Delete books published in 1981
+            var books1981 = context.BAG.Where(b =&gt; b.Date.Year == 1981);
+            context.BAG.RemoveRange(books1981);
+
+            // Retrieve the Brand of books having price greater than 500
+            var expensiveBooks = context.BAG.Where(b =&gt; b.Price &gt; 500).Select(b =&gt; b.Brand).ToList();
+            foreach (var brand in expensiveBooks)
+            {
+                Console.WriteLine(brand);
+            }
+
+            context.SaveChanges(); // Save changes to the database
+        }
+    }
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How do you manage state on stateless HTTP? How do you validate form using JQuery? Describe with your own assumptions.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In a stateless HTTP protocol like HTTP, managing state requires techniques such as cookies, URL parameters, hidden form fields, and server-side session management. Here&#8217;s an example of managing state using server-side session management in C#:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.SessionState;
+
+public class StateManager
+{
+    private HttpSessionState Session;
+
+    public StateManager(HttpSessionState session)
+    {
+        this.Session = session;
+    }
+
+    public void SetState(string key, object value)
+    {
+        Session[key] = value;
+    }
+
+    public T GetState&lt;T&gt;(string key)
+    {
+        if (Session[key] != null)
+        {
+            return (T)Session[key];
+        }
+        return default(T);
+    }
+
+    public void RemoveState(string key)
+    {
+        Session.Remove(key);
+    }
+}
+
+// Example usage:
+// Inside your ASP.NET WebForm or MVC controller action
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        StateManager stateManager = new StateManager(Session);
+        stateManager.SetState("username", "john_doe");
+        return View();
+    }
+}
+</pre>
+<p>Assuming you have a web form with HTML elements and you want to perform client-side validation using jQuery:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Form Validation&lt;/title&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                // Perform client-side validation
+                if (name == "") {
+                    $("#nameError").text("Name is required");
+                    return false;
+                }
+                if (email == "") {
+                    $("#emailError").text("Email is required");
+                    return false;
+                }
+                if (password == "") {
+                    $("#passwordError").text("Password is required");
+                    return false;
+                }
+                return true; // Submit the form if all fields are valid
+            });
+        });
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id="myForm" method="post" action="submit_form.aspx"&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+        &lt;span id="nameError" style="color: red;"&gt;&lt;/span&gt;&lt;br&gt;
+
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email"&gt;
+        &lt;span id="emailError" style="color: red;"&gt;&lt;/span&gt;&lt;br&gt;
+
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" id="password" name="password"&gt;
+        &lt;span id="passwordError" style="color: red;"&gt;&lt;/span&gt;&lt;br&gt;
+
+        &lt;input type="button" id="submitBtn" value="Submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What are the needs for partial class and sealed class? How do you relate delegate with events? State the steps to depl0y .NET core application.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Needs for Partial Class</strong></span></p>
+<p>Partial classes in C# allow a class, interface, or struct to be defined across multiple source files. Some common needs for partial classes include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Organizing Large Classes</strong>: When a class becomes too large or complex, splitting it into multiple partial classes can make the codebase more manageable and easier to navigate.</li>
+<li><strong>Separating Auto-generated Code</strong>: Partial classes are often used in code generation scenarios where part of the class is auto-generated by tools like Visual Studio or Entity Framework. Developers can write custom code in a separate partial class file without interfering with the auto-generated code.</li>
+<li><strong>Concurrency in Team Development</strong>: When multiple developers are working on the same class simultaneously, using partial classes can prevent conflicts when merging changes from different branches.</li>
+<li><strong>Extending Generated Classes</strong>: In scenarios where modifying auto-generated code directly is not recommended, developers can use partial classes to extend the functionality of generated classes without modifying the generated code itself.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Needs for Sealed Class</strong></span></p>
+<p>A sealed class in C# is a class that cannot be inherited. Some common needs for sealed classes include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Preventing Inheritance</strong>: Sealing a class prevents other classes from inheriting from it, which can be useful when the design of the class is complete and should not be extended further.</li>
+<li><strong>Compiler Optimization</strong>: Sealed classes allow the compiler to perform certain optimizations, such as inlining methods or optimizing memory layout, since it knows that no derived classes will override the sealed members.</li>
+<li><strong>Security Considerations</strong>: Sealing classes can enhance security by preventing unintended or malicious subclassing, ensuring that the behavior of the class remains unchanged.</li>
+<li><strong>Performance Optimization</strong>: Sealed classes can lead to performance improvements in some scenarios, as they eliminate the overhead of virtual method dispatch and dynamic dispatching.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Relationship between Delegate and Events</strong></span></p>
+<p>In C#, delegates are type-safe function pointers that are used to define and reference methods. Events, on the other hand, are a higher-level abstraction built on top of delegates, used to implement the Observer design pattern. Here&#8217;s how delegates and events are related:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Delegate</strong>: A delegate is a type that represents a reference to a method with a specific signature. Delegates can be declared using the delegate keyword and can hold references to one or more methods. Delegates are multicast, meaning they can hold references to multiple methods and invoke them sequentially.</li>
+<li><strong>Event</strong>: An event is a mechanism for one object to notify other objects when a certain action or state change occurs. Events are based on delegates and allow one or more subscribers (event handlers) to register to be notified when the event is raised. Events encapsulate the delegate instances that reference the event handlers, and they provide mechanisms for adding or removing event handlers.</li>
+</ol>
+<p>In summary, delegates provide the mechanism for defining method signatures and referencing methods, while events provide a higher-level abstraction for implementing the Observer pattern by encapsulating delegates and managing subscriptions to notifications.</p>
+<p><span style="text-decoration: underline;"><strong>Steps to Deploy .NET Core Application</strong></span></p>
+<p>Deploying a .NET Core application typically involves the following steps:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Build the Application</strong>: Use the appropriate build tool (e.g., dotnet build command) to build your .NET Core application. Ensure that all dependencies are resolved and the application compiles successfully.</li>
+<li><strong>Publish the Application</strong>: Use the dotnet publish command to publish the application for deployment. This command compiles the application and its dependencies into a folder that contains all the files necessary to run the application on the target environment.</li>
+<li><strong>Configure Deployment Environment</strong>: Set up the deployment environment, including any necessary infrastructure (e.g., servers, databases) and configurations (e.g., environment variables, connection strings).</li>
+<li><strong>Transfer Files</strong>: Transfer the published application files to the deployment environment using secure file transfer protocols such as FTP, SCP, or rsync.</li>
+<li><strong>Configure Web Server</strong>: If deploying a web application, configure the web server (e.g., IIS, Apache, Nginx) to host the application. Set up any required configurations, such as specifying the entry point (e.g., index.html, startup.cs) and configuring routing.</li>
+<li><strong>Set Permissions</strong>: Ensure that appropriate permissions are set for the deployed files and directories to allow the application to execute and access necessary resources.</li>
+<li><strong>Test Deployment</strong>: Perform testing to ensure that the deployed application functions correctly in the production environment. Test various scenarios to validate functionality, performance, and security.</li>
+<li><strong>Monitor and Maintain</strong>: Monitor the deployed application for performance issues, errors, and security vulnerabilities. Implement regular maintenance tasks, such as applying updates, patches, and backups, to ensure the ongoing health and stability of the application.</li>
+</ol>
+</div>
+<h2>Group B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Desribe the importance of MVC pattern in designing web applications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <strong>Model-View-Controller (MVC)</strong> pattern is a widely used architectural pattern in designing web applications. It provides a structured and organized way to separate concerns within an application, promoting modularity, maintainability, and scalability. The importance of the MVC pattern in designing web applications:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Separation of Concerns</strong>: MVC separates the application into three distinct components: Model, View, and Controller. Each component has a specific responsibility, making the codebase easier to understand, maintain, and extend. The separation of concerns also enables parallel development and testing of different components.</li>
+<li><strong>Modularity and Reusability</strong>: By dividing the application into modular components, MVC encourages code reuse and modularity. Developers can create reusable models, views, and controllers that can be used across multiple parts of the application or even in different applications altogether, leading to more efficient development and reduced duplication of code.</li>
+<li><strong>Testability</strong>: MVC promotes testability by decoupling the application logic from the user interface. With MVC, it&#8217;s easier to write unit tests for individual components (e.g., controllers and models) without needing to involve the user interface (e.g., views). This makes it easier to verify the correctness of the application&#8217;s behavior and identify and fix issues early in the development process.</li>
+<li><strong>Flexibility and Maintainability</strong>: MVC allows for flexible and maintainable codebases by enabling developers to make changes to one component without affecting the others. For example, changes to the user interface can be made in the view layer without modifying the underlying application logic in the controller or model. This promotes code maintainability and reduces the risk of introducing unintended side effects.</li>
+<li><strong>Scalability</strong>: MVC provides a scalable architecture that can accommodate the growth and evolution of web applications over time. As the complexity of the application increases or new features are added, developers can easily extend or modify individual components without having to refactor the entire codebase. This allows for more agile development and easier adaptation to changing requirements.</li>
+<li><strong>Code Organization and Readability</strong>: MVC promotes clean and organized code by enforcing a clear separation of concerns. Developers can easily locate and understand different parts of the application, making it easier to collaborate, debug, and maintain the codebase over time. Additionally, MVC encourages adherence to coding best practices and design principles, leading to more readable and maintainable code.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How do you create controller? Mention some requirements for rendering HTML.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In C#, creating a controller typically involves following certain conventions within the chosen framework, such as ASP.NET MVC or ASP.NET Core MVC. Here&#8217;s a basic example of how you can create a controller in ASP.NET Core MVC:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using Microsoft.AspNetCore.Mvc;
+
+namespace YourNamespace.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View(); // Render corresponding view (Index.cshtml)
+        }
+
+        // Other action methods can be added here
+    }
+}
+</pre>
+<p>In this example:</p>
+<ul style="list-style-type: square;">
+<li>We create a HomeController class that inherits from Controller, which is provided by ASP.NET Core MVC.</li>
+<li>We define an action method named Index() that returns an IActionResult. This method will be invoked when the /Home/Index route is requested.</li>
+<li>Inside the Index() action method, we return a View() result, which indicates that ASP.NET Core MVC should render a view associated with this action method.</li>
+</ul>
+<p>Requirements for rendering HTML:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>View Templates</strong>: You need to create HTML templates (view files) that correspond to your action methods. These view files typically have the extension .cshtml in ASP.NET MVC and ASP.NET Core MVC.</li>
+<li><strong>Model Binding</strong>: If your action method requires data from the client (e.g., form submissions), you&#8217;ll need to use model binding to bind the incoming data to C# model objects. Model binding automatically maps form values or query string parameters to properties of your model class.</li>
+<li><strong>Data Passing</strong>: You can pass data from your controller to the view using ViewBag, ViewData, or strongly-typed models. ViewBag and ViewData are dynamic and weakly-typed, while strongly-typed models provide compile-time safety and intellisense support.</li>
+<li><strong>HTML Helpers</strong>: ASP.NET MVC and ASP.NET Core MVC provide HTML Helper methods that generate HTML markup programmatically. These helpers simplify common HTML tasks and provide additional functionality, such as URL generation and form rendering.</li>
+<li><strong>Layouts</strong>: You can define layout views to create a consistent look and feel across multiple pages in your application. Layout views typically contain shared HTML markup (e.g., headers, footers, navigation menus) and define placeholders where content from individual views can be inserted.</li>
+<li><strong>Localization and Internationalization</strong>: If your application needs to support multiple languages or regions, you can use localization and internationalization techniques to render HTML content in different languages based on the user&#8217;s preferences.</li>
+</ol>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is the role of adapter class in ADO.NET? List some features of URL routing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In ADO.NET, the Adapter class plays a crucial role in bridging the gap between the DataSet/DataTable and the data source, facilitating data retrieval, manipulation, and updates. Here&#8217;s an overview of the role of the Adapter class in ADO.NET:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data Retrieval</strong>: The Adapter class is responsible for fetching data from the data source and populating the DataSet/DataTable with the retrieved data. It executes SQL commands (e.g., SELECT queries) against the database and fills the DataSet/DataTable with the resulting data.</li>
+<li><strong>Data Manipulation</strong>: Once data is loaded into the DataSet/DataTable, the Adapter class enables data manipulation operations such as adding, updating, and deleting rows. It generates and executes SQL commands (e.g., INSERT, UPDATE, DELETE) to apply changes made to the DataSet/DataTable back to the data source.</li>
+<li><strong>Connection Management</strong>: The Adapter class manages the underlying database connection, including opening and closing connections as needed during data retrieval and manipulation operations. It also handles connection pooling to improve performance and resource utilization.</li>
+<li><strong>Data Source Independence</strong>: The Adapter class abstracts away the details of the underlying data source, allowing developers to work with data in a database-agnostic manner. This promotes code portability and flexibility, as the same code can be used with different database providers (e.g., SQL Server, Oracle, MySQL) by simply changing the connection string.</li>
+<li><strong>Optimized Data Access</strong>: The Adapter class provides mechanisms for optimizing data access operations, such as batch processing and parameterized queries, to improve performance and reduce network overhead.</li>
+<li><strong>Concurrency Control</strong>: The Adapter class supports concurrency control mechanisms such as optimistic concurrency, allowing multiple users to work with the same data concurrently while preventing conflicts and data inconsistencies.</li>
+</ol>
+<p><strong>Features of URL Routing:</strong></p>
+<p>URL routing is a mechanism used in web applications to map URLs to specific controller actions or resources. Some features of URL routing include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Pattern-based Routing</strong>: URL routing allows developers to define routes using pattern-based syntax, where placeholders can be used to capture variable parts of the URL. This enables the creation of flexible and expressive routing rules.</li>
+<li><strong>Route Parameters</strong>: Routes can define parameters that extract values from the URL and pass them to the corresponding controller actions as arguments. This allows controllers to access data from the URL, such as IDs or query parameters.</li>
+<li><strong>Route Constraints</strong>: Constraints can be applied to route parameters to restrict the values they can match. Constraints provide validation and filtering capabilities, ensuring that only valid URLs are matched by the route.</li>
+<li><strong>Route Prefixes and Defaults</strong>: Routes can be organized hierarchically using route prefixes, allowing for logical grouping of related routes. Default values can also be specified for route parameters, providing fallback values when parameters are not provided in the URL.</li>
+<li><strong>Route Names and URL Generation</strong>: Routes can be assigned names, which simplifies URL generation in views and controllers. By referring to route names instead of hardcoding URLs, developers can ensure consistency and avoid errors when generating links and redirects.</li>
+<li><strong>Route Areas</strong>: Routes can be organized into areas, which are logical partitions of an application that contain related functionality. Areas allow for better organization and separation of concerns in large applications with multiple modules or features.</li>
+<li><strong>Route Attributes</strong>: In ASP.NET Core MVC, route attributes can be applied directly to controller actions to define custom routing rules. This provides a more declarative and concise way to define routes compared to traditional route configuration.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain the chances of SQL injection attack with a scenario.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>SQL injection</strong> is a type of cyber attack that occurs when an attacker inserts malicious SQL code into input fields of a web application, exploiting vulnerabilities in the application&#8217;s SQL query construction. Let&#8217;s illustrate SQL injection with a scenario:</p>
+<p>Suppose we have a simple web application that allows users to search for products in an online store. The application allows users to search for products by entering keywords into a search box. The search functionality is implemented using SQL queries, where the user input is concatenated directly into the query string.</p>
+<p>Here&#8217;s an example of a vulnerable SQL query in the application:</p>
+<p>SELECT * FROM Products WHERE ProductName = &#8216;[USER_INPUT]&#8217;;</p>
+<p>In this query, [USER_INPUT] represents the user-supplied input, which is concatenated directly into the SQL query without proper validation or sanitization.</p>
+<p>Now, consider an attacker who wants to exploit this vulnerability to perform a SQL injection attack. The attacker may attempt the following steps:</p>
+<p>The attacker crafts malicious input containing SQL code that alters the behavior of the query. For example, the attacker may input:</p>
+<p>&#8216; OR 1=1; &#8212;</p>
+<p>The attacker enters the crafted input into the search box and submits the form.</p>
+<p>The SQL query generated by the application becomes:</p>
+<p>SELECT * FROM Products WHERE ProductName = &#8221; OR 1=1; &#8211;&#8216;;</p>
+<p>As a result, the SQL query executed by the database becomes:</p>
+<p>SELECT * FROM Products WHERE ProductName = &#8221; OR 1=1; &#8211;&#8216;;</p>
+<p>The OR 1=1 condition always evaluates to true, effectively bypassing any existing WHERE clause. The double hyphens &#8212; denote the start of a comment in SQL, causing the remainder of the query to be treated as a comment and ignored by the database.</p>
+<p>The modified query retrieves all records from the Products table, as the WHERE clause always evaluates to true. This means that the attacker gains unauthorized access to all product information stored in the database, potentially exposing sensitive data such as customer details, pricing information, and more. In addition to data retrieval, attackers can also perform other malicious actions, such as modifying or deleting data, depending on the permissions granted to the database user account used by the web application.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define claim and policy in terms of authorization. How and when do you create hidden fields?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In terms of authorization, a &#8220;<strong>claim</strong>&#8221; is a piece of information about a user, typically represented as a key-value pair, that asserts a particular attribute or property of the user, and a &#8220;<strong>policy</strong>&#8221; is a set of rules or criteria that specify the conditions under which access to a particular resource or action is granted or denied based on the claims associated with the user.</p>
+<p>In C#, hidden fields are commonly used in web applications to store data on the client-side that needs to be submitted along with form data but is not displayed to the user. They are typically rendered as &lt;input type=&#8221;hidden&#8221;&gt; elements in HTML forms. Here&#8217;s an example of how you can create and use hidden fields in a C# web application:</p>
+<p>Suppose you have a simple ASP.NET Core MVC application with a form that allows users to submit their contact information. You want to include a hidden field to store additional metadata, such as the source page from which the form was accessed.</p>
+<p>First, let&#8217;s create a Razor view file (ContactForm.cshtml) that includes the form with a hidden field:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">@model ContactViewModel
+
+&lt;form method="post" action="/Contact/Submit"&gt;
+    &lt;input type="text" name="Name" placeholder="Name"&gt;
+    &lt;input type="email" name="Email" placeholder="Email"&gt;
+    &lt;!-- Hidden field for storing the source page --&gt;
+    &lt;input type="hidden" name="SourcePage" value="@ViewBag.SourcePage"&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+<p>In this view:</p>
+<ul style="list-style-type: square;">
+<li>We define a form that submits data to the /Contact/Submit endpoint via the POST method.</li>
+<li>We include regular input fields for the user&#8217;s name and email.</li>
+<li>We add a hidden field named &#8220;SourcePage&#8221; to store the source page URL. The value of this hidden field is retrieved from the ViewBag.SourcePage.</li>
+</ul>
+<p>Next, let&#8217;s create a controller (ContactController.cs) to handle form submissions:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using Microsoft.AspNetCore.Mvc;
+
+public class ContactController : Controller
+{
+    [HttpGet]
+    public IActionResult Index()
+    {
+        // Store the source page URL in ViewBag
+        ViewBag.SourcePage = Request.Headers["Referer"].ToString();
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Submit(ContactViewModel model)
+    {
+        // Process form submission and store the contact information
+        // Access the hidden field value from the model
+        string sourcePage = model.SourcePage;
+
+        // Do something with the contact information (e.g., save to database)
+
+        // Redirect the user to a thank you page
+        return RedirectToAction("ThankYou");
+    }
+
+    public IActionResult ThankYou()
+    {
+        return View();
+    }
+}
+</pre>
+<p>In this controller:</p>
+<ul style="list-style-type: square;">
+<li>The Index action method renders the ContactForm view and stores the source page URL in the ViewBag.SourcePage property. We retrieve the source page URL from the HTTP referer header.</li>
+<li>The Submit action method handles form submissions. It receives the form data in a ContactViewModel object, including the value of the hidden field (&#8220;SourcePage&#8221;). We can access the hidden field value from the model and process the form submission accordingly.</li>
+<li>After processing the form submission, the user is redirected to a thank you page (ThankYou.cshtml).</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Mention the two types of services managed by IoC container and how they are registered?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Inversion of Control (IoC) containers manage two types of services: Transient services and Singleton services. These services are registered with the IoC container using different methods. Here&#8217;s an explanation of each type of service and how they are registered:</p>
+<p><strong>Transient Services</strong>:</p>
+<p>Transient services are created each time they are requested by a consuming component.</p>
+<p>They are typically used for lightweight and stateless components.</p>
+<p>Transient services are suitable for components that have a short lifespan and do not maintain state between method calls.</p>
+<p>Examples include repositories, data access objects, and service classes.</p>
+<p>To register a transient service with an IoC container (such as ASP.NET Core&#8217;s built-in container or third-party containers like Autofac or Unity), you typically use the AddTransient method (or equivalent) during application startup. For example, in ASP.NET Core&#8217;s Startup class:</p>
+<p>public void ConfigureServices(IServiceCollection services)<br />
+{<br />
+services.AddTransient&lt;ITransientService, TransientService&gt;();<br />
+}</p>
+<p>In this example, ITransientService is the interface representing the transient service, and TransientService is the concrete implementation.</p>
+<p><strong>Singleton Services</strong>:</p>
+<p>Singleton services are created once and shared across all consuming components throughout the lifetime of the application.</p>
+<p>They are typically used for stateful components that should maintain state and be available globally.</p>
+<p>Singleton services are suitable for components that are expensive to create or that need to maintain shared state between multiple consumers.</p>
+<p>Examples include caching services, configuration providers, and logging services.</p>
+<p>To register a singleton service with an IoC container, you typically use the AddSingleton method (or equivalent) during application startup. For example, in ASP.NET Core&#8217;s Startup class:</p>
+<p>public void ConfigureServices(IServiceCollection services)<br />
+{<br />
+services.AddSingleton&lt;ISingletonService, SingletonService&gt;();<br />
+}</p>
+<p>In this example, ISingletonService is the interface representing the singleton service, and SingletonService is the concrete implementation.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between generic and non-generic collections. Write a simple program to create generic class with generic constructor, generic member variable, generic property and generic method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 336px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Generic Collection</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Non-generic collection</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; text-align: center; height: 96px;">Generic collections in C# are type-safe collections that allow you to store and manipulate elements of a specific data type.</td>
+<td style="width: 50%; text-align: center; height: 96px;">Non-generic collections in C# are collections that store elements of type object, allowing you to store objects of any type.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; text-align: center; height: 96px;">They are defined using generic types, which enable you to specify the type of elements that the collection can contain at compile time.</td>
+<td style="width: 50%; text-align: center; height: 96px;">They are not type-safe, meaning that you can store any type of object in the collection without type checking at compile time.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; text-align: center; height: 96px;">Generic collections offer compile-time type safety and better performance by avoiding the need for boxing and unboxing operations.</td>
+<td style="width: 50%; text-align: center; height: 96px;">Non-generic collections require explicit casting when retrieving elements, which can lead to runtime errors if the wrong type is cast.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Examples of generic collections include List&lt;T&gt;, Dictionary&lt;TKey, TValue&gt;, Queue&lt;T&gt;, Stack&lt;T&gt;, etc.</td>
+<td style="width: 50%; text-align: center; height: 24px;">Examples of non-generic collections include ArrayList, Hashtable, Queue, Stack, etc.</td>
+</tr>
+</tbody>
+</table></div>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">using System;
+
+// Define a generic class
+public class MyGenericClass&lt;T&gt;
+{
+    private T _genericField;
+
+    // Generic constructor
+    public MyGenericClass(T value)
+    {
+        _genericField = value;
+    }
+
+    // Generic property
+    public T GenericProperty { get; set; }
+
+    // Generic method
+    public void GenericMethod(T value)
+    {
+        Console.WriteLine($"Generic Method: {value}");
+    }
+
+    // Method to display generic field value
+    public void DisplayGenericField()
+    {
+        Console.WriteLine($"Generic Field Value: {_genericField}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating an instance of MyGenericClass with int type
+        MyGenericClass&lt;int&gt; intGenericClass = new MyGenericClass&lt;int&gt;(100);
+        intGenericClass.DisplayGenericField(); // Output: Generic Field Value: 100
+        intGenericClass.GenericProperty = 200;
+        Console.WriteLine($"Generic Property Value: {intGenericClass.GenericProperty}"); // Output: Generic Property Value: 200
+        intGenericClass.GenericMethod(300); // Output: Generic Method: 300
+
+        // Creating an instance of MyGenericClass with string type
+        MyGenericClass&lt;string&gt; stringGenericClass = new MyGenericClass&lt;string&gt;("Hello, World!");
+        stringGenericClass.DisplayGenericField(); // Output: Generic Field Value: Hello, World!
+        stringGenericClass.GenericProperty = "Goodbye!";
+        Console.WriteLine($"Generic Property Value: {stringGenericClass.GenericProperty}"); // Output: Generic Property Value: Goodbye!
+        stringGenericClass.GenericMethod("Nice to meet you!"); // Output: Generic Method: Nice to meet you!
+    }
+}
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are tag helpers? What tag helper provides?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Tag Helpers are a feature introduced in ASP.NET Core MVC that allow developers to create server-side components to generate HTML elements in Razor views using C# code. They provide a more natural and readable syntax for working with HTML elements compared to traditional HTML helpers or writing raw HTML markup.</p>
+<p>Tag Helpers resemble HTML tags but are processed on the server-side by the ASP.NET Core runtime, enabling them to interact with server-side code and dynamically generate HTML content based on application logic.</p>
+<p>Tag Helpers provide several benefits:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Intuitive Syntax</strong>: Tag Helpers use HTML-like syntax, making it easier for developers familiar with HTML to understand and work with them. This leads to cleaner and more readable Razor views.</li>
+<li><strong>Type Safety</strong>: Since Tag Helpers are written in C# code, they offer compile-time checking and type safety. This helps catch errors early in the development process and provides better tooling support in IDEs like Visual Studio.</li>
+<li><strong>Code Reusability</strong>: Tag Helpers can encapsulate complex functionality into reusable components. Developers can create custom Tag Helpers to encapsulate common UI patterns or application-specific logic, promoting code reuse and maintainability.</li>
+<li><strong>Server-side Processing</strong>: Unlike client-side frameworks like Angular or React, Tag Helpers run on the server-side, allowing them to interact with server-side resources and generate dynamic content based on server-side data.</li>
+<li><strong>Integration with ASP.NET Core Features</strong>: Tag Helpers seamlessly integrate with other ASP.NET Core features such as routing, model binding, and authentication. They can access route data, model properties, and other server-side constructs directly, simplifying the development of MVC applications.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two)</p>
+<ol>
+<li>Lambda Expression</li>
+<li>Cross Site Request Forgery</li>
+<li>Single Page Application</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Lambda Expression:</strong></p>
+<p>Lambda expressions in C# are a concise way to represent anonymous methods, allowing you to write inline functions without explicitly declaring a separate method. Lambda expressions are particularly useful when working with functional programming constructs such as LINQ queries or when passing behavior as arguments to methods.</p>
+<p>Key points about Lambda Expressions:</p>
+<ol style="list-style-type:decimal;">
+<li>Syntax: Lambda expressions have a compact syntax using the =&gt; (lambda operator), where the left side represents input parameters and the right side represents the expression or statement block.</li>
+<li>Anonymous Functions: Lambda expressions are anonymous functions, meaning they do not have a name like regular methods or delegates.</li>
+<li>Inline Usage: Lambda expressions can be used inline within method calls or expressions, reducing the need for separate method definitions.</li>
+<li>Capture Variables: Lambda expressions can capture variables from their surrounding scope, allowing them to access and manipulate variables defined outside the lambda expression.</li>
+<li>Type Inference: Compiler can infer the types of input parameters and return type based on the context, simplifying lambda expression syntax.</li>
+</ol>
+<p>Example:</p>
+<p>// Lambda expression to square a number<br />
+Func&lt;int, int&gt; square = x =&gt; x * x;<br />
+int result = square(5); // Output: 25</p>
+<p><strong>Cross-Site Request Forgery (CSRF):</strong></p>
+<p>Cross-Site Request Forgery (CSRF) is a type of security vulnerability where an attacker tricks a user into unknowingly executing unauthorized actions on a web application in which they are authenticated. The attack occurs by exploiting the trust that a web application has in the user&#8217;s browser, often through social engineering techniques such as phishing emails or malicious websites.</p>
+<p>Key points about CSRF:</p>
+<ol style="list-style-type:decimal;">
+<li>Unauthorized Actions: CSRF attacks allow attackers to perform unauthorized actions on behalf of a user without their consent, such as changing account settings, making purchases, or transferring funds.</li>
+<li>Trust Exploitation: Attackers exploit the trust that a web application places in the user&#8217;s browser, leveraging the user&#8217;s existing session or authentication cookies to execute malicious requests.</li>
+<li>Prevention: CSRF attacks can be prevented by implementing anti-CSRF measures such as using CSRF tokens, validating the origin of requests, and implementing strict authentication and authorization controls.</li>
+<li>Impact: CSRF attacks can lead to various security risks, including unauthorized data access, financial loss, reputational damage, and legal consequences.</li>
+</ol>
+<p><strong>Single Page Application (SPA):</strong></p>
+<p>Single Page Application (SPA) is a web application architecture that delivers a seamless user experience by dynamically updating the content of a single web page in response to user interactions, without the need for full page reloads. SPAs are typically built using client-side technologies such as HTML, CSS, and JavaScript frameworks/libraries (e.g., Angular, React, Vue.js).</p>
+<p>Key points about SPAs:</p>
+<ol style="list-style-type:decimal;">
+<li>Dynamic Content: SPAs load a single HTML page initially and dynamically update its content using JavaScript, AJAX, and client-side routing in response to user interactions.</li>
+<li>Improved Performance: SPAs offer improved performance and responsiveness by minimizing page reloads and reducing server roundtrips, resulting in faster navigation and better user experience.</li>
+<li>Separation of Concerns: SPAs follow a clear separation of concerns between client-side and server-side components, with the server primarily responsible for providing data through APIs (e.g., RESTful APIs) and the client handling presentation and user interactions.</li>
+<li>Challenges: SPAs come with challenges such as search engine optimization (SEO) issues, initial page load time, and increased complexity in managing client-side state and routing.</li>
+<li>Frameworks/Libraries: Popular JavaScript frameworks and libraries like Angular, React, and Vue.js provide powerful tools and abstractions for building SPAs, simplifying development and enhancing productivity.</li>
+</ol>
+</div>
+</body></html>

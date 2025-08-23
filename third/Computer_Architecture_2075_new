@@ -1,0 +1,272 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CA Question Bank 2075 (New) 2075</title>
+    </head>
+    <body>
+        <h1>CA Question Bank 2075 (New) - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Questions: Attempt any Two questions:</h2><h3>Question 1</h3>
+<div><p><p>In the RISC architecture, what is meant by over lapping register window? Explain the relationship among register windows with over lapping register windows.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18821" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/SmartSelect_20230608_203900_CamScanner.jpg?resize=919%2C1282&#038;ssl=1" alt="" width="919" height="1282"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18822" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/SmartSelect_20230608_203931_CamScanner.jpg?resize=957%2C1484&#038;ssl=1" alt="" width="957" height="1484"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18823" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/SmartSelect_20230608_203953_CamScanner.jpg?resize=957%2C1434&#038;ssl=1" alt="" width="957" height="1434"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18824" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/SmartSelect_20230608_204025_CamScanner.jpg?resize=957%2C1430&#038;ssl=1" alt="" width="957" height="1430"></p>
+<p>Also refer to the following answer:</p>
+<p>In the Reduced Instruction Set Computing (RISC) architecture, a register window is a set of registers that are used to hold temporary values during the execution of a program. The register window concept is used to improve the performance of the processor by reducing the time it takes to access registers.</p>
+<p>Overlapping register windows refer to a design feature in some RISC architectures where multiple register windows overlap in memory, allowing the processor to switch between them quickly. This can be useful for implementing functions and procedures, as it allows the processor to quickly switch between the registers used by different functions or procedures without having to save and restore them from the main memory.</p>
+<p>The relationship between register windows and overlapping register windows is that overlapping register windows allow the processor to switch between different sets of registers more quickly and efficiently, improving the performance of the processor. This can be especially useful in cases where the processor needs to frequently switch between different sets of registers, such as when executing functions or procedures.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the Flynn’s classification of computer architectures with diagrams.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>On the basis of Instruction Stream and Data Stream, Computer are classified info 4 types. They are called Flynn&#8217;s Classifications. They are</p>
+<ol style="list-style-type:decimal;">
+<li>Single Instruction Stream, Single Data Stream (SISD)</li>
+<li>Single Instruction Stream, Multiple Data Stream (SIMD)</li>
+<li>Multiple Instruction Stream, Single Data Stream (MISD)</li>
+<li>Multiple Instruction Stream, Multiple Data Stream (MIMD)</li>
+</ol>
+<h4><span style="text-decoration: underline;">1.Single Instruction Stream, Single Data Stream (SISD)</span></h4>
+<ul style="list-style-type: square;">
+<li>Organization of a single computer containing a control unit, a processor unit and a memory unit.</li>
+<li>Instruction are executed sequentially.</li>
+<li>System may or may not have internal parallel processing capability.</li>
+<li>Parallel Processing may be achieved by means of multiple functional units or by pipeline processing.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5294" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/sisd.png?resize=300%2C261&#038;ssl=1" alt="Single Instruction Stream, Single Data Stream (SISD) | Flynn's Classification" width="300" height="261" /></p>
+<h4><span style="text-decoration: underline;">2. Single Instruction Stream, Multiple Data Stream (SIMD)</span></h4>
+<ul style="list-style-type: square;">
+<li>It represent an organization of computer that includes many processing unit and the control of common control unit (CU).</li>
+<li>All the processor receives the same instruction from the control unit (CU) but operates in different items of data.</li>
+<li>The shared memory unit must contains multiple modules so that it can communicate with all the processor simultaneously.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5295" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/simd.png?resize=299%2C235&#038;ssl=1" alt="Single Instruction Stream, Multiple Data Stream (SIMD) | Flynn's Classification" width="299" height="235" /></p>
+<h4><span style="text-decoration: underline;">3. Multiple Instruction Stream, Single Data Stream (MISD)</span></h4>
+<ul style="list-style-type: square;">
+<li>Only theoretical</li>
+<li>Multiple instruction on single data is not possible practically</li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5293" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/misd.png?resize=306%2C182&#038;ssl=1" alt="Multiple Instruction Stream, Single Data Stream (MISD) | Flynn's Classification" width="306" height="182" /></p>
+<h4><span style="text-decoration: underline;">4. Multiple Instruction Stream, Multiple Data Stream (MIMD)</span></h4>
+<ul style="list-style-type: square;">
+<li>It refers to a computer system that ha capability of processing several program at a same time.</li>
+<li>Multiprocessor computer system</li>
+<li>Multicomputer system</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-5292" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/mimd.png?resize=305%2C175&#038;ssl=1" alt="Multiple Instruction Stream, Multiple Data Stream (MIMD) | Flynn's Classification" width="305" height="175" /></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What are the different types of pipe line hazards? Explain each pipe line hazard with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Any condition that causes a stall in the pipeline operations can be called a hazard.</p>
+<p>Pipeline hazards are situations that prevent the next instruction in the instruction stream from executing during its designated clock cycles.</p>
+<p>There are primarily three types of hazards:</p>
+<ol style="list-style-type:decimal;">
+<li>Data Hazards</li>
+<li>Control Hazards or instruction Hazards</li>
+<li>Structural Hazards.</li>
+</ol>
+<h4>1. Data Hazards:</h4>
+<p>A data hazard is any condition in which either the source or the destination operands of an instruction are not available at the time expected in the pipeline. As a result of which some operation has to be delayed and the pipeline stalls. Whenever there are two instructions one of which depends on the data obtained from the other.</p>
+<p>A=3+A</p>
+<p>B=A*4</p>
+<p>For the above sequence, the second instruction needs the value of ‘A’ computed in the first instruction.</p>
+<p>Thus the second instruction is said to depend on the first.</p>
+<p>If the execution is done in a pipelined processor, it is highly likely that the interleaving of these two instructions can lead to incorrect results due to data dependency between the instructions. Thus the pipeline needs to be stalled as and when necessary to avoid errors.</p>
+<h4>3. Structural Hazards:</h4>
+<p>This situation arises mainly when two instructions require a given hardware resource at the same time and hence for one of the instructions the pipeline needs to be stalled.</p>
+<p>The most common case is when memory is accessed at the same time by two instructions. One instruction may need to access the memory as part of the Execute or Write back phase while other instruction is being fetched. In this case if both the instructions and data reside in the same memory. Both the instructions can’t proceed together and one of them needs to be stalled till the other is done with the memory access part. Thus in general sufficient hardware resources are needed for avoiding structural hazards.</p>
+<h4>3. Control hazards:</h4>
+<p>The instruction fetch unit of the CPU is responsible for providing a stream of instructions to the execution unit. The instructions fetched by the fetch unit are in consecutive memory locations and they are executed.</p>
+<p>However the problem arises when one of the instructions is a branching instruction to some other memory location. Thus all the instruction fetched in the pipeline from consecutive memory locations are invalid now and need to removed(also called flushing of the pipeline).This induces a stall till new instructions are again fetched from the memory address specified in the branch instruction.</p>
+<p>Thus the time lost as a result of this is called a branch penalty. Often dedicated hardware is incorporated in the fetch unit to identify branch instructions and compute branch addresses as soon as possible and reducing the resulting delay as a result.</p>
+</div>
+<h2>Short Questions:: Attempt any Eight questions:</h2><h3>Question 4</h3>
+<div><p><p>Explain the computer components.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="ql-align-justify">Computer systems consist of three components as shown in below image: Central Processing Unit, Input devices and Output devices. Input devices provide data input to processor, which processes data and generates useful information that’s displayed to the user through output devices. This is stored in computer’s memory.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-5281 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/components_of_computer.jpg?resize=510%2C263&#038;ssl=1" alt="" width="510" height="263"></p>
+<h2>Central Processing Unit</h2>
+<p class="ql-align-justify">The Central Processing Unit (CPU) is called &#8220;the brain of computer&#8221; as it controls operation of all parts of computer. It consists of two components: Arithmetic Logic Unit (ALU), and Control Unit.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-5279 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/02/cpu.jpg?resize=330%2C361&#038;ssl=1" alt="" width="330" height="361"></p>
+<h2>Arithmetic Logic Unit (ALU)</h2>
+<p class="ql-align-justify">Data entered into computer is sent to RAM, from where it is then sent to ALU, where rest of data processing takes place. All types of processing, such as comparisons, decision-making and processing of non-numeric information takes place here and once again data is moved to RAM.</p>
+<h2>Control Unit</h2>
+<p class="ql-align-justify">As name indicates, this part of CPU extracts instructions, performs execution, maintains and directs operations of entire system.</p>
+<h3>Functions of Control Unit</h3>
+<p class="ql-align-justify">Control unit performs following functions −</p>
+<ul style="list-style-type: square;">
+<li>It controls all activities of computer</li>
+<li>Supervises flow of data within CPU</li>
+<li>Directs flow of data within CPU</li>
+<li>Transfers data to Arithmetic and Logic Unit</li>
+<li>Transfers results to memory</li>
+<li>Fetches results from memory to output devices</li>
+</ul>
+<h2>Memory Unit</h2>
+<p class="ql-align-justify">This is unit in which data and instructions given to computer as well as results given by computer are stored. Unit of memory is &#8220;Byte&#8221;.</p>
+<p class="ql-align-center">1 Byte = 8 Bits</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the store-program concept with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The term <strong>Stored Program Control Concept</strong> refers to the storage of instructions in computer memory to enable it to perform a variety of tasks in sequence or intermittently.</p>
+<p>In the stored program concept, both the instructions and the data (that the instructions operate on) are stored in the computer memory itself. Before the introduction of this idea, instructions and data were considered two totally different entities and were thus stored separately.</p>
+<p>Thus instructions like data can be read from the memory and written to the memory by the processor.</p>
+<p>The processor then addresses the memory, reads the corresponding instructions, executes them and according to the executed instruction, processes (reads and writes) data as well.</p>
+<p>Computers that store both instructions and data on the same memory are said to be based on the <strong>Von Neumann architecture.</strong> Modern desktop computers are still based on the same stored program concept.</p>
+<p>The basic idea of this concept is given in Figure below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18802" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/storedprogram.jpg?resize=313%2C111&#038;ssl=1" alt="" width="313" height="111"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between CISC and RISC architectures.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between RISC and CISC are</p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>RISC</th>
+<th>CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focus on software</td>
+<td>Focus on hardware</td>
+</tr>
+<tr>
+<td>Uses only Hardwired control unit</td>
+<td>Uses both hardwired and micro programmed control unit</td>
+</tr>
+<tr>
+<td>Transistors are used for more registers</td>
+<td>Transistors are used for storing complex<br />
+Instructions</td>
+</tr>
+<tr>
+<td>Fixed sized instructions</td>
+<td>Variable sized instructions</td>
+</tr>
+<tr>
+<td>Can perform only Register to Register Arithmetic operations</td>
+<td>Can perform REG to REG or REG to MEM or MEM to MEM</td>
+</tr>
+<tr>
+<td>Requires more number of registers</td>
+<td>Requires less number of registers</td>
+</tr>
+<tr>
+<td>Code size is large</td>
+<td>Code size is small</td>
+</tr>
+<tr>
+<td>An instruction execute in a single clock cycle</td>
+<td>Instruction takes more than one clock cycle</td>
+</tr>
+<tr>
+<td>An instruction fit in one word</td>
+<td>Instructions are larger than the size of one word</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between instruction pipeline and an arithmetic pipeline.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>Arithmetic Pipeline</h3>
+<p>Arithmetic pipelines are usually found in most of the computers. They are used for floating point operations, multiplication of fixed point numbers etc. For example: The input to the Floating Point Adder pipeline is:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">X = A*2^a
+Y = B*2^b</pre>
+<p>Here A and B are mantissas (significant digit of floating point numbers), while <b>a</b> and <b>b</b> are exponents.</p>
+<p>The floating point addition and subtraction is done in 4 parts:</p>
+<ol class="content">
+<li>Compare the exponents.</li>
+<li>Align the mantissas.</li>
+<li>Add or subtract mantissas</li>
+<li>Produce the result.</li>
+</ol>
+<p>Registers are used for storing the intermediate results between the above operations.</p>
+<h3>Instruction Pipeline</h3>
+<p>In this a stream of instructions can be executed by overlapping <i>fetch</i>, <i>decode</i> and <i>execute</i> phases of an instruction cycle. This type of technique is used to increase the throughput of the computer system.</p>
+<p>An instruction pipeline reads instruction from the memory while previous instructions are being executed in other segments of the pipeline. Thus we can execute multiple instructions simultaneously. The pipeline will be more efficient if the instruction cycle is divided into segments of equal duration.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Divide 10/4 using non-restoring division.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18810" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/Screenshot_20230608_195740_CamScanner.jpg?resize=913%2C1402&#038;ssl=1" alt="" width="913" height="1402"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Define associative memory. Explain with block diagram how it can be implemented</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The time required to find an item stored in memory can be reduced considerably if stored data can be identified for access by the content of the data itself rather than by an address. A memory unit accessed by content is called an associative memory or content addressable memory (CAM). This type of memory is accessed simultaneously and in parallel on the basis of data content rather than by specific address or location. When a word is written in an associative memory, no address is given. The memory is capable of finding an empty unused location to store the word. When a word is to be read from an associative memory, the content of the word, or part of the word, is specified. The memory locates all words which match the specified content and marks them for reading. An associative memory is more expensive than a random access memory because each cell must have storage capability as well as logic circuits for matching its content with an external argument. For this reason, associative memories are used in applications where the search time is very critical and must be very short</p>
+<p>The block diagram of an associative memory is shown below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18749" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/ass-2.jpg?resize=419%2C369&#038;ssl=1" alt="" width="419" height="369"></p>
+<p>It consists of a memory array and logic for m words with n bits per word.<br />
+The argument register A and key register K each have n bits, one for each bit of a word.<br />
+The match register M has m bits, one for each memory word.<br />
+Each word in memory is compared in parallel with the content of the argument register.<br />
+The words that match the bits of the argument register set a corresponding bit in the match register.<br />
+After the matching process, those bits in the match register that have been set indicate the fact that their corresponding words have been matched. Reading is accomplished by a sequential access to memory for those words whose corresponding bits in the match register have been set.</p>
+<p>The key register provides a mask for choosing a particular field or key in the argument word.<br />
+The entire argument is compared with each memory word if the key register contains all 1’s. Otherwise, only those bits in the argument that have 1’s in their corresponding position of the key register are compared.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Differentiate between hardwired control unit and a micro programmed control unit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differentiate between hardwired control unit and a micro programmed control unit are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table width="100%">
+<thead>
+<tr>
+<th>Hardwired Control Unit</th>
+<th>Microprogrammed Control Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardwired control unit generates the control signals needed for the processor using logic circuits</td>
+<td>Microprogrammed control unit generates the control signals with the help of micro instructions stored in control memory</td>
+</tr>
+<tr>
+<td>Hardwired control unit is faster when compared to microprogrammed control unit as the required control signals are generated with the help of hardwires</td>
+<td>This is slower than the other as micro instructions are used for generating signals here</td>
+</tr>
+<tr>
+<td>Difficult to modify as the control signals that need to be generated are hard wired</td>
+<td>Easy to modify as the modification need to be done only at the instruction level</td>
+</tr>
+<tr>
+<td>More costlier as everything has to be realized in terms of logic gates</td>
+<td>Less costlier than hardwired control as only micro instructions are used for generating control signals</td>
+</tr>
+<tr>
+<td>It cannot handle complex instructions as the circuit design for it becomes complex</td>
+<td>It can handle complex instructions</td>
+</tr>
+<tr>
+<td>Only limited number of instructions are used due to the hardware implementation</td>
+<td>Control signals for many instructions can be generated</td>
+</tr>
+<tr>
+<td>Used in computer that makes use of Reduced Instruction Set Computers(RISC)</td>
+<td>Used in computer that makes use of Complex Instruction Set Computers(CISC)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How does DMA controller work? Give an example of DMA data transfer</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Direct Memory Access:</p>
+<p>This technique of I/O operation has a separate module called DMA module. The DMA module takes control over the system Bus and transfer data between memory and I/O device directly.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18805" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/dma1.jpg?resize=529%2C99&#038;ssl=1" alt="" width="529" height="99"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18806" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/dmac.jpg?resize=486%2C291&#038;ssl=1" alt="" width="486" height="291"></p>
+<p>The CPU initializes the DMA by sending the given information through the data bus.</p>
+<p>The starting address of the memory block where the data is available (to read) or where data are to be stored (to write).</p>
+<p>It also sends word count which is the number of words in the memory block to be read or written.</p>
+<p>Control to define the mode of transfer such as read or write.</p>
+<p>A control to begin the DMA transfer.</p>
+<p>Modes of Data Transfer in DMA</p>
+<p>There are 3 modes of data transfer in DMA that are described below.</p>
+<p>Burst Mode: In Burst Mode, buses are handed over to the CPU by the DMA if the whole data is completely transferred, not before that.</p>
+<p>Cycle Stealing Mode: In Cycle Stealing Mode, buses are handed over to the CPU by the DMA after the transfer of each byte. Continuous request for bus control is generated by this Data Transfer Mode. It works more easily for higher-priority tasks.</p>
+<p>Transparent Mode: Transparent Mode in DMA does not require any bus in the transfer of the data as it works when the CPU is executing the transaction.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Explain an inter connection network and its use.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Interconnection network are used to connect nodes, where nodes can be a single processor or group of processors, to other nodes.</p>
+<p>Interconnection networks can be categorized on the basis of their topology. Topology is the pattern in which one node is connected to other nodes.</p>
+<p>There are two main types of topology: static and dynamic.</p>
+<p>Static interconnect networks are hard-wired and cannot change their configurations. A regular static interconnect is mainly used in small networks made up of loosely couple nodes.</p>
+<p>Examples: Completely connected network, shared bus, tree, ring, hypercube.</p>
+<p>In dynamic interconnect networks, the nodes are interconnected via an array of simple switching elements.</p>
+<p>Dynamic interconnections can be classified as: Single stage, Multistage and Crossbar switch.</p>
+<p>One of the interconnection networks, hypercube are a type of network used to connect multiple processors with memory modules and accurately route data.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-18803" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/11/hypercube_interconnection.jpg?resize=571%2C642&#038;ssl=1" alt="" width="571" height="642"></p>
+</div>
+</body></html>

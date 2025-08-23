@@ -1,0 +1,758 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>C Question Bank 2074 2074</title>
+    </head>
+    <body>
+        <h1>C Question Bank 2074 - 2074</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempts any two questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>Discuss structure of a C Program with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Any C program is consists of 6 sections. Below you will find brief explanation of each of them.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%;"><strong>Basic Structure of C Program</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">Documentation Section</td>
+</tr>
+<tr>
+<td style="width: 100%;">Link Section</td>
+</tr>
+<tr>
+<td style="width: 100%;">Definition Section</td>
+</tr>
+<tr>
+<td style="width: 100%;">Global Declaration Section</td>
+</tr>
+<tr>
+<td style="width: 100%;">main() Function section</p>
+<p>{</p>
+<p>Declaration Part 1</p>
+<p>Execution Part</p>
+<p>}</td>
+</tr>
+<tr>
+<td style="width: 100%;">Subprogram Sections</p>
+<p>Function 1</p>
+<p>Function 2</p>
+<p>&#8211;</p>
+<p>&#8211;</p>
+<p>Function n</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1. <strong>Documentation Section</strong></h3>
+<p>Here we can see two types of comments in the above program. Comments are the explanation or description of source code that does not affect your program logic in any way. Comments are neglected by compilers or interpreters.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">// This is single line comments
+
+/*
+*    This
+*        is
+*          the multiple line comment.
+*/</pre>
+<h3>2. Link Section</h3>
+<p>This part of the code is used to declare all the header files that will be used in the program. This leads to the compiler being told to link the header files to the system libraries.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;</pre>
+<h3><strong>3. Definition Section</strong></h3>
+<p>In this section, we define different constants. The keyword define is used in this part.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#define PI 3.14</pre>
+<h3><strong>4. Global Declaration Section</strong></h3>
+<p>This part of the code is the part where the global variables are declared. All the global variable used are declared in this part. The user-defined functions are also declared in this part of the code.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">float area(float r);
+int a=7;</pre>
+<h3><strong>5. Main Function Section</strong></h3>
+<p>Every C-programs needs to have the main function. Each main function contains 2 parts. A declaration part and an Execution part. The declaration part is the part where all the variables are declared. The execution part begins with the curly brackets and ends with the curly close bracket. Both the declaration and execution part are inside the curly braces.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int main()
+{
+
+    //statements
+
+}</pre>
+<h3><strong>6. Sub Program Section</strong></h3>
+<p>All the user-defined functions are defined in this section of the program.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">float area(float r)
+{
+     return PI * r * r;
+}</pre>
+<h3><strong>#Sample Program</strong></h3>
+<p>The C program here will find the area of a circle using a user-defined function and a global variable pi holding the value of pi</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">//a program to calculate area of circle
+
+/** link section */
+#include&lt;stdio.h&gt;
+
+/** defination section */
+#define PI 3.142 
+
+/** Global Declaration */
+float area(float r);
+
+/** main function */
+int main(){
+	float r;
+	printf("Enter the radius: ");
+	scanf("%f", &amp;r);
+	printf("Area of Circle = %f ", area(r));
+	return 0;
+}
+
+/** sub program */
+float area(float r){
+	return PI * r * r;
+}</pre>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Discuss different types of if statements with example of each. Differentiate if statement with switch statement.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are 4 different types of if statements in C programming.</p>
+<ul style="list-style-type: square;">
+<li>if statement</li>
+<li>if….else statement</li>
+<li>else…..if statement</li>
+<li>nested if….else statement</li>
+</ul>
+<h3><span id="1_IF_Statement">1. IF Statement</span></h3>
+<p><var>If</var> the statement is a powerful decision-making statement and is used to control the flow of execution of statements. It basically a two-way decision statement and is used together with an expression, i.e. test condition. The <var>if</var> statement evaluates the expression first and then, if the value the expression is true, it executes the statement within the block. Otherwise, it skips the statements within its block and continues from the first statement outside the if block. It takes the form,</p>
+<p>Syntax:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">if(condition)
+{
+    statement-block;
+}
+statement-x;</pre>
+<p>Example</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main(){
+
+    int num = 10;
+
+    if(num % 2 == 0){
+        printf("Number is Even\n");
+    }
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<p><em>Number is Even </em></p>
+<h3><span id="2_IF8230ELSE_Statement">2. IF…ELSE Statement</span></h3>
+<p>The <var>if…else</var> statement is an extension of the simple <var>if </var>statement. It is used when there are two possible actions – one when a condition is true, and the other when it is false. The general form is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">if(condition)
+{
+    true_block statement;
+}
+else
+{
+    false_block statement;
+}
+statement-x;</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main(){
+
+    int num = 10;
+
+    if(num % 2 == 0)
+    {
+        printf("Number is Even\n");
+    }
+    else
+    {
+        printf("Number is Odd\n");
+    }
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<p><em>Number is Even </em></p>
+<h3><span id="3_ELSE8230IF_Statement">3. ELSE…IF Statement</span></h3>
+<p>The <var>else if</var> the statement is used when there are more than two possible actions depending upon the outcome of the test. When an action is taken, no others can be executed or taken. In such a situation, the <var>if…else if…else if….else</var> statement is used. This structure takes the form,</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">if(condition-1)
+{
+   statement-1;
+}
+else if(condition-2)
+{
+   statement-2;
+}
+else if(condition-3)
+{
+   statement-3;
+}
+else
+{
+    default-statement;
+}</pre>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main(){
+
+    int num = 15;
+
+    if(num % 2 == 0)
+    {
+        printf("Number is Even\n");
+    }
+    else if(num % 3 == 0)
+    {
+        printf("Number is Odd\n");
+    }
+    else
+    {
+        printf("Invalid Number\n");
+    }
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<p><em>Number is Odd</em></p>
+<h3><span id="4_Nested_IF8230ELSE_Statement">4. Nested IF…ELSE Statement</span></h3>
+<p>Nested <var>IF…ELSE</var> statement means there is an <var>IF</var> condition inside the <var>if</var> condition. The syntax looks like this.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">if(condition)
+{
+    if(condition-2)
+    {
+        statement-1;
+    }
+    else
+    {
+        statement-2;
+    }
+}
+else
+{
+    statement-3;
+}</pre>
+<p>Let’s look at examples to make clear concepts on nested if…else condition.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include  &lt; stdio.h&gt;
+
+int main(){
+
+    int num = 15;
+
+    if(num % 2 == 0)
+    {
+        if(num &gt; 5 == 0)
+        {
+            printf("Number is greater than 5 and Even\n");
+        }else{
+           printf("Number is lessa than 5 andEven\n");
+        }
+    }
+    else
+    {
+        printf("Number is Odd\n");
+    }
+
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Number is greater than 5 and Even</pre>
+<p><span style="font-size: 8pt;"><em>Source: <a href="https://codehelppro.com/detail/c-programming/if-else/" rel="nofollow noopener" target="_blank">https://codehelppro.com/detail/c-programming/if-else/</a></em></span></p>
+<p>The Difference between if and switch statement</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>Basis</th>
+<th>If-else</th>
+<th>switch</th>
+</tr>
+<tr>
+<td><strong>Definition</strong></td>
+<td>Depending on the condition in the &#8216;if&#8217; statement, &#8216;if&#8217; and &#8216;else&#8217; blocks are executed.</td>
+<td>The user will decide which statement is to be executed.</td>
+</tr>
+<tr>
+<td><strong>Expression</strong></td>
+<td>It contains either logical or equality expression.</td>
+<td>It contains a single expression which can be either a character or integer variable.</td>
+</tr>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>It evaluates all types of data, such as integer, floating-point, character or Boolean.</td>
+<td>It evaluates either an integer, or character.</td>
+</tr>
+<tr>
+<td><strong>Sequence of execution</strong></td>
+<td>First, the condition is checked. If the condition is true then &#8216;if&#8217; block is executed otherwise &#8216;else&#8217; block</td>
+<td>It executes one case after another till the break keyword is not found, or the default statement is executed.</td>
+</tr>
+<tr>
+<td><strong>Default execution</strong></td>
+<td>If the condition is not true, then by default, else block will be executed.</td>
+<td>If the value does not match with any case, then by default, default statement is executed.</td>
+</tr>
+<tr>
+<td><strong>Editing</strong></td>
+<td>Editing is not easy in the &#8216;if-else&#8217; statement.</td>
+<td>Cases in a switch statement are easy to maintain and modify. Therefore, we can say that the removal or editing of any case will not interrupt the execution of other cases.</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>If there are multiple choices implemented through &#8216;if-else&#8217;, then the speed of the execution will be slow.</td>
+<td>If we have multiple choices then the switch statement is the best option as the speed of the execution will be much higher than &#8216;if-else&#8217;.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is structure? How is it different from array? Create a structure student having data members name, roll-number and percentage. Complete the program to display the name of student having percentage greater than or equal to 60.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A structure is a collection of variables under a single name. These variables can be of different types, and each has a name that is used to select it from the structure. The variables are called <strong>members of the structure</strong>. A structure is a convenient way of grouping general pieces of the related information together.</p>
+<p>A structure can be defined as a new named type or user-defined data type, thus extending the number of available types. It can be our other structures, arrays, or pointers as some of its members.</p>
+<p>The syntax of structure is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">struct structure_name
+{
+    data_type member_variables1;
+    data_type member_variables2;
+    ...... .......
+    data_type member_variablesn;
+}</pre>
+<p>Once structure_name is declared as a new data type, the variable of that can be declared as</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">struct structure_name structure_variable;</pre>
+<p>The major difference between array and structure are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>ARRAY</th>
+<th>STRUCTURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array refers to a collection consisting of elements of homogeneous data type.</td>
+<td>Structure refers to a collection consisting of elements of heterogeneous data type.</td>
+</tr>
+<tr>
+<td>Array uses subscripts or “[ ]” (square bracket) for element access</td>
+<td>Structure uses “.” (Dot operator) for element access</td>
+</tr>
+<tr>
+<td>Array is pointer as it points to the first element of the collection.</td>
+<td>Structure is not a pointer</td>
+</tr>
+<tr>
+<td>Instantiation of Array objects is not possible.</td>
+<td>Instantiation of Structure objects is possible.</td>
+</tr>
+<tr>
+<td>Array size is fixed and is basically the number of elements multiplied by the size of an element.</td>
+<td>Structure size is not fixed as each element of Structure can be of different type and size.</td>
+</tr>
+<tr>
+<td>Bit filed is not possible in an Array.</td>
+<td>Bit filed is possible in an Structure.</td>
+</tr>
+<tr>
+<td>Array declaration is done simply using [] and not any keyword.</td>
+<td>Structure declaration is done with the help of “struct” keyword.</td>
+</tr>
+<tr>
+<td>Arrays is a non-primitive datatype</td>
+<td>Structure is a user-defined datatype.</td>
+</tr>
+<tr>
+<td>Array traversal and searching is easy and fast.</td>
+<td>Structure traversal and searching is complex and slow.</td>
+</tr>
+<tr>
+<td>data_type array_name[size];</td>
+<td>struct sruct_name{ data_type1 ele1; data_type2 ele2; };</td>
+</tr>
+<tr>
+<td>Array elements are stored in continuous memory locations.</td>
+<td>Structure elements may or may not be stored in a continuous memory location.</td>
+</tr>
+<tr>
+<td>Array elements are accessed by their index number using subscripts.</td>
+<td>Structure elements are accessed by their names using dot operator.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Program Part:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+struct Student{
+    char name[20];
+    int roll;
+    int percentage;
+};
+
+void main(){
+
+    struct Student s[100];
+    int n, i;
+
+    printf("Enter number of students: ");
+    scanf("%d", &amp;n);
+
+    for( i = 0; i &lt; n; i++ ){
+        printf("Enter %d Student Name, Roll No and Percentage: \n", i + 1);
+        scanf("%s%d%d", &amp;s[i].name, &amp;s[i].roll, &amp;s[i].percentage);
+    }
+
+    printf("Students which have percenatge greater than 60 are : \n");
+    for(int i = 0; i &lt; n; i++){
+        if( s[i].percentage &gt;= 60 ){
+            printf("%s\n", s[i].name);
+        }
+    }
+
+}</pre>
+</div>
+<h2>Section B: Attempts any eight questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>What is algorithm? How is it different from flow chart?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An algorithm is a finite sequence of well-defined instructions, typically used to solve a class of specific problems or to perform a computation.</p>
+<p>The following are the features of a good algorithm;</p>
+<p><strong>Precision</strong>: a good algorithm must have a certain outlined steps. The steps should be exact enough, and not varying.</p>
+<ul style="list-style-type: square;">
+<li><strong>Uniqueness</strong>: each step taken in the algorithm should give a definite result as stated by the writer of the algorithm. The results should not fluctuate by any means.</li>
+<li><strong>Feasibility</strong>: the algorithm should be possible and practicable in real life. It should not be abstract or imaginary.</li>
+<li><strong>Input:</strong> a good algorithm must be able to accept a set of defined input.</li>
+<li><strong>Output</strong>: a good algorithm should be able to produce results as output, preferably solutions.</li>
+<li><strong>Finiteness</strong>: the algorithm should have a stop after a certain number of instructions.</li>
+<li><strong>Generality</strong>: the algorithm must apply to a set of defined inputs.</li>
+</ul>
+<p>The difference between algorithm and flowchart is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table width="100%">
+<tbody>
+<tr>
+<th>SN</th>
+<th>Algorithm</th>
+<th>Flowchart</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>Algorithm is step by step procedure to solve the problem.</td>
+<td>Flowchart is a diagram created by different shapes to show the flow of data.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Algorithm is complex to understand.</td>
+<td>Flowchart is easy to understand.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>In algorithm plain text are used.</td>
+<td>In flowchart, symbols/shapes are used.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Algorithm is easy to debug.</td>
+<td>Flowchart it is hard to debug.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Algorithm is difficult to construct.</td>
+<td>Flowchart is simple to construct.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Algorithm does not follow any rules.</td>
+<td>Flowchart follows rules to be constructed.</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Algorithm is the pseudo code for the program.</td>
+<td>Flowchart is just graphical representation of that logic.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is type conversion? Discuss type casting with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Type conversion is converting one type of data type to another type. It is also known as Type casting. Type conversion in C can be classified as</p>
+<ol style="list-style-type:decimal;">
+<li>Implicit Type Conversion</li>
+<li>Explicit Type Conversion</li>
+</ol>
+<h3>1. Implicit Type Conversion</h3>
+<p>When the type conversion is performed automatically by the compiler without programmer&#8217;s intervention, such type of conversion is known as implicit type conversion or type promotion.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int x;
+for(x = 97; x &lt;= 122; x++){
+   
+    //Implicit casting from int to char
+    printf("%c", x);
+
+}</pre>
+<h3>b. Explicit Type Conversion</h3>
+<p>Th type conversion performed by the programmer by using posing the data type of the expression of the specific type is known as explicit type conversion. The explicit type conversion is also knowns type casting. Type casting in c is done in following form:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">(data_type) expression;</pre>
+<p>Where, data_type is any valid C data type and expression may be constant, variable or expression.</p>
+<p>For Example</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">int x = 7, y = 5;
+float z;
+z = (float) x / (float) y;</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Discuss increment and decrement operators with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>C has two special unary operators called increment (<code>++</code>) and decrement (<code>--</code>) operators. These operators increment and decrement value of a variable by <code>1</code>.</p>
+<p><code>++x</code> is same as <code>x = x + 1</code> or <code>x += 1</code><br />
+<code>--x</code> is same as <code>x = x - 1</code> or <code>x -= 1</code></p>
+<p>Increment and decrement operators can be used only with variables. They can&#8217;t be used with constants or expressions.</p>
+<p>Increment/Decrement operators are of two types:</p>
+<ol style="list-style-type:decimal;">
+<li>Prefix increment/decrement operator.</li>
+<li>Postfix increment/decrement operator.</li>
+</ol>
+<h3>1. Prefix increment/decrement operator</h3>
+<p>The prefix increment/decrement operator immediately increases or decreases the current value of the variable. This value is then used in the expression. Let&#8217;s take an example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">y = ++x;</pre>
+<p>Here first, the current value of x is incremented by 1. The new value of x is then assigned to y. Similarly, in the statement:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">y = --x;</pre>
+<p>The following program demonstrates prefix increment/decrement operator in action:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int x = 12, y = 1;
+
+    printf("Initial value of x = %d\n", x); // print the initial value of x
+    printf("Initial value of y = %d\n\n", y); // print the initial value of y
+
+    y = ++x; // increment the value of x by 1 then assign this new value to y
+
+    printf("After incrementing by 1: x = %d\n", x);
+    printf("y = %d\n\n", y);
+
+    y = --x; // decrement the value of x by 1 then assign this new value to y
+
+    printf("After decrementing by 1: x = %d\n", x);
+    printf("y = %d\n\n", y);
+
+    // Signal to operating system everything works fine
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Initial value of x = 12
+Initial value of y = 1
+
+After incrementing by 1: x = 13
+y = 13
+
+After decrementing by 1: x = 12
+y = 12</pre>
+<h3 class="heading">2. Postfix Increment/Decrement operator</h3>
+<p>The postfix increment/decrement operator causes the current value of the variable to be used in the expression, then the value is incremented or decremented. For example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">y = x++;</pre>
+<p>Here first, the current value of <code>x</code> is assigned to <code>y</code> then <code>x</code> is incremented.</p>
+<p>Similarly, in the statement:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">y = x--;</pre>
+<p>the current value of <code>x</code> is assigned to <code>y</code> then <code>x</code> is decremented.</p>
+<p>The following program demonstrates postfix increment/decrement operator in action:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int x = 12, y = 1;
+
+    printf("Initial value of x = %d\n", x); // print the initial value of x
+    printf("Initial value of y = %d\n\n", y); // print the initial value of y
+
+    y = x++; // use the current value of x then increment it by 1
+
+    printf("After incrementing by 1: x = %d\n", x);
+    printf("y = %d\n\n", y);
+
+    y = x--; // use the current value of x then decrement it by 1
+
+    printf("After decrementing by 1: x = %d\n", x);
+    printf("y = %d\n\n", y);
+
+    // Signal to operating system everything works fine
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Initial value of x = 12
+Initial value of y = 1
+
+After incrementing by 1: x = 13
+y = 12
+
+After decrementing by 1: x = 12
+y = 13</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program that computes the sum of digits of a given integer number</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num, sum=0;
+
+    /* Input a number from user */
+    printf("Enter any number to find sum of its digit: ");
+    scanf("%d", &amp;num);
+
+    /* Repeat till num becomes 0 */
+    while(num!=0)
+    {
+        /* Find last digit of num and add to sum */
+        sum += num % 10;
+
+        /* Remove last digit from num */
+        num = num / 10;
+    }
+
+    printf("Sum of digits = %d", sum);
+
+    return 0;
+}</pre>
+<p>The output above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Enter any number to find sum of its digit: 1234
+Sum of digits = 10</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is function? Discuss the benefits of using function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Function is a logically grouped set of statements that perform a specific task. In C program, a function is created to achieve something. Every C program has at least one function i.e. <em>main() </em>where the execution of the program starts. It is a mandatory function in C.</p>
+<p>There are type of functions</p>
+<ol style="list-style-type:decimal;">
+<li>Standard Library Functions</li>
+<li>User Defined Functions</li>
+</ol>
+<p>The advantages of using functions are:</p>
+<ul style="list-style-type: square;">
+<li>Avoid repetition of codes.</li>
+<li>Increases program readability.</li>
+<li>Divide a complex problem into simpler ones.</li>
+<li>Reduces chances of error.</li>
+<li>Modifying a program becomes easier by using function.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Write a program to find sum and average of 10 integer numbers stored in an array.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int array[50], i, n, sum = 0;
+    float avg;
+
+    printf("How namy numbers? ");
+    scanf("%d", &amp;n);
+
+    for(i=0; i&lt;n; i++)
+    {
+        printf("Enter the %d numbers: ", i + 1);
+        scanf("%d", &amp;array[i]);
+    }
+
+    for (i = 0; i &lt; n; i++)
+    {
+        sum = sum + array[i];
+    }
+
+    printf("The sum of 10 numbers you entered is=%d\n", sum);
+    avg = (float)sum / n;
+    printf("The avg of the 10 numbers you entered is=%.2f\n", avg);
+    return 0;
+}</pre>
+<p>The output of above program is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">How namy numbers? 5
+Enter the 1 numbers: 1
+Enter the 2 numbers: 2
+Enter the 3 numbers: 3
+Enter the 4 numbers: 4
+Enter the 5 numbers: 5
+The sum of 10 numbers you entered is=15
+The avg of the 10 numbers you entered is=3.00</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define pointer. Discuss the relationship between pointer and one-dimensional array</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A pointer is a variable that contains a memory address of data or another variable. Normally, a pointer variable is declared to some type, like any other variables, so that it will work only with data of given type.</p>
+<p>The syntax of pointer is</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">data_type *pointer;</pre>
+<h3>Relationship between pointer and one-dimensional array</h3>
+<p>An array is a block of sequential data. Let&#8217;s write a program to print addresses of array elements.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+int main() {
+   int x[4];
+   int i;
+
+   for(i = 0; i &lt; 4; ++i) {
+      printf("&amp;x[%d] = %p\n", i, &amp;x[i]);
+   }
+
+   printf("Address of array x: %p", x);
+
+   return 0;
+}</pre>
+<p>The output of above program si</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&amp;x[0] = 1450734448
+&amp;x[1] = 1450734452
+&amp;x[2] = 1450734456
+&amp;x[3] = 1450734460
+Address of array x: 1450734448</pre>
+<p>There is a difference of 4 bytes between two consecutive elements of array <var>x</var>. It is because the size of <code>int</code> is 4 bytes (on our compiler).</p>
+<p>Notice that, the address of <var>&amp;x[0]</var> and <var>x</var> is the same. It&#8217;s because the variable name <var>x</var> points to the first element of the array.</p>
+<p><img decoding="async" class="aligncenter" style="width: 299px; height: 83px;" src="data:image/webp;base64,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" alt="User Loaded Image | CSIT Guide" /></p>
+<p>From the above example, it is clear that <code>&amp;x[0]</code> is equivalent to <var>x</var>. And, <code>x[0]</code> is equivalent to <code>*x</code>.</p>
+<p>Similarly,</p>
+<ul style="list-style-type: square;">
+<li><code>&amp;x[1]</code> is equivalent to <code>x+1</code> and <code>x[1]</code> is equivalent to <code>*(x+1)</code>.</li>
+<li><code>&amp;x[2]</code> is equivalent to <code>x+2</code> and <code>x[2]</code> is equivalent to <code>*(x+2)</code>.</li>
+<li>&#8230;</li>
+<li>Basically, <code>&amp;x[i]</code> is equivalent to <code>x+i</code> and <code>x[i]</code> is equivalent to <code>*(x+i)</code>.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write a program to read and print data stored in a file input.txt.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main()
+{
+   char ch;
+   FILE *fp;
+
+   fp = fopen("input.txt", "r");
+
+   if (fp == NULL)
+   {
+      printf("Error while opening the file.\n");
+      exit(0);
+   }
+
+   printf("The contents of %s file are:\n", file_name);
+
+   while((ch = fgetc(fp)) != EOF)
+      printf("%c", ch);
+
+   fclose(fp);
+   return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Why do we need graphics functions? Write a program to draw a circle.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Graphics programming in C <b>used to drawing various geometrical shapes(rectangle, circle eclipse etc)</b>, use of mathematical function in drawing curves, coloring an object with different colors and patterns and simple animation programs like jumping ball and moving cars.</p>
+<p>C graphics using graphics. h functions or WinBGIM (Windows 7) can be used to draw different shapes, display text in different fonts, change colors and many more. Using functions of graphics. You can draw circles, lines, rectangles, bars and many other geometrical figures.</p>
+<p>Common used graphics functions are:</p>
+<ol style="list-style-type:decimal;">
+<li>Arc()</li>
+<li>circle()</li>
+<li>closegraph()</li>
+<li>ellipse()</li>
+<li>getcolor()</li>
+<li>getmaxx()</li>
+<li>getmaxy()</li>
+<li>getpixel()</li>
+<li>getx()</li>
+<li>gety()</li>
+<li>line()</li>
+<li>putpixel()</li>
+<li>rectangle()</li>
+<li>setcolor()</li>
+</ol>
+<p><strong>Program Part:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include&lt;stdio.h&gt;
+#include &lt;graphics.h&gt;
+
+int main()
+{
+    int gd = DETECT, gm;
+
+    initgraph(&amp;gd, &amp;gm, "");
+
+    circle(250, 200, 50);
+
+    closegraph();
+    return 0;
+}
+</pre>
+</div>
+</body></html>

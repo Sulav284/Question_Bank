@@ -1,0 +1,380 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAM Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>SAM Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Define queuing system. Explain different queuing disciplines. Also explain different performance measures for evaluation of queuing system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The line where the entities or customer wait is generally known as a queue. The combination of all entities in the system being served and waiting for service will be called a queueing system.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10960 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-4.png?resize=416%2C191&#038;ssl=1" alt="" width="416" height="191"></p>
+<p style="font-weight: 400;"><b>Queue discipline</b> refers to the rule that a server uses to choose the next customer from the queue when the server completes the service of the current customer. Common queue disciplines include first-in-first-out (FIFO); last-in-first-out (LIFO); service in random order (SIRO); shortest processing time first (SPT); and service according to priority (PR).</p>
+<ul style="font-weight: 400;">
+<li><b><em>First in first out: </em></b>This principle states that customers are served one at a time and that the customer that has been waiting for the longest is served first.</li>
+<li><b><em>Last in first out: </em></b>This principle also serves customers one at a time, however, the customer with the shortest waiting time will be served first.</li>
+<li><b><em>Service in random order:</em></b> A customer is picked up randomly from the waiting queue for service.</li>
+<li><b><em>Shortest job first: </em></b>The next job to be served is the one with the smallest size (shortest service time).</li>
+<li><b><em>Priority:</em></b> Customers with high priority are served first.</li>
+</ul>
+<p style="font-weight: 400;">The performance of a queuing system can be evaluated in terms of a number of response parameters, however, the following four are generally employed.</p>
+<ul style="font-weight: 400;">
+<li>The average number of customers in the queue or in the system</li>
+<li>Average waiting time of the customer in the queue or in the system</li>
+<li>System utilization (Server utilization)</li>
+<li>The cost of waiting time and idle time</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;">If Ta and Ts be their arrival time and the mean service time then</li>
+</ol>
+<ul style="font-weight: 400;">
+<li><b>Arrival rate </b>λ=1/Ta</li>
+<li><b>Service rate</b> μ=1/Ts</li>
+<li><b>Average number of customer in the system</b> = λ/(μ &#8211; λ)</li>
+<li><b>Average number of customer in the queue</b> = λ2/μ(μ &#8211; λ)</li>
+<li><b>Average waiting time in the system</b> = 1/(μ &#8211; λ)</li>
+<li><b>Average waiting time in the queue</b> = λ/μ(μ &#8211; λ)</li>
+</ul>
+<ol start="2">
+<li style="font-weight: 400;">The ratio of the mean service time to the mean inter-arrival time is called <b>traffic </b><b>intensity</b>. i.e.  u=Ts/Ta</li>
+<li style="font-weight: 400;"><b>Server utilization: </b>It consists of only the arrival that gets served. It is denoted by and defined as</li>
+</ol>
+<p style="font-weight: 400;">        ρ= λTs= λ/ μ (server utilization for a single server).</p>
+<p style="font-weight: 400;">        ρ= λTs= λ/ nμ (server utilization for <b><i>n</i></b> server).</p>
+<ol start="4">
+<li style="font-weight: 400;">The probability of finding the service counter free is (1 – ρ) i.e there are zero customers in the service facility.</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Difference between chi-square test and KS test for uniformity. Use KS test to check for the uniformity for the input set of random numbers given below. 0.54, 0.73, 0.98, 0.11, 0.68, 0.45. Assume level of significance to be D<sub>α</sub>=0.05 => 0.565</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The <b><i>Chi Square test </i></b>is used to test whether the distribution of nominal variables is same or not as well as for other distribution matches and on the other hand the <b><i>Kolmogorov Smirnov (K-S)</i></b> test is only used to test to the goodness of fit for a continuous data.</p>
+<p><i>Kolmogorov Smirnov (K-S)</i> test compares the continuous cdf, F(X), of the uniform distribution to the empirical cdf, SN(x), of the sample of N observations. By definition,</p>
+<p>F(x) = x, 0 &lt;= x &lt;= 1</p>
+<p>If the sample from the random-number generator is R<sub>1</sub>, R<sub>2</sub>,&#8230;&#8230;,R<sub>N</sub>, then the empirical cdf, S<sub>N</sub>(X), is defined by</p>
+<p>S<sub>N</sub>(X) = (Number of R<sub>1</sub>, R<sub>2</sub>,&#8230;&#8230;,R<sub>N</sub> which are &lt;= x)/N</p>
+<p>As N becomes larger, SN(X) should become a better approximation to F(X), provided that the null hypothesis is true. The Kolmogorov-Smirnov test is based on the largest absolute deviation or difference between F(x) and S<sub>N</sub>(X) over the range of the random variable. I.e. it is based on the statistic</p>
+<p>D = max | F(x) &#8211; S<sub>N</sub>(x)|</p>
+<p>The <b><i>chi-square test</i></b> uses the sample statistic</p>
+<p>\(X^2 = \sum_{i=1}^n \frac{(O_i &#8211; E_i)^2}{E_i}\)</p>
+<p>&nbsp;</p>
+<p style="font-weight: 400;">Where O<sub>i</sub> is the observed number in the i<sup>th</sup> class, E<sub>i </sub>is the expected number in the i<sup>th</sup> class, and n is the number of classes. For the uniform distribution, E<sub>i</sub> is the expected number in each class is given by: E<sub>i</sub> = N/n, N is the total number of observations.</p>
+<p style="font-weight: 400;"><b>Now,</b></p>
+<p style="font-weight: 400;">Given the sequence of numbers,</p>
+<p style="font-weight: 400;">    0.54, 0.73, 0.98, 0.11,0.68 and 0.45</p>
+<p style="font-weight: 400;">Arranging the given number in ascending order:</p>
+<p style="font-weight: 400;">    0.11, 0.45, 0.54, 0.68, 0.73, 0.98</p>
+<p style="font-weight: 400;">Here, N = 6</p>
+<p style="font-weight: 400;">Calculation table for Kolmogorov-Smirnov test :</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="font-weight: 400;">
+<tbody>
+<tr>
+<td><b><em>i</em></b></td>
+<td>R<sub>(i)</sub></td>
+<td>i/N</td>
+<td>\(\frac{i }{N} &#8211; R_{(i)}\)</td>
+<td>\(R_{(i)} &#8211; \frac{i &#8211; 1}{N}\)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.11</td>
+<td>0.17</td>
+<td>0.06</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.45</td>
+<td>0.33</td>
+<td>&#8211;</td>
+<td>0.28</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.54</td>
+<td>0.5</td>
+<td>&#8211;</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.68</td>
+<td>0.67</td>
+<td>0.07</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.73</td>
+<td>0.83</td>
+<td>0.1</td>
+<td>0.06</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.98</td>
+<td>1</td>
+<td>0.02</td>
+<td>0.15</td>
+</tr>
+</tbody>
+</table></div>
+<p style="font-weight: 400;">Now, calculating</p>
+<p style="font-weight: 400;">D<sup>+</sup> = \(max \enspace 1\leq i \leq N \left \{ \frac{i}{N} &#8211; R_{(i)} \right \}\) = 0.1</p>
+<p>D<sup>&#8211;</sup> = \(max \enspace 1\leq i \leq N \left \{ R_{(i)} &#8211; \frac{i}{N}\right \}\) = 0.28</p>
+<p>D = max(D<sup>+</sup>, D<sup>&#8211;</sup>) = 0.28</p>
+<p style="font-weight: 400;">Given, Critical value  D<sub>α</sub> = 0.565</p>
+<p style="font-weight: 400;">Since the computed value, D = 0.28, is less than the tabulated critical value, D<sub>α </sub>= 0.565, the hypothesis of no difference between the distribution of the generated numbers and the uniform distribution is not rejected.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you understandby static mathematical model? Explain with example. Differentiate between stocastic and deterministic activities.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A static mathematical model is a mathematical model that represents the logical view of the system in an equilibrium state. Such models are time-invariant. It is generally represented by basic algebraic equations.</p>
+<p><b>For example: </b>Supply and demand relationship model of a market</p>
+<p>Consider a market model assuming the linear behavior of supply and demand with the price.</p>
+<ul style="list-style-type: square;">
+<li>Demand for a product will be low when the price is high and will be high when the price is low.</li>
+<li>Supply for a product will be high when the price is high and will be low when the price is low.</li>
+<li>If conditions remain stable, the price will settle to the point at which demand equals supply.</li>
+</ul>
+<p>The relations can be stated mathematically as:</p>
+<p>Q = a – bP<br />
+S = c + dP<br />
+S = Q</p>
+<p>where, S = supply, Q = demand and P = price</p>
+<p>The linear market model is shown below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10956 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-3.png?resize=847%2C479&#038;ssl=1" alt="" width="847" height="479"></p>
+<p><span style="text-decoration: underline;"><strong>Difference Between Stochastic and Deterministic Activities:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Stochastic model/activity has one or more random variables as inputs. Random inputs lead to random outputs. E.g. Simulation of a bank involves random inter-arrival and service times.</li>
+<li>The deterministic model/activity contains no random variables. They have a known set of inputs which will result in a unique set of outputs. E.g. Arrival of patients to the Dentist at the scheduled appointment time.</li>
+</ul>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Discuss the merits and demerits of system simulation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Simulation is the imitation of the operation of a real-world process or system over time. Simulation involves the generation of an artificial history of the system, and the observation of that artificial history to draw inferences concerning the operating characteristics of the real system that is represented.</p>
+<p><u>Merits of Simulation</u></p>
+<ul style="list-style-type: square;">
+<li>New procedures or rules can be explored without hampering the ongoing real time system operations.</li>
+<li>New designs can be tested without acquiring resources.</li>
+<li>The hypotheses about certain phenomena can be tested for feasibility.</li>
+<li>Insights can be obtained about the variable interaction and their credit for system performance.</li>
+<li>It provides the better understanding of the operation of the system in easier way.</li>
+<li>A simulation study can help in understanding how the system operates rather than how individuals think the system operates.</li>
+<li><span>“what-if” questions can be answered. So it is useful in the design of new systems.</span></li>
+</ul>
+<p><span style="color: #333333;"><u>Demerits of Simulation</u></span></p>
+<ul style="list-style-type: square;">
+<li>Building model requires specialization which is the art learned through experience.</li>
+<li>In some cases, the results of the simulation may be so complex to interpret.</li>
+<li>It may be time consuming and expensive.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain Markov’s chain with a suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the future states of a process are independent of the past and depend only on the present, the process is called a Markov process. A discrete state Markov process is called a Markov chain. A Markov Chain is a random process with the property that the next state depends only on the current state.</p>
+<p>Markov chains are used to analyze trends and predict the future. (Weather, stock market, genetics, product success, etc.</p>
+<p><strong>Formally,</strong></p>
+<p>A Markov chain is a sequence of random variables X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, &#8230; with the Markov property, namely that, given the present state, the future and past states are independent.</p>
+<p>\(P(X_{n+1} = j|X_n = i_n, x_{n-1} = i_{n-1}, . . ., x_0 = i_0) = P(X_{n+1} = j|X_n = i_n)\)</p>
+<p>The conditional probability above gives us the probability that a process in state i<sub>n</sub> at time n moves to i<sub>n+1</sub> at time n + 1. We call this the transition probability for the Markov chain. If the transition probability does not depend on the time n, we have a stationary Markov chain, with transition probabilities</p>
+<p>\(P_{ij} = P(X_{n+1} = j|X_n = i)\)</p>
+<p>Now we can write down the whole Markov chain as a matrix P:</p>
+<p>\(P = \begin{bmatrix}<br />
+P_11 &amp; P_12 &amp; &#8230;. &amp; P_1n\\<br />
+P_21 &amp; P_22 &amp; &#8230;. &amp; P_2n\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+P_n1 &amp; P_n2 &amp; &#8230;. &amp; P_nn\\<br />
+\end{bmatrix}\)</p>
+<p>Example:</p>
+<p>Weather Problem:</p>
+<ul style="list-style-type: square;">
+<li>raining today  ⇒ 40 % rain tomorrow</li>
+</ul>
+<p>⇒ 60 % no rain tomorrow</p>
+<ul style="list-style-type: square;">
+<li>not raining today  ⇒ 20 % rain tomorrow</li>
+</ul>
+<p>⇒ 80 % no rain tomorrow</p>
+<p>What will be the probability if today is not raining then not rain the day after tomorrow?</p>
+<p><i>Markov chain diagram:</i></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10953 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-2.png?resize=334%2C145&#038;ssl=1" alt="" width="334" height="145"></p>
+<p>\(P^2 = \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix} \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.16 + 0.12 &amp; 0.24 + 0.48 \\ 0.08 + 0.16 &amp; 0.12 + 0.64\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.28 &amp; 0.72 \\ 0.24 &amp; 0.76\end{pmatrix}\)</p>
+<p>Thus, the probability of not being rainy the day after tomorrow is 0.76.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define arrival pattern. Explain non-stationary Possion process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Arrival defines the way customers enter the system. Mostly the arrivals are random with random intervals between two adjacent arrivals. Typically the arrival is described by a random distribution of intervals also called Arrival Pattern.<span style="font-weight: 400;"> </span><span style="font-weight: 400;">Arrivals may occur at scheduled times or at random times. When at random times, the inter-arrival times are usually characterized by a probability distribution and the most important model for random arrival is the Poisson process. In scheduled arrival interarrival time of customers is constant.</span></p>
+<p>The non-stationary Poisson process is a Poisson process for which the arrival rate varies with time. More specifically, it can be defined as follows:</p>
+<p>The counting process N(t) is a non-stationary Poisson process if:</p>
+<p>a) The process has independent increments.</p>
+<p>\(Pr[N(t + dt)] &#8211; N(t) \left\{\begin{matrix}= 0] = 1 &#8211; \lambda (t)dt \\ = 1] = \lambda (t)dt \\ &gt; 1] = 0 \end{matrix}\right.\)</p>
+<p>Where, λ(t) = the arrival rate at time t</p>
+<p><i>dt</i> = differential-sized interval</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between validation and calibration. How can we perform validation of a model?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Validation </strong>is the process that ensures that a system, product, or service consistently provides results within acceptable criteria.  The performance, quality, and other operating parameters are tested to verify that they comply with the necessary requirements.</p>
+<p>Usually, process validation is done by a third party to make sure that the buyer is given a product that meets the specifications, requirements, and accepted standards.  Documented results must be produced at the end of the process.</p>
+<p>The major differences between validation and calibration are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 53.7212%;"><strong>CALIBRATION</strong></td>
+<td style="width: 45.3315%;"><strong>VALIDATION</strong></td>
+</tr>
+<tr>
+<td style="width: 53.7212%;">Calibration is a demonstration that, a particular instrument or device produces results within specified limits by comparisons with those produced by a reference or traceable standard over an appropriate range of measurements.</td>
+<td style="width: 45.3315%;">Validation is a documented program that provides a high degree of assurance that a specific process, equipment, method or system consistently produces a result meeting pre-determined acceptance criteria.</td>
+</tr>
+<tr>
+<td style="width: 53.7212%;">Calibration ensures that instruments or measuring devices produce accurate results.</td>
+<td style="width: 45.3315%;">Validation provides documented evidence that a process, equipment, method, or system produces consistent results (in other words, it ensures that uniform batches are produced).</td>
+</tr>
+<tr>
+<td style="width: 53.7212%;">In calibration performance of an instrument or device is compared against a reference standard.</td>
+<td style="width: 45.3315%;">No such reference standards are used in the validation program.</td>
+</tr>
+<tr>
+<td style="width: 53.7212%;">Shall be performed periodically, to identify the ‘drift’ of the measuring device or equipment and make<br />
+them accurate.</td>
+<td style="width: 45.3315%;">No such requirements. Shall be performed when changes or modifications happen to the existing system or once the revalidation period is reached.</td>
+</tr>
+<tr>
+<td style="width: 53.7212%;">Shall be performed as per calibration SOP.</td>
+<td style="width: 45.3315%;">Shall be performed as per validation protocol.</td>
+</tr>
+</tbody>
+</table></div>
+<p style="font-weight: 400;">Naylor and Finger proposed three step approach for the validation of the model. These steps are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li style="font-weight: 400;"><b><i><u>Face validity</u></i></b></li>
+</ol>
+<p>&#8211; A model should appear reasonable on its face to model users and to those who know about the real system that is being simulated.<br />
+&#8211; A model should be designed with a high degree of realism regarding system structure and behavior through reliable data.<br />
+&#8211; The potential users should also be involved in the validation process to aid in the identification of model deficiencies and optimizing those deficiencies to produce a better model. This process is termed a structural walkthrough.<br />
+&#8211; Sensitivity analysis is also used for the face validity of the model. It analyses the effect on output when there is a change in input parameters. Sensitivity analysis is done through appropriate statistical techniques.</p>
+<p>2. <u> Model Assumptions</u></p>
+<p><span style="font-weight: 400;">Model assumptions fall into two categories: structural assumptions and data assumptions.</span></p>
+<ul style="list-style-type: square;">
+<li><b>Structural assumptions</b> involve questions of how the system operates and usually involve simplification and abstractions of reality.</li>
+<li><b>Data assumptions </b>should be based on the collection of reliable data and correct statistical analysis of the data. Does it deal with such questions as what kind of input data model is? What are the parameter values of the input data model?</li>
+</ul>
+<ol start="3">
+<li style="font-weight: 400;"><b><i><u>Input-Output Transformations</u></i></b></li>
+</ol>
+<p>&#8211; It involves validating whether the model can predict the future behavior of the real system when the model input data match the real inputs and when a policy implemented in the model is implemented at some point in the system.<br />
+&#8211; In this validation phase, the model accepts values of the input parameters and transforms them into output measures of performance.<br />
+&#8211; The modeler uses the historical data reserved for validation purposes only.<br />
+&#8211; For the complete input-output validation, at least one set of input conditions should be collected from the system data so as to compare to the model prediction.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Use Mixed congreuential method to generate a sequence of random numbers with X<sub>0</sub> = 27, n = 17, m = 100 and c = 43.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Solution</p>
+<p>Given,</p>
+<p><i>X</i><i><sub>0 </sub></i><em>= 2</em>7<em>, </em></p>
+<p><em>α = </em>17<em>,</em></p>
+<p><em>c= 43</em><em> &amp;</em></p>
+<p><em>m=</em>100</p>
+<p>We have,</p>
+<p>X<sub>i+1</sub> = (<em>α </em>X<sub>i </sub>+ c) mod m</p>
+<p>Mixed Congruential Method: c ≠ 0 &amp; R<sub>i </sub>=X<sub>i</sub>/m,</p>
+<p>The sequence of random numbers is calculated as follows:</p>
+<p>X<sub>0 </sub>= 27</p>
+<p>R<sub>0</sub> = 27/100 = 0.27</p>
+<p>X<sub>1</sub> = (<em>α </em>X<sub>0</sub><sub> </sub>+ c) mod m = (17*27+43) mod 100 = 502 mod 100 = 2</p>
+<p>R<sub>1</sub> = 2/100 = 0.02</p>
+<p>X<sub>2</sub> = (<em>α </em>X<sub>1</sub><sub> </sub>+ c) mod m = (17*2+43) mod 100 = 77 mod 100 = 77</p>
+<p>R<sub>2</sub> = 77/100 = 0.77</p>
+<p>X<sub>3</sub> = (<em>α </em>X<sub>2</sub><sub> </sub>+ c) mod m = (17*77+43) mod 100 = 1352 mod 100 = 52</p>
+<p>R<sub>3</sub> = 52/100 = 0.52</p>
+<p>X<sub>4</sub> = (<em>α </em>X<sub>3</sub><sub> </sub>+ c) mod m = (17*52+43) mod 100 = 927 mod 100 = 27</p>
+<p>R<sub>4</sub> = 27/100 = 0.27</p>
+<p>Therefore,</p>
+<p>The sequence of random integers is 27, 02, 77, 52, 27 &amp; so on.</p>
+<p>The sequence of random numbers is 0.27, 0.02, 0.77, 0.52, 0.27 &amp; so on.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What do you mean by replication of runs. Why it is necessary?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Replication of run is used to obtain independent results by repeating the simulation. Repeating the experiment with different random numbers for the same sample size n gives a set of independent determinations of the sample mean x̄. The mean of the means and the mean of the variances are then used to estimate the confidence interval.</p>
+<p><span style="color: #333333;">Suppose the experiment is repeated </span>p times with independent random values of n sample sizes. Let x<sub>ij </sub>be the i<sup>th </sup>observation in j<sup>th</sup> run and let the sample mean and the variance for the j<sup>th</sup> run is denoted by x̄<sub>j</sub>(n) and S<sub>j</sub><sup>2</sup>(n) respectively. Then for j<sup>th</sup> run, the estimates are</p>
+<p>\(\bar{x}_j(n) = \frac{1}{n} \sum_i^n x_{ij}\)</p>
+<p>\(S_j^2(n) = \frac{1}{n-1} \sum_{i=1}^n [x_{ij} &#8211; \bar{x}_j(n)]^2\)</p>
+<p>Combining the result of p independent measurement gives the following estimate for the mean x̄ and variance s<sup>2</sup> of the populations as:</p>
+<p>\(\bar{x} = \frac{1}{p} \sum_{j=1}^p \bar{x}_j\)</p>
+<p>\(\bar{s}^2 = \frac{1}{p} \sum_{j=1}^p s_j^2\)</p>
+<hr />
+<p>Replication of runs are necessary for running experiments based on scenarios with stochastic parameters. It is used to obtain independent results by repeating the simulation. If replications are not used, a single run of an experiment will not produce statistically significant results and will not allow for proper calculation of statistical data.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain generation of non uniform random number generation using inverse method.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Non-uniform random variate generation is concerned with the generation of random variables with certain distributions. Such random variables are often discrete, taking values in a countable set, or absolutely continuous, and thus described by a density.</p>
+<p><span style="text-decoration: underline;"><strong> Generation of non uniform random number generation using inverse method:</strong></span></p>
+<p>The inverse transform method can be used to sample from the exponential, uniform, triangular distribution etc by inversing the cdf of the probability distributions. The inverse transform technique can be utilized for any distribution when the sdf, F(x), is of a form that its inverse, F<sup>-1</sup> can be computed easily.</p>
+<p>The random variate generation process using exponential distribution:</p>
+<ol style="list-style-type:decimal;">
+<li>Compute the cdf of the random variable X for exponential distribution.</li>
+<li>Set F(X) = R on the range of X i.e. 1 &#8211; 1 &#8211; e<sup>λx</sup> = R</li>
+<li>Solve the equation 1 &#8211; e<sup>λx</sup> = R in terms of R\(X = -\frac{1}{λ} ln(1 &#8211; R)\)</li>
+<li>The equation is called random variate generation for the exponential distribution. In general equation it is written as X = F<sup>-1</sup> (R).</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Parts are being made at the rate of one every 10 minutes. They are of two types, A and B. And are mixed randomly with about 10% being type B. A separate inspector is assigned to examine each part. Inspection of part A takes 6 ± 2 minutes. Both inspector rejects 10% of parts they inspect. Draw GPSS block diagram to simulate the above problem for 100 parts.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The block diagram for given problem using GPSS is given below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-10944" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download.png?resize=412%2C357&#038;ssl=1" alt="Block diagram for given problem using GPSS" width="412" height="357" /></p>
+<p>Code for simulating the given problem using GPSS:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">   GENERATE  10, 0
+
+      TRANSFER  0.1  A   B
+
+A    ADVANCE  6, 2
+
+B    ADVANCE 10, 2
+
+A    TRANSFER  0.1  ACC   REJ
+
+B    TRANSFER  0.1  ACC   REJ
+
+A    ACC TERMINATE   1
+
+       REJ TERMINATE   1
+
+B     ACC TERMINATE   1
+
+        REJ TERMINATE   1
+
+START 100</pre>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):</p>
+<ol>
+<li>System and its environment</li>
+<li>Simulation run statistics</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) System and Environment:</strong></span></p>
+<p>System is a simplified representation of selected components with specified boundries and predefined time characteristics. It generally indicates a real world entity over space and time in generalized and specified from. Each system has time constraint that defines the time over which the system time may change its state.</p>
+<p><span style="text-decoration: underline;">Component of System:</span></p>
+<ol style="list-style-type: lower-alpha;">
+<li>State</li>
+<li>Activity/Event</li>
+<li>Entity</li>
+<li>Queue</li>
+<li>Scheduling</li>
+<li>Random Variable</li>
+</ol>
+<p><strong>System Environment</strong> is the change occuring outside the system that affect the system. Defining a system boundary is an most important step.</p>
+<ul style="list-style-type: square;">
+<li>Smaller system boundary may not include necessary components</li>
+<li>Larger system boundary may have degree of errror propagation and management difficulties.</li>
+</ul>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="text-decoration: underline;">Closed System:</span> That is not affected by exogeneous event.</li>
+<li><span style="text-decoration: underline;">Open System:</span> Affected by the exogeneous event.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>b) <b><u>Simulation run statistics:</u></b></strong></span></p>
+<div><span style="color: #333333;">In the estimation method, it is assumed that the observations </span>are mutually independent and the distribution from which they are draws is stationary. Unfortunately many statistics of interest in simulation do not meet these conditions. An example of such case is queuing system. Correlation is necessary to analyze such scenario.  In such cases, simulation run statistics method is used.</div>
+<div>
+<p><i>Example:                                                    </i></p>
+<p><span style="color: #333333;">Consider a system with Kendall’s notation M/M/1/FIFO (<i>i.e. a single server system in which the inter-arrival time is </i></span><i><span style="color: #333333;">distributed exponentially ;</span>and service time has an </i><i>exponential and queue discipline is FIFO</i>) and the objective is to measure the mean waiting time.</p>
+<p>In simulation run approach, the mean waiting time is estimated by accumulating the waiting time of n successive entities and then it is divided by n. This measures the sample mean such that:</p>
+<p>\(\bar{X}(n) = \frac{1}{n} \sum_{i=1}^n x_i\)</p>
+<p><span style="color: #333333;">Whenever a waiting line forms, the waiting time of </span>each entity on the line clearly depends upon the <span style="color: #333333;">waiting time of its predecessors. </span>Such series of data in which one value affect other values is said to be autocorrelated. The sample mean of autocorrelated data can be shown to approximate a normal distribution as the sample size increases.</p>
+<p><span style="color: #333333;">A simulation run is started with the system in some </span>initial state, frequently the idle state, in which no service is being given and no entities are waiting. The early arrivals then have a more than normal probability of obtaining service quickly, so a sample mean that includes the early arrivals will be biased.</p>
+</div>
+</div>
+</body></html>

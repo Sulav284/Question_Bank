@@ -1,0 +1,422 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DAA Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>DAA Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt Two Question.</h2><h3>Question 1</h3>
+<div><p><p>What are the elementary properties of algorithm? Explain. Why do you need algorithm? Discuss about analysis of the RAM model for analysis of algorithm with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. Algorithms are generally created independent of underlying languages, i.e. an algorithm can be implemented in more than one programming language.</p>
+<h2>Characteristics of an Algorithm</h2>
+<ul class="list">
+<li><b>Unambiguous</b> − Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.</li>
+<li><b>Input</b> − An algorithm should have 0 or more well-defined inputs.</li>
+<li><b>Output</b> − An algorithm should have 1 or more well-defined outputs, and should match the desired output.</li>
+<li><b>Finiteness</b> − Algorithms must terminate after a finite number of steps.</li>
+<li><b>Feasibility</b> − Should be feasible with the available resources.</li>
+<li><b>Independent</b> − An algorithm should have step-by-step directions, which should be independent of any programming code.</li>
+</ul>
+<p>We need algorithm because:</p>
+<p>Algorithms play a crucial role in computer science. The best algorithm ensures that the computer completes the task in the most efficient manner. When it comes to efficiency, a good algorithm is really essential. An algorithm is extremely important for optimizing a computer program.</p>
+<p>&nbsp;</p>
+<h4>Random Access Machine (RAM)</h4>
+<p>Random Access Machine or RAM model is a CPU. It is a potentially unbound bank of memory cells, each of which can contain an arbitrary number or character. Memory cells are numbered and it takes time to access any cell in memory or say all operations (read/write from memory, standard arithmetic, and Boolean operations) take a unit of time. RAM is a standard theoretical model of computation (infinite memory and equal access cost). The Random Access Machine model is critical to the success of the computer industry.</p>
+<div class="wp-caption alignnone">
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/20211210134854/ram-660x429.jpg?w=660&#038;ssl=1" sizes="100vw" srcset="https://media.geeksforgeeks.org/wp-content/uploads/20211210134854/ram-660x429.jpg 660w, https://media.geeksforgeeks.org/wp-content/uploads/20211210134854/ram-768x500.jpg 768w, https://media.geeksforgeeks.org/wp-content/uploads/20211210134854/ram.jpg," alt="Random Access Machine"  /></p>
+</div>
+<p>Some key assumption to be made during analysis are :</p>
+<ol style="list-style-type:decimal;">
+<li>For deceleration part time complexity will be O(1).</li>
+<li>Basic arithmetic operations (addition, subtraction, multiplication, division) and logical operations (AND, OR, NOT) take constant time <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>.</li>
+<li>In cases of any loop time complexity will be O(n).</li>
+<li>In case of nested loops time complexity will be O(1) x O(1) i.e O(n<sup>2</sup>).</li>
+<li>If total memory refrences used by the algorithm is constant then space complexity will be O(1).</li>
+<li>In case of array with n memory space space complexity will be O(n).</li>
+</ol>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">factorial(n)
+{ 
+   int i, fact =1;
+   for(i=1; i&lt;=n; i++)
+     {
+        fact = fact * i;
+     }
+   return fact;
+}</pre>
+<p>for above algorithm  we see,</p>
+<ol style="list-style-type:decimal;">
+<li>Declaration part have time complexity as O(1).</li>
+<li>In loop :<br />
+a.   i =  1 will have time complexity O(1).<br />
+b.   i &lt;= n will run the loop n times so it will have time complexity O(n).<br />
+c.  i ++ is an arithmetic calculation so time complexity will be O(1).</li>
+<li>return part will have time complexity as O(1).</li>
+</ol>
+<p>finally time complexity will be : O(1)+O(1)+O(n)+O(1)+O(1) = 5O(1) + O(n) = O(n).</p>
+<p>As space considered are constant so space complexity will be O(1).</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain about the divide and conquer paradigm for algorithm design with suitable example. Write the Quick sort algorithm using randomized approach and explain its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the <b>divide and conquer approach</b>, a problem is divided into smaller problems, then the smaller problems are solved independently, and finally, the solutions of smaller problems are combined into a solution for the large problem.</p>
+<p>Generally, divide-and-conquer algorithms have three parts −</p>
+<ul class="list">
+<li><b>Divide the problem</b> into a number of sub-problems that are smaller instances of the same problem.</li>
+<li><b>Conquer the sub-problems</b> by solving them recursively. If they are small enough, solve the sub-problems as base cases.</li>
+<li><b>Combine the solutions</b> to the sub-problems into the solution for the original problem.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-11083 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/divide-and-conquer-introduction.png?resize=375%2C291&#038;ssl=1" alt="Divide and Conquer" width="375" height="291" /></p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>A classic example of Divide and Conquer is Merge Sort. In Merge Sort, we divide the array into two halves, sort the two halves recursively, and then merge the sorted halves.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11084 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/Merge-Sort-Tutorial.png?resize=618%2C595&#038;ssl=1" alt="" width="618" height="595"></p>
+<p><span style="text-decoration: underline;"><strong>Randomized Quick Sort:</strong></span></p>
+<p>Randomized quick sort is called randomized if its behavior depends on input as well as the random value generated by the random number generator. The beauty of the randomized algorithm is that no particular input can produce worst-case behavior.</p>
+<p><span style="text-decoration: underline;">Algorithm:</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">RandQuickSort(A, l, r){
+    if( l &lt; r ){
+        m = RandPartition(A, l, r);
+        RandQuickSort(A, l, m-1);
+        RandQuickSort(A, m+1, r);
+    }
+}
+
+RandPartition(A, l, r){
+    k = random(l, r);
+    swap(A[l], A[k]);
+    return Partition(A, l, r);
+}
+
+Partition(A, l, r){
+    x = l;
+    y = r;
+    p = A[l];
+
+    while(x &lt; y){
+        do{
+            x++;
+        }while(A[x] &lt;= p);
+
+        do{
+            y--;
+        }while(A[y] &gt;= p);
+
+        if( x &lt; y ){
+            swap(A[x], A[y]);
+        }
+    }
+
+    A[l] = A[y];
+    A[y] = p;
+
+    return y;
+}</pre>
+<p><span style="text-decoration: underline;">Time Complexity:</span></p>
+<ul style="list-style-type: square;">
+<li>For the Wrost case, Time complexity is O(n<sup>2</sup>)</li>
+<li>For Best case, Time complexity is O(n log n)</li>
+<li>For Average case, Time complexity is O(n log n)</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain in brief about the Dynamic Programming Approach for algorithm design. How it differs with recursion? Explain the algorithm for solving the 0/1 Knapsack problem using the dynamic programming approach and explain its complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The dynamic programming approach is similar to divide and conquer in breaking down the problem into smaller and yet smaller possible sub-problems. But unlike, divide and conquer, these sub-problems are not solved independently. Rather, the results of these smaller sub-problems are remembered and used for similar or overlapping sub-problems.</p>
+<p>Dynamic programming is used where we have problems, which can be divided into similar sub-problems so that their results can be re-used. Mostly, these algorithms are used for optimization. Before solving the in-hand sub-problem, the dynamic algorithm will try to examine the results of the previously solved sub-problems. The solutions of sub-problems are combined in order to achieve the best solution.</p>
+<p><strong>Characteristics:</strong></p>
+<p>Dynamic Programming works when a problem has the following features:</p>
+<ul style="list-style-type: square;">
+<li><strong>Optimal Structure:</strong> If an optimal solution contains optimal visit solutions then a problem exhibits optimal substructure.</li>
+<li><strong>Overlapping sub-problems:</strong> When a recursive algorithm would visit the same sub-problems repeatedly, then a problem has overlapping sub-problems.</li>
+</ul>
+<p>If the problem has an optimal substructure, then we can recursively define an optimal solution. If a problem has overlapping sub-problems, then we can improve on implementation by computing each sub-problem only once.</p>
+<p><span style="text-decoration: underline;"><strong>Difference Between Dynamic Programming &amp;&amp; Recursion:</strong></span></p>
+<p>With respect to iteration, recursion has the following advantages and disadvantages:</p>
+<ul style="list-style-type: square;">
+<li>Simplicity: often a recursive algorithm is simple and elegant compared to an iterative algorithm</li>
+<li>Space-inefficiency: every recursive call adds a layer to the system’s call stack. If the number of stacked recursive calls gets too large, the result is a stack overflow.</li>
+</ul>
+<p>Every recursive algorithm can be implemented iteratively.</p>
+<p><span style="text-decoration: underline;"><strong>0/1 Knapsack Problem:</strong></span></p>
+<p>The 0/1 knapsack problem means that the items are either complete or no items are filled in a knapsack. For example, we have two items having weights of 2kg and 3kg, respectively. If we pick the 2kg item then we cannot pick the 1kg item from the 2kg item (the item is not divisible); we have to pick the 2kg item completely. This is a 0/1 knapsack problem in which either we pick the item completely or we will pick that item. The 0/1 knapsack problem is solved by dynamic programming.</p>
+<p>Let W = capacity of Knapsack</p>
+<p>n = No. of items</p>
+<p>w = [w1, w2, w3, . . . . wn] = weight of items</p>
+<p>V = [v1, v2, . . . vn] = value of items</p>
+<p>C[i, w] = maximum profit earned with item i and with knapsack of capacity w</p>
+<p>Then the recurrence relation for 0/1 knapsack problem is given as,</p>
+<p>\(C[i, w] = \begin{bmatrix}<br />
+0 &amp; if = 0 \enspace or \enspace w = 0\\<br />
+C[i-1, w] &amp; if \enspace wi &gt; w\\<br />
+Max[vi + C[i-1, w-wi], c[i-1, w]] &amp; if \enspace i &gt; 0 \enspace and \enspace wi \leq w<br />
+\end{bmatrix}\)</p>
+<p><span style="text-decoration: underline;"><strong>Algorithm:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">DynaKnapsack(W, n, v, w){
+    for(w=0; w&lt;=W; w++){
+        C[0, w] = 0;
+        for(i=0; i&lt;=n; i++)
+            C[i, w] = 0;
+
+        for(i = 1; i &lt;= n; i++){
+            for( w = 1; w &lt;= W; w++ ){
+                if( w[i] &lt; w ){
+                    if( v[i] + C[i-1, w-W[i]] &gt; C[i-1, w] )
+                        C[i, w] = v[i] + C[i-1, w-w[i]];
+                    else
+                        C[i, w] = C[i-1, w];
+                }else{
+                    C[i, w] = C[i-1, w];
+                }
+            }
+        }
+    }
+}</pre>
+<p><span style="text-decoration: underline;">Analysis:</span></p>
+<p>For run time analysis examining the above algorithm the overall run time of the algorithm is O(nW)</p>
+</div>
+<h2>Section B: Attempt Eight Questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain the recursion tree method for solving the recurrence relation. Solve following recurrence relation using this method.<br />
+T(n)=2T(n/2) +1 for n> 1, T(n) =1 for n =1</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Recursion Tree Method is a way of solving recurrence relations. In this method, a recurrence relation is converted into recursive trees. Each node represents the cost incurred at various levels of recursion. To find the total cost, the costs of all levels are summed up.</p>
+<p><strong>Steps to solve recurrence relation using the recursion tree method:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Draw a recursive tree for given recurrence relation</li>
+<li>Calculate<strong> </strong>the cost at each level and count the total no of levels in the recursion tree.</li>
+<li>Count the total number of nodes in the last level and calculate the cost of the last level</li>
+<li>Sum up the cost of all the levels in the recursive tree</li>
+</ol>
+<p>Solution:</p>
+<p>Given,</p>
+<p>T(n) = 2T(n/2) + 1</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-11490 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/327993213_618572926659556_6236411358251026197_n.jpg?resize=1770%2C1808&#038;ssl=1" alt="" width="1770" height="1808"></p>
+<p>Now, T(n) = 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>2</sup> + &#8230;&#8230;&#8230;. + 2<sup>k</sup></p>
+<p>= \( \frac{2^{k+1} &#8211; 1}{2 &#8211; 1} \)</p>
+<p>= 2 . 2<sup>k</sup> &#8211; 1</p>
+<p>For simplicity assume that n/2<sup>k</sup> = 1</p>
+<p>n = 2<sup>k</sup></p>
+<p>Now,</p>
+<p>T(n) = 2 . n &#8211; 1</p>
+<p>Hence, T(n) = O(n)</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Write an algorithm to find the maximum element of an array and analyze its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Using the divide and conquer approach:</p>
+<p>Pseudocode:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">function findMax(arr, start, end):
+    if start equals end:
+        return arr[start]
+    else:
+        mid = (start + end) / 2
+        max1 = findMax(arr, start, mid)
+        max2 = findMax(arr, mid + 1, end)
+        
+        return max(max1, max2)
+</pre>
+<p>&nbsp;</p>
+<h2 class="" data-sourcepos="1:1-1:57"><span style="font-size: 14pt;">Step-by-Step Algorithm </span></h2>
+<p data-sourcepos="3:1-3:34"><strong>1. Base Case (Single Element):</strong></p>
+<ul data-sourcepos="5:1-5:1">
+<li data-sourcepos="5:1-5:1">If <code class="">start</code> and <code class="">end</code> are equal, it means we have reached a single element sub-array. In this case, simply return the element at <code class="">start</code>: <code class="">return arr[start]</code></li>
+</ul>
+<p data-sourcepos="7:1-7:26"><strong>2. Divide and Conquer:</strong></p>
+<ul data-sourcepos="9:1-9:44">
+<li data-sourcepos="9:1-9:44">If <code class="">start</code> is not equal to <code class="">end</code>, it means we have multiple elements in the sub-array.
+<ul data-sourcepos="10:5-10:69">
+<li data-sourcepos="10:5-10:69">Find the middle index of the sub-array: <code class="">mid = (start + end) // 2</code></li>
+<li data-sourcepos="11:5-11:124">Recursively call <code class="">findMax</code> on the left half of the sub-array, from <code class="">start</code> to <code class="">mid</code>: <code class="">max1 = findMax(arr, start, mid)</code></li>
+<li data-sourcepos="12:5-13:0">Recursively call <code class="">findMax</code> on the right half of the sub-array, from <code class="">mid + 1</code> to <code class="">end</code>: <code class="">max2 = findMax(arr, mid + 1, end)</code></li>
+</ul>
+</li>
+</ul>
+<p data-sourcepos="14:1-14:34"><strong>3. Combine and Return Maximum:</strong></p>
+<ul data-sourcepos="16:1-16:103">
+<li data-sourcepos="16:1-16:103">Compare the maximum values found in both halves (<code class="">max1</code> and <code class="">max2</code>) using the <code class="">max</code> function: <code class="">return max(max1, max2)</code></li>
+<li data-sourcepos="17:1-18:0">This will return the larger of the two maximum values, which is the overall maximum element in the original sub-array.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Time complexity: </strong></span></p>
+<p>At each level of recursion, the array is divided into two halves, so the time complexity can be expressed as a recurrence relation T(n) = 2T(n/2) + O(1).</p>
+<p>So, time complexity of finding the maximum element using the divide and conquer approach is <strong>O(n).</strong></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write the algorithm for bubble sort and explain its time complexity.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Bubble Sort</strong> is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.</p>
+<p>Let&#8217;s consider an array with values {5, 1, 6, 2, 4, 3}</p>
+<p>Below, we have a pictorial representation of how bubble sort will sort the given array.</p>
+<p class="center"><img data-recalc-dims="1" decoding="async" class="blur-up ls-is-cached lazyloaded" src="https://i0.wp.com/static.studytonight.com/data-structures/images/basic-bubble-sort.png?ssl=1" alt="Bubble sort algorithm" data-src="https://static.studytonight.com/data-structures/images/basic-bubble-sort.png" /></p>
+<div id="adview1" class="text-center">
+<div data-ad="InContent"></div>
+</div>
+<p>So as we can see in the representation above, after the first iteration, <strong>6</strong> is placed at the last index, which is the correct position for it.</p>
+<p>Similarly, after the second iteration, <strong>5</strong> will be at the second last index, and so on.</p>
+<p><span style="text-decoration: underline;"><strong>Algorithm:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">void bubbleSort(arr, n)
+{
+    int i, j, temp;
+    for(i = 0; i &lt; n; i++)
+    {
+        for(j = 0; j &lt; n-i-1; j++)
+        {
+            if( arr[j] &gt; arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            } 
+        }
+    }
+    
+    return arr;
+}</pre>
+<p>Hence the <b>time complexity</b> of Bubble Sort is <b>O(n<sup>2</sup>)</b>.<b></b></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What do you mean by optimization problem? Explain the greedy strategy for algorithm design to<br />
+solve optimization problems.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-11480" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/7-2078_1.jpg?resize=1486%2C2200&#038;ssl=1" alt="" width="1486" height="2200"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Explain the algorithm and its complexity for solving job sequencing with deadline problem using greedy strategy.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/8-2078_1.jpg?resize=1490%2C2200&#038;ssl=1" alt="" width="1490" height="2200" class="alignnone size-full wp-image-11482"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/11/8-2078_2.jpg?resize=1700%2C1147&#038;ssl=1" alt="" width="1700" height="1147" class="alignnone size-medium wp-image-11483"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What do you mean by memorization strategy? Compare memorization with dynamic programing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Memoization is a strategy to implicitly save the value of a computation in order to produce that same value later without evaluating the computation more than once.</p>
+<p>Dynamic programming is a technique for solving problems of recursive nature, iteratively, and is applicable when the computations of the subproblems overlap.</p>
+<p><span style="text-decoration: underline;"><strong>Difference between Dynamic Programming and Memoization:</strong></span></p>
+<p>The difference between dynamic programming and memoization are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Dynamic Programming</td>
+<td style="width: 50%;">Memoization</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is the research of finding an optimized plan for a problem by finding the best substructure of the problem for reusing the computation results.</td>
+<td style="width: 50%;">It is the technique to &#8220;remember&#8221; the result of a computation and reuse it the next time instead of recomputing it, to save time.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is a bottom-up approach.</td>
+<td style="width: 50%;">It is a top-down approach.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Code gets complicated when left conditions are required.</td>
+<td style="width: 50%;">Code is easy and less complicated.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is fast, as we directly access previous states.</td>
+<td style="width: 50%;">Slow due to a lot of recursion calls and return statements.</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is preferrable when the original; problem requires all subproblems to be solved.</td>
+<td style="width: 50%;">It is preferable when the original problem requires only some subproblems to be solved.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain the concept of backtracking. How it differ with recursion?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Backtracking</strong> is a technique based on algorithm to solve problem. It uses recursive calling to find the solution by building a solution step by step increasing values with time. It removes the solutions that doesn&#8217;t give rise to the solution of the problem based on the constraints given to solve the problem.</p>
+<p>Backtracking algorithm is applied to some specific types of problems,</p>
+<ul class="list">
+<li>Decision problem used to find a feasible solution of the problem.</li>
+<li>Optimisation problem used to find the best solution that can be applied.</li>
+<li>Enumeration problem used to find the set of all feasible solutions of the problem.</li>
+</ul>
+<p>In backtracking problem, the algorithm tries to find a sequence path to the solution which has some small checkpoints from where the problem can backtrack if no feasible solution is found for the problem.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Sl. No.</th>
+<th>Recursion</th>
+<th>Backtracking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Recursion does not always need backtracking</td>
+<td>Backtracking always uses recursion to solve problems</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A recursive function solves a particular problem by calling a copy of itself and solving smaller subproblems of the original problems.</td>
+<td>Backtracking at every step eliminates those choices that cannot give us the solution and proceeds to those choices that have the potential of taking us to the solution.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Recursion is a part of backtracking itself and it is simpler to write.</td>
+<td>Backtracking is comparatively complex to implement.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Applications of recursion are Tree and Graph Traversal, Towers of Hanoi, Divide and Conquer Algorithms, Merge Sort, Quick Sort, and Binary Search.</td>
+<td>Application of Backtracking is N Queen problem, Rat in a Maze problem, Knight’s Tour Problem, Sudoku solver, and Graph coloring problems.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain in brief about the complexity classes P, NP and NP Complete.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><u>P Class</u></strong></p>
+<p>The P in the P class stands for <strong>Polynomial Time.</strong> It is the collection of decision problems(problems with a “yes” or “no” answer) that can be solved by a deterministic machine in polynomial time.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solution to P problems is easy to find.</li>
+<li>P is often a class of computational problems that are solvable and tractable. Tractable means that the problems can be solved in theory as well as in practice. But the problems that can be solved in theory but not in practice are known as intractable.</li>
+</ol>
+<p><strong><u>NP Class</u></strong></p>
+<p>The NP in NP class stands for <strong>Non-deterministic Polynomial Time</strong>. It is the collection of decision problems that can be solved by a non-deterministic machine in polynomial time.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>The solutions of the NP class are hard to find since they are being solved by a non-deterministic machine but the solutions are easy to verify.</li>
+<li>Problems of NP can be verified by a Turing machine in polynomial time.</li>
+</ol>
+<p><strong><u>NP-complete class</u></strong></p>
+<p>A problem is NP-complete if it is both NP and NP-hard. NP-complete problems are the hard problems in NP.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>NP-complete problems are special as any problem in NP class can be transformed or reduced into NP-complete problems in polynomial time.</li>
+<li>If one could solve an NP-complete problem in polynomial time, then one could also solve any NP problem in polynomial time.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:<br />
+a. NP Hard Problems and NP Completeness<br />
+b. Problem Reduction</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><u>NP-hard class</u></strong></p>
+<p>An NP-hard problem is at least as hard as the hardest problem in NP and it is the class of the problems such that every problem in NP reduces to NP-hard.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>All NP-hard problems are not in NP.</li>
+<li>It takes a long time to check them. This means if a solution for an NP-hard problem is given then it takes a long time to check whether it is right or not.</li>
+<li>A problem A is in NP-hard if, for every problem L in NP, there exists a polynomial-time reduction from L to A.</li>
+</ol>
+<p>Some of the examples of problems in Np-hard are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Halting problem.</strong></li>
+<li><strong>Qualified Boolean formulas.</strong></li>
+<li><strong>No Hamiltonian cycle.</strong></li>
+</ol>
+<p><strong><u>NP-complete class</u></strong></p>
+<p>A problem is NP-complete if it is both NP and NP-hard. NP-complete problems are the hard problems in NP.</p>
+<p><strong>Features:</strong></p>
+<ol style="list-style-type:decimal;">
+<li>NP-complete problems are special as any problem in NP class can be transformed or reduced into NP-complete problems in polynomial time.</li>
+<li>If one could solve an NP-complete problem in polynomial time, then one could also solve any NP problem in polynomial time.</li>
+</ol>
+<p>Some example problems include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Decision version of 0/1 Knapsack.</strong></li>
+<li><strong>Hamiltonian Cycle.</strong></li>
+<li><strong>Satisfiability.</strong></li>
+<li><strong>Vertex cover.</strong></li>
+</ol>
+<p>b)Problem Reduction</p>
+<p>We already know about the divide and conquer strategy, a solution to a problem can be obtained by decomposing it into smaller sub-problems. Each of this sub-problem can then be solved to get its sub-solution. These sub-solutions can then be recombined to get a solution as a whole. That is called is <strong>Problem Reduction</strong>. This method generates arc which is called as <strong>AND</strong> arcs. One AND arc may point to any number of successor nodes, all of which must be solved for an arc to point to a solution.</p>
+<div class="code-block code-block-4"></div>
+<p>&nbsp;</p>
+<p><center><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/webeduclick.com/wp-content/uploads/2021/02/Problem-Reduction-in-AI-with-example.png?ssl=1" alt="Problem Reduction in AI with example" /></center>&nbsp;</p>
+<p>&nbsp;</p>
+<p><center><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/webeduclick.com/wp-content/uploads/2021/02/Problem-Reduction-in-AI.png?ssl=1" alt="Problem Reduction in AI" /></center>&nbsp;</p>
+<h2><u>Problem Reduction algorithm:</u></h2>
+<p>1. Initialize the graph to the starting node.</p>
+<div class="code-block code-block-3"></div>
+<p>2. Loop until the starting node is labelled <strong>SOLVED</strong> or until its cost goes above <strong>FUTILITY</strong>:</p>
+<p>(i) Traverse the graph, starting at the initial node and following the current best path and accumulate the set of nodes that are on that path and have not yet been expanded.</p>
+<p>(ii) Pick one of these unexpanded nodes and expand it. If there are no successors, assign FUTILITY as the value of this node. Otherwise, add its successors to the graph and for each of them compute f'(n). If f'(n) of any node is O, mark that node as SOLVED.</p>
+<p>(iii) Change the f'(n) estimate of the newly expanded node to reflect the new information provided by its successors. Propagate this change backwards through the graph. If any node contains a successor arc whose descendants are all solved, label the node itself as SOLVED.</p>
+</div>
+</body></html>

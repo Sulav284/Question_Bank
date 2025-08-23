@@ -1,0 +1,510 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>C programming Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>C programming Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Answer any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>List different types of operators and explain any four of them.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>C has a rich set of operators which can be classified as:</p>
+<ol style="list-style-type:decimal;">
+<li>Arithmetic operators</li>
+<li>Relational Operators</li>
+<li>Logical Operators</li>
+<li>Assignment Operators</li>
+<li>Unary Operators</li>
+<li>Conditional Operators</li>
+<li>Bitwise Operators</li>
+<li>Special Operators</li>
+</ol>
+<p>Any four of the operators are defined below as:</p>
+<p><strong>Arithmetic Operator</strong>:<br />
+Arithmetic operators are those that carry out mathematical operations such as modulo, addition, subtraction, multiplication, and division.<br />
+List of Arithmetic Operator:</p>
+<ul style="list-style-type: square;">
+<li>+ (Addition)</li>
+<li>&#8211; (Subtraction)</li>
+<li>* (Multiplication)</li>
+<li>/ (Division)</li>
+<li>% (Modulo)</li>
+</ul>
+<p><strong>Relational operators</strong>:<br />
+Relational operators return a Boolean value (true or false) based on a comparison between two operands.<br />
+List of Arithmetic Operator:</p>
+<ul style="list-style-type: square;">
+<li>== (Equal to)</li>
+<li>!= (Not equal to)</li>
+<li>&gt; (Greater than)</li>
+<li>&lt; (Less than)</li>
+<li>&gt;= (Greater than or equal to)</li>
+<li>&lt;= (Less than or equal to)</li>
+</ul>
+<p><strong>Logical Operators</strong>:<br />
+These operators are used to combine multiple Boolean expressions.<br />
+List of Logical Operator:</p>
+<ul style="list-style-type: square;">
+<li>&amp;&amp; (Logical AND)</li>
+<li>|| (Logical OR)</li>
+<li>! (Logical NOT)</li>
+</ul>
+<p><strong>Bitwise Operators</strong>: These operators perform operations on individual bits of data.<br />
+List of Bitwise Operator:</p>
+<ul style="list-style-type: square;">
+<li>&amp; (Bitwise AND)</li>
+<li>| (Bitwise OR)</li>
+<li>^ (Bitwise XOR)</li>
+<li>~ (Bitwise NOT)</li>
+<li>&lt;&lt; (Left shift)</li>
+<li>&gt;&gt; (Right shift)</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the characteristics of array? Write a program to input age of 500 persons and display the following</p>
+<ol>
+<li> Average age</li>
+<li>Age between 25 to 30</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Arrays are basic computer data structures that hold a group of elements, usually of the same kind. The following are the main attributes of arrays:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Fixed Size</strong>: An array&#8217;s size is fixed at construction and cannot be altered while it is being used.</li>
+<li><strong>Contiguous Memory Allocation</strong>: Arrays are kept in memory in contiguous areas. This implies that the components are kept in memory sequentially, facilitating effective access and modification.</li>
+<li><strong>Index-Based Access</strong>: An index can be used to access elements in an array. In majority of programming languages, the index typically begins at 0.</li>
+<li class="mb-2 last:mb-0"><strong>Same Type of Elements</strong>: An array can only contain elements of the same kind, such as all strings, all float or all integers.</li>
+</ol>
+<p><strong>Program part:</strong></p>
+<p>Program to input age of 500 persons and display the Average age, Age between 25 to 30.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#include &lt;stdio.h&gt;
+
+int main() {
+    int ages[500];
+    int i;
+    int count = 0;
+    float sum = 0.0;
+    float average_age;
+
+    for (i = 0; i &lt; 500; i++) {
+        printf("Enter age for person %d: ", i + 1);
+        scanf("%d", &amp;ages[i]);
+
+
+        while (ages[i] &lt; 0) {
+            printf("Please enter a valid age (0 or greater): ");
+            scanf("%d", &amp;ages[i]);
+        }
+
+        sum += ages[i];
+    }
+
+    average_age = sum / 500;
+
+    for (i = 0; i &lt; 500; i++) {
+        if (ages[i] &gt;= 25 &amp;&amp; ages[i] &lt;= 30) {
+            count ++;
+        }
+    }
+
+    printf("\nAverage age: %.2f\n", average_age);
+    printf("Number of persons aged between 25 and 30: %d\n", count);
+
+    return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate between library function and user defined function. Write a program to swap two values using call by refrence concept.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="width: 19.8842%;">S.N</th>
+<th style="width: 40.1544%; text-align: center;">User-Defined Functions</th>
+<td style="width: 39.9613%; text-align: center;"><strong>Library Functions</strong></td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">
+<p style="text-align: center;">       1</p>
+</th>
+<td style="width: 40.1544%; text-align: center;"><span style="font-family: inherit; font-size: inherit;">These functions aren&#8217;t  predefined in the compiler of C language. </span><span style="font-family: inherit; font-size: inherit;">                                         </span></td>
+<td style="width: 39.9613%; text-align: center;">These functions are predefined in the compiler of C language.</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">2</th>
+<td style="width: 40.1544%; text-align: center;">These functions are created by users as per their own requirements.</p>
+<p>&nbsp;</td>
+<td style="width: 39.9613%; text-align: center;">These functions are not created by users as their own.</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">3</th>
+<td style="width: 40.1544%; text-align: center;">User-defined functions are not stored in library files.</p>
+<p>&nbsp;</td>
+<td style="width: 39.9613%; text-align: center;">Library Functions are stored in a special library file.</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">4</th>
+<td style="width: 40.1544%; text-align: center;">There is no such kind of requirement to add a particular library.</p>
+<p>&nbsp;</td>
+<td style="width: 39.9613%; text-align: center;">If the user wants to use a particular library function then the user has to add the particular library of that function in the header file of the program.</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">5</th>
+<td style="width: 40.1544%; text-align: center;">Execution of the program begins from the user-define function.</p>
+<p>&nbsp;</td>
+<td style="width: 39.9613%; text-align: center;">Execution of the program does not begin from the library function.</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<th style="width: 19.8842%;">6</th>
+<td style="width: 40.1544%; text-align: center;"><strong>Example:</strong> sum(), fact(),…etc.</p>
+<p>&nbsp;</td>
+<td style="width: 39.9613%; text-align: center;"><strong>Example:</strong> printf(), scanf(), sqrt(),…etc.</p>
+<p>&nbsp;</td>
+</tr>
+</tbody>
+</table></div>
+<pre data-enlighter-language="c"></pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp; 
+    temp = *a; 
+    *a = *b;  
+    *b = temp; 
+}
+
+int main() 
+{
+    int x = 120;
+    int y = 150;
+
+    printf("Before swapping:\n");
+    printf("x = %d, y = %d\n", x, y);
+
+    swap(&amp;x, &amp;y);
+
+    printf("After swapping:\n");
+    printf("x = %d, y = %d\n", x, y);
+
+    return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Answer any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain the basic structure of C Programming.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-51048 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2025/02/structure-of-C.drawio.png?resize=393%2C781&#038;ssl=1" alt="" width="393" height="781"></p>
+<p style="text-align: center;"><strong>fig : Structure of C</strong></p>
+<p>Structure of C is defined below as:</p>
+<ul style="list-style-type: square;">
+<li><strong>Documentation section:</strong> This section contains comments that explain what the program does.</li>
+<li><strong>link section:</strong> This section contains header files, which are libraries that provide pre-written functions and macros.</li>
+<li><strong>definition section:</strong> This section contains data types and variables declared.</li>
+<li><strong>Globad declaration section:</strong> This section contains declarations for the variables that are accessible from anywhere in the program.</li>
+<li><strong>main () function section:</strong> This section contains the main function, which is the entry point of the program.
+<ul style="list-style-type: square;">
+<li><strong>Declaration part:</strong> This part contains declarations of variables and functions that are used in the executable part.</li>
+<li><strong>Executable part:</strong> This part contains the actual code that is executed by the program.</li>
+</ul>
+</li>
+<li><strong>User defined function section:</strong> This section contains user-defined functions that can be called from other parts of the program. function 1, function 2 &#8230;. function n are the user defined functions.</li>
+</ul>
+<p class="mb-2 last:mb-0">This structure allows you to organize your C code into a logical and easy-to-read format.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe different formatted input and output functions. Why do we use them?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Formatted Input/ Output:<br />
+</strong>These functions are used to read numbers, character or string from a file or write them to a file in format as our requirement.</p>
+<p><strong>Formatted Input : </strong>These functions read input in a structured format.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>scanf()</strong><br />
+It takes input from the keyboard, which is the typical input. It controls data reading by using format specifiers.<br />
+example:int num;<br />
+scanf(&#8220;%d&#8221;, &amp;num);</li>
+<li><strong>fscanf()</strong><br />
+It reads input from a file that has been formatted. Though it needs a file reference, it is comparable to scanf().<br />
+example:FILE *fp = fopen(&#8220;data.txt&#8221;, &#8220;r&#8221;);<br />
+int num;<br />
+fscanf(fp, &#8220;%d&#8221;, &amp;num);<br />
+fclose(fp);</li>
+</ol>
+<p><strong>Formatted Output: </strong>These functions display output in a structured format.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>printf(): </strong>Prints formatted output to the standard output (screen).<br />
+example:int num = 10;<br />
+printf(&#8220;The number is %d\n&#8221;, num);</li>
+<li><strong>fprintf()<br />
+</strong>It is formatted output function which is used to write integer , float, char or string data to a file.<br />
+example:FILE *fp = fopen(&#8220;output.txt&#8221;, &#8220;w&#8221;);<br />
+fprintf(fp, &#8220;Number: %d&#8221;, 10);<br />
+fclose(fp);</li>
+</ol>
+<p>We use Formatted Input/Output functions for following reasons:</p>
+<ul style="list-style-type: square;">
+<li><strong>Type-Specific Handling</strong> :<br />
+It uses format specifiers (such as %d for integers) to make that the right data types are read or shown, avoiding errors caused by mismatched types.</li>
+<li><strong>Effective output formatting</strong>:<br />
+It arranges output in a comprehensible manner, enabling data display that is well-aligned and enhances user understanding of the content.</li>
+<li><strong>Adaptable Input Management</strong>:<br />
+It increases program adaptability by enabling the use of functions like scanf and fscanf to read data from several sources (console, files).</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Write a program to display first 50 prime numbers.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+
+int main() {
+  int i, j, count = 0;
+
+  for (i = 2; count &lt; 50; i++) {
+    int isPrime = 1;
+
+    for (j = 2; j &lt;= i / 2; j++) {
+      if (i % j == 0) {
+        isPrime = 0;
+        break;
+      }
+    }
+
+    if (isPrime) {
+      printf("%d ", i);
+      count++;
+    }
+  }
+
+  return 0;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Write a program to display the following series up to 25 terms but do not print the 7th term. 2 x 3, 3 x 5, 4 x  7, 5 x 9…</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Program to display the following series up to 25 terms but not to print the 7th term in the series  2 x 3, 3 x 5, 4 x  7, 5 x 9&#8230;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+
+int main() {
+    int i, first = 2, second = 3;
+    
+    for (i = 1; i &lt;= 25; i++) {
+        if (i == 7) { 
+            printf("\t");
+            first++;
+            second += 2;
+            continue;
+        }
+        printf("%d x %d", first, second);
+        if (i &lt; 25) {
+            printf(", ");
+        }
+        first++;
+        second += 2;
+    }
+
+    return 0;
+}
+</pre>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Demonstrate the use of recursive function with a suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A function that invokes itself inside its own specification is known as a <strong>recursive function</strong>. It may be used to issues that can be divided into more manageable, related subissues.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+int factorial(int n);
+
+int main() {
+  int num;
+  printf("Enter the number whose factorial you want to get: ");
+  scanf("%d",&amp;num);
+  int result = factorial(num);
+  printf("Factorial of %d is %d\n", num, result);
+  return 0;
+}
+
+int factorial(int n) {
+  if (n == 0) {
+    return 1;
+    } 
+  else {
+    return n * factorial(n - 1);
+    }
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Create a structure called STUDENT with data members SID, name, address, CGPA. Write a program to initialize the value of 100 students and display the information of those students whose address is “KTM” and CGPA is between 3.5 to 4. using C program</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define MAX_STUDENTS 100
+
+struct STUDENT {
+int SID;
+char name[50];
+char address[100];
+float CGPA;
+};
+
+int main() {
+struct STUDENT S[MAX_STUDENTS];
+int i;
+
+for (i = 0; i &lt; MAX_STUDENTS; i++) 
+{
+printf("Enter details for student %d\n", i + 1);
+printf("SID: ");
+scanf("%d", &amp;S[i].SID);
+
+printf("Name: ");
+scanf(" %[^\n]", S[i].name);
+
+printf("Address: ");
+scanf(" %[^\n]", S[i].address); 
+
+printf("CGPA: ");
+scanf("%f", &amp;S[i].CGPA);
+printf("\n");
+}
+
+printf("\nStudents with address 'KTM' and CGPA between 3.5 and 4.0:\n");
+
+for (i = 0; i &lt; MAX_STUDENTS; i++) 
+{
+
+if (strcmp(S[i].address, "KTM") == 0 &amp;&amp; S[i].CGPA &gt;= 3.5 &amp;&amp; S[i].CGPA &lt;= 4.0) 
+
+  {
+     printf("SID: %d, Name: %s, CGPA: %.2f\n",S[i].SID, S[i].name, S[i].CGPA);
+  }
+}
+
+return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain different file opening modes.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>Openings Modes in Standard I/O</b></p>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%;">
+<tbody>
+<tr>
+<td style="text-align: center; width: 6.43501%;"><strong>Mode</strong></td>
+<td style="text-align: center; width: 41.0553%;"><strong>Meaning of Mode</strong></td>
+<td style="text-align: center; width: 51.4801%;"><strong>During Inexistence of file</strong></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">R</td>
+<td style="text-align: center; width: 41.0553%;">Open for reading</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, fopen() returns NULL</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">Rb</td>
+<td style="text-align: center; width: 41.0553%;">Open for reading in binary mode</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, fopen() returns NULL</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">W</td>
+<td style="text-align: center; width: 41.0553%;">Open for reading</td>
+<td style="text-align: center; width: 51.4801%;">If the file exists, its contents are overwritten. If the file does not exist, it will created</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">Wb</td>
+<td style="text-align: center; width: 41.0553%;"> Open for writing in binary mode</td>
+<td style="text-align: center; width: 51.4801%;">If the file exists, its contents are overwritten. If the file does not exist, it will created</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">A</td>
+<td style="text-align: center; width: 41.0553%;">Open for append. Data is added to the end of the file.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, if will be created.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">Ab</td>
+<td style="text-align: center; width: 41.0553%;">Open for append in binary mode. Data is added to the end of the file.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, it will be created</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">r+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and writing.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">rb+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and writing in binary mode.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">w+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and writing</td>
+<td style="text-align: center; width: 51.4801%;">If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">wb+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and writing in binary mode.</td>
+<td style="text-align: center; width: 51.4801%;">If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">a+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and appending.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6.43501%;">ab+</td>
+<td style="text-align: center; width: 41.0553%;">Open for both reading and appending in binary mode.</td>
+<td style="text-align: center; width: 51.4801%;">If the file does not exist, it will be created.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write a program to draw two shapes of your choice using graphics function.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Program to draw a circle.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;graphics.h&gt;
+ int main()
+   {
+     int gd=DETECT,gm;
+     char txt [20];
+   intitgraph(&amp;gd, &amp;gm, "c:");
+   circle(200,200,50);
+     getch();
+    closegraph();
+     return 0:
+  }</pre>
+<p>Program to draw a hexagon.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;graphics.h&gt;
+ int main ()
+{
+   int gdriver = DETECT, gmode;
+ 
+    int poly [] = {10,75,50,25,100,25,140,75,100125,50,125,10,75};
+    intgraph(&amp;gdriver, &amp;gmode, "c:\\tc\\bgi");
+ drawpoly(7,poly);
+  fillpoly(7, poly);
+  closegraph ();
+ return 0;
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Global variable</li>
+<li>Debugging</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong>Global variable</strong> :<br />
+A variable that may be accessed from anywhere in a program, independent of the scope in which it was declared, is called a global variable. If a global variable is defined, then any function or block of code in the program can use and change it.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="c">int a, b;
+
+int main(){
+    a=5;
+    b=6;
+    sum();
+}
+
+int sum(){
+    printf("%d", a + b);
+}</pre>
+<p>Here a and b are global variables that can be accessed by the sum function also.</li>
+<li><strong>Debugging</strong> :<br />
+The process of locating, separating, and resolving issues or &#8220;bugs&#8221; in a computer program or system is known as debugging. Syntax problems, logical flaws, runtime errors, and unexpected behavior brought on by erroneous assumptions about how the code should work are just a few of the many possible causes of bugs.Once the source of the problem is identified, the developer modifies the code to fix the issue and then tests the program to ensure that the bug is resolved and that no new issues have been introduced.</li>
+</ol>
+</div>
+</body></html>

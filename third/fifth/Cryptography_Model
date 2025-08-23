@@ -1,0 +1,280 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cryptography Model question 0</title>
+    </head>
+    <body>
+        <h1>Cryptography Model question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Define the CIA Triad and explain its components. List out the services of security. Differentiate between block ciphers and stream ciphers with examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Dealing with the security of information we need to work on some strategies and policies that minimizes the threats and make the system secure. The system is condidered to be secured if it has maintained the data integrity, confidentiality and availability. This method of preserving Confidentiality, Integrity and Availability of the infprmation is called CIA Traid.It contain three aspects and they are Confidentiality, Integrity and Availability.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39446 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/Untitled-Diagram.drawio-2.png?resize=261%2C238&#038;ssl=1" alt="" width="261" height="238"></p>
+<p style="text-align: center;"><strong>fig :CIA Traid</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Confidentiality</strong> : Confidentiality is a method to ensure that the sensative contents are concealed from other and are allowed to only authorized person or organization. It deals with data hiding or data confidentiality and privacy. Data confidentiality assures that data content thar are sensetive are hidden and privacy ensure that individual can control and influence the information themselves and can decide whom that data could be disclosed to.</li>
+<li><strong>Integrity</strong> : Integrity mean to assure that the data is not modified and for this either prevention or detection method is used. In prevention method it is ensured that the data are not unauthorized person for modification.</li>
+<li><strong>Availability</strong> : This means that the network should be always available to users. It assures that the system is working promptly and services are not denied to the authorized user. We can consider the system availability if it is in usuable form, has capacity enough to fulfill the need or meet the need of the user.</li>
+</ul>
+<p>security services is a communication services that enhances the security of the data and information transfers of an organization. Security services includes following services:</p>
+<ul style="list-style-type: square;">
+<li><strong>Authentication</strong> : The authentication service is concerned with assuring that a communication is authentic. It is of two type and they are : Peer entity authentication, Data origin authentication.</li>
+<li><strong>Access control</strong> : It is the ability to limit and control the access to host systems and application via communucation. To achieve this, each entity trying to gain access must first be authenticated, identified</li>
+<li><strong>Confidentiality</strong> : Data confidentiality assures that data content thar are sensetive are hidden and privacy ensure that individual can control and influence the information themselves and can decide whom that data could be disclosed to.</li>
+<li><strong>Integrity</strong> : Integrity mean to assure that the data is not modified and for this either prevention or detection method is used. In prevention method it is ensured that the data are not unauthorized person for modification.</li>
+<li><strong>Availability</strong> : This means that the network should be always available to users. It assures that the system is working promptly and services are not denied to the authorized user. We can consider the system availability if it is in usuable form, has capacity enough to fulfill the need or meet the need of the user.</li>
+</ul>
+<p>The difference between Block cipher and Stream cipher is shown below:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 216px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Basis </strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Block Cipher</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Stream Cipher</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 33.3333%; text-align: center; height: 96px;"><strong>Defination</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 96px;">Block cipher take a block of plain text as input and then convert it to cipher text.</td>
+<td style="width: 33.3333%; text-align: center; height: 96px;">Block cipher take a plain text as input and then convert it to cipher text.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Working bits</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">It works on 64 bits or more.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">It works on 8 bits.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Reverse </strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">It is quite complex to reverse the cipher text back to original text as it take a block of plain text while encryption.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">It is easy to reverse the cipher text back to original text as it take a plain text while encryption.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Speed</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Encrypting a block of plain text to cipher text at a time take more time. Hence, it is slow</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Encrypting a plain text to cipher text at a time take less  time. Hence, it is fast.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Security</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Since this cipher uses 64 bits or more while encryping so it is more secure.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">This cipher uses 8 bits while encryping so it is less secure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Given <span class="katex"><span class="katex-mathml">p = 61</span></span>, <span class="katex"><span class="katex-mathml">q = 53.</span></span> Calculate the public key, private key, and encrypt the message “42”. Then, decrypt the ciphertext to retrieve the original message.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>p = 61</p>
+<p>q = 53</p>
+<p style="text-align: center;">n = pq</p>
+<p style="text-align: center;">n = 61 x 53</p>
+<p style="text-align: center;">n = 3233</p>
+<p>now</p>
+<p style="text-align: center;">Φ(n) = (p-1)(q-1)</p>
+<p style="text-align: center;">Φ(n) = (61-1)(53-1)</p>
+<p style="text-align: center;">Φ(n) = 3120</p>
+<p>choosing a value of e such that 3120 is co-prime with e. So, we can say that</p>
+<p>e = 17</p>
+<p>now,</p>
+<p style="text-align: center;">public key = (n, e) = (3233, 17)</p>
+<p>we have ,</p>
+<p style="text-align: center;">ed = 1 (mod Φ(n))</p>
+<p style="text-align: center;">17 d = 1 (mod 3120)</p>
+<p>for finding value of d we can use the extended euclidean algorithm then we get,</p>
+<p style="text-align: center;">3120 = 17 x 183 +9</p>
+<p style="text-align: center;">17 = 9 x 1 +8</p>
+<p style="text-align: center;">9 = 8 x 1 + 1</p>
+<p style="text-align: center;">8 = 1 x 8 + 0</p>
+<p>By solving above equations by substution we get,</p>
+<p style="text-align: center;">d = 367</p>
+<p>so,</p>
+<p style="text-align: center;"> private key = (n, d) = (3233, 367)</p>
+<p>Here, we have message &#8220;42&#8221;.</p>
+<p>So, for encryption we have formula as,</p>
+<p style="text-align: center;">m<sup>e</sup> mod n</p>
+<p style="text-align: center;">= 42<sup>17 </sup>mod 3233</p>
+<p style="text-align: center;"> = 2557</p>
+<p>now,</p>
+<p>for decryption we have formula as,</p>
+<p style="text-align: center;">c<sup>d</sup> mod n</p>
+<p style="text-align: center;">= 2557<sup>367 </sup>mod 3233</p>
+<p style="text-align: center;">= 42</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the single round operation in DES. Describe the F function in DES.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data Encryption Standard (DES) is a type of feistal cipher which contain 16 rounds. It is a block cipher with 64 bit. The basic concept of DES is that a 64 bit block is divided into two halves of 32 bits each. The halves goes under the operations with function F, subkeys of 48 bits and XOR operator. This basic structure is shown below.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-39447" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/DES-fig.drawio.png?resize=298%2C527&#038;ssl=1" alt="" width="298" height="527"></p>
+<p>&nbsp;</p>
+<p>Initially before leading to the rounds the 64 bit plain text is divided into two halves each of 32 bits. In each rounds there are some steps to be followed and they are explained below:</p>
+<ul style="list-style-type: square;">
+<li>The right 32 bit half is intially expanded by passing through Expansion table(E-table). This help to convert 32 bit to 48 bit.</li>
+<li>The expanded bit goes under XOR operation with 48 bit subkey.</li>
+<li>The subkey is generated by dividing the 56 bits key of 64 bits key into two halves of 28 bit block each. Each halves goes under left shift of and its permutation to give a 48 bit subkey.</li>
+<li>The XORed right half bits are then passed through Substution box (S-box). In DES 8 S-box are there and each takes six bit input and give 4 bit output. This converts 48 bits back to 32 bits.</li>
+<li>The obtained 32 bit it then permuted i.e positioned.</li>
+<li>Finally the permutted bits are XORed with the left half.</li>
+<li>The right half of this round will be left half of next round whereas the XORed  left and right half obtained before are used as right half of next round.</li>
+</ul>
+<p>The figure below shows the diagram for single round steps</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39444 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/DES-single-round.drawio.png?resize=328%2C357&#038;ssl=1" alt="" width="328" height="357"></p>
+<p>&nbsp;</p>
+<p>F function also known as feistal function is a function which works on right half and subkey or round key. In this function intitally the 32 bit text is expanded to 48 bits. The 48 bit text is then XORed with 48 bit subkey. The obtained 48 bits are sent to Substution box where each S-box accepts 8 input data and produce 4 output data resulting to the reduction of 48 bit data to 32 bit data. Obtained 32 bits are then permutted. This is visually represented below:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-39445 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/function-F.drawio.png?resize=215%2C323&#038;ssl=1" alt="" width="215" height="323"></p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Explain the process of generating message digests using MD4.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>MD4 is a cryptographic hash function which digest an arbitrary message length of 128 bit. It was designed to be a 32 bit word oriented so that it could be computed faster on 32 bit computer. This algorithm influenced later design such as MD-5, SHA-1 algorithms. It has rounds containing block size of 512 bits.</p>
+<p><strong>Initialization</strong></p>
+<ul style="list-style-type: square;">
+<li>Step 1: Given a message m<sub>0</sub>, m<sub>1</sub>, m<sub>2</sub>, &#8230;&#8230;. m<sub>b-1</sub>  b bits</li>
+<li>Step 2: Append padding bits and get m<sub>0</sub>, m<sub>1</sub>, m<sub>2</sub>, &#8230;&#8230;. m<sub>b-1 </sub>(b bits ≡ 448 mod 512)</li>
+<li>Step 3: Append 64 bits and get m<sub>0</sub>, m<sub>1</sub>, m<sub>2</sub>, &#8230;&#8230;. m<sub>b-1  </sub></li>
+<li>Divide it to N words as m<sub>0</sub>, m<sub>1</sub>, m<sub>2</sub>, &#8230;&#8230;. m<sub>b-1 </sub>(N is a multiple of 16).</li>
+<li>Initialize 4 MD buffer (A, B, C, D) each of them is 32 bit register.</li>
+</ul>
+<p style="text-align: center;">Word A : 01  23  45  67</p>
+<p style="text-align: center;">Word B : 89 ab  cd  ef</p>
+<p style="text-align: center;">Word C : fe  de  ba  89</p>
+<p style="text-align: center;">Word D : 76  54  32  10</p>
+<p><strong>Processing 48 rounds</strong></p>
+<ul style="list-style-type: square;">
+<li>first pass 16 rounds : f(B, C, D) = BC ∨ (¬ B)D,    i =0,1,2,3,4,5&#8230;.. 15,    k<sub>1 </sub>= 0,    S = 3,7,11,19,3,7,11,19,3,7,11,19,&#8230;&#8230;</li>
+<li>second pass 16 rounds : f(B, C, D) = BC ∨ BD ∨ CD,    i =0,4,8,12,   k<sub>1 </sub>= 5A827999,    S = 3,5,9,13,3,3,5,9,13,3,5,9,13&#8230;&#8230;</li>
+</ul>
+<ul style="list-style-type: square;">
+<li>third pass 16 rounds : f(B, C, D) = B⊕C⊕D,    i =0,8,4,12,    k<sub>1 </sub>= 6ED9EBA1,    S = 3,9,11,15,3,9,11,15,3,9,11,15,&#8230;&#8230;</li>
+</ul>
+<p><strong>Compute :</strong></p>
+<p style="text-align: center;">A = A + A°</p>
+<p style="text-align: center;">B = B + B°</p>
+<p style="text-align: center;">C = C + C°</p>
+<p style="text-align: center;">D = D + D°</p>
+<p><strong>Output :</strong></p>
+<p>A, B, C, D as result.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-39483 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/MD4.drawio.png?resize=328%2C288&#038;ssl=1" alt="" width="328" height="288"></p>
+<p style="text-align: center;"><strong>fig : MD4 </strong></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Encrypt the message “INFORMATION” using the Playfair cipher with the keyword “SECURITY”.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>Message = INFORMATION</p>
+<p>Keyword = SECURITY</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-39475 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/PLAYFAIR.drawio.png?resize=271%2C175&#038;ssl=1" alt="" width="271" height="175"></p>
+<p>From above we can encrypt the message INFORMATION,</p>
+<p style="text-align: center;">    IN                FO                RM             AT           IO              NZ</p>
+<p style="text-align: center;">       YL               HM               EP                BY            AL             PW</p>
+<p>Hence, for message INFORMATION the cipher text will be YLHMEPBYALPW.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain the concept of digital signatures and differentiate between direct and arbitrated digital signatures.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Digital signatures are cryptographic mechanisms that provide a way to verify the authenticity and integrity of digital messages or documents. They are the digital equivalent of handwritten signatures or stamped seals, but they offer far more inherent security. Digital signatures rely on asymmetric cryptography, also known as public key cryptography.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 463px;">
+<tbody>
+<tr style="height: 48px;">
+<td style="width: 33.3333%; text-align: center; height: 48px;"><strong>Feature</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 48px;"><strong>Direct digital signature </strong></td>
+<td style="width: 33.3333%; text-align: center; height: 48px;"><strong>Arbitrated digital signature </strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 33.3333%; text-align: center; height: 96px;"><strong>Parties involved</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 96px;">Two parties : signer and receiver are there in this.</td>
+<td style="width: 33.3333%; text-align: center; height: 96px;">There are three parties and they are : signer,  receiver and trusted third parties.</td>
+</tr>
+<tr style="height: 144px;">
+<td style="width: 33.3333%; text-align: center; height: 144px;"><strong>Verification process</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 144px;">Verifier uses public key to decrypt the signature and verify the message and integrity.</td>
+<td style="width: 33.3333%; text-align: center; height: 144px;">Verifier sends the message and signature to the trusted third party, who verifies the signature and sends the result to the verifier.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; text-align: center; height: 72px;"><strong>Impartability</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 72px;">Maybe seen as less impartial, as there is no third party involved.</td>
+<td style="width: 33.3333%; text-align: center; height: 72px;">More impartial, as the trusted third party is an independent entity.</td>
+</tr>
+<tr style="height: 79px;">
+<td style="width: 33.3333%; text-align: center; height: 79px;"><strong>Cost </strong></td>
+<td style="width: 33.3333%; text-align: center; height: 79px;">Lower cost, as there is no any third parties are involved.</td>
+<td style="width: 33.3333%; text-align: center; height: 79px;">High cost, as there is third parties involved so they need to be paid.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong>Application</strong></td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">Low value transactions, internal communication.</td>
+<td style="width: 33.3333%; text-align: center; height: 24px;">High value transactions, contract, legal documents.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define firewall and types of firewalls.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A firewall is a network security device, either hardware or software based. It monitors all incomming and outgoing traffic and based on a defined set of security rules it accepts, drops or rejects that specific traffic which seems suspecious or dangerous.</p>
+<p>Types of firewalls are :</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Packet Filtering Firewall: </strong>Examines packets of data and makes decisions to allow or block based on predetermined rules, such as IP addresses and port numbers.</li>
+<li><strong>Stateful Inspection Firewall: </strong>Keeps track of the state of active connections and makes decisions based on the context of the traffic, allowing or blocking packets based on the current state of the connection.</li>
+<li><strong>Circuit-Level Gateway: </strong>Operates at the transport layer of the OSI model and monitors TCP handshakes. It doesn’t inspect the contents of packets but makes decisions based on the state of the connection.</li>
+<li><strong>Application Layer Firewall (Proxy Server): </strong>Operates at the application layer of the OSI model, inspecting and filtering traffic based on specific applications or services. It provides granular control over the applications being used.</li>
+<li><strong>Next-Generation Firewall (NGFW): </strong>Combines traditional firewall features with advanced functionalities, including intrusion prevention, deep packet inspection, and application-layer filtering, to provide more comprehensive security.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>State Fermat’s theorem example. Write the algorithm forelse</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Fermat’s theorem states that if p is a prime number, then for any integer a, the number a<sup>p</sup> – a is an integer multiple of p.</p>
+<p>Here p is a prime number<br />
+a<sup>p</sup> ≡ a (mod p)</p>
+<p><b>Example:</b></p>
+<p>P = an integer Prime number<br />
+a = an integer that is not a multiple of P<br />
+Let a = 2 and P = 17</p>
+<p>According to Fermat’s little theorem<br />
+2 17 – 1 ≡ 1 mod(17)<br />
+we got 65536 % 17 ≡ 1<br />
+that mean (65536-1) is a multiple of 17</p>
+<p>&nbsp;</p>
+<p>It is used to test primality of large number. To test whether a given number &#8216;n&#8217; is prime or not. Miller Rabin algorithm works as follow:</p>
+<p><strong>Step 1</strong> : Write n &#8211; 1 = 2<sup>k</sup> m, where m is odd.</p>
+<p><strong>Step 2</strong> : Choose a random number a; 1 ≤ a ≤ n-1.</p>
+<p><strong>Step 3</strong> : Compute b = a<sup>m</sup> mod n.</p>
+<p><strong>Step 4</strong> : If b ≡ 1 (mod n) then return prime.</p>
+<p><strong>Step 5</strong> : for i = 0 to k-1 ,</p>
+<ul style="list-style-type: square;">
+<li>do if b ≡ -1 (mod n) then return prime.</li>
+<li>else b = b<sup>2 </sup>mod n.</li>
+</ul>
+<p><strong>Step 6</strong> : return composite.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain IP Security (IPSec) and its components.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>IPSec (Internet Protocol Security):</strong></p>
+<p>IPSec is a suite of protocols designed to secure Internet Protocol (IP) communications by authenticating and encrypting each IP packet within a communication session. It operates at the network layer of the OSI model and can be used to provide security services for various protocols, including IP itself, as well as higher-layer protocols like TCP and UDP. IPSec is commonly used in virtual private network (VPN) implementations to ensure secure and private communication over the internet.</p>
+<p>Key components of IPSec include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Authentication Header (AH): </strong>Provides authentication and integrity checking for IP packets. Ensures that the data has not been altered during transit.</li>
+<li><strong>Encapsulating Security Payload (ESP): </strong>Provides confidentiality, authentication, and integrity for the data being transmitted. Encrypts the payload of the IP packet to protect it from eavesdropping.</li>
+<li><strong>Security Associations (SAs): </strong>SAs define the security parameters and keys used for protecting communication between two devices. Both AH and ESP use SAs to establish secure communication.</li>
+<li><strong>Key Management: </strong>Involves the generation, distribution, and management of cryptographic keys used for encryption and authentication. Key exchange protocols like IKE (Internet Key Exchange) are often used for this purpose.</li>
+<li><strong>Tunnel and Transport Modes: </strong>IPSec operates in two modes: tunnel mode and transport mode. In tunnel mode, the entire original IP packet is encrypted and becomes the payload of a new IPSec-protected packet. In transport mode, only the payload of the original packet is encrypted.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><div class="left_content">
+<div class="qnbank_content">
+<p>Divide <span class="katex"><span class="katex-mathml">3x<sup>2</sup>+x+6 by 5x + 3</span></span> over <span class="katex"><span class="katex-mathml">GF(9)</span></span>.</p>
+</div>
+</div>
+<div class="right_content">
+<div class="qnedit_btn"></div>
+</div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>dividend = <span class="katex"><span class="katex-mathml">3x<sup>2 </sup>+ x + 6</span></span></p>
+<p>divisor = <span class="katex"><span class="katex-mathml">5x + 3</span></span></p>
+<p>GF over 9.  so, Z = {0, 1, 2, 3, 4, 5, 6, 7, 8}</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-39565" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/08/divide.drawio.png?resize=416%2C281&#038;ssl=1" alt="" width="416" height="281"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain the process of public key distribution and secret key distribution using public key cryptography.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 12</h3>
+<div><p><p>Explain the concept of a denial of service attack and provide examples.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users. DoS attacks are attempts to interrupt a website or network’s operations by overwhelming it with traffic. DoS attacks accomplish this by flooding the target with traffic or sending it information that triggers a crash. In both instances, the DoS attack deprives legitimate users (i.e. employees, members, or account holders) of the service or resource they expected. Hacker tries to make a network, system, or machine unavailable by flooding it with fake requests or traffic. This prevents real users from accessing it, causing anything from slowdowns to complete shutdowns.</p>
+<p>There are two general methods of DoS attacks: flooding services or crashing services. Flood attacks occur when the system receives too much traffic for the server to buffer, causing them to slow down and eventually stop. Popular flood attacks include:</p>
+<ul style="list-style-type: square;">
+<li><b>Buffer overflow attacks</b> – It is the most common DoS attack. The concept is to send more traffic to a network address than the programmers have built the system to handle. It includes the attacks listed below, in addition to others that are designed to exploit bugs specific to certain applications or networks</li>
+<li><b>ICMP flood</b> – It leverages misconfigured network devices by sending spoofed packets that ping every computer on the targeted network, instead of just one specific machine. The network is then triggered to amplify the traffic. This attack is also known as the smurf attack or ping of death.</li>
+<li><b>SYN flood</b> – It is a variation that exploits vulnerability in TCP connection sequence that sends a request to connect to a server, but never completes the handshake. This continues until all open ports are saturated with requests and none are available for legitimate users to connect to.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+</body></html>

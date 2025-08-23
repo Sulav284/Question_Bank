@@ -1,0 +1,332 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MP Question Bank 2080(new) 2080</title>
+    </head>
+    <body>
+        <h1>MP Question Bank 2080(new) - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTON A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Difference between 8085 and 8086 microprocessor. Explain the concept of demultiplexing of address bus and why is it required?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 629px;">
+<tbody>
+<tr style="height: 32px;">
+<th style="width: 48.7062%; text-align: center; height: 32px;">8085 microprocessor</th>
+<th style="width: 51.1416%; text-align: center; height: 32px;">8086 microprocessor</th>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 48.7062%; text-align: center; height: 33px;">The data bus is 8 bits.</td>
+<td style="width: 51.1416%; text-align: center; height: 33px;">The data bus is 16 bits.</td>
+</tr>
+<tr style="height: 43px;">
+<td style="width: 48.7062%; text-align: center; height: 43px;">The address bus is 16 bits.</td>
+<td style="width: 51.1416%; text-align: center; height: 43px;">The address bus is 20 bits.</td>
+</tr>
+<tr style="height: 112px;">
+<td style="width: 48.7062%; text-align: center; height: 112px;">The memory capacity is 64 KB. Also, 8085 Can Perform Operation Up to 2<sup>8</sup> i.e. 256 numbers. A number greater than this is to be taken multiple times in an 8-bit data bus.</td>
+<td style="width: 51.1416%; text-align: center; height: 112px;">The memory capacity is 1 MB. Also, 8086 Can Perform operations up to 2<sup>16</sup> i.e. 65,536 numbers.</td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 48.7062%; text-align: center; height: 45px;">The input/output port addresses are 8 bits.</td>
+<td style="width: 51.1416%; text-align: center; height: 45px;">The input/output port addresses are 16 bits.</td>
+</tr>
+<tr style="height: 58px;">
+<td style="width: 48.7062%; text-align: center; height: 58px;">The operating frequency is 3.2 MHz.</td>
+<td style="width: 51.1416%; text-align: center; height: 58px;">The operating frequency is 5 MHz, 8 MHz, and 10 MHz.</td>
+</tr>
+<tr style="height: 109px;">
+<td style="width: 48.7062%; text-align: center; height: 109px;">8085 MP has a Single Mode Of Operation.</td>
+<td style="width: 51.1416%; text-align: center; height: 109px;">8086 MP has Two Modes Of Operation. 1. Minimum Mode = Single CPU PROCESSOR 2. Maximum Mode = Multiple CPU PROCESSOR.</td>
+</tr>
+<tr style="height: 70px;">
+<td style="width: 48.7062%; text-align: center; height: 70px;">It does not have multiplication and division instructions.</td>
+<td style="width: 51.1416%; text-align: center; height: 70px;">It has multiplication and division instructions.</td>
+</tr>
+<tr style="height: 87px;">
+<td style="width: 48.7062%; text-align: center; height: 87px;">It does not support pipelining.</td>
+<td style="width: 51.1416%; text-align: center; height: 87px;">It supports pipe-lining as it has two independent units Execution Unit (EU) and Bus Interface Unit (BIU).</td>
+</tr>
+<tr style="height: 40px;">
+<td style="width: 48.7062%; text-align: center; height: 40px;">It does not support an instruction queue.</td>
+<td style="width: 51.1416%; text-align: center; height: 40px;">It supports an instruction queue.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Demultiplexing of the address bus is a process used in microprocessors, such as the 8085, to separate address and data lines that serve dual purposes.</p>
+<ul style="list-style-type: square;">
+<li><img loading="lazy" decoding="async" class="alignnone wp-image-42614 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2024/10/Demultiplexing.drawio.png" alt="" width="417" height="203"></li>
+</ul>
+<p>Given the ALE operates as a pulse during T<sub>1</sub> we will be able to latch the address then when ALE goes low the address is saved ad the AD<sub>0</sub> &#8211; AD<sub>7</sub>  lines can be used for their purpose as the bi-directional data lines.</p>
+<ul style="list-style-type: square;">
+<li>The higher order address is placed on the address bus and hold for 3 clk periods.</li>
+<li>The low order address is lost after the first clock period, this address needs to be hold however we need to use latch.</li>
+<li>The address AD<sub>0</sub> &#8211; AD<sub>7 </sub> is connected as inputs to the latch .</li>
+<li>The ALE signal is connected to the enable (G) pin od the latch and the OC output control of the latch is grounded.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Write an Assembly program for calculating the factorial of a number using 8085 microprocessor.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="asm">; Program to calculate the factorial of a number
+
+        MVI B, 05H       
+        MVI C, 01H  
+
+FACTORIAL_LOOP:
+        MOV A, B            
+        MVI D, 00H          
+
+MULTIPLY_LOOP:
+        MOV E, C            
+        ADD C              
+        JNC NO_CARRY       
+        INR D              
+
+NO_CARRY:
+        DCR B           
+        JNZ MULTIPLY_LOOP   
+        MOV C, A            
+        MOV B, D            
+        DCR B               
+        JNZ FACTORIAL_LOOP  
+
+        HLT            
+</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Draw a block diagram of 80286 microprocessor and explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-42621" src="https://hamrocsit.com/wp-content/uploads/2024/10/80286.drawio-1.png" alt="" width="991" height="968"></p>
+<p>The 80286 is the first member of the family of advanced microprocessor with memory management and protection abilities. The 80286 contain CPU with 24 bit address bus which is able to address 16 Mbytes of physical memory. Varoius version of 80826 are available that runs on 12.5MHz, 10 MHz and 8MHz Clock frequencies. 80286 is upwardly compatible with 8086 in terms of instruction set. 80826 includes two operating modes real address mode which can address upto 1 Mb and virtual address upto 16Mb.</p>
+<p>The CPU contain four functional blocks</p>
+<ol style="list-style-type:decimal;">
+<li>Address Unit (AU)</li>
+<li>Bus Init (BU)</li>
+<li>Instruction Unit (IU)</li>
+<li>Execution Unit (EU)</li>
+</ol>
+<p>The address unit is responsible for calculating the physical address of instructions and data that the CPU wants to access. Also the address lines derived by this unit may be used to address different peripherals. The physical address computed by the address unit is handed over to the bus unit (BU) of the CPU.</p>
+<p>Major function of the bus unit is to fetch instruction bytes from the memory. Instructions are fetched in advance and stored in a queue to enable faster execution of the instructions. The bus unit also contains a bus control module that controls the prefetcher module. These prefetched instructions are arranged in a 6-byte instructions queue. The 6-byte prefetch queue forwards the instructions arranged in it to the <b><strong>instruction unit </strong></b>(IU).</p>
+<p>The instruction unit accepts instructions from the prefetch queue and<b><strong> </strong></b>an instruction decoder decodes them one by one. The decoded instructions are latched onto a decoded instruction queue. The output of the decoding circuit drives a control circuit in the <b><strong>execution unit,</strong></b> which is responsible for executing the instructions received from decoded instruction queue.</p>
+<p>The decoded instruction queue sends the data part of the instruction over the data bus. The EU contains the register bank used for storing the data as scratch pad, or used as special purpose registers. The ALU, the heart of the EU, carries out all the arithmetic and logical operations and sends the results over the data bus or back to the register bank.</p>
+</div>
+<h2>SECTON B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>What is paging? Explain the concept of memory access in protected mode.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Paging</strong> is one of the memory management techniques used for virtual memory multitasking operating system. It allows handling of large segments of memory in terms of pages of 4K byte size. The advantage of paging scheme to that the complete segment of task need not ti be in the physical memory at any time. Only a few pages of segments, which are currently required for the execution need to be available in the physical memory.</p>
+<p><strong>In protected mode,</strong> the content of segment registers are used as selectors to address descriptors which contain the segment limit, base address and access rights byte of the segment.The effective address i.e offset is added with segment base address. This linear address is further used as physical address, if the paging unit is disabled, otherwise the paging unit converts the linear address into pysical address.</p>
+<p>The paging unit is a memory management unit enabled only in protected mode. The paging mechanism allows handling of large segments of memoryin terms of pages of 4K byte size. The paging unit operates under the control of segmentation unit. The paging unit if enabled converts linear addresses into physical address, in protected mode.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is the importance of direct memory access? Explain the mechanism of direct memory access.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="flex-shrink-0 flex flex-col relative items-end">
+<div>
+<div class="pt-0">
+<div class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+<div class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8">Direct Memory Access (DMA) is a technique that allows peripherals to transfer data directly to or from the main memory without involving the CPU in data handling. Imporatance of DMA are:</div>
+<ul style="list-style-type: square;">
+<li><strong>Reduces Latency in Real-Time Systems</strong> : DMA requires very few clock cycles while transferring data.</li>
+<li><strong>Faster Data Transfers</strong> : Data Memory Access speeds up memory operations and data transfer.</li>
+<li><strong>Reduces CPU Overhead</strong> : DMA enables data transfers directly between memory and devices without CPU intervention and hence reduces the CPU overhead.</li>
+<li><strong>Improves Multitasking and System Responsiveness</strong> : DMA handles data transfers, the CPU remains free to manage other tasks and processes.</li>
+</ul>
+<p>Direct Memory Access (DMA) is a module where a seperate hardware is used which is responsible for transfer of data from i/o without involvement of the CPU.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-42676 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2024/10/DMA.drawio.png" alt="" width="428" height="380"></p>
+<p>Working of DMA is explained below as:</p>
+<ul style="list-style-type: square;">
+<li>The peripherals request the DMA controller for the transfer of the data from memory or to memory.</li>
+<li>DMA request for the bus from CPU. When CPU gets the bus request from the DMA then the CPU acknowledges the DMA in response to the request and grant the bus to the DMA.</li>
+<li>When the DMA gets the access of the bus then the DMA sends the acknowledgment to the I/O.</li>
+<li>When the acknowledge is received then the I/O and memory uses the granted bus and perform data transfer using it.</li>
+<li>Once the data transmission is completed then the I/O returns the bus to the CPU goes back to the normal working.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>List different types of ports. What are the main characteristics of programmable interrupt controller 8259A?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p>Main characteristics of 8259 PIC are as follows:</p>
+<ol style="list-style-type:decimal;">
+<li>8259 is designed for Intel 8085 and Intel 8086 microprocessor.</li>
+<li>It can be programmed either in level triggered or in edge triggered interrupt level.</li>
+<li>We can mask individual bits of interrupt request register.</li>
+<li>We can increase interrupt handling capability upto 64 interrupt level by cascading further 8259 PICs.</li>
+<li>Clock cycle is not required.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Difference between instruction cycle and machine cycle. Draw timing diagram of MVI A, 32 H.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 146px;">
+<tbody>
+<tr style="height: 24px;">
+<th style="width: 33.279%; height: 24px; text-align: center;"><strong>Aspect</strong></th>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Instruction Cycle</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"> <strong>Machine Cycle</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.279%; height: 24px; text-align: center;"><strong>Definition</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Complete process of fetching, decoding, and executing a single instruction</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">The time taken to complete a basic operation like memory access, I/O, or an arithmetic operation</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.279%; height: 26px; text-align: center;"><strong>Purpose</strong></td>
+<td style="width: 33.3333%; height: 26px; text-align: center;">Ensures that each instruction in a program is processed fully</td>
+<td style="width: 33.3333%; height: 26px; text-align: center;">Carries out individual operations needed for CPU tasks</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.279%; height: 24px; text-align: center;"><strong>Stages Involved</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Fetch, Decode, Execute, and Writeback (each could involve multiple machine cycles)</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Memory Access, I/O Operation, Opcode Fetch, Execution (each cycle completes one operation)</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.279%; height: 24px; text-align: center;"><strong>Number per Instruction</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">One instruction cycle per instruction, which may contain multiple machine cycles</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Several machine cycles are often needed to complete one instruction cycle</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.279%; height: 24px; text-align: center;"><strong>Time Required</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Typically longer, as it includes all steps for one complete instruction</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Shorter, as each machine cycle represents just one simple CPU operation</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-42661" src="https://hamrocsit.com/wp-content/uploads/2024/10/MVI-.drawio.png" alt="" width="692" height="679"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><article class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]" dir="auto" data-testid="conversation-turn-8" data-scroll-anchor="false">
+<div class="text-base py-[18px] px-3 md:px-4 m-auto w-full md:px-5 lg:px-4 xl:px-5">
+<div class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+<div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&]:mt-5" dir="auto" data-message-author-role="user" data-message-id="aaa2f0d6-5490-4110-921a-5fde2606046d">
+<div class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start">
+<div class="relative max-w-[70%] rounded-3xl px-5 py-2.5 bg-[#f4f4f4] dark:bg-token-main-surface-secondary">
+<div class="whitespace-pre-wrap">Write an Assembly program to reverse the given string.</div>
+<div class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-1 [.group\/conversation-turn:hover_&]:block"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]" dir="auto" data-testid="conversation-turn-9" data-scroll-anchor="true">
+<h6 class="sr-only"></h6>
+</article</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><pre class="EnlighterJSRAW" data-enlighter-language="asm">ORG 2000H 
+
+LXI H, 2500H 
+LXI D, 2600H 
+
+FIND_LENGTH:
+MOV A, M 
+CPI 00H 
+JZ LENGTH_FOUND 
+INX H 
+JMP FIND_LENGTH 
+
+LENGTH_FOUND:
+DAD D 
+DCX H 
+
+REVERSE_LOOP:
+MOV A, M
+MOV E, A 
+MOV A, M 
+MOV M, A 
+
+DCX H
+INX D 
+
+CMP H 
+JMP H = DE</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain different tyes of system buses and also indicate wheather they are unidirectional or bidirectional.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Different tyes of system buses are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong><span style="text-decoration: underline;">Control Bus</span>: (It is partily unidirectional and patrtily bidirectional.)<br />
+</strong>The control bus carries that control signal. The control signal is used for controlling and coordinating the various activities across the computer. It is generated from the control unit within the CPU. The control unit generates a specific Control Signal for every operation, such as memory rod or input Joulut operation. This signal is also used to identify a device type, with which the microprocessor communicates.</li>
+<li><strong><span style="text-decoration: underline;">Address Bus</span>: (It is unidirectional.)<br />
+</strong> Address bus carries the memory the address within the device allows the CPU to reference memory locations within the device. It connects the CPU and another peripheral and carries only the memory address. The address bus contains the connections between the processor and memory that carry the signals relating to the addresses which theCPU is processing at that time, such as the locations that the CPU is reading from or writing to. It address but could carry 8 bit at a time, the CPU could address only. (2^8) 256 bytes of RAM.</li>
+<li><strong><span style="text-decoration: underline;">Data Bus</span>: (It is bidirectional.)<br />
+</strong>Data bus transfer data from one location to another across the computer. The meaningful data which is to be sent from a device is placed on these lines. The CPU uses a data bus to transfer data. It May 16 or 32-bit data bus. It is an electrical connects the CPU, memory, and other hardware devices on the motherboard. These lines are bidirectional data flow in both directions between the processor and memory and peripheral devices.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is the significance of interrupt masking? Difference between vectored and polled interrupt.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Interrupt masking is vital for managing multitasking, preventing conflicts, and ensuring efficient operation in complex systems. Significance of the interrupt masking are :</p>
+<ul style="list-style-type: square;">
+<li><strong>Prioritizing Critical Tasks</strong> :<br />
+Interrupt masking allows the CPU to focus on completing high-priority tasks by ignoring lower-priority interrupts.</li>
+<li><strong>Preventing Nested Interrupts</strong> :<br />
+Interrupt masking helps prevent situations where an interrupt is interrupted by another interrupt, causing complex nesting.</li>
+<li><strong>Ensuring System Stability</strong> :<br />
+Masking prevents interrupt &#8220;flooding,&#8221; maintaining stability and avoiding potential system crashes.</li>
+<li><strong>Enabling Atomic Operations</strong> :<br />
+Masking interrupts ensures that critical sections are completed without interruption, which is essential for maintaining data integrity.</li>
+<li><strong>Reducing Interrupt Latency</strong> :<br />
+By masking low-priority interrupts, the system can reduce interrupt latency for higher-priority tasks, allowing for faster responses where timing is essential, like real-time applications.</li>
+<li><strong>Supporting Real-Time Operating Systems (RTOS)</strong> :<br />
+In real-time systems, predictability is crucial. Masking interrupts lets the system control interrupt behavior and timing, allowing for deterministic responses, which is critical for real-time performance.</li>
+</ul>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Aspect</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Vectored Interrupt</strong></td>
+<td style="width: 33.3333%; text-align: center;"> <strong>Polled Interrupt</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Interrupt Identification</strong></td>
+<td style="width: 33.3333%; text-align: center;">The CPU automatically identifies the interrupt source via a unique vector number or address provided by the hardware.</td>
+<td style="width: 33.3333%; text-align: center;">The CPU must check each device or source one by one (polling) to identify the interrupt source.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Speed</strong></td>
+<td style="width: 33.3333%; text-align: center;">Faster, since the interrupt address is directly accessed, saving time.</td>
+<td style="width: 33.3333%; text-align: center;">Slower, as the CPU checks all devices sequentially to find the source of the interrupt.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>CPU Overhead</strong></td>
+<td style="width: 33.3333%; text-align: center;">Lower, as the interrupt vector provides the address, minimizing CPU effort.</td>
+<td style="width: 33.3333%; text-align: center;">Higher, as the CPU must spend time polling each device to determine the source.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Use Cases</strong></td>
+<td style="width: 33.3333%; text-align: center;">Often used in systems where response time is critical, such as real-time systems.</td>
+<td style="width: 33.3333%; text-align: center;">Common in simpler systems or those with fewer devices, where response time is less critical.</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Complexity</strong></td>
+<td style="width: 33.3333%; text-align: center;">Requires hardware support for vector addresses for each device.</td>
+<td style="width: 33.3333%; text-align: center;">Simpler as it doesn’t require specific vector hardware, but relies on software to poll each device.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Illustrate memory access in GDT.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Global Descriptor Table (GDT) is a crucial part of memory management in x86 architecture, particularly for segment-based memory access. The GDT holds entries, or descriptors, which define properties of various memory segments such as base address, limit, and access rights used for processes in protected mode.</p>
+<p><img loading="lazy" decoding="async" class=" wp-image-42682 aligncenter" src="https://hamrocsit.com/wp-content/uploads/2024/10/GDT.drawio.png" alt="" width="449" height="449"></p>
+<p style="text-align: center;">fig : Memory access in GDT</p>
+<p>The GDT is stored in memory and contains descriptors for memory segments, such as code, data, and system segments. The GDTR (Global Descriptor Table Register) holds the base address and the limit of the GDT. The LGDT instruction loads the GDT address into the GDTR so that the CPU can reference the GDT when needed. The CPU accesses memory segments via segment selectors stored in registers like CS (Code Segment), DS (Data Segment), SS (Stack Segment), and so on.</p>
+<p>When the CPU needs to access a segment, it checks the segment selector for the index and retrieves the corresponding entry in the GDT. The Base Address and Limit in the descriptor define the segment’s bounds. An offset within the segment is added to the Base Address to calculate a linear address. If paging is enabled, this linear address undergoes further translation to a physical address in memory.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on :</p>
+<ol>
+<li>Jumps</li>
+<li>Accmulator</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>1.<strong> Jump:<br />
+</strong>&#8220;Jump&#8221; instructions are used to alter the normal sequential flow of a program by changing the program counter (PC) to a new memory address. They are fundamental in implementing loops, decision-making structures, and branching, helping to create efficient and dynamic code. It can be of two types and they are conditional and unconditional.</p>
+<p>Unconditional jumps force a jump to a specified address regardless of conditions whereas conditional jumps depend on specific conditions like zero flags or carry flags.</p>
+<p>Unconditional jump example :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="asm">JMP START</pre>
+<p>Conditional jump example :</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">EQUAL : CMP AL, 1   
+        JE EQUAL</pre>
+<p>&nbsp;</p>
+<p>2. <strong>Accumulator :</strong></p>
+<p>The accumulator is a special-purpose register used to store intermediate results of arithmetic and logic operations.The accumulator is an 8-bit register i.e it can store 8-bit data. It is the part of the arithmetic and logical unit (ALU). After performing arithmetical or logical operations, the result is stored in accumulator. Accumulator is also defined as register A.</p>
+<p>Common operations like addition, subtraction, and logic functions (AND, OR) are performed using the accumulator, which then stores the result. Using the accumulator minimizes the number of memory accesses, improving processing speed and simplifying the microprocessor design. It often acts as the primary operand in microprocessor instructions, allowing efficient operations without needing additional memory references.</p>
+</div>
+</body></html>

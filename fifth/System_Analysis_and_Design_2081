@@ -1,0 +1,449 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAD Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>SAD Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Explain prototyping model with a neat diagram. List out its advantages and dis-advantages.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A prototype, which is an early estimate of the final system or product, is constructed, tested, and improved repeatedly until it satisfies user requirements. This process is known as the prototyping model in software development. This methodology is especially helpful in situations when the precise needs are not fully recognized at the outset. Better understanding and visualization of the product by developers and users through prototyping aids in requirement clarification and enhances system usability.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-43833 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/prototyping.drawio.png?resize=241%2C238&#038;ssl=1" alt="" width="241" height="238"></p>
+<h3>Steps in the Prototyping Model:</h3>
+<ol style="list-style-type:decimal;">
+<li><strong>Requirements Gathering and Analysis</strong>: Obtain the users&#8217; fundamental requirements. Usually, these criteria are either vague or unfinished and just reflect the user&#8217;s wants..</li>
+<li><strong>Quick Design</strong>: Develop a basic system design. This design just incorporates the essential elements that must be comprehended.</li>
+<li><strong>Build Prototype</strong>: During the rapid design phase, create a simple version of the system that just has the essential functionality.</li>
+<li><strong>User Evaluation</strong>: Show the prototype to users and get their opinions. Users engage with the prototype, offering recommendations or pointing out aspects that are lacking.</li>
+<li><strong>Refinement</strong>: The prototype is adjusted and improved in response to user input. Until the prototype satisfies user expectations, the cycle (Build Prototype → User Evaluation → Refinement) is repeated.</li>
+<li><strong>Full Development</strong>: After the prototype is completed and approved, the real system is created with an emphasis on performance, scalability, and dependability.</li>
+<li><strong>Testing and Maintenance</strong>: The full-scale system undergoes extensive testing and ongoing maintenance when it is established.</li>
+</ol>
+<p><strong>Advantages of the Prototyping Model:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Improved Requirements Understanding</strong> : Enables users to view a functional system model, which aids in the clarification and improvement of requirements.</li>
+<li><strong>Better User Involvement</strong> : Users may provide input at an early stage, which improves the quality and usefulness of the finished product.</li>
+<li><strong>Flexible Design</strong> : This lowers the chance of failure by allowing for easy modifications as the prototype is constructed and improved.</li>
+<li><strong>Lower Risk</strong> : There is a lower chance of creating a system that doesn&#8217;t satisfy user demands when problems are discovered early.</li>
+<li><strong>Early Missing Functionality Detection</strong> : Users are able to spot missing features early on in the development process.</li>
+</ul>
+<p><strong>Disadvantages of the Prototyping Model:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Scope creep</strong> : As a result of constant adjustments and improvements, the project&#8217;s scope may grow, lengthening its time and raising its cost.</li>
+<li><strong>Insufficient Analysis</strong> : Developers may skip thorough system analysis in favor of a workable prototype, which might lead to subpar design decisions.</li>
+<li><strong>Increased Cost</strong> : If the project is big and complicated, it might be expensive to make adjustments and prototype it again.</li>
+<li><strong>Time-consuming</strong> : If the prototype requires several iterations, the iterative nature may cause the development process to drag on.</li>
+<li><strong>User Expectations</strong> : Users may assume that the prototype is the finished product and anticipate a speedy delivery of the real system.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Draw a reduced decision table for the following scenario:<br />
+An applicant has to fill up the form to participate in a music competition. The applicant’s age should be greater than 18 years and nationality has to be Nepalese for being selected for the competition. The applicant will be provided a registration number after paying Rs. 5000 as an entry fee. The applicant has to play an instrument for three minutes else will be disqualified. The experts will provide points on the basis of some criteria. The applicant having the highest point will be declared winner and will get a cash prize of Rs. 1,00,000 and all the qualified applicants will get a gift hamper.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<ul style="list-style-type: square;">
+<li>Applicant must be over 18 years old and Nepalese to be eligible.</li>
+<li>Applicant pays a fee of Rs. 5000 for registration.</li>
+<li>Applicant plays an instrument for 3 minutes; otherwise, they&#8217;re disqualified.</li>
+<li>Experts score the applicant based on certain criteria.</li>
+<li>The highest-scoring applicant wins Rs. 1,00,000; all qualified applicants get a gift hamper.</li>
+</ul>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 43.5522%; text-align: center;"><strong>Conditions</strong></td>
+<td style="width: 15.0579%; text-align: center;"><strong>Rule 1</strong></td>
+<td style="width: 13.2432%; text-align: center;"><strong>Rule 2</strong></td>
+<td style="width: 15.5599%; text-align: center;"><strong>Rule 3</strong></td>
+<td style="width: 12.8571%; text-align: center;"><strong>Rule 4</strong></td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Age &gt; 18</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">Yes</td>
+<td style="width: 15.5599%; text-align: center;">No</td>
+<td style="width: 12.8571%; text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Nationality is Nepalese</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">No</td>
+<td style="width: 15.5599%; text-align: center;">Yes</td>
+<td style="width: 12.8571%; text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Registration fee paid</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">Yes</td>
+<td style="width: 15.5599%; text-align: center;">Yes</td>
+<td style="width: 12.8571%; text-align: center;">No</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Plays instrument for 3 min</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">Yes</td>
+<td style="width: 15.5599%; text-align: center;">Yes</td>
+<td style="width: 12.8571%; text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;"><strong>Actions</strong></td>
+<td style="width: 15.0579%; text-align: center;"></td>
+<td style="width: 13.2432%; text-align: center;"></td>
+<td style="width: 15.5599%; text-align: center;"></td>
+<td style="width: 12.8571%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Generate registration No.</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">No</td>
+<td style="width: 15.5599%; text-align: center;">No</td>
+<td style="width: 12.8571%; text-align: center;">No</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Eligible for scoring</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">No</td>
+<td style="width: 15.5599%; text-align: center;">No</td>
+<td style="width: 12.8571%; text-align: center;">No</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Qualify for gift hamper</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">No</td>
+<td style="width: 15.5599%; text-align: center;">No</td>
+<td style="width: 12.8571%; text-align: center;">No</td>
+</tr>
+<tr>
+<td style="width: 43.5522%; text-align: center;">Wins cash prize (if highest)</td>
+<td style="width: 15.0579%; text-align: center;">Yes</td>
+<td style="width: 13.2432%; text-align: center;">No</td>
+<td style="width: 15.5599%; text-align: center;">No</td>
+<td style="width: 12.8571%; text-align: center;">No</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate between black box and white box testing. Explain the testing process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The differences between black box and white box testing are as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Black box testing</strong></td>
+<td style="width: 50%; text-align: center;"><strong>White box testing</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">The testing methodology concentrated on the software&#8217;s functioning rather than its internal code structure.</td>
+<td style="width: 50%; text-align: center;">It is software testing methodology that looks into the program&#8217;s internal organization, logic, and code.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">The only thing taken into consideration is input-output; no programming expertise is necessary.</td>
+<td style="width: 50%; text-align: center;">It demands complete understanding of the structure, logic, and code.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is most often carried out by end users or QA testers.</td>
+<td style="width: 50%; text-align: center;">Usually carried out by testers or developers with coding experience.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Verify the software&#8217;s operation and behavior in accordance with the specifications.</td>
+<td style="width: 50%; text-align: center;">Validate the code&#8217;s accuracy, effectiveness, and security.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It focuses on evaluating software&#8217;s functionality, including data management, user interface, and input validation.</td>
+<td style="width: 50%; text-align: center;">It examines internal code structure, including branching, loops, and code pathways.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The process of testing are as follows:</p>
+<p><strong><span style="text-decoration: underline;">Inspections</span></strong>: This type of testing involves participants looking for predicted, language-specific mistakes in software code. Other automated inspection applications can check for grammar, syntax, and other issues.</p>
+<p><strong><span style="text-decoration: underline;">Desk checking</span></strong>: It is the process by which a programmer goes over the code with a notepad and pencil after comprehending the program&#8217;s logic. The reviewer assumes the role of a computer, mentally verifying each step and its outcome for the complete set of computer commands.</p>
+<p><strong><span style="text-decoration: underline;">Unit checking</span></strong>: It is an automated testing technique where each module is examined independently to look for potential code issues.</p>
+<p><strong><span style="text-decoration: underline;">Integration testing</span></strong>: It is the process of combining many program modules for testing reasons.</p>
+<p><strong><span style="text-decoration: underline;">System testing</span></strong>: It is the process of assembling all of the programs that make up a system in order to test it. Black box or white box testing can be used to test the system.</p>
+<p><strong><span style="text-decoration: underline;">Stub testing</span></strong>: It is a technique used to test modules, particularly when they are developed and tested top-down.</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Briefly explain different phases of project management.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Project management</strong> is the systematic process of starting, organizing, carrying out, overseeing, managing, and ending a project. A project management process is guided by these five phases:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-43935" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/project-management.drawio.png?resize=184%2C244&#038;ssl=1" alt="" width="184" height="244"></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Initiating</strong>:<br />
+The project plan and viability are established during this stage. All significant stakeholders will be contacted by project managers in order to collect project requirements. The project proposal comprises the budget, timetable, resources, goals, and important stakeholders.</li>
+<li><strong>Planning</strong>:<br />
+The project managers will then draft a plan or map that includes all of the activities and deliverables for the project. Along with other stakeholders and resources, a comprehensive timetable is developed to ensure the project stays on course.</li>
+<li><strong>Executing</strong>:<br />
+During this stage, team members and project managers carry out the plans and construct the project. To keep the project on schedule, requirements and documentation are regularly reviewed and updated.</li>
+<li><strong>Monitoring and Controlling</strong>:<br />
+To guarantee project quality management and testing, project managers monitor and supervise ongoing activity, keeping it current and active. The project will remain on course with the support of frequent status meetings and assessments.</li>
+<li><strong>Closing</strong>:<br />
+The closing procedure is crucial because the project manager will carry out the project wrap-up and final documentation phase once the project has been finished and all deliverables have been met.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>How can CASE tool help in developing product? Explain with respect to different phases of SDLC.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>By offering automated help at different phases of the Software Development Life Cycle (SDLC), <strong>Computer-Aided Software Engineering (CASE)</strong> technologies aid in the software development process. These technologies guarantee uniformity in software design, development, and maintenance while increasing efficiency and accuracy.</p>
+<p>Here are some examples of how CASE tools may help at various stages of the SDLC:</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Analysis Phase</strong> : CASE tools make it easier to capture, analyze, and manage requirements at this phase. They provide requirement documentation, model building, and change monitoring. Tools like Unified Modeling Language (UML) diagrams can be generated to represent use cases and requirements.</li>
+<li><strong>System Design Phase : </strong>Data Flow Diagrams (DFD), Entity-Relationship Diagrams (ERD), and system architecture are among the architectural and comprehensive design diagrams that may be created during the design phase with the use of CASE tools.</li>
+<li><strong>Coding Phase :</strong> CASE tools  increase coding productivity by supporting Integrated Development Environments (IDEs), automating code production, and enforcing coding standards. Tools like Eclipse, Visual Studio, and IBM Rational Application Developer.</li>
+<li><strong>Testing Phase : </strong>Testing tools help with defect tracking, test case generation, and test execution automation. They lessen the need for manual testing while also enhancing software quality.</li>
+<li><strong>Implementation and Deployment Phase</strong> : CASE tools facilitate the development of deployment scripts, automate configuration management, and guarantee a smooth deployment throughout this phase.</li>
+<li><strong>Maintenance Phase</strong> : To guarantee the system runs smoothly during maintenance, CASE tools facilitate code analysis, problem fixes, and change management.</li>
+</ol>
+<p>To sum up, CASE tools are crucial to the SDLC since they guarantee that software effectively satisfies its intended requirements, streamline procedures, and increase accuracy.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Draw use case diagram and class diagram for the following scenario:<br />
+The admin and user has to log in to the patient record system. The user can see details of its records but will not be able to make changes. The changes will be controlled by admin. The admin has authority to generate reports and send it to doctors and users.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The system involves two users: the admin and the patient (user). The user can:</p>
+<ul style="list-style-type: square;">
+<li>Log in</li>
+<li>View their records (read-only) The admin can:</li>
+<li>Log in</li>
+<li>Make changes to records</li>
+<li>Generate and send reports to doctors and users</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-43917 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/usecase-.drawio.png?resize=300%2C285&#038;ssl=1" alt="" width="300" height="285"></p>
+<p>The following classes and their connections would be included in the class diagram:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-43929" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/10/class-diageam.drawio.png?resize=267%2C334&#038;ssl=1" alt="" width="267" height="334"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How do you think effective interfaces can be designed? Explain</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For software to be user-friendly, satisfy users&#8217; demands, and improve their experience, effective interface design is crucial. Here are some essential guidelines and methods for creating user interfaces that work:</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Simplicity</strong>: Maintain an uncomplicated, straightforward design. Eliminate extraneous components to prevent users from being overwhelmed and to help them concentrate on their work.</li>
+<li><strong>Responsive design</strong>: Use of responsive design should be focused to make sure the user interface adapts and appears well across a range of screen sizes, including mobile devices and desktop displays.</li>
+<li><strong>Touch-Friendly Features</strong>: To avoid unintentional clicks, make sure buttons and clickable regions on mobile interfaces are big enough to be readily touched and have enough space between them.</li>
+<li><strong>Keyboard Navigation</strong>: It is crucial for those with motor limitations that the design be made keyboard accessible so that users may browse without a mouse.</li>
+<li><strong>Feedback</strong>: Give users an explanation of their actions. For instance, loading indicators must to display progress and buttons ought to react graphically when pressed. Feedback enables users to determine if their actions were effective or whether more action is required.</li>
+</ol>
+<p>Having a thorough understanding of people and a dedication to usability, consistency, accessibility, and continuous development are key components of effective interface design. These guidelines help designers make interfaces that are not only useful but also enjoyable to use, guaranteeing a satisfying experience that satisfies user and corporate objectives.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>List the advantages of Normalization. Explain 2NF with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In order to increase data integrity and minimize redundancy, normalization is a method used in database architecture. In order to facilitate data storage and retrieval, it entails segmenting a database into smaller tables and establishing linkages between them.</p>
+<p><strong>Advantages of Normalization</strong></p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Minimises Data Redundancy</strong>: Normalisation minimises duplicate data by arranging data into several relevant tables. The database is more effective and storage is saved as a result.</li>
+<li><strong>Enhances Data Integrity</strong>: Normalization avoids discrepancies since data is kept in an organized manner. Data may be updated in a single location, guaranteeing correctness throughout the database.</li>
+<li><strong>Improves Query Performance</strong>: Because normalized databases</li>
+<li>require less processing of duplicated data, queries may be executed more quickly and effectively.</li>
+<li><strong>Facilitates Data Maintenance</strong>: By allowing changes to be performed in a single location that will be reflected in all associated</li>
+<li>tables, normalization makes it easier to add, remove, and update data.</li>
+<li><strong>Prevents Update Anomalies</strong>: By appropriately arranging data, normalization minimizes the likelihood of several kinds of anomalies, including update, insert, and delete anomalies. This enhances the consistency of the data.</li>
+</ol>
+<p>To be in Second Normal Form (2NF), a table must have following:</p>
+<ul style="list-style-type: square;">
+<li>There are no recurring groups or arrays since it is in First Normal Form (1NF), which means all of the columns contain atomic values.</li>
+<li>Every non-key attribute—a column that is not a part of the main key—depends on the complete primary key, not just a portion of it, in order to operate.</li>
+</ul>
+<p>This means that in 2NF, partial dependencies are removed — no non-key attribute depends only on a part of the primary key.</p>
+<p>Suppose we have a table called <code>Orders</code> with the following structure:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 128%;">
+<thead>
+<tr>
+<th style="width: 12.8012%;">Order_ID</th>
+<th style="width: 15.2108%;">Product_ID</th>
+<th style="width: 19.4277%;">Product_Name</th>
+<th style="width: 17.4699%;">Customer_ID</th>
+<th style="width: 21.6867%;">Customer_Name</th>
+<th style="width: 7.22894%;">Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 12.8012%;">1</td>
+<td style="width: 15.2108%;">101</td>
+<td style="width: 19.4277%;">Laptop</td>
+<td style="width: 17.4699%;">C1</td>
+<td style="width: 21.6867%;">Rama</td>
+<td style="width: 7.22894%;">2</td>
+</tr>
+<tr>
+<td style="width: 12.8012%;">1</td>
+<td style="width: 15.2108%;">102</td>
+<td style="width: 19.4277%;">Mouse</td>
+<td style="width: 17.4699%;">C1</td>
+<td style="width: 21.6867%;">Rama</td>
+<td style="width: 7.22894%;">5</td>
+</tr>
+<tr>
+<td style="width: 12.8012%;">2</td>
+<td style="width: 15.2108%;">101</td>
+<td style="width: 19.4277%;">Laptop</td>
+<td style="width: 17.4699%;">C2</td>
+<td style="width: 21.6867%;">Kabir</td>
+<td style="width: 7.22894%;">1</td>
+</tr>
+<tr>
+<td style="width: 12.8012%;">2</td>
+<td style="width: 15.2108%;">103</td>
+<td style="width: 19.4277%;">Keyboard</td>
+<td style="width: 17.4699%;">C2</td>
+<td style="width: 21.6867%;">Kabir</td>
+<td style="width: 7.22894%;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>To bring this table into <strong>2NF</strong>, we need to eliminate these partial dependencies. We can do this by dividing the Orders table into three separate tables:</p>
+<p><strong>Orders Table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;"><strong>Order_ID</strong></td>
+<td style="width: 33.3333%;"><strong>Customer_ID</strong></td>
+<td style="width: 33.3333%;"><strong> Quantity</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">C1</td>
+<td style="width: 33.3333%;">2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">C1</td>
+<td style="width: 33.3333%;">5</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">C2</td>
+<td style="width: 33.3333%;">1</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">C2</td>
+<td style="width: 33.3333%;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Customers Table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 72px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;"><strong>Customer_ID</strong></td>
+<td style="width: 50%; height: 24px;"><strong>Customer_Name</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">C1</td>
+<td style="width: 50%; height: 24px;">Rama</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">C2</td>
+<td style="width: 50%; height: 24px;">Kabir</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Products Table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;"><strong>Product_ID</strong></td>
+<td style="width: 50%;"><strong>Product_Name</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">101</td>
+<td style="width: 50%;">Laptop</td>
+</tr>
+<tr>
+<td style="width: 50%;">102</td>
+<td style="width: 50%;">Mouse</td>
+</tr>
+<tr>
+<td style="width: 50%;">103</td>
+<td style="width: 50%;">Keyboard</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain how disruptive technologies can be used in determining requirement.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Disruptive technologies are those that drastically change existing markets and value networks or develop new ones, ultimately displacing more established goods and technology. Particularly in domains such as software development, product design, or business strategy, these technologies may be extremely important in identifying needs.</p>
+<ul style="list-style-type: square;">
+<li><strong>Pattern Recognition</strong>: By analyzing enormous volumes of data, AI and ML are able to pinpoint user preferences, behavior patterns, and frequent problems. This can uncover hidden needs that conventional approaches might miss.</li>
+<li><strong>Real-Time Data</strong>: By capturing real-time requirements and usage patterns, real-time analytics enable businesses to promptly adjust to changing user needs.</li>
+<li><strong>Predictive Maintenance</strong>: Information gathered from Internet of Things sensors may forecast when parts may break or need to be upgraded, influencing specifications related to performance and durability.</li>
+<li><strong>User testing and prototyping</strong>: Immersion prototyping is made possible by VR and AR, which let people experience and engage with a product concept in a virtual setting. This makes it easier to obtain more precise needs input prior to development.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Difference between process modeling and data modeling. How do you think data modeling play an important role?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between process modeling and data modeling are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 144px;">
+<tbody>
+<tr style="height: 24px;">
+<th style="width: 33.2707%; height: 24px; text-align: center;">Aspect</th>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Process Modeling</strong></td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"><strong>Data Modeling</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.2707%; height: 24px; text-align: center;">Focus</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">focuses on the information flow and system operation.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">focuses on the types of data that are saved and their organization.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.2707%; height: 24px; text-align: center;">Purpose</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">outlines a process&#8217;s steps, stages, and sequences.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">explains the entities, characteristics, and connections.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.2707%; height: 24px; text-align: center;">Representation</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Data flow diagrams (DFD), flowcharts etc are frequently used to illustrate this.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">Class diagrams or entity-relationship diagrams (ERD) are frequently used to illustrate this.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.2707%; height: 24px; text-align: center;">Usage</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">helpful for comprehending relationships, interconnections, and processes.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">helpful for maintaining data integrity and creating the database structure.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.2707%; height: 24px; text-align: center;">Emphasis</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">focuses on operations and activities.</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">focuses on connections  and data storage.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Data modeling is crucial for several reasons:</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Data Integrity and Consistency</strong>: Data modeling ensures data consistency throughout the system by defining relationships and limitations. To guarantee that every order is constantly connected to an existing client, for instance, links between orders and customers are modeled.</li>
+<li><strong>Enhanced Data Security</strong>: Data modeling helps to ensure that sensitive information is safeguarded by specifying access levels and connections.</li>
+<li><strong>Adaptability and Scalability</strong>: Data models facilitate change in response to evolving needs. As a blueprint, the data model facilitates the addition of new entities or characteristics to a system without affecting its current architecture.</li>
+<li><strong>Better System Performance</strong>: Thoughtful data models enable effective indexing and queries, which may greatly improve response times and system performance.</li>
+<li><strong>Effective database design</strong> : It minimizes the possibility of duplication and ensures effective data retrieval by preventing data redundancy and optimizing storage.</li>
+</ol>
+<p>In conclusion, data modeling is a fundamental stage in system development that makes it possible to create an organized, dependable, and efficient database—all of which are necessary for efficient data management and organizational decision-making.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>An initial investment of Rs. 1,00,000 is required to start a company. The cash flow-in is Rs. 40,000 per year. Assuming interest rate as 10%, calculate the discounted payback period. (use Net Present Value)</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given Data:</p>
+<ul style="list-style-type: square;">
+<li>Initial Investment = Rs. 1,00,000</li>
+<li>Annual Cash Flow = Rs. 40,000</li>
+<li>Discount Rate (Interest Rate) = 10%</li>
+</ul>
+<p><strong>Calculating discounted Payback Period for each year using the formula: </strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$${Discounted Cash Flow} = \frac{\text{Cash Flow}}{(1 + Discount Rate)^n}</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord text"><span class="mord">$$</span></span></span></span></span></span></p>
+<p>where n represents the year.</p>
+<p>Until the total is equal to or greater than the initial investment, add up the discounted cash flows.</p>
+<p><strong>​Yearly Discounted Cash Flows:</strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$$Year 1$$ = \frac{40,000}{(1 + 0.10)^1} = 36,364$$</span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$$Year 2 = \frac{40,000}{(1 + 0.10)^2} = 33,058$$</span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$$Year 3 = \frac{40,000}{(1 + 0.10)^3} = 30,050$$</span></span></span></p>
+<p><strong>Accumulation of Discounted Cash Flows:</strong></p>
+<ul style="list-style-type: square;">
+<li>Year 1: 36,364</li>
+<li>Year 2: 36,364 + 33,058 = 69,422</li>
+<li>Year 3: 69,422 + 30,050 = 99,472</li>
+</ul>
+<p>The total discounted cash flow after three years is around Rs. 99,472, which is quite near to the Rs. 1,000,000 initial investment. As a result, the discounted repayment period is little over three years.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on :</p>
+<ol>
+<li>PERT</li>
+<li>Deliverables</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong>PERT</strong> :<br />
+The phases of system development, from preliminary analysis to final implementation, are planned using PERT, a project scheduling and management tool. In system projects, it aids in visualizing the order and relationships of tasks. PERT is especially helpful throughout the SDLC&#8217;s Planning and Analysis stages. It diagrams intricate procedures and aids in projecting deadlines at every stage, including requirement collection, system design, coding, testing, and deployment.<br />
+In order to lower project risks and increase completion rates, PERT in SAD makes sure that every stage of system development is planned well, resources are distributed suitably, and possible bottlenecks are found early.</li>
+<li><strong>Deliverables</strong> :<br />
+The physical results of every stage of the system development process are known as deliverables. They are frequently used to indicate project milestones and contain objects made to fulfill certain goals in each stage of the SDLC. Deliverables offer an organized means of verifying the correctness and completeness of every stage. By making sure that every phase satisfies the needs of the stakeholders before proceeding to the next, they improve project accountability.<br />
+Deliverables guarantee that stakeholders are in agreement on the design, needs, and advancement of the system. Clear deliverables facilitate better communication and project tracking, enabling stakeholders and the project team to know what has been done and what still need work.</li>
+</ol>
+</div>
+</body></html>

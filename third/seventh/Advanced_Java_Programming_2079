@@ -1,0 +1,659 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Advanced Java Programming 2079 2079</title>
+    </head>
+    <body>
+        <h1>Advanced Java Programming 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain feature of object-oriented programming. Create a class Distance with private variables feet of type integer and inches of type floating point. Use suitable constructor, and methods for adding and comparing two distance objects. [Hint: 1 feet = 12 inches]</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The features of OOP are given below:</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Classes and Object</strong>:<br />
+A class is a template that consists of the data members or variables and functions and defines the properties and methods for a group of objects. The compiler does not allocate memory whenever you define a class. Example: You can define a class called Vehicle. Its data fields can be vehicle_name, model_number, color, date_of_manufacture, etc. An object is nothing but an instance of a class. Each object has its values for the different properties present in its class. The compiler allocates memory for each object. Example:The different objects of the class Vehicle can be Car, Bike, Bicycle, etc. Each of them will have its values for the fields like color, model_number, etc.</li>
+<li><strong>Abstraction</strong>:<br />
+The literal meaning of abstraction is to remove some characteristics from something to reduce it to a smaller set. Similarly, Object Oriented Programming abstraction exposes only the essential information of an object to the user and hides the other details. In real life, like when you toggle a switch, it simply turns on or off the lights. Here, we only know the functionality of the switch,<br />
+but we don’t know its internal implementation, like how it works. You can implement abstraction using classes that group the data members and function together. Inside classes, you can choose the access specifiers for its members to control how they are visible to the outside world.</li>
+<li><strong>Inheritance</strong>:<br />
+Inheritance is one of the most important features of object oriented programming. It allows a class to inherit the properties and methods of another class called the parent class, the base class, or the super-class. The class that inherits is called the child class or sub-class. It helps to avoid duplication of codes by allowing code reuse as you need not define the same methods and properties present in a super-class in the sub-classes again. The sub-class can simply inherit them. Example: You can have a parent class called “Shape” and other classes like Square, Circle, Rectangle, etc. Since all these are also shapes, they will have all the properties of a shape so that they can inherit the class Shape.</li>
+<li><strong>Polymorphism</strong>:<br />
+The word polymorphism means to have many forms. So, by using polymorphism, you can add different meanings to a single component. There are two types of polymorphism: Run-time polymorphism &amp; Compile-time polymorphism.</li>
+<li><strong>Method Overloading</strong>:<br />
+Methods overloading is a type of compile-time polymorphism using which you can define various functions with the same name but different numbers of arguments. The function call is resolved at compile time, so it&#8217;s a type of compile-time polymorphism. Here resolution of the function call implies binding to the correct function definition depending on the arguments passed in the function call. You can create a function “add”. Now, when you pass two integers to this function, it will return their sum, while on passing two strings, it will return their concatenation. So, the same function acts differently depending on the input data type.</li>
+<li><strong>Method Overriding</strong>:<br />
+Method Overriding is a type of run-time polymorphism. It allows overriding a parent class’s method by a child class. Overriding means that a child class provides a new implementation of the same method it inherits from the parent class. These function calls are resolved at run-time, so it&#8217;s a type of runtime polymorphism.</li>
+<li><strong>Encapsulation</strong>:<br />
+Encapsulation means enclosing the data/variables and the methods for manipulating the data into a single entity called a class. It helps to hide the internal implementation of the functions and state of the variables, promoting abstraction. Example: You can have some private variables in a class that you can&#8217;t access outside the class for security reasons. Now, to read or change the value of this variable, you can define public functions in the class which will perform the read or writes operations.</li>
+</ol>
+<p><strong>Program</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class Distance {
+private int feet;
+private float inches;
+// Constructor
+public Distance(int feet, float inches) {
+this.feet = feet;
+this.inches = inches;
+}
+// Method to add two Distance objects
+public Distance add(Distance otherDistance) {
+int totalInches = (this.feet + otherDistance.feet) * 12 + (int)(this.inches +
+otherDistance.inches);
+int feet = totalInches / 12;
+float inches = totalInches % 12;
+return new Distance(feet, inches);
+}
+// Method to compare two Distance objects
+public int compareTo(Distance otherDistance) {
+int thisTotalInches = this.feet * 12 + (int)this.inches;
+int otherTotalInches = otherDistance.feet * 12 + (int)otherDistance.inches;
+
+return Integer.compare(thisTotalInches, otherTotalInches);
+}
+// Override toString for easy display
+@Override
+public String toString() {
+return feet + " feet " + inches + " inches";
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why do we need layout management? Explain any two layout managers with example. Write a simple GUI program that displays “Hello World” in a text field. The program should display output if user clicks a button.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Layout management essential for several reasons, especially when creating graphical user interfaces (GUIs) with components like buttons, text fields, panels, etc. Java GUIs are designed to be platform independent. Different operating systems have different ways of displaying GUI elements. Layout managers handle these differences, ensuring that the GUI looks consistent across various platforms. A well-organized layout is crucial for a good user experience. Layout managers help in creating easy and functional layouts that enhance the usability of the application.</p>
+<p><strong>Border Layout</strong></p>
+<p>The Border Layout is used to arrange the components in five regions: north, south, east, west and center. Each region(area) may contain one component only.</p>
+<p><strong>Constants for Alignments</strong>:</p>
+<ul style="list-style-type: square;">
+<li>BorderLayout.NORTH</li>
+<li>BorderLayout.SOUTH</li>
+<li>BorderLayout.EAST</li>
+<li>BorderLayout.WEST</li>
+<li>BorderLayout</li>
+<li>.CENTER</li>
+</ul>
+<p><strong>BorderLayout Constructors</strong>:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 41.1278%;">BorderLayout()</td>
+<td style="width: 58.8722%;">Creates a border layout but will no gaps between the components.</td>
+</tr>
+<tr>
+<td style="width: 41.1278%;">BorderLayout(int hgap, int vgap)</td>
+<td style="width: 58.8722%;">Creates a border layout with the given horizontal and vertical gaps between the components.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+public class BorderLayoutExample{
+
+BorderLayoutExample(){
+JFrame f = new JFrame();
+
+JButton b1 = new JButton("NORTH");
+
+JButton b2 = new JButton("SOUTH");
+
+JButton b3 = new JButton("EAST");
+
+JButton b4 = new JButton("WEST");
+
+JButton b5 = new JButton("CENTER");
+
+f.add(b1,BordeLayout.NORTH);
+
+f.add(b2,BordeLayout.SOUTH);
+
+f.add(b3,BordeLayout.EAST);
+
+f.add(b4,BordeLayout.WEST);
+
+f.add(b5,BordeLayout.CENTER);
+
+f.setSize(300,300);
+
+f.setVisible(true);
+
+}
+
+public static void main(string[] args){
+
+new BorderLayoutExample();
+
+}
+
+}</pre>
+<p><strong>Flow Layout</strong></p>
+<p>The FlowLayout is used to arrange the components in a line, one after another( in a flow). It arranges components in a line, if no space left remaining components goes to next line. Align property determines alignment of the components as left, right, center etc.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29291" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-165939.png?resize=205%2C232&#038;ssl=1" alt="" width="205" height="232"></p>
+<p><strong>FlowLayout Constructors</strong>:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">FlowLayout()</td>
+<td style="width: 50%;">creates a flow layout with centered alignment and a default 5 unit horizontal and vertical gap.</td>
+</tr>
+<tr>
+<td style="width: 50%;">FlowLayout(int align)</td>
+<td style="width: 50%;">creates a flow layout with the given alignment and a default 5 unit horizontal and vertical gap.</td>
+</tr>
+<tr>
+<td style="width: 50%;">FlowLayout(int align, inthgap, intvgap)</td>
+<td style="width: 50%;">creates a flow layout with the given alignment and the given horizontal and vertical gap.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Constants for Alignments</strong>:</p>
+<ul style="list-style-type: square;">
+<li><strong>Static int CENTER</strong>: This value includes that each row of components should be centered.</li>
+<li><strong>Static int LEFT</strong>: This value indicates that each row of components should be left justified.</li>
+<li><strong>Static RIGHT</strong>: This value indicates that each row of components should be right justified.</li>
+<li><strong>Static LEADING</strong>: This value indicates that each row of components should be justified to the leading edge of the container&#8217;s orientation.</li>
+<li><strong>Static TRAILING</strong>: This value indicates that each row of components should be justified to the trailing edge of the container&#8217;s orientation.</li>
+</ul>
+<p><strong>Example 1</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+public class FlowLayoutExample{
+
+FlowLayoutExample(){
+
+JFrame f = new JFrame("Flow Layout");
+
+JButton b1 = new JButton("button 1");
+
+JButton b2 = new JButton("button 2");
+
+JButton b3 = new JButton("button 3");
+
+JButton b4 = new JButton("button 4");
+
+JButton b5 = new JButton("button 5");
+
+f.add(b1);
+
+f.add(b2);
+
+f.add(b3);
+
+f.add(b4);
+
+f.add(b5);
+
+f.setLayout(newFlowLayout());
+
+f.setSize(300,300);
+
+f.setVisible(true);
+
+}
+
+public static void main (string[] args{
+
+new FlowLayoutExample();
+
+}
+
+}</pre>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29292" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-170828.png?resize=203%2C128&#038;ssl=1" alt="" width="203" height="128"></p>
+<p><strong>Program</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class HelloWorldGUI {
+public static void main(String[] args) {
+JFrame frame = new JFrame("Hello World GUI");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setSize(300, 200);
+JTextField textField = new JTextField(20);
+textField.setEditable(false); // make text field non-editable
+JButton button = new JButton("Click Me!");
+button.addActionListener(new ActionListener() {
+@Override
+public void actionPerformed(ActionEvent e) {
+textField.setText("Hello World");
+}
+});
+// Add the button and text field to the frame's content pane
+frame.getContentPane().add(button, "North");
+frame.getContentPane().add(textField, "South");
+// Display the window
+frame.setVisible(true);
+}
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define JSP. What are the benefits of using JSP? Create a HTML file with two text fields to first name and last name. Create a JSP file that reads data from the HTML form and display full name.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Java Server Pages (JSP) is a technology for developing web pages that support dynamic content. JSP allows Java code and certain predefined actions to be intermixed with static web markup content, like HTML and XML. Java Server Pages (JSP) is a server-side programming technology that enables the creation of dynamic, platform-independent method for building Web- based applications. JSP have access to the entire family of Java APIs, including the JDBC API to access enterprise databases. It can be thought of as an extension to servlet because it provides more functionality than servlet. A JSP page consists of HTML tags and JSP tags.</p>
+<p><strong>Benefits of Using JSP</strong>:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Separation of Business Logic from Presentation</strong>: JSP enables the separation of business logic from the presentation layer. Developers can write the business logic in Java classes, while the JSP deals with presenting the view, making the application easier to manage and maintain.</li>
+<li><strong>Ease of Use</strong>: JSP pages are easy to write and understand, especially for those familiar with HTML and Java. This makes it a good choice for teams with expertise in these areas.</li>
+<li><strong>Reusable Components</strong>: JSP supports custom tags (in Tag Libraries), which allow the creation of reusable components. This reduces the need for repetitive code and helps in maintaining a standard look and feel across a web application.</li>
+<li><strong>Cross-Platform</strong>: As a Java-based technology, JSP is platform independent. This means that JSP applications can be run on any system that supports the Java platform.</li>
+<li><strong>Support for Scripting Languages</strong>: JSP supports not only Java but also other scripting languages like JavaScript, allowing for flexible scripting options.</li>
+<li><strong>MVC Architecture Support</strong>: JSP fits well with the MVC (Model-View-Controller) architecture, making it a good choice for building applications.</li>
+</ol>
+<div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">HTML FORM
+&lt;html&gt;
+&lt;body&gt;
+ &lt;form action="processName.jsp" method="post"&gt;
+ First Name: &lt;input type="text" name="firstName"&gt;&lt;br&gt;
+ Last Name: &lt;input type="text" name="lastName"&gt;&lt;br&gt;
+ &lt;input type="submit" value="Submit"&gt;
+ &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+JSP FILE
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;Display Full Name&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;h2&gt;Your Full Name is:&lt;/h2&gt;
+ &lt;%
+ String firstName = request.getParameter("firstName");
+ String lastName = request.getParameter("lastName");
+ if(firstName != null &amp;&amp; lastName != null) {
+ out.println(firstName + " " + lastName);
+ } else {
+ out.println("Please enter your name.");
+ }
+ %&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What is multithreading? How can you create multithreaded program in Java? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span class="citation-0 citation-end-0">The process of executing multiple threads simultaneously is known as multithreading. The main purpose of multithreading is to provide simultaneous execution of two or more parts of a program</span> to minimize <span class="citation-1 citation-end-1">the CPU time. A multithreaded program contains two or more parts that can run concurrently. Each such part of a program called thread.</span></p>
+<p>Writing Multithreaded Programs</p>
+<p>There are two ways to create a thread:</p>
+<ul style="list-style-type: square;">
+<li>By extending Thread class</li>
+<li>By implementing Runnable interface</li>
+</ul>
+<p>1. <strong>Thread Creation by extending the Thread class<br />
+</strong>We create a class that extends the jave.lang.Thread class. This class overrides the run() method available in the Thread class. A thread begins its life inside run() method. we create an object of our new class and call start() method to start the execution of a thread. start() invokes the run() method on the Thread object.</p>
+<p><strong>Example</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">class MultitheradingDemo extends Thread{
+
+public void run(){
+
+system.out.println("My thread is in running state.");
+
+}
+
+public static void main(string args[]){
+
+MultitheradingDemo obj = new MultitheradingDemo();
+
+obbj.start();
+
+}
+
+}</pre>
+<p>2.<strong> Thread creation by implementing the runnable interface</strong></p>
+<p>We create a new class which implements java.lang.Runnable interface and override run() method. Then we instantiate a Thread object and call start() method on this object.</p>
+<p><strong>Example</strong>:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">class MultitheradingDemo implements Runnable{
+
+public void run(){
+
+system.out.println("My thread is in running state.");
+
+}
+
+public static void main(string args[]){
+
+MultitheradingDemo obj = new MultitheradingDemo();
+
+Thread tobj = newThread(obj);
+
+tobj.start();
+
+}
+
+}</pre>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is grid layout? Compare grid layout with grid bag layout.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Grid layout is a part of the Java Swing library for creating graphical user interfaces (GUIs).</p>
+<p data-sourcepos="3:1-3:58">It organizes the components in a two-dimensional grid. It simply creates a collection of equal-sized components and arranges them in the desired number of rows and columns. A cell can only contain one component. All components are equal size and cover the entire volume of the container. When the container is resized, all cells are resized as well. The order in which the components are placed in a cell is determined as they are added. Components are added from the first toe to the last row from the first column to the last column.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;"><strong>GridLayout</strong></td>
+<td style="width: 50%; height: 24px; text-align: center;"><strong>GridBagLayout</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">A GridLayout arranges the components in a rectangular grid.</td>
+<td style="width: 50%; height: 24px; text-align: center;">A GridBagLayout extends the capabilities of the GridLayout.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">It arranges component in the cells and each cell has the same size.</td>
+<td style="width: 50%; height: 24px; text-align: center;">GridBagLayout places component in each individual cell in a grid and also allows the component to span to multiple columns or rows.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">Components are placed in columns and and rows.</td>
+<td style="width: 50%; height: 24px; text-align: center;">In order to use GridBagLayout, we need to create a GridBagConstraints object and fill appropriate properties.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px; text-align: center;">GridLayout(int rows, int columns) takes two parameters that ate a column and a row.</td>
+<td style="width: 50%; height: 24px; text-align: center;">GridBagConstraints gbc = new GridBagConstraints(); this method is used to apply GridBagLayout.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why do we need event handling? Explain the use of action event with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In GUI-based applications, users interact with the program through various actions like clicking buttons, typing on the keyboard, or moving the mouse. Event handling enables your program to respond to these interactions, making the application interactive and user-friendly. Events provide a way to give real-time feedback to users. For example, a button click might trigger an immediate response, such as opening a new window, submitting a form, or initiating a specific action.</p>
+<p>The ActionEvent is generated when button is clicked or the item of a list is doubled-clicked. The listener related to this class is ActionListener. To handle an action event, a class must implements the ActionListener interface.</p>
+<p>Example:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.awt.event.ActionEvent;
+
+import java.awt.event.ActionListner;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.JTextField;
+
+class EventHandling extends JFrame implements ActionListener
+
+{
+
+JTextField tf;
+
+EventHandling()
+
+{
+
+tf = new JTextField();
+
+tf.setBounds(60,50,170,20);
+
+JButton button = new JButton("show");
+
+button.addActionListner(this);
+
+add(button);
+
+add(tf);
+
+setSize(250,250);
+
+setLayout(null);
+
+setVisible(true);
+
+}
+
+@Override
+
+public void actionPerformed (ActionEvent e)
+
+{
+
+tf.setText("Hello World");
+
+}
+
+public static void main (string args[])
+
+{
+
+new EventHandling();
+
+}
+
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Explain JDBC driver types. What is scrollable result set?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>JDBC (Java Database Connectivity) is an API that allows Java applications to interact with relational databases. JDBC drivers play a crucial role in enabling this interaction by providing a bridge between the Java application and the database. JDBC drivers are categorized into four types, known as JDBC driver types.</p>
+<ul style="list-style-type: square;">
+<li>Type 1: JDBC-ODBC bridge</li>
+<li>Type 2: Native-API driver</li>
+<li>Type 3: Net pure Java driver</li>
+<li>Type 4: Pure Java driver</li>
+</ul>
+<p>A scrollable ResultSet is one which allows us to retrieve the data in forward direction as well as backward direction but no updations are allowed. To obtain a scrollable result set, we must create a different Statement object with the following method: Statement stmt = conn.createStatement(int resultSetType, int resultSetConcurrency); Here resultSetType represents the type of scrollability and resultSetConcurrency represents either read only or updatable.The value of resultSetType and the resultSetConcurrency are present in ResultSet interface as constant data members and they are:</p>
+<p><strong>ResultSet Type values</strong>:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">TYPE_FORWARD_ONLY</td>
+<td style="width: 50%;">The result set is not scrollable(default).</td>
+</tr>
+<tr>
+<td style="width: 50%;">TYPE_SCROLL_INSENSITVE</td>
+<td style="width: 50%;">The result set is scrollable but not sensitive to data base changes.</td>
+</tr>
+<tr>
+<td style="width: 50%;">TYPE_SCROLL_SENSITIVE</td>
+<td style="width: 50%;">The result set is scrollable and sensitive to database changes.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong>:</p>
+<div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.sql.*;
+public class ScrollResultSet {
+    public static void main(String[] args){
+        try {
+            ClassforName("com.mysql.jdbc.Driver");
+            Connection conn =
+                    DriverManager.getConnection("jdbc:mysql//localhost:3306/test", "root", "root");
+            Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("select * from emp");
+            System.out.println("RECORDS IN THE TABLE:");
+            while (rs.next()) {
+                System.out.println(rs.getInt(1) + "" + rs.getString(2));
+            }
+
+
+            rs.first();
+            System.out.println("FIRST RECORD...");
+            System.out.println(rs.getInt(1) + "" + rs.getString(2));
+            rs.absolute(3);
+            System.out.println("THIRD RECORD...");
+            System.out.println(rs.getInt(1) + "" + rs.getString(2));
+            rs.last();
+            System.out.println("LAST RECORD...");
+            System.out.println(rs.getInt(1) + "" + rs.getString(2));
+            rs.previous();
+            rs.relative(-1);
+            System.out.println("FIRST RECORD...");
+            System.out.println(rs.getInt(1) + "" + rs.getString(2));
+            conn.close();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Write Java program that send messages with each other using TCP socket.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div>Code for TCP server:</div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.*;
+import java.net.*;
+public class TCPServer {
+public static void main(String[] args) {
+ try {
+ // Create a server socket listening on port 12345
+ ServerSocket serverSocket = new ServerSocket(12345);
+ System.out.println("Server is waiting for a connection...");
+ // Wait for a client to connect
+ Socket clientSocket = serverSocket.accept();
+ System.out.println("Client connected!");
+ // Set up input and output streams
+ BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+ PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+ // Read and print the message from the client
+ String messageFromClient = in.readLine();
+ System.out.println("Message from client: " + messageFromClient);
+ // Send a response back to the client
+ out.println("Hello from the server!");
+ // Close the connections
+ in.close();
+ out.close();
+ clientSocket.close();
+ serverSocket.close();
+ } catch (IOException e) {
+ e.printStackTrace();
+ } } }</pre>
+<p>Code for TCP Client:</p>
+</div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import java.io.*;
+import java.net.*;
+public class TCPClient {
+ public static void main(String[] args) {
+ try {
+ // Create a socket to connect to the server on localhost and port 12345
+ Socket socket = new Socket("localhost", 12345);
+ // Set up input and output streams
+ BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+ PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+ // Send a message to the server
+ out.println("Hello from the client!");
+ // Read and print the response from the server
+ String responseFromServer = in.readLine();
+ System.out.println("Response from server: " + responseFromServer);
+ // Close the connections
+ in.close();
+ out.close();
+ socket.close();
+ } catch (IOException e) {
+ e.printStackTrace(); } } }</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is JavaFX? Compare it with swing. Explain FlowPane layout of JavaFX.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>JavaFX</strong>:<br />
+JavaFX is a modern, rich-client platform for building cross-platform applications in Java. It provides a set of libraries and APIs for developing graphical user interfaces (GUIs) and multimedia applications. Key features of JavaFX include a scene graph for UI representation, CSS-based styling, FXML for UI layout, support for 2D and 3D graphics, and integration with multimedia elements. JavaFX is designed to be more versatile, visually appealing, and easier to use compared to its predecessor, Swing.</p>
+<p><strong>Swing</strong>:<br />
+Swing is a GUI toolkit for Java that was introduced earlier than JavaFX. It has been a standard part of the Java Standard Edition (SE) since Java 2. Swing follows the Abstract Window Toolkit (AWT) and provides a set of lightweight, platform-independent components for building GUIs. While Swing has been widely used for many years, JavaFX was introduced to address some limitations of Swing and to provide a more modern and feature-rich framework for GUI development.</p>
+<p>FlowPane is a layout manager in JavaFX that arranges its children in a flow, similar to text flowing in a paragraph. The components are placed in rows and columns, and if the space in the current row or column is filled, a new row or column is created. It&#8217;s particularly useful when you want components to automatically flow to the next line or column as the available space is filled.</p>
+<p><strong>Example</strong>:</p>
+<div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
+public class FlowPaneExample extends Application {
+ public static void main(String[] args) {
+ launch(args);
+ }
+ @Override
+ public void start(Stage primaryStage) {
+ primaryStage.setTitle("FlowPane Example");
+ Button button1 = new Button("Button 1");
+ Button button2 = new Button("Button 2");
+
+
+ FlowPane flowPane = new FlowPane();
+ flowPane.getChildren().addAll(button1, button2);
+ Scene scene = new Scene(flowPane, 300, 200);
+ primaryStage.setScene(scene);
+ primaryStage.show();
+ }
+}</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Compare JSP with servlet. What are different implicit objects in JSP?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Servlet</strong></td>
+<td style="width: 50%; text-align: center;"><strong>JSP</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Servlets run faster than JSP.</td>
+<td style="width: 50%; text-align: center;">JSP runs slower than servlet.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It is hard to write code in servlet.</td>
+<td style="width: 50%; text-align: center;">It&#8217;s easier to code in JSP compared to servlets.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In MVC architecture, servlet works as a controller.</td>
+<td style="width: 50%; text-align: center;">In MVC architecture, JSP works as a view for displaying output.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">It should be use when there is more data processing involved.</td>
+<td style="width: 50%; text-align: center;">JSP is generally used when there is no involvement of much data processing.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">There is no custom tag writing facility in servlets.</td>
+<td style="width: 50%; text-align: center;">You can easily build custom tags that can directly call java beans.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Servlet is a java code.</td>
+<td style="width: 50%; text-align: center;">JSP is a HTML-based code.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Some implicit objects in JSP are:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48450" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/tbl.drawio.png?resize=757%2C1073&#038;ssl=1" alt="" width="757" height="1073"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Final class</li>
+<li>Result set</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>Final class</strong> (unit 1)<br />
+When a class is declared as final, it means that the class cannot be subclassed or extended by other classes. In other words, you cannot create a new class that inherits from a final class. The primary reason for making a class final is often to enforce immutability or to prevent further modification and extension of a class that is considered complete and should not be altered.<br />
+Example:<br />
+final class FinalClass {<br />
+// Class implementation<br />
+}<br />
+In this example, FinalClass is declared as final, and no other class can extend it.</p>
+<p>b. <strong>Result set</strong> (unit 4)</p>
+<p>ResultSet is an interface in the JDBC (Java Database Connectivity) API that represents the resultset of a database query. It provides methods for traversing and manipulating the data returned by a database query. The ResultSet interface is part of the java.sql package.</p>
+<p>Whenever we create an object of ResultSet by default, it allows us to retrieve in the forward direction only and we cannot perform any modifications on ResultSett object. Therfore, by default, the ResultSet object is non-scrollable and non-updatable ResultSet.</p>
+<p>Result Set Type values:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;"><strong>TYPE_FORWARD_ONLY</strong></td>
+<td style="width: 50%;">The result set is not scrollable (default).</td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>TYPE_SCROLL_INSENSITIVE</strong></td>
+<td style="width: 50%;">The result set is scrollable but not sensitive to database changes.</td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>TYPE_SCROLL_SENSITIVE</strong></td>
+<td style="width: 50%;">The result set is scrollable and sensitive to database changes.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</body></html>

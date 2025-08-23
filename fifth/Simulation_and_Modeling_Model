@@ -1,0 +1,383 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SM Model question 0</title>
+    </head>
+    <body>
+        <h1>SM Model question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>What is queuing system ? Explain the elements of queuing system with example.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The line where the entities or customer wait is generally known as a queue. The combination of all entities in the system being served and waiting for service will be called a <strong>queueing system</strong>.</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-10960 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-4.png?resize=416%2C191&amp;ssl=1" alt="- Hamro CSIT" width="416" height="191" data-recalc-dims="1" /></p>
+<p>Elements of the Queuing system are:</p>
+<p>a. <strong><span style="text-decoration: underline;">Calling population</span></strong>: The calling population in the context of a queueing system refers to the set of all entities (individuals, items, tasks, etc.) that have the potential to enter the queue and request service. It represents the source from which entities may arrive and join the queue for service.</p>
+<p>b. <span style="text-decoration: underline;"><strong>Arrival process</strong></span> : The arrival process in a queueing system describes how entities from the calling population enter the queue over time. Arrival process helps in determining the workload on the system and influences decisions related to queue design, capacity planning, and resource allocation.</p>
+<p>c. <span style="text-decoration: underline;"><strong>Service Process </strong></span> : The service process in a queueing system describes how entities are served by the system once they enter the queue. Service process is crucial for determining the efficiency of the system, minimizing waiting times, and optimizing resource utilization.</p>
+<p>d. <span style="text-decoration: underline;"><strong>Queuing Discipline</strong></span> : The rules governing the order in which entities are served. Common disciplines include first-come, first-served (FCFS), last-come, first-served (LCFS), and priority-based service.</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">FIFO</span> : FIFO stands for First In First Out. It is a queuing discipline where the first arrived population is served at first. For eg : the first customer entered at shop is served first.</li>
+<li><span style="text-decoration: underline;">LIFO</span> : LIFO stands for Last In First Out is a concept of queuing discipline where the last process is served first. for eg : The history of browser, the last exited tab is displayed first in history.</li>
+<li><span style="text-decoration: underline;">Priority</span> : A special number is assigned to customer in waiting line then accordingly to this number the customer is choosen for the service.</li>
+<li><span style="text-decoration: underline;">SIRO</span> : SIRO is short form of Service in Random Order. It is a queuing discipline in which any random process is served. Here, no any algorithm is used to determine which process or population could be next.</li>
+<li><span style="text-decoration: underline;">SPT</span> : Service Process Time is the queuing discipline where the population or the process with the shortest time is given the first service .</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What are the properties of random number ? The sequence of numbers 0.54, 0.73, 0.98, 0.11 and 0.68 has been generated. Use the Kolmogorov Smirnove test with level of significance (α) 0.05 to determine if the hypothesis that the numbers are uniformly distributed on the interval 0 to 1 can be rejected. (Note that the value of D for α = 0.05 ans N = 5 is 0.565).</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Random number are basic ingrudient in simulation of almost all discrete system. Properties of random number are :</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Uniformity</span> : The random number generated should be uniform that means a sequence of random number should be equally probable everywhere.</li>
+<li><span style="text-decoration: underline;">Independent</span> : Each random number should be independent samples that is the current value of random number as no relation with the previous value and it can be drawn from contineous uniform distribution between 0 and 1 i.e f(x) = 1.</li>
+<li><span style="text-decoration: underline;">Maximum density</span> : Large samples of random numbers should be generated in even range.</li>
+<li><span style="text-decoration: underline;">Maximum cycle</span> : It state that representation of numbers should be about only after the large interval of time.</li>
+</ul>
+<p><strong>Numerical part:</strong></p>
+<p>Arranging the numbers in ascending order :</p>
+<p>0.11, 0.54, 0.68, 0.73, 0.98</p>
+<p>Now,</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">R<sub>i</sub></td>
+<td style="width: 25%; text-align: center;">$$\frac{{i}}{{N}}$$</td>
+<td style="width: 25%; text-align: center;">$$\frac{{i}}{{N}} &#8211; R_i$$</td>
+<td style="width: 25%; text-align: center;"> $$R_i -\frac{{i-1}}{{N}}$$</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0.11</td>
+<td style="width: 25%; text-align: center;">$$\frac{{1}}{{5}} = 0.20$$</td>
+<td style="width: 25%; text-align: center;">0.20 &#8211; 0.11</p>
+<p>= 0.09</td>
+<td style="width: 25%; text-align: center;">$$0.11 -\frac{{1-1}}{{5}} = 0.31$$</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0.54</td>
+<td style="width: 25%; text-align: center;">$$\frac{{2}}{{5}} = 0.40$$</td>
+<td style="width: 25%; text-align: center;">0.40 &#8211; 0.54</p>
+<p>= &#8212;</td>
+<td style="width: 25%; text-align: center;">$$0.54 -\frac{{2-1}}{{5}} = 0.34$$</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0.68</td>
+<td style="width: 25%; text-align: center;">$$\frac{{3}}{{5}} = 0.60$$</td>
+<td style="width: 25%; text-align: center;">0.60 &#8211; 0.68</p>
+<p>= &#8212;</td>
+<td style="width: 25%; text-align: center;">$$0.68 -\frac{{3-1}}{{5}} = 0.28$$</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0.73</td>
+<td style="width: 25%; text-align: center;">$$\frac{{4}}{{5}} = 0.80$$</td>
+<td style="width: 25%; text-align: center;">0.80 &#8211; 0.73</p>
+<p>= 0.70</td>
+<td style="width: 25%; text-align: center;">$$0.73 -\frac{{4-1}}{{5}} = 0.13$$</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">0.98</td>
+<td style="width: 25%; text-align: center;">$$\frac{{5}}{{5}} = 1$$</td>
+<td style="width: 25%; text-align: center;">1 &#8211; 0.98</p>
+<p>= 0.02</td>
+<td style="width: 25%; text-align: center;">$$0.98 -\frac{{5-1}}{{5}} = 0.18$$</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now,</p>
+<p>$$D^+ = max(\frac{{i}}{{N}} &#8211; R_i)$$</p>
+<p>$$D^+ = max(0.09, 0.70, 0.02)$$</p>
+<p>$$D^+ = 0.70$$</p>
+<p>&nbsp;</p>
+<p>$$D^- = max(R_i -\frac{{i-1}}{{N}})$$</p>
+<p>$$D^- = max(0.31, 0.34, 0.28, 0.13, 0.18)$$</p>
+<p>$$D^- = 0.34$$</p>
+<p>&nbsp;</p>
+<p>$$D= max(D^+, D^-)$$</p>
+<p>$$D= max(0.70, 0.34)$$</p>
+<p>$$D= 0.70$$</p>
+<p>The computed value of D obtained from the above is 0.70 and the tabulated value from table with α = 0.05 ans N = 5 is 0.565. As the tabulated balue is leaa than the computed value the distribution of random numbers is not  uniform.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is a system modeling? What are the steps involved in system modeling.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>System modeling is the process of developing abstract models of a system, with each model presenting a different view or perspective of that system. System modeling includes some steps and they are dealt below with a flowchart.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39346 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/model-simulation.drawio.png?resize=387%2C1916&#038;ssl=1" alt="" width="387" height="1916"></p>
+<p style="text-align: center;"><strong>fig : flowchart of system modeling</strong></p>
+<p>Steps involved in system modeling are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation:</strong>
+<ul style="list-style-type: square;">
+<li>Clearly define the problem that needs to be addressed using simulation. Identify the objectives and goals of the study.</li>
+</ul>
+</li>
+<li><strong>Setting of Objectives &amp; Overall Project Plan:</strong>
+<ul style="list-style-type: square;">
+<li>Establish specific objectives for the simulation study and create an overall project plan outlining the timeline, resources, and milestones.</li>
+</ul>
+</li>
+<li><strong>Model Conceptualization:</strong>
+<ul style="list-style-type: square;">
+<li>Develop a conceptual model that represents the system being simulated. This involves deciding on the structure and components of the model.</li>
+</ul>
+</li>
+<li><strong>Data Collection:</strong>
+<ul style="list-style-type: square;">
+<li>Gather relevant data to support the model. This includes parameters, inputs, and initial conditions. The data should be accurate and representative of the real system.</li>
+</ul>
+</li>
+<li><strong>Model Translation:</strong>
+<ul style="list-style-type: square;">
+<li>Translate the conceptual model into a formal representation, often using mathematical equations or computational algorithms. Implement the model in a simulation environment.</li>
+</ul>
+</li>
+<li><strong>Verification:</strong>
+<ul style="list-style-type: square;">
+<li>Ensure that the simulation model accurately represents the conceptual model by checking its correctness. Verification involves validating the coding and logic of the model.</li>
+</ul>
+</li>
+<li><strong>Validation:</strong>
+<ul style="list-style-type: square;">
+<li>Validate the simulation model by comparing its outputs to real-world data. This step ensures that the model behaves realistically and provides valid insights into the system.</li>
+</ul>
+</li>
+<li><strong>Experimental Design:</strong>
+<ul style="list-style-type: square;">
+<li>Plan the experiments or scenarios that will be simulated. Define the input variations, conditions, and factors to be tested. Set up the simulation’s boundary conditions.</li>
+</ul>
+</li>
+<li><strong>Production Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Execute the simulation with the specified inputs and conditions. Collect data on the system’s behavior, performance, and other relevant output measures during the production runs.</li>
+</ul>
+</li>
+<li><strong>Repetition of Runs:</strong>
+<ul style="list-style-type: square;">
+<li>Conduct multiple simulation runs to assess the variability and robustness of the model. Repetition helps ensure that the results are consistent and reliable.</li>
+</ul>
+</li>
+<li><strong>Documentation &amp; Report:</strong>
+<ul style="list-style-type: square;">
+<li>Document the simulation study, including the model details, assumptions, data sources, and results. Generate a comprehensive report summarizing the findings and insights.</li>
+</ul>
+</li>
+<li><strong>Implementation:</strong>
+<ul style="list-style-type: square;">
+<li>Implement the recommendations or decisions based on the simulation results. This may involve changes to the real-world system or the adoption of specific strategies.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>What are the application areas of simulation ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Simulation is the way to represent the real world entity to the virtual environment. It  is a model that mimics the operation of an existing or proposed system to test different scenarios or process changes. Applications of Simulation are :</p>
+<p><strong>Manufacturing Application</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Analysis of electronics assembly operations.</li>
+<li>Optimization of cycle time and utilization in semiconductor test manufacturing.</li>
+<li>Analysis of storage and retriva strategies in a warehouse.</li>
+</ul>
+<p><strong>Construction Engineering</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Construction of a dam embankment.</li>
+<li>Activity scheduling in a dynamic, multi-project setting.</li>
+<li>Investigation of the structural steel erection process.</li>
+</ul>
+<p><strong>Military Application</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Modeling military reuirements for non-war fighting operations.</li>
+<li>Multi trajectory performance for varying scenario sizes.</li>
+<li>Design and test of an intelligent controllers.</li>
+</ul>
+<p><strong>Human System</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Modeling human performance in complex systems.</li>
+<li>Studying the human element in our traffic control.</li>
+</ul>
+<p><strong>Business Process Simulation</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Product development program planning.</li>
+<li>Reconcillation of business and system modeling.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Differentiate between analog and digital computer.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 416px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; text-align: center; height: 24px;"><strong><span class="s1">F</span><span class="s1">e</span><span class="s1">a</span><span class="s1">t</span><span class="s1">u</span><span class="s1">r</span><span class="s2">e</span></strong></td>
+<td id="cell1" style="width: 33.2707%; text-align: center; height: 24px;"><strong><span class="s1">A</span><span class="s1">n</span><span class="s1">a</span><span class="s1">l</span><span class="s1">o</span><span class="s2">g</span> <span class="s1">C</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">u</span><span class="s1">t</span><span class="s1">e</span><span class="s2">r</span></strong></td>
+<td style="width: 35.2638%; text-align: center; height: 24px;"><strong><span class="s1">D</span><span class="s1">i</span><span class="s1">g</span><span class="s1">i</span><span class="s1">t</span><span class="s1">a</span><span class="s2">l</span> <span class="s1">C</span><span class="s1">o</span><span class="s1">m</span><span class="s1">p</span><span class="s1">uter</span></strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 33.3333%; text-align: center; height: 96px;"><strong>Representation of data</strong></td>
+<td id="cell1" style="width: 33.2707%; text-align: center; height: 96px;"><span class="s1">C</span><span class="s1">o</span><span class="s1">n</span><span class="s1">t</span><span class="s1">i</span><span class="s1">n</span><span class="s1">u</span><span class="s1">o</span><span class="s1">u</span><span class="s2">s</span> <span class="s1">(</span><span class="s1">e</span><span class="s1">.</span><span class="s1">g</span><span class="s1">.</span><span class="s2">,</span> <span class="s1">p</span><span class="s1">r</span><span class="s1">e</span><span class="s1">s</span><span class="s1">s</span><span class="s1">u</span><span class="s1">r</span><span class="s1">e</span><span class="s1">)</span><span class="s2">.</span></p>
+<p>s<span class="s1" style="font-family: inherit; font-size: inherit;">i</span><span class="s1" style="font-family: inherit; font-size: inherit;">g</span><span class="s1" style="font-family: inherit; font-size: inherit;">n</span><span class="s1" style="font-family: inherit; font-size: inherit;">a</span><span class="s1" style="font-family: inherit; font-size: inherit;">l</span><span class="s2" style="font-family: inherit; font-size: inherit;">s</span><span style="font-family: inherit; font-size: inherit;"> </span><span class="s1" style="font-family: inherit; font-size: inherit;">v</span><span class="s1" style="font-family: inherit; font-size: inherit;">o</span><span class="s1" style="font-family: inherit; font-size: inherit;">l</span><span class="s1" style="font-family: inherit; font-size: inherit;">t</span><span class="s1" style="font-family: inherit; font-size: inherit;">a</span><span class="s1" style="font-family: inherit; font-size: inherit;">g</span><span class="s1" style="font-family: inherit; font-size: inherit;">e,</span></td>
+<td style="width: 35.2638%; text-align: center; height: 96px;">Discrete binary digits (0s and 1s)</td>
+</tr>
+<tr style="height: 104px;">
+<td style="width: 33.3333%; text-align: center; height: 104px;"><strong>Accuracy </strong></td>
+<td style="width: 33.2707%; text-align: center; height: 104px;">Low accuracy due to noise and component variability.</td>
+<td style="width: 35.2638%; text-align: center; height: 104px;">Higher accuracyin calculations and data representations.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 33.3333%; text-align: center; height: 72px;"><strong>Precision </strong></td>
+<td style="width: 33.2707%; text-align: center; height: 72px;">Limited precision due to contineous signal representation.</td>
+<td style="width: 35.2638%; text-align: center; height: 72px;">High precision in calculations and data storage.</td>
+</tr>
+<tr style="height: 120px;">
+<td style="width: 33.3333%; text-align: center; height: 120px;"><strong>Flexibility </strong></td>
+<td style="width: 33.2707%; text-align: center; height: 120px;">Well suited for tasks involving physical measurements and real world phenomena.</td>
+<td style="width: 35.2638%; text-align: center; height: 120px;">Versatile and can perform a wide range of tasks, including symbolic computations.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Explain Markov chain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If the future states of a process are independent of the past and depend only on the present, the process is called a Markov process. A discrete state Markov process is called a Markov chain. A Markov Chain is a random process with the property that the next state depends only on the current state.</p>
+<p>Markov chains are used to analyze trends and predict the future. (Weather, stock market, genetics, product success, etc.</p>
+<p><strong>Formally,</strong></p>
+<p>A Markov chain is a sequence of random variables X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, &#8230; with the Markov property, namely that, given the present state, the future and past states are independent.</p>
+<p>\(P(X_{n+1} = j|X_n = i_n, x_{n-1} = i_{n-1}, . . ., x_0 = i_0) = P(X_{n+1} = j|X_n = i_n)\)</p>
+<p>The conditional probability above gives us the probability that a process in state i<sub>n</sub> at time n moves to i<sub>n+1</sub> at time n + 1. We call this the transition probability for the Markov chain. If the transition probability does not depend on the time n, we have a stationary Markov chain, with transition probabilities</p>
+<p>\(P_{ij} = P(X_{n+1} = j|X_n = i)\)</p>
+<p>Now we can write down the whole Markov chain as a matrix P:</p>
+<p>\(P = \begin{bmatrix}<br />
+P_11 &amp; P_12 &amp; &#8230;. &amp; P_1n\\<br />
+P_21 &amp; P_22 &amp; &#8230;. &amp; P_2n\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+. &amp; . &amp; . &amp; .\\<br />
+P_n1 &amp; P_n2 &amp; &#8230;. &amp; P_nn\\<br />
+\end{bmatrix}\)</p>
+<p>Example:</p>
+<p>Weather Problem:</p>
+<ul style="list-style-type: square;">
+<li>raining today  ⇒ 40 % rain tomorrow</li>
+</ul>
+<p>⇒ 60 % no rain tomorrow</p>
+<ul style="list-style-type: square;">
+<li>not raining today  ⇒ 20 % rain tomorrow</li>
+</ul>
+<p>⇒ 80 % no rain tomorrow</p>
+<p>What will be the probability if today is not raining then not rain the day after tomorrow?</p>
+<p><i>Markov chain diagram:</i></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-10953 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/01/download-2.png?resize=334%2C145&#038;ssl=1" alt="" width="334" height="145"></p>
+<p>\(P^2 = \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix} \begin{pmatrix}0.4 &amp; 0.6 \\ 0.2 &amp; 0.8\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.16 + 0.12 &amp; 0.24 + 0.48 \\ 0.08 + 0.16 &amp; 0.12 + 0.64\end{pmatrix}\)</p>
+<p>\(= \begin{pmatrix}0.28 &amp; 0.72 \\ 0.24 &amp; 0.76\end{pmatrix}\)</p>
+<p>Thus, the probability of not being rainy the day after tomorrow is 0.76.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Why is GPSS called transaction flow oriented language?</p>
+<p> </p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>GPSS stands for General Purpose Simulation System. It is a discrete time general &#8211; purpose programming language where a simulation clock advances in discrete steps. A system is modeled as transactions enters the system and are passed from one service to another. This is a particularly well suited for modeling queuing system. In GPSS transaction is an object with a number of attributes. A single transaction may represent several individual entities.</p>
+<p>GPSS is a highly structured and special purpose simulation language based on process interaction approach and oriented toward queuing system. The system being simulated is described by the block diagram using various GPSS blocks. Each block represents events, delays and other actions that affect the transaction flow. Therefore, GPSS is called transaction flow oriented language.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why confidence interval is needed in the analysis of simulation output ? How can we establish a confidence interval ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the analysis of simulation output, confidence interval is needed because it provide us with upper and lower limit on sample mean, and with this interval we can then be confident we have captured the population mean. The lower limit and upper limit around our sample mean tells us the range of values that our true population mean is likely to lie within.</p>
+<p>We can establish confidence interval as follow :</p>
+<ul style="list-style-type: square;">
+<li>Identify a sample statistic (eg : sample mean, same proportion) that we will use to estimate a population parameter.</li>
+<li>Select a confidence level. We can choose 90%, 95%, 99%.</li>
+<li>Find the margin of error. It is calculated as margin of error. It is calculated as :</li>
+</ul>
+<p style="text-align: center;">margin of error = Critical value * standard deviation</p>
+<p style="text-align: center;">OR</p>
+<p style="text-align: center;">margin of error = Critical value * standard error</p>
+<ul style="list-style-type: square;">
+<li>specify the confidence interval as :</li>
+</ul>
+<p style="text-align: center;">Confidence interval = sample statistic ± margin of error</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain Monte carlo simulation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Monte carlo simulation is a computerized mathematical technique to generate random sample data based on some known distribution for numerical experiments. This method is applied to risk quantative analysis and decision making problems. This method project management, energy, manufacturing, engineering, research and development, transportation etc.</p>
+<p>Following are the three important characteristics of Monte &#8211; Carlo method:</p>
+<ul style="list-style-type: square;">
+<li>The output must generate random samples.</li>
+<li>The input distribution must be known.</li>
+<li>The result must be known while performing an experiment.</li>
+</ul>
+<p>Monte &#8211; Carlol simulation depends in following steps :</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Problem Formulation: </strong>Identify a system or process that involves uncertainty or randomness. Define input parameters and their probability distributions.</li>
+<li><strong>Random Sampling: </strong>Generate random samples for the input parameters based on their probability distributions. This can be done using random number generators.</li>
+<li><strong>Simulation Execution: </strong>Run the simulation model using the randomly generated input values. Record the output or results for each simulation run.</li>
+<li><strong>Analysis: </strong>Aggregate the results over multiple simulation runs to obtain statistical measures such as mean, variance, confidence intervals, etc. Analyze the distribution of the output to understand the system’s behavior under different scenarios.</li>
+</ol>
+<p>For eg :</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is three step approach for validation of simulation models ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>For validation process, there are three steps or approaches which has been widely used :</p>
+<ul style="list-style-type: square;">
+<li>Build the model that has high face validity.</li>
+<li>Validate model assumption.</li>
+<li>Compare input output transformation to the input output transformation of real system.</li>
+</ul>
+<p>a. <strong>Face Validity</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Build a reasonable model on its face to model users who are knowledgable about the real system being simulated.</li>
+<li>The users of the model should be involved in model construction from its conceptualization to each implementation to ensure that a high degree of realism is built into the model through reasonable assumption regarding system structure and reliable data.</li>
+<li>Sensitivity model can also be used to check model face validity.</li>
+<li>The model users are asked to if the model behaves in the expected way when one or more input variable is changed.</li>
+</ul>
+<p>b. <strong>Validating input &#8211; output transformation</strong>:</p>
+<ul style="list-style-type: square;">
+<li>View the model as a black box and feed the input at one end and examine the output at other end.</li>
+<li>Use the same input for real system, compare the output with the model output.</li>
+<li>If they dit closely, the vlack box seems working fine, otherwise something is wrong.</li>
+</ul>
+<p>c. <strong>Introduction to Accreditation of models</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Model accreditation is an official determination that a model is acceptable for a specific purpose. Accreditation certifies that the element being accredited meets given standards. For a model, accreditation must be done with respect to the model&#8217;s explicit specification and the demonstration that the computer based model does or does not meet the specifications.</li>
+<li>This demonstration is the responsibility of the model developers, who must show that their work passes developer acceptance tests. If the modeling process was done properly and of appropriate documentation was done , then accreditation of model for its specified user should follow.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why confidence interval is needed in the analysis of simulation output ? How can we establish a confidence interval ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In the analysis of simulation output, confidence interval is needed because it provide us with upper and lower limit on sample mean, and with this interval we can then be confident we have captured the population mean. The lower limit and upper limit around our sample mean tells us the range of values that our true population mean is likely to lie within.</p>
+<p>We can establish confidence interval as follow :</p>
+<ul style="list-style-type: square;">
+<li>Identify a sample statistic (eg : sample mean, same proportion) that we will use to estimate a population parameter.</li>
+<li>Select a confidence level. We can choose 90%, 95%, 99%.</li>
+<li>Find the margin of error. It is calculated as margin of error. It is calculated as :</li>
+</ul>
+<p style="text-align: center;">margin of error = Critical value * standard deviation</p>
+<p style="text-align: center;">OR</p>
+<p style="text-align: center;">margin of error = Critical value * standard error</p>
+<ul style="list-style-type: square;">
+<li>specify the confidence interval as :</li>
+</ul>
+<p style="text-align: center;">Confidence interval = sample statistic ± margin of error</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on :</p>
+<ol>
+<li> Non-Stationary Poission process</li>
+<li>Feedback system</li>
+</ol>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong> Non-Stationary Poission process</strong> :A Poisson process is a stochastic process that represents the occurrence of events in continuous time. The standard Poisson process has the property of stationarity, meaning that the rate of event occurrences remains constant over time. However, in some scenarios, the rate may vary with time, leading to the concept of a non-stationary Poisson process.<em><span style="text-decoration: underline;">Characteristics of Non-Stationary Poisson Process:</span></em>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;">Time-Varying Intensity (Rate): </span>Unlike the stationary Poisson process where the intensity remains constant, a non-stationary Poisson process allows the event rate to change over time.</li>
+<li><span style="text-decoration: underline;">Intensity Function:</span> The intensity function, often denoted by <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">λ</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span>, specifies the time-varying rate of events. It represents the instantaneous rate of events at time <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">t</span></span></span></span></span>.</li>
+<li><span style="text-decoration: underline;">Random Events:</span> Events still occur randomly, and the time between events follows an exponential distribution.</li>
+</ol>
+<p><span style="text-decoration: underline;"><em>Mathematical Representation:</em></span></p>
+<p>The probability of observing <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">k</span></span></span></span></span> events in a small time interval <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord">Δ</span><span class="mord mathnormal">t</span></span></span></span></span> is given by:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mbin">+</span></span><span class="base"><span class="mord">Δ</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mbin">−</span></span><span class="base"><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">k</span><span class="mclose">)</span><span class="mrel">=(</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mathnormal mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span><span class="mbin mtight">⋅</span>Δ<span class="mord mathnormal mtight">t</span><span class="mclose mtight">]<sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">k</span></span></span></span></sup></span><span class="mbin mtight">⋅</span><span class="mord mathnormal mtight">e</span><sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight">−<span class="mord mathnormal mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span><span class="mbin mtight">⋅</span>Δ<span class="mord mathnormal mtight">t</span></span></span></span></sup><span class="msupsub"><span class="vlist-t"><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">) / k<span class="mclose mtight">!</span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p>where <span class="math math-inline"><span class="katex"><span class="katex-mathml">)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span> is the number of events up to time <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">t</span></span></span></span></span>.</p>
+<p>Non-stationary Poisson processes find applications in various fields, including telecommunications, finance, and healthcare, where event rates may be influenced by external factors.</li>
+<li><strong>Feedback system</strong> :A feedback system is a system in which the output of the system is fed back to the input, influencing the subsequent behavior of the system. Feedback can either be positive or negative, depending on whether the output reinforces or counteracts the input. Feedback mechanisms are common in various fields, including engineering, biology, economics, and control systems. <img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-39376 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/07/feedback-system.drawio.png?resize=565%2C207&#038;ssl=1" alt="" width="565" height="207"><em><span style="text-decoration: underline;">Types of Feedback:</span></em>
+<ol style="list-style-type:decimal;">
+<li><em><span style="text-decoration: underline;">Positive Feedback:</span></em>
+<ul style="list-style-type: square;">
+<li>In positive feedback, the output enhances or amplifies the input, leading to a self-reinforcing loop. This can result in exponential growth or destabilization of the system.</li>
+</ul>
+</li>
+<li><span style="text-decoration: underline;"><em> Negative Feedback:</em></span>
+<ul style="list-style-type: square;">
+<li>In negative feedback, the output opposes or reduces the input, maintaining stability and equilibrium in the system. Negative feedback loops are common in homeostatic systems.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</body></html>

@@ -1,0 +1,396 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Physics question bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>Physics question bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Credit : Gupta Tutorial: Section A
+Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>Explain the meaning of “fabrication of integrated circuits” Describe following processes involved in the fabrication of integrated circuits: epitaxial growth, oxidation, oxide removal and patter definition, doping and interconnection of components.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<p>In the fabrication of an IC, parts of several circuit components are often formed simultaneously. This is illustrated with the example of fabrication of a DTL NOR gate as discussed step by step below.</p>
+<ol style="list-style-type:decimal;">
+<li>An n-type epilayer is grown on the p-type substrate.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16591" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-103702.png?resize=283%2C178&#038;ssl=1" alt="" width="283" height="178"></p>
+<p>2. Coat with SiO<sub>2</sub>, by oxidation and then with a photo-resist.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16592" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-103828.png?resize=304%2C186&#038;ssl=1" alt="" width="304" height="186"></p>
+<p>3.The wafer is exposed to uv radiation through the mask as shown in</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16593" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-103836.png?resize=235%2C175&#038;ssl=1" alt="" width="235" height="175"></p>
+<p>4.The photoresist in the region not covered by the mask is removed by uv radiation and the oxide is removed by etching. The islands of photo resist and oxide corresponding to mask region are-as shown in figure (4)</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16594" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-103939.png?resize=260%2C193&#038;ssl=1" alt="" width="260" height="193"></p>
+<p>5.Dope the acceptors impurities on n-type epilayer so that the region except masked with SiO<sub>2</sub> and photo resist becomes P-type and the masked region remain n-type. Remove photo resist with photoresist remover and SiO<sub>2</sub>, by etching.</p>
+<p>Now the three n-type islands are formed on a p-type substate. The first island (i) serve to construct the transistor, another (ii) the diodes, and the third (iii) the three resistors.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16595" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-104107.png?resize=306%2C208&#038;ssl=1" alt="" width="306" height="208"></p>
+<ol start="6">
+<li>Now three n-type islands are doped with acceptor impurities as shown in figure (6). (after photolithography). In this case, the p-type dopant is not allowed to penetrate all the way through n-type layers. The SiO<sub>2 </sub>, layer used in photolithography is now removed by etching.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16596" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-104118.png?resize=310%2C211&#038;ssl=1" alt="" width="310" height="211"></p>
+<ol start="7">
+<li>After the completion of step 6, there are three resistors in the upper island, the collector and base of npn transistor in the lower left island and two diodes with their n-side common in the lower right island. Now the first island is doped with n-type dopants to form the emitter of pn transistor.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16597" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-104242.png?resize=286%2C212&#038;ssl=1" alt="" width="286" height="212"></p>
+<ol start="8">
+<li>All the circuit components are now ready and they must now be interconnected. An aluminum evaporation (after masking the unwanted area by photolithography) is performed to made metal contact for interconnection. There are six metal contacts for three resistors, three metal contact for three components of npn transistor and two metal contacts for two diodes with one metal contact for their n-side common. The complete and interconnected circuit is as shown in figure (8).</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16598" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-104251.png?resize=224%2C193&#038;ssl=1" alt="" width="224" height="193"></p>
+<ol start="9">
+<li>The figure (8) can be drawn using electronic symbols as shown in figure (9) which is the required DTL NOR gate.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16599" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-104426.png?resize=333%2C222&#038;ssl=1" alt="" width="333" height="222"></p>
+<p>Epitaxy refers to the deposition of a crystalline over layer on a crystalline substrate. The over layer is called an epitaxial film or epitaxial layer. If the over layer either forms a random orientation with respect to the substrate or does not form an ordered over layer, it is termed as non expitaxial growth. The term epitaxy comes from Greek roots ‘epi’ meaning ‘above’ and taxis meaning ‘an order manner’.</p>
+<p>a. In vapor phase epitaxy (VPE) atoms of Si from a vapor are deposited on the substrate in a layer that has the same crystal structure and orientation as the substrate. Thus the substrate serves as the seed crystal into which the epitaxial layer grows. This first layer in turn serves as the substrate for the second layer and so on.</p>
+<p>A schematic diagram for vapor phase epitaxy is as shown in figure. Single crystal wafers of Si are placed in a heated chamber called the reactor. Gaseous compound of silicon (SiCl<sub>2</sub>) together with the appropriate reactant gas are introduced into the reactor.</p>
+<p>The temperature of the reactor is adjusted to produce the reaction that will liberate the silicon by decomposition of the compound. Thus for example at 1250°C the following reaction occurs.</p>
+<p>SiCl<sub>2</sub>+ H<sub>2</sub>  Si + HCI</p>
+<p>Some of the Si atoms released in the reaction are deposited on the substrates, thereby forming epitaxial layers. If the chemicals used for the reaction are of high purity, the epitaxial layer of Si will be highly pure.</p>
+<p>The Silicon VPE may also use pyrolytic (Pyrolytic: Chemical change because of heat) decomposition of silane.</p>
+<p>Si H<sub>4</sub>  Si + 2H<sub>2 </sub>            (650°C)</p>
+<p>This reaction is not reversible and takes place at lower temperature.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16603" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142109.png?resize=462%2C217&#038;ssl=1" alt="" width="462" height="217"></p>
+<p>b. In liquid phase epitaxy (LPE), the substrate is dissolved into the melt of the material to be deposited. This happens at temperature well below the melting point of the substrate material. The substrate acts as a seed for material crystallizing directly from the melt.</p>
+<p>c. Solid phase epitaxy (SPE) is usually done by first depositing a film of amorphous material on a crystalline substrate. The substrate is then heated to crystallize the film.</p>
+<p>d. In molecular beam epitaxy (MB), a source material is heated to produce an evaporated beam of particles. These particles travel through a very high vaccuum to the substrate where they condense. Substrate temperature during this process ranges from 400°C &#8211; 900°C.</p>
+<p><em>2. Doping</em></p>
+<p>An integrated circuit has informal name chip. The formation of circuit components in a chip is achieved by the selective introduction of donor and acceptor impurities into the Si wafer to create localized n-type and p-type regions. The two most commonly used techniques for doping are diffusion and ion implantation.</p>
+<p>3 . Diffusion</p>
+<p>When Si is heated to temperatures in the range of 1000°C, some of the semiconductor atoms move out of their lattice sites, leaving behind empty lattice sites that can migrate through the sample. If the heating is done in an atmosphere of either acceptors or donors, these impurity atoms move into the vacant lattice sites formed at high temperature. The diffusion of the dopant impurities can be stopped by cooling down the wafer. Because the diffusion of impurities is time and temperature dependent, the depth of the diffusion layer can be controlled by varying these two parameters. The SiO<sub>2</sub>, pattern, formed by photolithography acts as a mask that permits the diffusion of the impurities only in specific regions of the wafer.</p>
+<p>The open furnace tube system using solid, liquid and gaseous dopant sources is the most common diffusion technology used in IC fabrication. The wafers are loaded vertically into a quartz boat and put into the turnance where the walers are heated to high temperature. in general, diffusion systems are similar to oxidation furnace.</p>
+<p>(i)  Solid Source: In this system, the dopant source is in solid form as shown in figure (1).</p>
+<p>The carrier gases N<sub>2</sub> or O<sub>2</sub>, picks up the vapour from the dopant source and transport it to furnace tube,where the dopant atoms are deposited on the surface of water.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16606" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142546.png?resize=700%2C169&#038;ssl=1" alt="" width="700" height="169"></p>
+<p>Figure(1):Open furnance tube diffusion system: Solid impurity source</p>
+<p>The common solid source of Boron is Trimethyl Borate (TMB)</p>
+<p>2 (CH<sub>3</sub> O)<sub>3</sub>B + 9O<sub>2</sub>  B<sub>2</sub> 0<sub>2</sub> + 6CO<sub>2</sub> + 9 (H<sub>2</sub>O).  (900°C)</p>
+<p>2 B<sub>2</sub> 0<sub>3</sub> + 3Si  4B + 3 SiO<sub>2</sub></p>
+<p>The common solid source of Phosphorous is Phosphorous Pentaoxide.</p>
+<p>2P<sub>2</sub> O<sub>5</sub>+ 5 Si    4P + 5 SiO<sub>2</sub></p>
+<p><strong>(ii)  Liquid Source</strong></p>
+<p>In this system the dopant source is in liquid form as shown in figure (2). The carrier gas passes through a bubbler where it picks up the vapour of the liquid source. The carrier gas carries the vapour into the furnace tube where ft reacts with the surface of the silicon wafer.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16607" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142647.png?resize=627%2C218&#038;ssl=1" alt="" width="627" height="218"></p>
+<p><em>Figure(2):open furnance tube diffusion system: Liquid impurity source</em></p>
+<p>The most common liquid source of Boron is Boron Tribromide.</p>
+<p>The reaction is</p>
+<p>4 BBr<sub>3</sub> + 3O<sub>2</sub>  2B<sub>2</sub> 0<sub>3</sub> + 6 Br<sub>2</sub></p>
+<p>2B<sub>2</sub> 0<sub>3</sub> + 3Si   4B + 3 SiO<sub>2</sub></p>
+<p>The common liquid source of P&#8217; is Phosphorous Oxychloride.</p>
+<p>4P OCI<sub>3</sub> + 3O<sub>2</sub>  2P<sub>2</sub> O<sub>5</sub> + 6Cl<sub>2</sub></p>
+<p>2P<sub>2</sub> O<sub>5</sub> + 5Si  4P + 5SiO<sub>2</sub></p>
+<p><strong>(iii) Gas Source</strong></p>
+<p>in gas sources, the dopants are directly suppled to the furnace tube. The common gas souces are extremely toxic, an additional system la required to ensure that all the source gas is remove from the system before wafer entry or removal.</p>
+<p>The primary gaseous source of Boron is Diborane. The reaction is,</p>
+<p>B<sub>2</sub> H<sub>6</sub> + 3O<sub>2 </sub> B<sub>2</sub> O<sub>3</sub> + 3 H<sub>2</sub> O</p>
+<p>2 B<sub>2</sub> O<sub>3</sub> + 3Si 4B + 3SiO<sub>2</sub></p>
+<p>Phosphene is used as gaseous source for Phsophorous.</p>
+<p>2PH<sub>3</sub> + 4O<sub>2</sub> P<sub>2</sub> O<sub>5</sub> +  3H<sub>2</sub> O</p>
+<p>2 P<sub>2</sub> O<sub>5</sub> + 5Si  4P + 5SiO<sub>2</sub></p>
+<p>For Antimony, the solid source is Sb<sub>2</sub> O<sub>3</sub> , and Sb<sub>2</sub> O<sub>4</sub> , at the temperature of 900°C. The liquid source for Sb is Sb<sub>3</sub> Cl<sub>5</sub> in a bubbler.</p>
+<p>For Arsenic, the solid source is As<sub>2</sub> O<sub>3</sub> , and the gas source is As H<sub>3</sub> .</p>
+<ol style="list-style-type:decimal;">
+<li><strong> Ion Implantation</strong></li>
+</ol>
+<p>Ion implantation is an engineering process by which ions of a material are accelerated in an electric field and impacted into a solid. This process is used to change the physical, chemical or electrical properties of solid. Ion implantation is used in semiconductor device fabrication and in metal finishing as well as in various applications of material  science research.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16608" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142807.png?resize=423%2C246&#038;ssl=1" alt="" width="423" height="246"></p>
+<p>An ion implantation equipment consists of an ion source where plasma of desired impurity are produced, an accelerator (the accelerating voltage may be from 20 kV to as much as 250 kV) where the ions are accelerated to a high energy and a target chamber where the ions impinge on a target which is the material to be implanted. An analyzer magnet bends the ion beam through a right angle to select the desired impurity ion. Scanning system consist of a vertical scanner and a horizontal scanner which provides necessary deflection to give a uniform implantation and to build up the desired dose.</p>
+<p>The centrifugal force is balanced by magnetic force.</p>
+<p>Bqv = mv<sup>2</sup></p>
+<p>B =</p>
+<p>r  =            ………&#8230;(1)</p>
+<p>This means the impurities having different mass have different radius. This allows us to pass desired impurity species by providing slit on the path of beam.</p>
+<p>And, the electrostatic energy provides necessary kinetic energy.</p>
+<p>qV = mv<sup>2</sup></p>
+<p>V =</p>
+<p>B=   =   =    ………&#8230;.(2)</p>
+<p>So the magnitude of magnetic field can be adjusted for a required ion of mass &#8216;m&#8217;.</p>
+<p>The target chamber is maintained at relativity low temperature during the implantation which prevents undesired spreading of impurities by diffusion. It is very important in VLSI (very large scale integration) fabrication.</p>
+<p>Ion implantation has many advantages over diffusion. The process is performed at room temperature. This permits the implantation of doped layers without disturbing previously implanted layers. Because the impurities are ionized, they represent a current that can be measured very accurately. This permits accurate control of the impurity concentration. Ion implantation can be used with impurities that do not diffuse easily in Si. The recent use of implantation.</p>
+<p>arsenic as a dopant in mos (metal-oxide semiconductor) devices is due to the advent of ion implantation</p>
+<p>Ion implantation usually follows a Gaussian distribution as given by</p>
+<p>N(x) = N<sub>p</sub> exp     &#8230;&#8230;..(3)  (R = R<sub>p</sub>)</p>
+<p>Where, N(x) is the impurity concentration</p>
+<p>N<sub>p</sub> is the peak concentration</p>
+<p>R<sub>p </sub>, is the projected range and R<sub>p</sub> , is the standard deviation called <em>straggle</em> (straggle: to spread out from others in a disorganized way)</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16609" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142940.png?resize=428%2C211&#038;ssl=1" alt="" width="428" height="211"></p>
+<p>Figure (3) shows the result of varying the accelerating voltage several times during the implantation process. Each of the Gaussian distributions (dashed lines) corresponds to a different accelerating potential. The overall distribution (solid line) is obtained by summing up the individual Gaussian distributions, and the sum, as can be seen from the graph, is relatively flat.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16610" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-142949.png?resize=471%2C185&#038;ssl=1" alt="" width="471" height="185"></p>
+<p>&nbsp;</p>
+<ol start="3">
+<li>Connection of components in chip (metallization)</li>
+</ol>
+<p>An IC chip consists of many superimposed doped layers. To complete the circuit, the electronic components within a layer as well as the layers themselves must be electrically connected, This can be done either by forming heavily doped regions of silicon or by metal electrodes (metallization). The metallization is performed by metallic thin film evaporation.</p>
+<p>A schematic of the setup used for the evaporation of thin metallic film is shown in figure. The metal (usually aluminum) is placed in a crucible, The silicon wafers are placed above the crucible in a device called the planetary.</p>
+<p>Vapor of the metal is produced by heating the crucible with a heater coil wrapped around it. As the metal vapor hits the cooled, masked wafer, it condenses on it thus forming a thin metallic layer in a desired pattern that connects the different section of IC chip. The whole evaporation process is performed in a vacuum to avoid contamination of the metal vapor with the oxygen in air.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16611" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-143117.png?resize=455%2C264&#038;ssl=1" alt="" width="455" height="264"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the effect of external magnetic field on current carrying loops. Describe torque on La current-carrying rectangular loop of wire on a pivot rod when placed in a magnetic field. Give alternative way of increasing the torque on the coil.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16613" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-143255.png?resize=658%2C262&#038;ssl=1" alt="" width="658" height="262"></p>
+<p>Consider a rectangular loop of wire lengths &#8216;a&#8217; and &#8216;b&#8217; connected to a pivot rod as shown in figure. For the sides 1 and 3 the magnetic of forces are same because the angle between &#8216;a&#8217; and &#8216;B&#8217; is 90° and both wires have the same length &#8216;a&#8217;, that is,</p>
+<p>F<sub>1</sub> = F<sub>3</sub> = 1(a ×B) =       I aBsin = I aBsin90° = laB  &#8230;..(1)</p>
+<p>From the definition of cross-product we see that F, is out of page toward reader whereas F; is into the page.</p>
+<p>Similarly, the magnitude of the forces on sides 2 and 4 are equal.</p>
+<p>F<sub>2</sub> = F<sub>4</sub></p>
+<p>The direction of F2 is upward, while that of F4 is downward. We conclude that there is no net force in any direction. However there exists a torque that tends to rotate the loop about the pivot rod. The torque is given by  [ = r F ]</p>
+<p>Applied to the present situation, F<sub>2</sub> and F<sub>4</sub> cancel each other. F<sub>1</sub> and F<sub>3</sub> exert a torque on the loop. The net torque is the sum of individual torques caused by F<sub>1</sub> and F<sub>3</sub> , but because they are equal, the total torque is</p>
+<p>= 2r  F</p>
+<p>= 2 r Fsin</p>
+<p>where F stands for either F<sub>1</sub> or F<sub>3</sub>  and r = b/2</p>
+<p>Therefore,   = 2 (b/2) I aBsin0 = l abBsin</p>
+<p>= I AB sin             &#8230;&#8230; (2)</p>
+<p>Where A = ab is the area of loop.</p>
+<p>Although equation (2) has been derived for a rectangular loop of wire, it is valid for any other geometric configuration.</p>
+<p>From equation (2) we conclude that,</p>
+<p><sub>max </sub>= IAB, when = 90°, i.e. when A and B are perpendicular</p>
+<p><sub>max </sub>=  when  =  , i.e. when A and B are parallel.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you mean by the wavefunction? Discuss its physical significance. Set up time-independent and time-dependent Schrodinger wave equation. What are the implications of this equation? Discuss.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Wave Function and It&#8217;s Significance</strong></p>
+<p>According to Max Born, in the case of quantum mechanical particle, the guiding wave is represented by a function,  ,called a wave function. The method of quantum mechanics consist in first finding the wave function associated with a particle or system of particles. All the information about the physical of the system can be obtained from it.</p>
+<p>&nbsp;</p>
+<p>The physical significances of the wave function are:</p>
+<p>i. At some instant t, a measurement can be done to locate the particle associated with the wave function.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16615" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144034.png?resize=602%2C588&#038;ssl=1" alt="" width="602" height="588"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16616" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144113.png?resize=581%2C559&#038;ssl=1" alt="" width="581" height="559"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16617" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144158.png?resize=606%2C568&#038;ssl=1" alt="" width="606" height="568"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16618" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144217.png?resize=562%2C561&#038;ssl=1" alt="" width="562" height="561"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16619" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144322.png?resize=506%2C344&#038;ssl=1" alt="" width="506" height="344"></p>
+<p>Here we have derived time dependent SWE by a using the wave-function of free particle.When the particle is not free, the relation cannot be proved, but we postulate that it still holds and experiment bears this out. The Schrödinger equation cannot be derived from first principles; it is a first principle, which cannot be mathematically derived, just as Newton&#8217;s laws of motion are not derivable. The justification lies in the fact that its predictions agree with the experiment.</p>
+<p><strong>Note</strong>: In mathematics, when a function depends on more than one independent variable, the derivative of the function with respect to one of them, while treating the other variables as constants, is called the partial derivative with respect to that variable.</p>
+<p>Time Independent Schrödinger Equation</p>
+<p>Schrödinger wave equation describes the motion of quantum mechanical particle a Newton&#8217;s second law in classical mechanics. It has been observed that in many situations. potential (V) acting on the particle does not depend upon time and varies only with is position only. For such conditions time independent form of Schrödinger ‘s equation is applicable.</p>
+<p>The wave function associated with the motion of free particle is given by</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16620" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144519.png?resize=572%2C369&#038;ssl=1" alt="" width="572" height="369"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16621" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-144539.png?resize=589%2C531&#038;ssl=1" alt="" width="589" height="531"></p>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Derive expression for electrical conductivity of semiconductor in terms of impurity ionization energy.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16623" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-145322.png?resize=551%2C349&#038;ssl=1" alt="" width="551" height="349"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16624" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-145353.png?resize=446%2C643&#038;ssl=1" alt="" width="446" height="643"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16625" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-145408.png?resize=555%2C478&#038;ssl=1" alt="" width="555" height="478"></p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe behavior of mobile negative charges in the Hall effect experiment.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Hall Effect</p>
+<p>When magnetic field is applied to the current carrying conductor the voltage is developed across the conductor . The direction of voltage is perpendicular to the direction of both magnetic filed and current. This phenomenon is called Hall Effect and voltage developed is called Hall Voltage.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16628" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-150654.png?resize=290%2C207&#038;ssl=1" alt="" width="290" height="207"></p>
+<p><em>Figure: Hall Effect</em></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16629" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-150814.png?resize=621%2C431&#038;ssl=1" alt="" width="621" height="431"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16630" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-150827.png?resize=533%2C534&#038;ssl=1" alt="" width="533" height="534"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16631" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-150925.png?resize=534%2C509&#038;ssl=1" alt="" width="534" height="509"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16632" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-150932.png?resize=596%2C565&#038;ssl=1" alt="" width="596" height="565"></p>
+<p>Hence , graph pf ‘B’ versus R is straight line passing through origin as shown in figure below by dotted line.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16633" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-151049.png?resize=262%2C189&#038;ssl=1" alt="" width="262" height="189"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Set up differential equation for an oscillation of a spring using Hooke’s and Newton’s second law.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16635" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-151244.png?resize=584%2C607&#038;ssl=1" alt="" width="584" height="607"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16636" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-151327.png?resize=628%2C593&#038;ssl=1" alt="" width="628" height="593"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16637" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-151335.png?resize=315%2C455&#038;ssl=1" alt="" width="315" height="455"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are (a) the energy, (b) the momentum, and (c) the tavelength of the photon that is emitted when a hydrogen atom undergoes a transition from the state n = 4 to n = 2?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>Energy state of Hydrogen atom area</p>
+<p>Energy(E)=?</p>
+<p>Momentum(p)=?</p>
+<p>Wavelength(λ)=?</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-16651" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-195006.png?resize=430%2C454&#038;ssl=1" alt="" width="430" height="454"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>An oscillating block of mass 250 g takes 0.15 sec to move between the endpoints of the motion, which are 40 cm apart. Find (a) frequency and (b) amplitude of the motion, and.(c) force constant of the spring.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-56789" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/CamScanner-04-04-2025-12.00n_3.jpg?resize=1728%2C2308&#038;ssl=1" alt="" width="1728" height="2308"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>A potential difference of 100 V is established between the two plates one being the high potential plate (say A). A proton of charge q = 1.6 × 10<sup>-19</sup> C is released from plate B, the another plate. What will be the velocity of the proton when it reaches plate A? The mass of the proton is 1,67-x 10<sup>-27</sup> kg</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16655" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-195411.png?resize=360%2C267&#038;ssl=1" alt="" width="360" height="267"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>An  α particle is emitted from a radioactive nuclei with an energy of 6.8 MeV. Calculate its wavelength and compare it with the size of the emitting nucleus that has a radius of 8 x 10<sup>-15</sup> m.</p>
+<p> </p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16658" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-200238.png?resize=519%2C301&#038;ssl=1" alt="" width="519" height="301"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>The density of aluminum is 2.70 g/cm3 and its molecular weight is 26.98 g/mole.</p>
+<p>a. Calculate the Fermi energy<br />
+b. If the experimental value of EF is 12 eV, What is the electron effective mass in aluminum? Aluminum is trivalent.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-56795" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/CamScanner-04-04-2025-12.25n_1.jpg?resize=1552%2C2116&#038;ssl=1" alt="" width="1552" height="2116"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-56796" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2021/12/CamScanner-04-04-2025-12.00n_5-2.jpg?resize=1552%2C2124&#038;ssl=1" alt="" width="1552" height="2124"></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>The output of a digital circuit (y) is given by this expression:<br />
+y = (A’B’+ B’A) ((A + B)’  + C)<br />
+Where A, B and C represent inputs. Draw a circuit of above<br />
+equation using OR, AND and NOT gate and hence find its truth table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-16665" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/05/Screenshot-2023-05-12-204356.png?resize=467%2C299&#038;ssl=1" alt="" width="467" height="299"></p>
+<p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 85.463%; height: 570px;" width="803">
+<tbody>
+<tr style="height: 56px;">
+<td style="width: 2.43605%; height: 56px;" width="20"></td>
+<td style="width: 11.3276%; height: 56px;" colspan="3" width="92">INPUT</td>
+<td style="width: 2.55786%; height: 56px;" width="21"></td>
+<td style="width: 2.43605%; height: 56px;" width="20"></td>
+<td style="width: 2.43605%; height: 56px;" width="20"></td>
+<td style="width: 2.92326%; height: 56px;" colspan="2" width="20"></td>
+<td style="width: 11.5713%; height: 56px;" colspan="3" width="100"></td>
+<td style="width: 34.1048%; height: 56px;" colspan="4" width="301">    INTERMEDIATE STATE</td>
+<td style="width: 4.01949%; height: 56px;" colspan="2" width="22"></td>
+<td style="width: 3.04507%; height: 56px;" width="20"></td>
+<td style="width: 5.48112%; height: 56px;" width="51"></td>
+<td style="width: 13.3983%; height: 56px;" width="116">OUTPUT</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">A</td>
+<td style="width: 5.60292%; height: 56px;" width="47">B</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">C</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48"></td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42"></td>
+<td style="width: 5.96833%; height: 56px;" width="53"></td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">.A</td>
+<td style="width: 12.5457%; height: 56px;" width="113"> + BA</td>
+<td style="width: 8.40438%; height: 56px;" width="71">A+B</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83"> + C</td>
+<td style="width: 13.3983%; height: 56px;" width="116">Y</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">0</td>
+<td style="width: 5.60292%; height: 56px;" width="47">0</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">0</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">1</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">1</td>
+<td style="width: 5.96833%; height: 56px;" width="53">1</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">0</td>
+<td style="width: 8.40438%; height: 56px;" width="71">1</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">1</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">0</td>
+<td style="width: 5.60292%; height: 56px;" width="47">0</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">1</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">1</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">1</td>
+<td style="width: 5.96833%; height: 56px;" width="53">1</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">1</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">1</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">0</td>
+<td style="width: 5.60292%; height: 56px;" width="47">1</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">0</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">1</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">0</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">0</td>
+<td style="width: 8.40438%; height: 56px;" width="71">1</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">0</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">0</td>
+<td style="width: 5.60292%; height: 56px;" width="47">1</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">1</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">1</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">0</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">1</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">0</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">1</td>
+<td style="width: 5.60292%; height: 56px;" width="47">0</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">0</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">0</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">1</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">1</td>
+<td style="width: 12.5457%; height: 56px;" width="113">0</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">0</td>
+<td style="width: 13.3983%; height: 56px;" width="116">1</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">1</td>
+<td style="width: 5.60292%; height: 56px;" width="47">0</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">1</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">0</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">1</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">1</td>
+<td style="width: 12.5457%; height: 56px;" width="113">1</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">1</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">1</td>
+<td style="width: 5.60292%; height: 56px;" width="47">1</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">0</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">0</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">0</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">0</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">0</td>
+<td style="width: 13.3983%; height: 56px;" width="116">0</td>
+</tr>
+<tr style="height: 56px;">
+<td style="width: 5.84653%; height: 56px;" colspan="2" width="46">1</td>
+<td style="width: 5.60292%; height: 56px;" width="47">1</td>
+<td style="width: 4.87211%; height: 56px;" colspan="2" width="40">1</td>
+<td style="width: 6.09013%; height: 56px;" colspan="3" width="48">0</td>
+<td style="width: 4.99391%; height: 56px;" colspan="2" width="42">0</td>
+<td style="width: 5.96833%; height: 56px;" width="53">0</td>
+<td style="width: 7.42996%; height: 56px;" colspan="2" width="62">0</td>
+<td style="width: 12.5457%; height: 56px;" width="113">1</td>
+<td style="width: 8.40438%; height: 56px;" width="71">0</td>
+<td style="width: 10.2314%; height: 56px;" colspan="2" width="83"></td>
+<td style="width: 10.3532%; height: 56px;" colspan="3" width="83">1</td>
+<td style="width: 13.3983%; height: 56px;" width="116">0</td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 2.43605%; height: 10px;" width="19"></td>
+<td style="width: 3.41048%; height: 10px;" width="27"></td>
+<td style="width: 5.60292%; height: 10px;" width="47"></td>
+<td style="width: 2.31425%; height: 10px;" width="17"></td>
+<td style="width: 2.55786%; height: 10px;" width="20"></td>
+<td style="width: 2.43605%; height: 10px;" width="19"></td>
+<td style="width: 2.43605%; height: 10px;" width="19"></td>
+<td style="width: 1.21803%; height: 10px;" width="8"></td>
+<td style="width: 1.70524%; height: 10px;" width="12"></td>
+<td style="width: 3.28867%; height: 10px;" width="28"></td>
+<td style="width: 5.96833%; height: 10px;" width="54"></td>
+<td style="width: 2.31425%; height: 10px;" width="18"></td>
+<td style="width: 5.11571%; height: 10px;" width="44"></td>
+<td style="width: 12.5457%; height: 10px;" width="104"></td>
+<td style="width: 8.40438%; height: 10px;" width="71"></td>
+<td style="width: 8.03898%; height: 10px;" width="74"></td>
+<td style="width: 2.19245%; height: 10px;" width="18"></td>
+<td style="width: 1.82704%; height: 10px;" width="14"></td>
+<td style="width: 3.04507%; height: 10px;" width="26"></td>
+<td style="width: 5.48112%; height: 10px;" width="50"></td>
+<td style="width: 13.3983%; height: 10px;" width="114"></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+</body></html>

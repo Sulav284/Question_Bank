@@ -1,0 +1,275 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cloud Computing Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>Cloud Computing Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 160 + 40</p>
+        <p><strong>Pass Marks:</strong> 64 + 16</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>What is cloud computing? Describe cloud service models?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud computing is the on demand delivery of computing services such as serves, storage, databases, networking software etc over the internet. Rather than keeping the files on a physical storage device, cloud computing makes it possible to save remotely. The different cloud services models are:</p>
+<p>Types of cloud services (Cloud services modes)</p>
+<p>1. <strong>Infrastructure as a service(IaaS)</strong>:</p>
+<ul style="list-style-type: square;">
+<li>It provides virtualized computing resources over the internet, including servers, storage and networking infrastructure.</li>
+<li>Users can rent these resources on-demand and pay for them on a pay-as-you-go base.</li>
+<li>IaaS providers manage the underlying hardware and infrastructure allowing users to focus on deploying and managing their application and workload.</li>
+</ul>
+<p><span style="text-decoration: underline;"><em>Feature / services of IaaS</em></span>:</p>
+<ol style="list-style-type:decimal;">
+<li>Instead of purchasing hardware completely, users pay for IaaS on demand.</li>
+<li>Infrastructure is sclable based on processing and storage needs.</li>
+<li>Because data is on the cloud, there is no single point of failuer.</li>
+<li>User can manage and configure computing resources through web interface or API.</li>
+</ol>
+<p>2. <strong>Platform as a service(PaaS)</strong>:</p>
+<ul style="list-style-type: square;">
+<li>PaaS offers a complete development and deployment environment in the cloud, including tools, middleware and runtime environments for building , testing and deploying application.</li>
+<li>Application developers can developers develop and run their software on a cloud platform without the cost and complexity of buyigng ang managing the underlying hardware and software layer.</li>
+<li>example Heroku, Google app engine, windows azure.</li>
+</ul>
+<p><span style="text-decoration: underline;"><em>Feature / services of PaaS</em></span>:</p>
+<ol style="list-style-type:decimal;">
+<li>Provides a comphrensive set of built in development tools, frameworks and runtime environment for building, deploying and managing apps.</li>
+<li>Supports integration with 3rd party serviceds API and tools.</li>
+<li>It enables applications to scaleup or down dynamically.</li>
+<li>It offers web based development environment</li>
+<li>Minimal development time, multiple programming language support, enhanced collaboration.</li>
+</ol>
+<p>3.<strong> Software as a service(SaaS)</strong>:</p>
+<ul style="list-style-type: square;">
+<li>SaaS delivers software application over the internet on a subscription basis, eliminating the need for users to       , maintain and update software locally.</li>
+<li>Users can access SaaS application via a web browser or API, typically on a pay-as-you-go basis</li>
+<li>example Google apps , Microsoft office 365, salesforcer. Here, user can access apps from anywhere with as internet connection.</li>
+</ul>
+<p><span style="text-decoration: underline;"><em>Feature / services of PaaS</em></span>:</p>
+<ol style="list-style-type:decimal;">
+<li>It delivers to use apps over the internet on a subscription base eliminating the need for installition, configuration and maintenanced by end user.</li>
+<li>They are multi-tenart, managing multiple users share a single instance of the app, with each user accessing their data and settings securely.</li>
+<li>Scalability, addorable, access from anywhere with inten</li>
+</ol>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is thread? Why multi-threading is used ? Describe how thread programming is done in cloud .</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A thread is the smallest unit of processing that can be performed in an operating system. It is a sequence of executable instructions that can be managed independently by a scheduler, which is typically part of the operating system. Threads are used to divide a program into multiple, concurrently running tasks.</p>
+<p>Multithreading is used to achieve parallelism by dividing a program into multiple concurrent threads. The key benefits include:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><em>Increased Responsiveness</em></span> :  Multithreading can help maintain the responsiveness of an application. For instance, a program can continue to be responsive to user inputs while performing background tasks.</li>
+<li><span style="text-decoration: underline;"><em>Resource Sharing </em></span>: Threads within the same process share memory and resources, which can lead to more efficient utilization of resources compared to using multiple processes.</li>
+<li><em><span style="text-decoration: underline;">Performance </span></em>: Multithreading can improve the performance of applications, especially on multi-core processors, by allowing multiple operations to be executed simultaneously.</li>
+<li><span style="text-decoration: underline;"><em>Simplified Code Structure</em></span> : In some cases, using threads can lead to a cleaner and more maintainable code structure by isolating concurrent operations.</li>
+</ol>
+<p>Thread programming involves creating and managing multiple threads within a program to achieve concurrent execution of tasks . In general thread programming is done as follows:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;"><em>Thread Creation</em></span> : Thread are typically created by the operating system or a thread management library provided by the programming language.</li>
+<li><span style="text-decoration: underline;"><em>Thread Synchronization</em></span> : Thread access shared resources, so thread synchronization mechanisms are required to prevent conflicts and ensure data integrity. Common synchronixation techniques include locks, mutex, semaphores and condition variables.</li>
+<li><span style="text-decoration: underline;"><em>Thread Execution</em></span> : The schedular determines the order and duration of execution for each thread based on fcators such as priority, time slicing and the availability of resources.</li>
+<li><span style="text-decoration: underline;"><em>Thread Communication</em></span> : This can achieve through mechanisms such as shared memory message passing etc.</li>
+<li><span style="text-decoration: underline;"><em>Thread Termination</em></span> : Threads can be terminated explicitly by the program or automatically by the operating system when they have completed their tasks.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Discuss different implementation levels of virtualization. What are the benefits of virtualization?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Virtualization is a technology in cloud computing that involves creating virtual versions of physical resources such as servers, storage devices, networks, and even entire computing environments. The primary benefits of virtualization in cloud computing:</p>
+<ol style="list-style-type:decimal;">
+<li><em><span style="text-decoration: underline;">Resource Optimization</span></em> : Virtualization allows multiple virtual machines (VMs) to run on a single physical machine, maximizing the utilization of physical resources and reducing hardware costs.</li>
+<li><span style="text-decoration: underline;"><em>Flexibility</em></span> : Resources can be easily scaled up or down based on demand, providing flexibility and efficient use of infrastructure.</li>
+<li><span style="text-decoration: underline;"><em>Cost Savings</em> </span>: By consolidating multiple workloads onto fewer physical machines, organizations can significantly reduce the need for physical hardware.</li>
+<li><span style="text-decoration: underline;"><em>Simplified Management</em></span> : Virtual environments can be managed from a single console, simplifying administration and reducing the complexity of managing multiple physical servers.</li>
+<li><span style="text-decoration: underline;"><em>Enhanced Security and Isolation</em></span> : Virtual machines are isolated from each other, meaning  that if one VM is compromised, the others remain unaffected, enhancing overall security.</li>
+</ol>
+<p>Implementation Level of Virtualization Structures</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-37069 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/06/implementation-of-virtualization.drawio.png?resize=468%2C301&#038;ssl=1" alt="" width="468" height="301"></p>
+<p style="text-align: center;">fig : Level of Virtualization</p>
+<p>1. <strong>Instruction set architecture(ISA) Level</strong> :</p>
+<ul style="list-style-type: disc;">
+<li>Virtualization is ISA level is achieved by ISA emulation.</li>
+<li>This  is useful for running large amounts of legacy code that was originally develope for various hardware configuration.</li>
+<li>These programs can be executed on the virtual machine through an ISAA binary code. They can be executed on X86 or even on an X64 computer.</li>
+<li>ISA contributes to this VM,S hardware independence.</li>
+</ul>
+<p>2.<strong> Hardware Abstraction Level (HAL)</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Hardware level virtualization occours directly on the top of hardware. It creates a virtual machine as well as handles the underlying hardware through virtualization.</li>
+<li>The goal is to virtualize the resources of the computer, such as its processor , memory, and I/O device and allows several users to enhance the hardware usage rate at the same time.</li>
+<li>Recently Xen hypervisor has been used to virtualize X86 based workstations to run linux or other guest OS.</li>
+</ul>
+<p>3.<strong> Operating System level</strong> :</p>
+<ul style="list-style-type: square;">
+<li>Virtualization at this level establishes an abstract lays between the programs and the os</li>
+<li>It functions as a separaete contanier on the actual server os, utlilizing hardware and software</li>
+<li>To allocate hardware resources to muliple users, os-leous virtulization is often used . Every user gets their virtual environment with their virtual environment with their virtual hardware resources</li>
+</ul>
+<p>4. <strong>Library level</strong> :</p>
+<ul style="list-style-type: square;">
+<li>At this level , the applications . make use of the API that is form the libranies at a user level</li>
+<li>It is achived by  API hooks to regulate the communication channel between the programs of the rest of the system</li>
+<li>This concept has been applied by the software utilty WINE to support windows programs on top of UNIX host.</li>
+</ul>
+<p>5. <strong>Application level</strong>:</p>
+<ul style="list-style-type: square;">
+<li>When you simply want to virtualize a single program, application level virtualization neds to be considered. In this case, the entire environment of the platform does not need to be virtualized.</li>
+<li>As application run as a single process on a computer&#8217;s OS this can also be reffered to as process level voirtualization.</li>
+<li>It is benefitial when VMs employ high level language. Ex: Micosoft.NET , Juff etc.</li>
+<li>The application will sit above the virtualization layer which in turn sits on the application program.</li>
+</ul>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>What are the major advantages of cloud computing?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The major advantages of cloud computing are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>On-Demand Self-Service :</strong> Users can provision computing resources, such as servers storage and networking, on-demand without requiring human intervention from the service provider. This allows users to access resources as needed, typically through a web interfaces or API.</li>
+<li><strong>Elasticity and scalability :</strong> Cloud computing allows for rapid and automatic scaling of computing resources to accomodate fluctuations in demand. Users can scale resources up and down dynamically as required</li>
+<li><strong>Mesured Service</strong> <strong>:</strong> Cloud computing are metere and billed base on usage, allowing users to pay only for the resources they consume. Metering may be basd on factors such as storage capacity, bandwidth, or active users.</li>
+<li><strong>Broad Network Access : </strong>Cloud services are accessibl over internet from a vareity of devices incluing laptops, smartphones an tablets .</li>
+<li><strong>Security and Compliance : </strong>Cloud computing implement robust security measures and compliance standards to protect sensitive data and ensure regulatory compliance. Eg: encryption, access controls, authentication.</li>
+</ol>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain the role of SOA while developing cloud applications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li>SOA is a software design approach that involves building software components as reusable services.</li>
+<li>Each service represents a specific business function that are self contained and can be accessed over a network using standard protocols.</li>
+<li>In cloud design and implementation, SOZ is used to a flexible, scalable and modular architecture that can support a wide range of applications and services.</li>
+<li>It enables the creation of loosely-coupled services that can be combined to support complex business processes that can be accessed from anywhere on the internet.</li>
+<li>SOA plays a crucial role in the development of cloud application. Hre&#8217;s how (you can also write this as characteristics of SOA).</li>
+</ul>
+<p><strong>Modularity and resuability</strong> :</p>
+<p>SOA decomposes cloud applications into modular services that encapsulate specific business functionalits. These services are designated to be reusable across multiple application and use cases.</p>
+<p><strong>Loose coupling</strong> :</p>
+<p>SOA promotes loose coupling between services allowing them to communicate through standardized interfaces without strong dependencies.</p>
+<p><strong>Interoperablity</strong> :</p>
+<p>SOA encourages the use of open standards and protocols for communication and integration between services, promoting interoperablity.</p>
+<p><strong>Scalability and elasticity</strong> :</p>
+<p>SOA enables cloud applications to scale up and down on demands of services.</p>
+<p><strong>Service governance</strong> : SOA governance provides policies, standard&#8217;s and process for managing lifecycle and usage of service in cloud applications.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is load balancing? How is load balancing done?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Load balancing refers to the process of disturbing a set of task over a set of resources with the arm of making their overall processing more efficient. Load blancing can optimize the response time and avoid unevenly overloading some computed nodes while other nodes are left idle. It refers to the disturbing incomming network traffic across a group of backend servers.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36948" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/cloud-computing.drawio.png?resize=880%2C312&#038;ssl=1" alt="" width="880" height="312"></p>
+<p>In cloud computing, load balancing can be implemented at various levels, including the network layer, application layer, and database layer. The most common load balancing techniques used in cloud computing are:</p>
+<ul style="list-style-type: square;">
+<li><strong>Network Load Balancing</strong>: This technique is used to balance the network traffic across multiple servers or instances. It is implemented at the network layer and ensures that the incoming traffic is distributed evenly across the available servers.</li>
+<li><strong>Application Load Balancing</strong>: This technique is used to balance the workload across multiple instances of an application. It is implemented at the application layer and ensures that each instance receives an equal share of the incoming requests.</li>
+<li><strong>Database Load Balancing</strong>: This technique is used to balance the workload across multiple database servers. It is implemented at the database layer and ensures that the incoming queries are distributed evenly across the available database servers.</li>
+</ul>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are the challenges and risk in cloud security?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The challenges in cloud security are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data breaches </strong>: Unauthorized access to sensitive data stored in the cloud is a significant concern. Breaches can occour due to weak access controls, inadquate encryption or in insider threats.</li>
+<li><strong>Insecure interfaces and APIs</strong> : Cloud services often provide interfaces and APIs to interact with their platform. If these interfaces and APIs are not properly secured, they can be exploited by attacks to gain unauthorized access or manipulate data.</li>
+<li><strong>Insider threats</strong> : While cloud providers invest heavily in security measures, the actions authorized users within an organization can still pose a risk. Insiders may intentionally or accidently expose sensitive information or compromise the security of  cloud resources.</li>
+<li><strong>Data loss</strong> : Cloud service providers can experience data loss due to factors such as hardware failuers, natural disasters orsoftware bugs. Organizations should have proper backup and disaster recovery strategies to mitigate the risk of permanent data loss.</li>
+</ol>
+<p>Cloud Security Risks:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>The effect on company&#8217;s ROI</strong> : A security breaches or data loss can have a significant impact on a company&#8217;s return on investment (ROI).These losses can include direct costs such as legal fees potential regulatory fines etc. Indirect costs may arise from reputational damage, customer churn etc.</li>
+<li><strong>Compatibility</strong> : Going to cloud , may not be compatible with organization&#8217;s current technology. It should be studied properly.</li>
+<li><strong>Trust</strong> : Customers entrust their sensitive data to businesses that utilize cloud services. If a company experiences a data breach or security incident, it can erode customer trust.</li>
+<li><strong>Reputation</strong> : A security breach or data loss can damage a company&#8217;s reputation in the market.</li>
+<li><strong>Account Hijacking</strong> : If an attacker gain control over a user&#8217;s cloud account credentials. they can misuse the account to manipulate resources, access sensitive data or launch further attacks.</li>
+</ol>
+</div>
+<h3>Question 8</h3>
+<div><p><p>How data and application security is enforced in cloud?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data and application security are enforced in the cloud in following ways:<br />
+1. <strong>Encryption</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Data at Rest</em></span>: Data stored in cloud environments is encrypted using strong encryption standards (e.g., AES-256).</li>
+<li><span style="text-decoration: underline;"><em>Data in Transit</em></span>: Data moving between the user’s device and the cloud, or between different cloud services, is encrypted using protocols like TLS (Transport Layer Security) to prevent interception and tampering.</li>
+</ul>
+<p>2. <strong>Identity and Access Management (IAM)</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>User Authentication</em></span>: Robust authentication mechanisms, including multi-factor authentication (MFA), ensure that only authorized users can access cloud services.</li>
+<li><em><span style="text-decoration: underline;">Access Control</span></em> : Access control policies, such as role-based access control (RBAC) and attribute-based access control (ABAC), restrict access to resources.</li>
+</ul>
+<p>3. <strong>Network Security</strong></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Firewalls</em></span> : Virtual firewalls control inbound and outbound traffic to cloud resources preventing unauthorized access.</li>
+<li><em><span style="text-decoration: underline;">VPNs and Private Connectivity</span></em> : Virtual Private Networks (VPNs) and dedicated private connectivity options (e.g., AWS Direct Connect, Azure ExpressRoute) secure data transmissions between on-premises environments and the cloud.</li>
+<li><span style="text-decoration: underline;"><em>Intrusion Detection and Prevention Systems (IDPS)</em></span> : These systems monitor network traffic for suspicious activities and potential threats, and can automatically take action to mitigate risks</li>
+</ul>
+<p>4. <strong>Application Security</strong></p>
+<ul style="list-style-type: square;">
+<li> <em><span style="text-decoration: underline;">Secure Software Development Lifecycle (SDLC)</span></em>: Incorporating security practices throughout the software development lifecycle, such as code reviews, static and dynamic analysis, and vulnerability assessments.</li>
+<li><span style="text-decoration: underline;"><em>Runtime Protection</em></span> : Runtime application self-protection (RASP) and web application firewalls (WAFs) provide ongoing monitoring and protection against threats during the application&#8217;s operation.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Describe Amazon EC2 and its features.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Using Amazon EC2 reduces hardware costs so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. You can add capacity (scale up) to handle compute-heavy tasks, such as monthly or yearly processes, or spikes in website traffic. When<br />
+usage decreases, you can reduce capacity (scale down) again.</p>
+<p>An EC2 instance is a virtual server in the AWS Cloud. When you launch an EC2 instance, the instance type that you specify determines the hardware available to your instance. Each instance type offers a different balance of compute, memory, network, and storage resources.</p>
+<p>Here are some key features Amazon EC2:</p>
+<p>1.<strong> Scalability and Flexibility</strong>:</p>
+<p>Automatically scale up or down based  on demand. You canadd or remove instances within minutes, accommodating traffic fluctuations without requiring upfront hardware investments.</p>
+<p>2.<strong> Pay-As-You-Go Pricing</strong>:</p>
+<p>Pay for compute capacity by the hour or second, with no long-term commitments or upfront payments.</p>
+<p>3. <strong>Networking</strong>:</p>
+<p>Launch EC2 instances within a virtual private cloud, providing complete control over the virtual networking environment, including selection of IP address ranges, creation of subnets, and configuration of route tables and network gateways.</p>
+<p>4. <strong>Storage Options </strong></p>
+<ul style="list-style-type: square;">
+<li><em><span style="text-decoration: underline;">Amazon EBS (Elastic Block Store)</span></em> : Persistent block storage volumes for use with EC2 instances, offering consistent and low-latency performance.</li>
+<li><span style="text-decoration: underline;"><em>Instance Store</em> </span>: Temporary block-level storage for instances, which persists only during the life of the instance.</li>
+<li><span style="text-decoration: underline;"><em>Amazon EFS (Elastic File System)</em></span> : Scalable file storage for use with Amazon EC2, providing simple and scalable file storage for multiple EC2 instances.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Discuss the core components of AppEngine.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Google App Engine (GAE) is a fully managed platform-as-a-service (PaaS) offering by Google Cloud that allows developers to build and<br />
+deploy applications without worrying about the underlying infrastructure.</p>
+<p>1. <strong>Common Language Runtime</strong></p>
+<p>While Google App Engine itself doesn&#8217;t have a &#8220;Common Language Runtime&#8221; in the same sense as Microsoft&#8217;s .NET framework, it does provide managed runtimes for various programming languages. These runtimes serve a similar purpose by managing the execution of code &amp;<br />
+providing services. App Engine supports several programming languages with specific managed runtimes, such as Python, Java, Node.js, PHP, Ruby, and Go. The runtime includes just-in-time (JIT) compilation to improve performance by compiling bytecode to machine code at runtime.</p>
+<p>2.<strong> Web-Based Admin Console</strong>:</p>
+<p>Google Cloud Console is the web-based administrative interface for managing Google Cloud resources, including App Engine applications. Key features include:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Dashboard</em></span>: Provides an overview of all Google Cloud resources and services, including App Engine applications, with real-time performance metrics and logs.</li>
+<li><span style="text-decoration: underline;"><em>Resource Management</em></span> : Allows administrators to manage App Engine applications, configure settings, deploy new versions, etc.</li>
+<li><em><span style="text-decoration: underline;">Deployment Tools</span></em> : Supports deployment from the console, enabling quick and easy deployment of application updates.</li>
+</ul>
+<p>3. <strong>Scalable Infrastructure</strong>:</p>
+<p>Scalable Infrastructure is a core component of Google App Engine, enabling applications to automatically scale based on demand. Key features include:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Automatic Scaling</em></span> : Automatically adjusts the number of instances based on the application&#8217;s current traffic and workload.</li>
+<li><span style="text-decoration: underline;"><em>Load Balancing</em></span> : Distributes incoming traffic across multiple instances to ensure high availability and optimal resource utilization.</li>
+<li><em><span style="text-decoration: underline;">Elasticity</span></em> : Provides the ability to scale resources up or down quickly, accommodating sudden spikes or drops in traffic seamlessly.</li>
+</ul>
+<p>4<strong>. Software Development Kit (SDK)</strong>:</p>
+<p>Google Cloud SDK is a collection of tools and libraries that developers use to build, deploy, and manage applications on Google Cloud, including App Engine. Key features include:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>APIs</em></span>: Provides APIs for accessing Google Cloud services, including storage, databases,machine learning, and more.</li>
+<li><span style="text-decoration: underline;"><em>Libraries</em></span>: Includes client libraries for various programming languages, simplifying the process of connecting to and using Google Cloud services.</li>
+<li><span style="text-decoration: underline;"><em>Development Tools</em></span> : Supports local development with tools like the App Engine local development server, allowing developers to test and debug their applications before deployment.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain the storage services provided by Windows Azure.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Azure Blobs</strong> : Azure Blob Storage is a massively scalable object store for storing large amounts of unstructured data, such as text or binary data. Supports storing petabytes of data and millions of objects.</li>
+<li><strong>Azure Files</strong> : Azure Files provides fully managed file shares that can be accessed via the SMB (Server Message Block) protocol. Easily mountable file shares that can be accessed simultaneously by multiple virtual machines (VMs).</li>
+<li><strong>Azure Queues</strong> : Azure Queue Storage is a messaging store for reliable messaging between application components. Allows for the decoupling of components in a cloud application, enabling asynchronous processing. Capable of handling millions of messages, making it suitable for high-throughput scenarios.</li>
+<li><strong>Azure Tables </strong>: Azure Table Storage is a NoSQL store for schemaless storage of structured data. Stores structured data without a predefined schema, providing flexibility to adapt as requirements change. Supports massive amounts of data and high transaction rates.</li>
+<li><strong>Azure Managed Disks </strong>: Azure Managed Disks are block-level storage volumes managed by Azure and used with Azure Virtual Machines (VMs). Azure manages the storage account creation and maintenance, simplifying disk management. Supports various disk types (Standard HDD, Standard SSD, Premium SSD, Ultra Disk) to match performance needs.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Mention how business and scientific applications can be benefited from cloud<br />
+computing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cloud computing offers numerous benefits for both business and scientific applications, transforming how these applications are developed, deployed, and managed. Here’s how cloud computing can benefit each:</p>
+<p><span style="text-decoration: underline;"><em><strong>Benefits for Business Applications</strong></em></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Cost Efficiency</strong>: No need for large upfront investments in hardware and software. Businesses can shift to an operational expense model.Businesses pay only for the resources they use.</li>
+<li><strong>Enhanced Collaboration</strong> : Employees can access business applications from anywhere, facilitating remote work and collaboration. Tools like shared documents, video conferencing, and project management platforms enable real-time collaboration.</li>
+<li><strong>Business Continuity and Disaster Recovery </strong>: Cloud providers offer robust backup solutions, ensuring data is safely stored and can be recovered quickly in case of failure.</li>
+</ol>
+<p><em><span style="text-decoration: underline;"><strong>Benefits for Scientific Applications</strong></span></em></p>
+<ol style="list-style-type:decimal;">
+<li><strong>High-Performance Computing (HPC)</strong>: Scientists can access virtually unlimited compute power to run complex simulations and calculations without needing to invest in expensive HPC infrastructure.Cloud platforms support parallel processing, enabling faster analysis and simulation of large datasets.</li>
+<li><strong>Data Storage and Management </strong>: Cloud storage solutions offer vast amounts of storage for scientific data, from raw data to processed results.Researchers can easily share data with collaborators worldwide, enhancing scientific cooperation.</li>
+<li><strong> Advanced Analytics and Machine Learning</strong><br />
+○ <em><span style="text-decoration: underline;">Big Data Analytics</span> </em>: Cloud platforms provide tools for processing and analyzinglarge datasets, enabling insights that would be difficult to achieve withon-premises resources.<br />
+○ <span style="text-decoration: underline;"><em>Machine Learning and AI</em> </span>: Scientists can use cloud-based AI and machine learning services to analyze data and develop predictive models.</li>
+</ol>
+</div>
+</body></html>

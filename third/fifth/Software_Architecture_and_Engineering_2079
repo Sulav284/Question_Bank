@@ -1,0 +1,186 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAE Question Bank 2079 2079</title>
+    </head>
+    <body>
+        <h1>SAE Question Bank 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any TWO questions</h2><h3>Question 1</h3>
+<div><p><p>What does the code of ethics reflect? What are the causes of software failure? Explain the factors that justify the risks in software issues.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A code of ethics is a set of principles and standards that guide the behavior of individuals and organizations in a specific profession or industry. In the context of software development, a code of ethics reflects the values and standards of behavior that software developers should adhere to when designing, developing, testing, and deploying software.</p>
+<p>Some of the key values reflected in a code of ethics for software development include:</p>
+<ol style="list-style-type:decimal;">
+<li>Professionalism: Software developers are expected to act with integrity and honesty, and to work to the best of their ability to deliver high-quality software products.</li>
+<li>Responsibility: Software developers have a responsibility to ensure that their software products are safe, secure, and reliable.</li>
+<li>Respect: Software developers should respect the rights and dignity of all individuals, including their customers, colleagues, and the broader community.</li>
+<li>Fairness: Software developers should treat all individuals fairly and equitably, without discrimination or bias.</li>
+<li>Continuous Improvement: Software developers should strive to improve their skills and knowledge over time, and to stay up-to-date with developments in the field.</li>
+</ol>
+<p>Software failure can occur due to various reasons, some of the common causes include:</p>
+<ol style="list-style-type:decimal;">
+<li>Design errors: If the software is not designed correctly, it may not perform as intended, leading to errors and failures.</li>
+<li>Programming errors: Errors made during the coding phase can cause software failure.</li>
+<li>Integration errors: If different software components are not integrated properly, it may cause errors and failures.</li>
+<li>Inadequate testing: If software is not tested adequately, errors and failures may not be identified until it is in use.</li>
+<li>Environmental factors: Software may fail due to changes in the environment, such as hardware upgrades, changes in operating systems, or changes in network configurations.</li>
+<li>User errors: Software may fail due to user errors, such as incorrect data entry or misuse of features.</li>
+</ol>
+<p>The risks associated with software issues can vary depending on the context and the severity of the failure. Here are some factors that can justify the risks associated with software issues:</p>
+<ol style="list-style-type:decimal;">
+<li>Business needs: The benefits of software may outweigh the risks associated with issues, especially if the software is critical to business operations.</li>
+<li>Cost: The cost of addressing every possible software issue may be prohibitively expensive, and organizations may need to accept some level of risk.</li>
+<li>Time: Addressing every possible software issue may take too much time, and organizations may need to accept some level of risk to meet deadlines.</li>
+<li>Impact: The impact of software issues may vary depending on the context, and organizations may need to accept some level of risk if the impact is deemed acceptable.</li>
+<li>User training: User training and education can help mitigate some of the risks associated with software issues, by reducing user errors and misuse.</li>
+</ol>
+<p>In order to effectively manage the risks associated with software issues, organizations should conduct regular risk assessments, implement appropriate testing and quality assurance processes, and have contingency plans in place in case of failures or issues.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Explain the role of media and communication in social and cultural changes. What are the reason for resisting social change?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The media and communication play a significant role in social and cultural changes. They shape public opinion, influence values and beliefs, and facilitate the spread of information and ideas. Here are some ways that media and communication can influence social and cultural changes:</p>
+<ol style="list-style-type:decimal;">
+<li>Awareness: Media and communication can raise awareness of social and cultural issues, helping to generate public debate and advocacy for change.</li>
+<li>Education: Media and communication can educate people about different perspectives, cultures, and experiences, helping to foster understanding and tolerance.</li>
+<li>Mobilization: Media and communication can mobilize people to take action on social and cultural issues, helping to create momentum for change.</li>
+<li>Representation: Media and communication can represent diverse voices and experiences, helping to challenge dominant narratives and stereotypes.</li>
+</ol>
+<p>Despite the potential for media and communication to drive social and cultural changes, resistance to change is also common. Here are some reasons why people may resist social change:</p>
+<ol style="list-style-type:decimal;">
+<li>Fear of the unknown: Change can be scary, and people may fear the unknown consequences of social and cultural changes.</li>
+<li>Loss of power or privilege: Social and cultural changes may threaten the power or privilege of certain groups, leading to resistance.</li>
+<li>Attachment to tradition: People may value tradition and the status quo, and resist changes that challenge those values.</li>
+<li>Lack of trust: People may lack trust in those advocating for change, or in the institutions and systems that are driving the changes.</li>
+<li>Economic interests: Social and cultural changes may threaten economic interests, leading to resistance from those who stand to lose financially.</li>
+</ol>
+<p>It is important to understand these reasons for resistance to social change in order to effectively navigate social and cultural changes, and to build broad-based support for positive social and cultural changes.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain cyberspace in brief. Explain different techniques that can be used to secure cyberspace users.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Cyberspace refers to the virtual space created by computer networks, the internet, and other digital technologies. It encompasses all digital communications and interactions, including online transactions, social networking, and data sharing.</p>
+<p>Securing cyberspace is essential to protect individuals, businesses, and governments from cyber threats such as cyber attacks, hacking, data breaches, and identity theft. Here are some techniques that can be used to secure cyberspace users:</p>
+<ol style="list-style-type:decimal;">
+<li>Encryption: Encryption is the process of converting data into a code that can only be deciphered by authorized parties with a decryption key. This technique can help protect sensitive data and communications from unauthorized access.</li>
+<li>Firewalls: Firewalls are software or hardware devices that control access to a network or system, allowing only authorized traffic to pass through. This can help prevent unauthorized access and protect against cyber attacks.</li>
+<li>Antivirus and anti-malware software: Antivirus and anti-malware software can detect and remove malicious software such as viruses, worms, and Trojan horses from computers and networks. This can help protect against malware-based attacks and data breaches.</li>
+<li>Two-factor authentication: Two-factor authentication requires users to provide two forms of identification, such as a password and a unique code sent to a mobile device, to access an account or system. This can help prevent unauthorized access and protect against identity theft.</li>
+<li>Regular updates and patches: Regular updates and patches can help keep software and systems up-to-date and protected against known vulnerabilities and cyber threats.</li>
+<li>User education and awareness: Educating users about cyber threats and best practices for online security can help prevent cyber attacks and data breaches. This includes awareness about phishing scams, social engineering attacks, and other tactics used by cyber criminals to gain access to systems and data.</li>
+</ol>
+<p>Implementing these techniques can help improve cyberspace security and protect users from cyber threats. However, it is important to recognize that cyber threats are constantly evolving, and a comprehensive approach to cyber security should involve ongoing monitoring, risk assessment, and response planning.</p>
+</div>
+<h2>Section B: Attempt any EIGHT questions</h2><h3>Question 4</h3>
+<div><p><p>Why is education and licensing essential to become an ethical professional?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Education and licensing are essential for professionals to become ethical practitioners for the following reasons:</p>
+<ol style="list-style-type:decimal;">
+<li>Knowledge: Education provides individuals with the necessary knowledge and skills required to perform their duties and responsibilities effectively. This includes knowledge of relevant laws, ethical principles, and best practices.</li>
+<li>Standards: Licensing ensures that professionals meet certain standards of competence, ethical conduct, and professionalism, which helps to maintain the integrity of the profession.</li>
+<li>Accountability: Licensing and education provide a mechanism for holding professionals accountable for their actions, and help to ensure that they act ethically and responsibly.</li>
+<li>Protection of the public: Licensing and education help to protect the public by ensuring that professionals are qualified and competent to perform their duties and that they adhere to ethical standards of conduct.</li>
+<li>Continuous learning: Education and licensing often require professionals to engage in ongoing learning and professional development, which helps to keep their skills and knowledge up to date and ensures that they are aware of emerging ethical issues and best practices.</li>
+</ol>
+<p>Overall, education and licensing help to ensure that professionals are qualified, competent, and ethical practitioners who are committed to delivering high-quality services to their clients and the public.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Define development planning. Why do we need development planning?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Development planning is a process of defining goals, objectives, and strategies to promote economic, social, and political development in a region or country. It involves identifying the challenges and opportunities facing the region or country and designing policies and programs to address those challenges and leverage those opportunities.</p>
+<p>Development planning is essential for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Prioritization:</strong> Development planning helps to prioritize investment in key areas, such as education, infrastructure, and healthcare, which are critical for economic and social development.</li>
+<li><strong>Coordination:</strong> Development planning helps to coordinate the efforts of different sectors and stakeholders, ensuring that policies and programs are aligned and complementary.</li>
+<li><strong>Resource allocation:</strong> Development planning helps to allocate scarce resources, such as public funds and foreign aid, to achieve the greatest impact and ensure that resources are used efficiently.</li>
+<li><strong>Accountability:</strong> Development planning helps to establish clear goals and targets, which can be used to monitor progress and hold policymakers and implementers accountable for achieving results.</li>
+<li><strong>Sustainability:</strong> Development planning helps to ensure that development is sustainable, both in terms of environmental impact and economic viability.</li>
+</ol>
+<p>Overall, development planning is a critical tool for promoting economic, social, and political development, and for ensuring that development efforts are targeted, coordinated, and sustainable. It can help to mobilize resources, build consensus, and achieve results, ultimately leading to greater prosperity and well-being for the people of a region or country.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is e-governance? How can we achieve good governance through e-governance?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>E-governance, also known as electronic governance, refers to the use of information and communication technologies (ICTs) to enhance and transform the delivery of government services, information, and communication to citizens, businesses, and other government agencies. E-governance is aimed at improving government efficiency, transparency, and accountability while enhancing citizen participation and engagement in the decision-making process.</p>
+<p>Good governance refers to the processes and systems through which public institutions manage and allocate resources, make decisions, and provide services to citizens. E-governance, on the other hand, refers to the use of digital technologies to improve the efficiency, transparency, and accountability of government.</p>
+<p>Here are some ways e-governance can contribute to achieving good governance:</p>
+<ol style="list-style-type:decimal;">
+<li>Transparency: E-governance can increase transparency by making information about government activities, policies, and programs easily accessible to citizens. This can help build trust and promote accountability.</li>
+<li>Efficiency: E-governance can streamline administrative processes, reduce bureaucratic delays, and improve service delivery. This can lead to better resource management, cost savings, and improved citizen satisfaction.</li>
+<li>Participation: E-governance can increase citizen participation in decision-making processes by providing avenues for feedback and consultation. This can help ensure that policies and programs are responsive to citizens&#8217; needs and priorities.</li>
+<li>Accountability: E-governance can improve accountability by creating a record of government activities and transactions that can be audited and monitored. This can help reduce corruption and promote good governance.</li>
+</ol>
+<p>To achieve good governance through e-governance, it is important to ensure that these technologies are accessible and user-friendly, that they are supported by appropriate legal and regulatory frameworks, and that they are integrated into broader efforts to promote transparency, efficiency, and accountability in government.</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is ethical decision-making? Explain the framework for ethical decision-making.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Ethical decision-making is the process of evaluating and making choices in a manner consistent with ethical principles and values. It involves taking into account the moral and ethical implications of a decision and choosing a course of action that is in line with ethical standards.</p>
+<p>The framework for ethical decision-making typically involves the following steps:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Identify the problem:</strong> The first step is to identify the ethical problem or issue. This involves understanding the situation, the stakeholders involved, and the potential consequences of the decision.</li>
+<li><strong>Gather information:</strong> The second step is to gather all relevant information related to the problem or issue. This includes facts, data, and perspectives from all stakeholders.</li>
+<li><strong>Evaluate the information:</strong> The next step is to evaluate the information gathered in step two in light of ethical principles and values. This involves identifying the ethical implications of different options and considering how they align with ethical standards.</li>
+<li><strong>Generate options:</strong> The next step is to generate different options or solutions to the problem or issue. This involves brainstorming and considering different approaches that align with ethical standards.</li>
+<li><strong>Evaluate options:</strong> The next step is to evaluate each option generated in step four against ethical principles and values. This involves considering the potential consequences of each option and the impact on all stakeholders.</li>
+<li><strong>Make a decision:</strong> The final step is to make a decision that is in line with ethical principles and values. This involves choosing the option that aligns best with ethical standards and considering the potential consequences of the decision.</li>
+</ol>
+<p>In summary, ethical decision-making involves identifying ethical problems, gathering information, evaluating the information, generating options, evaluating the options, and making a decision that is in line with ethical principles and values. This framework can help individuals and organizations make ethical decisions that align with their values and principles.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Most copyright violations are found in developing, usually, poor countries. Why?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>There are several reasons why copyright violations are more common in developing countries, including:</p>
+<ol style="list-style-type:decimal;">
+<li>Lack of awareness and education: Many people in developing countries may not be fully aware of copyright laws and their rights and obligations under them. This lack of understanding can lead to unintentional violations, as well as deliberate infringement by those who seek to profit from copying or distributing copyrighted works without permission.</li>
+<li>Weak legal systems: In many developing countries, the legal systems may be weak or poorly enforced, making it easier for individuals and businesses to engage in copyright infringement without fear of significant consequences.</li>
+<li>Economic factors: Developing countries may have lower levels of economic development and a greater prevalence of poverty, which can make it more difficult for individuals to access and afford legally acquired copyrighted works. As a result, people may resort to illegal means of obtaining or distributing copyrighted works.</li>
+<li>Cultural norms: In some developing countries, there may be different cultural attitudes towards intellectual property and ownership. For example, some cultures may place greater emphasis on sharing and communal ownership, which may lead to a greater tolerance for copyright infringement.</li>
+</ol>
+<p>It is important to note, however, that copyright violations occur in all countries and are not limited to developing countries. Developed countries also face challenges in enforcing copyright laws and preventing infringement.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Explain different health-related issues of using computer technology in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The use of computer technology has brought many benefits to the healthcare industry, such as improved diagnosis, treatment, and record keeping. However, it has also brought several health-related issues that need to be considered.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Eye Strain:</strong> Staring at a computer screen for long periods can cause eye strain, which can lead to headaches, blurred vision, and dry eyes.</li>
+<li><strong>Carpal Tunnel Syndrome:</strong> Typing on a computer keyboard for long periods can cause Carpal Tunnel Syndrome, a condition that causes numbness, tingling, and weakness in the hand and arm.</li>
+<li><strong>Repetitive Strain Injury (RSI):</strong> Repetitive movements of the hands, fingers, and wrists while using a computer can cause RSI, a condition that causes pain, swelling, and stiffness in the affected area.</li>
+<li><strong>Back and Neck Pain:</strong> Sitting in front of a computer for extended periods can cause back and neck pain, which can be exacerbated by poor posture.</li>
+<li><strong>Radiation Exposure:</strong> Prolonged exposure to computer radiation can cause various health problems, including skin damage, cataracts, and even cancer.</li>
+<li><strong>Obesity:</strong> Spending long hours sitting in front of a computer can lead to a sedentary lifestyle, which can contribute to obesity and other health problems.</li>
+<li><strong>Addiction:</strong> Excessive use of computer technology can lead to addiction, which can have adverse effects on mental health and overall well-being.</li>
+<li><strong>Social Isolation:</strong> Increased use of computer technology can lead to social isolation, which can have negative effects on mental health.</li>
+<li><strong>Security and Privacy Concerns:</strong> The use of computer technology in healthcare brings security and privacy concerns related to the protection of patient data.</li>
+</ol>
+<p>Overall, while computer technology has brought many benefits to the healthcare industry, it is important to be aware of the potential health-related issues that can arise from its use and take steps to mitigate them. This includes taking breaks, maintaining good posture, exercising regularly, and ensuring the protection of patient data.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Compare security with safety. Why is software safety so difficult to attain? Can it be guaranteed?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Security and safety are two different but closely related concepts in the field of computer science. Security refers to the protection of computer systems and data from unauthorized access, theft, or damage, while safety refers to the protection of computer systems and data from accidental harm or damage.</p>
+<p>While there are similarities between the two, security and safety often require different approaches and techniques to achieve. For example, security measures such as encryption, firewalls, and access control are designed to prevent intentional or malicious attacks on computer systems and data, while safety measures such as redundancy, fault tolerance, and error checking are designed to prevent unintentional harm or damage to computer systems and data.</p>
+<p>Software safety is particularly challenging to attain because software is inherently complex, and it is difficult to test all possible scenarios and interactions that can occur. Additionally, software often interacts with other software systems, hardware components, and users, making it even more difficult to ensure safety.</p>
+<p>Furthermore, software safety requirements may conflict with other requirements, such as performance, functionality, and cost. For example, implementing safety features such as redundant code may increase the size and complexity of the software, which can reduce performance and increase development costs.</p>
+<p>While software safety cannot be guaranteed, it can be improved through the use of established safety engineering principles, such as hazard analysis, fault tolerance, and safety testing. Additionally, following best practices in software development, such as code reviews, testing, and documentation, can help to reduce the likelihood of safety-related issues.</p>
+<p>In summary, while security and safety are related concepts in computer science, they require different approaches to achieve. Software safety is particularly challenging due to the inherent complexity of software, and while it cannot be guaranteed, it can be improved through the use of established safety engineering principles and best practices in software development.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Discuss future of AI and its ethical implications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Artificial intelligence (AI) has made significant advancements in recent years, and its future potential is vast. With the continued development of AI, there are several ethical implications that need to be considered.</p>
+<p>One potential ethical concern is the impact of AI on employment. As AI becomes more sophisticated, it has the potential to automate many jobs, potentially resulting in job loss for humans. This could have a significant impact on society, and steps need to be taken to mitigate the negative effects of automation.</p>
+<p>Another ethical concern is bias in AI. AI systems are only as good as the data they are trained on, and if this data is biased, then the AI system can also be biased. This could result in unfair treatment of certain groups of people, such as minorities or women. Steps need to be taken to ensure that AI systems are trained on unbiased data and that they are regularly audited to ensure that they are not perpetuating bias.</p>
+<p>Privacy is another ethical concern related to AI. As AI systems become more advanced, they have the potential to collect and analyze vast amounts of data about individuals. This could lead to privacy violations if this data is not handled appropriately. It is important that AI systems are designed with privacy in mind and that data is collected and stored in a way that respects individuals&#8217; privacy rights.</p>
+<p>Finally, there are ethical concerns related to the use of AI in weapons and warfare. As AI becomes more advanced, it could be used to develop autonomous weapons, which could have serious consequences if they are not used responsibly.</p>
+<p>To address these ethical concerns, it is important that AI is developed and used in a responsible and ethical manner. This includes designing AI systems that are transparent and explainable so that the decisions they make can be understood and audited. It also includes ensuring that AI systems are designed with ethics in mind and that they are regularly audited to ensure that they are not perpetuating bias or violating privacy rights.</p>
+<p>Overall, the future of AI is promising, but it is important that we consider its ethical implications and take steps to ensure that it is developed and used in a responsible and ethical manner.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Functional definition of ethics</li>
+<li>Employee monitoring</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>a) Functional definition of ethics:</strong></span></p>
+<p>Ethics is a branch of philosophy that deals with moral principles and values that govern individual and group behavior. It involves the study of right and wrong behavior and the principles that determine whether an action is morally acceptable or not.</p>
+<p>A functional definition of ethics is that it provides guidelines for behavior that help individuals and groups make informed and responsible decisions in various situations. These guidelines are based on moral principles such as honesty, respect for others, and fairness, among others.</p>
+<p>In practice, ethics provides a framework for evaluating actions, decisions, and policies to ensure that they align with moral principles and values. It helps individuals and organizations make decisions that are morally sound and can be justified in terms of their impact on society and the environment.</p>
+<p>Ethics also plays a critical role in professional practice. Many professions, such as medicine, law, and engineering, have codes of ethics that provide guidelines for professional conduct. These codes outline the ethical responsibilities of professionals and help ensure that their actions align with moral principles and values.</p>
+<p>Overall, the functional definition of ethics is that it provides a framework for making decisions and taking actions that are morally justifiable and aligned with the principles of right and wrong behavior.</p>
+<p><span style="text-decoration: underline;"><strong>b) Employee monitoring:</strong></span></p>
+<p>Employee monitoring refers to the practice of employers observing and tracking the activities of their employees while they are at work. This can involve a variety of methods, including:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Computer and internet monitoring:</strong> Employers can track the use of company-owned computers and internet access to monitor employee productivity and ensure that employees are not engaging in activities that are not work-related.</li>
+<li><strong>Video surveillance:</strong> Employers can install cameras in the workplace to monitor employee behavior and ensure that employees are following safety procedures.</li>
+<li><strong>GPS tracking:</strong> Employers can track the location of company-owned vehicles or devices to monitor employee movement and ensure that employees are following designated routes.</li>
+<li><strong>Email and phone monitoring:</strong> Employers can monitor employee emails and phone calls to ensure that employees are not engaging in illegal or inappropriate activities.</li>
+</ol>
+<p>While employee monitoring can provide benefits to employers, such as increased productivity and reduced liability, it can also raise ethical concerns. Some argue that employee monitoring violates employee privacy rights and can create a culture of distrust in the workplace.</p>
+<p>To address these concerns, employers should establish clear policies and guidelines for employee monitoring and communicate these policies to employees. Employees should be informed of the specific types of monitoring that will be used, the reasons for the monitoring, and how the data collected will be used and protected.</p>
+<p>Employers should also be transparent about the data collected and how it will be used. Employees should have the opportunity to review and dispute any inaccurate data collected about them.</p>
+<p>Overall, employee monitoring can be an effective tool for employers to monitor employee productivity and ensure compliance with company policies, but it should be implemented in a transparent and ethical manner that respects employee privacy rights.</p>
+</div>
+</body></html>

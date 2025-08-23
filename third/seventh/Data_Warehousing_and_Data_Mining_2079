@@ -1,0 +1,769 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DWDM 2079 2079</title>
+    </head>
+    <body>
+        <h1>DWDM 2079 - 2079</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two question.</h2><h3>Question 1</h3>
+<div><p><p>Discuss any two drawbacks of Apriori algorithm. Find frequent item-sets and association rules from the transaction database given below using FP-growth algorithm. Assume minimum support is 50% and minimum confidence is 60%.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Transaction_ID</strong></td>
+<td><strong>Items purchased</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sausage, peanut, Beer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>peanut, Beer, Apple</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Apple, Milk</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sausage, peanut, Apple</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sausage, peanut, Beer, Milk</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Sausage, peanut, Beer, Apple</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Any two drawbacks of Apriori algorithm are:</p>
+<p><strong>Computational Intensity</strong>: One significant drawback of the Apriori algorithm is itscomputational intensity, especially when dealing with large datasets. The algorithm needs to generate a large number of candidate itemsets and repeatedly scan the dataset to determine the support of these itemsets.</p>
+<p><strong>Cannot work with Continuous Attributes</strong>: Apriori is designed to work with categorical data, where items are discrete and distinct. It may face challenges when dealing with continuous attributes or numerical values. Discretization of continuous data is often required before applying the Apriori algorithm.</p>
+<p>Given, minimum support = 50 % = 50 % of 6 = 3</p>
+<p>List all the items along with their support count</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Items</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Support_count</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Sausage</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Peanut</td>
+<td style="width: 50%; text-align: center;">5</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Beer</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Apple</td>
+<td style="width: 50%; text-align: center;">4</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Milk</td>
+<td style="width: 50%; text-align: center;">2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Discarding the infrequent item and sorting the items in descending order of their support of their support count.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Items</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Support_cout</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Peanut</td>
+<td style="width: 50%; text-align: center; height: 24px;">5</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Apple</td>
+<td style="width: 50%; text-align: center; height: 24px;">4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Beer</td>
+<td style="width: 50%; text-align: center; height: 24px;">4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">Sausage</td>
+<td style="width: 50%; text-align: center; height: 24px;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, ordering these itemsets in the transaction based on their priority.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>TID</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Items Purchased</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">1</td>
+<td style="width: 50%; text-align: center;">Peanut, Beer, Sausage</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">2</td>
+<td style="width: 50%; text-align: center;">Peanut, Apple, Beer</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">3</td>
+<td style="width: 50%; text-align: center;">Apple</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">4</td>
+<td style="width: 50%; text-align: center;">Peanut, Apple,  Sausage</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">5</td>
+<td style="width: 50%; text-align: center;">Peanut,  Beer, Sausage</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">6</td>
+<td style="width: 50%; text-align: center;">Peanut, Apple, Beer, Sausage</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, draw FP tree based on the ordered itemset</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29253 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-210025-1.png?resize=389%2C633&#038;ssl=1" alt="" width="389" height="633"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29254 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-210102-1.png?resize=408%2C596&#038;ssl=1" alt="" width="408" height="596"></p>
+<p>Now, we need to find conditional pattern base and conditional FP tree to each item then generate frequent patterns itemsets.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>Item</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Conditional Pattern Base</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Conditional FP tree</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Frequent Pattern</strong></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Sausage</td>
+<td style="width: 25%; text-align: center;">{peanut, Beer : 2}, {peanut, Apple :1}, {peanut, Apple, Beer : 1}</td>
+<td style="width: 25%; text-align: center;">{peanut : 4, Beer : 3}</td>
+<td style="width: 25%; text-align: center;">{peanut, sausage :4}, {Beer, sausage :3}, {peanut, Beer, sausage:3}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Beer</td>
+<td style="width: 25%; text-align: center;">{peanut : 2}, {peanut, Apple : 2}</td>
+<td style="width: 25%; text-align: center;">{peanut : 4}</td>
+<td style="width: 25%; text-align: center;">{Peanut, Beer: 4}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Apple</td>
+<td style="width: 25%; text-align: center;">{peanut : 3}</td>
+<td style="width: 25%; text-align: center;">{peanut : 3}</td>
+<td style="width: 25%; text-align: center;">{peanut, Apple : 3}</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Peanut</td>
+<td style="width: 25%; text-align: center;">&#8211;</td>
+<td style="width: 25%; text-align: center;"></td>
+<td style="width: 25%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p>Now, we need to generate strong association rules from itemsets where these rules satisfy both minimum support and minimum confidence.</p>
+<p>confidence ( A → B ) = support ( A U B ) / Support (A)</p>
+<p>Now,</p>
+<p>For itemset {peanut, sausage}</p>
+<p><span style="text-decoration: underline;">Rules:</span></p>
+<p style="text-align: center;">i. peanut → sausage : confidence = (4/5 ) × 100% = 80%</p>
+<p style="text-align: center;">ii. sausage → peanut : confidence = (4 / 4 ) × 100% = 100%</p>
+<p>For itemset { Beer, sausage}</p>
+<p><span style="text-decoration: underline;">Rules:</span></p>
+<p style="text-align: center;">i. Beer → sausage : confidence = (3/4 ) × 100% = 75%</p>
+<p style="text-align: center;">ii. Sausage → Beer : confidence = (3/4 ) × 100% = 75%</p>
+<p>For itemset {peanut, Beer, sausage}</p>
+<p><span style="text-decoration: underline;">Rules</span></p>
+<p style="text-align: center;">i. (Peanut ∧ Beer ) → sausage :  (3/4 ) × 100% = 75%</p>
+<p style="text-align: center;">ii. (Beer ∧ Sausage ) → Peanut :  (3/3 ) × 100% = 100%</p>
+<p style="text-align: center;">iii. (Peanut ∧ Sausage ) → Beer :  (3/4 ) × 100% = 75%</p>
+<p style="text-align: center;">iv. Peanut → (Beer ∧ Sausage )  :  (3/5 ) × 100% = 60%</p>
+<p style="text-align: center;">v.  Beer → (Peanut ∧ Sausage )  :  (3/4 ) × 100% = 75%</p>
+<p style="text-align: center;">vi. Sausage → (Peanut ∧ Beer )  :  (3/4 ) × 100% = 75%</p>
+<p>For item set{peanut, Beer}</p>
+<p style="text-align: center;">i. Peanut → Beer  :  (4/5 ) × 100% = 80%</p>
+<p style="text-align: center;">ii.  Beer → Peanut  :  (3/4 ) × 100% = 75%</p>
+<p>Hence, all rules are accepted.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>When multilayer perceptron is better choice over other classification algorithms? Consider a multilayer feed-forward neural network given below. Let the learning rate be 0.5. Assume initial values of weights and biases as given in the table below. Train the network for the training tuples (1, 1, 0) and (0, 1, 1), where last number is target output. Show weight and bias updates by using back-propagation algorithm. Assume that sigmoid activation function is used in the network.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>w13</td>
+<td>w14</td>
+<td>w23</td>
+<td>w24</td>
+<td>w35</td>
+<td>w45</td>
+<td>b3</td>
+<td>b4</td>
+<td>b5</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>0.2</td>
+<td>-0.3</td>
+<td>0.5</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.6</td>
+<td>-0.4</td>
+<td>0.8</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>Multilayer Perceptron</strong> (MLP) is a type of artificial neural network and is<br />
+often used for classification tasks. MLP is better choice when modelling complex<br />
+non-linear relationships between the inputs and outputs. MLP can perform<br />
+complex tasks like image and speech recognition, natural language processing and<br />
+other sequential data such as time series, due to its ability to approximate any<br />
+function, given that it has enough layers and neurons.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29256 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-215106.png?resize=385%2C206&#038;ssl=1" alt="" width="385" height="206"></p>
+<p>Given,</p>
+<p>Learning rate = 0.5</p>
+<p>For training tuple (1, 1, 0 ) (Iteration 1)</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29257 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-215257.png?resize=406%2C215&#038;ssl=1" alt="" width="406" height="215"></p>
+<p>For hidden layer,</p>
+<p>a<sub>3</sub> = ( w<sub>13</sub> × y<sub>1</sub> ) + ( w<sub>23</sub> × y<sub>2</sub>) + b<sub>3<br />
+</sub>=( 0.5 × 1 ) + (-0.3 × 1) + 0.6<br />
+=0.2 + 0.6<br />
+=0.8</p>
+<p>y<sub>3</sub> = f(a<sub>3</sub>) = 1 / (1 + e<sup>-0.3</sup>) = 0.5744<br />
+a<sub>5</sub> = ( w<sub>35</sub> × y<sub>3</sub> ) + ( w<sub>45</sub> × y<sub>4</sub> ) + b<sub>5<br />
+</sub>=(0.1 × 0.6899) + (0.3 × 0.5744) + 0.8<br />
+=1.0413</p>
+<p>y<sub>5</sub> = f(a<sub>5</sub>) = 1 / ( 1 + e<sup>-1.0413</sup>) = 0.7391</p>
+<p>Here,</p>
+<p>Actual output = a (target output)</p>
+<p>but, we calculated the output as = 0.7391</p>
+<p>Error a- 0.7391 = -0.7391</p>
+<p>Now, we need to calculate error at each node by backward pass.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29258 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-220144.png?resize=466%2C135&#038;ssl=1" alt="" width="466" height="135"></p>
+<p>For output layer</p>
+<p>err<sub>5</sub> = y<sub>5</sub>(1-y<sub>5</sub>) (0-y<sub>5</sub>)<br />
+= 0.7391 (1- 0.7391) (0- 0.7391)<br />
+= -0.1425</p>
+<p>For hidden layer</p>
+<p>err<sub>4</sub> = y<sub>4</sub> (1 &#8211; y<sub>4</sub>) (w<sub>45</sub> × err<sub>5</sub>)<br />
+= 0.5744 ( 1 -0.5744) (0.3 × (-0.1425))<br />
+= -0.010</p>
+<p>err<sub>3</sub> = y<sub>3</sub> ( 1 &#8211; y<sub>3</sub>) (w<sub>35</sub> × err<sub>5</sub>)<br />
+= 0.6899( 1 &#8211; 0.6899) (0.1 × (-0.1425))<br />
+= -0.003</p>
+<p>Now, let&#8217;s update the weights</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29259 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-220645.png?resize=426%2C55&#038;ssl=1" alt="" width="426" height="55"></p>
+<p>w<sub>45</sub>(new) = w<sub>45</sub>(old) + l × y<sub>4</sub> × err<sub>5</sub> = 0.25</p>
+<p>w<sub>35</sub>(new) = 0.1 + 0.5 × 0.6899 ×  (-0.1425) = 0.0508</p>
+<p>w<sub>24</sub>(new) = 0.5 + 0.5 × 1 ×  (-0.010) = 0.495</p>
+<p>w<sub>23</sub>(new) = 0.3 + 0.5 × 1 ×  (-0.003) = -0.3015</p>
+<p>w<sub>14</sub>(new) = 0.2 + 0.5 × 1 ×  (-0.0010) = 0.195</p>
+<p>w<sub>13</sub>(new) = 0.5 + 0.5 × 1 ×  (-0.003) = 0.4985</p>
+<p>Now, update the bias value.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29260 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-17-221226.png?resize=263%2C54&#038;ssl=1" alt="" width="263" height="54"></p>
+<p>b<sub>5</sub>(new) = b<sub>5</sub>(old) + l × err<sub>5</sub> = 0.8 + 0.5 × (-0.1425) = 0.7288</p>
+<p>b<sub>4</sub>(new) = b<sub>4</sub>(old) + l × err<sub>4</sub> = -0.4 + 0.5 × (-0.010) = -0.405</p>
+<p>b<sub>3</sub>(new) = b<sub>3</sub>(old) + l × err<sub>3</sub> = 0.6 + 0.5 × (-0.003) =0.5985</p>
+<p>Now, new weight and bias values are:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">w<sub>13</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>14</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>23</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>24</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>35</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>45</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>3</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>4</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>5</sub></td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">0.4985</td>
+<td style="width: 11.1111%; text-align: center;">0.195</td>
+<td style="width: 11.1111%; text-align: center;">-0.3015</td>
+<td style="width: 11.1111%; text-align: center;">0.495</td>
+<td style="width: 11.1111%; text-align: center;">0.0508</td>
+<td style="width: 11.1111%; text-align: center;">0.2591</td>
+<td style="width: 11.1111%; text-align: center;">0.5985</td>
+<td style="width: 11.1111%; text-align: center;">-0.405</td>
+<td style="width: 11.1111%; text-align: center;">0.3188</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, Input x<sub>1</sub> = 0, x<sub>2</sub> = 1, output y =1</p>
+<p>Repeat again the entire steps</p>
+<p>For training tuple (0, 1, 1) (Iteration 2)</p>
+<p>Output for input layer</p>
+<p>y<sub>1</sub> = x<sub>1</sub> = 0</p>
+<p>y<sub>2</sub> = x<sub>2</sub> =1</p>
+<p>output for hidden layer</p>
+<p>a<sub>3</sub> = (w<sub>13</sub> × y<sub>1</sub>) + (w<sub>23</sub> × y<sub>2</sub>) + b<sub>3<br />
+</sub>=0 + (-0.3015 × 1) + 0.5985<br />
+=0.297</p>
+<p>y<sub>3</sub> = f(a<sub>3</sub>) = 1 / ( 1 + e <sup>-0.297</sup>) = 0.5737</p>
+<p>a<sub>4</sub> = (w<sub>14</sub> × y<sub>1</sub>) + (w<sub>24</sub> × y<sub>2</sub>) + b<sub>4<br />
+</sub>=0 + (0.495 ×1) + (-0.405)<br />
+=0.09</p>
+<p>a<sub>5</sub> = (w<sub>35</sub> × y<sub>3</sub> ) + ( w<sub>45</sub> × y<sub>4</sub>) +b<sub>5</sub><br />
+=(0.0508 × 0.5737) + (0.2591 × 0.5225) + 0.7288</p>
+<p>∴ y<sub>5</sub> = 0.2622</p>
+<p>Now, calculating output layer and hidden layer error</p>
+<p>For output layer</p>
+<p>err<sub>5</sub> = y<sub>5</sub> (1-y<sub>5</sub>) (1 &#8211; y<sub>5</sub>)<br />
+= 0.2622( 1- 0.2622) (1-0.2622)<br />
+=0.1437</p>
+<p>For hidden layer,</p>
+<p>err<sub>4</sub> = y<sub>4</sub>(1 -y<sub>4</sub>) (w<sub>45</sub> × err<sub>5</sub>)<br />
+=0.5225(1-0.5225) (0.2591 × 0.1427) = 0.00922</p>
+<p>err<sub>3</sub> = y<sub>3</sub> (1-y<sub>3</sub>) (w<sub>35</sub> × err<sub>5</sub>)<br />
+=0.5737 ( 1 &#8211; 0.5737) (0.0508 × 0.1427) = 0.00177</p>
+<p>Now, let&#8217;s update the weights.</p>
+<p>w<sub>45</sub>(new) = w<sub>45</sub>(old) + l × y<sub>4</sub> × err<sub>5</sub> = 0.2591 + 0.5 × 0.5225 × 0..1427 = 0.2964</p>
+<p>w<sub>35</sub>(new) = 0.0508 + 0.5 × 0.5737 × 0.1427 = 0.0917</p>
+<p>w<sub>24</sub>(new) = 0.495 + 0.5 × 1 × 0.00922 = 0.49961</p>
+<p>w<sub>23</sub>(new) = -0.3015 + 0.5 × 1 × 0.00177 = -0.30062</p>
+<p>w<sub>14</sub>(new) = 0.195 + 0.5 × 0 × 0.00922 = 0.195</p>
+<p>w<sub>13</sub>(new) = 0.4985 + 0.5 × 0 × 0.00177 = 0.4985</p>
+<p>Updating the bias values</p>
+<p>b<sub>5</sub>(new) = b<sub>5</sub>(old) + l × err<sub>5</sub> = 0.7288 + 0.5 ×0.1427 = 0.8002</p>
+<p>b<sub>4</sub>(new) = b<sub>4</sub>(old) + l × err<sub>4</sub> = -0.405 + 0.5 × 0.00922 = -0.4003</p>
+<p>b<sub>3</sub>(new) = b<sub>3</sub>(old) + l × err<sub>3</sub> = 0.5985 + 0.5 × 0.00177 = 0.5994</p>
+<p>New weight and bias values are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">w<sub>13</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>14</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>23</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>24</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>35</sub></td>
+<td style="width: 11.1111%; text-align: center;">w<sub>45</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>3</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>4</sub></td>
+<td style="width: 11.1111%; text-align: center;">b<sub>5</sub></td>
+</tr>
+<tr>
+<td style="width: 11.1111%; text-align: center;">0.4985</td>
+<td style="width: 11.1111%; text-align: center;">0.195</td>
+<td style="width: 11.1111%; text-align: center;">-0.30062</td>
+<td style="width: 11.1111%; text-align: center;">0.49961</td>
+<td style="width: 11.1111%; text-align: center;">0.0917</td>
+<td style="width: 11.1111%; text-align: center;">0.2964</td>
+<td style="width: 11.1111%; text-align: center;">0.5994</td>
+<td style="width: 11.1111%; text-align: center;">-0.4003</td>
+<td style="width: 11.1111%; text-align: center;">0.8002</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Why OLAP operations are used? Discuss various OLAP operation with suitable example of each.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>OLAP, or Online Analytical Processing, are used for performing complex queries and analyses on multidimensional data which are stored in data warehouses. OLAP databases are optimized for query performance, allowing users to retrieve aggregated and summarized data<br />
+quickly. Various OLAP operations are:</p>
+<p data-sourcepos="3:1-3:11"><strong>Roll-up</strong></p>
+<ul data-sourcepos="5:1-5:28">
+<li style="list-style-type: none;">
+<ul data-sourcepos="5:1-5:28">
+<li data-sourcepos="5:1-5:28">Roll-up is also known as &#8220;consolidation&#8221; or &#8220;aggregate&#8221;</li>
+<li data-sourcepos="6:1-8:25"><span class="citation-0 animating">The roll-up operation can be performed in 2 ways:</span>
+<div class="dynamic-carousel-wrapper animating"></div>
+<ul data-sourcepos="7:5-8:35">
+<li style="list-style-type: none;">
+<ul data-sourcepos="7:5-8:35">
+<li class="animating" data-sourcepos="7:5-7:25"><span class="citation-0 animating">Reducing dimensions</span></li>
+</ul>
+</li>
+</ul>
+<div class="dynamic-carousel-wrapper animating"></div>
+<ul data-sourcepos="7:5-8:35">
+<li style="list-style-type: none;">
+<ul data-sourcepos="7:5-8:35">
+<li class="animating" data-sourcepos="8:5-8:35"><span class="citation-0 animating">Climbing up concept hierarchy</span></li>
+</ul>
+</li>
+</ul>
+<div class="dynamic-carousel-wrapper animating"></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul data-sourcepos="5:1-5:28">
+<li data-sourcepos="9:1-10:0">Concept hierarchy is a system of grouping things based on their order or level.</li>
+</ul>
+<p data-sourcepos="11:1-11:15">Rolling up:</p>
+<ul data-sourcepos="12:1-12:15">
+<li data-sourcepos="12:1-12:15">Rolling up is performed by climbing up a concept hierarchy for a dimension location.</li>
+<li data-sourcepos="13:1-14:0">Example: Data aggregated from the level of city to the level of country.</li>
+</ul>
+<p data-sourcepos="15:1-15:2">Climbing up concept hierarchy:</p>
+<ul data-sourcepos="16:1-17:0">
+<li data-sourcepos="16:1-17:0">A system of grouping things based on their order or level.</li>
+</ul>
+<p data-sourcepos="18:1-18:17">Rolling down:</p>
+<ul data-sourcepos="19:1-20:0">
+<li data-sourcepos="19:1-20:0">Rolling down is performed by stepping down a concept hierarchy for a dimension or by introducing a new dimension.</li>
+</ul>
+<p data-sourcepos="21:1-21:14"><strong>Drill-down</strong></p>
+<ul data-sourcepos="23:1-27:36">
+<li data-sourcepos="23:1-23:49">Drill-down is the reverse operation of roll-up.</li>
+<li data-sourcepos="24:1-24:64">It&#8217;s performed when we want to view details of aggregate data.</li>
+<li data-sourcepos="25:1-27:36">It can be performed in two ways:
+<ul data-sourcepos="26:5-27:36">
+<li data-sourcepos="26:5-26:58">By stepping down a concept hierarchy for a dimension</li>
+<li data-sourcepos="27:5-27:36">By introducing a new dimension</li>
+</ul>
+</li>
+</ul>
+<p data-sourcepos="3:1-3:9"><strong>Slice</strong></p>
+<ul data-sourcepos="5:1-5:76">
+<li data-sourcepos="5:1-5:76">The slice operation selects one particular dimension from a given cube and provides a new sub-cube.</li>
+<li data-sourcepos="6:1-7:0">Here slice is performed for the dimension &#8220;time&#8221; using the dimension time = &#8220;Q1&#8221;. It will form a new sub-cube by selecting any one.</li>
+</ul>
+<p data-sourcepos="8:1-8:8"><strong>Dice</strong></p>
+<ul data-sourcepos="10:1-10:21">
+<li data-sourcepos="10:1-10:21">Dice selects two or more dimensions from a given cube and provides a new sub-cube.</li>
+<li data-sourcepos="11:1-11:49">The dice operation on the cube based on the following selection criteria involves three dimensions: (location = &#8220;Toronto &#8221; or &#8220;Vancouver&#8221; ), (time = &#8221; Q1&#8243; or &#8220;Q2&#8243;), and item =&#8221;Mobile&#8221; or &#8220;Modem&#8221; ).</li>
+</ul>
+<p><strong>Pivot</strong></p>
+<ul data-sourcepos="5:1-6:12">
+<li data-sourcepos="5:1-5:48">The pivot operation is also known as rotation.</li>
+<li data-sourcepos="6:1-6:12">It rotates the data axes in order to provide an alternative presentation of data.</li>
+</ul>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Suppose that we have 5 dimensional data. What will be total number of cuboids generated? If we consider each dimension has 5 levels, what will be the number of cuboids generated?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Note: cuboids &#8211; group by&#8217;s</p>
+<p>Given, dimensions (n) =5</p>
+<p>∴Total no of cuboids = 2<sup>n</sup></p>
+<p>=2<sup>5<br />
+</sup>=32</p>
+<p>If there are 5 levels for each dimension</p>
+<p>we know,</p>
+<p>Total cuboids = ∏(L<sub>i</sub> + 1) where, i=1 to n (number of dimension) and L<sub>i</sub> is the number of levels associated with dimension p)</p>
+<p>Here, each dimension has 5 levels . so</p>
+<p>L1 &#8211; L2 = L3 = L4 =L5 =5</p>
+<p>Hence, Total cuboids = (L1 + 1 ) × (L2 + 1 ) × (L3 + 1 ) ×  (L4 + 1 ) × (L5 + 1 ) ×</p>
+<p>=(5 +1) × (5 +1) × (5 +1) × (5 +1) × (5 +1)<br />
+=7776</p>
+<p>So, there would be 7776 cuboids generated for the 5-dimensional data set with 5 levels in each dimension.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Discuss different types of attributes with suitable example of each.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:22"><strong><span style="text-decoration: underline;"><span class="citation-0">Nominal</span><span class="citation-0"> Attribut</span><span class="citation-0">es</span></span></strong></p>
+<ul data-sourcepos="5:1-5:67">
+<li style="list-style-type: none;">
+<ul data-sourcepos="5:1-5:67">
+<li data-sourcepos="5:1-5:67">The values of a nominal attribute are symbols or names of things.</li>
+<li data-sourcepos="5:1-5:67"><span class="citation-0 animating">Each value represents some kind of category, code, or state.</span></li>
+<li data-sourcepos="5:1-5:67">Nominal attributes are also referred to as categorical attributes.</li>
+</ul>
+</li>
+</ul>
+<ul data-sourcepos="5:1-5:67">
+<li data-sourcepos="8:1-8:12">The values<span class="animating"> do not have any meaningful order.</span></li>
+</ul>
+<p data-sourcepos="10:1-10:35">Examples of nominal attributes:</p>
+<ol style="list-style-type: lower-roman;">
+<li data-sourcepos="10:1-10:35"><span class="citation-1 animating"><strong>Hair_Color</strong>: possible values are black, brown, red, grey, white</span></li>
+<li data-sourcepos="10:1-10:35"><span class="citation-1 citation-end-1 animating"><strong>Marital_status</strong>: possible values are Married, Single, Divorced, Widowed</span></li>
+<li><strong>Customer_ID</strong>: possible values are combinations of numbers</li>
+</ol>
+<p data-sourcepos="16:1-16:22"><strong><span style="text-decoration: underline;"><span class="citation-2">Ordinal</span><span class="citation-2"> Attrib</span><span class="citation-2">utes</span></span></strong></p>
+<ul data-sourcepos="18:1-19:0">
+<li data-sourcepos="18:1-19:0">An ordinal attribute is an attribute with possible values that have a meaningful order or ranking among them,<span class="citation-3 citation-end-3 animating"> but the magnitude between successive values is not known.</span></li>
+</ul>
+<p data-sourcepos="20:1-20:35">Examples of ordinal attributes:</p>
+<ul data-sourcepos="22:1-23:49">
+<li data-sourcepos="22:1-22:61"><strong>Grades</strong>: possible values are A+, A, A-, B+, B, B-, and so on</li>
+<li data-sourcepos="23:1-23:49"><strong>Height</strong>: possible values are Tall, Medium, Short</li>
+</ul>
+<div class="response-container-content ng-tns-c346138635-98">
+<div class="response-content ng-trigger ng-trigger-responsePopulation ng-tns-c346138635-98">
+<div class="markdown markdown-main-panel" dir="ltr">
+<p data-sourcepos="3:1-3:30"><span style="text-decoration: underline;"><strong>Interval-Scaled Attributes</strong></span></p>
+<ol style="list-style-type: lower-roman;">
+<li data-sourcepos="5:3-5:52">Interval-scaled attributes are <span class="citation-0 animating">numeric attributes. </span><span class="citation-0 citation-end-0 animating">A numeric attribute is quantitative; that is, it is a measurable quantity, represented in integer or real values.</span></li>
+<li data-sourcepos="7:3-7:90"><span class="citation-1 animating">The values of interval-scaled attributes have order and can be positive, 0, or negative. </span><span class="citation-1 citation-end-1 animating">Thus, in addition to providing a ranking of values, such attributes allow us to compare and quantify the difference between values.</span></li>
+<li data-sourcepos="10:3-10:128"><span class="citation-2 citation-end-2 animating">A temperature attribute is interval-scaled. Suppose that we have the outdoor temperature value for a number of different days, where each day is an object. By ordering the values, we obtain a ranking of the objects with respect to temperature.</span></li>
+</ol>
+<p data-sourcepos="12:1-12:27"><span style="text-decoration: underline;"><strong><span class="citation-3">Ratio-Scaled Attributes</span></strong></span></p>
+<ol style="list-style-type: lower-roman;">
+<li data-sourcepos="14:3-14:78">A ratio-scaled attribute is a numeric attribute with an inherent zero-point.</li>
+<li data-sourcepos="15:3-15:117"><span class="citation-3 animating">That is, if a measurement is ratio-scaled, we can speak of a value as being a multiple (or ratio) of another value.</span></li>
+<li data-sourcepos="16:3-16:132"><span class="citation-3 citation-end-3 animating">In addition, the values are ordered, and we can also compute the difference between values, as well as the mean, median,</span><span class="animating"> and mode.</span></li>
+<li data-sourcepos="18:3-18:100">Temperature in Kelvin, length, counts, elapsed time, etc. are examples of ratio-scaled attributes.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why data normalization is important in data mining? Explain min-max and Z-score normalization approach.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li>To help avoid dependence on the choice of measurement units, the data should be normalized or standardized. This involves transforming the data to fall within a smaller or common range such as[-1, 1] or [0, 1].</li>
+<li><span style="text-decoration: underline;">Normalizing</span> the data attempts to give all attributes an equal weight. There are many methods for data normalization. The major normalization methods are: min=max normalization and z-score normalization.</li>
+<li><span style="text-decoration: underline;">Min-max Normalization</span>: It performs a linear transformation on the original data. suppose that min and max are the minimum and maximum values of an attribute, A. Min-max normalization maps a value ,v , of A nv in the range[new_min, new_max] using following formula.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29270 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-120552.png?resize=262%2C64&#038;ssl=1" alt="" width="262" height="64"></p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Z-score Normalization</span>: In z-score normalization ( or Zero-mean nnormalization), the values for an attribute, A, are normalized based on the mean and standard deviation of A. The value, v, of A is normalized to nv as below. It is also called standard normalization.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-29273 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-120842.png?resize=236%2C130&#038;ssl=1" alt="" width="236" height="130"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What are two categories of hierarchical clustering? Divide the following data points into two clusters using agglomerative clustering.<br />
+{ {(2,10), ((2,5), (8,4), (5,8), (7,5), (6,4))</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In data mining and statistics, hierarchical clustering ( also called hierarchical cluster analysis or HCA) is a method of cluster analysis which seeks to build a hierarchy of clusters. strategies for hierarchical clustering generally fall into two types:</p>
+<ul style="list-style-type: square;">
+<li>Agglomerative</li>
+<li>Divisive</li>
+</ul>
+<p>solution</p>
+<p>Let A = (2, 10) , B=(2,5) , c = (5,8) , E=(7,5), F=(6,4)</p>
+<p>Now, Let&#8217;s calculate distance matrix.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 168px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">A</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">A</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">B</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">C</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">D</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">E</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">F</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">A</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">B</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">5</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">C</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">8.49</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">6.08</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">D</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">3.61</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">4.24</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">5</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">E</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">7.07</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">5</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">3.61</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 14.2857%; height: 24px; text-align: center;">F</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">7.21</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">4.12</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">2</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">4.12</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">1.41</td>
+<td style="width: 14.2857%; height: 24px; text-align: center;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here, the closest cluster are E, C, F, D with shortest distance of 1.41. Thus, we group them into cluster ( C,D,E,F). Then, we update the distance matrix.</p>
+<p>Min Distance ( single Linkage)</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">B</td>
+<td style="width: 25%; text-align: center;">C,D,E,F</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;"></td>
+<td style="width: 25%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">B</td>
+<td style="width: 25%; text-align: center;">5</td>
+<td style="width: 25%; text-align: center;">0</td>
+<td style="width: 25%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">C,D,E,F</td>
+<td style="width: 25%; text-align: center;">3.61</td>
+<td style="width: 25%; text-align: center;">4.12</td>
+<td style="width: 25%; text-align: center;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>d(A, [ C D E F])</p>
+<p>=min (d(A,C) , d(A,D) , d(A,E) , d(A,F))<br />
+=min(8.49, 3.61, 7.07, 7.21)<br />
+=3.61</p>
+<p>d(B, [CDEF])</p>
+<p>=min(d(B,C), d(B,D), d(B,E), d(B,F))<br />
+=min(6.08, 4.24, 5, 4.12)<br />
+=4.12</p>
+<p>We can see that the closest distance between cluster (C,D,E,F) and A at distance 3.61. Thus, we cluster them together into the cluster (A,(C,D,E,F)).</p>
+<p>Now, updated distance matrix os</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 72px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">Distance</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">A,(C,D,E,F)</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">B</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">A,(C,D,E,F)</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">0</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 33.3333%; height: 24px; text-align: center;">B</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">4.12</td>
+<td style="width: 33.3333%; height: 24px; text-align: center;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>d(B, (A, C, D, E, F))</p>
+<p>=min(d(B,A), d(B,C), d(B,D), d(B,E), d(B,F))<br />
+=min(5,6.08,4.24,5,4.12)<br />
+=4.12</p>
+<p>Thus, final cluster are</p>
+<p>{A,C,D,E,F} &amp; {B}</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-29277 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/01/Screenshot-2024-01-18-123522.png?resize=382%2C394&#038;ssl=1" alt="" width="382" height="394"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Discuss the concept of K-means++ and Mini-batch K-means algorithm.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>K-means ++</strong><br />
+The K-means++ initialization method is an improvement over the standard K-means algorithm&#8217;s random initialization of cluster centroids. The main idea behind K-means++ is to choose the initial cluster centroids in a way that improves the convergence speed and final clustering quality. Here&#8217;s a step-by-step explanation of how K-means++ works:</p>
+<ol style="list-style-type: lower-roman;">
+<li>Choose the first centroid randomly from the data points.</li>
+<li>For each data point, compute the distance to the nearest existing centroid.</li>
+<li>Select the next centroid from the data points with a probability proportional to the squared distance from the nearest existing centroid.</li>
+<li>Repeat steps 2 and 3 until k centroids are chosen.</li>
+</ol>
+<p>The K-means++ initialization tends to produce a more accurate final clustering result compared to random initialization, and it often converges faster. By selecting initial centroids that are spread out in the data, K-means++ reduces the chances of converging to a suboptimal solution.</p>
+<p>&nbsp;</p>
+<p><strong>Mini-batch K-means:</strong><br />
+K-means can be computationally expensive, especially on large datasets. Mini-batch K-means is a modification of the standard K-means algorithm that addresses this issue by using random subsets, or mini-batches, of the data for each iteration instead of the entire dataset. This makes the algorithm much faster while still providing reasonably good results. Here are the key points of Mini-batch K-means:</p>
+<ol style="list-style-type: lower-roman;">
+<li>Randomly select a mini-batch of data points.</li>
+<li>Update the cluster centroids based on the current mini-batch.</li>
+<li>Repeat steps 1 and 2 until convergence or a specified number of iterations.</li>
+</ol>
+<p>Mini-batch K-means introduces randomness into the algorithm, which can help escape local minima. However, the quality of the final clustering may be slightly worse compared to the standard K-means, as the centroids are updated based on a subset of the data. Advantages of Mini-batch K-means include faster convergence and the ability to handle large datasets that might be impractical for the standard K-means algorithm.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is confusion matrix? Discuss various classification measures along with their mathematical formulae.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:240">A confusion matrix is a table that summarizes the performance of a classification model. It visualizes the number of correct and incorrect predictions and is fundamental for evaluating and comparing different classification algorithms.</p>
+<p data-sourcepos="5:1-5:19">Here&#8217;s a breakdown:</p>
+<ul style="list-style-type: square;">
+<li>Rows: Represent the actual class labels.</li>
+<li>Columns: Represent the predicted class labels.</li>
+<li>Cells: Contain the number of data points for each combination of actual and predicted class.</li>
+</ul>
+<p data-sourcepos="11:1-11:53">The key terms associated with a confusion matrix are:</p>
+<ul style="list-style-type: square;">
+<li>True Positive(TP): Actual positive data point correctly predicted as positive.</li>
+<li>True Negative(TN) Actual negative data point correctly predicted as negative.</li>
+<li>False Positive(FP): Actual negative data point incorrectly predicted as positive (Type I error).</li>
+<li>False Negative(FN): Actual positive data point incorrectly predicted as negative (Type II error).</li>
+</ul>
+<p data-sourcepos="18:1-18:109">From these fundamental values, various classification measures can be calculated to assess model performance:</p>
+<ol style="list-style-type:decimal;">
+<li data-sourcepos="18:1-18:109"><strong>Accuracy</strong>: The most basic measure, representing the overall percentage of correct predictions.<br />
+Accuracy = (TP + TN) / (TP + TN + FP + FN)</li>
+<li data-sourcepos="18:1-18:109"><strong>precision</strong>: Measures the proportion of predicted positives that are actually positive.<br />
+precision= TP / (TP + FP)</li>
+<li data-sourcepos="18:1-18:109"><strong>Recall</strong>:  Measures the proportion of actual positives that are correctly predicted.<br />
+Recall= TP / (TP + FN)</li>
+<li data-sourcepos="18:1-18:109"><strong>F1-score</strong>: A harmonic mean of precision and recall, balancing both measure<br />
+F1 = (2 ×Recall ×precision) / (Recall + precision)</li>
+</ol>
+<div class="code-block ng-star-inserted">
+<pre><code class="code-container no-decoration-radius" role="text"></code></pre>
+</div>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What are application areas of graph mining? Explain the concept behind inductive logic programming with suitable demonstration.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:193"><span class="animating">The graph mining is the process of extracting </span><span class="citation-0 animating">patters (sub-graphs) of </span><span class="citation-0 citation-1 citation-end-0 animating">interest from graphs, that describe the underlying data and could be used further, e.g., for classification or clustering.</span></p>
+<ul data-sourcepos="5:1-9:11">
+<li data-sourcepos="5:1-6:0">
+<p data-sourcepos="5:3-5:168">Graph mining has a vast number of applications such as circuits, chemical compounds, protein structures, biological networks, social networks, Web,<span class="animating"> and XML documents.</span></p>
+</li>
+<li data-sourcepos="7:1-8:0">
+<p data-sourcepos="7:3-7:121">Graph mining is used for Fraud Detection, Community/Cluster detection, Recommending friends, Finding Influential Nodes.</p>
+</li>
+<li data-sourcepos="9:1-9:11">
+<p data-sourcepos="9:3-9:11">Inductive Logic Programming (ILP) is a research area formed at the intersection of Machine Learning and Logic Programming.</p>
+</li>
+<li data-sourcepos="11:1-12:0">
+<p data-sourcepos="11:3-11:159">ILP aims to learn logical rules or programs from a set of observed examples, allowing the system to generalize and make predictions on new, unseen instances.</p>
+</li>
+<li data-sourcepos="13:1-14:0">
+<p data-sourcepos="13:3-13:164">Logical rules and programs are a way of expressing knowledge or instructions in a form that follows the principles of logic i.e. using conditions/facts and rules.</p>
+</li>
+</ul>
+<p data-sourcepos="15:1-16:38">A logical rule could be something like &#8220;If it&#8217;s raining (condition 1) and I have an umbrella (condition 2), then I&#8217;ll take the umbrella when I go outside.&#8221;</p>
+<ul data-sourcepos="18:1-19:0">
+<li data-sourcepos="18:1-19:0">ILP uses logic to express what it learns. For example, if the robot sees examples of cats with tails, it might learn a rule like &#8220;If it has a tail, it might be a cat.&#8221;</li>
+</ul>
+<p><span style="text-decoration: underline;">Example</span>: Given the following facts:</p>
+<p>parent(a,c) parent(b,c) father(a,c)</p>
+<p>mother(b,c) male(a) female(b)</p>
+<p>Goal of ILP is to learns following rules from the given dataset.</p>
+<p>father(x,y)&lt;&#8212;parent(x,y) &amp; malae(x)</p>
+<p>mother(x,y)&lt;&#8212;parent(x,y) &amp; female(x)</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Discuss the concept of text mining with its practical implications.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p data-sourcepos="3:1-3:468"><strong>Text mining</strong> is the process of deriving high-quality information from text databases. Text databases consist of huge collections of documents. They collect this information from several sources such as news articles, books, digital libraries, email messages, web pages, etc. <span class="citation-0">Text mining usually involves the process of structuring the input text, deriving patterns </span><span class="citation-0 citation-1 citation-end-0">within the structured data, and finally evaluation and interpretation of the</span><span class="citation-1"> output.</span></p>
+<p data-sourcepos="5:1-5:151"><span class="citation-1 citation-end-1">Typical text mining tasks include text</span> classification, text clustering, sentiment analysis, document summarization, information extraction, etc.</p>
+<p data-sourcepos="7:1-7:200"><span class="citation-2 citation-end-2">The automatic extraction of structured data such as entities, entities relationships, and attributes describing entities from an unstructured source is called information extraction</span> (IE).</p>
+<p data-sourcepos="9:1-9:135"><span class="citation-3 citation-end-3">In most of the cases this activity concerns processing human language texts by means of natural language processing (NLP).</span></p>
+<p data-sourcepos="11:1-11:149">Information extraction can be applied to a wide range of textual sources: from emails and Web pages, reports, legal documents and scientific papers.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write down short notes on:</p>
+<ol>
+<li>Data Mart</li>
+<li>Market Basket Analysis</li>
+</ol>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong>Data Mart</strong><br />
+A data mart is a subset of an organization&#8217;s data warehouse that is designed to serve the needs of a specific business unit, department, or group of users. It is a smaller, more focused database that contains a subset of the data stored in the data warehouse. Data marts are typically focused on a specific business function or subject area, such as sales, finance, marketing, or human resources. They contain data relevant to the needs of the users within that specific business domain. Data marts are often designed to be highly optimized for performance and responsiveness. They may include pre-aggregated data and be structured in a way that facilitates faster query performance for the types of analytical queries commonly performed by the target users.Data marts can function independently, and different departments or business units within an organization may have their own data marts. This autonomy allows different groups to manage and control their data and reporting requirements without relying on a centralized IT department for every request.</li>
+<li><strong>Market Basket Analysis</strong><br />
+Market Basket Analysis (MBA) is a data mining technique that focuses on discovering interesting patterns and relationships within transactional data, particularly in retails. The primary objective is to find associations between products that are frequently purchased together. This information is valuable for retailers in terms of product placement, cross-selling, and targeted marketing strategies. Algorithms used in Market Basket Analysis:<br />
+i. <span style="text-decoration: underline;">Apriori Algorithm</span>: It is a classic algorithm for frequent itemset mining and association rule learning. It uses a level-wise search strategy to discover frequent itemsets by iteratively extending the length of candidate itemsets. Example: If customers frequently buy items A and B together, the algorithm might discover the association rule {A} =&gt; {B}.<br />
+ii. <span style="text-decoration: underline;">FP-Growth (Frequent Pattern Growth)</span>: It is an algorithm that represents the dataset in a compact data structure called the FP-tree, which is used to efficiently mine frequent itemsets. It avoids the need for candidate generation, making it particularly efficient for large datasets. Example: If customers often purchase items A, B, and C together, FP-Growth can identify this frequent pattern.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+</body></html>

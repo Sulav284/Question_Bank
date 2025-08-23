@@ -1,0 +1,542 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STAT Question Bank 2075 2075</title>
+    </head>
+    <body>
+        <h1>STAT Question Bank 2075 - 2075</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Group A: Attempt any Two questions:(2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What is Multiple Linear Regression (MLR)? From following information of variables X1 , X2 , and Y.</p>
+<p>ΣX<sub>1</sub> = 272, ΣX<sub>2</sub>= 441, ΣY= 147, ΣX<sub>1</sub><sup>2</sup>= 7428, ΣX<sub>2</sub><sup>2</sup>=19461, ΣY<sup>2</sup> = 2173, ΣX1Y = 4013, ΣX<sub>1</sub>X<sub>2 </sub>= 12005, ΣX<sub>2</sub>Y = 6485, n=10.</p>
+<p>Fit a regression equation Y on X1 and X2. Interpret the regression coefficients.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>It is a linear function of one dependent variable with two or more independent variables. With the help of two or more independent variables the value of dependent variable is predicted. For example, if we wish to test the hypothesis the whether that whether or not &#8216;pass grade&#8217; of students depends on many causes such as previous task mark, study hours, IQ, &#8230;. then we can test a regression of cause (pass grade) with effect variables. This test will give us which causes are really significant is generating effect variable and among the significant cause variables their relative value responsible to generate the effect variables. If we assume more than one cause (called Y or dependent variable), it is known as multiple regression. If we assume that the relation between Y and X&#8217;s is linear it is called multiple linear regression.</p>
+<p>Let us consider three variable Y, X<sub>1</sub> and Y<sub>2</sub> in which Y is dependent variable, X<sub>1</sub> and Y<sub>2</sub> are independent variables, then the mathematical form of the linear relationship of Y with X1 and X2 is expressed as</p>
+<p>Y = b<sub>0</sub> + b<sub>1</sub>X<sub>1</sub> + b<sub>2</sub>X<sub>2</sub> + ε</p>
+<p>Where Y = Dependent variable</p>
+<p>X<sub>1</sub> and X<sub>2</sub> = Independent variable or explanatory variable or regressors</p>
+<p>b<sub>0</sub> = Intercept and is called average value of Y and X<sub>1</sub> and X<sub>2</sub> are zero</p>
+<p>b<sub>1</sub> = Regression coefficient of Y on X<sub>1</sub> keeping X<sub>2</sub> constant. It measures the amount of change in Y per unit change in X<sub>1</sub> holding X<sub>2</sub> constant.</p>
+<p>b<sub>2</sub> = Regression coefficient of Y on X<sub>2</sub> keeping X<sub>1</sub> constant. It measures the amount of change in Y per unit change in X<sub>2</sub> holding X<sub>1</sub> constant.</p>
+<p>ε = Random error</p>
+<p>Random error(ε) is not created from mistake. It is a technical term that denotes the excess of value from real by model estimation. error is also called Residual.</p>
+<p>To fit regression equation y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub></p>
+<p>Σy = nb<sub>0</sub> + b<sub>1</sub>Σ x<sub>1</sub> + b<sub>2</sub>Σ x<sub>2</sub></p>
+<p>or, 147 = 10b<sub>0</sub> + 272b<sub>1</sub> + 441b<sub>2</sub>    &#8230;&#8230;&#8230;&#8230;(i)</p>
+<p>Σyx<sub>1</sub> = b<sub>0</sub>Σx<sub>1</sub> + b<sub>1</sub>Σx<sub>1</sub><sup>2</sup> + b<sub>2</sub>Σ x<sub>1</sub>x<sub>2</sub></p>
+<p>or, 4013 = 272b<sub>0</sub> + 7428b<sub>1</sub> + 12005b<sub>2    &#8230;&#8230;&#8230;&#8230;(ii)</sub></p>
+<p>Σyx<sub>2</sub> = b<sub>0</sub>Σx<sub>2</sub> +  b<sub>1</sub>Σ x<sub>1</sub>x<sub>2 </sub>+ b<sub>2</sub>Σx<sub>2</sub><sup>2</sup></p>
+<p>or, 6485= 441b<sub>0</sub> + 12005b<sub>1</sub> + 19461b<sub>2    &#8230;&#8230;&#8230;&#8230;(iii)</sub></p>
+<p>To find b<sub>0 </sub>, b<sub>1</sub> and b<sub>2</sub> using Cramer&#8217;s rule</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">Coefficient of b<sub>0</sub></td>
+<td style="width: 25%; text-align: center;">Coefficient of b<sub>1</sub></td>
+<td style="width: 25%; text-align: center;">Coefficient of b<sub>2</sub></td>
+<td style="width: 25%; text-align: center;">Constant</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">10</td>
+<td style="width: 25%; text-align: center;">272</td>
+<td style="width: 25%; text-align: center;">441</td>
+<td style="width: 25%; text-align: center;">147</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">272</td>
+<td style="width: 25%; text-align: center;">7428</td>
+<td style="width: 25%; text-align: center;">12005</td>
+<td style="width: 25%; text-align: center;">4013</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">441</td>
+<td style="width: 25%; text-align: center;">12005</td>
+<td style="width: 25%; text-align: center;">19461</td>
+<td style="width: 25%; text-align: center;">6485</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, \(D = \begin{vmatrix}10 &amp; 272 &amp; 441\\ 272 &amp; 7428 &amp; 12005\\ 441 &amp; 12005 &amp; 19461\end{vmatrix}\)</p>
+<p>= 10(144556308 &#8211; 144120025) &#8211; 272(5293392 &#8211; 5294205) + 441(3265360 &#8211; 3275748)</p>
+<p>= 2858</p>
+<p>\(D_1 = \begin{vmatrix}147 &amp; 272 &amp; 441\\ 4013 &amp; 7428 &amp; 12005\\ 6485 &amp; 12005 &amp; 19461\end{vmatrix}\)</p>
+<p>= 147(144556308 &#8211; 144120025) &#8211; 272(78096993 &#8211; 77852425) + 441(48176065 &#8211; 48170580)</p>
+<p>= 29990</p>
+<p>\(D_2 = \begin{vmatrix}10 &amp; 147 &amp; 441\\ 272 &amp; 4013 &amp; 12005\\ 441 &amp; 6485 &amp; 19461\end{vmatrix}\)</p>
+<p>= 10(78096993 &#8211; 77852425) &#8211; 147(5293392 &#8211; 5294205) &#8211; 441(1763920 &#8211; 1769733)</p>
+<p>= 1658</p>
+<p>\(D_1 = \begin{vmatrix}10 &amp; 272 &amp; 147\\ 272 &amp; 7428 &amp; 4013\\ 441 &amp; 12005 &amp; 6485\end{vmatrix}\)</p>
+<p>= 10(48170580 &#8211; 48176065) &#8211; 272(1763920 &#8211; 1769733) + 147(3265360 &#8211; 3275748)</p>
+<p>= -750</p>
+<p>Now,</p>
+<p>b<sub>0</sub> = \(\frac{D_1}{D} = \frac{29990}{2825}\) = 10.493</p>
+<p>b<sub>1</sub> = \(\frac{D_2}{D} = \frac{1685}{2825}\) = 0.58</p>
+<p>b<sub>2</sub> = \(\frac{D_3}{D} = \frac{-750}{2825}\) = -0.262</p>
+<p>Hence regression equation is y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> = 10.493 + 0.58x<sub>1</sub> &#8211; 0.262x<sub>2</sub></p>
+<p>Here, b<sub>1</sub> = 0.58 it means y changes by 0.58 per unit change x<sub>1</sub> keeping x<sub>2</sub> constant.</p>
+<p>Here, b<sub>2</sub> = -0.262 it means y changes(decreases) by 0.262 per unit change x<sub>2</sub> keeping x<sub>1</sub> constant.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What do you mean by Latin Square Design? Write down its merit and demerit. Set up the analysis of variance for the following result of design.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>A (10)</td>
+<td>B (15)</td>
+<td>C (20)</td>
+</tr>
+<tr>
+<td>B (25)</td>
+<td>C (10)</td>
+<td>A (15)</td>
+</tr>
+<tr>
+<td>C (25)</td>
+<td>A (20)</td>
+<td>B (15)</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When the experimental material is not homogeneous the LSD is better than RBD. In RBD local control is used according to one way grouping. i.e according to blocks but in LSD local control is used according to two way grouping i.e. rows and columns. Hence it is used when two sources of errors are to be controlled simultaneously. In this design number of treatments are equal to the number of replication and the treatment occurs once and only once in each row and column. In this design, Latin alphabet are used to denote the treatments, and shape is square due to equal number of treatments and replication so called Latin Square design. It is based upon the all principles of design namely replication, randomization and local control.</p>
+<p>Let us consider m treatments with m replication each so that there are N = m<sup>2</sup> experiments unit.</p>
+<p>Let us divide the experimental material into m<sup>2</sup> experimental units arranged in square so that each row as well as column contains m units. In this design none of  treatments are replicated along row wise or column wise. In this case we study the variation between treatments, the variation between rows and variations between columns. It has only m<sup>2</sup> experimental treatments. Hence it is the case of incomplete three ways ANOVA. for complete three way ANOVA, we need m<sup>3</sup> experimental unit.</p>
+<p>Let us consider t = 4(A, B, C, D) then 4 x 4 LSD is as shown below.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">D</td>
+<td style="width: 25%; text-align: center;">B</td>
+<td style="width: 25%; text-align: center;">C</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">B</td>
+<td style="width: 25%; text-align: center;">C</td>
+<td style="width: 25%; text-align: center;">D</td>
+<td style="width: 25%; text-align: center;">A</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">C</td>
+<td style="width: 25%; text-align: center;">B</td>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">D</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">D</td>
+<td style="width: 25%; text-align: center;">A</td>
+<td style="width: 25%; text-align: center;">C</td>
+<td style="width: 25%; text-align: center;">B</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Merits of LSD</strong></span></p>
+<ol style="list-style-type: lower-roman;">
+<li>Due to the use of two way grouping of controls more variation than CD and RBD</li>
+<li>It is incomplete three way layout. It&#8217;s advantage over complete three way layout is that instead of m<sup>3</sup> experimental units only m<sup>3</sup> units are needed.</li>
+<li>The statistical analysis remains simple if some observations are missing.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Demerits:</strong></span></p>
+<ol style="list-style-type: lower-roman;">
+<li>The assumptions of factors are independent is not always true.</li>
+<li>It is suitable for treatments 5 to 10.</li>
+<li>It is not easy in the field layout.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>Now,</p>
+<p>Problem to test</p>
+<p>H<sub>0R</sub>  = Rows are insignificant</p>
+<p>H<sub>1R</sub>  = Rows are significant</p>
+<p>H<sub>0c</sub>  = Columns are insignificant</p>
+<p>H<sub>1c</sub>  = Columns are significant</p>
+<p>H<sub>0T</sub>  = Treatments are insignificant</p>
+<p>H<sub>1T</sub>  = Treatments are significant</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">T<sub>i</sub></td>
+<td style="width: 16.6667%; text-align: center;">T<sub>i</sub><sup>2</sup></td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">A 10</td>
+<td style="width: 16.6667%; text-align: center;">B 15</td>
+<td style="width: 16.6667%; text-align: center;">C 20</td>
+<td style="width: 16.6667%; text-align: center;">45</td>
+<td style="width: 16.6667%; text-align: center;">2025</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">B 25</td>
+<td style="width: 16.6667%; text-align: center;">C 10</td>
+<td style="width: 16.6667%; text-align: center;">A 15</td>
+<td style="width: 16.6667%; text-align: center;">50</td>
+<td style="width: 16.6667%; text-align: center;">2500</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;"></td>
+<td style="width: 16.6667%; text-align: center;">C 25</td>
+<td style="width: 16.6667%; text-align: center;">A 20</td>
+<td style="width: 16.6667%; text-align: center;">B 15</td>
+<td style="width: 16.6667%; text-align: center;">60</td>
+<td style="width: 16.6667%; text-align: center;">3600</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">T<sub>j</sub></td>
+<td style="width: 16.6667%; text-align: center;">60</td>
+<td style="width: 16.6667%; text-align: center;">45</td>
+<td style="width: 16.6667%; text-align: center;">50</td>
+<td style="width: 16.6667%; text-align: center;">G=155</td>
+<td style="width: 16.6667%; text-align: center;">ΣT<sub>i</sub><sup>2</sup> = 8125</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">T<sub>j</sub><sup>2</sup></td>
+<td style="width: 16.6667%; text-align: center;">3600</td>
+<td style="width: 16.6667%; text-align: center;">2025</td>
+<td style="width: 16.6667%; text-align: center;">2500</td>
+<td style="width: 16.6667%; text-align: center;">ΣT<sub>j</sub><sup>2</sup> = 8125</td>
+<td style="width: 16.6667%; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p>T<sub>. . A</sub> = 10 + 20 + 15 = 45</p>
+<p>T<sub>. . B</sub> = 25 + 15 + 15 = 55</p>
+<p>T<sub>. . C</sub> = 25 + 10 + 20 = 55</p>
+<p>ΣT<sup>2</sup><sub>. . k</sub> = 45<sup>2</sup> + 55<sup>2</sup> + 55<sup>2</sup> = 8075</p>
+<p>K = A, B, C</p>
+<p>m = 3</p>
+<p>N = m<sup>2</sup> = 3<sup>2</sup> = 9</p>
+<p>CG = \(\frac{G^2}{N}\) = \(\frac{155^2}{9}\) = 2669.444</p>
+<p>\(\sum_{(i, j, k)} y^{2}_{ijk}\) = 10<sup>2</sup> + 15<sup>2</sup> + 25<sup>2</sup> + 10<sup>2</sup> + 15<sup>2</sup> + 25<sup>2</sup> + 20<sup>2</sup> + 15<sup>2</sup> = 2925</p>
+<p>SSR = \(\frac{\sum_{i} T_{i . . }^{2}}{m}\) &#8211; CF = \(\frac{1}{3}\) x 8125 &#8211; 2669.444 = 38.889</p>
+<p>SSC = \(\frac{\sum_{i} T_{j . . }^{2}}{m}\) &#8211; CF = \(\frac{1}{3}\) x 8125 &#8211; 2669.444 = 38.889</p>
+<p>SST = \(\frac{\sum_{i} T_{k . . }^{2}}{m}\) &#8211; CF = \(\frac{1}{3}\) x 8075 &#8211; 2669.444 = 22.222</p>
+<p>SSE = TSS &#8211; SSR &#8211; SSC &#8211; SST</p>
+<p>= 255.556 &#8211; 38.889 &#8211; 38.889 &#8211; 22.222 = 155.556</p>
+<p style="text-align: center;"><strong>ANOVA Table</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 172px;">
+<tbody>
+<tr style="height: 26px;">
+<td style="width: 16.6667%; height: 26px; text-align: center;">S.V.</td>
+<td style="width: 16.6667%; height: 26px; text-align: center;">d.f.</td>
+<td style="width: 16.6667%; height: 26px; text-align: center;">S.S.</td>
+<td style="width: 16.6667%; height: 26px; text-align: center;">M.S.</td>
+<td style="width: 16.6667%; height: 26px; text-align: center;">F<sub>cat</sub></td>
+<td style="width: 16.6667%; height: 26px; text-align: center;">F<sub>Tab</sub></td>
+</tr>
+<tr style="height: 50px;">
+<td style="width: 16.6667%; height: 50px; text-align: center;">Row</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">2</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">38.889</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">19.444</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">0.249</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">F<sub>0.05 (2, 2)</sub> = 19</td>
+</tr>
+<tr style="height: 50px;">
+<td style="width: 16.6667%; height: 50px; text-align: center;">Column</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">2</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">38.889</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">19.444</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">0.249</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">F<sub>0.05 (2, 2)</sub> = 19</td>
+</tr>
+<tr style="height: 50px;">
+<td style="width: 16.6667%; height: 50px; text-align: center;">Treatment</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">2</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">22.222</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">11.111</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">0.142</td>
+<td style="width: 16.6667%; height: 50px; text-align: center;">F<sub>0.05 (2, 2)</sub> = 19</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;">Error</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">2</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">155.556</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">77.778</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; height: 24px; text-align: center;">Total</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">8</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;">255.556</td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+<td style="width: 16.6667%; height: 24px; text-align: center;"></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision:</strong></p>
+<p>F<sub>R</sub> = 0.249 &lt;&gt; F<sub>0.05(2,2)</sub> = 19, Accept H<sub>0.05</sub> at 5% level of significance.</p>
+<p>F<sub>c</sub> = 0.249 &lt;&gt; F<sub>0.05(2,2)</sub> = 19, Accept H<sub>0.05</sub> at 5% level of significance.</p>
+<p>F<sub>T</sub> = 0.142 &lt;&gt; F<sub>0.05(2,2)</sub> = 19, Accept H<sub>0.05</sub> at 5% level of significance.</p>
+<p><strong>Conclusion:</strong></p>
+<p>Row are insignificant.</p>
+<p>Columns are insignificant.</p>
+<p>Treatments are insignificant.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What do you mean by hypothesis? Describe null and alternative hypothesis. A company claims that its light bulbs are superior to those of the competitor on the basis of study which showed that a sample of 40 of its bulbs had an average life time 628 hours of continuous use with a standard deviation of 27 hours. While sample of 30 bulbs made by the competitor had an average life time 619 hours of continuous use with a standard deviation of 25 hours. Test at 5% level of significance, whether this claim is justified.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A hypothesis is a tentative theory or supposition provisionally adopted to explain certain facts and to guide in the investigation of others.</p>
+<p>A statistical hypothesis which is tentative statement or supposition about the estimated value of one or more parameter of the population is called parametric hypothesis. A statistical hypothesis about attributes is called non-parametric hypothesis.</p>
+<p>If a hypothesis completely determines the population, It is called a simple hypothesis, otherwise composite hypothesis.</p>
+<p>In testing of hypothesis a static is computed from a sample drawn from the parent population and on the basis of the statistics it is observed whether the sample so drawn has come from the population with certain specified characteristic.</p>
+<p><strong>Null Hypothesis:</strong></p>
+<p>The supposition about the population parameter is called null hypothesis. It is set for testing a statistical hypothesis only to decide whether to accept or reject the null hypothesis which is tested for possible rejection under the assumption that is true.</p>
+<p>It is the hypothesis of no difference between sample statistics and parameter. It is hypothesis of no difference between parameters.</p>
+<p>Null hypothesis is denoted by H<sub>o</sub>. It is set up H<sub>0</sub><sub>:μ</sub> = μ<sub>0</sub></p>
+<p>Suppose we want to test the average score of students in Bsc. entrance exam is 55 then to start testing the hypothesis we assume the average score is 55. There is not difference between sample average and population average. Then the null hypothesis is H<sub>0</sub><sub>:μ</sub> = 55.</p>
+<p><strong>Alternative Hypothesis:</strong></p>
+<p>A hypothesis which is complementary to null hypothesis is called an alternative hypothesis.</p>
+<p>Any hypothesis which is not null is also called alternative hypothesis. It is hypothesis of difference between parameters.</p>
+<p>Alternative hypothesis is denoted by H<sub>1</sub>.</p>
+<p>Alternative Hypothesis are</p>
+<ol style="list-style-type: lower-roman;">
+<li>two tailed</li>
+<li>one tailed right</li>
+<li>one tailed left</li>
+</ol>
+<p>Alternative hypothesis is set up as H<sub>1</sub><sub>:μ</sub> ≠ μ<sub>0</sub> for two tailed or H<sub>1</sub><sub>:μ</sub> &gt; μ<sub>0</sub> for one tailed right or H<sub>0</sub><sub>:μ</sub> &lt; μ<sub>0 </sub> for one tailed left.</p>
+<p>Let μ<sub>1</sub> and μ<sub>2</sub> be mean life of bulbs of company and it&#8217;s competitor respectively.</p>
+<p>Sample number of company (n<sub>1</sub>) = 40</p>
+<p>Sample mean life of bulb of company (x̄<sub>1</sub>) = 628</p>
+<p>Sample Sd of life of bulb of company (S<sub>1</sub>) = 27</p>
+<p>Sample number of bub of competitor (n<sub>2</sub>) = 30</p>
+<p>Sample mean life of bulb of competitor (x̄<sub>2</sub>) = 619</p>
+<p>Sample Sd of life of bulb of competitor(S<sub>2</sub>) = 25</p>
+<p>Let μ<sub>1</sub> = Population mean wage of workers from Pokhara and</p>
+<p>μ<sub>2</sub> = Population mean wage of workers from Kathmandu</p>
+<p><strong>Problem to test:</strong></p>
+<p>H<sub>0</sub><sub>:μ</sub> = μ<sub>2</sub></p>
+<p>H<sub>1</sub><sub>:μ</sub> &gt; μ<sub>2</sub></p>
+<p><strong>Test statistics</strong></p>
+<p>Z = \(\frac{\overline{x}_1 &#8211; \overline{x}_2}{\sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2} }}\)</p>
+<p>Z = \(\frac{628 &#8211; 619}{\sqrt{\frac{27^2}{40} + \frac{25^2}{30} }}\)</p>
+<p>Z = \(\frac{9}{\sqrt{39.058}}\)</p>
+<p>Z = 1.44</p>
+<p><strong>Critical Value</strong></p>
+<p>Let α = 0.05 be the level of significance then the critical vale for one tailed test is</p>
+<p>Z<sub>tabulated</sub> = Z<sub>α</sub> = 1.645</p>
+<p><strong>Dcision</strong></p>
+<p>Z = 1.44 &lt; Z<sub>tabulated</sub> = 1.645, accept H<sub>0</sub> at 0.05 level of significance.</p>
+<p><strong>Conclusion:</strong></p>
+<p>The claims of company that is light bulbs are superior to those of the competitor is not correct.</p>
+<p>&nbsp;</p>
+</div>
+<h2>Group B: Attempt any Eight questions:(8 x 5 = 40</h2><h3>Question 4</h3>
+<div><p><p>Suppose we are given following information with n=7, multiple regression model is</p>
+<p>\(\hat{A} = 8.15 + 0.6X_{1} + 0.54X_{2}\)</p>
+<p>Here , Total sum of square = 1493, and Sum of square due to error = 91<br />
+Find i) R2 and interpret it. ii) Test the overall significance of model</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>TSS = 1493</p>
+<p>SSE = 91</p>
+<p>SSR = TSS &#8211; SSE = 1493 &#8211; 91 = 1402</p>
+<p>MSE = SSE / k = 1402 / 2 = 701</p>
+<p>MSE = SSE / n-k-1 = 91/7-2-1 = 22.75</p>
+<p>R<sup>2</sup> = SSR / TSS = 1402 / 1493 = 0.939 = 93.9%</p>
+<p>It means 93.9% variation in y is explained by x<sub>1</sub> and x<sub>2</sub></p>
+<p>To test overall significance of regression model</p>
+<p>Let β<sub>1</sub> and β<sub>2</sub> be population regression coefficients of Y on X<sub>1</sub> keeping X<sub>2</sub> constant and population regression coefficient of Y on X<sub>2</sub> keeping X<sub>1</sub> constant.</p>
+<p><strong>Problem to test</strong></p>
+<p>H<sub>0</sub> : β<sub>1</sub> = β<sub>2</sub> = 0</p>
+<p>H<sub>1</sub> : At least one β<sub>1</sub> is different from zero, i = 1,2</p>
+<p><strong>Test Statistic</strong></p>
+<p>F = \(\frac{MSR}{MSE}\) = \(\frac{701}{22.75}\) = 30.81</p>
+<p><strong>Critical Value</strong></p>
+<p>At α = 0.05 level of significance, critical value is F<sub>α</sub><sub>(k, n-k-1)</sub> =6.944</p>
+<p><strong>Decision</strong></p>
+<p>F = 30.81 &gt; F<sub>tabulated</sub> = 6.944, reject H<sub>0</sub> at 5% level of significance</p>
+<p><strong>Conclusion</strong></p>
+<p>There is linear relationship of dependent variable y with at least one of the independent variable x<sup>&#8216;</sup>s</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>The following data related to the number of children classified according to the type of feeding and nature of teeth.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Type of feed</td>
+<td colspan="2">Nature of teeth</td>
+</tr>
+<tr>
+<td></td>
+<td>Normal</td>
+<td>Defective</td>
+</tr>
+<tr>
+<td>Breast</td>
+<td>18</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Bottle</td>
+<td>2</td>
+<td>13</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do the information provide sufficient evidence to conclude that type of feeding and nature of teeth are dependent? Use chi square test at 5% level of significance.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Problem to test</strong></p>
+<p>H<sub>0</sub> : Type of feeding and nature of teeth are independent</p>
+<p>H<sub>1</sub> : Type of feeding and nature of teeth are dependent</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;">Type of feed</td>
+<td style="width: 75%; text-align: center;" colspan="3">Nature of Teeth</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;"></td>
+<td style="width: 25%; text-align: center;">Normal</td>
+<td style="width: 25%; text-align: center;">Defective</td>
+<td style="width: 25%; text-align: center;">Total</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Breast</td>
+<td style="width: 25%; text-align: center;">a=18</td>
+<td style="width: 25%; text-align: center;">b=12</td>
+<td style="width: 25%; text-align: center;">a+b=30</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Bottle</td>
+<td style="width: 25%; text-align: center;">c=2</td>
+<td style="width: 25%; text-align: center;">d=13</td>
+<td style="width: 25%; text-align: center;">c+d=15</td>
+</tr>
+<tr>
+<td style="width: 25%; text-align: center;">Total</td>
+<td style="width: 25%; text-align: center;">a+c=20</td>
+<td style="width: 25%; text-align: center;">b+d=25</td>
+<td style="width: 25%; text-align: center;">N=45</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test statistics</strong></p>
+<p>X<sup>2</sup> = \(\frac{N(|ad &#8211; bc| &#8211; \frac{N}{2})^2}{(a+c)(b+d)(a+b)(c+d)}\)</p>
+<p>= \(\frac{45(|18 x 13 &#8211; 12 x 2| &#8211; \frac{45}{2})^2}{20 x 25 x 30 x 25}\)</p>
+<p>= 7.031</p>
+<p><strong>Critical Value</strong></p>
+<p>At α = 0.05 level of significance critical value is X<sup>2</sup><sub>α(1)</sub> = 3.84</p>
+<p><strong>Decision</strong></p>
+<p>X<sup>2</sup> = 7.031 &gt; X<sup>2</sup><sub>0.01(1)</sub> = 3.84</p>
+<p>Reject H<sub>0</sub> at 0.05 level of significance</p>
+<p><b>Conclusion</b></p>
+<p>Type of feeding and nature of teeth are dependent</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Determine the minimum sample size required so that the sample estimate lies within 10% of the true value 95% level of confidence. when coefficient of variation is 60%</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4043" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550804.jpg" alt="" width="1700" height="1229" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550804.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550804-1024x740.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550804-768x555.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550804-1536x1110.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>A manufacturer of computer paper has a production process that operates continuously throughout an entire production shift. The paper is expected to have an average length of 11 inches and standard deviation is known to be 0.01 inch. Suppose random sample of 100 sheets is selected and the average paper length is found to be 10.68 inches. Set up 95% and 90% confidence interval estimate of the population average paper length.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4046" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550798.jpg" alt="" width="1700" height="1142" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550798.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550798-1024x688.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550798-768x516.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550798-1536x1032.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-4047" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550792.jpg" alt="" width="1700" height="989" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550792.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550792-1024x596.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550792-768x447.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550792-1536x894.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>A chemist use three catalyst for distilling alcohol and lay out were tabulated below:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Catalyst</td>
+<td colspan="5">Alcohol (in cc)</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>380</td>
+<td>430</td>
+<td>410</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C2</td>
+<td>290</td>
+<td>350</td>
+<td>270</td>
+<td>250</td>
+<td>270</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>400</td>
+<td>380</td>
+<td>450</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Are there any significant differences between catalyst? Test at 5% level of significance. Use Kruskal Walli’s H test</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4049" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550786.jpg" alt="" width="1700" height="1878" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550786.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550786-927x1024.jpg 927w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550786-768x848.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550786-1390x1536.jpg 1390w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-4050" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550780.jpg" alt="" width="1700" height="594" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550780.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550780-1024x358.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550780-768x268.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550780-1536x537.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Consider the partially completed ANOVA table table below. Complete the ANOVA table and answer the following.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Source of Variation</td>
+<td>Sum of Square</td>
+<td>Degree of freedom</td>
+<td>Mean sum of square</td>
+<td>F value</td>
+</tr>
+<tr>
+<td>column</td>
+<td>72</td>
+<td>?</td>
+<td>?</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Rows</td>
+<td>?</td>
+<td>?</td>
+<td>36</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Treatments</td>
+<td>180</td>
+<td>3</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>?</td>
+<td>6</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>?</td>
+<td>?</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>What design was employed?</li>
+<li>How many treatments were compared?</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4052" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550774.jpg" alt="" width="1700" height="1803" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550774.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550774-966x1024.jpg 966w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550774-768x815.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550774-1448x1536.jpg 1448w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define main component of queuing system.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4054" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550768.jpg" alt="" width="1700" height="438" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550768.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550768-1024x264.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550768-768x198.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550768-1536x396.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-4056" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550762-1.jpg" alt="" width="1700" height="1355" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550762-1.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550762-1-1024x816.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550762-1-768x612.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550762-1-1536x1224.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Jobs are sent to mainframe computer at a rate of 4 jobs per minute. Arrivals are modeled by a binomial process.</p>
+<ol>
+<li>Choose a frame size that makes the probability of a new received during each frame equal to 0.1.</li>
+<li>Using the chosen frame compute the probability of more than 4 jobs received during one minute.</li>
+<li>Compute mean and variance of inter arrival time?</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4058" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550756.jpg" alt="" width="1700" height="1054" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550756.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550756-1024x635.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550756-768x476.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550756-1536x952.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /></p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes of the following :</p>
+<ol>
+<li>Need of non parametric statistical methods.</li>
+<li>Efficiency of Randomized Block Design relative to Completely Randomized Design</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-4060" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550747.jpg" alt="" width="1700" height="627" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550747.jpg 1700w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550747-1024x378.jpg 1024w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550747-768x283.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550747-1536x567.jpg 1536w" sizes="auto, (max-width: 1700px) 100vw, 1700px" /> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-4061" src="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737.jpg" alt="" width="1356" height="2200" srcset="https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737.jpg 1356w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737-631x1024.jpg 631w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737-768x1246.jpg 768w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737-947x1536.jpg 947w, https://hamrocsit.com/wp-content/uploads/2021/12/1638681550737-1262x2048.jpg 1262w" sizes="auto, (max-width: 1356px) 100vw, 1356px" /></p>
+</div>
+</body></html>

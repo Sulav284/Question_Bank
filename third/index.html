@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Question Papers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .tree {
+      padding: 1rem;
+    }
+    .node {
+      background: white;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .node:hover {
+      transform: scale(1.02);
+      background: #f1f1f1;
+    }
+    .hidden {
+      display: none;
+    }
+    .back-btn {
+      background: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      margin-top: 0.4rem;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Question Papers</h1>
+  </header>
+
+  <div class="tree" id="tree"></div>
+
+  <script>
+    // Data structure
+    const data = {
+  "Semester 1": {
+    "C_Programming": [
+      "C_Programming_2074",
+      "C_Programming_2075",
+      "C_Programming_2077",
+      "C_Programming_2078",
+      "C_Programming_2079",
+      "C_Programming_2080",
+      "C_Programming_2081"
+    ],
+    "Digital_Logic": [
+      "Digital_Logic_2074",
+      "Digital_Logic_2075",
+      "Digital_Logic_2077",
+      "Digital_Logic_2078",
+      "Digital_Logic_2080",
+      "Digital_Logic_2081"
+    ],
+    "Introduction_to_IT": [
+      "Introduction_to_IT_2074",
+      "Introduction_to_IT_2075",
+      "Introduction_to_IT_2077",
+      "Introduction_to_IT_2078",
+      "Introduction_to_IT_2080",
+      "Introduction_to_IT_2081"
+    ],
+    "Mathematics_I": [
+      "Mathematics_I_2074",
+      "Mathematics_I_2075",
+      "Mathematics_I_2077",
+      "Mathematics_I_2078",
+      "Mathematics_I_2079",
+      "Mathematics_I_2080",
+      "Mathematics_I_2081"
+    ],
+    "Physics": [
+      "Physics_2074",
+      "Physics_2075",
+      "Physics_2077",
+      "Physics_2078",
+      "Physics_2079",
+      "Physics_2080",
+      "Physics_2081"
+    ]
+  },
+  "Semester 2": {
+    "Data_Structures": [
+      "Data_Structures_2075",
+      "Data_Structures_2076",
+      "Data_Structures_2078",
+      "Data_Structures_2079",
+      "Data_Structures_2080",
+      "Data_Structures_2080_new"
+    ],
+    "Mathematics_II": [
+      "Mathematics_II_2075",
+      "Mathematics_II_2076",
+      "Mathematics_II_2078",
+      "Mathematics_II_2079",
+      "Mathematics_II_2080",
+      "Mathematics_II_2080_new"
+    ],
+    "Microprocessor": [
+      "Microprocessor_2075",
+      "Microprocessor_2076",
+      "Microprocessor_2078",
+      "Microprocessor_2079",
+      "Microprocessor_2080",
+      "Microprocessor_2080_new"
+    ],
+    "OOPS": [
+      "OOPS_2075",
+      "OOPS_2076",
+      "OOPS_2078",
+      "OOPS_2079",
+      "OOPS_2080",
+      "OOPS_2080_new"
+    ],
+    "Statistics_I": [
+      "Statistics_I_2075",
+      "Statistics_I_2076",
+      "Statistics_I_2078",
+      "Statistics_I_2079",
+      "Statistics_I_2080",
+      "Statistics_I_2080_new"
+    ]
+  },
+  "Semester 3": {
+    "Computer_Architecture": [
+      "Computer_Architecture_Model",
+      "Computer_Architecture_2075_new",
+      "Computer_Architecture_2075_old",
+      "Computer_Architecture_2077",
+      "Computer_Architecture_2078",
+      "Computer_Architecture_2079",
+      "Computer_Architecture_2080"
+    ],
+    "Computer_Graphics": [
+      "Computer_Graphics_Model",
+      "Computer_Graphics_2075",
+      "Computer_Graphics_2077",
+      "Computer_Graphics_2078",
+      "Computer_Graphics_2079",
+      "Computer_Graphics_2080"
+    ],
+    "Data_Structures_and_Algorithms": [
+      "Data_Structures_and_Algorithms_Model_I",
+      "Data_Structures_and_Algorithms_Model_II",
+      "Data_Structures_and_Algorithms_2074",
+      "Data_Structures_and_Algorithms_2075",
+      "Data_Structures_and_Algorithms_2077",
+      "Data_Structures_and_Algorithms_2078",
+      "Data_Structures_and_Algorithms_2079",
+      "Data_Structures_and_Algorithms_2080",
+      "Data_Structures_and_Algorithms_2081"
+    ],
+    "Numerical_Methods": [
+      "Numerical_Methods_Model_I",
+      "Numerical_Methods_Model_II",
+      "Numerical_Methods_2075",
+      "Numerical_Methods_2077",
+      "Numerical_Methods_2078",
+      "Numerical_Methods_2079",
+      "Numerical_Methods_2080"
+    ],
+    "Statistics_II": [
+      "Statistics_II_Model_I",
+      "Statistics_II_Model_II",
+      "Statistics_II_2075",
+      "Statistics_II_2077",
+      "Statistics_II_2078",
+      "Statistics_II_2079",
+      "Statistics_II_2080"
+    ]
+  },
+  "Semester 4": {
+    "Artificial_Intelligence": [
+      "Artificial_Intelligence_Model",
+      "Artificial_Intelligence_2076",
+      "Artificial_Intelligence_2078",
+      "Artificial_Intelligence_2079",
+      "Artificial_Intelligence_2080",
+      "Artificial_Intelligence_2080_new",
+      "Artificial_Intelligence_2081"
+    ],
+    "Computer_Networks": [
+      "Computer_Networks_Model",
+      "Computer_Networks_2076",
+      "Computer_Networks_2078",
+      "Computer_Networks_2079",
+      "Computer_Networks_2080",
+      "Computer_Networks_2080_new",
+      "Computer_Networks_2081"
+    ],
+    "Database_Management_Systems": [
+      "Database_Management_Systems_Model",
+      "Database_Management_Systems_2076",
+      "Database_Management_Systems_2078",
+      "Database_Management_Systems_2079",
+      "Database_Management_Systems_2080",
+      "Database_Management_Systems_2080_new"
+    ],
+    "Operating_Systems": [
+      "Operating_Systems_Model",
+      "Operating_Systems_2076",
+      "Operating_Systems_2078",
+      "Operating_Systems_2079",
+      "Operating_Systems_2080",
+      "Operating_Systems_2080_new",
+      "Operating_Systems_2081"
+    ],
+    "Theory_of_Computation": [
+      "Theory_of_Computation_Model",
+      "Theory_of_Computation_2076",
+      "Theory_of_Computation_2078",
+      "Theory_of_Computation_2079",
+      "Theory_of_Computation_2080",
+      "Theory_of_Computation_2080_new",
+      "Theory_of_Computation_2081"
+    ]
+  },
+  "Semester 5": {
+    "Cryptography": [
+      "Cryptography_Model",
+      "Cryptography_2076",
+      "Cryptography_2078",
+      "Cryptography_2079",
+      "Cryptography_2080",
+      "Cryptography_2081"
+    ],
+    "Design_and_Analysis_of_Algorithms": [
+      "Design_and_Analysis_of_Algorithms_Model",
+      "Design_and_Analysis_of_Algorithms_2076",
+      "Design_and_Analysis_of_Algorithms_2078",
+      "Design_and_Analysis_of_Algorithms_2079",
+      "Design_and_Analysis_of_Algorithms_2080",
+      "Design_and_Analysis_of_Algorithms_2081"
+    ],
+    "Multimedia_Computing": [
+      "Multimedia_Computing_2080",
+      "Multimedia_Computing_2081"
+    ],
+    "System_Analysis_and_Design": [
+      "System_Analysis_and_Design_Model",
+      "System_Analysis_and_Design_2076",
+      "System_Analysis_and_Design_2078",
+      "System_Analysis_and_Design_2079",
+      "System_Analysis_and_Design_2080",
+      "System_Analysis_and_Design_2081"
+    ],
+    "Software_Architecture_and_Engineering": [
+      "Software_Architecture_and_Engineering_2076",
+      "Software_Architecture_and_Engineering_2078",
+      "Software_Architecture_and_Engineering_2079"
+    ],
+    "Simulation_and_Modeling": [
+      "Simulation_and_Modeling_Model",
+      "Simulation_and_Modeling_2076",
+      "Simulation_and_Modeling_2078",
+      "Simulation_and_Modeling_2079",
+      "Simulation_and_Modeling_2080",
+      "Simulation_and_Modeling_2081"
+    ],
+    "Web_Technology": [
+      "Web_Technology_Model",
+      "Web_Technology_2076",
+      "Web_Technology_2078",
+      "Web_Technology_2079",
+      "Web_Technology_2080",
+      "Web_Technology_2081"
+    ]
+  },
+  "Semester 6": {
+    "Compiler_Design_and_Construction": [
+      "Compiler_Design_and_Construction_2075",
+      "Compiler_Design_and_Construction_2076",
+      "Compiler_Design_and_Construction_2078",
+      "Compiler_Design_and_Construction_2080",
+      "Compiler_Design_and_Construction_2081",
+      "Compiler_Design_and_Construction_2081_new"
+    ],
+    "E_Commerce": [
+      "E_Commerce_2076",
+      "E_Commerce_2078",
+      "E_Commerce_2079",
+      "E_Commerce_2080",
+      "E_Commerce_2081"
+    ],
+    "E_Governance": [
+      "E_Governance_2076",
+      "E_Governance_2078",
+      "E_Governance_2079",
+      "E_Governance_2080",
+      "E_Governance_2081"
+    ],
+    "NET_Centric_Computing": [
+      "NET_Centric_Computing_2076",
+      "NET_Centric_Computing_2078",
+      "NET_Centric_Computing_2079",
+      "NET_Centric_Computing_2080",
+      "NET_Centric_Computing_2081"
+    ],
+    "Software_Engineering": [
+      "Software_Engineering_Model",
+      "Software_Engineering_2076",
+      "Software_Engineering_2077",
+      "Software_Engineering_2079",
+      "Software_Engineering_2080",
+      "Software_Engineering_2081"
+    ],
+    "Technical_Writing": [
+      "Technical_Writing_2074",
+      "Technical_Writing_2075",
+      "Technical_Writing_2078",
+      "Technical_Writing_2079",
+      "Technical_Writing_2080",
+      "Technical_Writing_2081"
+    ]
+  },
+  "Semester 7": {
+    "Advanced_Java_Programming": [
+      "Advanced_Java_Programming_Model",
+      "Advanced_Java_Programming_2077",
+      "Advanced_Java_Programming_2078",
+      "Advanced_Java_Programming_2079",
+      "Advanced_Java_Programming_2080"
+    ],
+    "Data_Warehousing_and_Data_Mining": [
+      "Data_Warehousing_and_Data_Mining_Model",
+      "Data_Warehousing_and_Data_Mining_2078",
+      "Data_Warehousing_and_Data_Mining_2079",
+      "Data_Warehousing_and_Data_Mining_2080"
+    ],
+    "Principles_of_Management": [
+      "Principles_of_Management_Model",
+      "Principles_of_Management_2078",
+      "Principles_of_Management_2079",
+      "Principles_of_Management_2080"
+    ],
+    "Software_Project_Management": [
+      "Software_Project_Management_2078",
+      "Software_Project_Management_2079",
+      "Software_Project_Management_2080"
+    ]
+  },
+  "Semester 8": {
+    "Advanced_Database": [
+      "Advanced_Database_2079",
+      "Advanced_Database_2080",
+      "Advanced_Database_2081"
+    ],
+    "Cloud_Computing": [
+      "Cloud_Computing_2079",
+      "Cloud_Computing_2080",
+      "Cloud_Computing_2081"
+    ]
+  }
+};
+
+    const tree = document.getElementById("tree");
+    let stack = []; // navigation stack
+
+    function renderLevel(level) {
+      tree.innerHTML = "";
+
+      if (stack.length > 0) {
+        const backBtn = document.createElement("button");
+        backBtn.className = "back-btn";
+        backBtn.textContent = "⬅ Back";
+        backBtn.onclick = () => {
+          stack.pop();
+          renderLevel(getCurrentLevel());
+        };
+        tree.appendChild(backBtn);
+      }
+
+      for (const key in level) {
+        const node = document.createElement("div");
+        node.className = "node";
+
+        if (Array.isArray(level[key])) {
+          // Subject with files
+          node.textContent = key;
+          node.onclick = () => {
+            renderFiles(level[key], key);
+          };
+        } else {
+          // Folder (Semester or Subject)
+          node.textContent = key;
+          node.onclick = () => {
+            stack.push(key);
+            renderLevel(level[key]);
+          };
+        }
+
+        tree.appendChild(node);
+      }
+    }
+
+    function renderFiles(files, subject) {
+      tree.innerHTML = "";
+
+      const backBtn = document.createElement("button");
+      backBtn.className = "back-btn";
+      backBtn.textContent = "⬅ Back";
+      backBtn.onclick = () => {
+        renderLevel(getCurrentLevel());
+      };
+      tree.appendChild(backBtn);
+
+      const title = document.createElement("h2");
+      title.textContent = subject;
+      tree.appendChild(title);
+
+      files.forEach(file => {
+        const link = document.createElement("a");
+        link.href = file;
+        link.target = "_blank";
+        link.textContent = file.replace(/_/g, " ").replace(".html", "");
+        tree.appendChild(link);
+      });
+    }
+
+    function getCurrentLevel() {
+      let level = data;
+      for (const key of stack) {
+        level = level[key];
+      }
+      return level;
+    }
+
+    // Initial render
+    renderLevel(data);
+  </script>
+</body>
+</html>
