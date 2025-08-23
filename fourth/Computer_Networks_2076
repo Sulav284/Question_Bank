@@ -1,0 +1,693 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>CN Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any Two questions. (2x10=20)</h2><h3>Question 1</h3>
+<div><p><p>Explain each layer of TCP/IP model in detail. Compare it with OSI model.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>TCP/IP stands for Transmission Control Protocol/ Internet Protocol. TCP/IP Stack is specifically designed as a model to offer a highly reliable and end-to-end byte stream over unreliable internetwork.</p>
+<p>In this TCP/IP, There are five layers of protocols</p>
+<ol style="list-style-type:decimal;">
+<li>Physical Layer</li>
+<li>Data Link Layer</li>
+<li>Network Layer</li>
+<li>Transport Layer</li>
+<li>Application Layer</li>
+</ol>
+<h4>1. Physical Layer:</h4>
+<p>The physical layer in the internet model, as in the physical connection between the sender and receiver. Its role is to transfer a series of electrical, radio, or light signals through the circuit. The physical layer includes all the hardware devices (e.g. computers, modems, and hubs) and physical media (e.g. cables and satellites)</p>
+<h4>2. Data Layer Link:</h4>
+<p>The data layer link is responsible for moving a message from one computer to the next computer in the network path from the sender to the receiver. The data link layer in the Internet model platforms the same three functions as the data link layer in the OSI mode.</p>
+<ul style="list-style-type: square;">
+<li>First, it controls the physical layer by deciding when to transmit messages over the media.</li>
+<li>Second, It formats the messages by indicating where they start and end.</li>
+<li>Third, It decides and corrects any errors that have occurred during transmission.</li>
+</ul>
+<h4>3. Network Layer:</h4>
+<p>The network layer in the internet model performs the same functions as the network layer in the OSI model.</p>
+<ul style="list-style-type: square;">
+<li>First, It performs routing, in that it selects the next computer to which the message should be sent.</li>
+<li>Second, It can find all addresses of that computer if it doesn&#8217;t already know it.</li>
+</ul>
+<h4>4. Transport Layer:</h4>
+<p>The transport layer in the internet model is very similar to the transport layer in the OSI model. It performs two functions.</p>
+<ul style="list-style-type: square;">
+<li>First, It is responsible for linking the application layer software to the network and establishing end-to-end connections between the sender and receiver when such connections are needed.</li>
+<li>Second, It is responsible for breaking long messages into several smaller messages to make them easier to transmit.</li>
+</ul>
+<p>The transport layer can also detect lost messages and request they be resent.</p>
+<h4>5. Application Layer:</h4>
+<p>The application layer is the application software used by the network user and includes much of what the OSI model contains in the application, presentation, and session layers. It is the user&#8217;s access to the network. By using the application layer, the user defines what messages are sent over the network.</p>
+<p><span style="text-decoration: underline;"><strong>Comparison Between OSI and TCP/IP Model:</strong></span></p>
+<p>The comparison between OSI and TCP/IP Reference Model is</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<tbody>
+<tr>
+<td><b>TCP/IP</b></td>
+<td><b>OSI Model</b></td>
+</tr>
+<tr>
+<td>The full form of TCP/IP is Transmission Control Protocol/ Internet Protocol</td>
+<td>The full form of OSI is Open Systems Interconnection</td>
+</tr>
+<tr>
+<td>It is a communication protocol that is based on standard protocols and allows the connection of hosts over a network</td>
+<td>It is a structured model which deals which the functioning of a network</td>
+</tr>
+<tr>
+<td>In 1982, the TCP/IP model became the standard language of ARPANET</td>
+<td>In 1984, the OSI model was introduced by the International Organisation of Standardization (ISO)</td>
+</tr>
+<tr>
+<td>It comprises four layers:</p>
+<ul style="list-style-type: square;">
+<li>Network Interface</li>
+<li>Internet</li>
+<li>Transport</li>
+<li>Application</li>
+</ul>
+</td>
+<td>It comprises seven layers:</p>
+<ul style="list-style-type: square;">
+<li>Physical</li>
+<li>Data Link</li>
+<li>Network</li>
+<li>Transport</li>
+<li>Session</li>
+<li>Presentation</li>
+<li>Application</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>It follows a horizontal approach</td>
+<td>It follows a vertical approach</td>
+</tr>
+<tr>
+<td>The TCP/IP is the implementation of the OSI Model</td>
+<td>An OSI Model is a reference model, based on which a network is created</td>
+</tr>
+<tr>
+<td>It is protocol dependent</td>
+<td>It is protocol independent</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Define transmission media. What are different types of transmission media. Explain different types of unguided media in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Transmission media is a communication channel that carries the information from the sender to the receiver. Data is transmitted through the electromagnetic signals.</p>
+<p>The main functionality of the transmission media is to carry the information in the form of bits through <strong>LAN</strong>(Local Area Network).</p>
+<p>It is a physical path between transmitter and receiver in data communication.</p>
+<p>In a copper-based network, the bits in the form of electrical signals.</p>
+<p>In a fibre based network, the bits in the form of light pulses.</p>
+<p><span style="text-decoration: underline;"><strong>Types of Transmission Media:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6702" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/transmission-media.webp?resize=591%2C203&#038;ssl=1" alt="Types of transmission media" width="591" height="203" srcset="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/transmission-media.webp?w=1280&amp;ssl=1 1280w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/transmission-media.webp?resize=1024%2C351&amp;ssl=1 1024w, https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/transmission-media.webp?resize=768%2C263&amp;ssl=1 768w" sizes="auto, (max-width: 591px) 100vw, 591px" /></p>
+<h4><span style="text-decoration: underline;"><strong>Unguided Media:</strong></span></h4>
+<ul class="points">
+<li>An unguided transmission transmits the electromagnetic waves without using any physical medium. Therefore it is also known as <strong>wireless transmission</strong>.</li>
+<li>In unguided media, air is the media through which the electromagnetic energy can flow easily.</li>
+</ul>
+<p>Unguided transmission is broadly classified into three categories:</p>
+<p><span style="text-decoration: underline;"><strong>1. Radio Wave:</strong></span></p>
+<ul class="points">
+<li>Radio waves are the electromagnetic waves that are transmitted in all the directions of free space.</li>
+<li>Radio waves are omnidirectional, i.e., the signals are propagated in all the directions.</li>
+<li>The range in frequencies of radio waves is from 3Khz to 1 khz.</li>
+<li>In the case of radio waves, the sending and receiving antenna are not aligned, i.e., the wave sent by the sending antenna can be received by any receiving antenna.</li>
+<li>An example of the radio wave is <strong>FM radio</strong>.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Applications:</span></em></p>
+<ul class="points">
+<li>A Radio wave is useful for multicasting when there is one sender and many receivers.</li>
+<li>An FM radio, television, cordless phones are examples of a radio wave.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Advantages:</span></em></p>
+<ul class="points">
+<li>Radio transmission is mainly used for wide area networks and mobile cellular phones.</li>
+<li>Radio waves cover a large area, and they can penetrate the walls.</li>
+<li>Radio transmission provides a higher transmission rate.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>2. Microwaves:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>They are the eletromagnetic wave having frequencies between 1 and 300 GHz.</li>
+<li>Micro waves are unidirectional.</li>
+<li>It is a line of straight transmission i.e. the sending and receiving as tennas need to be properly aligned with each other.</li>
+<li>The distance covered by Signal is directly porportional to the height of the antennas.</li>
+<li>These are maorly used for mobile phone communication and television distribution.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Advantage:</span></em></p>
+<ul class="points">
+<li>Microwave transmission is cheaper than using cables.</li>
+<li>It is free from land acquisition as it does not require any land for the installation of cables.</li>
+<li>Microwave transmission provides an easy communication in terrains as the installation of cable in terrain is quite a difficult task.</li>
+<li>Communication over oceans can be achieved by using microwave transmission.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Disadvantage:</span></em></p>
+<ul class="points">
+<li><strong>Eavesdropping:</strong> An eavesdropping creates insecure communication. Any malicious user can catch the signal in the air by using its own antenna.</li>
+<li><strong>Out of phase signal:</strong> A signal can be moved out of phase by using microwave transmission.</li>
+<li><strong>Susceptible to weather condition:</strong> A microwave transmission is susceptible to weather condition. This means that any environmental change such as rain, wind can distort the signal.</li>
+<li><strong>Bandwidth limited:</strong> Allocation of bandwidth is limited in the case of microwave transmission.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>3. Infrared Waves:</strong></span></p>
+<p>Infrared waves are used for very short distance communication. They cannot penetrate through obstacles. This prevents interference between systems. Frequency Range:300GHz – 400THz. It is used in TV remotes, wireless mouse, keyboard, printer, etc.</p>
+<p><span style="text-decoration: underline;">Advantage:</span></p>
+<ul style="list-style-type: square;">
+<li>Can detect people inside burning nuildings and cars.</li>
+<li>Useful in the military for identifying targets</li>
+<li>Used in Scientific experimentation to identify the heat of an object.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Disadvantage:</span></em></p>
+<ul style="list-style-type: square;">
+<li>Can cause minor burns id exposed to skin for long periods of time</li>
+<li>Can cause contracts in the eyes after long exposure</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define flow control. Explain Go-Back-N ARQ with suitable example. How is it different from Stop-and-Wait ARQ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Flow control is a technique that allows two stations working at different speeds to communicate with each other. It is a set of measures taken to regulate the amount of data that a sender sends so that a fast sender does not overwhelm a slow receiver. In data link layer, flow control restricts the number of frames the sender can send before it waits for an acknowledgment from the receiver.</p>
+<p>Two method have been developed to control the follow of data:</p>
+<ol style="list-style-type:decimal;">
+<li>Stop and Wait</li>
+<li>Sliding Window</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Go-back-N ARQ (Sliding Window):</strong></span></p>
+<ul style="list-style-type: square;">
+<li>It is an specific technique of ARQ protocol, in which the sending process continues to send a number of frames specified by a window size even without receiving an ACK packet from the reciver.</li>
+<li>The receiver process keeps track of the sequence number of the neat expected frame and sent that number of the next with every ACK it sends.</li>
+<li>The receiver will discord any frame that doesn&#8217;t have the exact sequence number it expects and will recent an ACK for last correct in-order frame.</li>
+<li>It is more efficient use of a connection than wait and stop ARQ. Since unlike waiting for an ACK for each packets the connection is still being utilized as packets are being sent no matter what.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Working:</span></em></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6705 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/sliding-window-protocol-2.png?resize=621%2C453&#038;ssl=1" alt="" width="621" height="453"></p>
+<p>Here, m = 3 and sender&#8217;s window size is 2<sup>m</sup> &#8211; 1 = 2<sup>3</sup> &#8211; 1 = 7 i.e. 0 to 6</p>
+<ol style="list-style-type:decimal;">
+<li>Sender sends Frame 0, Frame 1, Frame 2, Frame 3 .  . . . . . . .</li>
+<li>Receier receives 0 and sends ACK for 1</li>
+<li>Receiver receives 1 and send ACK for 2</li>
+<li>ACK 2 is lost</li>
+<li>Sender has already send 2</li>
+<li>Receiver send ACK for 3</li>
+<li>Sender sends 3</li>
+</ol>
+<p>Here there is no timeout event because all outstanding frames are acknowledged before the timer copies. Note that although ACK 2 is lost, ACK 3 servers as both ACK 2 and ACK 1.</p>
+<p><strong><em><span style="text-decoration: underline;">Difference Between Stop-and-wait and Go-back ARQ:</span></em></strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Key</th>
+<th>Stop and Wait ARQ</th>
+<th>Go-Back-N ARQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sender window size</td>
+<td>In Stop and Wait, Sender window size is 1.</td>
+<td>In Go-Back-N, Sender window size is N.</td>
+</tr>
+<tr>
+<td>Receiver Window size</td>
+<td>In Stop and Wait, Receiver window size is 1.</td>
+<td>In Go-Back-N, Receiver window size is 1.</td>
+</tr>
+<tr>
+<td>Minimum Sequence Number</td>
+<td>In Stop and Wait, Minimum Sequence Number is 2.</td>
+<td>In Go-Back-N, Minimum Sequence Number is N+1 where N is number of packets sent.</td>
+</tr>
+<tr>
+<td>Efficiency</td>
+<td>In Stop and Wait, Efficiency formular is 1/(1+2*a) where a is ratio of propagation delay vs<br />
+transmission delay.</td>
+<td>In Go-Back-N, Efficiency formular is N/(1+2*a) where a is ratio of propagation delay vs<br />
+transmission delay and N is number of packets sent.</td>
+</tr>
+<tr>
+<td>Acknowledgement Type</td>
+<td>In Stop and Wait, Acknowledgement type is individual.</td>
+<td>In Go-Back-N, Acknowledgement type is cumulative.</td>
+</tr>
+<tr>
+<td>Supported Order</td>
+<td>In Stop and Wait, no specific order is needed at receiver end.</td>
+<td>In Go-Back-N, in-order delivery only are accepted at receiver end.</td>
+</tr>
+<tr>
+<td>Retransmissions</td>
+<td>In Stop and Wait, in case of packet drop,number of retransmition is 1.</td>
+<td>In Go-Back-N, in case of packet drop,numbers of retransmitions are N.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h2>Section B: Attempt any Eight questions. (8x5=40)</h2><h3>Question 4</h3>
+<div><p><p>Define network topology. Explain ring topology along with its merits and demerits.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A network topology is the physical and logical arrangement of nodes and connections in a network. Nodes usually include devices such as switches, routers and software with switch and router features. Network topologies are often represented as a graph.</p>
+<p><span style="text-decoration: underline;"><strong>Ring Topology:</strong></span></p>
+<ul class="points" style="list-style-type: square;">
+<li>Ring topology is like a bus topology, but with connected ends.</li>
+<li>The node that receives the message from the previous computer will retransmit to the next node.</li>
+<li>The data flows in one direction, i.e., it is unidirectional.</li>
+<li>The data flows in a single loop continuously known as an endless loop.</li>
+<li>It has no terminated ends, i.e., each node is connected to other node and having no termination point.</li>
+<li>The data in a ring topology flow in a clockwise direction.</li>
+<li>The most common access method of the ring topology is <strong>token passing</strong>.
+<ul class="points" style="list-style-type: circle;">
+<li><strong>Token passing:</strong> It is a network access method in which token is passed from one node to another node.</li>
+<li><strong>Token:</strong> It is a frame that circulates around the network.</li>
+</ul>
+</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6707 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Untitled-Diagram-153-1.png?resize=391%2C304&#038;ssl=1" alt="Ring Topology" width="391" height="304" /></p>
+<p><em><span style="text-decoration: underline;">Advantages:</span></em></p>
+<ul class="points">
+<li><strong>Network Management:</strong> Faulty devices can be removed from the network without bringing the network down.</li>
+<li><strong>Product availability:</strong> Many hardware and software tools for network operation and monitoring are available.</li>
+<li><strong>Cost:</strong> Twisted pair cabling is inexpensive and easily available. Therefore, the installation cost is very low.</li>
+<li><strong>Reliable:</strong> It is a more reliable network because the communication system is not dependent on the single host computer.</li>
+</ul>
+<p><em><span style="text-decoration: underline;">Disadvantages:</span></em></p>
+<ul class="points">
+<li><strong>Difficult troubleshooting:</strong> It requires specialized test equipment to determine the cable faults. If any fault occurs in the cable, then it would disrupt the communication for all the nodes.</li>
+<li><strong>Failure:</strong> The breakdown in one station leads to the failure of the overall network.</li>
+<li><strong>Reconfiguration difficult:</strong> Adding new devices to the network would slow down the network.</li>
+<li><strong>Delay:</strong> Communication delay is directly proportional to the number of nodes. Adding new devices increases the communication delay.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain LAN with example. How is it different from PAN?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Local Area Network is a group of computers connected to each other in a small area such as building, office.</p>
+<ul style="list-style-type: square;">
+<li>LAN is used for connecting two or more personal computers through a communication medium such as twisted pair, coaxial cable, etc.</li>
+<li>It is less costly as it is built with inexpensive hardware such as hubs, network adapters, and ethernet cables.</li>
+<li>The data is transferred at an extremely faster rate in Local Area Network.</li>
+<li>Local Area Network provides higher security.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class=" wp-image-6709 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Local-Area-Network-Scenario.png?resize=404%2C229&#038;ssl=1" alt="Local Area Network (LAN) Diagram | Hamrocsit" width="404" height="229" /></p>
+<p><span style="text-decoration: underline;"><strong>Difference Between LAN and PAN:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="wp-block-table">
+<tbody>
+<tr>
+<td><strong>BASIS</strong></td>
+<td><strong>PAN (Personal Area Network)</strong></td>
+<td><strong>LAN (Personal Area Network)</strong></td>
+</tr>
+<tr>
+<td><strong>Description </strong></td>
+<td>It’s a network covering a very small area, typically a small room. It<br />
+enables computer devices to communicate with other nearby computers and<br />
+exchange information and data.</td>
+<td>The network connects computer over a small distance such as within a<br />
+building or a single computer lab consisting of many computers.</td>
+</tr>
+<tr>
+<td><strong>Range </strong></td>
+<td>It is normally short range. The distance of coverage is between 10m<br />
+to 100m in wireless PAN network (zigbee &amp; Bluetooth).</td>
+<td>Scope is usually within single building or between buildings. The<br />
+distance of coverage is between 10m and 100m or even more in case of wireless<br />
+LAN.</td>
+</tr>
+<tr>
+<td><strong>Data Transfer</strong></td>
+<td>Mainly used for low data rate applications in home automation,<br />
+Bluetooth is used for data transfer between devices.</td>
+<td>It is designed for high data rate transfer from Mbps to Gbps.</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>PAN support 250kbps in zigbee, from Kbps to 24Mbps in Bluetooth case.</td>
+<td>LAN supports 10, 100 and 1000 Mbps while WLAN supports 54Mbps as per<br />
+(802.11a) and above 100 Mbps as per (802.11n/11ac/11ad).</td>
+</tr>
+<tr>
+<td><strong>Application</strong></td>
+<td>Used for low data rate and short distance applications.</td>
+<td>It is mainly used for wireless LAN and LAN where data transfer at<br />
+high speed is desired.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define routing table. Differentiate static routing table with dynamic routing table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A routing table is a set of rules, often viewed in table format, that is used to determine where data packets traveling over an Internet Protocol (IP) network will be directed. All IP-enabled devices, including routers and switches, use routing tables.</p>
+<p>See below a Routing Table:</p>
+<pre> <b>Destination</b>      <b>Subnet mask</b>         <b>Interface</b>
+ 128.75.43.0      255.255.255.0       Eth0
+ 128.75.43.0      255.255.255.128     Eth1
+ 192.12.17.5      255.255.255.255     Eth3
+ default                              Eth2</pre>
+<p>The entry corresponding to the <i>default</i> gateway configuration is a network destination of 0.0.0.0 with a network mask (netmask) of 0.0.0.0. The Subnet Mask of default route is always 255.255.255.255 .</p>
+<p><span style="text-decoration: underline;"><strong>Difference Between Static Routing and Dynamic Routing:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>Static Routing</th>
+<th>Dynamic Routing</th>
+</tr>
+<tr>
+<td>In static routing routes are user-defined.</td>
+<td>In dynamic routing, routes are updated according to the topology.</td>
+</tr>
+<tr>
+<td>Static routing does not use complex routing algorithms.</td>
+<td>Dynamic routing uses complex routing algorithms.</td>
+</tr>
+<tr>
+<td>Static routing provides high or more security.</td>
+<td>Dynamic routing provides less security.</td>
+</tr>
+<tr>
+<td>Static routing is manual.</td>
+<td>Dynamic routing is automated.</td>
+</tr>
+<tr>
+<td>Static routing is implemented in small networks.</td>
+<td>Dynamic routing is implemented in large networks.</td>
+</tr>
+<tr>
+<td>In static routing, additional resources are not required.</td>
+<td>In dynamic routing, additional resources are required.</td>
+</tr>
+<tr>
+<td>In static routing, failure of the link disrupts the rerouting.</td>
+<td>In dynamic routing, failure of the link does not interrupt the rerouting.</td>
+</tr>
+<tr>
+<td>Less Bandwidth is required in Static Routing.</td>
+<td>More Bandwidth is required in Dynamic Routing.</td>
+</tr>
+<tr>
+<td>Static Routing is difficult to configure.</td>
+<td>Static Routing is easy to configure.</td>
+</tr>
+<tr>
+<td>Another name for static routing is non-adaptive routing.</td>
+<td>Another name for dynamic routing is adaptive routing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is switching? Compare and contrast a circuit-switched network and packet-switched network.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Switching is the mechanism in computer networks that helps in deciding the best route for data transmission if there are multiple paths in a larger network.</p>
+<p>Larger networks may have multiple routes to link the sender and receiver. So whenever we send any information between the sender and receiver then the information switches through multiple routes.</p>
+<p>Whenever we send information from one device to another, that information does not directly reach that device, there are many intermediate nodes in the middle, and the information switch through these nodes.</p>
+<p>The comparision between Packet switching and Circuit Switching are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th><strong>Circuit Switching</strong></th>
+<th><strong>Packet Switching</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In-circuit switching has there are 3 phases:<br />
+i) Connection Establishment.<br />
+ii) Data Transfer.<br />
+iii) Connection Released.</td>
+<td>In Packet switching directly data transfer takes place.</td>
+</tr>
+<tr>
+<td>In-circuit switching, each data unit knows the entire path address which is provided by the source.</td>
+<td>In Packet switching, each data unit just knows the final destination address intermediate path is decided by the routers.</td>
+</tr>
+<tr>
+<td>In-Circuit switching, data is processed at the source system only</td>
+<td>In Packet switching, data is processed at all intermediate nodes including the source system.</td>
+</tr>
+<tr>
+<td>The delay between data units in circuit switching is uniform.</td>
+<td>The delay between data units in packet switching is not uniform.</td>
+</tr>
+<tr>
+<td>Resource reservation is the feature of circuit switching because the path is fixed for data transmission.</td>
+<td>There is no resource reservation because bandwidth is shared among users.</td>
+</tr>
+<tr>
+<td>Circuit switching is more reliable.</td>
+<td>Packet switching is less reliable.</td>
+</tr>
+<tr>
+<td>Wastage of resources is more in Circuit Switching</td>
+<td>Less wastage of resources as compared to Circuit Switching</td>
+</tr>
+<tr>
+<td>It is not a store and forward technique.</td>
+<td>It is a store and forward technique.</td>
+</tr>
+<tr>
+<td>Transmission of the data is done by the source.</td>
+<td>Transmission of the data is done not only by the source but also by the intermediate routers.</td>
+</tr>
+<tr>
+<td>Congestion can occur during the connection establishment phase because there might be a case where a request is being made for a channel but the channel is already occupied.</td>
+<td>Congestion can occur during the data transfer phase, a large number of packets comes in no time.</td>
+</tr>
+<tr>
+<td>Circuit switching is not convenient for handling bilateral traffic.</td>
+<td>Packet switching is suitable for handling bilateral traffic.</td>
+</tr>
+<tr>
+<td>In-Circuit switching, the charge depends on time and distance, not on traffic in the network.</td>
+<td>In Packet switching, the charge is based on the number of bytes and connection time.</td>
+</tr>
+<tr>
+<td>Recording of packets is never possible in circuit switching.</td>
+<td>Recording of packets is possible in packet switching.</td>
+</tr>
+<tr>
+<td>In-Circuit Switching there is a physical path between the source and the destination</td>
+<td>In Packet Switching there is no physical path between the source and the destination</td>
+</tr>
+<tr>
+<td>Circuit Switching does not support store and forward transmission</td>
+<td>Packet Switching supports store and forward transmission</td>
+</tr>
+<tr>
+<td>Call setup is required in circuit switching.</td>
+<td>No call setup is required in packet switching.</td>
+</tr>
+<tr>
+<td>In-circuit switching each packet follows the same route.</td>
+<td>In packet switching packets can follow any route.</td>
+</tr>
+<tr>
+<td>The circuit switching network is implemented at the physical layer.</td>
+<td>Packet switching is implemented at the datalink layer and network layer</td>
+</tr>
+<tr>
+<td>Circuit switching requires simple protocols for delivery.</td>
+<td>Packet switching requires complex protocols for delivery.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why do we need wireless LAN? Explain the architecture of IEEE 802.11 in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We need wireless LAN because of the following reasons</p>
+<ul style="list-style-type: square;">
+<li>It’s a reliable sort of communication.</li>
+<li>As WLAN reduces physical wires so it’s a versatile way of communication.</li>
+<li>WLAN also reduces the value of ownership.</li>
+<li>It’s easier to feature or remove workstation.</li>
+<li>It provides high rate thanks to small area coverage.</li>
+<li>You’ll also move workstation while maintaining the connectivity.</li>
+<li>For propagation, the sunshine of sight isn’t required.</li>
+<li>The direction of connectivity are often anywhere i.e. you’ll connect devices in any direction unless it’s within the range of access point.</li>
+<li>Easy installation and you would like don’t need extra cables for installation.</li>
+<li>WLAN are often useful in disasters situation e.g. earthquake and fire. WIreless network can connect people in any disaster</li>
+<li>It’s economical due to the tiny area access.</li>
+<li>The  amount of power it requires is more as it uses transmitter; therefore, the battery life of laptops can be affected</li>
+</ul>
+<h4>IEEE 802.11 Architecture:</h4>
+<p>The components of an IEEE 802.11 architecture are as follows −</p>
+<ul class="list">
+<li><strong>Stations (STA)</strong> − Stations comprises of all devices and equipment that are connected to the wireless LAN. A station can be of two types−
+<ul class="list">
+<li>Wireless Access Point (WAP) − WAPs or simply access points (AP) are generally wireless routers that form the base stations or access.</li>
+<li>Client. Clients are workstations, computers, laptops, printers, smartphones, etc.</li>
+</ul>
+</li>
+<li>Each station has a wireless network interface controller.</li>
+<li><strong>Basic Service Set (BSS)</strong> − A basic service set is a group of stations communicating at the physical layer level. BSS can be of two categories depending upon the mode of operation−
+<ul class="list">
+<li>Infrastructure BSS − Here, the devices communicate with other devices through access points.</li>
+<li>Independent BSS − Here, the devices communicate in a peer-to-peer basis in an ad hoc manner.</li>
+</ul>
+</li>
+<li><strong>Extended Service Set (ESS)</strong> − It is a set of all connected BSS.</li>
+<li><strong>Distribution System (DS)</strong> − It connects access points in ESS.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6713 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/wireless_LANs.jpg?resize=600%2C318&#038;ssl=1" alt="IEEE 802.11 Architecture" width="600" height="318" /></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is NAT? How does it work? What are its benefits?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>NAT stands for network address translation. It’s a way to map multiple local private addresses to a public one before transferring the information. Organizations that want multiple devices to employ a single IP address use NAT, as do most home routers.</p>
+<p><span style="text-decoration: underline;"><strong>Working of NAT:</strong></span></p>
+<p>Let’s say that there is a laptop connected to a home router. Someone uses the laptop to search for directions to their favorite restaurant. The laptop sends this request in a packet to the router, which passes it along to the web. But first, the router changes the outgoing IP address from a private local address to a public address.</p>
+<p>If the packet keeps a private address, the receiving server won’t know where to send the information back to — this is akin to sending physical mail and requesting return service but providing a return address of anonymous. By using NAT, the information will make it back to the laptop using the router’s public address, not the laptop’s private one.</p>
+<p><span style="text-decoration: underline;"><strong>Benefits of NAT:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>It allows you to rescue the private IP address.</li>
+<li>It has got good security features that enhance the security of private networks by separating the internal network from the external network.</li>
+<li>It helps to conserve the IP address space. You can connect a large number of hosts using a small IP address to the global internet.</li>
+</ul>
+</div>
+<h3>Question 10</h3>
+<div><p><p>In a block of address, we know the IP Address of one host is 192.34.12.56/28. What are the first address(network address)  and the last address (limited broadcast address) in this block?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given,</p>
+<p>IP Address = 192.34.12.56/28</p>
+<p>Subnet mask: 11111111.11111111.11111111.11110000 (255.255.255.240)</p>
+<p>Total Subnet = 2<sup>4</sup> = 16</p>
+<p>Total host = 2<sup>4</sup> = 16</p>
+<p>Usable host = 16 &#8211; 2 = 14</p>
+<p>Valid Subnets (4<sup>th</sup> octet) = 256 &#8211; 246 = 16</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%;">Subnet Network IP</td>
+<td style="width: 25%;" colspan="2">Usable IP Pool (1<sup>st</sup> host and last host)</td>
+<td style="width: 25%;">Broadcast IP</td>
+</tr>
+<tr>
+<td style="width: 25%;"></td>
+<td style="width: 25%;">First Host</td>
+<td style="width: 25%;">Last Host</td>
+<td style="width: 25%;"></td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.0</td>
+<td style="width: 25%;">192.34.12.1</td>
+<td style="width: 25%;">192.34.12.14</td>
+<td style="width: 25%;">192.34.12.15</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.16</td>
+<td style="width: 25%;">192.34.12.17</td>
+<td style="width: 25%;">192.34.12.30</td>
+<td style="width: 25%;">192.34.12.31</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.32</td>
+<td style="width: 25%;">192.34.12.33</td>
+<td style="width: 25%;">192.34.12.46</td>
+<td style="width: 25%;">192.34.12.47</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.48</td>
+<td style="width: 25%;">192.34.12.49</td>
+<td style="width: 25%;">192.34.12.62</td>
+<td style="width: 25%;">192.34.12.63</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.64</td>
+<td style="width: 25%;">192.34.12.65</td>
+<td style="width: 25%;">192.34.12.78</td>
+<td style="width: 25%;">192.34.12.79</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.80</td>
+<td style="width: 25%;">192.34.12.81</td>
+<td style="width: 25%;">192.34.12.94</td>
+<td style="width: 25%;">192.34.12.95</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.96</td>
+<td style="width: 25%;">192.34.12.97</td>
+<td style="width: 25%;">192.34.12.110</td>
+<td style="width: 25%;">192.34.12.111</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.112</td>
+<td style="width: 25%;">192.34.12.113</td>
+<td style="width: 25%;">192.34.12.126</td>
+<td style="width: 25%;">192.34.12.127</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.128</td>
+<td style="width: 25%;">192.34.12.129</td>
+<td style="width: 25%;">192.34.12.142</td>
+<td style="width: 25%;">192.34.12.143</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.144</td>
+<td style="width: 25%;">192.34.12.145</td>
+<td style="width: 25%;">192.34.12.158</td>
+<td style="width: 25%;">192.34.12.159</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.160</td>
+<td style="width: 25%;">192.34.12.161</td>
+<td style="width: 25%;">192.34.12.174</td>
+<td style="width: 25%;">192.34.12.175</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.176</td>
+<td style="width: 25%;">192.34.12.177</td>
+<td style="width: 25%;">192.34.12.190</td>
+<td style="width: 25%;">192.34.12.191</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.192</td>
+<td style="width: 25%;">192.34.12.193</td>
+<td style="width: 25%;">192.34.12.206</td>
+<td style="width: 25%;">192.34.12.207</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.208</td>
+<td style="width: 25%;">192.34.12.209</td>
+<td style="width: 25%;">192.34.12.222</td>
+<td style="width: 25%;">192.34.12.223</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.224</td>
+<td style="width: 25%;">192.34.12.225</td>
+<td style="width: 25%;">192.34.12.238</td>
+<td style="width: 25%;">192.34.12.239</td>
+</tr>
+<tr>
+<td style="width: 25%;">192.34.12.240</td>
+<td style="width: 25%;">192.34.12.241</td>
+<td style="width: 25%;">192.34.12.254</td>
+<td style="width: 25%;">192.34.12.255</td>
+</tr>
+</tbody>
+</table></div>
+<p>First Address (Network Address) = 192.34.12.48/28</p>
+<p>First host = 192.34.12.49/28</p>
+<p>Last host = 192.34.12.62/28</p>
+<p>Broadcast address = 192.34.12.63/28</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why do we need a DNS system when we can directly use an IP address? what is domain name space?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Domain Name System (DNS) is a kind of computer server that posses all database of IP addresses. In other words it is a hierarchical naming system where users on the same network can access other computers or devices.</p>
+<p><strong><span style="text-decoration: underline;">Requirement of DNS over IP:</span></strong></p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Memorizing IP addresses for your favorite sites is much harder than memorizing “www.google.com”, “www.amazon.com” and “www.facebook.com”.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">IP addresses change over time. IP addresses likely change if you switch hosting companies but domain names usually don’t.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Using DNS you can advertise the IP addresses of several redundant web sites all under the same name.</p>
+<p class="q-text qu-display--inline qu-wordBreak--break-word qu-textAlign--start">It is possible to put several domain names on the same web site IP address and what you get varies with the name you use. For these sites, you CANNOT directly use an IP address to get their content.</p>
+<p><span style="text-decoration: underline;"><strong>Domain Name Space:</strong></span></p>
+<p>The domain name space refers a hierarchy in the internet naming structure. This hierarchy has multiple levels (from 0 to 127), with a root at the top. The following diagram shows the domain name space hierarchy:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6720" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/internet-domain_name_space.jpg?resize=358%2C184&#038;ssl=1" alt="Domain name space" width="358" height="184" /></p>
+<p>In the above diagram each subtree represents a domain. Each domain can be partitioned into sub domains and these can be further partitioned and so on.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):</p>
+<ol>
+<li>Connection-oriented service</li>
+<li>Bridge</li>
+<li>Hamming distance</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Coneection Oriented Service:</strong></span></p>
+<p>A connection-oriented service is a technique used to transport data at the session layer. Unlike its opposite, connnectionless service, connection-oriented service requires that a session connection be established between the sender and receiver, analogous to a phone call. This method is normally considered to be more reliable than a connectionless service, although not all connection-oriented protocols are considered reliable.</p>
+<p>A connection-oriented service can be a circuit-switched connection or a virtual circuit connection in a packet-switched network. For the latter, traffic flows are identified by a connection identifier, typically a small integer of 10 to 24 bits. This is used instead of listing the destination and source addresses.</p>
+<p><span style="text-decoration: underline;"><strong>Bridge:</strong></span></p>
+<p>A bridge is a type of computer network device that provides interconnection with other bridge networks that use the same protocol.</p>
+<p>Bridge devices work at the data link layer of the Open System Interconnect (OSI) model, connecting two different networks together and providing communication between them. Bridges are similar to repeaters and hubs in that they broadcast data to every node. However, bridges maintain the media access control (MAC) address table as soon as they discover new segments, so subsequent transmissions are sent to only to the desired recipient.</p>
+<p>Bridges are also known as Layer 2 switches.</p>
+<p><span style="text-decoration: underline;"><strong>Hamming distance:</strong></span></p>
+<p>Hamming distance is a metric for comparing two binary data strings. While comparing two binary strings of equal length, Hamming distance is the number of bit positions in which the two bits are different.</p>
+<p>The Hamming distance between two strings, a and b is denoted as d(a,b).</p>
+<p>It is used for error detection or error correction when data is transmitted over computer networks. It is also using in coding theory for comparing equal length data words.</p>
+</div>
+</body></html>

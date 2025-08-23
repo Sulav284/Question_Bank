@@ -1,0 +1,361 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DBMS Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>DBMS Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any Two questions(2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What are the advantages of using Database Management System over traditional filing system? Explain different data models with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The advantages of using a Database Management System over a traditional filing system are</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Data redundancy and inconsistency: </span>Redundancy is the concept of repetition of data i.e. each data may have more than a single copy. The file system cannot control the redundancy of data as each user defines and maintains the needed files for a specific application to run. There may be a possibility that two users are maintaining the data of the same file for different applications. Hence changes made by one user do not reflect in files used by second users, which leads to inconsistency of data. Whereas DBMS controls redundancy by maintaining a single repository of data that is defined once and is accessed by many users. As there is no or less redundancy, data remains consistent.</li>
+<li><span style="text-decoration: underline;">Data sharing:</span>The file system does not allow sharing of data or sharing is too complex. Whereas in DBMS, data can be shared easily due to a centralized system.</li>
+<li><span style="text-decoration: underline;">Data concurrency: </span>Concurrent access to data means more than one user is accessing the same data at the same time. Anomalies occur when changes made by one user get lost because of changes made by another user. The file system does not provide any procedure to stop anomalies. Whereas DBMS provides a locking system to stop anomalies to occur.</li>
+<li><span style="text-decoration: underline;">Data searching: </span>For every search operation performed on the file system, a different application program has to be written. While DBMS provides inbuilt searching operations. The user only has to write a small query to retrieve data from the database.</li>
+<li><span style="text-decoration: underline;">Data integrity</span><strong>: </strong>There may be cases when some constraints need to be applied to the data before inserting it into the database. The file system does not provide any procedure to check these constraints automatically. Whereas DBMS maintains data integrity by enforcing user-defined constraints on data by itself.</li>
+<li><span style="text-decoration: underline;">System crashing:</span> In some cases, systems might have crashed due to various reasons. It is a bane in the case of file systems because once the system crashes, there will be no recovery of the data that’s been lost. A DBMS will have the recovery manager which retrieves the data making it another advantage over file systems.</li>
+<li><span style="text-decoration: underline;">Data security</span><strong>: </strong>A file system provides a password mechanism to protect the database but how long can the password be protected? No one can guarantee that. This doesn’t happen in the case of DBMS. DBMS has specialized features that help provide shielding to its data.</li>
+<li><span style="text-decoration: underline;">Backup</span><strong>: </strong>It creates a backup subsystem to restore the data if required.</li>
+<li><span style="text-decoration: underline;">Interfaces</span>: It provides different multiple user interfaces like graphical user interface and application program interface.</li>
+<li><span style="text-decoration: underline;">Easy Maintenance</span>: It is easily maintainable due to its centralized nature.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Database Modal:</strong></span></p>
+<p>A Database model defines the logical design and structure of a database and defines how data will be stored, accessed, and updated in a database management system. While the Relational Model is the most widely used database model, there are other models too:</p>
+<ul class="content">
+<li>Hierarchical Model</li>
+<li>Network Model</li>
+<li>Entity-relationship Model</li>
+<li>Relational Model</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>1. Hierarchical Model:</strong></span></p>
+<p>This database model organizes data into a tree-like structure, with a single root, to which all the other data is linked. The hierarchy starts from the Root data, and expands like a tree, adding child nodes to the parent nodes.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6939 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/hierarchical-dbms-model.webp?resize=510%2C211&#038;ssl=1" alt="Hierarchical Model" width="510" height="211" /></p>
+<p><strong><span style="text-decoration: underline;">2. Network Model:</span></strong></p>
+<p>This is an extension of the Hierarchical model. In this model, data is organized more like a graph, and are allowed to have more than one parent node.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6940 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/network-dbms-model.webp?resize=280%2C210&#038;ssl=1" alt="Network Model" width="280" height="210" /></p>
+<p><span style="text-decoration: underline;"><strong>3. Entity-relationship Model:</strong></span></p>
+<p>In this database model, relationships are created by dividing objects of interest into entities and their characteristics into attributes.</p>
+<p>Different entities are related using relationships.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6941 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/attribute-example.webp?resize=398%2C199&#038;ssl=1" alt="ER Diagram" width="398" height="199" /></p>
+<p><span style="text-decoration: underline;"><strong>4. Relational Modal:</strong></span></p>
+<p>In this model, data is organized in two-dimensional tables and the relationship is maintained by storing a common field.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6942 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/relational-dbms-model.webp?resize=330%2C218&#038;ssl=1" alt="Relation Modal" width="330" height="218" /></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is concurrency control? Name various methods of controlling the concurrency control? Differentiate between Binary lock and shared/Exclusive lock.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Concurrency control is a set of techniques used to ensure that multiple transactions can access a database at the same time without corrupting the data.<br />
+There are two main types of concurrency control:</p>
+<ul style="list-style-type: square;">
+<li>Lock-based concurrency control uses locks to prevent transactions from accessing data that is being modified by another transaction.</li>
+<li>Non-lock-based concurrency control uses other techniques, such as timestamping or optimistic concurrency control, to prevent transactions from corrupting data.</li>
+</ul>
+<p>Some of the most common methods of concurrency control include:</p>
+<ul style="list-style-type: square;">
+<li>Locking</li>
+<li>Timestamping</li>
+<li>Optimistic concurrency control</li>
+<li>Two-phase locking</li>
+<li>Multiversion concurrency control</li>
+<li>Distributed locking</li>
+</ul>
+<p>The best method of concurrency control for a particular application will depend on a number of factors, including the type of data being stored, the number of transactions, and the performance requirements.<br />
+Here are some of the benefits of concurrency control:</p>
+<ul style="list-style-type: square;">
+<li>Increased performance: Concurrency control can help to improve the performance of database applications by allowing multiple transactions to access the database at the same time.</li>
+<li>Reduced data corruption: Concurrency control can help to reduce data corruption by preventing transactions from accessing data that is being modified by another transaction.</li>
+<li>Improved data integrity: Concurrency control can help to improve data integrity by ensuring that all transactions are executed in a consistent manner.</li>
+</ul>
+<p>Here are some of the challenges of concurrency control:</p>
+<ul style="list-style-type: square;">
+<li>Complexity: Concurrency control can be complex to implement and manage.</li>
+<li>Performance: Concurrency control can sometimes reduce the performance of database applications.</li>
+<li>Data loss: Concurrency control can sometimes lead to data loss if transactions are not executed in a consistent manner.</li>
+</ul>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is normal form? Explain their types. Explain about loss-less join decomposition.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Normalization is the process of organizing the data in the database. Normalization is used to minimize the redundancy of a relation or set of relations. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.</p>
+<p>Normal forms are used to eliminate or reduce redundancy in database tables.</p>
+<p>Normal Forms are divided into five types:</p>
+<ol class="content">
+<li>First Normal Form</li>
+<li>Second Normal Form</li>
+<li>Third Normal Form</li>
+<li>BCNF</li>
+<li>Fourth Normal Form</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1. First Normal Form:</strong></span></p>
+<p>For a table to be in the First Normal Form, it should follow the following 4 rules:</p>
+<ol class="content">
+<li>It should only have single(atomic) valued attributes/columns.</li>
+<li>Values stored in a column should be of the same domain</li>
+<li>All the columns in a table should have unique names.</li>
+<li>And the order in which data is stored does not matter.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>2. Second Normal Form:</strong></span></p>
+<p>For a table to be in the Second Normal Form,</p>
+<ol class="content">
+<li>It should be in the First Normal form.</li>
+<li>And, it should not have Partial Dependency.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>3. Third Normal Form:</strong></span></p>
+<p>A table is said to be in the Third Normal Form when,</p>
+<ol class="content">
+<li>It is in the Second Normal form.</li>
+<li>And, it doesn&#8217;t have Transitive Dependency.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>4. Boyce and Codd Normal Form:</strong></span></p>
+<p>Boyce and Codd&#8217;s Normal Form is a higher version of the Third Normal form. This form deals with a certain type of anomaly that is not handled by 3NF. A 3NF table that does not have multiple overlapping candidate keys is said to be in BCNF. For a table to be in BCNF, the following conditions must be satisfied:</p>
+<ul class="content">
+<li>R must be in the 3rd Normal Form</li>
+<li>and, for each functional dependency ( X → Y ), X should be a super Key.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>5. Fourth Normal Form:</strong></span></p>
+<p>A table is said to be in the Fourth Normal Form when,</p>
+<ol class="content">
+<li>It is in the Boyce-Codd Normal Form.</li>
+<li>And, it doesn&#8217;t have Multi-Valued Dependency.</li>
+</ol>
+</div>
+<h2>Section B: Short Answer Questions(8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>What is data abstraction? What are three levels of data abstraction? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Data Abstraction is a process of hiding unwanted or irrelevant details from the end user. It provides a different view and helps in achieving data independence which is used to enhance the security of data.</p>
+<p>Mainly there are three levels of abstraction for DBMS, which are as follows −</p>
+<ul class="list">
+<li>Physical or Internal Level</li>
+<li>Logical or Conceptual Level</li>
+<li>View or External Level</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">1. Physical or Internal Level:</span></strong></p>
+<p>It is the lowest level of abstraction for DBMS which defines how the data is actually stored, it defines data structures to store data and access methods used by the database. Actually, it is decided by developers or database application programmers how to store the data in the database.</p>
+<p>So, overall, the entire database is described on this level that is physical or internal level. It is a very complex level to understand. For example, customer information is stored in tables, and data is stored in the form of blocks of storage such as bytes, gigabytes, etc.</p>
+<p><span style="text-decoration: underline;"><strong>2. Logical or Conceptual Level:</strong></span></p>
+<p>The logical level is the intermediate level or the next higher level. It describes what data is stored in the database and what relationship exists among those data. It tries to describe the entire or whole data because it describes what tables are to be created and what are the links among those tables that are created.</p>
+<p>It is less complex than the physical level. The logical level is used by developers or database administrators (DBA). So, overall, the logical level contains tables (fields and attributes) and relationships among table attributes.</p>
+<p><span style="text-decoration: underline;"><strong>3. View or External Level:</strong></span></p>
+<p>It is the highest level. At the view level, there are different levels of views and every view only defines a part of the entire data. It also simplifies interaction with the user and it provides many views or multiple views of the same database.</p>
+<p>View level can be used by all users (all levels&#8217; users). This level is the least complex and easy to understand.</p>
+<p>For example, a user can interact with a system using GUI that is view level and can enter details at GUI or screen and the user does not know how data is stored and what data is stored, this detail is hidden from the user.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is difference between Entities and Entity sets? Explain with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><span style="text-decoration: underline;"><strong>Entity:</strong></span></p>
+<p>An entity is a real-world thing that can be distinctly identified as a person, place, or concept. It is an object which is distinguishable from others. If we cannot distinguish it from others then it is an object but not an entity.</p>
+<p><b class="graf--bold">Example:</b> If we have a table of a Student (Roll_no, Student_name, Age, Mobile_no) then each student in that table is an entity and can be uniquely identified by their Roll Number i.e Roll_no.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6798 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/entity.jpg?resize=754%2C296&#038;ssl=1" alt="Entity" width="754" height="296" /></p>
+<p><span style="text-decoration: underline;"><strong>Entity Set:</strong></span></p>
+<p>Entity Set is a collection of entities of the same entity type. In the above example of the STUDENT entity type, a collection of entities from the Student entity type would form an entity set.</p>
+<p><b class="graf--bold"><i class="graf--italic">Example 1: </i></b>In the below example, two entities E1 (2, Angel, 19, 8709054568) and E2(4, Analisa, 21, 9847852156) form an entity set.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6799 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/entity-set.jpg?resize=749%2C475&#038;ssl=1" alt="Entity Set" width="749" height="475" /></p>
+<p>The difference between Entities and Entity sets are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th><strong>Entity</strong></th>
+<th><strong>Entity Set</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A thing in the real world with independent existence</td>
+<td>Set of all entities of a particular entity type.</td>
+</tr>
+<tr>
+<td>Any particular row (a record) in a relation(table) is known as an entity.</td>
+<td>All rows of a relation (table) in RDBMS are entity set</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Create two table Courses (CID, Course, Dept) and HoD (Dept, Head) using SQL language with all constraints [Primary key, Foreign key and Referential Integrity]. Assume the types of attributes by your own.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>We will create a table with Course, and HoD using SQL. The SQL code is given below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">-- Create Table "Course":
+CREATE table Courses (
+    CID INT(11),
+    Course varchar(50),
+    Dept varchar(70),
+    PRIMARY KEY (CID)
+)
+
+-- Create Table "HoD":
+CREATE table HoD (
+    Dept varchar(70)
+    Head TEXT,
+    FOREIGN KEY (Dept) REFERENCES Course(Dept)
+)</pre>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between Integrity and Security with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between security and integrity are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<th>Data Security</th>
+<th>Data Integrity</th>
+</tr>
+<tr>
+<td>Data security refers to the prevention of data corruption through the use of controlled access<br />
+mechanisms.</td>
+<td>Data integrity refers to the quality of data, which assures the data is complete and has a whole<br />
+structure.</td>
+</tr>
+<tr>
+<td>Its motive is the protection of data.</td>
+<td>Its motive is the validity of data.</td>
+</tr>
+<tr>
+<td>Its work is to only the people who should have access to the data are the only ones who can access the<br />
+data.</td>
+<td>Its work is to check the data is correct and not corrupt.</td>
+</tr>
+<tr>
+<td>It refers to ensuring that data is accessed by its intended users, thus ensuring data privacy and protection.</td>
+<td>It refers to the structure of the data and how it matches the database&#8217;s schema.</td>
+</tr>
+<tr>
+<td>Some of the popular means of data security are authentication/authorization, masking, and encryptions.</td>
+<td>Some of the means to preserve integrity are backing up, error detection, designing a suitable user<br />
+interface, and correcting data.</td>
+</tr>
+<tr>
+<td>It relates to the physical form of data against accidental or intentional loss or misuse and<br />
+destruction.</td>
+<td>It relates to the logical protection (correct, complete, and consistent) of data.</td>
+</tr>
+<tr>
+<td>It avoids unauthorized access of data.</td>
+<td>It avoids human error when data is entered.</td>
+</tr>
+<tr>
+<td>It can be implemented through :</p>
+<ul style="list-style-type: square;">
+<li>user accounts (passwords)</li>
+<li>authentication schemes</li>
+</ul>
+<p>&nbsp;</td>
+<td>It can be implemented by the following rule :</p>
+<ul style="list-style-type: square;">
+<li>Primary Key</li>
+<li>Foreign Key</li>
+<li>Relationship</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Define schedule and serializability. How can you test the serializability?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A series of operations from one transaction to another transaction is known as a schedule. It is used to preserve the order of the operation in each individual transaction.</p>
+<p>A schedule is serialized if it is equivalent to a serial schedule. A concurrent schedule must ensure it is the same as if executed serially means one after another. It refers to the sequence of actions such as reading, writing, aborting, and committing performed in a serial manner.</p>
+<p><span style="text-decoration: underline;"><strong>Testing of Serializability:</strong></span></p>
+<p>To test the serializability of a schedule, we can use Serialization Graph or Precedence Graph. A serialization Graph is nothing but a Directed Graph of the entire transactions of a schedule.</p>
+<p>It can be defined as a Graph G(V, E) consisting of a set of directed-edges E = {E1, E2, E3, &#8230;, En} and a set of vertices V = {V1, V2, V3, &#8230;,Vn}. The set of edges contains one of the two operations &#8211; READ, WRITE performed by a certain transaction.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6931  aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/08/ezgif.com-gif-maker.webp?resize=381%2C180&#038;ssl=1" alt="Testing of Serializability:" width="381" height="180" /></p>
+<p>&nbsp;</p>
+<p>Ti -&gt; Tj, means Transaction-Ti is either performing read or write before the transaction-Tj.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is Granularity of data items? How does it effect in concurrency control?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Granularity of data items refers to the levels of detail that are captured when data is stored. The higher the granularity, the more detailed and specific the information becomes. This can have a significant impact on concurrency control because it may become difficult to process large amounts of data if it isn&#8217;t organized in a way that makes sense.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">Most databases store data at either a lower or upper level of granularity. Lower-level storage generally corresponds to less detailed records while upper-level storage captures greater detail than lower level storage does. When working with larger volumes or sets of data, it can be difficult to manage transactions if they aren&#8217;t processed at an appropriate level of granularity.</p>
+<p class="q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start">When designing your database, consider how you will need to organize and query your data in order for transactions to run smoothly and efficiently.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain 2 phase locking technique in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A lock is a variable associated with a data item that describes the item&#8217;s status with respect to possible operations that can be applied to it. Generally, there is one lock for each data item in the database.</p>
+<p>Locking is an operation with secures: permission to read or write a data item. Two-phase locking is a process used to gain ownership of shared resources without creating the possibility of deadlock. The 3 activities taking place in the two-phase update algorithm are:</p>
+<ul style="list-style-type: square;">
+<li>Lock acquisition</li>
+<li>Modification of data</li>
+<li>Release lock</li>
+</ul>
+<p>Two-phase locking prevents deadlock from occurring in distributed systems by releasing all the resources it has acquired if it is not possible to acquire all the resources required without waiting for another process to finish using a lock. A transaction in the two-phase locking protocol can be assumed one of the two phases:</p>
+<ol style="list-style-type: lower-roman;">
+<li><span style="text-decoration: underline;">Growing Phase:</span> In this phase, a transaction can only acquire locks but cannot release any lock. The point when a transition acquires all the locks it needs is called the lock point.</li>
+<li><span style="text-decoration: underline;">Shrinking Phase:</span> In this phase, a transaction can only release locks but cannot acquire any.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What are the different approaches of Database recover? What should log file maintain in log-based recovery?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The different approaches of database recovery are:</p>
+<ol style="list-style-type: lower-roman;">
+<li><span style="text-decoration: underline;"><strong>Log-Based Recovery</strong></span>:<br />
+Keeps track of every database transaction using log files. Two typical methods:</li>
+<li><span style="text-decoration: underline;"><strong>Undo &amp; Redo</strong>:</span><br />
+Undo reverts transactions that haven&#8217;t been committed. Redo apply committed transactions once more. Maintains a shadow duplicate of the database by shadow paging. The old page is kept for recovery while the new page is altered.</li>
+<li><span style="text-decoration: underline;"><strong>Checkpoints</strong></span>:<br />
+To reduce the scope of rollbacks or redos during recovery, periodically store the database state and log file location.</li>
+<li><span style="text-decoration: underline;"><strong>Deferred Updates</strong></span>:<br />
+Until a transaction commits, changes are recorded but not yet applied to the database.</li>
+<li><span style="text-decoration: underline;"><strong>Instant Updates</strong></span>:<br />
+To guarantee that the committed state is restored, modifications are made to the database right away and recorded.</li>
+</ol>
+<p>A log file in log-based recovery should maintain following:</p>
+<ul style="list-style-type: square;">
+<li><strong>Transaction ID</strong>: A special number assigned to every transaction.</li>
+<li><strong>Timestamp</strong>: Documents the transaction&#8217;s time.</li>
+<li><strong>Before transaction detail</strong>: Pre-transaction original data.</li>
+<li><strong>After transaction detail</strong>: Data that has been updated following the transaction.</li>
+<li><strong>Operation Type</strong>: Action taken (delete, update, or insert).</li>
+<li><strong>Rollback/Commit Marker</strong>: Indicates whether the transaction was committed or rolled back.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Explain the use of primary and foreign key in DBMS with example. What is the role of foreign key?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The primary key is used to identify data uniquely therefore two rows can’t have the same primary key. It can’t be null.</p>
+<p>On the other hand, foreign key is used to maintain a relationship between two tables. Primary of a table act as a foreign key in the other table. Foreign keys in a table Enforce Referential Integrity constraint. It can be more than once on the table.</p>
+<p><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>Here we have two tables, Employee and Department, which contain the Information of Employees and Department, respectively.</p>
+<p id="employee"><em><span style="text-decoration: underline;">Employee:</span></em></p>
+<div>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Department No</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td>001</td>
+</tr>
+<tr>
+<td>002</td>
+<td>Peter</td>
+</tr>
+<tr>
+<td>027</td>
+<td>Jon</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p id="department"><em><span style="text-decoration: underline;">Department:</span></em></p>
+<div>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<thead>
+<tr>
+<th>Department No</th>
+<th>Department Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td>Sales</td>
+</tr>
+<tr>
+<td>002</td>
+<td>Marketing</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here department no in the Employee table is a foreign key. As you can see, there are only two departments in the department table, but in the Employee table, if a new Employee is added with the department no 027, which is not a valid foreign key hence here concept of referential integrity comes into the picture it will prevent new Employee with the wrong department no to be added.</p>
+</div>
+<p><span style="text-decoration: underline;"><strong>Roles of Foreign Key:</strong></span></p>
+<ul style="list-style-type: square;">
+<li>Foreign keys help you to migrate entities using a primary key from the parent table.</li>
+<li>A foreign key enables you to link two or more tables together.</li>
+<li>It makes your database data consistent.</li>
+<li>A foreign key can be used to match a column or combination of columns with primary key in a parent table.</li>
+<li>SQL foreign key constraint is used to make sure the referential integrity of the data parent to match values in the child table.</li>
+</ul>
+</div>
+</body></html>

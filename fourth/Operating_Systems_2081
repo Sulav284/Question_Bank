@@ -1,0 +1,266 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>OS Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO questions.</h2><h3>Question 1</h3>
+<div><p><p>Explain the translation of logical address into physical address using segment table with necessary diagram. List advantages and disadvantages of segmentation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Segmentation is a memory management technique that separates the memory into segments of varying sizes. A limit that specifies the segment&#8217;s size and a unique number (the segment number) are assigned to each segment.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48535" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/segment.drawio.png?resize=1091%2C526&#038;ssl=1" alt="" width="1091" height="526"></p>
+<p style="text-align: center;">fig: Translate Logical Address to Physical Address</p>
+<p>1. <strong>Logical Address Structure</strong>: In segmentation, a logical address is made up of:</p>
+<ul style="list-style-type: square;">
+<li>The segment is identified by its segment number (s).</li>
+<li>Offset (d) indicates where the section is located.</li>
+</ul>
+<p>2. <strong>Segment Table</strong>: The Segment Table converts the base address and limit, which make up the logical address, into a one-dimensional physical address. Every table entry contains:</p>
+<ul style="list-style-type: square;">
+<li>Base location: It includes the initial physical location in memory where the segments are located.</li>
+<li>Limit: It indicates how long the segment is.</li>
+</ul>
+<p>3. <strong>Method of Translation</strong>:</p>
+<ul style="list-style-type: square;">
+<li>The segment table is indexed using the logical address&#8217;s segment number (s).</li>
+<li>From the segment table, the segment&#8217;s base address is obtained.</li>
+<li>To obtain the physical address, the offset (d) is appended to the base address:<br />
+Physical Address = Base + Offset</li>
+<li>There is a segmentation error if the offset is greater than the segment&#8217;s bound.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Advantage of Segmentation :</p>
+<ul style="list-style-type: square;">
+<li>No internal fragmentation.</li>
+<li>Less overhead.</li>
+<li>Easier to reallocate segments than entire address space.</li>
+<li>Segment table is of lesser size as compared to the page table in paging.</li>
+</ul>
+<p>Disadvantage of Segmentation :</p>
+<ul style="list-style-type: square;">
+<li>It can have external fragmentation.</li>
+<li>It is difficult to allocate contigeous memory to variable sized partition.</li>
+<li>Costly memory management algorithm.</li>
+</ul>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Find the seek time using SCAN, C-SCAN, Look and C-Look disk scheduling algorithms for processing the following request queue:<br />
+35, 70, 45, 15, 65, 20, 80, 90, 75, 130.<br />
+Suppose the disk has tracks numbered from 0 to 150 and assume the disk arm to be at 30 and moving outward.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given, IO requests queue</p>
+<p>35, 70, 45, 15, 65, 20, 80, 90, 75, 130.</p>
+<p><strong>1. SCAN:</strong></p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48546" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/SCAN.drawio.png?resize=615%2C281&#038;ssl=1" alt="" width="615" height="281"></p>
+<p style="text-align: center;">Total Seek time = (150-30) + (150-15)</p>
+<p style="text-align: center;">=120+135</p>
+<p style="text-align: center;">= 155</p>
+<p><strong>2. C-SCAN:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48547" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/CSCAN.drawio.png?resize=623%2C311&#038;ssl=1" alt="" width="623" height="311"></p>
+<p style="text-align: center;">Total Seek time = (150-30) + (150-15) +(20-0)</p>
+<p style="text-align: center;">=120+150 +20</p>
+<p style="text-align: center;">= 290</p>
+<p>&nbsp;</p>
+<p><strong>3. LOOK:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48548" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/LOOK.drawio.png?resize=615%2C261&#038;ssl=1" alt="" width="615" height="261"></p>
+<p style="text-align: center;">Total Seek time = (130-30) + (130-15)</p>
+<p style="text-align: center;">=100+115</p>
+<p style="text-align: center;">= 215</p>
+<p><strong>4. C-LOOK:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48549" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/CLOOK.drawio.png?resize=615%2C251&#038;ssl=1" alt="" width="615" height="251"></p>
+<p style="text-align: center;">Total Seek time = (130-30) + (130-15) + (20-15)</p>
+<p style="text-align: center;">=100+115 +5</p>
+<p style="text-align: center;">= 220</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain the Sleeping Barber problem. Illustrate on how it can be solved.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Sleeping Barber Problem is a famous synchronization problem that demonstrates the difficulties associated in managing several processes and resources in a concurrent system. It is a barbershop with one barber, one chair, and a restricted number of waiting chairs for customers. The problem represents the synchronization of clients and barbers.</p>
+<ul style="list-style-type: square;">
+<li><strong>The Barber</strong>: The barber&#8217;s job is to cut clients&#8217; hair. The barber sleeps if there are no clients. The barber begins cutting the client&#8217;s hair as soon as they arrive.</li>
+<li><strong>The Clients</strong>: People come to the barbershop to get haircuts. The customer sits down and waits for the barber if there is a chair available in the business. When the store is full, meaning that every waiting chair is occupied, the client exits.</li>
+<li><strong>Waiting chair</strong>: There are just a certain amount of chairs accessible for patrons to wait in. The consumer exits the store if there are no chairs available.</li>
+</ul>
+<p>The solution to this problem includes three semaphores. First is for the customer which counts no. of customers present in the waiting room. Second the barber, 0 or 1 is used to tell whether the barber is idle or working and third nutex is used to provide the mutual exclusion required for process to execute.</p>
+<p>When the customer arrives, then s/he accuire the mutex for entering critical region, if another customer enters thereafter, the second one will not be able to anything until the first one has released the mutex.</p>
+<p>If the chair is available then the customer sits in the waiting hall and increments the variable and also increase the customer&#8217;s semaphore this wakes up the barber if he is sleepy. At this point, customer and barber both are awake and the barber is ready to give that person a haircut. When the haircut is done then the customer will exit the procedure and if there is no customer in waiting room the barber will sleep.</p>
+<p>Algorithm:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">Semaphore customer = 0;
+Semaphore barber = 0;
+Semaphore seats = 1;
+int freeSeat = N;
+
+Barber{
+While (true){
+down(customer);    /*waits for customer*/
+down(seats);       /*mutex to protect no. of seats*/
+freeSeat++;        /* a chair gets free*/
+up(barber);        /* bringing brber for haircut*/
+up(seats);         /* release mutex on chair*/
+
+
+/*barber is now cutting hair*/
+
+Customer{
+While (true){
+if (freeSeat &gt; 0){
+freeSeat--;         /*sitting down*/
+up(customer);       /*notify the barber*/
+up(seats);          /*release the lock*/
+down(barber);       /* wait in waiting room if barber is busy*/
+/*Customer is now having haircut*/
+}
+
+else{
+up(seats);           /* release the lock*/
+/*Customer leaves*/
+}</pre>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT questions.</h2><h3>Question 4</h3>
+<div><p><p>Explain microkernels and exokernels.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>microkernel</strong> is a kind of operating system that offers some fundamental functions, such as memory management and process scheduling. User-level processes are in charge of managing some additional services, such as file systems and device drivers. Microkernel and User Level Process exchange messages. Microkernels are more flexible and modular than conventional monolithic kernels because of this method of process management.</p>
+<p>A microkernel architecture&#8217;s primary benefit is that it offers an operating system that is more reliable and secure. An attacker finds it more difficult to exploit flaws since the operating system&#8217;s attack surface is smaller because only the most crucial services operate in kernel space. The primary drawback of a microkernel is that, in contrast to direct system calls in a monolithic kernel, message flow between user-level processes may be slower.</p>
+<p><strong>Exokernels</strong> represent an intriguing paradigm shift in OS architecture. They provide applications direct access to hardware resources, providing unparalleled performance and flexibility. Even though they are not yet extensively utilized, exokernels continue to influence OS research and development, contributing to the direction of computing. Understanding these concepts is crucial for anybody looking to push the boundaries of operating system architecture and performance.</p>
+<p>The limits of simplicity are pushed by an Exokernel OS architecture. Applications may manage resources and make decisions that the kernel has already made since they have direct access to hardware resources.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Consider a swapping system in which memory consists of the following hole sizes in memory order:<br />
+15 MB, 2 MB, 10 MB, 6 MB, 8 MB and 20 MB.<br />
+Which hole is taken for successive segment requests of:</p>
+<p>(a) 10 MB<br />
+(b) 10 MB<br />
+For first fit, next fit and best fit.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 6</h3>
+<div><p><p>Explain how semaphore solves the problem of critical section.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>How do you think deadlock can be avoided? Explain.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 8</h3>
+<div><p><p>Explain Inter-Process Communication in Linux.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 9</h3>
+<div><p><p>List different file structures and explain them.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>File can be structured in several ways. The most commom structures are:</p>
+<ol style="list-style-type:decimal;">
+<li style="text-align: center;"><strong>Unstructured</strong> : It consist of unstructured sequence of bytes or words. OS does not care what is in the file. Any meaning must be imposed by user level programs. It provides maximum facility users can put anything they want and name them in their own convinient way. Both UNIX and WINDOWS use this approach.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48556 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/unstructured.drawio.png?resize=228%2C211&#038;ssl=1" alt="" width="228" height="211"><br />
+fig: Unstructured file</li>
+<li style="text-align: center;"><strong>Record Structured: </strong>It is a sequence of fixed-length records each with some internal structure. Each read operation returns one record, and a write operation overwrites or appends one record. Many old mainframe systems use this structure.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-48557 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/record.drawio.png?resize=262%2C191&#038;ssl=1" alt="" width="262" height="191"><br />
+fig: Record Structure</li>
+<li style="text-align: center;"><strong>Tree Structured: </strong>It consists of a tree of records, not necessarily all the same length. Each record contains a key field in a fixed position in the record and is sorted on the key to allow rapid searching. The operation is to get the record with the specific key. It is used in large mainframe systems for commercial data processing.<br />
+<img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48558" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/tree-stucture.drawio.png?resize=661%2C181&#038;ssl=1" alt="" width="661" height="181"><br />
+fig: tree structure</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Calculate the average waiting time and turnaround time using priority algorithm (Priority 1 being the highest) for the given scenario:</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>PID</strong></td>
+<td><strong>Brust Time</strong></td>
+<td><strong>Arrival Time</strong></td>
+<td><strong>Priority</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>C</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>D</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-48550 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/priority.drawio.png?resize=300%2C71&#038;ssl=1" alt="" width="300" height="71"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 99.4281%; height: 141px;">
+<tbody>
+<tr>
+<td style="width: 9.96241%;"><strong>PID</strong></td>
+<td style="width: 18.4211%;"><strong>Brust Time</strong></td>
+<td style="width: 21.4286%;"><strong>Arrival Time</strong></td>
+<td style="width: 15.7894%;"><strong>CT</strong></td>
+<td style="width: 18.9395%;"><strong>TAT</strong></td>
+<td style="width: 69.5783%;"><strong>WT</strong></td>
+</tr>
+<tr>
+<td style="width: 9.96241%; text-align: center;">A</td>
+<td style="width: 18.4211%; text-align: center;">3</td>
+<td style="width: 21.4286%; text-align: center;">0</td>
+<td style="width: 15.7894%; text-align: center;">3</td>
+<td style="width: 18.9395%; text-align: center;">3 &#8211; 0 = 3</td>
+<td style="width: 69.5783%; text-align: center;">3 &#8211; 3 = 0</td>
+</tr>
+<tr>
+<td style="width: 9.96241%; text-align: center;">B</td>
+<td style="width: 18.4211%; text-align: center;">2</td>
+<td style="width: 21.4286%; text-align: center;">2</td>
+<td style="width: 15.7894%; text-align: center;">11</td>
+<td style="width: 18.9395%; text-align: center;">11 &#8211; 2 = 9</td>
+<td style="width: 69.5783%; text-align: center;">9 &#8211; 2 = 7</td>
+</tr>
+<tr>
+<td style="width: 9.96241%; text-align: center;">C</td>
+<td style="width: 18.4211%; text-align: center;">4</td>
+<td style="width: 21.4286%; text-align: center;">3</td>
+<td style="width: 15.7894%; text-align: center;">9</td>
+<td style="width: 18.9395%; text-align: center;">9 &#8211; 2 = 7</td>
+<td style="width: 69.5783%; text-align: center;">7 &#8211; 4 = 3</td>
+</tr>
+<tr>
+<td style="width: 9.96241%; text-align: center;">D</td>
+<td style="width: 18.4211%; text-align: center;">2</td>
+<td style="width: 21.4286%; text-align: center;">3</td>
+<td style="width: 15.7894%; text-align: center;">5</td>
+<td style="width: 18.9395%; text-align: center;">5 &#8211; 3 = 2</td>
+<td style="width: 69.5783%; text-align: center;">2 &#8211; 2 = 0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average WT = (0+7+3+0) / 4 = 2.5</p>
+<p>Average TAT = (3+9+7+2) / 4 = 5.25</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain memory-mapped I/O.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Memory-mapped I/O is a mechanism for managing communication between the CPU and I/O devices. This approach assigns I/O devices distinct memory addresses, and the CPU interacts with them as if they were standard system memory.</p>
+<p>Both memory and I/O have same address space. Due to addition of I/O address space become less for memory. In this same instructions can control both I/O and Memory. Normal memory address are for both memory and I/O. It is lesser efficient and smaller in size. Simpler logic is used as I/O is also treated as memory only.</p>
+<p><strong>Advantage</strong>:</p>
+<ul style="list-style-type: square;">
+<li>It uses same instructions for memory and I/O, which simplifies CPU architecture.</li>
+<li>It has quicker connectivity than with independent I/O ports.</li>
+<li>It permits I/O devices to employ memory protection techniques.</li>
+</ul>
+<p><strong>Disadvantage</strong>:</p>
+<ul style="list-style-type: square;">
+<li>It decreases the amount of conventional memory address space that is accessible.</li>
+<li>It has to be carefully mapped to prevent memory and I/O device. conflicts.</li>
+</ul>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Virtual Memory</li>
+<li>Race Condition</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li><strong>Virtual Memory</strong>: Virtual memory is a memory management technique in which the operating system temporarily moves data from random-access memory (RAM) to disk storage in order to make up for physical memory shortages. By employing paging or segmentation, it creates the appearance of having a bigger memory. It makes it possible to run bigger apps and multitask without using the same amount of physical memory.</li>
+<li><strong>Race Condition</strong>: When two or more processes access shared resources at the same time and the timing of their execution determines the outcome, this is known as a race situation. It usually appears in crucial code segments when shared data is being changed. To guarantee proper functioning, solutions use synchronization methods like as monitors, mutexes, or semaphores.</li>
+</ol>
+</div>
+</body></html>

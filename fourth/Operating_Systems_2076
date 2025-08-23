@@ -1,0 +1,609 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Question Bank 2076 2076</title>
+    </head>
+    <body>
+        <h1>OS Question Bank 2076 - 2076</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions:   (2x10=20)</h2><h3>Question 1</h3>
+<div><p><p>Defined interactive system goals? List various interactive scheduling algorithms. Consider following process data and compute average waiting time and average turnaround time for RR(quantum 10) and priority scheduling algorithms.</p>
+<div class="table_wrapper"><table class="table table-bordered">
+<tbody>
+<tr>
+<td>PID</td>
+<td>Burst Time</td>
+<td>Arrival Time</td>
+<td>Priority</td>
+</tr>
+<tr>
+<td>A</td>
+<td>16</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>37</td>
+<td>12</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C</td>
+<td>25</td>
+<td>7</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In interactive system, processes are scheduled according to priority. Some of the interactive system goals are</p>
+<ol style="list-style-type:decimal;">
+<li>Response Time: Minimize the response time for the user</li>
+<li>Waiting Time: Minimize total time spent waiting in the queue</li>
+<li>Throughput: Maximize jobs per given time period</li>
+</ol>
+<p>Various interactive scheduling algorithms are:</p>
+<ol style="list-style-type: lower-roman;">
+<li>Round-Robin Scheduling</li>
+<li>Priority Scheduling</li>
+<li>Multiple Queue</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>1st Round Robin:</strong></span></p>
+<p>Ready Queue:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="diagonal_tr_all" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 11.1111%; text-align: center;">A</td>
+<td style="width: 11.1111%; text-align: center;">C</td>
+<td style="width: 11.1111%; text-align: center;">A</td>
+<td style="width: 11.1111%; text-align: center;">B</td>
+<td style="width: 11.1111%; text-align: center;">C</td>
+<td style="width: 11.1111%; text-align: center;">B</td>
+<td style="width: 11.1111%; text-align: center;">C</td>
+<td style="width: 11.1111%; text-align: center;">B</td>
+<td style="width: 11.1111%; text-align: center;">B</td>
+</tr>
+</tbody>
+</table></div>
+<p>Gantt Chart:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">| A  |  C  |  A  |  B  |  C  |  B  |  C  |  B  |  B  |
+0   10    20    26    36    46    56    61    71     78</pre>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: center;">P.ID</td>
+<td style="width: 16.6667%; text-align: center;">Arrival Time</td>
+<td style="width: 16.6667%; text-align: center;">Brust Time</td>
+<td style="width: 16.6667%; text-align: center;">Competition Time</td>
+<td style="width: 16.6667%; text-align: center;">Turn Around</td>
+<td style="width: 16.6667%; text-align: center;">Waiting Time</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">A</td>
+<td style="width: 16.6667%; text-align: center;">0</td>
+<td style="width: 16.6667%; text-align: center;">16</td>
+<td style="width: 16.6667%; text-align: center;">26</td>
+<td style="width: 16.6667%; text-align: center;">26</td>
+<td style="width: 16.6667%; text-align: center;">10</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">B</td>
+<td style="width: 16.6667%; text-align: center;">12</td>
+<td style="width: 16.6667%; text-align: center;">37</td>
+<td style="width: 16.6667%; text-align: center;">78</td>
+<td style="width: 16.6667%; text-align: center;">66</td>
+<td style="width: 16.6667%; text-align: center;">29</td>
+</tr>
+<tr>
+<td style="width: 16.6667%; text-align: center;">C</td>
+<td style="width: 16.6667%; text-align: center;">7</td>
+<td style="width: 16.6667%; text-align: center;">25</td>
+<td style="width: 16.6667%; text-align: center;">61</td>
+<td style="width: 16.6667%; text-align: center;">54</td>
+<td style="width: 16.6667%; text-align: center;">29</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average turn around time: \(\frac{26 + 66 + 54}{3}\) = 48.66</p>
+<p>Average waiting time = \(\frac{10 + 29 + 29}{3}\) = 22.66</p>
+<p><span style="text-decoration: underline;"><strong>2nd Priority Schedule:</strong></span></p>
+<p>Gantt Chart:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">| A  |  A  |  A  |  B  |  C  |
+0   7     12    16    53    78</pre>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr style="height: 48px;">
+<td style="width: 16.6667%; text-align: center; height: 48px;">P.ID</td>
+<td style="width: 16.6667%; text-align: center; height: 48px;">Arrival Time</td>
+<td style="width: 16.6667%; text-align: center; height: 48px;">Brust Time</td>
+<td style="width: 16.6667%; text-align: center; height: 48px;">Competition Time</td>
+<td style="width: 16.6667%; text-align: center; height: 48px;">Turn Around</td>
+<td style="width: 16.6667%; text-align: center; height: 48px;">CUT</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">A</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">16</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">16</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">16</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">0</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">B</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">12</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">37</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">53</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">41</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">4</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 16.6667%; text-align: center; height: 24px;">C</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">7</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">25</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">78</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">71</td>
+<td style="width: 16.6667%; text-align: center; height: 24px;">46</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average turn around time: \(\frac{16 + 41 + 71}{3}\) = 42.66</p>
+<p>Average waiting time = \(\frac{0 + 4 + 46}{3}\) = 16.66</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How Second Chance page replacement algorithm differs from FIFO page replacement policy? Discuss the concept of Belady’s anomaly with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The Second Chance Page Replacement algorithm is just the modified version of the First In First Out (FIFO) page replacement policy. In FIFO, when a page needs to be replaced, the oldest i.e. first page in the front of the queue is replaced.</p>
+<p>The 2<sup>nd</sup> chance algorithm is based on the FIFO algorithm and it even degenerates to FIFI in its worst-case scenario. The main difference between them is that, in the 2<sup>nd</sup> chance algorithm, a FIFO replacement is implemented along with a reference bit. If the reference bit is o, then we proceed to replace the page, but if the reference bit is 1, then we give the page the 2<sup>nd</sup> chance. then its reference bit is cleared.</p>
+<p>Belady&#8217;s analogy is the phenomenon in which increasing the number of frames (i.e. memory size) results in an increase in the number of faults for certain memory occurs patterns. This phenomenon is commonly experienced when using the FIFO page replacement algorithm.</p>
+<p>Let&#8217;s take an example of Belady&#8217;s anomaly in the page replacement.</p>
+<p>Let&#8217;s take a reference string</p>
+<p>1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5</p>
+<p>Initially, let&#8217;s take Memory size = 3</p>
+<p>Let&#8217;s find the total page faults when using the FIFO page replacement algorithm.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td>f3</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>f2</td>
+<td></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>H</td>
+<td>H</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>H</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page faults = 9</p>
+<p>Now, let&#8217;s increase the memory size to 4 and check on the same reference string</p>
+<p>1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 120px;">
+<tbody>
+<tr>
+<td>f4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>f3</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>f2</td>
+<td></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>H</td>
+<td>H</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page fault = 10</p>
+<p>Here, we can see, an increasing memory size to 4 from 3. The total page fault increased to 10 from 9 which is called the Belady&#8217;s anomaly.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>What is the main objective of disk scheduling algorithms? why SSTF is not practically feasible? Assume that we have disk with 100 tracks and currently head is at track number 35. What will be the seek time for the algorithms SCAN and LOOK for processing IO requests queue: 52, 67, 27, 11, 43, 85, 18, 75, 92, 8?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Disk scheduling is done by the operating system to schedule I/O requests arriving for the disk. It is also known as I/O scheduling.</p>
+<p>There are two main objectives of the disk scheduling algorithm.</p>
+<ul style="list-style-type: square;">
+<li>Maximize the throughput:- It is the average number of requests satisfied per time unit.</li>
+<li>Minimize the seek time: It is the time taken to reach the desired track in the disk.</li>
+</ul>
+<p>In short-seek Time First(SSTF), requests having a short seek time are executed first. So, the seek time of every request is calculated in advance in the queue and they are scheduled according to their calculated seek time. As a result, the request near the disk arm will get executed first.</p>
+<p>But, it is not practically feasible because starvation is possible for some requests as it, favors easy-to-reach requests and ignores the far away processes and there is a lack of predictability because of the high variance of response time. And theoretically, it is possible to compare seek time of every request, but practically what request will come in the future isn&#8217;t known at all.</p>
+<p>Given, IO requests queue</p>
+<p>52, 67, 27, 11, 43, 85, 18, 75, 92, 8</p>
+<p><span style="text-decoration: underline;"><strong>1. SCAN:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6901 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/scan-min.jpg?resize=1000%2C500&#038;ssl=1" alt="" width="1000" height="500"></p>
+<p>Total seek count by R/W head = (99 &#8211; 35) + (99 &#8211; 8) = 155</p>
+<p>&nbsp;</p>
+<p>Hence, seek time is 155</p>
+<p><span style="text-decoration: underline;"><strong>2. LOOK:</strong></span></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6902 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/look-min.jpg?resize=1000%2C500&#038;ssl=1" alt="" width="1000" height="500"></p>
+<p>Total seek count by R/W head= (92 &#8211; 35) + (92 &#8211; 8) = 141</p>
+<p>Hence, seek time = 141</p>
+</div>
+<h2>Section B: Attempt any eight questions:   (8x5=20)</h2><h3>Question 4</h3>
+<div><p><p>What are two modes of OS? Discuss different OS structures briefly.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A processor in a computer running Windows has two different modes: <em>user mode</em> and <em>kernel mode</em>.</p>
+<p>The processor switches between the two modes depending on what type of code is running on the processor. Applications run in user mode, and core operating system components run in kernel mode. While many drivers run in kernel mode, some drivers may run in user mode.</p>
+<h2 id="simple-structure">Simple Structure</h2>
+<p>It is the simplest Operating System Structure and is not well defined; It can only be used for small and limited systems. In this structure, the interfaces and levels of functionality are well separated; hence programs can access <span class="highlight--red">I/O routines</span> which can cause unauthorized access to I/O routines.</p>
+<h2 id="monolithic-structure">Monolithic Structure</h2>
+<p>The Monolithic operating System in which the <span class="highlight--red">kernel</span> acts as a manager by managing all things like file management, memory management, device management, and operational processes of the Operating System.</p>
+<p>The <span class="highlight--red">kernel</span> is the heart of a computer operating system (OS). <span class="highlight--red">Kernel</span>  delivers basic services to all other elements of the System. It serves as the primary interface between the Operating System and the <span class="highlight--red">hardware</span>.</p>
+<p>In monolithic systems, <span class="highlight--red">kernels</span> can directly access all the resources of the operating System like <span class="highlight--red">physical hardware</span>, <span class="highlight--red">exp Keyboard</span>, <span class="highlight--red">Mouse</span> etc.</p>
+<h2 id="layered-approach">Layered Approach</h2>
+<p>In this type of structure, OS is divided into layers or levels. The hardware is on the bottom layer <span class="highlight--red">(layer 0)</span>, while the user interface is on the top layer <span class="highlight--red">(layer N)</span>. These layers are arranged in a hierarchical way in which the top-level layers use the functionalities of their lower-level levels.</p>
+<p>In this approach, functionalities of each layer are <span class="highlight--red">isolated</span>, and abstraction is also available. In layered structure, <span class="highlight--red">debugging</span> is easier as it is a hierarchical model, so all lower-level layered is debugged, and then the upper layer is checked. So all the <span class="highlight--red">lower layers</span> are already checked, and the current layer is to be checked only.</p>
+<h2 id="micro-kernel">Micro-kernel</h2>
+<p>Micro-Kernel structure <span class="highlight--red">designs</span> the Operating System by removing all non-essential components of the <span class="highlight--red">kernel</span>. These non-essential components of <span class="highlight--red">kernels</span> are implemented as systems and user programs. Hence these implemented systems are called as Micro-Kernels.</p>
+<p>Each Micro-Kernel is made <span class="highlight--red">independently</span> and is isolated from other <span class="highlight--red">Micro-Kernels</span>. So this makes the system more secure and reliable. If any Micro-Kernel fails, then the remaining operating System remains untouched and works fine.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>When threads are better than processes? Explain the concept of user level threads in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="wWOJcd" tabindex="0" role="button" aria-controls="exacc_gD7NYqX2FOqp3LUPk4KwiAg2" aria-expanded="true" aria-labelledby="exacc_gD7NYqX2FOqp3LUPk4KwiAg1">
+<div data-hveid="CA8QAQ" data-ved="2ahUKEwiltse3hPP4AhXqFLcAHRMBDIEQuk56BAgPEAE"></div>
+<div class="r21Kzd" data-hveid="CA8QAQ" data-ved="2ahUKEwiltse3hPP4AhXqFLcAHRMBDIEQuk56BAgPEAE">Threads are sometimes called lightweight processes because they have their own stack but can access shared data. <b>Because threads share the same address space as the process and other threads within the process, the operational cost of communication between the threads is low</b>, which is an advantage.</div>
+</div>
+<div data-hveid="CA8QAQ" data-ved="2ahUKEwiltse3hPP4AhXqFLcAHRMBDIEQuk56BAgPEAE"></div>
+<div data-hveid="CA8QAQ" data-ved="2ahUKEwiltse3hPP4AhXqFLcAHRMBDIEQuk56BAgPEAE">
+<h2>User &#8211; Level Threads</h2>
+<p>The user-level threads are implemented by users and the kernel is not aware of the existence of these threads. It handles them as if they were single-threaded processes. User-level threads are small and much faster than kernel level threads. They are represented by a program counter(PC), stack, registers and a small process control block. Also, there is no kernel involvement in synchronization for user-level threads.</p>
+<h3>Advantages of User-Level Threads</h3>
+<p>Some of the advantages of user-level threads are as follows −</p>
+<ul class="list">
+<li>User-level threads are easier and faster to create than kernel-level threads. They can also be more easily managed.</li>
+<li>User-level threads can be run on any operating system.</li>
+<li>There are no kernel mode privileges required for thread switching in user-level threads.</li>
+</ul>
+<h3>Disadvantages of User-Level Threads</h3>
+<p>Some of the disadvantages of user-level threads are as follows −</p>
+<ul class="list">
+<li>Multithreaded applications in user-level threads cannot use multiprocessing to their advantage.</li>
+<li>The entire process is blocked if one user-level thread performs blocking operation.</li>
+</ul>
+</div>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between multi programming and Monoprogramming. What will be the CPU utilization with 6 processes with 60% IO waiting time are in memory?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between mono-programming and multi-programming are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td><b>Uni-Programming</b></td>
+<td><b>Multi-Programming</b></td>
+</tr>
+<tr>
+<td>In uni-programming the system runs smoothly with only one task in a run at a time, it can function on a slow processor as well.</td>
+<td>But for multiprogramming, the processor needs to be faster.</td>
+</tr>
+<tr>
+<td>The main memory has a smaller size in uni-programming as only one task sits there at a time.</td>
+<td>In multiprogramming, the main memory needs more space.</td>
+</tr>
+<tr>
+<td>A fixed-size partition is used in uni-programming</td>
+<td>Both fixed and variable size partitions can be used in multiprogramming.</td>
+</tr>
+<tr>
+<td><b>Examples:</b></p>
+<p>The operating system in old mobile phones, batch processing in old computers, etc.</td>
+<td><strong>Example:</strong></p>
+<p>The operating systems that are used in modern computers like Windows 10, etc.</td>
+</tr>
+</tbody>
+</table></div>
+<p><span style="text-decoration: underline;"><strong>Numerical Part:</strong></span></p>
+<p>Probability of CPU being idle = 0.6</p>
+<p>Probability of CPU being busy = (1- 0.6)</p>
+<p>= 0.4</p>
+<p>CPU utilization = 40%</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>How can you manage free disk space? Explain the linked list approach of managing free disk space with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>As the disk space is limited, we need to reuse the space from deleted files for new files, if possible. To keep track of free space, the system maintains a free space list. The free space list records all free disk blocks those not allocated to some file or directory. There are mainly two approaches by which the free blocks in the disk are managed.</p>
+<ul style="list-style-type: square;">
+<li>Bitmap free space management</li>
+<li>Linked List free space management</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Linked List Free Space management:</strong></span></p>
+<p>It is another approach to free space management. This approach suggests linking together all the free blocks and keeping a pointer in the cache which points to the first free block.</p>
+<p>Therefore, all the free blocks on the disks will be linked together with a pointer. Whenever a block gets allocated, its previous free block will be linked to its next free block.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6904 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/2-190.png?resize=304%2C374&#038;ssl=1" alt="Linked List Free Space Management" width="304" height="374" /></p>
+<p>In this figure, the free space list head points to Block 5 which points to Block 6, the next free block, and so on. The last free block would contain a null pointer indicating the end of the free list.<br />
+A drawback of this method is the I/O required for free space list traversal.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>When programmed IO is suitable than other IO handling techniques? Explain the process of IO handling using DMA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Programmed IO is more suitable than other IO handling techniques when the CPU is not busy in other higher priority tasks and it can check each I/O device in sequence and in effect &#8220;ask&#8221; each one of them if it needs communication with the processor. It is suitable when no interrupt hardware support is required.</p>
+<p>Direct memory access (DMA) is a method that allows an input/output (I/O) device to send or receive data directly to or from the main memory, bypassing the CPU to speed up memory operations.</p>
+<p>The process is managed by a chip known as a DMA controller (DMAC).</p>
+<p>The unit communicates with the CPU through the data bus and control lines. Through the use of the address bus and allowing the DMA and RS register to select inputs, the register within the DMA is chosen by the CPU. RD and WR are two-way inputs. When BG (bus grant) input is 0, the CPU can communicate with DMA registers. When BG (bus grant) input is 1, the CPU has relinquished the buses and DMA can communicate directly with the memory.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6855 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/DMA.png?resize=600%2C322&#038;ssl=1" alt="DMA" width="600" height="322" /></p>
+<p>The CPU initializes the DMA by sending the given information through the data bus.</p>
+<ul style="list-style-type: square;">
+<li>The starting address of the memory block where the data is available (to read) or where data are to be stored (to write).</li>
+<li>It also sends word count which is the number of words in the memory block to be read or written.</li>
+<li>Control to define the mode of transfer such as read or write.</li>
+<li>A control to begin the DMA transfer.</li>
+</ul>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Differentiate between deadlock and starvation? Discuss the process of detecting deadlocks when there are multiple resources of each type.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The difference between Deadlock and Starvation are</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Deadlock</td>
+<td style="width: 50%;">Starvation</td>
+</tr>
+<tr>
+<td style="width: 50%;">It is also known as Circular waiting.</td>
+<td style="width: 50%;">It is also known as a live lock.</td>
+</tr>
+<tr>
+<td style="width: 50%;">In a deadlock state, requested resources are blocked by other processes.</td>
+<td style="width: 50%;">In starvation, the requested resources are continuously used by high priority processes.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Requires external intervention to solve the deadlock.</td>
+<td style="width: 50%;">It May or may not require external intervention to solve.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The process of detecting deadlock when there are multiple resources of each type is explained.</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-6906" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Slide3.jpg?resize=342%2C193&#038;ssl=1" alt="" width="342" height="193"> <img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-6907 alignleft" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/Slide2.jpg?resize=340%2C192&#038;ssl=1" alt="" width="340" height="192"></p>
+<p>Here, is the matrix representation of the resource allocation graph for figure(1) and (2).</p>
+<p>Let 1 -&gt; True, 0 -&gt; False</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%;">Process</td>
+<td style="width: 20%;" colspan="2">Allocation Resource</td>
+<td style="width: 20%;" colspan="2">Request Resource</td>
+</tr>
+<tr>
+<td style="width: 20%;"></td>
+<td style="width: 20%;">R1</td>
+<td style="width: 20%;">R2</td>
+<td style="width: 20%;">R1</td>
+<td style="width: 20%;">R2</td>
+</tr>
+<tr>
+<td style="width: 20%;">P1</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+</tr>
+<tr>
+<td style="width: 20%;">P2</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+</tr>
+<tr>
+<td style="width: 20%;">P3</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>To see if there is a deadlock, 1st we have to see the available resource. The available resource is [00] as P3 doesn&#8217;t require any resource to execute. So, it releases R2 after execution. Since there are two instances of R2, one is held by P2 and another is waiting by P1. Then P1 executes and releases R1.</p>
+<p>Then P2 executes and releases R2. In this way, there is no deadlock in the above RAG. so, we can say, in multi-instance, resource cycle is not a sufficient condition for deadlock.</p>
+<p><span style="text-decoration: underline;">For fig(2):</span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%;">Process</td>
+<td style="width: 20%;" colspan="2">Allocation Resource</td>
+<td style="width: 20%;" colspan="2">Request Resource</td>
+</tr>
+<tr>
+<td style="width: 20%;"></td>
+<td style="width: 20%;">R1</td>
+<td style="width: 20%;">R2</td>
+<td style="width: 20%;">R1</td>
+<td style="width: 20%;">R2</td>
+</tr>
+<tr>
+<td style="width: 20%;">P1</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+</tr>
+<tr>
+<td style="width: 20%;">P2</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+</tr>
+<tr>
+<td style="width: 20%;">P3</td>
+<td style="width: 20%;">0</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">1</td>
+<td style="width: 20%;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since there are no available resources as the resource R2 is held by P3 and P3 is waiting for R1 which is held by P1. So, the deadlock occurs. Hence, if there is no available resource in the matrix, the deadlock occurs.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is problem associated with semaphores? Explain the concept of monitors in brief.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The problem associated with semaphores is</p>
+<ol style="list-style-type:decimal;">
+<li>wait(s) and signal(s) are scattered among several processes Therefore, it is difficult to understand their effects.</li>
+<li>Usage must be correct in all processes.</li>
+<li>One bad process (or one programming error) can kill the whole system.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Monitors:</strong></span></p>
+<p>Monitors are a synchronization construct that was created to overcome the problems caused by semaphores such as timing errors.</p>
+<p>Monitors are abstract data types and content shared data variables and procedures. The shared data variables cannot be directly accessed by a process and procedures are required to allow a single process to access the shared data variables at a time.</p>
+<p><span style="text-decoration: underline;">Advantages:</span></p>
+<ol class="points">
+<li>Mutual exclusion is automatic in monitors.</li>
+<li>Monitors are less difficult to implement than semaphores.</li>
+<li>Monitors may overcome the timing errors that occur when semaphores are used.</li>
+<li>Monitors are a collection of procedures and condition variables that are combined in a special type of module.</li>
+</ol>
+<p><span style="text-decoration: underline;">Disadvantages:</span></p>
+<ol class="points">
+<li>Monitors must be implemented into the programming language.</li>
+<li>The compiler should generate code for them.</li>
+<li>It gives the compiler the additional burden of knowing what operating system features are available for controlling access to crucial sections in concurrent processes.</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Why program relocation and protection is important? Explain the technique of achieving program relocation and protection.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Program relocation and protection are important concepts in computer programming as they help ensure that programs can run correctly and securely on different systems, and that the programs are protected from unauthorized access or modification.</p>
+<p>Program relocation refers to the ability of a program to be loaded and executed at different memory locations in a computer&#8217;s memory. This is important because different systems may have different amounts of memory available or use memory in different ways. By allowing a program to be relocated, it can be loaded into any available memory location, which increases the flexibility and compatibility of the program across different systems.</p>
+<p>Program protection refers to the ability of a program to be protected from unauthorized access or modification. This is important because programs may contain sensitive data or proprietary code that needs to be protected from unauthorized access or modification. By implementing program protection techniques, the program can be safeguarded from attacks such as hacking, viruses and other.</p>
+<p>The technique for achieving program relocation and protection are:</p>
+<ol style="list-style-type:decimal;">
+<li> Virtual memory: It allows a program to be loaded into memory in a way that allows it to be protected from unauthorized access or modification, while also enabling it to be relocated to different memory locations as needed. This is achieved through the use of memory management techniques that allocate and manage memory in a way that ensures the security and integrity of the program.</li>
+</ol>
+<p>2. Use of executable file formats: Executable file formats allow a program to be loaded into memory and executed in a way that                    ensures its integrity and protection. These file formats include mechanisms for program relocation and protection, such as                        relocation tables and access control mechanisms, which allow the program to be loaded and executed in a way that is both secure            and flexible.</p>
+<p>In summary, program relocation and protection are important concepts in software development that help ensure the correct and secure operation of programs on different systems. These concepts can be achieved through the use of virtual memory, executable file formats, and other techniques that allow programs to be loaded and executed in a way that is both flexible and secure.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>Linux File System</li>
+<li>Resource Allocation Graph</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h3>a) Linux File System</h3>
+<p>A file system is a set of processes that control how, where and when data is stored and retrieved from a storage device. An efficient file system is essential for everyday system processes.</p>
+<p>The Linux kernel supports various file systems, but the most commonly used is the ext4 file system.</p>
+<p>The ext file system stands for “Extended File System”. It was the first file system designed to support the Linux Kernel. <span style="background-color: inherit; color: var(--dark-text-black-700);">The ext4 file system is the default file system of the current Linux kernel. It was introduced in October 2008 with Linux kernel 2.6.28.</span></p>
+<p>The ext4 file system supports the maximum file size of 16TiB and restricts maximum filename lengths to 255 bytes. This file system features Backward Compatibility, Timestamp Improvements, Delayed allocations, Unlimited number of subdirectories, Journal Checksums, Online defragmemtation etc.</p>
+<h4><span style="text-decoration: underline;">Limitations of ext4 file system:</span></h4>
+<p>Although the ext4 file system is considered as the best file system for Linux distributions, there are a few limitations that should be considered in the further development of the system:</p>
+<p>Corrupted data recovery – The ext4 file system cannot detect or recover corrupted data already written on the disk.</p>
+<p>Maximum volume size – The maximum volume size is set to 1 EiB. However, the file system cannot address more than 100 TiB of data without a significant loss of performance and increased disk fragmentation.</p>
+<h3>b) Resource Allocation Graph</h3>
+<p>The Resource Allocation Graph, also known as RAG is a graphical representation of the state of a system. It has all the information about the resource allocation to each process and the request of each process.</p>
+<h4><span style="text-decoration: underline;">Representation of Resource Allocation Graph (RAG):</span></h4>
+<ul style="list-style-type: square;">
+<li>Like all other graphs, it also has vertices and edges.</li>
+<li>The vertices of the RAG represent the process or the resource, and the edges represent the allocation or request of any resource.</li>
+<li>As both the process and resource are the vertices of the graph, generally, the process vertex will be represented using the circle and the resource vertex using the rectangle.</li>
+<li>The resource can be of two types:</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Single Instance</strong> &#8211; It contains the single instance of the resource, and is represented by a single dot inside the rectangle which is the resource vertex.</li>
+<li><strong>Multiple Instance</strong> &#8211; It contains the multiple instances of the resource, and is represented by multiple (more than one) dots inside the rectangle.</li>
+</ol>
+<ul style="list-style-type: square;">
+<li>Edges also can be of two types:</li>
+</ul>
+<ol style="list-style-type:decimal;">
+<li><strong>Assign Edge</strong> &#8211; This edge directing from the resource towards the process represents the allocation of the resource to the process.</li>
+<li><strong>Request Edge</strong> &#8211; This edge directing from the process towards the resource represents the request of the resource by the process.</li>
+</ol>
+</div>
+</body></html>

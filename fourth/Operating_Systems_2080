@@ -1,0 +1,532 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>OS Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>When does the request switch from user mode to kernel mode? Give answer with an example. Find the average waiting time and turnaround time for the process scheduling algorithms FCFS, Priority and RR (Quantum=2) in the following given dataset.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>Process</strong></td>
+<td><strong>Arrival Time</strong></td>
+<td><strong>Burst Time</strong></td>
+<td><strong>Priority</strong></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>0</td>
+<td>5</td>
+<td>1 (Lowest)</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>3</td>
+<td>4 (Highest)</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>2</td>
+<td>8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>3</td>
+<td>6</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In modern computer operating systems, the switch from user mode to kernel mode, often referred to as a &#8220;mode switch&#8221; or &#8220;context switch,&#8221; occurs when a program running in user mode requests a service or operation that requires higher privileges or direct interaction with the underlying hardware. This switch is essential for maintaining the security and stability of the system, as it prevents user-mode programs from directly accessing hardware resources or causing system-wide disruptions.</p>
+<p>Here&#8217;s an example to illustrate when the mode switch occurs:</p>
+<p>Let&#8217;s say you are running a word processing application on your computer. The word processor is a user-mode program, and it typically does not have direct access to hardware resources. However, you decide to print the document you&#8217;ve been working on. Printing requires interaction with the printer hardware, which is a task that cannot be performed directly from user mode due to security and stability concerns.</p>
+<p>Here&#8217;s how the mode switch would work in this scenario:</p>
+<ol style="list-style-type:decimal;">
+<li>You click the &#8220;Print&#8221; button within the word processing application.</li>
+<li>The word processor, running in user mode, initiates a system call to request the printing operation. A system call is a mechanism that allows user-mode programs to request services from the operating system.</li>
+<li>The operating system&#8217;s kernel, which runs in kernel mode and has elevated privileges, receives the system call request.</li>
+<li>The kernel validates the request, checks permissions, and prepares the necessary data for the printing operation.</li>
+<li>The mode switch occurs as the operating system transitions from user mode to kernel mode to execute the privileged code responsible for handling the printing task.</li>
+<li>In kernel mode, the operating system interacts directly with the printer hardware, sending the data to be printed.</li>
+<li>Once the printing operation is complete, the operating system returns to user mode.</li>
+<li>The word processing application receives a notification that the printing task is finished and continues running in user mode.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Solution of the numeric:</strong></p>
+<p><strong>a. FCFS</strong></p>
+<p>The Gantt chart is as follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26080" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/fcfs-1.jpg?resize=400%2C92&#038;ssl=1" alt="" width="400" height="92"></p>
+<p>Similarly, the computation table is as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 15.3847%; text-align: center;"><strong>Process</strong></td>
+<td style="width: 40.5127%; text-align: center;"><strong>Turnaround Time</strong></p>
+<p><strong>(Completion Time &#8211; Arrival Time)</strong></td>
+<td style="width: 44.1025%; text-align: center;"><strong>Waiting Time</strong></p>
+<p><strong>(Turnaround Time &#8211; Burst Time)</strong></td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P0</td>
+<td style="width: 40.5127%; text-align: center;">5-0=5</td>
+<td style="width: 44.1025%; text-align: center;">5-5=0</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P1</td>
+<td style="width: 40.5127%; text-align: center;">8-1=7</td>
+<td style="width: 44.1025%; text-align: center;">7-3=4</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P2</td>
+<td style="width: 40.5127%; text-align: center;">16-2=14</td>
+<td style="width: 44.1025%; text-align: center;">14-8=6</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P3</td>
+<td style="width: 40.5127%; text-align: center;">22-3=19</td>
+<td style="width: 44.1025%; text-align: center;">19-6=13</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average TAT =  (5+7+14+19) / 4 = 11.25 ms</p>
+<p>Average WAT =  (0+4+6+13) / 4 = 5.75 ms</p>
+<p>&nbsp;</p>
+<p><strong>b. Priority</strong></p>
+<p>The Gantt chart is as follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26081" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/PRIORITY.jpg?resize=400%2C89&#038;ssl=1" alt="" width="400" height="89"></p>
+<p>Similarly, the computation table is as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 15.3847%; text-align: center;"><strong>Process</strong></td>
+<td style="width: 40.5127%; text-align: center;"><strong>Turnaround Time</strong></p>
+<p><strong>(Completion Time &#8211; Arrival Time)</strong></td>
+<td style="width: 44.1025%; text-align: center;"><strong>Waiting Time</strong></p>
+<p><strong>(Turnaround Time &#8211; Burst Time)</strong></td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P0</td>
+<td style="width: 40.5127%; text-align: center;">22-0=22</td>
+<td style="width: 44.1025%; text-align: center;">22-5=17</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P1</td>
+<td style="width: 40.5127%; text-align: center;">4-1=3</td>
+<td style="width: 44.1025%; text-align: center;">3-3=0</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P2</td>
+<td style="width: 40.5127%; text-align: center;">18-2=16</td>
+<td style="width: 44.1025%; text-align: center;">16-8=8</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P3</td>
+<td style="width: 40.5127%; text-align: center;">10-3=7</td>
+<td style="width: 44.1025%; text-align: center;">7-6=1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average TAT = 12 ms</p>
+<p>Average WAT = 6.5 ms</p>
+<p>&nbsp;</p>
+<p><strong>b. RR (Q=2)</strong></p>
+<p>The Gantt chart is as follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26083" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/rr-1.jpg?resize=650%2C99&#038;ssl=1" alt="" width="650" height="99"></p>
+<p>Similarly, the computation table is as follows:</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 15.3847%; text-align: center;"><strong>Process</strong></td>
+<td style="width: 40.5127%; text-align: center;"><strong>Turnaround Time</strong></p>
+<p><strong>(Completion Time &#8211; Arrival Time)</strong></td>
+<td style="width: 44.1025%; text-align: center;"><strong>Waiting Time</strong></p>
+<p><strong>(Turnaround Time &#8211; Burst Time)</strong></td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P0</td>
+<td style="width: 40.5127%; text-align: center;">14-0=14</td>
+<td style="width: 44.1025%; text-align: center;">14-5=9</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P1</td>
+<td style="width: 40.5127%; text-align: center;">11-1=10</td>
+<td style="width: 44.1025%; text-align: center;">10-3=7</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P2</td>
+<td style="width: 40.5127%; text-align: center;">22-2=20</td>
+<td style="width: 44.1025%; text-align: center;">20-8=12</td>
+</tr>
+<tr>
+<td style="width: 15.3847%; text-align: center;">P3</td>
+<td style="width: 40.5127%; text-align: center;">20-3=17</td>
+<td style="width: 44.1025%; text-align: center;">17-6=11</td>
+</tr>
+</tbody>
+</table></div>
+<p>Average TAT = 15.25 ms</p>
+<p>Average WAT = 7.8 ms</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>How do you recognize critical section? Why do we need to synchronise it? Consider the request for the page references 7,0,1,2,0,3,0,4,2,3,0,3,2. Find the number of page fault for FIFO and LRU with 4 page frames.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A critical section is a portion of a computer program where shared resources (such as variables, data structures, or devices) are accessed and modified by multiple threads or processes concurrently. Recognizing a critical section is important because it helps identify areas of code where synchronization is necessary to ensure the correct and consistent behavior of the program. Here&#8217;s how you can recognize a critical section:</p>
+<ol style="list-style-type:decimal;">
+<li>Shared Resources: A critical section involves shared resources that are accessed or modified by multiple threads or processes. These shared resources can include data variables, data structures (e.g., arrays or linked lists), or even hardware devices.</li>
+<li>Concurrent Access: In a critical section, multiple threads or processes attempt to access or modify the shared resources concurrently. This concurrent access can lead to race conditions, data corruption, or incorrect program behavior if not properly synchronized.</li>
+<li>Non-Atomic Operations: Operations within the critical section are typically non-atomic, meaning they consist of multiple instructions or steps. These operations may involve reading the current value of a shared variable, performing some calculations or modifications, and then updating the shared variable with the result.</li>
+</ol>
+<p>Why Do We Need to Synchronize Critical Sections?</p>
+<p>Synchronizing critical sections is essential for several reasons:</p>
+<ol style="list-style-type:decimal;">
+<li>Data Consistency: Without synchronization, multiple threads or processes can interfere with each other, leading to inconsistent or incorrect data. Synchronization ensures that only one thread or process can access the critical section at a time, preventing data corruption.</li>
+<li>Race Condition Prevention: Synchronization prevents race conditions, which occur when the outcome of a program depends on the timing or order of execution of threads or processes. Race conditions can lead to unpredictable behavior.</li>
+<li>Mutual Exclusion: Synchronization mechanisms, such as locks or semaphores, provide mutual exclusion. This means that only one thread or process can execute the critical section at a given time, preventing interference from other threads or processes.</li>
+<li>Correct Program Behavior: Proper synchronization ensures that the program behaves correctly, producing the expected results even in a multi-threaded or multi-process environment.</li>
+<li>Deadlock Avoidance: Careful synchronization can help avoid deadlocks, situations where multiple threads or processes are blocked and unable to make progress due to conflicting resource requirements.</li>
+</ol>
+<p><strong>FIFO</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26086" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/FIFO.jpg?resize=821%2C220&#038;ssl=1" alt="" width="821" height="220"></p>
+<p>Number of page faults: 7</p>
+<p><strong>LRU</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26087" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/LRU.jpg?resize=821%2C220&#038;ssl=1" alt="" width="821" height="220"></p>
+<p>Number of page faults: 6</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Can deadlock occur in case of preemptive resources? List the conditions for deadlock. Define allocation graph with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Deadlock can still occur with preemptive resources, but the conditions and scenarios leading to deadlock may be less common or less severe. Preemptive resources can be forcibly taken away from a process, which can help break potential deadlocks by releasing the resources. However, preemptive actions can introduce complexity and potential inefficiencies into the system. In practice, managing and avoiding deadlock with preemptive resources often requires carefully designed algorithms and policies.</p>
+<p><strong>Conditions for Deadlock:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Mutual Exclusion:</strong> At least one resource must be non-shareable, meaning only one process can use it at a time. This condition is typically satisfied by resources like printers, CPUs, and other exclusive devices.</li>
+<li><strong>Hold and Wait:</strong> Processes must hold at least one resource while waiting to acquire additional resources. This condition can lead to a situation where processes are blocking each other from releasing resources they hold.</li>
+<li><strong>No Preemption:</strong> Resources cannot be forcibly taken away from a process; they can only be released voluntarily by the process that holds them.</li>
+<li><strong>Circular Wait:</strong> There must be a circular chain of processes, each waiting for a resource held by the next process in the chain. In other words, there must be a cycle in the resource allocation graph.</li>
+</ol>
+<p>Now, let&#8217;s define an <strong>allocation graph</strong> and provide an example:</p>
+<p>An allocation graph is a graphical representation used to visualize the allocation and request of resources by processes in a system. It helps in understanding and identifying potential deadlocks.</p>
+<p><strong>Components of an Allocation Graph:</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Processes:</strong> Represented as nodes in the graph.</li>
+<li><strong>Resources:</strong> Represented as rectangular boxes.</li>
+<li><strong>Edges:</strong> Directed edges from processes to resources indicate resource allocation, while directed edges from resources to processes indicate resource requests.</li>
+</ul>
+<p><strong>Example of an Allocation Graph:</strong></p>
+<p>Let&#8217;s consider a simplified example with two processes (P1 and P2) and three resource types (A, B, and C). The following allocations and requests are in place:</p>
+<ol style="list-style-type:decimal;">
+<li>Process P1 has allocated resource A.</li>
+<li>Process P2 has allocated resource B.</li>
+<li>Process P1 has requested resource B.</li>
+<li>Process P2 has requested resource A.</li>
+<li>Process P1 has requested resource C.</li>
+<li>Process P2 has requested resource C.</li>
+</ol>
+<p>Here&#8217;s the allocation graph representing this scenario:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26089" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/process.jpg?resize=276%2C206&#038;ssl=1" alt="" width="276" height="206"></p>
+<p>In this example, we can see that there is a circular chain: P1 is waiting for B, P2 is waiting for A, and both processes are waiting for C. This circular wait condition satisfies one of the necessary conditions for deadlock.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h2>Section B: Attempt any eight questions</h2><h3>Question 4</h3>
+<div><p><p>Explain different memory allocation strategies.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>First Fit, Next Fit, Worst Fit, and Best Fit are memory allocation algorithms used in dynamic memory allocation schemes to assign memory blocks to processes. These algorithms determine how available memory is allocated to incoming processes. Each algorithm has its own advantages and disadvantages in terms of memory utilization and performance.</p>
+<ol style="list-style-type:decimal;">
+<li><strong>First Fit:</strong>
+<ul style="list-style-type: square;">
+<li>In the First Fit algorithm, the system allocates the first available memory block that is large enough to accommodate the incoming process.</li>
+<li>It starts searching for available memory from the beginning of the memory pool and selects the first block that meets the size requirements.</li>
+<li>It is simple and fast but can lead to fragmentation, both internal (unused memory within a block) and external (unused memory scattered throughout the memory pool).</li>
+</ul>
+</li>
+<li><strong>Next Fit:</strong>
+<ul style="list-style-type: square;">
+<li>Next Fit is similar to First Fit, but it starts the search for available memory where it left off during the previous allocation.</li>
+<li>It keeps track of the last allocated block and continues the search from there.</li>
+<li>Next Fit is straightforward to implement and can reduce external fragmentation compared to First Fit. However, it may still suffer from internal fragmentation.</li>
+</ul>
+</li>
+<li><strong>Worst Fit:</strong>
+<ul style="list-style-type: square;">
+<li>In the Worst Fit algorithm, the system allocates the largest available memory block to the incoming process.</li>
+<li>It aims to minimize external fragmentation by allocating the largest possible block for each process.</li>
+<li>However, this strategy can lead to inefficient memory utilization and may not be suitable for systems with limited memory resources.</li>
+</ul>
+</li>
+<li><strong>Best Fit:</strong>
+<ul style="list-style-type: square;">
+<li>Best Fit allocates the smallest available memory block that is large enough to accommodate the incoming process.</li>
+<li>It aims to minimize wasted memory by selecting the smallest possible block, which can help reduce external fragmentation.</li>
+<li>However, Best Fit tends to be less efficient in terms of allocation time compared to First Fit and Next Fit, as it requires searching through the entire memory pool to find the best fit.</li>
+<li>It may also result in more frequent memory splits and fragmentation over time.</li>
+</ul>
+</li>
+</ol>
+<p>Example:</p>
+<p>Given memory partitions of 100K, 500K, 200K, 300K, and 600K (in order), how would each of the algorithms place processes of 212K, 417K, 112K and 426K (in order) ?</p>
+<p><strong>For first fit,</strong></p>
+<p>212K is put in 500K.</p>
+<p>417K is put in 600K.</p>
+<p>112k is put in 200K.</p>
+<p>426k must wait.</p>
+<p><strong>For best-fit,</strong></p>
+<p>212K is put in 300K</p>
+<p>417K is put in 500K</p>
+<p>112K is put in 200K</p>
+<p>426K is put in 600K</p>
+<p><strong>For worst-fit,</strong></p>
+<p>212K is put in 600K</p>
+<p>417K is put in 500K</p>
+<p>112K is put in</p>
+<p><strong>For next-fit,</strong></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Suppose a disk has 201 cylinders, numbered from 0 to 200. At same time the disk arm is at cylinder 10, and there is a queue of disk access requests for cylinders 30, 85, 90, 100, 105, 110, 135, and 145. Find the total seek time for the disk scheduling algorithm FCFS and SSTF. Assume the head is moving inward.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>FCFS:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26163" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/suppose.jpg?resize=440%2C237&#038;ssl=1" alt="" width="440" height="237"></p>
+<p>Total seek time= (30-10) + (85-30) + (90-85) + (100-90) + (105-100) + (110-105) + (135-110) + (145-135) = 135</p>
+<p><strong>SSTF:</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26163" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/suppose.jpg?resize=440%2C237&#038;ssl=1" alt="" width="440" height="237"></p>
+<p>Total seek time= (30-10) + (85-30) + (90-85) + (100-90) + (105-100) + (110-105) + (135-110) + (145-135) = 135</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What are the advantages of using interrupt? Describe.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Interrupts play a crucial role in operating systems (OS) by providing several advantages that contribute to the overall efficiency, responsiveness, and robustness of the OS. Here are some of the key advantages of using interrupts in operating systems:</p>
+<ol style="list-style-type:decimal;">
+<li>Responsiveness: Interrupts enable the OS to respond quickly to external events and hardware-generated requests. When a hardware device, such as a keyboard or mouse, generates an interrupt, the OS can immediately handle it, ensuring prompt user interactions and system responsiveness.</li>
+<li>Multitasking: Interrupts are fundamental for multitasking in modern operating systems. They allow the OS to efficiently switch between multiple running processes or threads, ensuring that each gets a fair share of CPU time. This concurrent execution enhances system throughput and user experience.</li>
+<li>Efficient I/O Handling: Interrupts simplify input and output operations. When a device is ready for data transfer or has completed an operation, it generates an interrupt, allowing the OS to efficiently manage I/O without constantly polling devices. This reduces CPU overhead and improves system performance.</li>
+<li>Real-Time Processing: For real-time operating systems (RTOS), which must meet strict timing constraints, interrupts are essential. They ensure that critical tasks and processes are executed within predefined deadlines, making RTOS suitable for applications like aerospace, automotive, and industrial control systems.</li>
+<li>Energy Efficiency: Interrupt-driven systems can be more energy-efficient because they allow the CPU to enter low-power states when not actively processing tasks. By avoiding continuous polling, the OS can reduce power consumption, which is particularly important in battery-powered devices.</li>
+<li>Error Handling: Interrupts are instrumental in error handling and fault detection. If a hardware fault or error condition occurs, an interrupt can be generated to notify the OS, which can take appropriate actions such as logging diagnostic information, informing the user, or initiating error recovery procedures.</li>
+<li>Task Scheduling: Interrupts help in task scheduling by allowing the OS to switch between processes or threads based on priority or other scheduling algorithms. This ensures that higher-priority tasks are executed before lower-priority ones, enhancing system efficiency and user experience.</li>
+<li>Modular Design: Interrupts support modular OS design. Different hardware components or peripheral devices can generate their own interrupts, allowing for the easy addition or removal of hardware without major changes to the OS core.</li>
+<li>Device Abstraction: Interrupts enable device abstraction in the OS. Device drivers can handle device-specific details and communicate with the OS through interrupts, allowing the OS to work with a wide range of hardware without needing to understand the intricacies of each device.</li>
+<li>Hardware Independence: By using interrupts, the OS can abstract the underlying hardware, making it more hardware-independent. This abstraction simplifies porting the OS to different hardware platforms, which is valuable for embedded systems and cross-platform development.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between contiguous and linked list file allocation technique.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 97.094%; height: 264px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong> </strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;"><strong>Contiguous Technique</strong></td>
+<td style="width: 37.8403%; text-align: center; height: 24px;"><strong>Linked list Technique</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>Allocation method</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">In a contiguous allocation, each file occupies a single, contiguous block of storage space on the storage medium. Files are stored in a continuous sequence of blocks.</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">In linked list allocation, each file is divided into blocks or segments, and these blocks are linked together using pointers. Each block contains data and a pointer to the next block in the file.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>File size flexibility</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">Contiguous allocation is not very flexible in terms of file size. You need to allocate a fixed size of contiguous space for a file when it is created. This can lead to inefficient space utilization if the file size varies significantly.</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">Linked list allocation allows for more flexibility in file size. Files can grow or shrink dynamically by adding or removing blocks from the linked list.</td>
+</tr>
+<tr>
+<td style="width: 28.4483%; text-align: center;"><strong>Fragmentation</strong></td>
+<td style="width: 33.7114%; text-align: center;">Contiguous allocation can lead to external fragmentation. When files are created, deleted, and resized over time, small gaps or holes of unused space can develop between allocated blocks, reducing storage efficiency.</td>
+<td style="width: 37.8403%; text-align: center;">Linked list allocation does not suffer from external fragmentation. Files are stored in non-contiguous blocks, and unused space is easily reclaimed when a file is deleted or resized.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>Performance</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">Accessing files in contiguous allocation is usually faster because the entire file is stored in a contiguous block. File access time is predictable, and there is no need to traverse data structures to find the next block of a file.</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">Accessing files in linked list allocation can be slower because the system needs to follow pointers to traverse the linked blocks. However, it is more adaptable to varying file sizes and avoids the need for contiguous free space.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>Defragmentation</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">Periodic defragmentation may be required to consolidate free space and reduce fragmentation, but this can be a time-consuming process.</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">There is no need for defragmentation in linked list allocation because fragmentation is not an issue.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>Access type</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">Random access</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">Direct access</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 28.4483%; text-align: center; height: 48px;"><strong>Fixed or variable size portions</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 48px;">Variable</td>
+<td style="width: 37.8403%; text-align: center; height: 48px;">Fixed</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 28.4483%; text-align: center; height: 24px;"><strong>Pre-allocation</strong></td>
+<td style="width: 33.7114%; text-align: center; height: 24px;">Necessary</td>
+<td style="width: 37.8403%; text-align: center; height: 24px;">Possible</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between paging and segmentation.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Paging</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Segmentation</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Paging divides physical memory (RAM) and virtual memory (used by processes) into fixed-size blocks called &#8220;frames&#8221; in physical memory and &#8220;pages&#8221; in virtual memory. These frames and pages are of equal size.</td>
+<td style="width: 50%; text-align: center;">Segmentation divides memory into variable-sized segments, each representing a logically related portion of a program or data. Segments can vary in size and represent different aspects of a process (e.g., code, data, stack).</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In paging, the memory addresses used by processes are split into two parts: the page number and the offset within the page. The page number is used as an index into a page table, which translates the virtual page number to the corresponding physical frame number.</td>
+<td style="width: 50%; text-align: center;">Segmentation uses a segment table that maps each logical segment to a specific base address and length in physical memory. When a process accesses a memory location, the segment number is used to index the segment table, and the base address is added to the offset within the segment to compute the physical address.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Paging eliminates external fragmentation, as each frame is of the same size. However, it can suffer from internal fragmentation if the last page in a process is not fully utilized.</td>
+<td style="width: 50%; text-align: center;">Segmentation can suffer from both internal and external fragmentation. Internal fragmentation occurs when a segment&#8217;s size is larger than the data it contains, while external fragmentation can occur as segments are allocated and deallocated, leaving non-contiguous blocks of free memory.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Paging is more rigid in terms of memory allocation since it allocates memory in fixed-size blocks. This simplicity makes it suitable for various types of workloads.</td>
+<td style="width: 50%; text-align: center;">Segmentation is more flexible than paging because it allows segments of varying sizes to represent different aspects of a process. This flexibility is well-suited for accommodating variable-sized data structures.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Advantages</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Provides uniform and efficient memory management.</li>
+<li>Simplifies memory allocation and deallocation.</li>
+<li>Effective for sharing memory between processes.</li>
+</ul>
+</td>
+<td style="width: 50%; text-align: center;"><strong>Advantages</strong>:</p>
+<ul style="list-style-type: square;">
+<li>Supports a more intuitive memory organization, as segments correspond to logical units of a program.</li>
+<li>Allows for dynamic growth of individual segments.</li>
+<li>Facilitates sharing of code or data segments between processes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What does Belady’s anomaly mean? What are the benefits of multiprogramming over uniprogramming?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Belady&#8217;s Anomaly</strong>:</p>
+<p>Belady&#8217;s Anomaly, also known as the FIFO anomaly, is a phenomenon in computer science and operating system theory that pertains to page replacement algorithms in virtual memory systems. It occurs when increasing the number of available page frames (the amount of physical memory allocated to a process) can lead to an increase in the number of page faults rather than decreasing or staying the same. In simpler terms, adding more physical memory does not necessarily improve the performance of the system when certain page replacement algorithms, like FIFO (First-In-First-Out), are used.</p>
+<p>The anomaly challenges the intuitive expectation that more physical memory should always lead to fewer page faults. Belady&#8217;s Anomaly occurs because the behavior of the FIFO page replacement algorithm is non-monotonic; it does not always evict the least-recently-used pages when page faults happen.</p>
+<p>This anomaly highlights the importance of selecting appropriate page replacement algorithms for virtual memory systems, as some algorithms, such as the optimal page replacement algorithm, do not suffer from Belady&#8217;s Anomaly and can make better use of additional memory.</p>
+<p><strong>Benefits of Multiprogramming over Uniprogramming</strong>:</p>
+<p>Multiprogramming and uniprogramming are two different approaches to managing processes in an operating system. Multiprogramming refers to the concurrent execution of multiple processes, while uniprogramming focuses on executing a single process at a time. Here are some benefits of multiprogramming over uniprogramming:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Increased CPU Utilization</strong>: Multiprogramming allows the CPU to switch between multiple processes when one is waiting for I/O operations to complete. This reduces CPU idle time and improves overall CPU utilization.</li>
+<li><strong>Improved Throughput</strong>: Multiprogramming can lead to higher system throughput, as multiple processes can execute concurrently. This is particularly beneficial in a multi-user or time-sharing environment where multiple users are running programs simultaneously.</li>
+<li><strong>Enhanced Responsiveness</strong>: Multiprogramming ensures that the system remains responsive even when one process is blocked or waiting for resources. Other processes can continue execution, preventing the system from appearing unresponsive to users.</li>
+<li><strong>Better Resource Utilization</strong>: Multiprogramming can efficiently utilize system resources, such as memory and I/O devices. When one process is waiting for I/O, the CPU can be allocated to other processes, making efficient use of system resources.</li>
+<li><strong>Effective Multitasking</strong>: Multiprogramming enables true multitasking, allowing multiple processes to run concurrently without interference. This is essential for modern operating systems that need to handle multiple tasks simultaneously.</li>
+<li><strong>Enhanced System Performance</strong>: In multiprogramming, if one process experiences a CPU-bound operation, other processes can continue to execute, leading to improved overall system performance.</li>
+<li><strong>Optimized System Utilization</strong>: Multiprogramming allows the OS to schedule processes based on priorities, ensuring that important tasks receive the necessary CPU time while less critical tasks are still executed in the background.</li>
+<li><strong>Time Sharing</strong>: Multiprogramming is well-suited for time-sharing systems where multiple users can interact with the computer simultaneously, each running their own processes.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>How can we achieve mutual exclusion? Describe.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Mutual exclusion is a fundamental concept in concurrent and multi-threaded programming. It ensures that only one thread or process can access a shared resource or critical section at a time, preventing data corruption and race conditions. Achieving mutual exclusion typically involves using synchronization mechanisms and techniques. Here are some common methods to achieve mutual exclusion:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Locks/Mutexes (Mutual Exclusion Locks)</strong>:
+<ul style="list-style-type: square;">
+<li>Locks or mutexes (short for mutual exclusion) are the most common and widely used synchronization mechanism. They provide a way for threads to request and release exclusive access to a critical section of code or a shared resource.</li>
+<li>When a thread wants to access the critical section, it attempts to acquire the lock. If the lock is already held by another thread, the requesting thread is blocked until the lock becomes available.</li>
+<li>When the thread is done with the critical section, it releases the lock, allowing other threads to acquire it and enter the critical section.</li>
+</ul>
+</li>
+<li><strong>Semaphores</strong>:
+<ul style="list-style-type: square;">
+<li>Semaphores are synchronization primitives that can be used for various purposes, including mutual exclusion. They are similar to locks but can be used to control access to multiple instances of a resource.</li>
+<li>Semaphores have a counter that is incremented when a resource is released and decremented when a resource is acquired. When the counter reaches zero, subsequent attempts to acquire the semaphore block until it becomes non-zero again.</li>
+<li>Binary semaphores, in particular, can be used for mutual exclusion, where the counter is limited to either 0 or 1.</li>
+</ul>
+</li>
+<li><strong>Atomic Operations</strong>:
+<ul style="list-style-type: square;">
+<li>In some cases, you can achieve mutual exclusion using atomic operations provided by the hardware or language constructs. Atomic operations ensure that a specific operation, such as incrementing a variable or checking a condition, is performed without interruption.</li>
+<li>For example, compare-and-swap (CAS) or compare-and-set operations can be used to safely update shared variables without the need for locks or semaphores. These operations are typically provided by low-level programming languages or libraries.</li>
+</ul>
+</li>
+<li><strong>Software-Based Solutions</strong>:
+<ul style="list-style-type: square;">
+<li>You can implement mutual exclusion using software-based solutions, such as Peterson&#8217;s Algorithm or Dekker&#8217;s Algorithm. These algorithms are designed to coordinate between threads and ensure that only one thread can access the critical section at a time.</li>
+<li>While they can achieve mutual exclusion, they are less efficient and can be error-prone compared to using built-in synchronization primitives.</li>
+</ul>
+</li>
+<li><strong>Read-Write Locks</strong>:
+<ul style="list-style-type: square;">
+<li>In cases where multiple threads need read access to a resource simultaneously but write access must be exclusive, read-write locks (also known as shared-exclusive locks) can be used. These locks allow multiple readers to access the resource concurrently while ensuring that only one writer can access it at a time.</li>
+</ul>
+</li>
+<li><strong>Conditional Variables</strong>:
+<ul style="list-style-type: square;">
+<li>Conditional variables can be used in conjunction with locks to coordinate threads and achieve mutual exclusion. Threads can wait on a condition variable until a certain condition is met before entering the critical section, ensuring proper synchronization.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What makes thread different with process? Draw the transition diagram between states of a process.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Process vs Threads</strong></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Process</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Threads</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Heavy weight</td>
+<td style="width: 50%; text-align: center;">Lightweight</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Resource intensive.</td>
+<td style="width: 50%; text-align: center;">Takes fewer resources.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Process switching needs interaction with OS.</td>
+<td style="width: 50%; text-align: center;">Thread switching does not need interaction with OS.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Processes  may execute same code but have their own memory and file resources.</td>
+<td style="width: 50%; text-align: center;">All threads can share same set of open files.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Mutiple processes without using thread use more resources.</td>
+<td style="width: 50%; text-align: center;">Multiple threaded processes use fewer resources.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Each process operates independently.</td>
+<td style="width: 50%; text-align: center;">One thread can read/write another thread&#8217;s data.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">If one process is blocked then, no other processes can run until the first process is unblocked.</td>
+<td style="width: 50%; text-align: center;">If one thread is blocked, other threads can run.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Process states</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-26170" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/ddd.jpg?resize=841%2C261&#038;ssl=1" alt="" width="841" height="261"></p>
+<p>1. Start: This is the initial state, when a process is firstly started/ created.</p>
+<p>2. Ready: The process is waiting to be assigned to a processor. Ready processes are waiting to have the processor allocated to them by the OS. So they can run.</p>
+<p>3. Running: After ready state, the process state is set to running and the processor executes its instruction.</p>
+<p>4. Waiting: Process moves into the waiting state, if it needs to wait for a resource, such as waiting for user input, or waiting for a file to become available.</p>
+<p>5. Terminated or exit: Once the process finishes its execution or it is terminated by OS, it is moved to the terminated state where it waits to be removed from the main memory.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>When does a page fault ocur? Give a structure of a page table.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A page fault occurs when a program or process attempts to access a page of virtual memory that is currently not resident in physical memory (RAM). In other words, a page fault happens when there is a mismatch between the page requested by the program and the pages currently loaded into physical memory. Page faults are a fundamental part of virtual memory systems and are managed by the operating system.</p>
+<p><strong>Page table structure</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-26172" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/10/Capture-24.png?resize=401%2C123&#038;ssl=1" alt="" width="401" height="123"></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Valid/Invalid Bit (V):</strong> This bit indicates whether the mapping in the PTE is currently valid. When the V bit is set (1), it means the mapping is valid, and the VPN can be used to access physical memory. When the V bit is clear (0), it indicates an invalid mapping, often resulting in a page fault when accessed.</li>
+<li><strong>Page Frame Number (PFN):</strong> This field contains the actual physical page frame number (or page frame address) where the data corresponding to the virtual page is located in physical memory. It represents the location of the page in RAM.</li>
+<li><strong>Protection/Permission Bits:</strong> These bits specify the access permissions for the page. Common protection bits include:
+<ul style="list-style-type: square;">
+<li><strong>Read/Write (R/W):</strong> Indicates whether the page is readable (R) and writable (W) by the process.</li>
+<li><strong>User/Supervisor (U/S):</strong> Specifies whether the page can be accessed by user-level code (U) or only by supervisor-level (kernel) code (S).</li>
+<li><strong>Execute (X):</strong> Indicates whether code execution is allowed on this page.</li>
+</ul>
+</li>
+<li><strong>Dirty/Modified Bit (D):</strong> This bit is often used for write-back caching strategies. It indicates whether the page has been modified (data changed) since it was loaded into physical memory. If set (1), it suggests that the page&#8217;s contents need to be written back to secondary storage (e.g., disk) when the page is evicted from RAM.</li>
+<li><strong>Referenced/Accessed Bit (A):</strong> This bit is set (1) when the page is accessed, either for read or write operations. It&#8217;s used to implement various page replacement algorithms, such as the Least Recently Used (LRU) algorithm.</li>
+<li><strong>Caching Bits:</strong> Some architectures include additional bits to control caching behavior, such as whether the page should be cached in CPU caches or whether write-back caching should be enabled.</li>
+<li><strong>Additional Bits:</strong> Depending on the architecture and operating system, there may be other bits or fields in the PTE for various purposes, such as control flags or attributes related to memory management or hardware-specific features.</li>
+<li><strong>Reserved Bits:</strong> These are typically bits that are reserved for future use and may not have any defined functionality in the current architecture or operating system version.</li>
+</ol>
+</div>
+</body></html>

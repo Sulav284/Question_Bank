@@ -1,0 +1,451 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Question Bank 2080 2080</title>
+    </head>
+    <body>
+        <h1>CN Question Bank 2080 - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>What is classless addressing? Explain distance vector routing with a suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Classless addressing, also known as Classless Inter-Domain Routing (CIDR), is a methodology used in IP (Internet Protocol) addressing to allocate and manage IP address space more efficiently. It is an improvement over the traditional class-based addressing (Class A, Class B, and Class C) that was used in the early days of the internet.</p>
+<p>In classless addressing (CIDR), IP addresses are not confined to strict class boundaries. Instead, IP address blocks can be subdivided into smaller subnets, allowing for more flexible allocation of IP addresses. CIDR notation is used to represent IP address blocks and their associated subnet masks. CIDR notation typically looks like this: IP_address/prefix_length, where the prefix length specifies the number of bits in the network portion of the address.</p>
+<p>For example, consider the IP address 192.168.1.0 with a subnet mask of 255.255.255.0. In CIDR notation, this would be represented as 192.168.1.0/24, where the &#8220;/24&#8221; indicates that the leftmost 24 bits represent the network portion of the address, and the remaining 8 bits are used for host addressing. This allows for more efficient allocation of IP addresses and routing.</p>
+<p>&nbsp;</p>
+<p><strong>Distance Vector Routing</strong></p>
+<p>Least-cost route between any two nodes is the route with minimum distance.<br />
+• Each node maintains a set of triples(Destination, Cost, NextHop)<br />
+• The table at each node(router) also guides the packets to the desired node by showing the next stop in the route.<br />
+• There are 2 steps in the route learning process<br />
+1. Initialization<br />
+2. Sharing</p>
+<p><strong>1. Initialization</strong></p>
+<p>Initially routing table in each node consists of the distance between itself and its immediate neighbors, those directly connected to it. Not directly connected is marked infinities.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25732" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/ini.jpg?resize=514%2C301&#038;ssl=1" alt="" width="514" height="301"></p>
+<p><strong>2. Sharing (Update)</strong></p>
+<p>2 types of sharing(updates):</p>
+<p><strong>1. Periodic</strong></p>
+<p>Directly connected neighbors exchange(share) updates periodically (on the order of several seconds).</p>
+<p><strong>2. Triggered</strong></p>
+<p>Whenever the table changes.</p>
+<p>Each update is a list of pairs: (Destination, Cost). The routing table will compare old routing table values with the shared table. Updating of routing table is based on minimum cost.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25733" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/updat.jpg?resize=501%2C325&#038;ssl=1" alt="" width="501" height="325"></p>
+<p>Final Routing Table:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25734" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/final.jpg?resize=647%2C461&#038;ssl=1" alt="" width="647" height="461"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is flow control? How does stop-and-wait ARQ protocol handle error? Where does this protocol reside in OSI layer?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Flow control is a mechanism used in data communication and networking to manage the rate of data transmission between two devices or systems. Its primary purpose is to prevent congestion and ensure that data is sent at a rate that the receiving device can handle, preventing data loss and degradation of network performance.</p>
+<p>&nbsp;</p>
+<p><strong>Stop and wait ARQ</strong></p>
+<p>Stop and wait ARQ protocol handles errors through the following steps:</p>
+<ol style="list-style-type:decimal;">
+<li>When a frame is sent, the sender starts the timeout counter.</li>
+<li>If acknowledgement of frame comes in time, the sender transmits the next frame in queue.</li>
+<li>If acknowledgement doesn&#8217;t come in time, the sender assumes that either the frame or its acknowledgement is lost in transit. Sender retransmits the frame and starts the timeout counter.</li>
+<li>If a negative acknowledgement is received, the sender retransmits the frame.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25736" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/frame.jpg?resize=239%2C355&#038;ssl=1" alt="" width="239" height="355"></p>
+<p>&nbsp;</p>
+<p>The stop-and-wait ARQ protocol resides at the <strong>data link layer (Layer 2)</strong> of the OSI model.</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain TCP header with a neat diagram. Highlight on its uses.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25739" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/TCPSegmentHeader-1.png?resize=456%2C395&#038;ssl=1" alt="" width="456" height="395"></p>
+<p>The TCP (Transmission Control Protocol) header is a critical part of the TCP/IP suite and is used to control the transmission of data between two devices over a network. It contains various fields that provide essential information for establishing, maintaining, and terminating TCP connections. Below, I&#8217;ll explain the different fields in a TCP header:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Source Port (16 bits):</strong> This field identifies the sender&#8217;s port number, which is used to differentiate between multiple applications running on the same sender device. It helps the receiving device know which application should receive the incoming data.</li>
+<li><strong>Destination Port (16 bits):</strong> This field specifies the destination port number on the receiving device. It tells the receiving device which application should process the incoming data.</li>
+<li><strong>Sequence Number (32 bits):</strong> This field is used for ordering and reassembly of segments at the receiving end. It contains the sequence number of the first data byte in the current segment.</li>
+<li><strong>Acknowledgment Number (32 bits):</strong> If the ACK flag is set (indicating that this segment is an acknowledgment), this field contains the sequence number of the next byte the sender expects to receive. It acknowledges receipt of all data up to this sequence number.</li>
+<li><strong>Header Length (4 bits):</strong> This field specifies the length of the TCP header in 32-bit words. It is used to determine where the data begins in the TCP segment.</li>
+<li><strong>Flags (9 bits):</strong> Various control flags are used to manage the TCP connection:
+<ul style="list-style-type: square;">
+<li><strong>URG (1 bit):</strong> Indicates that urgent data is present in the segment.</li>
+<li><strong>ACK (1 bit):</strong> Indicates that the acknowledgment number is valid.</li>
+<li><strong>PSH (1 bit):</strong> Push Function. It instructs the receiving device to push the data to the application immediately.</li>
+<li><strong>RST (1 bit):</strong> Reset the connection. It is used to abort a connection or reject an invalid segment.</li>
+<li><strong>SYN (1 bit):</strong> Synchronize sequence numbers. It is used to initiate a connection.</li>
+<li><strong>FIN (1 bit):</strong> Indicates the sender has finished sending data.</li>
+</ul>
+</li>
+<li><strong>Window Size (16 bits):</strong> This field specifies the size of the sender&#8217;s receive window. It indicates the number of bytes the sender is willing to receive before expecting an acknowledgment.</li>
+<li><strong>Checksum (16 bits):</strong> This field is used for error checking. It covers both the header and data fields to ensure data integrity during transmission.</li>
+<li><strong>Urgent Pointer (16 bits):</strong> If the URG flag is set, this field indicates the offset from the current sequence number where the urgent data begins.</li>
+<li><strong>Options (Variable Length):</strong> This field is optional and can contain various TCP options. Common options include Maximum Segment Size (MSS), Timestamps, and Window Scale. The length of the options field is determined by the data in the Header Length field.</li>
+<li><strong>Padding (Variable Length):</strong> If needed, this field is used to ensure that the header length is a multiple of 32 bits. Padding is added to the options field to achieve this.</li>
+</ol>
+<p>The TCP header is followed by the data being transmitted. Together, the header and data make up the TCP segment. The TCP header plays a crucial role in ensuring the reliable and ordered delivery of data between devices in a TCP/IP network.</p>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>What do you understand by packet switching? Explain. What are its advantages and disadvantages?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Packet Switching</strong></p>
+<ul style="list-style-type: square;">
+<li>A switching technique in which message is sent in one go, but it is divided into smaller pieces and they are sent individually.</li>
+<li>The pieces are called packets.</li>
+<li>Each packet is given a unique number to identify their order at receiving end.</li>
+<li>Every packet contains some information in its headers such as source address, destination address and sequence number.</li>
+<li>Packets travel across the network, taking shortest path possible.</li>
+<li>Packets are reassembled at receiving end in correct order.</li>
+<li>If any packet is missing or corrupted, message is resent.</li>
+<li>If correct order of packets is reached, the acknowledgment message is sent.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25741" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/switchh.png?resize=411%2C138&#038;ssl=1" alt="" width="411" height="138"></p>
+<p><strong>Advantages</strong></p>
+<ul style="list-style-type: square;">
+<li>Packet switching is cost effective.</li>
+<li>Offers improved delay characterisitcs.</li>
+<li>Packet can be rerouted if any problem occurs.</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul style="list-style-type: square;">
+<li>More complex.</li>
+<li>If packet gets lost, sender needs to resend the data.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Explain different types of network types.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>peer-to-peer (P2P) network</strong> is a type of decentralized computer network where individual devices, called peers, communicate and share resources directly with each other without relying on a central server. In a P2P network, each device has equal status and can function both as a client and a server, allowing for the sharing of files, services, or information among the connected peers. Here are the key characteristics and features of a peer-to-peer network:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Decentralization:</strong> P2P networks have no central authority or server that controls the network. Instead, all connected devices have equal importance and can communicate with each other independently.</li>
+<li><strong>Resource Sharing:</strong> One of the primary purposes of P2P networks is to share resources among peers. These resources can include files, such as documents, music, videos, and software applications. Peers can access and download these resources from other peers.</li>
+<li><strong>Collaborative Computing:</strong> P2P networks are often used for collaborative tasks and distributed computing. Peers can combine their processing power to solve complex problems or perform calculations, making them suitable for tasks like scientific research, distributed simulations, or cryptocurrency mining.</li>
+<li><strong>Scalability:</strong> P2P networks are inherently scalable. Adding more peers to the network does not require significant central infrastructure. The more peers that join, the more resources and computing power become available.</li>
+<li><strong>Redundancy and Fault Tolerance:</strong> Data and resources in a P2P network are often replicated across multiple peers. This redundancy enhances data availability and fault tolerance. If one peer becomes unavailable, others can still provide the required resources.</li>
+<li><strong>Anonymity:</strong> Some P2P networks provide a degree of anonymity, as users can share and access resources without revealing their true identities. This anonymity is often associated with file-sharing applications.</li>
+<li><strong>Examples:</strong> Common examples of P2P networks include BitTorrent for file sharing, cryptocurrency networks like Bitcoin (which utilize P2P principles), instant messaging applications like Skype (in its early P2P form), and some decentralized blockchain networks.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25743" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/download.png?resize=241%2C209&#038;ssl=1" alt="" width="241" height="209"></p>
+<p>A <strong>client-server network</strong> is a centralized computing architecture in which devices or computers are categorized into two distinct roles: clients and servers. These roles define the way devices interact with each other and share resources. Here&#8217;s an explanation of a client-server network:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Clients:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Definition:</strong> Clients are the end-user devices or software applications that request services, resources, or data from servers.</li>
+<li><strong>Examples:</strong> Client devices can include personal computers, laptops, smartphones, tablets, and even software applications like web browsers and email clients.</li>
+</ul>
+</li>
+<li><strong>Servers:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Definition:</strong> Servers are specialized computers or software applications designed to provide services, resources, or data to clients. Servers are powerful machines optimized for reliability, scalability, and high availability.</li>
+<li><strong>Examples:</strong> Common types of servers include web servers (for hosting websites and web applications), file servers (for storing and sharing files), email servers (for sending and receiving emails), and database servers (for managing and serving databases).</li>
+</ul>
+</li>
+</ol>
+<p>Key Characteristics of a Client-Server Network:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Centralization:</strong> The network architecture is centralized, with servers acting as central repositories of resources and services. Clients connect to servers to access these resources.</li>
+<li><strong>Resource Management:</strong> Servers are responsible for storing, managing, and maintaining resources such as files, databases, applications, or web content. Clients make requests to servers to access these resources.</li>
+<li><strong>Client Requests:</strong> Clients initiate requests to servers to perform specific tasks or retrieve data. Servers respond to client requests by providing the requested services, data, or resources.</li>
+<li><strong>Security:</strong> Client-server networks often implement security measures to control access to resources and protect data integrity. Authentication and authorization mechanisms are commonly used to ensure that only authorized clients can access specific resources.</li>
+<li><strong>Scalability:</strong> Scalability in client-server networks often involves adding more servers or upgrading existing servers to handle increased client demand. This allows networks to accommodate growing user bases and resource requirements.</li>
+<li><strong>Reliability and Redundancy:</strong> Servers are designed for reliability and can have redundancy built in. Redundant servers and backup systems ensure that services remain available even if one server fails.</li>
+<li><strong>Load Balancing:</strong> To distribute client requests evenly across multiple servers, load balancers may be used. Load balancers help prevent any single server from becoming overloaded, ensuring optimal performance.</li>
+<li><strong>Examples:</strong> On the internet, websites are hosted on web servers, email is handled by email servers, and files are often stored on file servers. These servers collectively provide services to clients using a client-server architecture.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-25744" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/cl.png?resize=290%2C174&#038;ssl=1" alt="" width="290" height="174"></p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Suppose you are given an IP address 172.16.0.0, perform subnetting and divide the given network into 2 subnets. Calculate total number of hosts that can be configured, range of the IP addresses.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Given IP address: 172.16.0.0</p>
+<p>This is a class B address.</p>
+<p>Default subnet mask: 255.255.0.0</p>
+<p>We require 2 (2<sup>1</sup>) subnets so,</p>
+<p>CIDR: 11111111 11111111 10000000 00000000</p>
+<p>i.e. Subnet Mask: 255.255.128.0</p>
+<p>Number of hosts: 2<sup>15</sup>-2 = 32766</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 136px;">
+<tbody>
+<tr style="height: 42px;">
+<td style="width: 25%; text-align: center; height: 88px;" rowspan="2"><strong>Subnet</strong></p>
+<p><strong>(Network IP)</strong></td>
+<td style="width: 50%; text-align: center; height: 42px;" colspan="2"><strong>Usable IP Pool ( First host to last host)</strong></td>
+<td style="width: 25%; text-align: center; height: 88px;" rowspan="2"><strong>Broadcast IP</strong></td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 25%; text-align: center; height: 46px;"><strong>First Host</strong></td>
+<td style="width: 25%; text-align: center; height: 46px;"><strong>Last Host</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;">172.16.0.0</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.0.1</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.127.254</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.127.255</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 25%; text-align: center; height: 24px;">172.16.128.0</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.128.1</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.255.254</td>
+<td style="width: 25%; text-align: center; height: 24px;">172.16.255.255</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Differentiate between link state and distance vector routing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Distance Vector Routing</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Link State Routing</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">Bandwidth required is less due to local sharing, small packets and no flooding.</td>
+<td style="width: 50%;">Bandwidth required is more due to flooding and sending of large link state packets.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Based on local knowledge, since it updates table based on information from neighbours.</td>
+<td style="width: 50%;">Based on global knowledge, it have knowledge about entire network.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Make use of Bellman Ford Algorithm.</td>
+<td style="width: 50%;">Make use of Dijakstra’s algorithm.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Traffic is less.</td>
+<td style="width: 50%;">Traffic is more.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Converges slowly i.e, good news spread fast and bad news spread slowly.</td>
+<td style="width: 50%;">Converges faster.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Count of infinity problem.</td>
+<td style="width: 50%;">No count of infinity problem.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Persistent looping problem i.e, loop will be there forever.</td>
+<td style="width: 50%;">No persistent loops, only transient loops.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Practical implementation is RIP and IGRP.</td>
+<td style="width: 50%;">Practical implementation is OSPF and ISIS.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is socket programming? Explain tocket bucket algorithm with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Socket programming is a programming paradigm that allows processes running on different devices to communicate over a network using sockets. A socket is a software endpoint for sending or receiving data across a computer network. Socket programming enables developers to create network applications that can establish connections, exchange data, and perform various network-related tasks.</p>
+<p>Here&#8217;s a high-level overview of socket programming:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Socket Creation:</strong> To establish communication, a socket is created on both the client and server sides. These sockets can be bound to specific IP addresses and port numbers.</li>
+<li><strong>Connection Establishment:</strong> A client socket initiates a connection request to the server socket by specifying the server&#8217;s IP address and port number. The server listens for incoming connection requests and accepts them.</li>
+<li><strong>Data Transfer:</strong> Once a connection is established, data can be exchanged between the client and server using read and write operations on the sockets.</li>
+<li><strong>Connection Termination:</strong> After data exchange is complete, the connection can be terminated gracefully.</li>
+</ol>
+<p>&nbsp;</p>
+<p>The <strong>Token Bucket Algorithm</strong> is a network traffic management and shaping mechanism used to control the rate at which data is transmitted or processed in a network. It&#8217;s often employed by routers, switches, and network devices to regulate the flow of data, ensuring that it adheres to a specified rate limit. The Token Bucket Algorithm uses two main components: the token bucket and tokens.</p>
+<ul style="list-style-type: square;">
+<li><strong>Token Bucket:</strong> The token bucket is an imaginary bucket that contains a certain number of tokens. Tokens are added to the bucket at a fixed rate (token generation rate). The bucket has a maximum capacity that limits the number of tokens it can hold.</li>
+<li><strong>Tokens:</strong> Tokens represent permission to transmit a certain amount of data. Each token corresponds to a fixed unit of data (e.g., bits or bytes). Tokens are removed from the bucket whenever data is transmitted. If there are no tokens in the bucket, data transmission is delayed until tokens become available.</li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25749" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/image1-1.jpg?resize=300%2C176&#038;ssl=1" alt="" width="300" height="176"></p>
+<p>Suppose you have a network device with a token bucket algorithm configured with the following parameters:</p>
+<ul style="list-style-type: square;">
+<li>Token generation rate: 10 tokens per second.</li>
+<li>Maximum bucket capacity: 100 tokens.</li>
+</ul>
+<p>Now, imagine a data source that wants to transmit data at a rate of 5 packets per second, with each packet consuming 8 tokens.</p>
+<ol style="list-style-type:decimal;">
+<li>Initially, the token bucket is filled to its maximum capacity of 100 tokens.</li>
+<li>The data source sends its first packet, which consumes 8 tokens from the bucket. The bucket now contains 92 tokens.</li>
+<li>The data source continues to send packets at a rate of 5 packets per second. As each packet is sent, it consumes 8 tokens from the bucket.</li>
+<li>If the bucket runs out of tokens while the data source is still transmitting, the data source must wait until new tokens are generated at the rate of 10 tokens per second.</li>
+<li>Tokens are added to the bucket at the token generation rate, gradually replenishing the bucket. Once there are enough tokens, the data source can resume transmitting.</li>
+</ol>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Differentiate between IMAP and POP3. Explain SNMP.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; height: 720px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>POP3</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>IMAP</strong></td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">POP is a simple protocol that only allows downloading messages from your Inbox to your local computer.</td>
+<td style="width: 50%; height: 96px;">IMAP (Internet Message Access Protocol) is much more advanced and allows the user to see all the folders on the mail server.</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 50%; height: 96px;">The POP server listens on port 110, and the POP with SSL secure(POP3DS) server listens on port 995</td>
+<td style="width: 50%; height: 96px;">The IMAP server listens on port 143, and the IMAP with SSL secure(IMAPDS) server listens on port 993.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">In POP3 the mail can only be accessed from a single device at a time.</td>
+<td style="width: 50%; height: 48px;">Messages can be accessed across multiple devices</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">To read the mail it has to be downloaded on the local system.</td>
+<td style="width: 50%; height: 48px;">The mail content can be read partially before downloading.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">The user can not organize mails in the mailbox of the mail server.</td>
+<td style="width: 50%; height: 48px;">The user can organize the emails directly on the mail server.</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; height: 48px;">The user can not create, delete or rename email on the mail server.</td>
+<td style="width: 50%; height: 48px;">The user can create, delete or rename an email on the mail server.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">It is unidirectional i.e. all the changes made on a device do not affect the content present on the server.</td>
+<td style="width: 50%; height: 72px;">It is Bi-directional i.e. all the changes made on the server or device are made on the other side too.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It does not allow a user to sync emails.</td>
+<td style="width: 50%; height: 24px;">It allows a user to sync their emails.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It is fast.</td>
+<td style="width: 50%; height: 24px;">It is slower as compared to POP3.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">A user can not search the content of mail before downloading it to the local system.</td>
+<td style="width: 50%; height: 72px;">A user can search the content of mail for a specific string before downloading.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; height: 24px;">It has two modes: delete mode and keep mode.</p>
+<p>In delete mode, the mail is deleted from the mailbox after retrieval.</p>
+<p>In keep mode, the mail remains in the mailbox after retrieval.</td>
+<td style="width: 50%; height: 24px;">Multiple redundant copies of the message are kept at the mail server, in case of loss of message of a local server, the mail can still be retrieved</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 50%; height: 72px;">Changes in the mail can be done using local email software.</td>
+<td style="width: 50%; height: 72px;">Changes made to the web interface or email software stay in sync with the server.</td>
+</tr>
+<tr>
+<td style="width: 50%;">All the messages are downloaded at once.</td>
+<td style="width: 50%; height: 24px;">The Message header can be viewed prior to downloading.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p><strong>SNMP, or Simple Network Management Protocol,</strong> is a widely used network protocol for managing and monitoring network devices and systems. It enables administrators to collect information, monitor network performance, and configure network devices remotely. SNMP operates in the application layer of the OSI model and is commonly employed to manage networked devices such as routers, switches, servers, printers, and more.</p>
+<p>Here are the key components and concepts associated with SNMP:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Managed Devices:</strong> These are the network devices or systems that you want to monitor and manage. Managed devices have SNMP agents installed, which are responsible for collecting and storing information about the device&#8217;s status and configuration.</li>
+<li><strong>SNMP Manager:</strong> The SNMP manager is the system or application responsible for managing and monitoring the network. It uses SNMP to communicate with the SNMP agents on managed devices. The SNMP manager can retrieve data from managed devices, configure them, and even trigger actions based on specific events or conditions.</li>
+<li><strong>SNMP Agent:</strong> The SNMP agent is a software component installed on each managed device. It collects and maintains information about the device&#8217;s hardware, software, and network parameters. When queried by an SNMP manager, the agent provides information about the device&#8217;s current status and can perform tasks like changing configuration settings.</li>
+<li><strong>Management Information Base (MIB):</strong> The MIB is a hierarchical database that defines the structure and organization of data accessible via SNMP. Each managed device has its own MIB, which describes the specific parameters and values that can be monitored and controlled. The MIB uses a tree-like structure with numerical object identifiers (OIDs) to uniquely identify each parameter.</li>
+<li><strong>SNMP Operations:</strong> SNMP supports several operations that the manager can perform on managed devices:
+<ul style="list-style-type: square;">
+<li><strong>Get:</strong> The manager retrieves specific information from the agent by specifying the OID of the desired parameter.</li>
+<li><strong>Set:</strong> The manager can modify configuration settings on the agent by sending a request to change a specific parameter.</li>
+<li><strong>GetNext:</strong> This operation is used to retrieve the next OID in the MIB, facilitating efficient navigation through the MIB tree.</li>
+<li><strong>Trap:</strong> The agent can send SNMP traps or notifications to the manager to report events or issues, such as network failures or security breaches.</li>
+</ul>
+</li>
+<li><strong>SNMP Versions:</strong> SNMP has evolved over the years, with different versions offering varying levels of security and functionality. The most commonly used SNMP versions are SNMPv1, SNMPv2c, and SNMPv3. SNMPv3, in particular, provides enhanced security features such as authentication and encryption.</li>
+<li><strong>Security:</strong> SNMP versions prior to SNMPv3 had limited security measures, making them susceptible to unauthorized access and data interception. SNMPv3 introduced security enhancements, including authentication and encryption, to protect SNMP communication.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Explain the architecture of NGN.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>NGN, or Next-Generation Network, is an evolving telecommunications network architecture that represents a shift from traditional circuit-switched networks to packet-switched networks capable of providing a wide range of multimedia and data services. The architecture of NGN is designed to be more flexible, efficient, and adaptable to the growing demands of modern telecommunications. Here&#8217;s an overview of the architecture of NGN:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Core Network:</strong>
+<ul style="list-style-type: square;">
+<li>At the core of the NGN architecture is a high-capacity, packet-switched network. This core network is responsible for routing and transporting data, voice, video, and other multimedia services across the network.</li>
+<li>It uses Internet Protocol (IP) as the primary transport protocol, allowing for the convergence of various services onto a single, unified network.</li>
+</ul>
+</li>
+<li><strong>Access Network:</strong>
+<ul style="list-style-type: square;">
+<li>The access network connects end-user devices (e.g., phones, computers, IoT devices) to the core network. It provides the last-mile connectivity.</li>
+<li>Various technologies can be used in the access network, including fiber optics, DSL (Digital Subscriber Line), cable, wireless (Wi-Fi, 4G/5G), and more, depending on the deployment and geographic location.</li>
+</ul>
+</li>
+<li><strong>Control and Signaling Plane:</strong>
+<ul style="list-style-type: square;">
+<li>The control and signaling plane is responsible for call setup, management, and signaling between different network elements. It handles functions like call routing, authentication, and session establishment.</li>
+<li>Signaling protocols like SIP (Session Initiation Protocol) and H.323 are often used for these purposes.</li>
+</ul>
+</li>
+<li><strong>Service Layer:</strong>
+<ul style="list-style-type: square;">
+<li>The service layer of NGN is where various value-added services and applications are hosted. These services can include voice over IP (VoIP), video conferencing, multimedia streaming, and cloud-based applications.</li>
+<li>NGN allows for the deployment of a wide range of services through a centralized or distributed service architecture.</li>
+</ul>
+</li>
+<li><strong>Management and Operations Support Systems (OSS):</strong>
+<ul style="list-style-type: square;">
+<li>NGN architecture includes management and OSS components responsible for network provisioning, monitoring, maintenance, and billing.</li>
+<li>These systems help network operators manage and optimize the network&#8217;s performance, ensuring efficient service delivery.</li>
+</ul>
+</li>
+<li><strong>Quality of Service (QoS) and Traffic Management:</strong>
+<ul style="list-style-type: square;">
+<li>NGN networks often incorporate QoS mechanisms to ensure that different types of traffic (e.g., voice, video, data) receive the appropriate level of service quality. This helps maintain a consistent user experience.</li>
+<li>Traffic management and congestion control mechanisms are used to optimize network resource utilization.</li>
+</ul>
+</li>
+<li><strong>Security Measures:</strong>
+<ul style="list-style-type: square;">
+<li>Security is a critical aspect of NGN architecture. It includes mechanisms such as firewalls, intrusion detection and prevention systems (IDPS), encryption, and access control to protect against threats and vulnerabilities.</li>
+</ul>
+</li>
+<li><strong>Interconnection and Peering:</strong>
+<ul style="list-style-type: square;">
+<li>NGN networks need to interconnect and peer with other networks, such as the public switched telephone network (PSTN), other NGNs, and the internet, to enable global communication and service reach.</li>
+</ul>
+</li>
+<li><strong>Scalability and Evolution:</strong>
+<ul style="list-style-type: square;">
+<li>NGN architecture is designed to be scalable and adaptable to future technologies and service requirements. This flexibility allows network operators to expand and upgrade their networks as needed.</li>
+</ul>
+</li>
+<li><strong>Standards and Protocols:</strong>
+<ul style="list-style-type: square;">
+<li>NGN relies on standardized protocols and interfaces to ensure interoperability between different network elements and equipment from various vendors.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Highlight on the use of PPP. What are the functions of Media Access Control.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>PPP (Point-to-Point Protocol):</strong></p>
+<p>PPP, or Point-to-Point Protocol, is a widely used data link layer protocol in networking. It is primarily used for establishing a direct connection between two nodes over various physical mediums, including serial cables, telephone lines, and more. PPP serves several important functions in networking:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Data Link Layer Protocol:</strong> PPP operates at the data link layer (Layer 2) of the OSI model. It provides a method for encapsulating and transmitting data over a physical link between two devices.</li>
+<li><strong>Authentication:</strong> PPP supports various authentication methods, including PAP (Password Authentication Protocol) and CHAP (Challenge Handshake Authentication Protocol). These methods ensure that only authorized users or devices can establish a connection.</li>
+<li><strong>Error Detection and Correction:</strong> PPP includes error detection and correction mechanisms to ensure data integrity during transmission. This helps in detecting and recovering from errors that may occur due to noise or interference on the communication channel.</li>
+<li><strong>Multi-Protocol Support:</strong> PPP is not limited to a single network layer protocol. It can encapsulate various network layer protocols, including IP (Internet Protocol), IPv6, IPX (Internetwork Packet Exchange), and others. This flexibility makes PPP suitable for a wide range of network configurations.</li>
+<li><strong>Negotiation:</strong> PPP allows devices at both ends of the connection to negotiate parameters such as authentication methods, network layer protocol to be used, and other settings. This negotiation ensures that both devices agree on how the connection will be established and maintained.</li>
+<li><strong>Link Control:</strong> PPP includes Link Control Protocol (LCP), which manages the establishment, maintenance, and termination of the PPP link. LCP ensures that the link is functional and monitors its quality.</li>
+<li><strong>Network Control:</strong> Network Control Protocol (NCP) is used to configure and manage the network layer protocols running over the PPP link. For example, IPCP (IP Control Protocol) is used for configuring IP addresses.</li>
+<li><strong>Compression and Encryption:</strong> PPP supports data compression and encryption for efficient use of bandwidth and enhanced security, respectively.</li>
+<li><strong>Dynamic IP Assignment:</strong> PPP can dynamically assign IP addresses to the connecting devices, allowing for flexible and efficient IP address management.</li>
+</ol>
+<p><strong>Functions of Media Access Control (MAC):</strong></p>
+<p>The Media Access Control (MAC) is a sublayer within the data link layer (Layer 2) of the OSI model. It is responsible for managing access to the shared communication medium in a network segment where multiple devices are connected. The primary functions of MAC include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Addressing:</strong> MAC assigns unique hardware addresses (e.g., MAC addresses in Ethernet networks) to each network interface card (NIC) in the network. These addresses are used for identifying devices within the same network segment.</li>
+<li><strong>Frame Formatting:</strong> MAC encapsulates data packets into frames that can be transmitted over the network medium. It adds header and trailer information to each frame, including source and destination MAC addresses, frame length, and error-checking information.</li>
+<li><strong>Media Access Control:</strong> MAC protocols define rules for accessing the shared communication medium. These protocols ensure that devices take turns transmitting data to avoid data collisions. For example, Ethernet uses Carrier Sense Multiple Access with Collision Detection (CSMA/CD) to manage access to the network medium.</li>
+<li><strong>Error Detection:</strong> MAC includes error-detection mechanisms to identify corrupted frames during transmission. If a frame is detected as having errors, it may be discarded or retransmitted.</li>
+<li><strong>Flow Control:</strong> Some MAC protocols implement flow control mechanisms to regulate the rate of data transmission between devices, preventing data overload or network congestion.</li>
+<li><strong>Prioritization:</strong> In networks with Quality of Service (QoS) requirements, MAC can prioritize certain types of traffic over others, ensuring that critical data gets transmitted with higher priority.</li>
+<li><strong>Address Learning:</strong> In switched Ethernet networks, MAC tables are used to learn and store the association between MAC addresses and switch ports. This helps in forwarding frames only to the appropriate destination port.</li>
+<li><strong>Broadcast and Multicast Handling:</strong> MAC handles the distribution of broadcast and multicast frames to all devices within a network segment.</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<p>a. IPV6</p>
+<p>b. Microwave</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>a. <strong>IPv6 (Internet Protocol version 6):</strong></p>
+<p>IPv6 is the latest version of the Internet Protocol, designed to succeed and eventually replace IPv4 (Internet Protocol version 4). IPv6 was developed to address the limitations of IPv4, primarily the exhaustion of IPv4 addresses due to the rapid growth of the internet and the increasing number of connected devices. Here are some key points about IPv6:</p>
+<ul style="list-style-type: square;">
+<li><strong>Address Space:</strong> IPv6 significantly expands the address space compared to IPv4. IPv6 addresses are 128 bits long, allowing for approximately 340 undecillion (3.4 x 10^38) unique addresses. This vast address space ensures that there are enough addresses to accommodate the growing number of internet-connected devices.</li>
+<li><strong>Address Notation:</strong> IPv6 addresses are represented in hexadecimal notation, separated by colons. For example, an IPv6 address might look like: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.</li>
+<li><strong>Auto-Configuration:</strong> IPv6 includes features for automatic address configuration, simplifying network setup for devices. Devices can generate their IPv6 addresses without manual configuration.</li>
+<li><strong>Security:</strong> IPv6 incorporates security features, including IPsec (Internet Protocol Security), which provides encryption and authentication for data communication.</li>
+<li><strong>Efficiency:</strong> IPv6 is designed to be more efficient in routing and packet processing, which can lead to improved network performance.</li>
+<li><strong>Transition Mechanisms:</strong> Transition mechanisms are in place to facilitate the coexistence of IPv4 and IPv6 networks during the transition period. These mechanisms enable communication between devices using different IP versions.</li>
+<li><strong>Deployment:</strong> IPv6 adoption has been ongoing, and many internet service providers, network operators, and organizations have implemented IPv6 alongside IPv4 to support the growing internet ecosystem.</li>
+</ul>
+<p>b. <strong>Microwave:</strong></p>
+<p>Microwaves are electromagnetic waves with wavelengths ranging from approximately 1 millimeter to 1 meter. They are a form of electromagnetic radiation, like radio waves, infrared radiation, visible light, ultraviolet radiation, X-rays, and gamma rays. Here are some key points about microwaves:</p>
+<ul style="list-style-type: square;">
+<li><strong>Applications:</strong> Microwaves have a wide range of applications in science, technology, and everyday life. Some common uses include microwave ovens for cooking, wireless communication (e.g., Wi-Fi and cell phones), radar systems for navigation and weather monitoring, and certain medical imaging techniques like magnetic resonance imaging (MRI).</li>
+<li><strong>Microwave Oven:</strong> In a microwave oven, microwaves at a frequency of approximately 2.45 GHz are used to heat and cook food. These microwaves interact with water molecules in the food, causing them to vibrate and generate heat, which cooks the food quickly and efficiently.</li>
+<li><strong>Wireless Communication:</strong> Microwaves are used for wireless communication because they can transmit data over long distances with relatively high bandwidth. Many wireless technologies, including Wi-Fi, microwave radio, and satellite communication, use microwaves for data transmission.</li>
+<li><strong>Radar Systems:</strong> Radar (Radio Detection and Ranging) systems use microwaves to detect and locate objects, measure their speed, and gather information about their characteristics. Radar is used in aviation, weather forecasting, defense applications, and traffic control, among others.</li>
+<li><strong>Medical Applications:</strong> Microwaves are used in medical applications such as MRI and hyperthermia treatment. In MRI, microwaves are used to excite hydrogen nuclei in the body to create detailed images. Hyperthermia treatment uses microwaves to heat and destroy cancerous tissues.</li>
+<li><strong>Safety Precautions:</strong> While microwaves are generally safe when used in everyday appliances like microwave ovens, they can be hazardous if not properly controlled. High-power microwave devices used in industrial or military applications can pose safety risks, including tissue damage and interference with electronic equipment.</li>
+</ul>
+</div>
+</body></html>

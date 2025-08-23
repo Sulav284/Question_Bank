@@ -1,0 +1,991 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OS Question Bank 2078 2078</title>
+    </head>
+    <body>
+        <h1>OS Question Bank 2078 - 2078</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Long Answer Questions: Attempts any two Questions (2 x 10 = 20)</h2><h3>Question 1</h3>
+<div><p><p>What kind of problem arises with sleep and wakeup mechanism of achieving mutual exclusion? Explain with suitable code snippet.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When a process wants to enter its critical section, it checks to see if then entry is allowed. If it is not, the process goes into tight loop and waits (i.e. start busy waiting) until it is allowed to enter. This approach waste CPU-time.</p>
+<p>Now, look at some inter-process communication primitives is the pair of sleep-wake up.</p>
+<ul style="list-style-type: square;">
+<li><strong>Sleep:</strong> It is a system call that causes the caller to block, that is, be suspended until some other process wakes it up.</li>
+<li><strong>Wakeup:</strong> It is a system call that wakes up the process.</li>
+</ul>
+<p>Example of sleep()/wake() usage</p>
+<p><strong>Producer-consumer problem:</strong></p>
+<p>Let two processes share a buffer with limited capacity. Process called producer will put pieces of imformation in the buffer. Process called consumer will take pieces of information from that buffer.</p>
+<p>Let us assume:</p>
+<ul style="list-style-type: square;">
+<li>If Producer is trying to put a message into full buffer, Producer goes to sleep</li>
+<li>If Comsumer is trying ti take message from empty buffer, Consumer goes to sleep.</li>
+</ul>
+<p><strong>Producer-Consumer with Race conditions:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">#define N 100
+int count = 0;
+
+void producer(void){
+    int item;
+
+    while(TRUE){
+        item = produce_item();
+
+        if( count == N ){
+            sleep();
+        }
+
+        insert_item(item);
+        count++;
+        if( count == 1 ){
+            wake_up(consumer);
+        }
+    }
+}
+
+
+void consumer(void){
+    int item;
+
+    while(TRUE){
+
+        if( count == 0 ){
+            sleep();
+        }
+
+        item = remove_item();
+
+        count--;
+        
+        if( count == N-1 ){
+            wake_up(producer);
+        }
+
+        consume_item(item);
+    }
+}</pre>
+<p>The producer produces the item and inserts it into buffer. The value of the global variable count got increased at each insertion. If the buffer is filled completely and no slot is available then the producer will sleep, otherwise it keep inserting.</p>
+<p>On the consumer&#8217;s end, the value of count got decreaed at every iteration. If buffer is empty at any point the consumer will sleep otherwise it keeps consuming the items and decreased the value of count by 1. The consumer will be waked up by the consumer if there is at least one slot available in the buffer so that the producer can write that.</p>
+<p><span style="text-decoration: underline;"><strong>Problem:</strong></span></p>
+<p>Consumer about to go to sleep but got preemted, buffer &gt;= 1 and producer will send the wake_up signal but the consumer is not sleeping yet and the signal will get wasted. And then consumer got scheduled and went to sleep. And the producer is thinking that consumer is not sleeping. When count is N the producer will got to sleep. Now, if you see that both producer and consumer are sleeping. And that is deadlock.</p>
+<p><span style="text-decoration: underline;"><strong>Solution:</strong></span></p>
+<p>Whenever someone is about to sleep the a bit is maintained to tell do not sleep. But when there are N producer and consumer then we have to record N wake up calls. So, Dijkstra introduced something called as Semaphores which tell how many wake up calls happend.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Why OPR is best but not pratically fessible page replacement algorithm? Calculate the number of page faults for OPR, LRU and Clock page replacement algorithm for the reference string: 1, 3, 4, 2, 3, 5, 4, 3, 1, 2, 4, 6, 3, 2, 1, 4, 2. Assume the memory size is 3.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Optimal page replacement is best because</p>
+<ol style="list-style-type:decimal;">
+<li>It is less complex and easy to implement.</li>
+<li>A page is replaced with minimum fuss.</li>
+<li>Simple data structures are used for this purpose.</li>
+<li>Lower page fault rate.</li>
+<li>Never suffers from Belady&#8217;s anomaly.</li>
+</ol>
+<p>But It is not pratically fessible page replacement algorithm because</p>
+<ol style="list-style-type:decimal;">
+<li>Not all operating systems can implement this algorithm.</li>
+<li>Error detection is harder.</li>
+<li>Least recently used page will be replaced which may sometimes take a lot of time.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Problem Part:</strong></span></p>
+<p>The number of page faults for OPR, LRU and Clock page replacement algorithm for the reference string: 1, 3, 4, 2, 3, 5, 4, 3, 1, 2, 4, 6, 3, 2, 1, 4, 2 is given below</p>
+<p><span style="text-decoration: underline;"><strong>OPR:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td>*</td>
+<td>*</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td>*</td>
+<td>*</td>
+<td></td>
+<td></td>
+<td>*</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page hit = 7</p>
+<p>Total page fault = 17 &#8211; 7 = 10</p>
+<p><span style="text-decoration: underline;"><strong>LRU:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>*</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page hit = 3</p>
+<p>Total page fault = 17 &#8211; 3 = 14</p>
+<p><span style="text-decoration: underline;"><strong>Clock Page Replacement:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1(0)</td>
+<td>1(0)</td>
+<td>1(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+</tr>
+<tr>
+<td></td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>3(1)</td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>3(1)</td>
+<td>3(0)</td>
+<td>3(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>2(0)</td>
+<td>2(1)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>4(0)</td>
+<td>5(0)</td>
+<td>5(0)</td>
+<td>5(0)</td>
+<td>1(0)</td>
+<td>1(0)</td>
+<td>1(0)</td>
+<td>6(0)</td>
+<td>6(0)</td>
+<td>6(0)</td>
+<td>1(0)</td>
+<td>1(0)</td>
+<td>1(0)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>*</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total page hit = 3</p>
+<p>Total page fault = 17 &#8211; 3 = 14</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How unsafe state differs from deadlocked state? Consider follows initial state and identify wheather requested is and granted or denies for the given cases.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td>Process</td>
+<td>Has</td>
+<td>Max</td>
+</tr>
+<tr>
+<td>A</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>D</td>
+<td>3</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Free = 2</em></p>
+<ul>
+<li>What will happen if process D request 1 resource?</li>
+<li>What will happen if process A request 1 resource?</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If a system goes to an unsafe state, it may or may not go to a deadlock state. So, unsafe and deadlock states are different. An unsafe state implies that some unfortunate sequence of events might lead to deadlock. But, it is not entirely sure that the system will go to deadlock. Thus, Banker&#8217;s algorithm is used to see if granting each resource requested leads to a safe state or not. If it leads, the request is granted, otherwise postponed.</p>
+<p>First, Let&#8217;s make the column for needed resources.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Process</td>
+<td style="width: 50%;">Need= Max &#8211; has</td>
+</tr>
+<tr>
+<td style="width: 50%;">A</td>
+<td style="width: 50%;">4</td>
+</tr>
+<tr>
+<td style="width: 50%;">B</td>
+<td style="width: 50%;">4</td>
+</tr>
+<tr>
+<td style="width: 50%;">C</td>
+<td style="width: 50%;">1</td>
+</tr>
+<tr>
+<td style="width: 50%;">D</td>
+<td style="width: 50%;">5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now, let&#8217;s check the safe sequence using Banker&#8217;s algorithm.</p>
+<p><span style="text-decoration: underline;"><strong>i) For process A:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">4</td>
+<td style="width: 50%;">2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Need &gt; Available; A is not executed.</p>
+<p><span style="text-decoration: underline;"><strong>ii) For process B:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">4</td>
+<td style="width: 50%;">2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Need &gt; Available; B is not executed.</p>
+<p><span style="text-decoration: underline;"><strong>iii) For process C:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">1</td>
+<td style="width: 50%;">2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Available &gt; Need; C is executed.</p>
+<p>New available = 2 + 2 = 4</p>
+<p><span style="text-decoration: underline;"><strong>iv) For process D:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">5</td>
+<td style="width: 50%;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Need &gt; Available; D is not executed.</p>
+<p><span style="text-decoration: underline;"><strong>iv) For process A:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">4</td>
+<td style="width: 50%;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Need = Available; A is executed.</p>
+<p>Now, available = 4 + 2 = 6</p>
+<p><span style="text-decoration: underline;"><strong>v) For process B:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">5</td>
+<td style="width: 50%;">6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Available &gt; Need; B is executed.</p>
+<p>Now, available = 6 + 1 = 7</p>
+<p><span style="text-decoration: underline;"><strong>vi) For process D:</strong></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">Need</td>
+<td style="width: 50%;">Available</td>
+</tr>
+<tr>
+<td style="width: 50%;">5</td>
+<td style="width: 50%;">7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since Available &gt; Need; D is executed.</p>
+<p>Now, available = 7 + 3 = 10</p>
+<p>Since it is in a safe state as all the processes are executed. So, the safe sequences &lt;CABD&gt;.</p>
+<p>Hence, all the requested resource is granted.</p>
+<p><span style="text-decoration: underline;"><strong>If D requests 1 resource:</strong></span></p>
+<p>New available = 2 &#8211; 1 = 1</p>
+<p>New need for D = 5 &#8211; 1 = 5</p>
+<p>New allocation = D = 3 + 1 = 4</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%;">Process</td>
+<td style="width: 33.3333%;">Has</td>
+<td style="width: 33.3333%;">Need</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">A</td>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">4</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">B</td>
+<td style="width: 33.3333%;">1</td>
+<td style="width: 33.3333%;">4</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">C</td>
+<td style="width: 33.3333%;">2</td>
+<td style="width: 33.3333%;">1</td>
+</tr>
+<tr>
+<td style="width: 33.3333%;">D</td>
+<td style="width: 33.3333%;">4</td>
+<td style="width: 33.3333%;">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Available = 1</p>
+<p>Now, again let&#8217;s check the safe sequence</p>
+<ol style="list-style-type: lower-roman;">
+<li>For Process A, Need = 4 &gt; Available =1 So, A is not execueted</li>
+<li>For Process B, Need = 4 &gt; Available = 1. So, B is not executed</li>
+<li>For Process C, Need = 2 &gt; Available = 1. So, C isn&#8217;t executed</li>
+<li>For Process D, Need = 4 &gt; Available = 1. So, D isn&#8217;t executed</li>
+</ol>
+<p>Since none of the processes granted the request for resources. So, when  D request 1, the System goes to deadlock.</p>
+<p><span style="text-decoration: underline;"><strong>If A requests 1 resource:</strong></span></p>
+<p>New available = 2 &#8211; 1 = 1</p>
+<p>New need for A = 4 &#8211; 1 = 3</p>
+<p>New allocation for A = 2 + 1 = 3</p>
+<p>Let&#8217;s check the safe sequence</p>
+<ol style="list-style-type: lower-roman;">
+<li>For process A, Need = 3 &gt; Available = 1. So, A isn&#8217;t executed.</li>
+<li>For process B, Need = 4 &gt; Available  = 1. So, B isn&#8217;t executed</li>
+<li>For process C, (Need = 1) = (Available = 1) . So, C is executed and New available = 1 + 2 = 3</li>
+<li>For process D, Need = 5 &gt; Available = 3. so, D isn&#8217;t executed</li>
+<li>For process A, (Need = 3) = (Available = 3). So, A is executed and New available = 3 + 3 = 6</li>
+<li>For process B, Need = 4 &lt; Available = 6. So, B is executed. New available = 6  + 1 = 7</li>
+<li>For process D, Need = 5 &lt; Available = 7. So, D is executed and New available = 7 + 3 = 10</li>
+</ol>
+<p>Since all the requested resources are granted. So, the system is in a safe state and the safe sequence is</p>
+<p>&lt;CABD&gt;</p>
+</div>
+<h2>Short Answer Questions: Attempts any eight questions (8 x 5 = 40)</h2><h3>Question 4</h3>
+<div><p><p>What is system call? Discuss process of handling system calls briefly.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The interface between a process and an operating system is provided by system calls. In general, system calls are available as assembly language instructions. They are also included in the manuals sed by the assembly level programmers. System calls are usually made when a process in user mode requires access to a resource. Then it requests the kernal to provide the resource via a system call. A figure representing the execution of the system call is given as follows:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6614 size-full" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/06/System-call-working.jpg?resize=451%2C304&#038;ssl=1" alt="Process of handling system call" width="451" height="304" /></p>
+<p>As can be seen from this diagram, the process execute normally in the user mode until a system call interrupts this. Then  the system is executed on a priority basis in the kernal mode. After the execution of system call, the control returns to the user mode and execution of user processes can be resumed. In general, system calls are required in the following situations:</p>
+<ul style="list-style-type: square;">
+<li>If a file system requires the creation or deletion of files. Reading and writing from files also require a system call.</li>
+<li>Creation and management of new processes.</li>
+<li>Network connections also require system calls. This include sending and receiving packets.</li>
+<li>Access to a hardware device such as printer, scanner etc. requires a system call.</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is lock variable? Discuss its working and problems associated with it in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li><span style="font-size: 12pt;">The lock variable is a synchronization mechanism.</span></li>
+<li>It uses a lock variable to provide synchronization among the processes executing concurrently.</li>
+<li>However, it completely fails to provide synchronization.</li>
+</ul>
+<p>It is implemented as-</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter wp-image-6919" title="Lock Variable | Synchronization Mechanism" src="https://i0.wp.com/www.gatevidyalay.com/wp-content/uploads/2018/10/Lock-Variable-Synchronization-Mechanism.png?resize=352%2C202&#038;ssl=1" sizes="auto, (max-width: 352px) 100vw, 352px" srcset="https://www.gatevidyalay.com/wp-content/uploads/2018/10/Lock-Variable-Synchronization-Mechanism.png 352w, https://www.gatevidyalay.com/wp-content/uploads/2018/10/Lock-Variable-Synchronization-Mechanism-300x172.png 300w" alt="" width="352" height="202"></p>
+<p>Initially, the lock value is set to 0.</p>
+<ul style="list-style-type: square;">
+<li>Lock value = 0 means the critical section is currently vacant and no process is present inside it.</li>
+<li>Lock value = 1 means the critical section is currently occupied and a process is present inside it.</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Working:</span></strong></p>
+<p>This synchronization mechanism is supposed to work as explained in the following scenes-</p>
+<p><span style="text-decoration: underline;">Scene-01:</span></p>
+<ul style="list-style-type: square;">
+<li>Process P<sub>0</sub> arrives.</li>
+<li>It executes the lock!=0 instruction.</li>
+<li>Since the lock value is set to 0, so it returns the value 0 to the while loop.</li>
+<li>The while loop condition breaks.</li>
+<li>It sets the lock value to 1 and enters the critical section.</li>
+<li>Now, even if process P<sub>0</sub> gets preempted in the middle, no other process can enter the critical section.</li>
+<li>Any other process can enter only after process P<sub>0</sub> completes and sets the lock value to 0.</li>
+</ul>
+<p><span style="text-decoration: underline;">Scene-02:</span></p>
+<ul style="list-style-type: square;">
+<li>In another process, P<sub>1</sub> arrives.</li>
+<li>It executes the lock!=0 instruction.</li>
+<li>Since the lock value is set to 1, so it returns value 1 to the while loop.</li>
+<li>The returned value 1 does not break the while loop condition.</li>
+<li>The process P<sub>1</sub> is trapped inside an infinite while loop.</li>
+<li>The while loop keeps the process P<sub>1</sub> busy until the lock value becomes 0 and its condition breaks.</li>
+</ul>
+<p><span style="text-decoration: underline;"><span style="font-size: 14pt;">Scene-03:</span></span></p>
+<ul style="list-style-type: square;">
+<li>Process P<sub>0</sub> comes out of the critical section and sets the lock value to 0.</li>
+<li>The while loop condition of process P<sub>1</sub> breaks.</li>
+<li>It sets the lock value to 1 and enters the critical section.</li>
+<li>Now, even if process P<sub>1</sub> gets preempted in the middle, no other process can enter the critical section.</li>
+<li>Any other process can enter only after process P<sub>1</sub> completes and sets the lock value to 0.</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Failure of the Mechanism:</span></strong></p>
+<ul style="list-style-type: square;">
+<li> The mechanism completely fails to provide synchronization among the processes.</li>
+<li>It can not even guarantee to meet the basic criterion of mutual exclusion.</li>
+</ul>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Differentiate between internal and external fragmentation? Suppose that we have memory of 100 KB with 5 partitions of size 150 KB, 200 KB, 250 KB, 100 KB, and 300 KB. Where the processes A and B of size 175 KB and 125 KB will be loaded, if we used Best-Fit, and Worst-Fit Strategy?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>As the processes are loaded and removed from the main memory, the free memory space is broken into little pieces. It happens after some time that process can&#8217;t be allocated to the memory block considering their small size * memory blocks remains unused. this problem is known as fragmentation.</p>
+<p>There are two types of fragmentation:</p>
+<ol style="list-style-type:decimal;">
+<li><span style="text-decoration: underline;">Internal: </span>The memory block assigned to a process is bigger. Some portion of memory is left unused, as it can&#8217;t be used by another process</li>
+<li><span style="text-decoration: underline;">External:</span> Total memory space is enough to satisfy a request or to reside a process in it, but it isn&#8217;t contiguous. So, it can&#8217;t be used.</li>
+</ol>
+<p><strong>Problem Part:</strong></p>
+<p>Given,</p>
+<p>Memory = 1000 kb with 5 partitions of 150kb, 200kb, 250kb, 100kb and 300kb</p>
+<p>and processes A and B of sizes 175kb and 125kb need to be loaded.</p>
+<p><span style="text-decoration: underline;">For Best-Fit Strategy:</span></p>
+<ol style="list-style-type:decimal;">
+<li>Process A of 175 KB is loaded in a 200kb partition.</li>
+<li>Process B of 125 KB is loaded in a 150 KB partition.</li>
+</ol>
+<p><span style="text-decoration: underline;">For Worst-Fit Strategy:</span></p>
+<ol style="list-style-type:decimal;">
+<li>Process A of 175 KB is loaded in a 300kb partition.</li>
+<li>Process B of 125 KB is loaded in a 350 KB partition.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is ment by file attributes? Discuss any one technique of implementing directories in detail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><b>File attributes</b> are settings associated with computer files that grant or deny certain rights to how a user or the operating system can access that file. For example, IBM-compatible computers running MS-DOS or Microsoft Windows have the capabilities of having read, archive, system, and hidden attributes.</p>
+<p>Directory implementation in the operating system can be done using the Singly Linked List and Hash table. The efficiency, reliability, and performance of a file system are greatly affected by the selection of directory allocation and directory-management algorithms. There are numerous ways in which the directories can be implemented. But we need to choose an appropriate directory implementation algorithm that enhances the performance of the system.</p>
+<h4>Directory Implementation using Singly Linked List</h4>
+<p>The implementation of directories using a singly linked list is easy to program but is time-consuming to execute. Here we implement a directory by using a linear list of filenames with pointers to the data blocks.</p>
+<div class="wp-caption alignnone">
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/20220106113142/linkedlist.png?w=956&#038;ssl=1" sizes="100vw" srcset="https://media.geeksforgeeks.org/wp-content/uploads/20220106113142/linkedlist-660x291.png 660w, https://media.geeksforgeeks.org/wp-content/uploads/20220106113142/linkedlist-768x339.png 768w, https://media.geeksforgeeks.org/wp-content/uploads/20220106113142/linkedlist.png," alt="Directory Implementation Using Singly Linked List"  /></p>
+<p class="wp-caption-text">Directory Implementation Using Singly Linked List</p>
+</div>
+<ul style="list-style-type: square;">
+<li>To create a new file the entire list has to be checked such that the new directory does not exist previously.</li>
+<li>The new directory then can be added to the end of the list or at the beginning of the list.</li>
+<li>In order to delete a file, we first search the directory with the name of the file to be deleted. After searching we can delete that file by releasing the space allocated to it.</li>
+<li>To reuse the directory entry we can mark that entry as unused or we can append it to the list of free directories.</li>
+<li>Deleting a file-linked list is the best choice as it takes less time.</li>
+</ul>
+<h4>Disadvantage</h4>
+<p>The main disadvantage of using a linked list is that when the user needs to find a file the user has to do a linear search. In today’s world directory information is used quite frequently and linked list implementation results in slow access to a file. So the operating system maintains a cache to store the most recently used directory information.</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Why the concept of disk interleaving is important? Explain with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Whenever Processor requests Data from the main memory. A block (chunk) of Data is Transferred to the cache and then to Processor. So whenever a cache miss occurs the Data is to be fetched from the main memory. But main memory is relatively slower than the cache. So to improve the access time of the main memory interleaving is used.</p>
+<p>We can access all four Modules at the same time thus achieving Parallelism. From Figure 2 the data can be acquired from the Module using the Higher bits. This method Uses memory effectively.</p>
+<p><b>For example:</b> If we have 4 memory banks(4-way Interleaved memory), with each containing 256 bytes, then, the Block Oriented scheme(no interleaving), will assign virtual address 0 to 255 to the first bank, 256 to 511 to the second bank. But in Interleaved memory, virtual address 0 will be with the first bank, 1 with the second memory bank, 2 with the third bank and 3 with the fourt, and then 4 with the first memory bank again.</p>
+<p>Hence, CPU can access alternate sections immediately without waiting for memory to be cached. There are multiple memory banks which take turns for supply of data.</p>
+<p>Memory interleaving is a technique for increasing memory speed. It is a process that makes the system more efficient, fast and reliable.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is resource allocation graph? Explain the process of detecting deadlocks when there is single instance of each resources with suitable example?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The resource allocation graph is a directed graph that briefs about the deadlock more precisely. This is the principal representation showing processes requested resources and assigned resources. In RAG, vertices and edges are present.</p>
+<p>Vertices are of two types:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Process vertex</li>
+<li>Resource vertex</li>
+</ol>
+<p>and resources are of two types</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Single instance</li>
+<li>Multiple instances</li>
+</ol>
+<p>Let&#8217;s take an example of a single instance of RAG</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="size-full wp-image-6831 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/07/deadlock-min.png?resize=1000%2C510&#038;ssl=1" alt="Single Instance Resource with/without deadlock" width="1000" height="510" /></p>
+<p>Here, we can see in fig(i), If there is a cycle in RAG and each resource in the cycle provides only one instance, then the process will be in a deadlock.</p>
+<p>In fig (2), there is no deadlock because there is no circular dependency. So, a cycle in a single instance resource type is a sufficient condition for deadlock.</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Discuss the concept of SJF and SRTN scheduling algorithms with suitable example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><h4 class="h1">Shortest Job First (SJF) Scheduling</h4>
+<p>Till now, we were scheduling the processes according to their arrival time (in FCFS scheduling). However, the SJF scheduling algorithm schedules the processes according to their burst time.</p>
+<p>In SJF scheduling, the process with the lowest burst time, among the list of available processes in the ready queue, is going to be scheduled next.</p>
+<p>However, it is very difficult to predict the burst time needed for a process hence this algorithm is very difficult to implement in the system.</p>
+<p class="h2"><span style="text-decoration: underline;">Advantages of SJF:</span></p>
+<ol class="points">
+<li>Maximum throughput</li>
+<li>Minimum average waiting and turnaround time</li>
+</ol>
+<p class="h2"><span style="text-decoration: underline;">Disadvantages of SJF:</span></p>
+<ol class="points">
+<li>May suffer from the problem of starvation</li>
+<li>It is not implementable because the exact Burst time for a process can&#8217;t be known in advance.</li>
+</ol>
+<p class="h3"><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>In the following example, there are five jobs named as P1, P2, P3, P4, and P5. Their arrival time and burst time are given in the table below.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>PID</th>
+<th>Arrival Time</th>
+<th>Burst Time</th>
+<th>Completion Time</th>
+<th>Turn Around Time</th>
+<th>Waiting Time</th>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+<td>8</td>
+<td>7</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>13</td>
+<td>10</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+<td>10</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td>10</td>
+<td>31</td>
+<td>24</td>
+<td>14</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9</td>
+<td>8</td>
+<td>21</td>
+<td>12</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since No Process arrives at time 0 hence; there will be an empty slot in the <strong>Gantt chart</strong> from time 0 to 1 (the time at which the first process arrives).</p>
+<p>According to the algorithm, the OS schedules the process which is having the lowest burst time among the available processes in the ready queue.</p>
+<p>Till now, we have only one process in the ready queue hence the scheduler will schedule this to the processor no matter what is its burst time.</p>
+<p>This will be executed for 8 units of time. Till then we have three more processes arrived in the ready queue hence the scheduler will choose the process with the lowest burst time.</p>
+<p>Among the processes given in the table, P3 will be executed next since it is having the lowest burst time among all the available processes.</p>
+<p>So that&#8217;s how the procedure will go on in the <strong>shortest job first (SJF)</strong> scheduling algorithm.</p>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/operating-system/images/os-sjf-scheduling-algorithm.png?ssl=1" alt="os SJF scheduling algorithm" /></p>
+<p>Avg Waiting Time = 27/5</p>
+<h4 class="h1">Shortest Remaining Time First (SRTF) Scheduling Algorithm:</h4>
+<p>This Algorithm is the <strong>preemptive version</strong> of <strong>SJF scheduling</strong>. In SRTF, the execution of the process can be stopped after a certain amount of time. At the arrival of every process, the short-term scheduler schedules the process with the least remaining burst time among the list of available processes and the running process.</p>
+<p>Once all the processes are available in the <strong>ready queue</strong>, No preemption will be done and the algorithm will work as <strong>SJF scheduling</strong>. The context of the process is saved in the <strong>Process Control Block</strong> when the process is removed from the execution and the next process is scheduled. This PCB is accessed on the <strong>next execution</strong> of this process.</p>
+<p class="h3"><span style="text-decoration: underline;"><strong>Example:</strong></span></p>
+<p>In this example, there are five jobs P1, P2, P3, P4, P5, and P6. Their arrival time and burst time are given below in the table.</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table class="alt">
+<tbody>
+<tr>
+<th>Process ID</th>
+<th>Arrival Time</th>
+<th>Burst Time</th>
+<th>Completion Time</th>
+<th>Turn Around Time</th>
+<th>Waiting Time</th>
+<th>Response Time</th>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>8</td>
+<td>20</td>
+<td>20</td>
+<td>12</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>10</td>
+<td>9</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>13</td>
+<td>9</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>2</td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody>
+</table></div>
+<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/static.javatpoint.com/operating-system/images/os-srtf-scheduling-algorithm.png?ssl=1" alt="os srtf scheduling algorithm" /></p>
+<p>Avg Waiting Time = 24/6</p>
+<p>The Gantt chart is prepared according to the arrival and burst time given in the table.</p>
+<ol class="points">
+<li style="list-style-type: none;">
+<ol class="points">
+<li>Since, at time 0, the only available process in P1 with CPU burst time 8. This is the only available process on the list therefore it is scheduled.</li>
+<li>The next process arrives at time unit 1. Since the algorithm we are using is SRTF which is a preemptive one, the current execution is stopped, and the scheduler checks for the process with the least burst time.<br />
+Till now, there are two processes available in the ready queue. The OS has executed P1 for one unit of time till now; the remaining burst time of P1 is 7 units. The burst time of Process P2 is 4 units. Hence Process P2 is scheduled on the CPU according to the algorithm.</li>
+<li>The next process P3 arrives at time unit 2. At this time, the execution of process P3 is stopped and the process with the least remaining burst time is searched. Since the process P3 has 2 units of burst time hence it will be given priority over others.</li>
+<li>The Next Process P4 arrives at time unit 3. At this arrival, the scheduler will stop the execution of P4 and check which process is having the least burst time among the available processes (P1, P2, P3, and P4). P1 and P2 are having the remaining burst time of 7 units and 3 units respectively.</li>
+</ol>
+</li>
+</ol>
+<p>P3 and P4 are having the remaining burst time 1 unit each. Since both are equal hence the scheduling will be done according to their arrival time. P3 arrives earlier than P4 and therefore it will be scheduled again.</p>
+<ol class="points">
+<li>The Next Process P5 arrives at time unit 4. Till this time, Process P3 has completed its execution and it is no more on the list. The scheduler will compare the remaining burst time of all the available processes. Since the burst time of the process, P4 is 1 which is the least among all hence this will be scheduled.</li>
+<li>The Next Process P6 arrives at time unit 5, till this time, Process P4 has completed its execution. We have 4 available processes now, that are P1 (7), P2 (3), P5 (3), and P6 (2). The Burst time of P6 is the least among all hence P6 is scheduled. Since, now, all the processes are available hence the algorithm will now work the same as SJF. P6 will be executed till its completion and then the process with the least remaining time will be scheduled.</li>
+</ol>
+<p>Once all the processes arrive, No preemption is done and the algorithm will work as SJF.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>What approaches are using for managing free disk spaces? Explain linked list approaches with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A file system is responsible to allocate the free blocks to the file therefore it has to keep track of all the free blocks present in the disk. There are mainly two approaches using which, the free blocks in the disk are managed.</p>
+<h4 class="h2">1. Bit Vector</h4>
+<p>In this approach, the free space list is implemented as a bit map vector. It contains the number of bits where each bit represents each block.</p>
+<p>If the block is empty then the bit is 1 otherwise it is 0. Initially, all the blocks are empty therefore each bit in the bit map vector contains 1.</p>
+<p>LAs the space allocation proceeds, the file system starts allocating blocks to the files and setting the respective bit to 0.</p>
+<h4 class="h2">2. Linked List</h4>
+<p>It is another approach for free space management. This approach suggests linking together all the free blocks and keeping a pointer in the cache which points to the first free block.</p>
+<p>Therefore, all the free blocks on the disks will be linked together with a pointer. Whenever a block gets allocated, its previous free block will be linked to its next free block.</p>
+<h3><span style="font-size: 18pt;"><strong>Linked List –</strong></span></h3>
+<p>In this approach, the free disk blocks are linked together i.e. a free block contains a pointer to the next free block. The block number of the very first disk block is stored at a separate location on disk and is also cached in memory.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="aligncenter size-full wp-image-528412" src="https://i0.wp.com/media.geeksforgeeks.org/wp-content/uploads/2-190.png?resize=304%2C374&#038;ssl=1" alt="" width="304" height="374"></p>
+<p>In <i>Figure 2</i>, the free space list head points to Block 5 which points to block 6, the next free block, and so on. The last free block would contain a null pointer indicating the end of the free list.<br />
+A drawback of this method is the I/O required for free space list traversal.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on:</p>
+<ol>
+<li>IPC in Linux</li>
+<li>Disk access</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong><span style="font-size: 14pt;"> IPC in Linux</span></strong></p>
+<p>Inter-Process Communication (IPC) refers to a mechanism, where the operating systems allow various processes to communicate with each other. This involves synchronizing their actions and managing shared data. On modern systems, IPCs form the web that binds together each process within a large scale software architecture.</p>
+<p>Let me explain in an example. suppose you are working in a company and you are the team lead where you are responsible for a total project or it is nothing but a job for you which you have to complete it. If you will only working on this project, obviously it will take time for you to complete and also you will be tired of working continuously and also you can’t do perfectly because of no rest. So to complete it you will create a team with some of your team members and divide this work into different sub-modules and each engineer will be responsible for a particular work. which will be easy, efficient, productive, etc.</p>
+<p>If we will say in simple, in the above example each work given by each people is nothing but a process. How a human is having its own brain to make a decision as per the direction and memory to store the information. Whenever his boss will ask for anything he can reply with the answer like this a Process is having its own control and memory with execution capability.</p>
+<p><span style="font-size: 14pt;"><strong>Disk Access Time:</strong></span><br />
+Disk Access Time is defined as the total time required by the computer to process a read/write request and then retrieve the required data from the disk storage.</p>
+<p>Disk Access Time is divided into 2 parts:</p>
+<ol style="list-style-type:decimal;">
+<li>Access Time</li>
+<li>Data Transfer Time</li>
+</ol>
+<pre>Disk Access Time = Access Time + Data Transfer Time</pre>
+<p><strong>1. Access Time:</strong><br />
+Access Time is defined as the setup time before the actual data transfer takes place.<br />
+For example, the read/write head is on track 1 but we need to read data from another track or segment. Thus, the read/write head will move to the data block location before the actual transfer can take place. This delay is called Access Time.</p>
+<p>Access Time is calculated by summation of the following:</p>
+<pre><b>(a).</b> Seek Time
+<b>(b).</b> Rotational Latency
+<b>(c).</b> Command Processing Time
+<b>(d).</b> Settle Time</pre>
+<p>These are explained as following below in brief.</p>
+<ul style="list-style-type: square;">
+<li><strong>(a). Seek Time –</strong><br />
+It is the time required by the read/write head to move from the current track to the requested track.</p>
+<pre>Seek Time 
+= (Number of tracks/cylinders crossed) * (Time to cross one track/cylinder)</pre>
+</li>
+<li><strong>(b). Rotational Latency –</strong><br />
+It is the time required by the read/write head to move from the current sector to the requested sector.</p>
+<pre>Rotational Latency 
+= (Angle by which disk is rotated) / (Angular Frequency)</pre>
+</li>
+<li><strong>(c). Command Processing Time –</strong><br />
+It is the time required by the disk device to process the command and establish a connection between the various components of the disk device to read/write data. It is due to the internal circuitry.</li>
+<li><strong>(d). Settle Time –</strong><br />
+Settle Time is the time required by reading/write head to stop vibrating.</li>
+</ul>
+<p><strong>Note:</strong> Command Processing Time and Settle Time are not normally mentioned in the numerical questions. We take them as zero.</p>
+<p><strong>2. Data Transfer Time:</strong><br />
+Data Transfer Time is defined as the time required to transfer data between the system and the disk.<br />
+Data Transfer Time is of two types:</p>
+<pre><b>(a).</b> Internal Transfer Rate
+<b>(b).</b> External Transfer Rate</pre>
+<p>These are explained as following below in brief.</p>
+<ul style="list-style-type: square;">
+<li><strong>(a). Internal Transfer Rate –</strong><br />
+It is defined as the time required to move data between the disk surface and the hard disk cache.</li>
+<li><strong>(b). External Transfer Rate –</strong><br />
+It is defined as the time required to move data between the hard disk cache and the system.</li>
+</ul>
+</div>
+</body></html>

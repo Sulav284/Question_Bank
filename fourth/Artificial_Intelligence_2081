@@ -1,0 +1,322 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>AI Question Bank 2081 - 2081</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>How can you relate synapse, dendrite, and axon in biological neural networks with the elements of artificial neural networks? Create a multi-layer ANN with input layer, hidden layer, and output layer. Assume necessary inputs and weights to the ANN and illustrate a single iteration of backpropagation algorithm to train the ANN.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li><strong>Synapse</strong><br />
+A synapse is the signal-transmitting link between two neurons in biological brain networks.<br />
+Weights are used to represent the synapse in artificial neural networks. The strength and impact of the link between nodes (neurons) are determined by these weights.</li>
+<li><strong>Dendrites</strong><br />
+Input signals are sent from other neurons to dendrites.<br />
+The input values given to the network are represented as dendrites in an ANN. Neurons in the network receive these inputs.</li>
+<li><strong>Axon</strong><br />
+Signals are sent from one neuron to the next via the axon.<br />
+After an activation function processes the inputs, the axon in an ANN represents the neuron&#8217;s output.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>What is Skolem constant? How is Skolemization done during resolution? Represent the following statements into FOPL.</p>
+<ul>
+<li>All movies are not hit.</li>
+<li>Sarangi is a movie.</li>
+<li>All movies which have good script are hit.</li>
+<li>Sarangi has a good script but Sarangi is sentimental.</li>
+<li>There is a movie which is comedy.</li>
+</ul</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Skolem constant</strong>: In First-Order Predicate Logic (FOPL), a Skolem constant is introduced during the Skolemization process when existential quantifiers (∃) are removed. A constant is used in place of an existentially quantified variable since its value is independent of any universally quantified variables.</p>
+<p>The removal of existential quantifiers from a formula in FOPL is known as &#8220;<strong>skolemization.</strong>&#8221; A Skolem function is employed when the existential quantifier is dependent on a universal quantifier. A Skolem constant is used in place of the existential variable in the absence of a dependence.</p>
+<p><span style="text-decoration: underline;">Converting the Given Statements into FOPL</span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>All movies are not hit.</strong>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">∀x (Movie(x) → ¬Hit(x))</span></span></li>
+</ul>
+</li>
+<li><strong>Sarangi is a movie.</strong>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">Movie(Sarangi)</span></span></li>
+</ul>
+</li>
+<li><strong>All movies which have a good script are hit.</strong>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">∀x (Movie(x)∧GoodScript(x)→Hit(x))<br />
+</span></span></li>
+</ul>
+</li>
+<li> <strong>Sarangi has a good script but Sarangi is sentimental.</strong>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">GoodScript(Sarangi) ∧ Sentimental(Sarangi)</span></span></li>
+</ul>
+</li>
+<li><strong>There is a movie which is comedy.</strong>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">∃x (Movie(x) ∧ Comedy(x))</span></span></li>
+</ul>
+</li>
+</ol>
+<p><span style="text-decoration: underline;">Skolemization of the Statements</span></p>
+<p>To remove the existential quantifier in statement 5:</p>
+<ul style="list-style-type: square;">
+<li>Replace <span class="katex"><span class="katex-mathml">∃x</span></span> with a Skolem constant, say <span class="katex"><span class="katex-mathml">c</span></span>:<br />
+<span class="katex"><span class="katex-mathml">Movie(c) ∧ Comedy(c)</span></span></li>
+</ul>
+<p><span style="text-decoration: underline;">Final Skolemized Statements</span></p>
+<ol style="list-style-type:decimal;">
+<li><span class="katex"><span class="katex-mathml">∀x (Movie(x) → ¬Hit(x))</span></span></li>
+<li><span class="katex"><span class="katex-mathml">Movie(Sarangi)</span></span></li>
+<li><span class="katex"><span class="katex-mathml">∀x (Movie(x) ∧ GoodScript(x) → Hit(x)) </span></span></li>
+<li><span class="katex"><span class="katex-mathml">GoodScript(Sarangi) ∧ Sentimental(Sarangi)</span></span></li>
+<li><span class="katex"><span class="katex-mathml">Movie(c) ∧ Comedy(c)</span></span></li>
+</ol>
+</div>
+<h3>Question 3</h3>
+<div><p><p>How is informed search different from uninformed search? Create a state space with appropriate heuristics, now illustrate how hill climbing search expands nodes to reach a goal. Modify the state space heuristics and demonstrate when the hill climbing will not be complete.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="width: 100%; height: 437px;">
+<thead>
+<tr style="height: 24px;">
+<th style="text-align: center; width: 24.3243%; height: 24px;">Parameters</th>
+<th style="text-align: center; width: 36.4865%; height: 24px;">Informed Search</th>
+<th style="text-align: center; width: 37.6447%; height: 24px;">Uninformed Search</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 65px;">
+<td style="text-align: center; width: 24.3243%; height: 65px;"><strong>Known as</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 65px;">It is also known as Heuristic Search.</td>
+<td style="text-align: center; width: 37.6447%; height: 65px;">It is also known as Blind Search.</td>
+</tr>
+<tr style="height: 79px;">
+<td style="text-align: center; width: 24.3243%; height: 79px;"><strong>Using Knowledge</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 79px;">In order to search, it makes use of knowledge.</td>
+<td style="text-align: center; width: 37.6447%; height: 79px;">Knowledge is not used in the search process.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="text-align: center; width: 24.3243%; height: 72px;"><strong>Speed</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 72px;">It solves the problem faster.</td>
+<td style="text-align: center; width: 37.6447%; height: 72px;">Compared to an informed search, it discovers solutions more slowly.</td>
+</tr>
+<tr style="height: 62px;">
+<td style="text-align: center; width: 24.3243%; height: 62px;"><strong>Completion</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 62px;">It may or may not be complete.</td>
+<td style="text-align: center; width: 37.6447%; height: 62px;">It is always complete.</td>
+</tr>
+<tr style="height: 63px;">
+<td style="text-align: center; width: 24.3243%; height: 63px;"><strong>Cost</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 63px;">Cost is low.</td>
+<td style="text-align: center; width: 37.6447%; height: 63px;">Cost is high.</td>
+</tr>
+<tr style="height: 72px;">
+<td style="text-align: center; width: 24.3243%; height: 72px;"><strong>Time</strong></td>
+<td style="text-align: center; width: 36.4865%; height: 72px;">It consumes less time because of quick searching.</td>
+<td style="text-align: center; width: 37.6447%; height: 72px;">It consumes moderate time because of slow searching.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>What is intelligence? Describe the foundation of AI.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The capacity to learn, comprehend, and use information and abilities to solve problems, adjust to novel circumstances, exercise critical thought, and gain experience is known as <strong>intelligence</strong>.</p>
+<p>Artificial intelligence refers to the ability of technology, particularly computer systems, to simulate human intelligence processes. The following crucial fields are the foundation of artificial intelligence (AI):</p>
+<ul style="list-style-type: square;">
+<li><strong>Mathematics</strong>: Offers instruments for thinking and decision-making, such as statistics, probability, and logic.</li>
+<li><strong>Computer Science</strong>: Computational efficiency, data processing, and algorithm creation are made possible by computer science.</li>
+<li><strong>Psychology and Cognitive Science</strong>: It helps to understand human thought processes and learning to reproduce them in computers are made easier by psychology and cognitive science.</li>
+<li><strong>Linguistics</strong>: Facilitates communication through natural language processing.</li>
+<li><strong>Philosophy</strong>: Describes logic, morality, and the representation of knowledge.</li>
+<li><strong>Neuroscience</strong>: Models the human brain to inspire neural networks.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is reinforcement learning? Configure an ANN neuron to simulate OR gate.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reinforcement Learning (RL) is a subfield of machine learning in which an agent learns to accomplish a goal by maximizing cumulative rewards while interacting with its environment. Through feedback in the form of incentives or penalties for its behaviors, the agent is able to gradually create the best possible strategy or policy. The foundation of RL is trial and error, with an emphasis on striking a balance between exploitation and exploration.</p>
+<p>We set up a single perceptron ANN neuron to mimic an OR gate where:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Weight Vector</span>: W = [1, 1]</li>
+<li><span style="text-decoration: underline;">Bias</span>: b = -0.5</li>
+<li><span style="text-decoration: underline;">Input (X)</span>: Two inputs, X₁ and X₂.</li>
+<li><span style="text-decoration: underline;">Output</span>: OR operation output (1 if X₁ OR X₂ is 1, else 0).</li>
+</ul>
+<p>Perceptron calculates:</p>
+<p style="text-align: center;"><span class="base"><span class="mord mathnormal">z </span><span class="mrel">= </span></span><span class="base"><span class="mord"><span class="mord mathnormal">W</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord"><span class="mord mathnormal">W</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord mathnormal">b</span></span></p>
+<p style="text-align: center;"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">O</span><span class="mord mathnormal">u</span><span class="mord mathnormal">tp</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t </span><span class="mrel">= </span></span><span class="base"><span class="mord text"><span class="mord">Step</span></span><span class="mopen">(</span><span class="mord mathnormal">z</span><span class="mclose">) </span><span class="mrel">= </span></span><span class="base"><span class="mord">1</span><span class="mord text"><span class="mord"> if </span></span><span class="mord mathnormal">z </span><span class="mrel">≥ </span></span><span class="base"><span class="mord">0</span><span class="mpunct">,</span><span class="mord text"><span class="mord"> else </span></span><span class="mord">0</span></span></span></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6988%; text-align: center;"><strong>X₁</strong></td>
+<td style="width: 16.6989%; text-align: center;"><strong>X₁</strong></td>
+<td style="width: 44.112%; text-align: center;"><strong>Weighted Sum (z)</strong></td>
+<td style="width: 22.4903%; text-align: center;"><strong>Output</strong></td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">0</td>
+<td style="width: 16.6989%; text-align: center;">0</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">−</span><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">0</td>
+<td style="width: 16.6989%; text-align: center;">1</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">1</td>
+<td style="width: 16.6989%; text-align: center;">0</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">1</td>
+<td style="width: 16.6989%; text-align: center;">1</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">1.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>How uniform cost search is used to search goal in the state apace ? Illustrate with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 7</h3>
+<div><p><p>How can you represent knowledge using scripts? Create a knowlege base using script based on your own assumption.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A script is an organized method of expressing information regarding typical circumstances, occurrences, or procedures. This kind of schema or frame explains a series of events or activities that are usually connected to a scenario. In order to simulate real-world situations, a script records the background, participants, activities, and other pertinent information. Planning and natural language processing are two fields that frequently employ scripts.</p>
+<p>Script components:</p>
+<ol style="list-style-type: lower-roman;">
+<li><strong>Entry conditions</strong>: Must be satisfied before events in the script can occur.</li>
+<li><strong>Results</strong>: Conditions that will be true after events in script occur.</li>
+<li><strong>Props</strong>: Slots representing objects involved in the events.</li>
+<li><strong>Roles</strong>: Person involved in the events.</li>
+<li><strong>Track</strong>: Specific variation on more general pattern in the script. Different tracks may share many components of the same script but not all.</li>
+<li><strong>Scenes</strong>: The sequence of events that occour.</li>
+</ol>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48700 alignleft" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/script.drawio.png?resize=517%2C721&#038;ssl=1" alt="" width="517" height="721"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>What is reinforcement learning? Configure an ANN neuron to simulate OR gate.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Reinforcement Learning (RL) is a subfield of machine learning in which an agent learns to accomplish a goal by maximizing cumulative rewards while interacting with its environment. Through feedback in the form of incentives or penalties for its behaviors, the agent is able to gradually create the best possible strategy or policy. The foundation of RL is trial and error, with an emphasis on striking a balance between exploitation and exploration.</p>
+<p>We set up a single perceptron ANN neuron to mimic an OR gate where:</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;">Weight Vector</span>: W = [1, 1]</li>
+<li><span style="text-decoration: underline;">Bias</span>: b = -0.5</li>
+<li><span style="text-decoration: underline;">Input (X)</span>: Two inputs, X₁ and X₂.</li>
+<li><span style="text-decoration: underline;">Output</span>: OR operation output (1 if X₁ OR X₂ is 1, else 0).</li>
+</ul>
+<p>Perceptron calculates:</p>
+<p style="text-align: center;"><span class="base"><span class="mord mathnormal">z </span><span class="mrel">= </span></span><span class="base"><span class="mord"><span class="mord mathnormal">W</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub><span class="vlist-s">​ </span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord"><span class="mord mathnormal">W</span><sub><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></sub></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2 </span></span></span></sub><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+ </span></span><span class="base"><span class="mord mathnormal">b</span></span></p>
+<p style="text-align: center;"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">O</span><span class="mord mathnormal">u</span><span class="mord mathnormal">tp</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t </span><span class="mrel">= </span></span><span class="base"><span class="mord text"><span class="mord">Step</span></span><span class="mopen">(</span><span class="mord mathnormal">z</span><span class="mclose">) </span><span class="mrel">= </span></span><span class="base"><span class="mord">1</span><span class="mord text"><span class="mord"> if </span></span><span class="mord mathnormal">z </span><span class="mrel">≥ </span></span><span class="base"><span class="mord">0</span><span class="mpunct">,</span><span class="mord text"><span class="mord"> else </span></span><span class="mord">0</span></span></span></span></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 16.6988%; text-align: center;"><strong>X₁</strong></td>
+<td style="width: 16.6989%; text-align: center;"><strong>X₁</strong></td>
+<td style="width: 44.112%; text-align: center;"><strong>Weighted Sum (z)</strong></td>
+<td style="width: 22.4903%; text-align: center;"><strong>Output</strong></td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">0</td>
+<td style="width: 16.6989%; text-align: center;">0</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">−</span><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">0</td>
+<td style="width: 16.6989%; text-align: center;">1</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">1</td>
+<td style="width: 16.6989%; text-align: center;">0</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">0</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">0.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="width: 16.6988%; text-align: center;">1</td>
+<td style="width: 16.6989%; text-align: center;">1</td>
+<td style="width: 44.112%; text-align: center;"><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">+</span></span><span class="base"><span class="mord">1</span><span class="mbin">×</span></span><span class="base"><span class="mord">1</span><span class="mbin">−</span></span><span class="base"><span class="mord">0.5</span><span class="mrel">=</span></span><span class="base"><span class="mord">1.5</span></span></td>
+<td style="width: 22.4903%; text-align: center;">1</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is robotics? How machine vision is used in robotics?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Robotics</strong> is a scientific and technical topic that deals with the design, building, operation, and programming of robots to perform tasks automatically or semi-autonomously. Robots use sensors, actuators, and controls to interact with and adapt to their surroundings.</p>
+<p>In robotics, machine vision enables robots to &#8220;see&#8221; and decipher visual information from cameras or sensors, facilitating activities like:</p>
+<ul style="list-style-type: square;">
+<li><strong>Object detection and identification</strong>: It is the process of locating objects and determining their orientations.</li>
+<li><strong>Navigation</strong>: It is the technique of employing visual clues to navigate in dynamic or unknown environments.</li>
+<li><strong>Quality inspection</strong>: It is the process of looking for defects in production processes.</li>
+<li><strong>Pick-and-Place Operations</strong>: Finding and moving objects precisely.</li>
+<li><strong>Obstacle avoidance</strong>: It is the process of detecting and avoiding obstacles in real time.</li>
+</ul>
+<p>A robot equipped with machine vision can recognize certain parts on an automated assembly line and place them in the proper assembly location.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Define fuzzy logic. Construct a fuzzy rule base expert system with your own considerations of fuzzy set.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Fuzzy Logic is a computing method that addresses thinking and decision-making under imprecise or uncertain circumstances. Fuzzy logic, as opposed to traditional binary logic (true/false), handles partial facts by using degrees of truth, which are represented by numbers between 0—1.</p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How is minmax algorithm used in game search? Consider state space is defined by a collection of pairs like (A, B) representing paths between states A and B. Construct state space for following and use a minmax algorithm</p>
+<p>(A, B), (A, C), (B, D), (D, E), (C, F), (C, G), (D, H), (D, I), (E, J), (F, K), (F, L), (G, M), (G, N).</p>
+<p>The utilities for states H, I, J, K, L, M, N are 1, 3, 2, 6, 3, 4, 1 respectively.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In game search, the Minimax method minimizes the potential loss in the worst-case situation to identify the best course of action. Using a game tree, it assesses every action that may be made and its results, alternating between maximizing the player&#8217;s gain and limiting the opponent&#8217;s gain.</p>
+<p>A tree with nodes for states and edges for pathways can be used to represent the provided state space. A is the root node, and the terminal states with utilities are the leaf nodes. The following is the hierarchical structure with the nodes (A, B), (A, C), (B, D), (D, E), (C, F), (C, G), (D, H), (D, I), (E, J), (F, K), (F, L), (G, M), (G, N) will be:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48682 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX0.drawio.png?resize=338%2C247&#038;ssl=1" alt="" width="338" height="247"></p>
+<p>The utilities for states H, I, J, K, L, M, N with 1, 3, 2, 6, 3, 4, 1 are:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48687 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX.drawio.png?resize=348%2C276&#038;ssl=1" alt="" width="348" height="276"></p>
+<ul style="list-style-type: square;">
+<li><strong>For Node <span class="katex"><span class="katex-mathml">E</span></span> :</strong><br />
+<span class="katex"><span class="katex-mathml">Value at E = J = 2</span></span></li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48686 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX2.drawio.png?resize=388%2C286&#038;ssl=1" alt="" width="388" height="286"></p>
+<ul style="list-style-type: square;">
+<li><strong>For Node <span class="katex"><span class="katex-mathml">D</span></span> (Minimizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at D = min⁡(H, I, J)= min⁡(1, 3, 2)=1</span></span></li>
+<li><strong>For Node <span class="katex"><span class="katex-mathml">F</span></span> (Minimizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at F = min⁡(K, L) = min⁡(6, 3) = 3</span></span></li>
+<li><strong>For Node <span class="katex"><span class="katex-mathml">G</span></span> (Minimizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at G = min⁡(M, N) = min⁡(4, 1) = 1</span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48685 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX3.drawio.png?resize=424%2C313&#038;ssl=1" alt="" width="424" height="313"></p>
+<ul style="list-style-type: square;">
+<li><strong>For Node <span class="katex"><span class="katex-mathml">B</span></span>(Maximizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at B = max⁡(D) = max⁡(1) = 1</span></span></li>
+<li><strong>For Node <span class="katex"><span class="katex-mathml">C</span></span> (Maximizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at C = max⁡(F, G) = max⁡(3, 1) = 3</span></span></li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48689 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX3.drawio-1.png?resize=332%2C245&#038;ssl=1" alt="" width="332" height="245"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul style="list-style-type: square;">
+<li><strong>For Node <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">A</span></span></span></span> (Minimizer):</strong><br />
+<span class="katex"><span class="katex-mathml">Value at A = min⁡(B, C) = min⁡(1, 3) = 1</span></span></li>
+</ul>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-48688 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/MINMAX4.drawio-1.png?resize=362%2C267&#038;ssl=1" alt="" width="362" height="267"></p>
+<p>Since, selecting option B yields a utility of 1, it is the best course of action for the player at root node A.</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Justify which type of environments resembles following agents.</p>
+<ol>
+<li>Mission Game with fxed 6 states having two players.</li>
+<li>Tesla Driverless Robovan where road conditions are changing.</li>
+<li>Game Result Predicting Agent where current prediction state is independent of previous state.</li>
+</ol</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ol style="list-style-type: lower-alpha;">
+<li>Mission Game with fixed 6 states having two players.<br />
+<strong>Type of Environment</strong>: Goal-based Agent<br />
+<strong>Justification</strong>: An agent that chooses activities to accomplish a certain objective is said to be goal-based. As the environment is finite and predictable, the agent&#8217;s choices are determined by the objective it seeks to accomplish so we can say that it is goal-based agent.</li>
+<li>Tesla Driverless Robovan where road conditions are changing.<br />
+<strong>Type of Environment</strong>: Model-based Agent<br />
+<strong>Justification</strong>: A model-based agent predicts how its actions will affect the environment by using an internal model of the world. In Tesla Driverless Robovan where road conditions are changing which is based on real-time data, the model-based agent uses this dynamic model to make decisions that ensure safety and optimal driving.</li>
+<li>Game Result Predicting Agent where current prediction state is independent of previous state.<br />
+<strong>Type of Environment</strong>: Simple Reflex Agent<br />
+<strong>Justification</strong>: A simple reflex agent just analyzes the current state while making decisions; it does not evaluate past states or actions. Since the game outcome prediction is independent of the previous state, the agent just reacts to the current input to make its forecast, as is common for a basic reflex agent.</li>
+</ol>
+</div>
+</body></html>

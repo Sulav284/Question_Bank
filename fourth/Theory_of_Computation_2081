@@ -1,0 +1,251 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOC Question Bank 2081 2081</title>
+    </head>
+    <body>
+        <h1>TOC Question Bank 2081 - 2081</h1>ls
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Mention the transition function of PDA. List the two ways that PDA accepts the string. Convert the following CFG to PDA.<br />
+S → AS | ε<br />
+A → Ab | Bb | ab</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The transition function of a Pushdown Automaton (PDA) is defined as:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$$\delta: Q \times \Sigma \times \Gamma \rightarrow P(Q \times \Gamma^*)$$</span></span></span></p>
+<p>Where:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">Q</span></span>: Set of states.</li>
+<li><span class="katex"><span class="katex-mathml">Σ</span></span>: Input alphabet.</li>
+<li><span class="katex"><span class="katex-mathml">Γ</span></span>: Stack alphabet.</li>
+<li><span class="katex"><span class="katex-mathml">δ(q,a,X)</span></span>: Defines the set of possible next states and stack operations for state <span class="katex"><span class="katex-mathml">q</span></span>, input symbol <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">a</span></span></span></span>, and stack top <span class="katex"><span class="katex-mathml">X</span></span>.</li>
+</ul>
+<p>Two ways that PDA accepts the string</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Acceptance by Final State</strong>: If the PDA achieves a final state after reading the complete input, the string is accepted. In this PDA ignores the stack condition and accepts a string if, after processing the full input, it achieves a specified final state (𝑞𝑓∈𝑄). This is indicated by:(𝑞, 𝑤, 𝛾)⊢∗ (𝑞𝑓, 𝜖, 𝛽)<br />
+Here, w is the input string, q f is the end state, and w, γ, and β are the contents of the stack.</li>
+<li><strong>Acceptance by Empty Stack</strong>: Regardless of the current state, a string is considered accepted if the stack is empty after reading the full input, its stack is empty (ϵ). This is indicated by:(𝑞, 𝑤, 𝛾) ⊢ ∗ (𝑞 ′, 𝜖, 𝜖)<br />
+In this case, w is the input string, q′ is any state, and γ is the starting stack content.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49172" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-690.png?resize=979%2C548&#038;ssl=1" alt="" width="979" height="548"></p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>List any two regular operators. Minimize the following finite state machine using Table Filling algorithm.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-49174 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/pda.drawio.png?resize=296%2C184&ssl=1" alt="" width="296" height="184"></p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Any two regular operator are:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Union (∪)</strong>: The process of combining two regular languages, L<sub>1</sub> and L<sub>2</sub>, so that the resultant language includes every string from L1 or L2 (or both). As an example, L = L<sub>1</sub> ∪ L<sub>2</sub> .</li>
+<li><strong>Concatenation (⋅)</strong>: It is the process of combining two regular languages, L<sub>1</sub> and L<sub>2</sub>, so that the resultant language comprises all strings created by joining a string from L1 with a string from L2. For instance, 𝐿 = 𝐿<sub>1</sub> ⋅ L<sub>2 </sub>.</li>
+</ol>
+<p>Numerical part:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49175" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-691.png?resize=613%2C806&#038;ssl=1" alt="" width="613" height="806"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49176" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-692.png?resize=691%2C844&#038;ssl=1" alt="" width="691" height="844"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49177" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-693.png?resize=614%2C619&#038;ssl=1" alt="" width="614" height="619"></p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Define Turing machine as enumerators of strings of a language. Encode the Turing machine <strong>TM = ({q<sub>0</sub>, q<sub>1</sub>, q<sub>2</sub>} , {a, b}, {a, b, B}, δ, q<sub>2</sub>, B, F) with input w = ba</strong> and δ is defined as follows:<br />
+<strong>δ(q<sub>0</sub>, b) → (q<sub>1</sub>, b, R), δ(q<sub>1</sub>, a) → (q<sub>2</sub>, a, R), δ(q<sub>2</sub>, a) → (q<sub>1</sub>, a, R), δ(q<sub>2</sub>, b) → (q<sub>2</sub>, b, L)</strong></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>Does machine always refer to hardware? Justify. Define positive closure and Kleene closure.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>No, hardware is not generally referred to as a machine. Turing machines, finite automata, and pushdown automata are examples of abstract models that can also be referred to as machines in computer science. Regardless of their actual implementation, these mathematical models are used to represent and comprehend computing processes.</p>
+<p><strong>Positive closure</strong>:<br />
+All possible concatenations of one or more strings from L are represented by L. It is described as:</p>
+<p style="text-align: center;">𝐿<sup>+</sup> = 𝐿 ∪ 𝐿<sup>2</sup> ∪ 𝐿<sup>3</sup> ∪ …</p>
+<p>In this case, 𝐿<sup>2</sup> = 𝐿⋅𝐿, L<sup>3</sup> = L⋅L⋅L, and so on. The empty string (𝜖) is not included.</p>
+<p><strong>Kleene closure</strong>:<br />
+All potential concatenations of zero or more strings from L are represented by L, including the empty string (𝜖). It is described as:</p>
+<p style="text-align: center;">𝐿<sup>∗</sup> = {𝜖} ∪  𝐿 ∪ 𝐿<sup>2</sup> ∪ 𝐿<sup>3</sup>&#8230;..</p>
+<p>In this case, L<sup>0</sup> = {ϵ}, 𝐿<sup>2</sup> = 𝐿⋅𝐿, and so on.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is undecidable problem? Discuss about Post Correspondence Problem.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>When there is no method that can consistently produce a yes or no, true or false response for all conceivable input, the problem is said to be <strong>undecidable problem</strong>. There is no generic algorithm that can answer an undecidable problem.</p>
+<p><strong>Post Correspondance Problem</strong> is an undecidable decision problem introduced by Emil Post in 1946. The input of the problem consist of two finite list u and v i.e u = {u1, u2, u3, &#8230;., un} and v = {v1, v2, v3, &#8230;., vn} of words over some alphabet Σ having at least two symbol.</p>
+<p>A solution to this problem is a sequence of indices ik i.e 1kn, k such that</p>
+<p style="text-align: center;">u<sub>i1</sub>, u<sub>i2</sub>, u<sub>i3</sub>, &#8230;., u<sub>ik</sub> = v<sub>i1</sub>, v<sub>i2</sub>, v<sub>i3</sub>, &#8230;., v<sub>ik</sub></p>
+<p>we say,</p>
+<p>i<sub>1</sub>, i<sub>2</sub>, i<sub>3</sub>, &#8230;., i<sub>k</sub> is a solution to this instance of PCP.</p>
+<p>for eg:</p>
+<p>Here, the decision problem is to decide whether such a solution exist or not.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49369 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/PCP.drawio.png?resize=441%2C121&#038;ssl=1" alt="" width="441" height="121"></p>
+<p>A solution to this problem would be sequence (3,2,3,1) beacuse</p>
+<p>u<sub>3</sub> + u<sub>2</sub> + u<sub>3</sub> + u<sub>1<br />
+</sub>=bba + ab + bba + a<br />
+=bbaabbba</p>
+<p>v<sub>3</sub> + v<sub>2</sub> + v<sub>3</sub> + v<sub>1<br />
+</sub>=bb + aa + bb + baa<br />
+=bbaabbba</p>
+<p>Hence, (3,2,3,1) is a solution. so are all of its &#8220;repetation&#8221; such as (3,2,3,1,3,2,3,1) etc i.e when a solution exist there are infinitely many solution of this repetative kind.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Define the language of a grammar. For the grammar <strong>S → 0S0 | 1 | ε</strong>, show the leftmost derivation for the string <strong>00100</strong> with its parse tree.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The collection of all strings that may be created using a grammar&#8217;s production rules, beginning with the start symbol and continually applying the rules until only terminal symbols are left, is known as the grammar&#8217;s language.</p>
+<p>If <strong><span class="katex"><span class="katex-mathml">G = (V,T,S,P)</span></span></strong> is a grammar, the language <span class="katex"><span class="katex-mathml">L(G)</span></span> is defined as:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml">$$L(G) = \{w \in T^* \mid S \Rightarrow^* w\}$$</span></span></span></p>
+<p>Here:</p>
+<ul style="list-style-type: square;">
+<li><span class="katex"><span class="katex-mathml">T</span></span>: Set of terminal symbols</li>
+<li><span class="katex"><span class="katex-mathml">S</span></span>: Start symbol</li>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mrel">⇒<span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span>: Derivation relation through the production rules</li>
+<li><span class="katex"><span class="katex-mathml">w</span></span>: String consisting only of terminal symbols</li>
+</ul>
+<p><strong>Example:</strong><br />
+For the grammar:</p>
+<p><span class="katex"><span class="katex-mathml">S→0S0| 0 | 1 </span></span><br />
+The language <span class="katex"><span class="katex-mathml">L(G)</span></span> consists of strings like <span class="katex"><span class="katex-mathml">010, 0010 , 0010</span></span> etc., where the grammar generates strings ending with <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">0</span></span></span></span> preceded by any number of 0 and 1.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49184 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-694.png?resize=483%2C577&#038;ssl=1" alt="" width="483" height="577"></p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Define ε-closure of a state. Differentiate between Moore and Mealy machine.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>The ε-closure of a state is the set of states those can be reached from that state with ε-transition. The ε-closure of a state can be recursively defined as:</p>
+<ul style="list-style-type: square;">
+<li>q is in ε-closure(q).</li>
+<li>If p is reachable from q with ε-transitionthen p is in ε-closure(q).</li>
+<li>If p is in ε-closure(q)and there is ε-transition from p to r then r is also in ε-closure(q) and so on.</li>
+</ul>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49363" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/epsilon.drawio.png?resize=161%2C121&#038;ssl=1" alt="" width="161" height="121"></p>
+<p>ε-closure(p) = {p, q, r}</p>
+<p>ε-closure(q) = {q}</p>
+<p>ε-closure(r) = {r}</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><b><strong>Moore Machine</strong></b></td>
+<td style="width: 50%; text-align: center;"><b><strong>Mealy Machine</strong></b></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Output depends only upon the present state.</td>
+<td style="width: 50%; text-align: center;">Output depends on the present state as well as present input.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Output is associated with states.</td>
+<td style="width: 50%; text-align: center;">Output is associated with transitions.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">If input changes, output does not change, as moore machine is a type of finite state machine where the output is determined solely by the current state, not by the current input.</td>
+<td style="width: 50%; text-align: center;">If input changes, output also changes, because in mealy machine output depends on the present state as well as present input.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Easier to design, as output is state-based.</td>
+<td style="width: 50%; text-align: center;">It is difficult to design.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">More states are required.</td>
+<td style="width: 50%; text-align: center;">Less number of states are required.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Represent the following regular grammar to finite automata.<br />
+<strong>S → aA | aB | ε</strong><br />
+<strong>A → aA | aS</strong><br />
+<strong>B → bB | ε</strong></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>given,</p>
+<p>S → aA | aB | ε<br />
+A → aA | aS<br />
+B → bB | ε</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-49188 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Untitled-Diagram.drawio-1.png?resize=379%2C479&#038;ssl=1" alt="" width="379" height="479"></p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Design the DFA that accepts binary string ending with “00” and show its extended transition function for the string <strong>111000</strong>.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49208" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-696.png?resize=664%2C287&#038;ssl=1" alt="" width="664" height="287"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49209" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-697.png?resize=612%2C765&#038;ssl=1" alt="" width="612" height="765"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49210" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-698.png?resize=597%2C792&#038;ssl=1" alt="" width="597" height="792"></p>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Convert the following grammar to CNF.<br />
+<strong>S → AAB, A → aA | ε, B → ab | a</strong></p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49212" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-699.png?resize=599%2C694&#038;ssl=1" alt="" width="599" height="694"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49213" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-700.png?resize=574%2C759&#038;ssl=1" alt="" width="574" height="759"></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-49214" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/12/Screenshot-701.png?resize=459%2C386&#038;ssl=1" alt="" width="459" height="386"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>For the following Turing Machine, test whether the string “( ) ) )” is accepted or rejected and represent it in transition diagram.</p>
+<div class="table_wrapper"><table>
+<tbody>
+<tr>
+<td><strong>State</strong></td>
+<td><strong>X</strong></td>
+<td><strong>Action (Write, Move, New State)</strong></td>
+<td><strong>Y</strong></td>
+<td><strong>Action (Write, Move, New State)</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Action (Write, Move, New State)</strong></td>
+</tr>
+<tr>
+<td>q<sub>0</sub></td>
+<td><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​(</span></span></span></span></span></td>
+<td><span class="mord mathnormal">X</span><span class="mpunct">,</span><span class="mord mathnormal">R</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></sub></span></span></span></span></td>
+<td></td>
+<td>, , <span class="katex"><span class="katex-mathml">q<sub>0</sub></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></td>
+<td></td>
+<td>, , <span class="katex"><span class="katex-mathml">q<sub>4</sub></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>q1</td>
+<td><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​)</span></span></span></span></span></td>
+<td><span class="mord mathnormal">X</span><span class="mpunct">,</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub></span></span></span></span></td>
+<td></td>
+<td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Y</span><span class="mpunct">,</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span></span></span></span></td>
+<td></td>
+<td><span class="mord mathnormal">Y</span><span class="mpunct">,</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span></span><sub><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></sub><strong><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></strong></td>
+</tr>
+<tr>
+<td>q2</td>
+<td><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​X</span></span></span></span></span></td>
+<td><span class="mord mathnormal">X</span><span class="mpunct">,</span><span class="mord mathnormal">R</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></sub></span></span></span></span></td>
+<td>Y</td>
+<td><span class="mord mathnormal">Y</span><span class="mpunct">,</span><span class="mord mathnormal">R</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><sub><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></sub><span class="vlist-s">​</span></span></span></span></span></td>
+<td></td>
+<td>, <span class="katex"><span class="katex-mathml">R,q<sub>4</sub></span></span></td>
+</tr>
+<tr>
+<td>q3</td>
+<td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​(</span></span></span></span></span></span></span></span></td>
+<td>, , <span class="katex"><span class="katex-mathml">q<sub>3</sub></span></span></td>
+<td></td>
+<td>, , <span class="katex"><span class="katex-mathml">q<sub>3</sub></span></span></td>
+<td></td>
+<td>, <span class="katex"><span class="katex-mathml">R,q<sub>4</sub></span></span></td>
+</tr>
+</tbody>
+</table></div>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style></div>
+<h3>Question 12</h3>
+<div><p><p>Differentiate between Class P and Class NP problem. Mention the transition function of DFA, NFA, and ε-NFA.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Class P</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Class NP</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Deterministic Turing machine problems that can be solved in polynomial time.</td>
+<td style="width: 50%; text-align: center;">Deterministic Turing machine verifiable problems in polynomial time.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">The solutions can be computed efficiently.</td>
+<td style="width: 50%; text-align: center;">Solutions are not always calculable, but they can be verified efficiently.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Example: Sorting algorithms, shortest path.</td>
+<td style="width: 50%; text-align: center;">Example: Traveling Salesman Problem, Sudoku.</td>
+</tr>
+</tbody>
+</table></div>
+<ul style="list-style-type: square;">
+<li><strong>DFA (Deterministic Finite Automaton):</strong><br />
+Transition function: <span class="katex"><span class="katex-mathml">δ(q,a)→q′</span></span>,</p>
+<ul style="list-style-type: square;">
+<li>Maps a single state <span class="katex"><span class="katex-mathml">q</span></span> and input symbol <span class="katex"><span class="katex-mathml">a</span></span> to exactly one state <span class="katex"><span class="katex-mathml">q′</span></span>.</li>
+</ul>
+</li>
+<li><strong>NFA (Nondeterministic Finite Automaton):</strong><br />
+Transition function: <span class="katex"><span class="katex-mathml">δ(q,a)→{q1,q2,… }</span></span>,</p>
+<ul style="list-style-type: square;">
+<li>Maps a single state <span class="katex"><span class="katex-mathml">q</span></span> and input <span class="katex"><span class="katex-mathml">a</span></span> to a set of possible states.</li>
+</ul>
+</li>
+<li><strong>ε-NFA (Epsilon NFA):</strong><br />
+Transition function: <span class="katex"><span class="katex-mathml">δ(q,a)→{q1,q2,… }</span></span>and <span class="katex"><span class="katex-mathml">δ(q,ϵ)→{q1,q2,… },</span></span></p>
+<ul style="list-style-type: square;">
+<li>Allows transitions on input <span class="katex"><span class="katex-mathml">a</span></span> as well as the empty string (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">ϵ</span></span></span></span>).</li>
+</ul>
+</li>
+</ul>
+</div>
+</body></html>

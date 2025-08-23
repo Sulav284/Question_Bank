@@ -1,0 +1,333 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI-2080(new) 2080</title>
+    </head>
+    <body>
+        <h1>AI-2080(new) - 2080</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>SECTION A: Attempt any TWO question.</h2><h3>Question 1</h3>
+<div><p><p>Define state space graph. Differenciate between A* search and greedy best first search.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong><em><span style="text-decoration: underline;">state space graph</span></em></strong> is a set of all possible states that it can reach from the current state. A state space forms a graph in which the nodes are states and the arcs between nodes are actions. The solution of a problem is part of the graph formed by the state space.consists of identifying an INITIAL STATE (from where to begin) and a GOAL STATE (the final destination) and then following a specific sequence of actions (called States).</p>
+<p>A solution is a path from initial state to goal state consisting of  set of states,  initial state, operation (which helps to transfer state to its successor state) and goal state.</p>
+<p>Example:</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-36022" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/state-space.drawio.png?resize=217%2C431&#038;ssl=1" alt="" width="217" height="431"></p>
+<p>Difference between A* and greedy best search is :</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;"><strong>A* Search</strong></td>
+<td style="width: 50%; text-align: center; height: 24px;"><strong>Greedy Best Search</strong></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">The evaluation function for A* search is f(n) = h(n) + g(n).</td>
+<td style="width: 50%; text-align: center; height: 48px;">The evaluation function for best-first search is f(n) = h(n).</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 50%; text-align: center; height: 48px;">A* search is optimal as the path found is always optimal.</td>
+<td style="width: 50%; text-align: center; height: 48px;">Best-first search is not optimal as the path found may not be optimal.</td>
+</tr>
+<tr style="height: 150px;">
+<td style="width: 50%; text-align: center; height: 150px;">Its time complexity is O(b<sup>m</sup>) and space complexity is also O(b<sup>m</sup>).</p>
+<p>where b is the branching and m is the maximum depth of the search tree</td>
+<td style="width: 50%; text-align: center; height: 150px;">Its time complexity is O(b<sup>m</sup>) and space complexity can be polynomial.</p>
+<p>where b is the branching and m is the maximum depth of the search tree</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It requires more memory.</td>
+<td style="width: 50%; text-align: center; height: 24px;">It requires less memory.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">This search algorithm involves past knowledge.</td>
+<td style="width: 50%; text-align: center; height: 24px;">This search algorithm does not involve past knowledge.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 50%; text-align: center; height: 24px;">It keeps all the nodes in the memory while searching.</td>
+<td style="width: 50%; height: 24px;">It keeps all the fringe or border nodes in the memory while searching.</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+<p id="82ef" class="pw-post-body-paragraph mk ml gt mm b mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh gm bj" data-selectable-paragraph="">
+</div>
+<h3>Question 2</h3>
+<div><p><p>What do you mean by unification and lifting ? Convert following sentences into FOPL</p>
+<p>Sushma likes all kinds of  practical courses.</p>
+<p>AI and DBMS are practical courses.</p>
+<p>Any subject anyone practices is practical course.</p>
+<p>Ruby practices PHP.</p>
+<p>Rita practices everything that Ruby practices.</p>
+<p>Using resolution check whether “Sushma likes PHP” is inferred or not.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Unification</strong> is a process of making two different logical atomic expressions identical by finding a substitution. Unification depends on the substitution process.</p>
+<p>It takes two literals as input and makes them identical using substitution.</p>
+<p>Let Ψ<sub>1</sub> and Ψ<sub>2</sub> be two atomic sentences and 𝜎 be a unifier such that, <em>Ψ<sub>1</sub>𝜎 = Ψ<sub>2</sub>𝜎,</em> then it can be expressed as <em>UNIFY(Ψ<sub>1</sub>, Ψ<sub>2</sub>).</em></p>
+<p>Example: Find the MGU for Unify{King(x), King(John)}</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><em><strong>Numerical part:</strong></em></span></p>
+<p><strong>Step 1: Let&#8217;s convert the given facts into FOPL.</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Sushma likes all kinds of  practical courses.                                                                                                                                   ∀x likes( sushma, x) Λ practical courses(x)</li>
+<li>AI and DBMS are practical courses.                                                                                                                                                  practical courses(AI)  Λ  practical courses(DBMS)</li>
+<li>Any subject anyone practices is practical course.                                                                                                                           ∀y practices(y, subject)  →  practical course(subject)</li>
+<li>Ruby practices PHP.                                                                                                                                                                            practices(Ruby, PHP)</li>
+<li>Rita practices everything that Ruby practices.                                                                                                                               ∀x practices(Rita, x) →  practices(Ruby, x)</li>
+</ol>
+<p><strong>Step 2: Let&#8217;s convert the FOPL to CNF.</strong></p>
+<p><span style="text-decoration: underline;"><em>Remove implication →</em></span></p>
+<ol style="list-style-type:decimal;">
+<li>∀x ( likes( sushma, x) Λ practical courses(x))</li>
+<li>∀x practical courses(x)  Λ  practical coursesx)</li>
+<li> ∀y,∀x ¬ practices(y, x) ∨ practical course(x)</li>
+<li>∀x practices(Ruby, x)</li>
+<li> ∀x ¬ practices(Rita, x) ∨  practices(Ruby, x)</li>
+</ol>
+<p><span style="text-decoration: underline;"><em>CNF of the FOPL is as:</em></span></p>
+<ol style="list-style-type:decimal;">
+<li>∀x ( likes( sushma, x) Λ practical courses(x))</li>
+<li>∀x practical courses(x)  Λ  practical coursesx)</li>
+<li> ∀y,∀x ¬ practices(y, x) ∨ practical course(x)</li>
+<li>∀x practices(Ruby, x)</li>
+<li> ∀x ¬ practices(Rita, x) ∨  practices(Ruby, x)</li>
+</ol>
+<p><span style="text-decoration: underline;"><em>Remove quantifiers and converting it to casual form</em></span></p>
+<ol style="list-style-type:decimal;">
+<li>likes( sushma, x) Λ practical courses(x)</li>
+<li>practical courses(x)  Λ  practical coursesx)</li>
+<li>¬ practices(y, x) ∨ practical course(x)</li>
+<li>practices(Ruby, x)</li>
+<li> ¬ practices(Rita, x) ∨  practices(Ruby, x)</li>
+</ol>
+<p>for the resolution check of &#8220;Sushma likes PHP&#8221;</p>
+<p>FOPL of the given resolution is</p>
+<ul style="list-style-type: square;">
+<li>likes( sushma, x)</li>
+</ul>
+<p>writing its contradiction as</p>
+<ul style="list-style-type: square;">
+<li>¬ likes( sushma, x)</li>
+</ul>
+<p>now,</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="wp-image-36190 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/resolution.drawio.png?resize=683%2C333&#038;ssl=1" alt="" width="683" height="333"></p>
+<p>since, it is not NIL so this proves that it is inferred.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Differentiate supervised learning from unsupervised? Discuss how Naïve Bayes Model can be used for machine learning ? Support your answer with example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Unsupervised Learning</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Supervised Learning</strong></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Unsupervised Learning is the method of learning by the agents which have no any information about environment.</td>
+<td style="width: 50%; text-align: center;">Supervised Learning is the method of learning by the agents which have some learning algorithm based on which models are formulated.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">They gain experiences from the environment as inputs and base on the inputs it perform clustering.</td>
+<td style="width: 50%; text-align: center;">Here, based on previous inputs and outputs experienced, learning algorithms the model gives some output.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">In unsupervised learning there is no any supervisor who have any standard for that task.</td>
+<td style="width: 50%; text-align: center;">Supervised learning have a supervisor who have some standard for that task.</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">Unsupervised learning when gain some amount of data they divide them on the basis of clusters and using K-mean they provide the output.</td>
+<td style="width: 50%; text-align: center;">When the new input is given then the difference in the result obtained and the result expected is considered as error .The less the error the precise the learning.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Naïve Bayes :</strong></p>
+<p>Naïve Bayes is a probabilistic machine learning algorithm used for classification tasks. It’s based on the Bayes Theorem and assumes that features are independent of each other (hence the term “naïve”). Popular applications include spam filtering, document classification, and sentiment prediction<span style="font-size: 13.3333px;">.</span></p>
+<p>Bayes Theorem relates conditional probabilities:</p>
+<p class="katex-block" style="text-align: center;"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mord mathnormal">B</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">B</span><span class="mclose">)</span><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">B</span>∣<span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mbin">⋅</span><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p>In the context of Naïve Bayes:</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mord mathnormal">B</span><span class="mclose">)</span></span></span></span> represents the probability of class A given features B.</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">B</span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span> is the likelihood of observing features B given class A.</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span> is the prior probability of class A.</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">B</span><span class="mclose">)</span></span></span></span> is the evidence probability of features B.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h2>SECTION B: Attempt any EIGHT question.</h2><h3>Question 4</h3>
+<div><p><p>How can  you define AI from the dimension of behavioural process? When a machine is said to pass Turing Test?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If a system can inherit the behavioural process of human and act rationally then it is considered as AI. The Turing Test is a method of inquiry in Artificial Intelligence (AI) for determining whether or not a system is capable of behaving like a human being. The test is named after Alan Turing, the founder of the Turing Test and an English computer scientist, cryptanalyst, mathematician, and theoretical biologist.</p>
+<p>Similarly, acting rationally is also a method to determine whether the system can behave rationally or not i.e whether the system is capable of  performing task by providing a rational logic for its action that ir performed. A rational agent always behave according to the situation and decide an action always with a reasonable and sensible logic behind them. If the system can behave like human and they can provide reasoning for their actions with some logic then they can be considered as Artificial Intelligence (AI).</p>
+<p><span style="text-decoration: underline;"><em><strong>Other part:</strong></em></span></p>
+<p>The Turing Test is a method for determining whether or not a system is capable of thinking like a human. According to this kind of test, a system is deemed to have artificial intelligence if it can mimic human responses under specific conditions.There are two rooms, A and B. One of the rooms contains a computer. The other contains a human. The interrogator is outside and does not know which one is a system. He can ask questions through a teletype and receives answers from both A and B. The interrogator needs to identify whether A or B are humans. To pass the Turing test, the machine has to fool the interrogator into believing that it is human.</p>
+<p>To pass a Turing test, a system must have the following capabilities:</p>
+<p><strong>❑ Natural Language Processing:</strong><br />
+The system must be able to communicate with humans innatural language or say human understandable language successfully. Usually English is considered as natural language.</p>
+<p><strong>❑ Knowledge representation:</strong><br />
+System must store the data specified to different domains. It should not only be able to store them but also should know to draw useful infoemation and present them in correct mannar.</p>
+<p><strong>❑ Automated reasoning:</strong><br />
+System should be capable of giving a logical reason to the the problem it encounter based on the information or knowledge stored in it using some patterns.</p>
+<p><strong>❑ Machine learning:</strong><br />
+It should be capable of learning from the problems and can use this learning further in some other similar problem as a refrence.</p>
+</div>
+<h3>Question 5</h3>
+<div><p><p>What is an agent ? How utility agent works? Give an example of utility agent.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>An agent is something that can receive or percept input from the environment and based on some algorith decides an action which are performed by the actuator on the environment. Agents are awear of their environment through sensors and act upon the envoronment through actuators or effectors.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-35922" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/AGENT.drawio.png?resize=242%2C167&#038;ssl=1" alt="" width="242" height="167"></p>
+<p style="text-align: center;">     fig: Agent</p>
+<p>The agents which are developed having their end uses as building blocks are called utility-based agents. They are capable of distinguishing among the possible states on the basis of some utility function to select a goal state. These agents are similar to the goal-based agent but provide an extra component of utility measurement which makes them different by providing a measure of success at a given state. Utility describes how <em>“happy” </em>the agent is. Because of the uncertainty in the world, a utility agent chooses the action that maximizes the expected utility.</p>
+<p>Some of its features are:</p>
+<ul style="list-style-type: square;">
+<li>It is useful when there are multiple possible alternatives to the goal state.</li>
+<li>It is quite complex.</li>
+<li>It focus on the goal whose associated degree if happiness is high.</li>
+</ul>
+<div class="table_wrapper">
+<div class="table_wrapper" style="overflow-x:auto;"><table style="width: 51.8258%;">
+<tbody>
+<tr>
+<td style="width: 100%;"><img loading="lazy" decoding="async" class="size-full wp-image-18570 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2022/09/ut.jpg?resize=484%2C360&amp;ssl=1" alt="- Hamro CSIT" width="484" height="360" data-recalc-dims="1" /></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>An example of utility based agent is a hospital management system. In this the goal is focoused on the basis of the happiness degree of patient so, it is utility based agent.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>What is game search? How minmax search used in game playing ? Illustrate with an example.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong> Game search</strong> typically refers to the process of searching through a game tree in order to find the best move or sequence of moves in a game. In this search player main motive is to reach the goal which is best among all by minimizing the oponents move. s typically involves exploring different branches of the tree using techniques such as minimax, alpha-beta pruning etc.</p>
+<p><strong>Minmax search</strong> is the search algorithm based on the principle of minimizing the maximum possible loss (hence the name). In a two-player zero-sum game, one player&#8217;s gain is the other player&#8217;s loss. It is a fundamental algorithm used in game-playing. In this algorithm, each node in the tree represents a state of the game, and the edges represent possible moves that can be made from that state.</p>
+<p>Levels of the tree operates on alternating , max nodes represent the player whose turn it is and aim to maximize their score while min nodes represent the opponent and aim to minimize the player&#8217;s score. The algorithm recursively explores the game tree, considering all possible moves by both players up to a certain depth or until the game ends. As the algorithm traverses back up the tree, it selects the moves that lead to the highest score for the current player at max nodes and the lowest score at min nodes. These techniques help eliminate branches of the game tree that are known to be worse than previously evaluated branches, reducing the number of nodes that need to be explored.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-36197 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/minmax.drawio.png?resize=720%2C1858&#038;ssl=1" alt="" width="720" height="1858"></p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 7</h3>
+<div><p><p>What is semantic network? Given following knowledge base, represent it using semantic network</p>
+<p>Subash is a student. All students are person. Person has hair. Ram is a player.All player play game. Game is a physical action. Height of all players is larger than the height of all student. Physical action starts fron 7:00 AM and ends at 9:00 AM.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <em><strong>semantic network</strong></em> is a knowledge structure that allow us to store the knowledge in the form of graphics with nodes and arcs representing object and their relationship. They are used to represent knowledge in AI systems by mapping out relationships between different concepts.  It is more natural than the logical representation and allows to categorize object in various forms and link those object.</p>
+<p>For given knowledge base semantic net will be as:</p>
+<p>&nbsp;</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-36062 aligncenter" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/semantic-net.drawio.png?resize=733%2C451&#038;ssl=1" alt="" width="733" height="451"></p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Discuss how genetic algorithm works?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong> Genetic Algorithms(GAs)</strong> use different operations that either enhance or replace the population to give an improved fit solution. They are adaptive heuristic search algorithms that belong to the larger part of evolutionary algorithms. Genetic algorithms are based on the ideas of natural selection and genetics.</p>
+<p>It basically involves five phases to solve the complex optimization problems, which are given as below:</p>
+<ul class="points">
+<li>Initialization</li>
+<li>Fitness Assignment</li>
+<li>Selection</li>
+<li>Crossover</li>
+<li>Mutation</li>
+</ul>
+<p><strong>Initialization:</strong></p>
+<p>The process of a genetic algorithm starts by generating the set of individuals, which is called population. An individual contains or is characterized by a set of parameters called Genes.  One of the most popular techniques for initialization is the use of random binary strings.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-35972" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/individual.drawio-1.png?resize=472%2C203&#038;ssl=1" alt="" width="472" height="203"></p>
+<p style="text-align: center;">
+<p><strong>Fitness Assignment :</strong></p>
+<p>It is a function which determine whether the individual is fit or not.The fitness function provides a fitness score to each individual which determines the probability of being selected for reproduction.</p>
+<p><strong>Selection:</strong></p>
+<p>Selection is the process of choosing individuals from the current population to become parents for the next generation. It is a critical step because it determines which individuals contribute their genetic material to the next generation.</p>
+<p>The selection process is typically biased toward choosing individuals with higher fitness scores. In a maximization problem, higher fitness means a higher chance of being selected.</p>
+<p><strong>Crossover:</strong></p>
+<p>Crossover is the genetic operation responsible for combining the genetic material of two parent individuals to create one or more offspring. It simulates the process of genetic recombination in sexual reproduction.</p>
+<p>The result of crossover is one or more offspring solutions that inherit genetic material from both parents. The hope is that this process will produce offspring with favorable combinations of genetic traits.</p>
+<p style="text-align: center;"><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-35973" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/05/crossover.drawio.png?resize=252%2C173&#038;ssl=1" alt="" width="252" height="173"></p>
+<p><strong>Mutation:</strong></p>
+<p>Mutation is a genetic operation that introduces small, random changes to the genetic material of an individual. It is used to maintain genetic diversity within the population and explore new regions of the search space. While crossover combines genetic material from two parents, mutation introduces novelty independently. It allows the genetic algorithm to escape local optima and explore a wider range of potential solutions.</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>Using your own assumptions, design PEAS framework for following intelligent agents.</p>
+<p>a. Medicine delivery drone</p>
+<p>b. Covid medicine prescriber.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>PEAS framework for following intelligent agents is as follow:</p>
+<p><em><strong>a. </strong></em><span style="text-decoration: underline;"><em><strong>Agent</strong></em></span><em><strong> : </strong></em><span style="text-decoration: underline;"><em><strong>Medicine Delivery Drone</strong></em></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Measure</strong>:
+<ul style="list-style-type: square;">
+<li>Realiable enough to reach the destination.</li>
+<li>Should use optimal path to reach goal.</li>
+<li>Resistent to sun rain cold and different situations.</li>
+<li>Quick at the time of delivery.</li>
+</ul>
+</li>
+<li><strong>Environment</strong>: As drone fly high,
+<ul style="list-style-type: square;">
+<li> Space with different birds, trees,tower, buildings etc</li>
+<li>Different geographical regions.</li>
+</ul>
+</li>
+<li><strong>Sensors</strong>:
+<ul style="list-style-type: square;">
+<li>Cameras to capture the path it follows and able to dodge obstracles.</li>
+<li>Gps to track the path optimal path.</li>
+</ul>
+</li>
+<li><strong>Actuators</strong>:
+<ul style="list-style-type: square;">
+<li>Fans to fly.</li>
+<li>Hook or arms to hold medicine.</li>
+</ul>
+</li>
+</ol>
+<p><em><strong>b. </strong></em><span style="text-decoration: underline;"><em><strong>Agent</strong></em></span><em><strong> : </strong></em><span style="text-decoration: underline;"><em><strong>Covid Medicine Prescriber</strong></em></span></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Measure</strong>:
+<ul style="list-style-type: square;">
+<li>Accuracy of differenciating normal flu and covid.</li>
+<li>Quick decision making.</li>
+<li>Should differenciate the level or stage of effect and should be able to prescribe accordingly (Specificity of prescribing medicine ).</li>
+<li>User satisfaction and trust in the system’s prescribition.</li>
+</ul>
+</li>
+<li><strong>Environment</strong>:
+<ul style="list-style-type: square;">
+<li>Medical data and patient records, including symptoms, medical history, and test results.</li>
+<li>Healthcare facilities and resources.</li>
+<li>External data sources (e.g., research findings, global health data).</li>
+</ul>
+</li>
+<li><strong>Sensors</strong>:
+<ul style="list-style-type: square;">
+<li>Collecting and analyzing medical data, including symptoms, lab tests, and patient information.</li>
+<li>Accessing the reports through scanner.</li>
+<li>Displaying the prescribition through some display.</li>
+<li>Accessing relevant medical databases and research publications.</li>
+</ul>
+</li>
+<li><strong>Actuators</strong>:
+<ul style="list-style-type: square;">
+<li>Providing recommendations for testing and isolation.</li>
+<li>Alerting healthcare authorities in case of potential outbreaks.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>What is machine vision? Describe the components of machine vision.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><em><span style="text-decoration: underline;"><strong>Machine vision</strong></span></em> is a primary component of industrial automation. It is the ability of the computer to see. Explore the diagram above to learn how machine vision system components work together to transform operations. It is one of the founding technologies of industrial automation. It has helped improve product quality, speed production, and optimize manufacturing and logistics for decades.</p>
+<p>Machine vision uses cameras to capture visual information from the surrounding environment. It then processes the images using a combination of hardware and software and prepares the information for use in various applications. Components of machine vision are:</p>
+<ul style="list-style-type: square;">
+<li><strong><em>Lens: </em>                                                                                                                             </strong> Lens are placed to capture the image and delivers it to the sensor in the camera as light.</li>
+<li><strong><em>Image Processing: </em>                                                                                                   </strong>The processor runs software and related algorithms that process the digital image and extract the required information.</li>
+<li><strong><em>Sensor: </em>                                                                                                                         </strong>These devices work together to process the image from the camera and convert it to a digital format as pixels. Image sensors convert light into electric signals.</li>
+<li><strong><em>Input /Output hardware:   </em>                                                                                   </strong> I/O devices and hardware are used for input and output for further performance.</li>
+</ul>
+</div>
+<h3>Question 11</h3>
+<div><p><p>How natural language generation differs from natural language understanding ? How morphological analysisis done in NLP ?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>In <strong>Natural language understanding</strong>, computer tries to understand the input provided in natural language where the sentences are broken and understood. Breaking of the sentences to understand them can be of different types and they are syntatic analysis, lexical analysis and referential analysis. Syntatic analysis is the analysis done by breaking the sentences based on the grammetical syntax , lexical analysis  is the analysis done by breaking the sentences into words and referential analysis make the computer understand the refrences of the objects in the sentence.</p>
+<p>In<strong> Natural language generating</strong>, computer tries to bind all the knowledge on the basis of its understanding to form back a sentence. It perform test planning where it extract relevent knowledge from the knowledge base. Here the words combines to phases and phases to sentences and so on. Managing of tone , maping of the formalized sentence to provide an output in natural language is done here.</p>
+<ul style="list-style-type: square;">
+<li>In general, we can say that Natural language understanding, focuses on breaking the sentences to understand while Natural language generating, focuses on binding all the borken knowledge to re construct a sentence in natural language.</li>
+<li>Natural language understanding converts the spoken sentences to broken sentences and knowlegde  whereas Natural language generating converts the formal knowledge into a meningful sentence.</li>
+</ul>
+<p><strong>Morphological analysis</strong> is the analysis of the meaning of the words by evaluating the smallest unit of the meaning i.e morpheme. At time of analysis initiallythe morphemes within a word is identified. Prefix and suffix are identified ,this includes determining the grammatical category and the meaning or function of each morpheme within the word. it also includes analyzing inflectional morphology, which involves the modification of words to indicate grammatical features such as tense, aspect, mood, number, gender, case, and person.</p>
+<ul style="list-style-type: square;">
+<li><span style="text-decoration: underline;"><em>Tense</em></span> : In tense morphological analysis is as :</li>
+</ul>
+<p style="text-align: center;">Drive (v<sub>1</sub> ) + ing = Driving (v<sub>4</sub> )</p>
+<ul style="list-style-type: square;">
+<li><em><span style="text-decoration: underline;">Singular/plural</span> </em>: In Singular/plural morphological analysis can be done as :</li>
+</ul>
+<p style="text-align: center;">Bus (Singular) + es  = Buses (Plural)</p>
+<p>Morphological analysis has various applications in linguistics, natural language processing, and language learning. Morphological analysis provides valuable insights into the structure and meaning of words in a language, helping to understand how words are formed, how they convey meaning, and how they are used grammatically.</p>
+<p>&nbsp;</p>
+</div>
+<h3>Question 12</h3>
+<div><p><p>What is constraint satisfaction problem? Illustrate graph coloring problem as constraint satisfaction problem.</p>
+<p> </p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A Constraint Satisfaction Problem (CSP) is a computational problem where the goal is to find a solution that satisfies a set of constraints.  Finding values for a group of variables that fulfill a set of restrictions or rules is the aim of constraint satisfaction problems.  These problems arise in various fields, including resource allocation, planning, scheduling, and decision-making. A Constraint Satisfaction Problem (CSP) consist of a set of variable, a domain value and set of constraints</p>
+<p>It is usually represented as an undirected graph called constraint graph where the nodes are the variables and the edges are the binary constraints.</p>
+</div>
+</body></html>

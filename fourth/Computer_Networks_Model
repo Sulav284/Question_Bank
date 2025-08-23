@@ -1,0 +1,480 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CN Model Question 0</title>
+    </head>
+    <body>
+        <h1>CN Model Question - 0</h1>
+        <p><strong>Full Marks:</strong> 60 + 20 + 20</p>
+        <p><strong>Pass Marks:</strong> 24 + 8 + 8</p>
+        <p><strong>Time:</strong> 3 hours</p>
+    <h2>Section A: Attempt any two questions.</h2><h3>Question 1</h3>
+<div><p><p>Suppose you are assigned to design a LAN for an office having 3 departments. Each department will have 50 computers locating in 10 rooms each equipped with 5 computers. Make your own justification while selecting connecting devices and acccessories.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>If I am assigned to design a LAN for an office having 3 departments, each equipped with 5 computers, I will select following connecting devices and accessories to setup the required LAN.</p>
+<ol style="list-style-type:decimal;">
+<li>Router. 1 manageable router to connect the LAN with WAN.</li>
+<li>Switch: 1 manageable (32 port = 3vlan * 10 rooms + 1 inbound + 1 extra for future reference)</li>
+<li>Hub: 3*10 hubs each with 8 ports(8 ports = 1 inbound + 5PC +2 extra for future reference)</li>
+<li>Cable: Cat 6 UTP cable</li>
+</ol>
+<p>In order to connect with WAN I will prefer to have one manageable router since I am planning to use single subnet. Since router is manageable I can  use it not only for routing but can be used for firewall, Access Control List, DNS, DHCP, and so on. I will prefer to have one manageable switch having 32 ports because for the security of 3 different departments I will create 3 VLAN of 10 memberss for 10 rooms; in each room the backbone from switch will be extended by 8 port hub.</p>
+</div>
+<h3>Question 2</h3>
+<div><p><p>Highlight on the importance of routing algorithm. Explain Distance Vector Routing algoriithm and compare it with link state routing.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Importance of Routing Algorithms:</strong></p>
+<p>Routing algorithms play a crucial role in computer networks by determining the best path for data to travel from a source to a destination. The efficiency of these algorithms directly impacts network performance, reliability, and scalability. A well-designed routing algorithm ensures that data is delivered accurately and in a timely manner, optimizing network resources and minimizing congestion.</p>
+<p><strong>Distance Vector Routing</strong></p>
+<p>Least-cost route between any two nodes is the route with minimum distance.<br />
+• Each node maintains a set of triples(Destination, Cost, NextHop)<br />
+• The table at each node(router) also guides the packets to the desired node by showing the next stop in the route.<br />
+• There are 2 steps in the route learning process<br />
+1. Initialization<br />
+2. Sharing</p>
+<p><strong>1. Initialization</strong></p>
+<p>Initially routing table in each node consists of the distance between itself and its immediate neighbors, those directly connected to it. Not directly connected is marked infinities.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25732" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/ini.jpg?resize=403%2C236&#038;ssl=1" alt="" width="403" height="236"></p>
+<p><strong>2. Sharing (Update)</strong></p>
+<p>2 types of sharing(updates):</p>
+<p><strong>1. Periodic</strong></p>
+<p>Directly connected neighbors exchange(share) updates periodically (on the order of several seconds).</p>
+<p><strong>2. Triggered</strong></p>
+<p>Whenever the table changes.</p>
+<p>Each update is a list of pairs: (Destination, Cost). The routing table will compare old routing table values with the shared table. Updating of routing table is based on minimum cost.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-25733" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/updat.jpg?resize=401%2C260&#038;ssl=1" alt="" width="401" height="260"></p>
+<p>Final Routing Table:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-25734" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2023/09/final.jpg?resize=402%2C287&#038;ssl=1" alt="" width="402" height="287"></p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Distance Vector Routing</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Link State Routing</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">Bandwidth required is less due to local sharing, small packets and no flooding.</td>
+<td style="width: 50%;">Bandwidth required is more due to flooding and sending of large link state packets.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Based on local knowledge, since it updates table based on information from neighbours.</td>
+<td style="width: 50%;">Based on global knowledge, it have knowledge about entire network.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Make use of Bellman Ford Algorithm.</td>
+<td style="width: 50%;">Make use of Dijakstra’s algorithm.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Traffic is less.</td>
+<td style="width: 50%;">Traffic is more.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Converges slowly i.e, good news spread fast and bad news spread slowly.</td>
+<td style="width: 50%;">Converges faster.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Count of infinity problem.</td>
+<td style="width: 50%;">No count of infinity problem.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Persistent looping problem i.e, loop will be there forever.</td>
+<td style="width: 50%;">No persistent loops, only transient loops.</td>
+</tr>
+<tr>
+<td style="width: 50%;">Practical implementation is RIP and IGRP.</td>
+<td style="width: 50%;">Practical implementation is OSPF and ISIS.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3>Question 3</h3>
+<div><p><p>Explain various congestion control approaches.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Open-Loop Congestion Control Approaches</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Retransmission Policy:</strong>In case of packet loss, a retransmission policy involves resending the lost packets without actively assessing the state of the network. This approach assumes that packet loss is primarily due to congestion, and retransmission helps in mitigating the impact.</li>
+<li><strong>Window Policy: </strong>Adjusting the size of the sender&#8217;s transmission window without explicit feedback from the network to control the rate of data transmission. This approach is a form of rate-based control that regulates the amount of unacknowledged data in the network.</li>
+<li><strong>Discarding Policy: </strong>Discarding packets under certain conditions, such as when the network is perceived to be congested, without waiting for explicit feedback. By dropping packets, this policy attempts to prevent the network from becoming overly congested and encourages senders to slow down.</li>
+<li><strong>Acknowledgment Policy: </strong>Controlling the rate of acknowledgments sent back to the sender based on the perceived congestion in the network. Adjusting the acknowledgment rate helps in indirectly influencing the sender&#8217;s transmission rate.</li>
+<li><strong>Admission Policy: </strong>Controlling the admission of new connections or data flows into the network based on the assessment of its current state. By controlling new entries, this policy aims to prevent further congestion and maintain network stability.</li>
+</ul>
+<p><strong>Closed-Loop Congestion Control Approaches</strong></p>
+<ul style="list-style-type: square;">
+<li><strong>Back Pressure: </strong>Routers actively send signals to the source to slow down its transmission when congestion is detected. This approach ensures that the network reacts dynamically to congestion, adjusting the sending rate in response to current conditions.</li>
+<li><strong>Choke Packet:</strong> Sending specialized packets (choke packets) back to the source to signal congestion and prompt the sender to reduce its transmission rate. This explicit signal helps in actively communicating congestion to the sender.</li>
+<li><strong>Implicit Signaling:</strong> Inferring congestion from observed changes in network behavior (e.g., increased latency or packet loss) without explicit signaling. Implicit signaling adapts to network conditions without the need for additional control packets.</li>
+<li><strong>Explicit Signaling:</strong>  Actively communicating congestion information through explicit signals in packet headers (e.g., ECN &#8211; Explicit Congestion Notification). Provides direct feedback to the sender, allowing for a more accurate and timely response to network congestion.</li>
+</ul>
+</div>
+<h2>Section B: Attempt any eight questions.</h2><h3>Question 4</h3>
+<div><p><p>Is 192.16.144.64/27 a host, network, or broadcast address? In which layer of OSI model do Hub, Switch and Router operate on?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><ul style="list-style-type: square;">
+<li><strong>IP Address:</strong> 192.16.144.64</li>
+<li><strong>Subnet Mask:</strong> /27</li>
+</ul>
+<p>In binary, the subnet mask looks like this: 11111111.11111111.11111111.11100000 (27 bits set to 1).</p>
+<p>Now, by applying the subnet mask to the IP address:</p>
+<ul style="list-style-type: square;">
+<li><strong>Network Address:</strong> 192.16.144.64 (Because the host bits are all set to 0 in the subnet)</li>
+<li><strong>Usable IP Range:</strong> 192.16.144.65 to 192.16.144.94</li>
+<li><strong>Broadcast Address:</strong> 192.16.144.95 (Because the host bits are all set to 1 in the subnet)</li>
+</ul>
+<p>So, 192.16.144.64/27 represents a network address.</p>
+<p>As for the OSI model:</p>
+<ul style="list-style-type: square;">
+<li><strong>Hub:</strong> Operates at the Physical Layer (Layer 1) as it simply forwards all incoming data to all ports without any intelligence regarding MAC addresses.</li>
+<li><strong>Switch:</strong> Operates primarily at the Data Link Layer (Layer 2) by using MAC addresses for frame forwarding. Managed switches may also operate at higher layers for features like VLANs.</li>
+<li><strong>Router:</strong> Operates at the Network Layer (Layer 3) by using IP addresses for packet forwarding between different networks. Routers also make decisions based on logical addressing (like IP) rather than the physical addressing used by switches (like MAC).</li>
+</ul>
+</div>
+<h3>Question 5</h3>
+<div><p><p>Describe the working procedure of Token bus and Token ring.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Token Bus</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-30444" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/bus.png?resize=231%2C143&#038;ssl=1" alt="" width="231" height="143"></p>
+<p>Token Bus is a network protocol that uses a token-passing mechanism to control access to the network. Here&#8217;s a step-by-step description of the working procedure:</p>
+<p><strong>Token Generation:</strong></p>
+<p>A special frame called the &#8220;token&#8221; is generated and travels in a logical ring throughout the network. The token contains information indicating that the network is available for transmission.</p>
+<p><strong>Access Permission:</strong></p>
+<p>Only the device holding the token has permission to transmit data onto the network. The token serves as a kind of permission slip that grants the right to send information.</p>
+<p><strong>Data Transmission:</strong></p>
+<p>When a device has the token and data to transmit, it attaches the data to the token frame and sends it onto the network. The data travels from one device to the next until it reaches its destination.</p>
+<p><strong>Token Passing:</strong></p>
+<p>After a device sends its data, it releases the token back onto the network. The token then continues to circulate in the ring, and the process repeats.</p>
+<p><strong>Collision Avoidance:</strong></p>
+<p>Token Bus avoids collisions because only the device holding the token can transmit. Devices must wait for the token to arrive before they can send data.</p>
+<p><strong>Token Reacquisition:</strong></p>
+<p>If a device doesn&#8217;t have data to send, it simply passes the token to the next device in the ring. This ensures that the token is always in circulation.</p>
+<p>&nbsp;</p>
+<p><strong>Token Ring</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone wp-image-30445" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/ring.png?resize=212%2C137&#038;ssl=1" alt="" width="212" height="137"></p>
+<p>Token Ring is another network protocol using a similar token-passing mechanism. Here&#8217;s how it works:</p>
+<p><strong>Token Generation:</strong></p>
+<p>Similar to Token Bus, a token frame is generated and circulates in a logical ring throughout the network.</p>
+<p><strong>Access Permission:</strong></p>
+<p>Only the device holding the token has the right to transmit data onto the network.</p>
+<p><strong>Data Transmission:</strong></p>
+<p>When a device has the token, it attaches its data to the token frame and sends it to the next device in the ring. The data circulates until it reaches its destination.</p>
+<p><strong>Token Passing:</strong></p>
+<p>After a device sends its data, it releases the token back onto the network, and the process repeats.</p>
+<p><strong>Collision Avoidance:</strong></p>
+<p>Token Ring also avoids collisions because only the device holding the token can transmit. Devices wait for the token to arrive before they can send data.</p>
+<p><strong>Token Reacquisition:</strong></p>
+<p>If a device has no data to send, it simply passes the token to the next device in the ring, ensuring that the token is continuously circulating.</p>
+</div>
+<h3>Question 6</h3>
+<div><p><p>Why do you think network traffic analysis is carried out? How does IPv6 overcome the disadvantages of IPv4?</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>Network Traffic Analysis:</strong></p>
+<p>Network traffic analysis is carried out for several important reasons:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Performance Monitoring:</strong> Monitoring network traffic helps assess the overall performance of the network. By analyzing metrics such as bandwidth utilization, packet loss, and latency, administrators can identify potential bottlenecks or areas where performance improvements are needed.</li>
+<li><strong>Security:</strong> Analyzing network traffic is crucial for detecting and preventing security threats. Security professionals use traffic analysis to identify patterns indicative of malicious activities, such as unauthorized access, malware infections, or denial-of-service attacks.</li>
+<li><strong>Troubleshooting:</strong> When network issues arise, traffic analysis is a valuable tool for troubleshooting. It allows administrators to pinpoint the source of problems, whether they are related to hardware failures, misconfigurations, or other issues impacting the network.</li>
+<li><strong>Capacity Planning:</strong> Understanding the patterns of network traffic over time helps in capacity planning. By analyzing historical data, administrators can predict future demands and allocate resources accordingly to ensure optimal network performance.</li>
+<li><strong>Resource Optimization:</strong> Traffic analysis enables administrators to identify unnecessary or inefficient resource usage. This can include identifying redundant or obsolete network devices, optimizing routing paths, and ensuring proper distribution of network traffic.</li>
+<li><strong>Policy Enforcement:</strong> Network traffic analysis is essential for enforcing network policies. Organizations can monitor and control the usage of specific applications, block malicious content, and ensure compliance with acceptable use policies.</li>
+<li><strong>User Behavior Analysis:</strong> Analyzing network traffic helps in understanding user behavior and application usage. This information is valuable for making informed decisions about network design, resource allocation, and security measures.</li>
+</ol>
+<p><strong>IPv6 Advantages Over IPv4:</strong></p>
+<p>IPv6 (Internet Protocol version 6) overcomes several limitations of IPv4, offering improvements and addressing challenges faced by its predecessor:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Address Space:</strong> IPv6 provides a significantly larger address space compared to IPv4. With 128-bit addresses, IPv6 can accommodate an astronomically larger number of unique addresses, addressing the IPv4 address exhaustion issue.</li>
+<li><strong>Address Configuration:</strong> IPv6 supports stateless address autoconfiguration, simplifying the process of assigning and configuring IP addresses. This feature reduces the reliance on DHCP (Dynamic Host Configuration Protocol) and makes address assignment more efficient.</li>
+<li><strong>Security:</strong> IPv6 includes built-in support for IPsec (Internet Protocol Security) at the network layer. While IPsec is optional in IPv4, its integration into IPv6 enhances the security of communications by providing authentication and encryption features.</li>
+<li><strong>Header Simplification:</strong> IPv6 has a simplified header format compared to IPv4. The streamlined header reduces processing overhead on routers and improves overall network efficiency.</li>
+<li><strong>Multicasting and Anycasting:</strong> IPv6 enhances support for multicast communication and introduces anycast addressing, facilitating efficient data distribution and load balancing.</li>
+<li><strong>End-to-End Connectivity:</strong> IPv6 promotes the principle of end-to-end connectivity, allowing devices to communicate directly without the need for intermediate devices like Network Address Translation (NAT). This simplifies network design and enhances communication efficiency.</li>
+<li><strong>Mobility Support:</strong> IPv6 includes native support for mobile devices and mobile networks, making it more suitable for the growing number of devices that require seamless connectivity while moving between networks.</li>
+<li><strong>Address Notation:</strong> IPv6 addresses are represented in hexadecimal notation, making them more human-readable and easier to work with than the dotted-decimal notation used in IPv4.</li>
+</ol>
+</div>
+<h3>Question 7</h3>
+<div><p><p>Find Hamming code for data 01100111.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>Total number of data bits &#8216;m&#8217; = 8</p>
+<p>Number of redundant bits,</p>
+<p>2<sup>r</sup> &gt;= m+r+1</p>
+<p>2<sup>4</sup> &gt;=8+4+1 (Satisfied)</p>
+<p>Therefore the value of r is 4 and r<sub>8</sub> r<sub>4</sub> r<sub>2</sub> r<sub>1</sub> are redundant bits.</p>
+<p>Total number of bits = m+r = 8+4 = 12</p>
+<p>0  1  1  0  r<sub>8</sub>  0  1  1  r<sub>4</sub>  1  r<sub>2</sub>  r<sub>1</sub></p>
+<p>r<sub>1</sub>: Checking even parity on bits 1,3,5,7,9,11 : 1</p>
+<p>r<sub>2</sub>: Checking even parity on bits 2,3,6,7,10,11: 0</p>
+<p>r<sub>4</sub>: Checking even parity on bits 4,5,6,7,12: 1</p>
+<p>r<sub>8</sub>: Checking even parity on bits 8,9,10,11,12: 0</p>
+<p>Substituting value of redundant bits we get</p>
+<p>0 1 1 0 0 0 1 1 0 1 0 1</p>
+<p>Therefore, Hamming code: 011000110101</p>
+</div>
+<h3>Question 8</h3>
+<div><p><p>Differentiate between frame relay and ATM.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>&nbsp;</p>
+<div class="table_wrapper" style="overflow-x:auto;"><table style="border-collapse: collapse; width: 93.606%;">
+<tbody>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Comparision Basis</strong></td>
+<td style="width: 36.1379%; text-align: center;"><strong>Frame Relay</strong></td>
+<td style="width: 34.6633%; text-align: center;"><strong>ATM</strong></td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Packet Size</strong></td>
+<td style="width: 36.1379%;">Variable</td>
+<td style="width: 34.6633%;">Fixed</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Processing overhead</strong></td>
+<td style="width: 36.1379%;">Increased</td>
+<td style="width: 34.6633%;">Decreased</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Data transfer</strong></td>
+<td style="width: 36.1379%;">Implemented in more than one area of network.</td>
+<td style="width: 34.6633%;">Takes place within a LAN.</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Cost</strong></td>
+<td style="width: 36.1379%;">Inexpensive</td>
+<td style="width: 34.6633%;">Higher cost</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Speed</strong></td>
+<td style="width: 36.1379%;">Low</td>
+<td style="width: 34.6633%;">High</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>QoS</strong></td>
+<td style="width: 36.1379%;">Quantifiable QoS isn&#8217;t provided</td>
+<td style="width: 34.6633%;">Offers quantifiable QoS</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Error control</strong></td>
+<td style="width: 36.1379%;">No support for error control</td>
+<td style="width: 34.6633%;">Error control is provided</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Data rate</strong></td>
+<td style="width: 36.1379%;">64 Kbps up to 45 Mbps</td>
+<td style="width: 34.6633%;">155.5 Mbps or 622 Mbps</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Reliability</strong></td>
+<td style="width: 36.1379%;">Low</td>
+<td style="width: 34.6633%;">Good</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Throughput</strong></td>
+<td style="width: 36.1379%;">Medium</td>
+<td style="width: 34.6633%;">High</td>
+</tr>
+<tr>
+<td style="width: 25.358%; text-align: center;"><strong>Delay</strong></td>
+<td style="width: 36.1379%;">High</td>
+<td style="width: 34.6633%;">Less</td>
+</tr>
+</tbody>
+</table></div>
+<p>&nbsp;</p>
+</div>
+<h3>Question 9</h3>
+<div><p><p>What is the function of proxy server? Explain about electronic mail.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>A <strong>proxy server</strong> serves as an intermediary between clients (such as web browsers) and the destination servers (such as websites). Its primary functions include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Content Filtering:</strong> A proxy server can filter and control the content that users can access on the internet. This is commonly used in organizations to enforce policies related to internet usage.</li>
+<li><strong>Anonymity and Privacy:</strong> By acting as an intermediary, a proxy server can hide the original IP addresses of clients, providing a level of anonymity for users. This is often used for privacy protection.</li>
+<li><strong>Caching:</strong> Proxy servers can cache frequently requested web pages, images, or other content. When a client requests the same content, the proxy can deliver it from its cache rather than fetching it from the original server, improving response times and reducing bandwidth usage.</li>
+<li><strong>Access Control:</strong> Proxy servers can enforce access control policies, restricting access to certain websites or resources based on criteria such as user authentication, IP addresses, or content types.</li>
+<li><strong>Bandwidth Management:</strong> Proxy servers can optimize bandwidth usage by compressing data, blocking ads, or prioritizing certain types of traffic. This helps in efficient use of network resources.</li>
+<li><strong>Security:</strong> Proxies can enhance security by acting as a barrier between internal networks and the external internet. They can inspect and filter traffic for potential security threats, providing an additional layer of defense.</li>
+<li><strong>Load Balancing:</strong> In a network with multiple servers, a proxy server can distribute incoming client requests across these servers, balancing the load and preventing individual servers from being overwhelmed.</li>
+</ol>
+<p><strong>Electronic Mail (Email)</strong></p>
+<p>Electronic mail, commonly known as email, is a method of exchanging digital messages between people using electronic devices. Here&#8217;s an overview of the components and processes involved in email communication:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Email Address:</strong> An email address uniquely identifies a user. It typically includes a username followed by the &#8220;@&#8221; symbol and the domain name of the email service provider (e.g., <a target="_new">user@example.com</a>).</li>
+<li><strong>Mail Server:</strong> Email messages are stored and managed on mail servers. These servers handle the sending, receiving, and storage of emails. There are two main types of mail servers: incoming (POP3 or IMAP) for receiving emails and outgoing (SMTP) for sending emails.</li>
+<li><strong>Email Protocols:</strong>
+<ul style="list-style-type: square;">
+<li><strong>SMTP (Simple Mail Transfer Protocol):</strong> Used for sending emails from the sender&#8217;s client to the recipient&#8217;s mail server.</li>
+<li><strong>POP3 (Post Office Protocol 3):</strong> Retrieves emails from the server to the user&#8217;s device, typically downloading and removing them from the server.</li>
+<li><strong>IMAP (Internet Message Access Protocol):</strong> Allows users to access and manage their emails directly on the server, providing synchronization across multiple devices.</li>
+</ul>
+</li>
+<li><strong>Email Clients:</strong> Users access their emails through email clients (software or applications). Popular email clients include Microsoft Outlook, Gmail, Apple Mail, and Thunderbird.</li>
+<li><strong>Components of an Email Message:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Header:</strong> Contains metadata such as sender and recipient addresses, subject, and timestamps.</li>
+<li><strong>Body:</strong> The main content of the email message, which can include text, attachments, images, and links.</li>
+<li><strong>Attachments:</strong> Files attached to the email for sharing documents, images, or other files.</li>
+</ul>
+</li>
+<li><strong>Security Measures:</strong>
+<ul style="list-style-type: square;">
+<li><strong>Encryption:</strong> Secure email protocols like SSL/TLS provide encryption for data transmission between email clients and servers.</li>
+<li><strong>Authentication:</strong> SPF (Sender Policy Framework) and DKIM (DomainKeys Identified Mail) are used to verify the authenticity of the sender.</li>
+</ul>
+</li>
+<li><strong>Spam Filtering:</strong> Email services often employ spam filters to identify and filter out unwanted or malicious emails.</li>
+</ol>
+</div>
+<h3>Question 10</h3>
+<div><p><p>Demonstrate the use of socket programming for creating network application using UDP and TCP with necessary diagrams.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p>using TCP, the entire process can be broken down into following steps:</p>
+<p><strong>TCP Server</strong></p>
+<ol style="list-style-type:decimal;">
+<li>using create(), Create TCP socket.</li>
+<li>using bind(), Bind the socket to server address.</li>
+<li>using listen(), put the server socket in a passive mode, where it waits for the client to approach the server to make a connection</li>
+<li>using accept(), At this point, connection is established between client and server, and they are ready to transfer data.</li>
+<li>Go back to Step 3.</li>
+</ol>
+<p><strong>TCP Client</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Create TCP socket.</li>
+<li>connect newly created client socket to server.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-30451" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/tcp.png?resize=211%2C239&#038;ssl=1" alt="" width="211" height="239"></p>
+<p>using UDP, the entire process can be broken down into the following steps :</p>
+<p><strong>UDP Server</strong></p>
+<ol style="list-style-type:decimal;">
+<li>Create a UDP socket.</li>
+<li>Bind the socket to the server address.</li>
+<li>Wait until the datagram packet arrives from the client.</li>
+<li>Process the datagram packet and send a reply to the client.</li>
+<li>Go back to Step 3.</li>
+</ol>
+<p><strong>UDP Client </strong></p>
+<ol style="list-style-type:decimal;">
+<li>Create a UDP socket.</li>
+<li>Send a message to the server.</li>
+<li>Wait until a response from the server is received.</li>
+<li>Process the reply and go back to step 2, if necessary.</li>
+<li>Close socket descriptor and exit.</li>
+</ol>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone  wp-image-30452" src="https://i0.wp.com/hamrocsit.com/wp-content/uploads/2024/02/udp.png?resize=389%2C195&#038;ssl=1" alt="" width="389" height="195"></p>
+</div>
+<h3>Question 11</h3>
+<div><p><p>Explain DNS with reference to its hierarchy and records.</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>DNS (Domain Name System):</strong></p>
+<p>DNS is a distributed naming system that translates human-readable domain names into IP addresses, allowing computers to locate and connect with each other on the internet. It plays a crucial role in simplifying the way we access websites and services, as users can use domain names (e.g., <a href="http://www.example.com/" target="_new" rel="nofollow noopener">www.example.com</a>) instead of IP addresses (e.g., 192.168.1.1) to navigate the internet.</p>
+<p><strong>Hierarchy of DNS:</strong></p>
+<p>The DNS is organized in a hierarchical structure, consisting of multiple levels, each serving a specific purpose:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>Root Domain:</strong>
+<ul style="list-style-type: square;">
+<li>At the top of the DNS hierarchy is the root domain denoted by a dot (.).</li>
+<li>The root domain has no name and is represented by a single dot. It contains pointers to the top-level domain (TLD) name servers.</li>
+</ul>
+</li>
+<li><strong>Top-Level Domain (TLD):</strong>
+<ul style="list-style-type: square;">
+<li>Directly below the root domain are the top-level domains (TLDs), which include generic TLDs (gTLDs) like .com, .org, .net, and country-code TLDs (ccTLDs) like .us, .uk, etc.</li>
+<li>Each TLD is managed by a designated set of name servers.</li>
+</ul>
+</li>
+<li><strong>Second-Level Domain (SLD):</strong>
+<ul style="list-style-type: square;">
+<li>Below the TLDs are the second-level domains (SLDs), representing specific entities or organizations. For example, in the domain <a href="http://www.example.com/" target="_new" rel="nofollow noopener">www.example.com</a>, &#8220;example&#8221; is the second-level domain.</li>
+<li>The SLD is registered with a domain registrar and associated with authoritative name servers.</li>
+</ul>
+</li>
+<li><strong>Subdomains:</strong>
+<ul style="list-style-type: square;">
+<li>Subdomains are additional levels within a domain, created by extending the domain hierarchy. For instance, blog.example.com is a subdomain of example.com.</li>
+<li>Subdomains may have their own authoritative name servers.</li>
+</ul>
+</li>
+<li><strong>Hostnames:</strong>
+<ul style="list-style-type: square;">
+<li>Hostnames are individual devices or services within a domain or subdomain. For example, <a target="_new">www.blog.example.com</a> has the hostname &#8220;<a target="_new">www</a>.&#8221;</li>
+<li>The mapping of hostnames to IP addresses is maintained by authoritative name servers.</li>
+</ul>
+</li>
+</ol>
+<p><strong>DNS Records:</strong></p>
+<p>DNS uses different types of resource records (RRs) to store information about a domain. Common DNS record types include:</p>
+<ol style="list-style-type:decimal;">
+<li><strong>A (Address) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Associates a domain with an IPv4 address.</li>
+</ul>
+</li>
+<li><strong>AAAA (IPv6 Address) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Associates a domain with an IPv6 address.</li>
+</ul>
+</li>
+<li><strong>CNAME (Canonical Name) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Creates an alias for a domain, redirecting it to another domain.</li>
+</ul>
+</li>
+<li><strong>MX (Mail Exchange) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Specifies mail servers responsible for receiving emails on behalf of the domain.</li>
+</ul>
+</li>
+<li><strong>NS (Name Server) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Specifies authoritative name servers for the domain.</li>
+</ul>
+</li>
+<li><strong>PTR (Pointer) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Used for reverse DNS lookups, associating an IP address with a domain.</li>
+</ul>
+</li>
+<li><strong>SOA (Start of Authority) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Contains administrative information about the domain and its authoritative name server.</li>
+</ul>
+</li>
+<li><strong>TXT (Text) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Stores arbitrary text data associated with a domain. Often used for adding comments or verification information.</li>
+</ul>
+</li>
+<li><strong>SRV (Service) Record:</strong>
+<ul style="list-style-type: square;">
+<li>Specifies the location of services in the domain.</li>
+</ul>
+</li>
+</ol>
+<p><strong>DNS Resolution Process:</strong></p>
+<ol style="list-style-type:decimal;">
+<li><strong>Local DNS Resolver:</strong>
+<ul style="list-style-type: square;">
+<li>When a user enters a domain name in a browser, the local DNS resolver checks its cache for the corresponding IP address.</li>
+</ul>
+</li>
+<li><strong>Recursive Query:</strong>
+<ul style="list-style-type: square;">
+<li>If the IP address is not in the cache, the local DNS resolver performs a recursive query. It starts from the root DNS servers and iteratively queries the authoritative name servers until it gets the IP address.</li>
+</ul>
+</li>
+<li><strong>Caching:</strong>
+<ul style="list-style-type: square;">
+<li>The resolved IP address is cached by the local resolver for a specified time (TTL) to reduce future query times.</li>
+</ul>
+</li>
+<li><strong>Response to Client:</strong>
+<ul style="list-style-type: square;">
+<li>The resolved IP address is returned to the client&#8217;s browser, allowing it to establish a connection with the requested server.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3>Question 12</h3>
+<div><p><p>Write short notes on (any two):</p>
+<p>a. Firewall</p>
+<p>b. Packet switching</p>
+<p>c. NGN</p</p></div><div><strong>Answer:</strong><br><style>body .mathjax_wrap{width: 100%;overflow-x: scroll;margin-bottom:10px;}</style><p><strong>a. Firewall:</strong></p>
+<p>A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Its primary purpose is to establish a barrier between a trusted internal network and untrusted external networks, such as the internet. Firewalls can operate at different layers of the OSI model, including the network layer and the application layer. The key functions of a firewall include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Packet Filtering:</strong> Examines packets of data and enforces rules based on criteria such as source and destination IP addresses, port numbers, and protocols.</li>
+<li><strong>Stateful Inspection:</strong> Keeps track of the state of active connections and makes decisions based on the context of the traffic.</li>
+<li><strong>Proxying and Network Address Translation (NAT):</strong> Acts as an intermediary between clients and servers, forwarding requests on behalf of clients and hiding internal network details.</li>
+<li><strong>Intrusion Detection and Prevention:</strong> Monitors network and/or system activities for malicious activities and can take proactive measures to prevent them.</li>
+</ul>
+<p><strong>b. Packet Switching:</strong></p>
+<p>Packet switching is a method of transmitting data in which messages are broken into small packets before being sent. These packets are then individually routed to their destination, where they are reassembled to reconstruct the original message. Packet switching contrasts with circuit switching, where a dedicated communication path is established for the entire duration of a conversation. Key features of packet switching include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Efficiency:</strong> Since network resources are shared and packets can take different routes to their destination, packet switching allows for more efficient use of network capacity.</li>
+<li><strong>Robustness:</strong> If a particular network link or node fails, packets can still reach their destination through alternative routes, enhancing network robustness.</li>
+<li><strong>Scalability:</strong> Packet switching is well-suited for handling varying levels of network traffic, making it scalable and adaptable to changing demands.</li>
+<li><strong>Support for Different Data Types:</strong> Packet switching supports the transmission of diverse data types, including voice, video, and text, by breaking them into packets and transmitting them separately.</li>
+</ul>
+<p><strong>c. NGN (Next-Generation Network):</strong></p>
+<p>Next-Generation Network (NGN) refers to a set of telecommunication standards and technologies that go beyond traditional voice-centric services, integrating various communication services into a single IP-based network. NGN aims to provide a more flexible and efficient infrastructure capable of delivering a wide range of multimedia services. Key characteristics of NGN include:</p>
+<ul style="list-style-type: square;">
+<li><strong>Convergence:</strong> NGN integrates different types of communication services, including voice, data, and multimedia, over a common IP-based infrastructure.</li>
+<li><strong>IP-Based Architecture:</strong> NGN relies on Internet Protocol (IP) as its core protocol, allowing for seamless integration of various services and applications.</li>
+<li><strong>Quality of Service (QoS):</strong> NGN emphasizes the delivery of high-quality services, ensuring a consistent user experience for real-time applications such as voice and video.</li>
+<li><strong>Interoperability:</strong> NGN promotes interoperability between different networks and devices, enabling users to access services seamlessly across diverse platforms.</li>
+<li><strong>Service Flexibility:</strong> NGN enables the creation and deployment of new and innovative services, fostering a more dynamic and competitive telecommunications landscape.</li>
+</ul>
+</div>
+</body></html>
